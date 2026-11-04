@@ -1,0 +1,202 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "madrid",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Cundinamarca",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Madrid, Cundinamarca",
+        "headline": "Madrid, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Municipio de Sabana Occidente, ubicado al occidente de Bogotá en Cundinamarca.",
+        "meta_description": "Municipio de Sabana Occidente, ubicado al occidente de Bogotá en Cundinamarca."
+      },
+      "en": {
+        "display_name": "Madrid, Cundinamarca",
+        "headline": "Madrid, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "A Sabana Occidente municipality located west of Bogotá in Cundinamarca.",
+        "meta_description": "A Sabana Occidente municipality located west of Bogotá in Cundinamarca."
+      },
+      "pt-BR": {
+        "display_name": "Madrid, Cundinamarca",
+        "headline": "Madrid, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Município de Sabana Occidente, localizado a oeste de Bogotá, em Cundinamarca.",
+        "meta_description": "Município de Sabana Occidente, localizado a oeste de Bogotá, em Cundinamarca."
+      }
+    },
+    "history": {
+      "es": [
+        "El poblado tuvo origen en el cacicazgo chibcha de Tibaitatá y durante la Colonia fue conocido como Serrezuela. En 1875 adoptó el nombre de Madrid, en homenaje a Pedro Fernández Madrid."
+      ],
+      "en": [
+        "The settlement originated in the Chibcha chiefdom of Tibaitatá and was known as Serrezuela during the colonial period. In 1875 it adopted the name Madrid, honoring Pedro Fernández Madrid."
+      ],
+      "pt-BR": [
+        "O povoado teve origem no cacicado chibcha de Tibaitatá e durante o período colonial foi conhecido como Serrezuela. Em 1875 adotou o nome Madrid, em homenagem a Pedro Fernández Madrid."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer el cerro Tibaitatá como referente del paisaje de Madrid.",
+        "Complementar el recorrido con una pausa en el Parque de las Flores."
+      ],
+      "en": [
+        "Discover Tibaitatá hill, a landmark in Madrid's landscape.",
+        "Complement your visit with a break at Parque de las Flores."
+      ],
+      "pt-BR": [
+        "Conhecer o cerro Tibaitatá como referência da paisagem de Madrid.",
+        "Complementar o passeio com uma pausa no Parque de las Flores."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-20.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Madrid.",
+      "en": "Illustration of Madrid.",
+      "pt-BR": "Ilustração de Madrid."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-20-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.7056021,
+      "longitude": -74.266092,
+      "translations": {
+        "es": {
+          "name": "Cerro Tibaitatá",
+          "description": "Cerro del municipio de Madrid, en la Sabana de Bogotá.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=2344829584434288637"
+        },
+        "en": {
+          "name": "Cerro Tibaitatá",
+          "description": "Hill in the municipality of Madrid, on the Bogotá savanna.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=2344829584434288637"
+        },
+        "pt-BR": {
+          "name": "Cerro Tibaitatá",
+          "description": "Cerro do município de Madrid, na savana de Bogotá.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=2344829584434288637"
+        }
+      },
+      "image": {
+        "file": "images/QC-20-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Cerro_Tibaitat%C3%A1,_inmortalizado_por_@moro.fotograf%C3%ADa_y_compartidos_a_trav%C3%A9s_de_las_redes_de_la_Alcald%C3%ADa_de_Madrid,_Cundinamarca.jpg",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Cerro Tibaitatá.",
+          "en": "Illustration of Cerro Tibaitatá.",
+          "pt-BR": "Ilustração de Cerro Tibaitatá."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-20-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.7239971,
+      "longitude": -74.2520411,
+      "translations": {
+        "es": {
+          "name": "Parque de las Flores",
+          "description": "Parque de las Flores, espacio público del municipio de Madrid, Cundinamarca.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6577598002139373016"
+        },
+        "en": {
+          "name": "Parque de las Flores",
+          "description": "Parque de las Flores, a public space in Madrid, Cundinamarca.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6577598002139373016"
+        },
+        "pt-BR": {
+          "name": "Parque de las Flores",
+          "description": "Parque de las Flores, espaço público de Madrid, Cundinamarca.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6577598002139373016"
+        }
+      },
+      "image": {
+        "file": "images/QC-20-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://impulsamadrid.com.co/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque de las Flores.",
+          "en": "Illustration of Parque de las Flores.",
+          "pt-BR": "Ilustração de Parque de las Flores."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://biblioteca.igac.gov.co/janium/Documentos/1-01005.pdf"
+      },
+      {
+        "reference": "https://www.cundinamarca.gov.co/noticias/15-municipios-de-cundinamarca-hacen-parte-del-circuito-bicibogota-region/"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-20-3: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-20-4: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

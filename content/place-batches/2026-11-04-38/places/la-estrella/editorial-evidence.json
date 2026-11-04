@@ -1,0 +1,110 @@
+{
+  "number": 8,
+  "slug": "la-estrella",
+  "name": "La Estrella",
+  "translations": {
+    "es": {
+      "title": "La Estrella",
+      "location": "Municipio del sur del Valle de Aburrá, Antioquia, ubicado al occidente del río Medellín y vecino de Medellín, Itagüí, Envigado, Sabaneta y Caldas.",
+      "history": "El poblado, conocido antes como Ancón, fue fundado en 1685 como Nuestra Señora de La Estrella. Su origen está ligado a población indígena anacona y a una tradición agrícola que antecede su crecimiento residencial contemporáneo."
+    },
+    "en": {
+      "title": "La Estrella",
+      "location": "Municipality in the south of the Aburrá Valley, Antioquia, located west of the Medellín River and neighboring Medellín, Itagüí, Envigado, Sabaneta and Caldas.",
+      "history": "The settlement, formerly known as Ancón, was founded in 1685 as Nuestra Señora de La Estrella. Its origins are linked to Anacona Indigenous people and an agricultural tradition that predates its contemporary residential growth."
+    },
+    "pt-BR": {
+      "title": "La Estrella",
+      "location": "Município no sul do Vale de Aburrá, em Antioquia, situado a oeste do rio Medellín e vizinho de Medellín, Itagüí, Envigado, Sabaneta e Caldas.",
+      "history": "O povoado, anteriormente conhecido como Ancón, foi fundado em 1685 como Nuestra Señora de La Estrella. Sua origem está ligada à população indígena anacona e a uma tradição agrícola anterior ao crescimento residencial contemporâneo."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-08-1200.webp",
+  "sources": [
+    "https://2024.laestrella.gov.co/municipio",
+    "https://2024.laestrella.gov.co/sitio/ver_noticia/museoinaugurado",
+    "https://2024.laestrella.gov.co/sitio/ver_noticia/Parque-Ambiental-Miraflores"
+  ],
+  "attractions": [
+    {
+      "id": "QC-08-2",
+      "municipality": "La Estrella",
+      "title_es": "Museo Casa Consistorial",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-08-2-v2-1200.webp",
+      "image_sha256": "6a82d5e049657887df99b6b7d7d5204892955673b90ee9c94942fe3e0a9a6a10",
+      "source": {
+        "id": "QC-08-2-R1",
+        "url": "https://2024.laestrella.gov.co/kcfinder/upload/images/WhatsApp_Image_2023-06-15_at_3.56.36_PM.jpeg",
+        "source_url": "https://2024.laestrella.gov.co/sitio/ver_noticia/museoinaugurado",
+        "title": "Alcaldía de La Estrella",
+        "published_at": "2023-10-27",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "candidata_pendiente_revision_visual",
+        "visual_reviewed": false,
+        "preview_load_verified": false,
+        "user_approved": false,
+        "note": "Referencia localizada; falta contraste visual, actualidad y permiso de uso. No es una imagen generada."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.15778,
+        "longitude": -75.64284,
+        "precision": "punto_OSM_no_entrada_validada",
+        "source_url": "https://mapcarta.com/es/W1349459008",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.15778%2C-75.64284"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Museo Casa Consistorial",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-08-4",
+      "municipality": "La Estrella",
+      "title_es": "Parque Comfama La Estrella",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-08-4-v1-1200.webp",
+      "image_sha256": "354ac51c51e5b837d90685e8af8f4a8f02c1f079415305433e47e3bf92f5bd14",
+      "source": {
+        "id": "QC-08-4-CONF-NOV03",
+        "url": "https://images.ctfassets.net/gkhyeghj07ak/1m0ot9wxEawovMHKDrzOSv/06fa2c843ef1bd30c98fc1ab96c8b0ba/piscinas-canchas-la-estrella__2_.jpg",
+        "source_url": "https://www.comfama.com/cultura-y-ocio/parques/parque-la-estrella/",
+        "title": "Parque Comfama La Estrella",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "sin_licencia_acreditada_referencia_para_revision",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Vista aérea del conjunto con piscinas, pabellón, senderos y bosque. Foto del operador inspeccionada; no es una piscina genérica. Captura sin fecha acreditada."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "address": null,
+        "entrance_verified": false,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20Comfama%20La%20Estrella%20La%20Estrella%20Colombia"
+      },
+      "geo_status": "pending",
+      "legacy_name": "Parque Comfama La Estrella",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

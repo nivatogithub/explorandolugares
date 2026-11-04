@@ -1,0 +1,76 @@
+{
+  "number": 17,
+  "slug": "cota",
+  "name": "Cota",
+  "translations": {
+    "es": {
+      "title": "Cota, Cundinamarca",
+      "location": "Municipio de la provincia de Sabana Centro, al noroccidente de Bogotá.",
+      "history": "Territorio de presencia muisca, Cota fue fundada como municipio el 29 de noviembre de 1604. Su patrimonio conserva vínculos con la tradición indígena y agrícola de la sabana."
+    },
+    "en": {
+      "title": "Cota, Cundinamarca",
+      "location": "A municipality in the Sabana Centro province, northwest of Bogotá.",
+      "history": "A territory with Muisca presence, Cota was founded as a municipality on November 29, 1604. Its heritage remains connected to the indigenous and agricultural traditions of the savanna."
+    },
+    "pt-BR": {
+      "title": "Cota, Cundinamarca",
+      "location": "Município da província de Sabana Centro, a noroeste de Bogotá.",
+      "history": "Território de presença muisca, Cota foi fundada como município em 29 de novembro de 1604. Seu patrimônio mantém vínculos com as tradições indígenas e agrícolas da savana."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-17-1200.webp",
+  "sources": [
+    "https://www.cota-cundinamarca.gov.co/MiMunicipio/Paginas/Informacion-del-Municipio.aspx",
+    "https://cota-cundinamarca.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx",
+    "https://www.cota-cundinamarca.gov.co/SECRETARIASYENTIDADES/Documents/Infografia%20Turismo-%202023.pdf"
+  ],
+  "attractions": [
+    {
+      "id": "QC-17-6",
+      "municipality": "Cota",
+      "title_es": "Casa del Resguardo Indígena Muisca de Cota",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-17-6.webp",
+      "image_sha256": "93f79b9539812a3c599d7cf3ce3839d58d63ecf207646498fcc879fbcaa08932",
+      "source": {
+        "url": "https://static.wixstatic.com/media/c402ad_baa830ad18574115b6ad49a54cbdc5e0~mv2.jpeg",
+        "source_url": "https://www.resguardoindigenamuiscadecota.org/",
+        "captured_at": null,
+        "published_at": null,
+        "visual_reviewed": true,
+        "status": "referencia_utilizada_pendiente_aprobacion"
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-17-7",
+      "municipality": "Cota",
+      "title_es": "Cerro Majuy · roca de cumbre",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-17-7.webp",
+      "image_sha256": "ce9a3362b4146d51cab2f498b8374a6c277c8d0e0b9a8c58aa60bb8826144fa2",
+      "source": {
+        "source_url": "https://es.wikiloc.com/rutas-carrera-por-montana/cerro-el-majuy-cota-88967015",
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

@@ -1,0 +1,109 @@
+{
+  "number": 19,
+  "slug": "mosquera",
+  "name": "Mosquera",
+  "translations": {
+    "es": {
+      "title": "Mosquera, Cundinamarca",
+      "location": "Municipio de Sabana Occidente, al occidente de Bogotá, en la sabana cundinamarquesa.",
+      "history": "El asentamiento conocido como Cuatro Esquinas se consolidó como municipio en 1861 y recibió el nombre de Mosquera en honor a Tomás Cipriano de Mosquera. El territorio también registra vestigios muiscas y paleontológicos."
+    },
+    "en": {
+      "title": "Mosquera, Cundinamarca",
+      "location": "A Sabana Occidente municipality west of Bogotá, on the Cundinamarca savanna.",
+      "history": "The settlement known as Cuatro Esquinas became a municipality in 1861 and was named Mosquera in honor of Tomás Cipriano de Mosquera. The area also records Muisca and paleontological remains."
+    },
+    "pt-BR": {
+      "title": "Mosquera, Cundinamarca",
+      "location": "Município de Sabana Occidente, a oeste de Bogotá, na savana de Cundinamarca.",
+      "history": "O povoado conhecido como Cuatro Esquinas consolidou-se como município em 1861 e recebeu o nome de Mosquera em homenagem a Tomás Cipriano de Mosquera. O território também registra vestígios muiscas e paleontológicos."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-19-1200.webp",
+  "sources": [
+    "https://mosqueracundinamarca.micolombiadigital.gov.co/sites/mosqueracundinamarca/content/files/000077/3809_plansectorialdeturismomosqueraturisticaunaventanaalmundo.pdf",
+    "https://mosqueracundinamarca.micolombiadigital.gov.co/sites/mosqueracundinamarca/content/files/000060/2995_fichaestadstica2016mosqueratareadetodos.pdf",
+    "https://detour.cundinamarca.gov.co/cities/mosquera"
+  ],
+  "attractions": [
+    {
+      "id": "QC-19-2",
+      "municipality": "Mosquera",
+      "title_es": "Laguna de La Herrera",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-19-2-v1-1200.webp",
+      "image_sha256": "bda2a57dfee3867afc5f33f1000363f598ac430e46d926151dc1327672dcd205",
+      "source": {
+        "id": "QC-19-2-R1",
+        "url": "https://imagenes.eltiempo.com/files/image_1200_600/uploads/2022/09/09/631bf5519c6c6.jpeg",
+        "source_url": "https://www.eltiempo.com/bogota/la-herrera-un-paraiso-natural-en-la-sabana-cronica-701369",
+        "title": "La Herrera, un paraíso natural en la sabana | Crónica",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Referencia localizada; falta contraste visual, actualidad y permiso de uso. No es una imagen generada."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Laguna de La Herrera",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-19-3",
+      "municipality": "Mosquera",
+      "title_es": "Desierto de Sabrinsky",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-19-3-v1-1200.webp",
+      "image_sha256": "f7b2a4eac06c774eeb17a23324ccc0388d4b2c28e3fd6084f335ee43807bf23f",
+      "source": {
+        "id": "QC-19-3-REEMPLAZO-1",
+        "url": "https://comisionfilmicacolombia.com/wp-content/uploads/2022/04/40492014-052.jpg",
+        "source_url": "https://comisionfilmicacolombia.com/locacion/zabriskie-point/",
+        "title": "Desierto de Sabrinsky · Comisión Fílmica Colombia",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Vista real inspeccionada con laderas ocres y blancas. Fecha de captura no publicada; contraste reciente pendiente. La clasificación Bogotá de la ficha fílmica no se usa como ubicación administrativa."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Desierto de Sabrinsky",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

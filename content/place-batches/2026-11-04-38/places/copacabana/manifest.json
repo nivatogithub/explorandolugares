@@ -1,0 +1,254 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "copacabana",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Antioquia",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Copacabana",
+        "headline": "Copacabana",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipio del norte del Valle de Aburrá, Antioquia, entre Bello y Girardota.",
+        "meta_description": "Municipio del norte del Valle de Aburrá, Antioquia, entre Bello y Girardota."
+      },
+      "en": {
+        "display_name": "Copacabana",
+        "headline": "Copacabana",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipality in the north of the Aburrá Valley, Antioquia, between Bello and Girardota.",
+        "meta_description": "Municipality in the north of the Aburrá Valley, Antioquia, between Bello and Girardota."
+      },
+      "pt-BR": {
+        "display_name": "Copacabana",
+        "headline": "Copacabana",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Município no norte do Vale de Aburrá, em Antioquia, entre Bello e Girardota.",
+        "meta_description": "Município no norte do Vale de Aburrá, em Antioquia, entre Bello e Girardota."
+      }
+    },
+    "history": {
+      "es": [
+        "Su historia está ligada al antiguo asentamiento de La Tasajera. En 1702 pasó a llamarse Nuestra Señora de Copacabana de la Tasajera; su tradición se remonta a la fundación atribuida a 1541."
+      ],
+      "en": [
+        "Its history is linked to the former settlement of La Tasajera. In 1702 it was renamed Nuestra Señora de Copacabana de la Tasajera; its tradition traces its foundation to 1541."
+      ],
+      "pt-BR": [
+        "Sua história está ligada ao antigo povoado de La Tasajera. Em 1702 passou a chamar-se Nuestra Señora de Copacabana de la Tasajera; sua tradição remonta a uma fundação atribuída a 1541."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Recorrer el centro y acercarte a la vida cultural de la Casa de la Cultura Fundadora de Pueblos.",
+        "Reconocer la relación entre el pueblo y sus montañas en el cerro El Cabuyal."
+      ],
+      "en": [
+        "Walk through the town centre and explore its cultural life at Casa de la Cultura Fundadora de Pueblos.",
+        "Discover the connection between the town and its mountains at El Cabuyal hill."
+      ],
+      "pt-BR": [
+        "Percorrer o centro e conhecer a vida cultural da Casa de la Cultura Fundadora de Pueblos.",
+        "Reconhecer a relação entre a cidade e suas montanhas no cerro El Cabuyal."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-04.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "https://www.viajarenverano.com/copacabana-antioquia/",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Copacabana.",
+      "en": "Illustration of Copacabana.",
+      "pt-BR": "Ilustração de Copacabana."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-04-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.3471895,
+      "longitude": -75.5065584,
+      "translations": {
+        "es": {
+          "name": "Casa de la Cultura Fundadora de Pueblos",
+          "description": "Casa de la cultura de Copacabana, denominada Fundadora de Pueblos.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=15433407542594159514"
+        },
+        "en": {
+          "name": "Casa de la Cultura Fundadora de Pueblos",
+          "description": "Copacabana's cultural centre, named Fundadora de Pueblos.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=15433407542594159514"
+        },
+        "pt-BR": {
+          "name": "Casa de la Cultura Fundadora de Pueblos",
+          "description": "Casa da cultura de Copacabana, denominada Fundadora de Pueblos.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=15433407542594159514"
+        }
+      },
+      "image": {
+        "file": "images/QC-04-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.copacabana.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Casa de la Cultura Fundadora de Pueblos.",
+          "en": "Illustration of Casa de la Cultura Fundadora de Pueblos.",
+          "pt-BR": "Ilustração de Casa de la Cultura Fundadora de Pueblos."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-04-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.376386,
+      "longitude": -75.4861586,
+      "translations": {
+        "es": {
+          "name": "Parque Comfama Copacabana",
+          "description": "Parque recreativo de Comfama en Copacabana.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13748618924059152331"
+        },
+        "en": {
+          "name": "Parque Comfama Copacabana",
+          "description": "Comfama recreation park in Copacabana.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13748618924059152331"
+        },
+        "pt-BR": {
+          "name": "Parque Comfama Copacabana",
+          "description": "Parque recreativo da Comfama em Copacabana.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13748618924059152331"
+        }
+      },
+      "image": {
+        "file": "images/QC-04-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.comfama.com/cultura-y-ocio/parques/redescubre-copacabana/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque Comfama Copacabana.",
+          "en": "Illustration of Parque Comfama Copacabana.",
+          "pt-BR": "Ilustração de Parque Comfama Copacabana."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-04-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.3414725,
+      "longitude": -75.5001943,
+      "translations": {
+        "es": {
+          "name": "Monumento a la Santa Cruz — cerro El Cabuyal",
+          "description": "Monumento a la Santa Cruz en el cerro El Cabuyal, en Copacabana.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=14072107472630896366"
+        },
+        "en": {
+          "name": "Monumento a la Santa Cruz — cerro El Cabuyal",
+          "description": "Monument to the Holy Cross on El Cabuyal hill, in Copacabana.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=14072107472630896366"
+        },
+        "pt-BR": {
+          "name": "Monumento a la Santa Cruz — cerro El Cabuyal",
+          "description": "Monumento à Santa Cruz no cerro El Cabuyal, em Copacabana.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=14072107472630896366"
+        }
+      },
+      "image": {
+        "file": "images/QC-04-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.teleantioquia.co/amp/entretenimiento/la-promesa-que-se-volvio-simbolo-la-historia-de-la-cruz-que-se-alza-en-lo-alto-de-una-montana-de-copacabana-511701.html",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Monumento a la Santa Cruz — cerro El Cabuyal.",
+          "en": "Illustration of Monumento a la Santa Cruz — cerro El Cabuyal.",
+          "pt-BR": "Ilustração de Monumento a la Santa Cruz — cerro El Cabuyal."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.copacabana.gov.co/MiMunicipio/Paginas/Informacion-del-Municipio.aspx?ID=3"
+      },
+      {
+        "reference": "https://www.copacabana.gov.co/MiMunicipio/Paginas/Pasado-presente-y-futuro.aspx"
+      },
+      {
+        "reference": "https://www.copacabana.gov.co/ciudadanos/PortaldeNinos/Enterate/Paginas/Sitios-de-Interes.aspx"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-04-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-04-3: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-04-4: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

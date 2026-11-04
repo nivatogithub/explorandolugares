@@ -1,0 +1,151 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "los-patios",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Norte de Santander",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Los Patios",
+        "headline": "Los Patios",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "Municipio de Norte de Santander, a 7 km de Cúcuta y parte del Área Metropolitana de Cúcuta.",
+        "meta_description": "Municipio de Norte de Santander, a 7 km de Cúcuta y parte del Área Metropolitana de Cúcuta."
+      },
+      "en": {
+        "display_name": "Los Patios",
+        "headline": "Los Patios",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "A municipality in Norte de Santander, 7 km from Cúcuta and part of the Cúcuta Metropolitan Area.",
+        "meta_description": "A municipality in Norte de Santander, 7 km from Cúcuta and part of the Cúcuta Metropolitan Area."
+      },
+      "pt-BR": {
+        "display_name": "Los Patios",
+        "headline": "Los Patios",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "Município de Norte de Santander, a 7 km de Cúcuta e parte da Área Metropolitana de Cúcuta.",
+        "meta_description": "Município de Norte de Santander, a 7 km de Cúcuta e parte da Área Metropolitana de Cúcuta."
+      }
+    },
+    "history": {
+      "es": [
+        "El territorio reunió haciendas y caseríos desde el siglo XVIII; fue reconocido como municipio el 10 de diciembre de 1985."
+      ],
+      "en": [
+        "The territory brought together estates and hamlets from the eighteenth century; it was recognized as a municipality on 10 December 1985."
+      ],
+      "pt-BR": [
+        "O território reuniu fazendas e povoados desde o século XVIII; foi reconhecido como município em 10 de dezembro de 1985."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte a la arqueología local a través de la colección del Museo Los Vados."
+      ],
+      "en": [
+        "Explore local archaeology through the collection at Museo Los Vados."
+      ],
+      "pt-BR": [
+        "Conhecer a arqueologia local por meio da coleção do Museo Los Vados."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-33.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Los Patios.",
+      "en": "Illustration of Los Patios.",
+      "pt-BR": "Ilustração de Los Patios."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-33-5",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 7.7731801,
+      "longitude": -72.5245908,
+      "translations": {
+        "es": {
+          "name": "Museo Los Vados · colección arqueológica",
+          "description": "Colección arqueológica del Museo Los Vados, en Los Patios.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13563504801190054152"
+        },
+        "en": {
+          "name": "Museo Los Vados · colección arqueológica",
+          "description": "Archaeological collection at Museo Los Vados, in Los Patios.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13563504801190054152"
+        },
+        "pt-BR": {
+          "name": "Museo Los Vados · colección arqueológica",
+          "description": "Coleção arqueológica do Museo Los Vados, em Los Patios.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13563504801190054152"
+        }
+      },
+      "image": {
+        "file": "images/QC-33-5.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.orbedatos.com/los-patios-da-ejemplo-y-visibiliza-su-patrimonio-cultural/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Los Vados · colección arqueológica.",
+          "en": "Illustration of Museo Los Vados · colección arqueológica.",
+          "pt-BR": "Ilustração de Museo Los Vados · colección arqueológica."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://amc.gov.co/amc/los-patios/"
+      },
+      {
+        "reference": "https://www.lospatios-nortedesantander.gov.co/"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-33-5: coordenadas pendientes",
+      "QC-33-5: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

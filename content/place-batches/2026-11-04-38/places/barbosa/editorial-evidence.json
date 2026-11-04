@@ -1,0 +1,143 @@
+{
+  "number": 1,
+  "slug": "barbosa",
+  "name": "Barbosa",
+  "translations": {
+    "es": {
+      "title": "Barbosa",
+      "location": "Municipio del extremo norte del Valle de Aburrá, Antioquia, integrado al Área Metropolitana del Valle de Aburrá.",
+      "history": "Fundado en 1795, Barbosa fue conocido como Hatillo de Barbosa y otros nombres rurales antes de consolidar su vida municipal. Su ubicación lo convirtió en puerta norte del Valle de Aburrá."
+    },
+    "en": {
+      "title": "Barbosa",
+      "location": "Municipality at the northern end of the Aburrá Valley in Antioquia, part of the Valle de Aburrá Metropolitan Area.",
+      "history": "Founded in 1795, Barbosa was known as Hatillo de Barbosa and by other rural names before consolidating its municipal life. Its location made it the northern gateway to the Aburrá Valley."
+    },
+    "pt-BR": {
+      "title": "Barbosa",
+      "location": "Município no extremo norte do Vale de Aburrá, em Antioquia, integrado à Região Metropolitana do Vale de Aburrá.",
+      "history": "Fundada em 1795, Barbosa foi conhecida como Hatillo de Barbosa e por outros nomes rurais antes de consolidar sua vida municipal. Sua localização a tornou a porta norte do Vale de Aburrá."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-01-1200.webp",
+  "sources": [
+    "https://barbosa.gov.co/MiMunicipio/Paginas/Informacion-del-Municipio.aspx",
+    "https://barbosa.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx",
+    "https://barbosa.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+  ],
+  "attractions": [
+    {
+      "id": "QC-01-2",
+      "municipality": "Barbosa",
+      "title_es": "Parque de las Aguas",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-01-2-v1-1200.webp",
+      "image_sha256": "df7a28ada8f0a43a7c97e4029fe7f51111b5e20b305f3b1d62d19367f93ac23d",
+      "source": {
+        "id": "QC-01-2-R1",
+        "url": "https://i.alerta.com.co/alerta_paisa/public/2024-09/flotadores_parque_de_las_aguas_antioquia_septiembre_2024_2_0.jpeg?r=4_3",
+        "source_url": "https://paisa.alerta.com.co/quejodromo/llegan-mas-de-200-flotadores-al-parque-de-las-aguas-en-barbosa-186209",
+        "title": "Llegan más de 200 flotadores al Parque de las Aguas en Barbosa",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Referencia localizada; falta contraste visual, actualidad y permiso de uso. No es una imagen generada."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.4066,
+        "longitude": -75.42146,
+        "precision": "centro_del_recinto_OSM_no_entrada",
+        "source_url": "https://mapcarta.com/es/W441060280",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.4066%2C-75.42146"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Parque de las Aguas",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-01-3",
+      "municipality": "Barbosa",
+      "title_es": "Estación del Ferrocarril El Hatillo",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-01-3-v1-1200.webp",
+      "image_sha256": "a0e70f6de0794396df0a7f413c7303768608a872042c056bfe7a01a12e544f27",
+      "source": {
+        "id": "QC-01-3-R2",
+        "url": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QtjXYZe7fGlzuXgOWe6pkg2YYPj9bxS3m0862QJq_hRRRmeuIth8ksvOMhJqjFTw1OVbkFV-D5J5fYIPBaxF0wXavreLN35oGkqZlxhOBB_GXl83cHAjH1bOjxhYoLmy0crBWKW9QVE2Yu=w1600-h1200-k-no",
+        "source_url": "https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n+Hatillo+Barbosa&query_place_id=ChIJ1VYt0HY9RI4RdM779hH9jWg",
+        "title": "Estación Hatillo · fachada y plataforma · Mónica Ramírez",
+        "published_at": null,
+        "captured_at": "2026-06",
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Fotografía atribuida a Mónica Ramírez. Google Maps muestra «Captura de imágenes: jun 2026». Se ve el edificio de ladrillo, puertas y ventanas blancas, soportes del alero y plataforma. Contrastada con Street View de abril de 2026. No acredita apertura interior."
+      },
+      "geo": {
+        "status": "ubicacion_contrastada_google_maps",
+        "latitude": 6.412922,
+        "longitude": -75.392394,
+        "precision": "punto_ficha_google_maps_no_entrada_validada",
+        "source_url": "https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n+Hatillo+Barbosa&query_place_id=ChIJ1VYt0HY9RI4RdM779hH9jWg",
+        "address": "Vía al Hatillo, Barbosa, Antioquia",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n+Hatillo+Barbosa&query_place_id=ChIJ1VYt0HY9RI4RdM779hH9jWg"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Estación del Ferrocarril El Hatillo",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-01-4",
+      "municipality": "Barbosa",
+      "title_es": "Parque Diego Echavarría Misas — segundo parque",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-01-4-v1-1200.webp",
+      "image_sha256": "1525227c9f7083e9af720d45187bfef5d674d7823917df860a8ee36b90d13ba9",
+      "source": {
+        "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLflyJsZRTW3w5RTJIEvtEYnB40e8CPtHSIky-8VRT3hsYBN8gyDJ5XTJ1Dm8HURduPrS3sx3WpbnW7J5_sKuetCGXH70wDQtUGc2QI5mTSg3JSLgzVdBQwaHlXejcW9_p6qpYY=w1600-h1600-k-no",
+        "source_url": "https://www.google.com/maps/search/?api=1&query=Parque+Diego+Echavarria+Misas+Barbosa+Antioquia",
+        "captured_at": "2024-10",
+        "published_at": null,
+        "author": "Daniel Giraldo",
+        "note": "Google Maps muestra captura de imágenes oct2024. Vista de la capilla María Auxiliadora y plazoleta del segundo parque, distinto de San Antonio de Padua de la portada."
+      },
+      "geo": {
+        "latitude": 6.4357982,
+        "longitude": -75.3291321,
+        "status": "punto_google_maps_no_entrada_validada",
+        "entrance_verified": false,
+        "source_url": "https://www.google.com/maps/search/?api=1&query=Parque+Diego+Echavarria+Misas+Barbosa+Antioquia",
+        "checked_at": "2026-11-03"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Parque Diego Echavarría Misas — segundo parque",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

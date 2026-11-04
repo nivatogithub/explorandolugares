@@ -1,0 +1,152 @@
+{
+  "number": 5,
+  "slug": "envigado",
+  "name": "Envigado",
+  "translations": {
+    "es": {
+      "title": "Envigado",
+      "location": "Municipio del sur del Valle de Aburrá, Antioquia, vecino de Medellín, Itagüí, Sabaneta, Caldas, Rionegro y El Retiro.",
+      "history": "Documentos coloniales registran el nombre Envigado desde el siglo XVIII. El sitio se organizó como partido o pedanía en 1775 y su historia combina tradición rural, patrimonio cultural e industrialización posterior."
+    },
+    "en": {
+      "title": "Envigado",
+      "location": "Municipality in the south of the Aburrá Valley, Antioquia, neighboring Medellín, Itagüí, Sabaneta, Caldas, Rionegro and El Retiro.",
+      "history": "Colonial records mention the name Envigado from the 18th century. The settlement was organized as a district in 1775, and its history combines rural traditions, cultural heritage and later industrialization."
+    },
+    "pt-BR": {
+      "title": "Envigado",
+      "location": "Município no sul do Vale de Aburrá, em Antioquia, vizinho de Medellín, Itagüí, Sabaneta, Caldas, Rionegro e El Retiro.",
+      "history": "Documentos coloniais registram o nome Envigado desde o século XVIII. O local foi organizado como distrito em 1775, e sua história combina tradição rural, patrimônio cultural e industrialização posterior."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-05-1200.webp",
+  "sources": [
+    "https://efpc.envigado.gov.co/wp-content/uploads/2025/04/PDM-ENVIGADO-2024-2027.pdf",
+    "https://www.centrodehistoriaenvigado.com/historia-de-envigado/cronologia/",
+    "https://efpc.envigado.gov.co/wp-content/uploads/2025/06/PLAN-ZONA-11.pdf"
+  ],
+  "attractions": [
+    {
+      "id": "QC-05-2",
+      "municipality": "Envigado",
+      "title_es": "Casa Museo Otraparte",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-1/generadas/QC-05-2-v1-1200.webp",
+      "image_sha256": "467fe1196fad9432f9470ba7de1042295cf135f9a435fcf41574bb93e86a13d2",
+      "source": {
+        "id": "QC-05-2-R1",
+        "url": "https://caracol.com.co/resizer/v2/AIZEILJQLRAQLMGPWRWPSUVGDM.jpeg?auth=c8d629d14dd91fa0bf4db3a7f2e8e93d4585fbe38ed5ae269a77bb677d90bba7&quality=70&smart=true&width=736",
+        "source_url": "https://caracol.com.co/2025/04/24/envigado-celebra-los-130-anos-de-fernando-gonzalez-con-la-fiesta-criolla-de-otraparte/",
+        "title": "Envigado celebra los 130 años de Fernando González con la Fiesta Criolla de Otraparte | Medellín | Caracol Radio",
+        "published_at": "2025-04-24",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "candidata_pendiente_revision_visual",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Inspeccionada: casa, jardín y acceso reconocibles; sin persona dominando el encuadre. Fecha de publicación, no de captura."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.1792522,
+        "longitude": -75.5839678,
+        "precision": "punto_ficha_cartografica_no_entrada_validada",
+        "source_url": "https://www.waze.com/es/live-map/directions/co/antioquia/envigado/casa-museo-otraparte?to=place.ChIJM6qKeF6CRo4RW0DVnj-SmHY",
+        "address": "Avenida Fernando González, Zona Suroriental de Medellín (Poblado, Palmas, Cra. 43A #27A Sur - 11, Zona 2, Envigado, Antioquia, Colombia",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.1792522%2C-75.5839678"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Casa Museo Otraparte",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-05-3",
+      "municipality": "Envigado",
+      "title_es": "Parque Ecoturístico El Salado",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-1/generadas/QC-05-3-v1-1200.webp",
+      "image_sha256": "897d2cdaf5b02cd882e0f0795a14dc52cb39f1518a0aa7df77560318ecb2373b",
+      "source": {
+        "id": "QC-05-3-R2",
+        "url": "https://www.semana.com/resizer/v2/FO7GNQI5WREJJP5S4JEEIH6TUA.jpg?auth=d8a51730db4bc2d637b7605054b14c01967e81ab99817248a9930df88f1680b3",
+        "source_url": "https://www.semana.com/turismo/articulo/cinco-pueblos-para-visitar-cerca-de-medellin-recomendados-por-la-ia/202509/",
+        "title": "Parque Ecoturístico El Salado · nueva referencia",
+        "published_at": "2025-06-24",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Entrada con identificación del parque. Publicación 24 junio 2025; fecha de toma por verificar. El texto del artículo usa recomendaciones de IA: no se toma como validación; identidad y oferta se contrastan con Comfenalco."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.138238,
+        "longitude": -75.5706119999999,
+        "precision": "punto_directorio_Comfenalco_no_entrada_validada",
+        "source_url": "https://infolocal.comfenalcoantioquia.com/index.php/parque-ecoturistico-el-salado",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.138238,-75.57061199999990"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Parque Ecoturístico El Salado",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-05-4",
+      "municipality": "Envigado",
+      "title_es": "Biblioteca Pública y Parque Cultural Débora Arango",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-1/generadas/QC-05-4-v1-1200.webp",
+      "image_sha256": "43285cee2ca0135a659c0ffe21da2aaadb509184ca43237a87e5e578c005db10",
+      "source": {
+        "id": "QC-05-4-NOV03",
+        "url": "https://images.ctfassets.net/gkhyeghj07ak/rnxUlQrrXv08palfqsmRr/d60c76f204bb81c5877131ac1c746f72/Biblioteca_P%C3%BAblica_y_Parque_Cultural_D%C3%A9bora_Arango_foto_1.jpg",
+        "source_url": "https://www.comfama.com/sala-de-prensa/programacion-especial-debora-arango/",
+        "title": "Acceso de la Biblioteca Débora Arango — Comfama",
+        "note": "Foto exterior del acceso con rampa, nombre del edificio y volumen elevado. Correspondencia visual inspeccionada. No inventar el resto del edificio fuera de encuadre. Publicación contextualizada en 2025; captura exacta desconocida.",
+        "published_at": "2025",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": "https://www.comfama.com/agenda/evento/exposicion-fiesta-casa",
+        "address": "Calle 37 Sur #45B-27, barrio Alcalá, Envigado",
+        "entrance_verified": false,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Biblioteca+Publica+y+Parque+Cultural+Debora+Arango+Envigado"
+      },
+      "geo_status": "pending",
+      "legacy_name": "Biblioteca Pública y Parque Cultural Débora Arango",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

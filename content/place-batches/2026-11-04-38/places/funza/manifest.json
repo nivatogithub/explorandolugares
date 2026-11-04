@@ -1,0 +1,205 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "funza",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Cundinamarca",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Funza, Cundinamarca",
+        "headline": "Funza, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Municipio de Sabana Occidente, en la sabana de Bogotá y al occidente de la capital.",
+        "meta_description": "Municipio de Sabana Occidente, en la sabana de Bogotá y al occidente de la capital."
+      },
+      "en": {
+        "display_name": "Funza, Cundinamarca",
+        "headline": "Funza, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "A municipality in Sabana Occidente, on the Bogotá savanna west of the capital.",
+        "meta_description": "A municipality in Sabana Occidente, on the Bogotá savanna west of the capital."
+      },
+      "pt-BR": {
+        "display_name": "Funza, Cundinamarca",
+        "headline": "Funza, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Município de Sabana Occidente, na savana de Bogotá e a oeste da capital.",
+        "meta_description": "Município de Sabana Occidente, na savana de Bogotá e a oeste da capital."
+      }
+    },
+    "history": {
+      "es": [
+        "Funza conserva una profunda herencia muisca y es reconocida en Cundinamarca como capital muisca. Su crecimiento contemporáneo se vincula a la dinámica regional de la sabana de Bogotá."
+      ],
+      "en": [
+        "Funza preserves a deep Muisca heritage and is recognized in Cundinamarca as its Muisca capital. Its contemporary growth is tied to the regional dynamics of the Bogotá savanna."
+      ],
+      "pt-BR": [
+        "Funza preserva uma profunda herança muisca e é reconhecida em Cundinamarca como sua capital muisca. Seu crescimento contemporâneo está ligado à dinâmica regional da savana de Bogotá."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer el Centro Cultural Bacatá y la vida cultural de Funza.",
+        "Acercarte al paisaje de humedales de la Sabana en Gualí–Tres Esquinas."
+      ],
+      "en": [
+        "Discover Centro Cultural Bacatá and Funza's cultural life.",
+        "Explore the savanna's wetland landscape at Gualí–Tres Esquinas."
+      ],
+      "pt-BR": [
+        "Conhecer o Centro Cultural Bacatá e a vida cultural de Funza.",
+        "Descobrir a paisagem de áreas úmidas da savana em Gualí–Tres Esquinas."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-18.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Funza.",
+      "en": "Illustration of Funza.",
+      "pt-BR": "Ilustração de Funza."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-18-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.7158665,
+      "longitude": -74.2129375,
+      "translations": {
+        "es": {
+          "name": "Centro Cultural Bacatá",
+          "description": "Centro cultural de Funza conocido como Bacatá.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=9528946341092133243"
+        },
+        "en": {
+          "name": "Centro Cultural Bacatá",
+          "description": "Cultural centre in Funza known as Bacatá.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=9528946341092133243"
+        },
+        "pt-BR": {
+          "name": "Centro Cultural Bacatá",
+          "description": "Centro cultural de Funza conhecido como Bacatá.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=9528946341092133243"
+        }
+      },
+      "image": {
+        "file": "images/QC-18-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.google.com/maps/search/?api=1&query=Instituto+Centro+Cultural+Bacat%C3%A1+Funza",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Centro Cultural Bacatá.",
+          "en": "Illustration of Centro Cultural Bacatá.",
+          "pt-BR": "Ilustração de Centro Cultural Bacatá."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-18-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.7007031,
+      "longitude": -74.201079,
+      "translations": {
+        "es": {
+          "name": "Humedal Gualí–Tres Esquinas",
+          "description": "El humedal Gualí–Tres Esquinas forma parte del paisaje de humedales de la Sabana de Bogotá.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5971657916017210528"
+        },
+        "en": {
+          "name": "Humedal Gualí–Tres Esquinas",
+          "description": "The Gualí–Tres Esquinas wetland forms part of the wetland landscape of the Bogotá savanna.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5971657916017210528"
+        },
+        "pt-BR": {
+          "name": "Humedal Gualí–Tres Esquinas",
+          "description": "O banhado Gualí–Tres Esquinas faz parte da paisagem de áreas úmidas da savana de Bogotá.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5971657916017210528"
+        }
+      },
+      "image": {
+        "file": "images/QC-18-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://otvtelevision.com/regresan-los-recorridos-por-el-humedal-guali/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Humedal Gualí–Tres Esquinas.",
+          "en": "Illustration of Humedal Gualí–Tres Esquinas.",
+          "pt-BR": "Ilustração de Humedal Gualí–Tres Esquinas."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.cundinamarca.gov.co/noticias/funza%2C%20la%20capital%20muisca%20de%20cundinamarca/%21ut/p/z0/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zi_QJcPA3d3Q2MDE3dTQ3MAk1CXP38wyxd_Q30vfSj8CsAmmBU5Ovsm64fVZBYkqGbmZeWrx-RVppXlaijkJOokJxYkFmSmKOQW5pZnJyokJKqkFyal5KZl5ibWJScqF-QHRUJAJiNBLo%21/"
+      },
+      {
+        "reference": "https://www.cundinamarca.gov.co/noticias/funza-reunio-durante-tres-dias-a-responsables-y-vigias-para-proteger-el-patrimonio-cultural%201"
+      },
+      {
+        "reference": "https://car1.car.gov.co/saladeprensa/car-impuso-medida-preventiva-a-dos-predios-por-afectacion-al-humedal-guali-en-funza"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-18-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-18-3: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

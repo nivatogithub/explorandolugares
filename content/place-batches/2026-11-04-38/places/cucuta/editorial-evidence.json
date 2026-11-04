@@ -1,0 +1,150 @@
+{
+  "number": 32,
+  "slug": "cucuta",
+  "name": "Cúcuta",
+  "translations": {
+    "es": {
+      "title": "Cúcuta",
+      "location": "Capital de Norte de Santander y núcleo del área metropolitana de Cúcuta, en la frontera con Venezuela.",
+      "history": "San José de Cúcuta fue fundado el 17 de junio de 1733 a orillas del río Pamplonita; su historia está vinculada a la independencia y al intercambio fronterizo."
+    },
+    "en": {
+      "title": "Cúcuta",
+      "location": "Capital of Norte de Santander and core of the Cúcuta metropolitan area, on the border with Venezuela.",
+      "history": "San José de Cúcuta was founded on 17 June 1733 on the banks of the Pamplonita River; its history is tied to independence and cross-border exchange."
+    },
+    "pt-BR": {
+      "title": "Cúcuta",
+      "location": "Capital de Norte de Santander e núcleo da área metropolitana de Cúcuta, na fronteira com a Venezuela.",
+      "history": "San José de Cúcuta foi fundada em 17 de junho de 1733 às margens do rio Pamplonita; sua história está ligada à independência e ao intercâmbio fronteiriço."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-32-1200.webp",
+  "sources": [
+    "https://cucuta.gov.co/oficina-de-promocion-turistica-bienvenidos-a-cucuta/",
+    "https://colombia.travel/es/cucuta",
+    "https://nortesantander.co/cucuta/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-32-2",
+      "municipality": "Cúcuta",
+      "title_es": "Torre del Reloj",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-1/generadas/QC-32-2-v1-1200.webp",
+      "image_sha256": "c18fe0f7d2bc9cb00a4bfbe15ee7770e2398daee6e47df84bbb474cedda763ff",
+      "source": {
+        "id": "QC-32-2-CONF-NOV03",
+        "url": "https://revistactiva.com/wp-content/uploads/2026/08/torre-del-reloj-cucuta-fotografia.webp",
+        "source_url": "https://revistactiva.com/dia-mundial-fotografia-5-lugares-cucuta-fotos/",
+        "title": "Torre del Reloj",
+        "published_at": "2026-08-19",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "sin_licencia_acreditada_referencia_para_revision",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Fachada y torre completas, inspeccionadas. Publicación 2026; no equivale a fecha de captura. Sustituye enlace Detrips que no cargaba."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 7.88405,
+        "longitude": -72.50174,
+        "precision": "punto_OSM_no_entrada_validada",
+        "source_url": "https://mapcarta.com/es/W283719044",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=7.88405%2C-72.50174"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Torre del Reloj",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-32-3",
+      "municipality": "Cúcuta",
+      "title_es": "Biblioteca Pública Julio Pérez Ferrero",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-1/generadas/QC-32-3-v1-1200.webp",
+      "image_sha256": "02df2f10c0bf731da6f0aa2772c20121bd5b173ac9ec0f07931d20dbf328c97d",
+      "source": {
+        "id": "QC-32-3-R1",
+        "url": "https://www.bibliocucuta.org/portal/files/media/f1beb3af6c0a77fbe8c106311cea3203.jpg",
+        "source_url": "https://www.bibliocucuta.org/portal/portal/view/22",
+        "title": "Biblioteca Pública Julio Pérez Ferrero",
+        "published_at": null,
+        "captured_at": "2018-05-17",
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "candidata_pendiente_revision_visual",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Vista del patio y ambos pabellones de la biblioteca; fuente del operador, fotografía Jhorjan López, captura sin fecha."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 7.88504,
+        "longitude": -72.49981,
+        "precision": "punto_cartografico_del_inmueble_no_entrada_validada",
+        "source_url": "https://mapcarta.com/es/W283725864",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=7.88504%2C-72.49981"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Biblioteca Pública Julio Pérez Ferrero",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-32-5",
+      "municipality": "Cúcuta",
+      "title_es": "Centro Cultural Quinta Teresa",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-1/generadas/QC-32-5-v1-1200.webp",
+      "image_sha256": "cc88e0eef8fe76ea0fa1c51508e276da94664e3737bb477a148f2a809baf8eb6",
+      "source": {
+        "id": "QC-32-5-CONF-NOV03",
+        "url": "https://colombia.travel/sites/default/files/styles/contenido_ancho_800/public/Quinta%20Teresa_Fotograf%C3%ADas%20Secretar%C3%ADa%20de%20Cultura%20y%20Turismo%20C%C3%BAcuta.JPG.webp?itok=pKFsehxU",
+        "source_url": "https://colombia.travel/es/cucuta",
+        "title": "Centro Cultural Quinta Teresa",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "sin_licencia_acreditada_referencia_para_revision",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Fachada con frontón, columnas y galería. Foto atribuida a Secretaría de Cultura y Turismo de Cúcuta. Inspeccionada; fecha de captura desconocida."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "address": null,
+        "entrance_verified": false,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Centro%20Cultural%20Quinta%20Teresa%20C%C3%BAcuta%20Colombia"
+      },
+      "geo_status": "pending",
+      "legacy_name": "Centro Cultural Quinta Teresa",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

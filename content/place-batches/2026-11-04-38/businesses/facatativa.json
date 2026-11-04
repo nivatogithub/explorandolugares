@@ -1,0 +1,36 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "facatativa",
+  "businesses": [
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hoteles Sahara",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://hotelessaharafacatativa.com.co/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "María José Parrilla — Facatativá",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.mariajoseparrilla.com/restaurantes/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

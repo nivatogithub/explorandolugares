@@ -1,0 +1,51 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "galapa",
+  "businesses": [
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Droguerías Farmavida — Galapa",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://drogueriasfarmavida.com/quienes-somos/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Panadería y Refresquería Mundo Feliz",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://cdn.modyo.cloud/uploads/d7f65169-675f-4a67-98b5-8564b26ea0c2/original/Puntos_de_Recaudo_MAYO_2026_-_Puntos_de_recaudo.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "Tienda La Principal — Calle 13",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://cdn.modyo.cloud/uploads/d7f65169-675f-4a67-98b5-8564b26ea0c2/original/Puntos_de_Recaudo_MAYO_2026_-_Puntos_de_recaudo.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

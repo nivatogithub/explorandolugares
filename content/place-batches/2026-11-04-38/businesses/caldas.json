@@ -1,0 +1,36 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "caldas",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Restaurante El Abuelo — Caldas",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.elabuelo.co/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Plaza Garibaldi",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.cotelcoantioquia.org/properties-2-5/hotel-plaza-garibaldi",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

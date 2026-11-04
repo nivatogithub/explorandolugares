@@ -1,0 +1,36 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "la-estrella",
+  "businesses": [
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Los Chalets",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://loschalets.com/restaurante/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "transporte",
+      "information_status": "PUBLICO",
+      "name": "Transportes Estrella Medellín — TEMSA",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://temsa.com.co/rutas/1815-estrella-sabaneta/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

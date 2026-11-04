@@ -1,0 +1,21 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "santa-rosa-de-lima",
+  "businesses": [
+    {
+      "category_code": "servicios",
+      "information_status": "PUBLICO",
+      "name": "Compu Móvil No Hay Como Dios",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.bancoagrario.gov.co/system/files/2025-08/supergiros_0.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

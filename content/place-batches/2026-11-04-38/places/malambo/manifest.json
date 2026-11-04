@@ -1,0 +1,205 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "malambo",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Atlántico",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Malambo",
+        "headline": "Malambo",
+        "eyebrow": "Atlántico, Colombia",
+        "intro": "Municipio del Atlántico, sobre la ribera occidental del río Magdalena y a 12 km de Barranquilla.",
+        "meta_description": "Municipio del Atlántico, sobre la ribera occidental del río Magdalena y a 12 km de Barranquilla."
+      },
+      "en": {
+        "display_name": "Malambo",
+        "headline": "Malambo",
+        "eyebrow": "Atlántico, Colombia",
+        "intro": "A municipality in Atlántico, on the western bank of the Magdalena River and 12 km from Barranquilla.",
+        "meta_description": "A municipality in Atlántico, on the western bank of the Magdalena River and 12 km from Barranquilla."
+      },
+      "pt-BR": {
+        "display_name": "Malambo",
+        "headline": "Malambo",
+        "eyebrow": "Atlántico, Colombia",
+        "intro": "Município do Atlântico, na margem ocidental do rio Magdalena e a 12 km de Barranquilla.",
+        "meta_description": "Município do Atlântico, na margem ocidental do rio Magdalena e a 12 km de Barranquilla."
+      }
+    },
+    "history": {
+      "es": [
+        "El territorio fue un importante asentamiento indígena asociado al cacique Malambo; fue erigido municipio mediante la Ordenanza 024 de 1912."
+      ],
+      "en": [
+        "Its territory was an important Indigenous settlement associated with Chief Malambo; it was established as a municipality by Ordinance 024 of 1912."
+      ],
+      "pt-BR": [
+        "Seu território foi um importante assentamento indígena associado ao cacique Malambo; tornou-se município pela Ordenança 024 de 1912."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer el Museo Carlos Angulo Valdez como punto de encuentro con la memoria local.",
+        "Observar el interior de la parroquia Santa María Magdalena y su patrimonio religioso."
+      ],
+      "en": [
+        "Visit Museo Carlos Angulo Valdez to explore local heritage.",
+        "See the interior of Santa María Magdalena parish church and its religious heritage."
+      ],
+      "pt-BR": [
+        "Conhecer o Museo Carlos Angulo Valdez como ponto de encontro com a memória local.",
+        "Observar o interior da paróquia Santa María Magdalena e seu patrimônio religioso."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-11.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Malambo.",
+      "en": "Illustration of Malambo.",
+      "pt-BR": "Ilustração de Malambo."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-11-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.859304,
+      "longitude": -74.77252,
+      "translations": {
+        "es": {
+          "name": "Interior de la parroquia Santa María Magdalena",
+          "description": "Una mirada al interior de la parroquia Santa María Magdalena de Malambo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5078105611781085224"
+        },
+        "en": {
+          "name": "Interior de la parroquia Santa María Magdalena",
+          "description": "A view inside Santa María Magdalena parish church in Malambo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5078105611781085224"
+        },
+        "pt-BR": {
+          "name": "Interior de la parroquia Santa María Magdalena",
+          "description": "Um olhar para o interior da paróquia Santa María Magdalena de Malambo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5078105611781085224"
+        }
+      },
+      "image": {
+        "file": "images/QC-11-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.google.com/maps/search/?api=1&query=Parroquia+Santa+Mar%C3%ADa+Magdalena+Malambo",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Interior de la parroquia Santa María Magdalena.",
+          "en": "Illustration of Interior de la parroquia Santa María Magdalena.",
+          "pt-BR": "Ilustração de Interior de la parroquia Santa María Magdalena."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-11-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.8615185,
+      "longitude": -74.7737445,
+      "translations": {
+        "es": {
+          "name": "Museo Carlos Angulo Valdez",
+          "description": "Museo de Malambo que lleva el nombre de Carlos Angulo Valdez.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7375608741274886345"
+        },
+        "en": {
+          "name": "Museo Carlos Angulo Valdez",
+          "description": "Museum in Malambo named after Carlos Angulo Valdez.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7375608741274886345"
+        },
+        "pt-BR": {
+          "name": "Museo Carlos Angulo Valdez",
+          "description": "Museu de Malambo que leva o nome de Carlos Angulo Valdez.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7375608741274886345"
+        }
+      },
+      "image": {
+        "file": "images/QC-11-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.malambo-atlantico.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/Malambo-celebra-la-apertura-del-Museo-Carlos-Angulo-Valdez.aspx",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Carlos Angulo Valdez.",
+          "en": "Illustration of Museo Carlos Angulo Valdez.",
+          "pt-BR": "Ilustração de Museo Carlos Angulo Valdez."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://malambo-atlantico.gov.co/MiMunicipio/Paginas/Informacion-del-Municipio.aspx"
+      },
+      {
+        "reference": "https://malambo-atlantico.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx"
+      },
+      {
+        "reference": "https://www.malambo-atlantico.gov.co/Ciudadanos/PortaldeNinos/Enterate/Paginas/Sitios-de-interes.aspx"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-11-2: coordenadas pendientes",
+      "QC-11-3: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

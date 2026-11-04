@@ -1,0 +1,55 @@
+{
+  "number": 25,
+  "slug": "arjona",
+  "name": "Arjona",
+  "translations": {
+    "es": {
+      "title": "Arjona",
+      "location": "Municipio de Bolívar, en el entorno metropolitano de Cartagena de Indias.",
+      "history": "Arjona cuenta con una trayectoria histórica de 250 años reconocida por el Congreso de la República."
+    },
+    "en": {
+      "title": "Arjona",
+      "location": "A municipality in Bolívar, within the wider Cartagena de Indias metropolitan area.",
+      "history": "Arjona has a 250-year historical trajectory recognized by Colombia’s Congress."
+    },
+    "pt-BR": {
+      "title": "Arjona",
+      "location": "Município de Bolívar, no entorno metropolitano de Cartagena das Índias.",
+      "history": "Arjona tem uma trajetória histórica de 250 anos reconhecida pelo Congresso da República da Colômbia."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-25-1200.webp",
+  "sources": [
+    "https://www.arjona-bolivar.gov.co/",
+    "https://www.camara.gov.co/250-anos-municipio-arjona-546/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-25-4",
+      "municipality": "Arjona",
+      "title_es": "Interior de Nuestra Señora de la Candelaria",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-25-4.webp",
+      "image_sha256": "c37a5ddd7bdd280792d8e99f0f18b5483c8a1bfa15da19e25c38ad8a2ee2967d",
+      "source": {
+        "source_url": "https://www.eluniversal.com.co/suplementos/facetas/2022/01/29/la-curiosa-historia-de-como-se-construyo-la-iglesia-catolica-de-arjona/",
+        "url": "https://www.eluniversal.com.co/resizer/v2/X6YNU7BGGJDHJP4YBNCKQORK2I.jpg?auth=c08c61719200c97b2865c5f1f8593ee4d11fa0dc5428646d564a255a1d0eab24&height=800&quality=70&smart=true&width=1200",
+        "published_at": "2022-01-30",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

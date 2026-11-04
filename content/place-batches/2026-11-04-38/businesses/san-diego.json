@@ -1,0 +1,36 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "san-diego",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Restaurante La Esquina Verde",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://queresto.com/esquinaverde/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "servicios",
+      "information_status": "PUBLICO",
+      "name": "SuperGIROS — Provisiones JB",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.bancamia.com.co/wp-content/uploads/2025/09/PLANTILLA-PUNTOS-SUPERGIROS.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

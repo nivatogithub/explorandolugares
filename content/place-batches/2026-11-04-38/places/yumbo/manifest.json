@@ -1,0 +1,202 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "yumbo",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Valle del Cauca",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Yumbo",
+        "headline": "Yumbo",
+        "eyebrow": "Valle del Cauca, Colombia",
+        "intro": "Municipio del Valle del Cauca, en la margen izquierda del río Cauca y vecino de Cali.",
+        "meta_description": "Municipio del Valle del Cauca, en la margen izquierda del río Cauca y vecino de Cali."
+      },
+      "en": {
+        "display_name": "Yumbo",
+        "headline": "Yumbo",
+        "eyebrow": "Valle del Cauca, Colombia",
+        "intro": "A municipality in Valle del Cauca, on the left bank of the Cauca River and next to Cali.",
+        "meta_description": "A municipality in Valle del Cauca, on the left bank of the Cauca River and next to Cali."
+      },
+      "pt-BR": {
+        "display_name": "Yumbo",
+        "headline": "Yumbo",
+        "eyebrow": "Valle del Cauca, Colombia",
+        "intro": "Município do Valle del Cauca, na margem esquerda do rio Cauca e vizinho de Cali.",
+        "meta_description": "Município do Valle del Cauca, na margem esquerda do rio Cauca e vizinho de Cali."
+      }
+    },
+    "history": {
+      "es": [
+        "El territorio estaba habitado por una comunidad indígena antes de la llegada española; Yumbo fue creado como municipio en 1864."
+      ],
+      "en": [
+        "The territory was inhabited by an Indigenous community before Spanish arrival; Yumbo was created as a municipality in 1864."
+      ],
+      "pt-BR": [
+        "O território era habitado por uma comunidade indígena antes da chegada espanhola; Yumbo foi criado como município em 1864."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer la memoria comunitaria de Mulaló a través de su museo.",
+        "Acercarte al patrimonio arqueológico del sector de Montañitas."
+      ],
+      "en": [
+        "Explore Mulaló's community heritage through its museum.",
+        "Discover the archaeological heritage of the Montañitas area."
+      ],
+      "pt-BR": [
+        "Conhecer a memória comunitária de Mulaló por meio de seu museu.",
+        "Descobrir o patrimônio arqueológico do setor de Montañitas."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-13.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Yumbo.",
+      "en": "Illustration of Yumbo.",
+      "pt-BR": "Ilustração de Yumbo."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-13-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.6354659,
+      "longitude": -76.4838024,
+      "translations": {
+        "es": {
+          "name": "Museo Comunitario de Mulaló",
+          "description": "Museo comunitario de Mulaló, en el municipio de Yumbo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=10485282699866266106"
+        },
+        "en": {
+          "name": "Museo Comunitario de Mulaló",
+          "description": "Community museum in Mulaló, in the municipality of Yumbo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=10485282699866266106"
+        },
+        "pt-BR": {
+          "name": "Museo Comunitario de Mulaló",
+          "description": "Museu comunitário de Mulaló, no município de Yumbo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=10485282699866266106"
+        }
+      },
+      "image": {
+        "file": "images/QC-13-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.museoscomunitarios.org/mulalo",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Comunitario de Mulaló.",
+          "en": "Illustration of Museo Comunitario de Mulaló.",
+          "pt-BR": "Ilustração de Museo Comunitario de Mulaló."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-13-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.6627005,
+      "longitude": -76.525914,
+      "translations": {
+        "es": {
+          "name": "Museo Arqueológico de Montañitas",
+          "description": "Museo arqueológico de Montañitas, en el municipio de Yumbo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4173196691829170542"
+        },
+        "en": {
+          "name": "Museo Arqueológico de Montañitas",
+          "description": "Archaeological museum in Montañitas, in the municipality of Yumbo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4173196691829170542"
+        },
+        "pt-BR": {
+          "name": "Museo Arqueológico de Montañitas",
+          "description": "Museu arqueológico de Montañitas, no município de Yumbo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4173196691829170542"
+        }
+      },
+      "image": {
+        "file": "images/QC-13-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://elquindiano.com/noticia/142236/un-museo-en-la-montana/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Arqueológico de Montañitas.",
+          "en": "Illustration of Museo Arqueológico de Montañitas.",
+          "pt-BR": "Ilustração de Museo Arqueológico de Montañitas."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.yumbo.gov.co/loader.php?idFile=39682&lFuncion=exposeDocument&lServicio=Tools2&lTipo=descargas&tmp=f02a3460f3b73736d5575a6415a8e81a&urlDeleteFunction=https%3A%2F%2Fwww.yumbo.gov.co%2Floader.php%3FlServicio%3DTools2%26lTipo%3Ddescargas%26lFuncion%3DdeleteTemporalFile%26tmp%3Df02a3460f3b73736d5575a6415a8e81a"
+      },
+      {
+        "reference": "https://www.yumbo.gov.co/publicaciones/78/sitios-de-interes/"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-13-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-13-3: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

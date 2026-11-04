@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "santa-rosa-de-lima",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Bolívar",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Santa Rosa de Lima",
+        "headline": "Santa Rosa de Lima",
+        "eyebrow": "Bolívar, Colombia",
+        "intro": "Municipio del norte de Bolívar, en el corredor terrestre entre Cartagena y el departamento del Atlántico.",
+        "meta_description": "Municipio del norte de Bolívar, en el corredor terrestre entre Cartagena y el departamento del Atlántico."
+      },
+      "en": {
+        "display_name": "Santa Rosa de Lima",
+        "headline": "Santa Rosa de Lima",
+        "eyebrow": "Bolívar, Colombia",
+        "intro": "A municipality in northern Bolívar, on the land corridor between Cartagena and Atlántico department.",
+        "meta_description": "A municipality in northern Bolívar, on the land corridor between Cartagena and Atlántico department."
+      },
+      "pt-BR": {
+        "display_name": "Santa Rosa de Lima",
+        "headline": "Santa Rosa de Lima",
+        "eyebrow": "Bolívar, Colombia",
+        "intro": "Município do norte de Bolívar, no corredor terrestre entre Cartagena e o departamento do Atlántico.",
+        "meta_description": "Município do norte de Bolívar, no corredor terrestre entre Cartagena e o departamento do Atlántico."
+      }
+    },
+    "history": {
+      "es": [
+        "Una reseña institucional sitúa la fundación del poblado en 1735 y registra el antiguo nombre de Santa Rosa de Alipaya."
+      ],
+      "en": [
+        "An institutional historical account dates the town’s founding to 1735 and records its former name, Santa Rosa de Alipaya."
+      ],
+      "pt-BR": [
+        "Um relato histórico institucional situa a fundação do povoado em 1735 e registra seu antigo nome, Santa Rosa de Alipaya."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer el interior del templo dedicado a Santa Rosa de Lima.",
+        "Acercarte al centro de un municipio del entorno rural de Cartagena."
+      ],
+      "en": [
+        "Discover the interior of the church dedicated to Saint Rose of Lima.",
+        "Explore the centre of a municipality in Cartagena's rural surroundings."
+      ],
+      "pt-BR": [
+        "Conhecer o interior do templo dedicado a Santa Rosa de Lima.",
+        "Visitar o centro de um município do entorno rural de Cartagena."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-27.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Santa Rosa de Lima.",
+      "en": "Illustration of Santa Rosa de Lima.",
+      "pt-BR": "Ilustração de Santa Rosa de Lima."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-27-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.443688,
+      "longitude": -75.3702416,
+      "translations": {
+        "es": {
+          "name": "Interior de la iglesia Santa Rosa de Lima",
+          "description": "Vista interior de la iglesia Santa Rosa de Lima, en el municipio del mismo nombre.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4130990071867511226"
+        },
+        "en": {
+          "name": "Interior de la iglesia Santa Rosa de Lima",
+          "description": "Interior view of Santa Rosa de Lima church, in the municipality of the same name.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4130990071867511226"
+        },
+        "pt-BR": {
+          "name": "Interior de la iglesia Santa Rosa de Lima",
+          "description": "Vista interior da igreja Santa Rosa de Lima, no município de mesmo nome.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4130990071867511226"
+        }
+      },
+      "image": {
+        "file": "images/QC-27-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.eluniversal.com.co/regional/bolivar/2025/08/09/santa-rosa-de-lima-bolivar-un-viaje-al-corazon-de-la-tradicion-y-la-memoria/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Interior de la iglesia Santa Rosa de Lima.",
+          "en": "Illustration of Interior de la iglesia Santa Rosa de Lima.",
+          "pt-BR": "Ilustração de Interior de la iglesia Santa Rosa de Lima."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.santarosabolivar.gov.co/"
+      },
+      {
+        "reference": "https://repositoriocdim.esap.edu.co/bitstreams/fc625279-536f-4e5c-baf4-beeb08fc5f6e/download"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-27-3: coordenadas pendientes",
+      "QC-27-3: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

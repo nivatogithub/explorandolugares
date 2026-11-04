@@ -1,0 +1,51 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "cota",
+  "businesses": [
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "GHL Style Hotel Bogotá Occidente",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.ghlhoteles.com/en/hotels/colombia/bogota/style-hotel-bogota-occidente/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "transporte",
+      "information_status": "PUBLICO",
+      "name": "Cootranscota",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.cootranscota.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Factory Green",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.hotelfactorygreen.com/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

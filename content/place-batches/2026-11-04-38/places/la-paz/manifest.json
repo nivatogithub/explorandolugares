@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "la-paz",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Cesar",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "La Paz",
+        "headline": "La Paz",
+        "eyebrow": "Cesar, Colombia",
+        "intro": "Municipio del norte del Cesar, vecino de Valledupar y de la Serranía del Perijá, con frontera oriental con Venezuela.",
+        "meta_description": "Municipio del norte del Cesar, vecino de Valledupar y de la Serranía del Perijá, con frontera oriental con Venezuela."
+      },
+      "en": {
+        "display_name": "La Paz",
+        "headline": "La Paz",
+        "eyebrow": "Cesar, Colombia",
+        "intro": "A municipality in northern Cesar, near Valledupar and the Perijá Mountains, with an eastern border with Venezuela.",
+        "meta_description": "A municipality in northern Cesar, near Valledupar and the Perijá Mountains, with an eastern border with Venezuela."
+      },
+      "pt-BR": {
+        "display_name": "La Paz",
+        "headline": "La Paz",
+        "eyebrow": "Cesar, Colombia",
+        "intro": "Município do norte do Cesar, vizinho de Valledupar e da Serranía del Perijá, com fronteira oriental com a Venezuela.",
+        "meta_description": "Município do norte do Cesar, vizinho de Valledupar e da Serranía del Perijá, com fronteira oriental com a Venezuela."
+      }
+    },
+    "history": {
+      "es": [
+        "Fue fundado el 24 de enero de 1775 por familias ganaderas procedentes de Valledupar; al crearse el Cesar en 1967, quedó como cabecera municipal de La Paz."
+      ],
+      "en": [
+        "It was founded on 24 January 1775 by cattle-ranching families from Valledupar; when Cesar was created in 1967, it became the municipal seat of La Paz."
+      ],
+      "pt-BR": [
+        "Foi fundada em 24 de janeiro de 1775 por famílias criadoras de gado vindas de Valledupar; com a criação do Cesar em 1967, tornou-se a sede municipal de La Paz."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer el Parque Almojabanero Dalinda Sierra como referente de la identidad local."
+      ],
+      "en": [
+        "Discover Parque Almojabanero Dalinda Sierra as a landmark of local identity."
+      ],
+      "pt-BR": [
+        "Descobrir o Parque Almojabanero Dalinda Sierra como referência da identidade local."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-37.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "https://caracol.com.co/radio/2016/07/08/nacional/1467998793_134290.html",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de La Paz.",
+      "en": "Illustration of La Paz.",
+      "pt-BR": "Ilustração de La Paz."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-37-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.3866789,
+      "longitude": -73.1709177,
+      "translations": {
+        "es": {
+          "name": "Parque Almojabanero Dalinda Sierra",
+          "description": "Parque Almojabanero Dalinda Sierra, en La Paz, Cesar.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=9809140048289368470"
+        },
+        "en": {
+          "name": "Parque Almojabanero Dalinda Sierra",
+          "description": "Parque Almojabanero Dalinda Sierra, in La Paz, Cesar.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=9809140048289368470"
+        },
+        "pt-BR": {
+          "name": "Parque Almojabanero Dalinda Sierra",
+          "description": "Parque Almojabanero Dalinda Sierra, em La Paz, Cesar.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=9809140048289368470"
+        }
+      },
+      "image": {
+        "file": "images/QC-37-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://ulianamolano.wixsite.com/artepublico-unad/post/parque-almojabanero-dalinda-sierra",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque Almojabanero Dalinda Sierra.",
+          "en": "Illustration of Parque Almojabanero Dalinda Sierra.",
+          "pt-BR": "Ilustração de Parque Almojabanero Dalinda Sierra."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.lapazrobles-cesar.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx"
+      },
+      {
+        "reference": "https://www.lapazrobles-cesar.gov.co/MiMunicipio/Paginas/Como-llegar-al-municipio.aspx"
+      },
+      {
+        "reference": "https://www.cesar.gov.co/d/es/nosotros/el-departamento/historia"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-37-3: coordenadas pendientes",
+      "QC-37-3: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

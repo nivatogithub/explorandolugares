@@ -1,0 +1,100 @@
+{
+  "number": 20,
+  "slug": "madrid",
+  "name": "Madrid",
+  "translations": {
+    "es": {
+      "title": "Madrid, Cundinamarca",
+      "location": "Municipio de Sabana Occidente, ubicado al occidente de Bogotá en Cundinamarca.",
+      "history": "El poblado tuvo origen en el cacicazgo chibcha de Tibaitatá y durante la Colonia fue conocido como Serrezuela. En 1875 adoptó el nombre de Madrid, en homenaje a Pedro Fernández Madrid."
+    },
+    "en": {
+      "title": "Madrid, Cundinamarca",
+      "location": "A Sabana Occidente municipality located west of Bogotá in Cundinamarca.",
+      "history": "The settlement originated in the Chibcha chiefdom of Tibaitatá and was known as Serrezuela during the colonial period. In 1875 it adopted the name Madrid, honoring Pedro Fernández Madrid."
+    },
+    "pt-BR": {
+      "title": "Madrid, Cundinamarca",
+      "location": "Município de Sabana Occidente, localizado a oeste de Bogotá, em Cundinamarca.",
+      "history": "O povoado teve origem no cacicado chibcha de Tibaitatá e durante o período colonial foi conhecido como Serrezuela. Em 1875 adotou o nome Madrid, em homenagem a Pedro Fernández Madrid."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-20-1200.webp",
+  "sources": [
+    "https://biblioteca.igac.gov.co/janium/Documentos/1-01005.pdf",
+    "https://www.cundinamarca.gov.co/noticias/15-municipios-de-cundinamarca-hacen-parte-del-circuito-bicibogota-region/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-20-3",
+      "municipality": "Madrid",
+      "title_es": "Cerro Tibaitatá",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-20-3-v1-1200.webp",
+      "image_sha256": "451cecb3838e8d19addf05b0496dcfc8d230fd58b695ad0654623b12f9e7e9eb",
+      "source": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cerro_Tibaitat%C3%A1%2C_inmortalizado_por_%40moro.fotograf%C3%ADa_y_compartidos_a_trav%C3%A9s_de_las_redes_de_la_Alcald%C3%ADa_de_Madrid%2C_Cundinamarca.jpg",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cerro_Tibaitat%C3%A1,_inmortalizado_por_@moro.fotograf%C3%ADa_y_compartidos_a_trav%C3%A9s_de_las_redes_de_la_Alcald%C3%ADa_de_Madrid,_Cundinamarca.jpg",
+        "published_at": "2024-12-16",
+        "captured_at": null,
+        "note": "Fecha declarada del archivo 16-dic-2024, también fecha de carga; sin EXIF independiente. Descripción atribuye a @moro.fotografía; cargador Picshare declara obra propia. No confundir carga con captura."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Cerro Tibaitatá",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-20-4",
+      "municipality": "Madrid",
+      "title_es": "Parque de las Flores",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-20-4-v1-1200.webp",
+      "image_sha256": "5499e0b2c56d232ad885c4b22ff7cd341bbe9632f3d8bc0505051ac5aa50a047",
+      "source": {
+        "id": "QC-20-4-CONF-NOV03",
+        "url": "https://impulsamadrid.com.co/_next/image?q=75&url=https%3A%2F%2Fadmincms.impulsamadrid.com.co%2Fuploads%2FParque_de_las_Flores_e488630270.jpg&w=1920",
+        "source_url": "https://impulsamadrid.com.co/",
+        "title": "Parque de las Flores",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "sin_licencia_acreditada_referencia_para_revision",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Imagen real inspeccionada: entrada identificada y equipamiento recreativo del parque. Captura sin fecha acreditada."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "address": "Calle 7 #7-41, barrio Barranquillita, Madrid, Cundinamarca",
+        "entrance_verified": false,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Parque%20de%20las%20Flores%20Madrid%20Colombia",
+        "source_url": "https://parquedelasflores.com/"
+      },
+      "geo_status": "pending",
+      "legacy_name": "Parque de las Flores",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

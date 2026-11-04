@@ -1,0 +1,151 @@
+{
+  "number": 4,
+  "slug": "copacabana",
+  "name": "Copacabana",
+  "translations": {
+    "es": {
+      "title": "Copacabana",
+      "location": "Municipio del norte del Valle de Aburrá, Antioquia, entre Bello y Girardota.",
+      "history": "Su historia está ligada al antiguo asentamiento de La Tasajera. En 1702 pasó a llamarse Nuestra Señora de Copacabana de la Tasajera; su tradición se remonta a la fundación atribuida a 1541."
+    },
+    "en": {
+      "title": "Copacabana",
+      "location": "Municipality in the north of the Aburrá Valley, Antioquia, between Bello and Girardota.",
+      "history": "Its history is linked to the former settlement of La Tasajera. In 1702 it was renamed Nuestra Señora de Copacabana de la Tasajera; its tradition traces its foundation to 1541."
+    },
+    "pt-BR": {
+      "title": "Copacabana",
+      "location": "Município no norte do Vale de Aburrá, em Antioquia, entre Bello e Girardota.",
+      "history": "Sua história está ligada ao antigo povoado de La Tasajera. Em 1702 passou a chamar-se Nuestra Señora de Copacabana de la Tasajera; sua tradição remonta a uma fundação atribuída a 1541."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-04-1200.webp",
+  "sources": [
+    "https://www.copacabana.gov.co/MiMunicipio/Paginas/Informacion-del-Municipio.aspx?ID=3",
+    "https://www.copacabana.gov.co/MiMunicipio/Paginas/Pasado-presente-y-futuro.aspx",
+    "https://www.copacabana.gov.co/ciudadanos/PortaldeNinos/Enterate/Paginas/Sitios-de-Interes.aspx"
+  ],
+  "attractions": [
+    {
+      "id": "QC-04-2",
+      "municipality": "Copacabana",
+      "title_es": "Casa de la Cultura Fundadora de Pueblos",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-04-2-v1-1200.webp",
+      "image_sha256": "319aa37c9e9947990a1c163004ba9bb1b91764f3133a0a47cd3cf7e8901d09f6",
+      "source": {
+        "id": "QC-04-2-R1",
+        "url": "https://www.copacabana.gov.co/MiMunicipio/PublishingImages/Paginas/Sitios%20de%20interes/Casa%20de%20la%20Cultura%20Fundadora%20de%20Pueblos.png",
+        "source_url": "https://www.copacabana.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+        "title": "Casa de la Cultura · Alcaldía",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "user_approved": false,
+        "note": "Sin fecha de captura ni publicación verificadas. Resolución original pequeña (500 px); buscar mejor resolución antes de generar.",
+        "preview_load_verified": true
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.3471787,
+        "longitude": -75.50658231,
+        "precision": "punto_ficha_Comfenalco_no_acceso_verificado",
+        "source_url": "https://infolocal.comfenalcoantioquia.com/index.php/casa-de-la-cultura-fundadora-de-pueblos",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.3471787%2C-75.50658231"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Casa de la Cultura Fundadora de Pueblos",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-04-3",
+      "municipality": "Copacabana",
+      "title_es": "Parque Comfama Copacabana",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-04-3-v1-1200.webp",
+      "image_sha256": "71cee28d7c2f21b1ec92a422fb23f741b319c5d47fccc86a9c375f4708988d6f",
+      "source": {
+        "id": "QC-04-3-R1",
+        "url": "https://images.ctfassets.net/gkhyeghj07ak/60mRzFFlwuYB5xz08h2Ro8/27d2219a862dd63373b5ec10a61110fb/DJI_0755.webp",
+        "source_url": "https://www.comfama.com/cultura-y-ocio/parques/redescubre-copacabana/",
+        "title": "Comfama Copacabana · toboganes",
+        "published_at": "2025-11-10",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "user_approved": false,
+        "note": "La página menciona renovación: contrastar configuración actual antes de generar.",
+        "preview_load_verified": true
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.3754361,
+        "longitude": -75.4842336,
+        "precision": "punto_ficha_Waze_no_acceso_verificado",
+        "source_url": "https://www.waze.com/live-map/directions/co/antioquia/comfama-copacabana-park?to=place.ChIJ6U-ChtY6RI4RWVZLyp4fNCA",
+        "address": "Calle 104 #12-180, km 18 Autopista Norte",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.3754361%2C-75.4842336"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Parque Comfama Copacabana",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-04-4",
+      "municipality": "Copacabana",
+      "title_es": "Monumento a la Santa Cruz — cerro El Cabuyal",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-04-4-v2-1200.webp",
+      "image_sha256": "329f92f32b83d5478c3689d778585c7b96021eb50d3caf4e8c51e8cb62ce3402",
+      "source": {
+        "id": "QC-04-4-NOV03",
+        "url": "https://www.teleantioquia.co/wp-content/uploads/2025/07/portada-4-1024x576.png",
+        "source_url": "https://www.teleantioquia.co/amp/entretenimiento/la-promesa-que-se-volvio-simbolo-la-historia-de-la-cruz-que-se-alza-en-lo-alto-de-una-montana-de-copacabana-511701.html",
+        "title": "Santa Cruz — referencia de Teleantioquia / Antioquia es Mágica",
+        "note": "Vista aérea del monumento metálico completo, cubierta anexa, plataforma y ladera; no es la iglesia del parque. No reproducir multitudes identificables. Captura no fechada; publicación de 2025.",
+        "published_at": "2025-07-10",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Monumento a la Santa Cruz — cerro El Cabuyal",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

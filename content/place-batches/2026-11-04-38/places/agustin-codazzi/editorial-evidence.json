@@ -1,0 +1,81 @@
+{
+  "number": 40,
+  "slug": "agustin-codazzi",
+  "name": "Agustín Codazzi",
+  "translations": {
+    "es": {
+      "title": "Agustín Codazzi",
+      "location": "Municipio del norte del Cesar, en el corredor entre Valledupar y la Serranía del Perijá; integra el entorno metropolitano de Valledupar.",
+      "history": "La Gobernación del Cesar registra su fundación en 1859 y su erección municipal en 1958. Recibe el nombre del geógrafo Agustín Codazzi, fallecido allí durante la Comisión Corográfica."
+    },
+    "en": {
+      "title": "Agustín Codazzi",
+      "location": "A municipality in northern Cesar, on the corridor between Valledupar and the Perijá Mountains; it is part of Valledupar’s metropolitan setting.",
+      "history": "The Cesar departmental government records its founding in 1859 and municipal incorporation in 1958. It is named after geographer Agustín Codazzi, who died there during the Chorographic Commission."
+    },
+    "pt-BR": {
+      "title": "Agustín Codazzi",
+      "location": "Município do norte do Cesar, no corredor entre Valledupar e a Serranía del Perijá; integra o entorno metropolitano de Valledupar.",
+      "history": "O governo departamental do Cesar registra sua fundação em 1859 e sua emancipação municipal em 1958. Recebe o nome do geógrafo Agustín Codazzi, que morreu ali durante a Comissão Corográfica."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-40-1200.webp",
+  "sources": [
+    "https://www.cesar.gov.co/d/es/nosotros/el-departamento/historia",
+    "https://www.agustincodazzi-cesar.gov.co/",
+    "https://www.renovacionterritorio.gov.co/central-pdet/subregiones/sierra-nevada-perija/municipios"
+  ],
+  "attractions": [
+    {
+      "id": "QC-40-2",
+      "municipality": "Agustín Codazzi",
+      "title_es": "Monumento Las Guitarras",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-40-2.webp",
+      "image_sha256": "0bd2a0b5751298af8c45958d57669c398543102e5f5d66c78c9c531442e2ce11",
+      "source": {
+        "source_url": "https://imgur.com/gallery/monumento-las-guitarras-codazzi-cesar-pQDhMPK",
+        "url": "https://i.imgur.com/okZvhtH.jpeg",
+        "published_at": "2020-08-17",
+        "captured_at": null,
+        "credit": "dgjacksonarevalo",
+        "visual_reviewed": true,
+        "checked_at": "2026-11-03",
+        "validation_url": "https://elpilon.com.co/turismo/cafe-rios-montanas-y-musica-los-sitios-turisticos-para-conocer-en-codazzi"
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": "Monumento de Las Guitarras",
+      "identity_changed": true,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-40-4",
+      "municipality": "Agustín Codazzi",
+      "title_es": "Monumento al Festival de Música Vallenata en Guitarra",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-40-4.webp",
+      "image_sha256": "d36ed4e6ac9938a32803e07257b4f54bbbbb432b8a335b39be4ac67f08043277",
+      "source": {
+        "url": "https://panoramacultural.com.co/media/images/articulos/2024/08/12203021.jpg",
+        "source_url": "https://panoramacultural.com.co/opinion/10070/ecos-del-festival-de-guitarra-en-codazzi",
+        "published_at": "2024-08-13",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "status": "referencia_utilizada_pendiente_aprobacion"
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

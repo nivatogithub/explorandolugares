@@ -1,0 +1,122 @@
+{
+  "number": 7,
+  "slug": "itagui",
+  "name": "Itagüí",
+  "translations": {
+    "es": {
+      "title": "Itagüí",
+      "location": "Municipio densamente urbanizado al sur de Medellín, en el Valle de Aburrá, vecino de Medellín, Envigado, Sabaneta y La Estrella.",
+      "history": "El poblado se fundó en 1743 alrededor de una capilla y sus primeras calles. En 1832 se aprobó la creación del Distrito de Itagüí, separado entonces de Envigado."
+    },
+    "en": {
+      "title": "Itagüí",
+      "location": "Densely urbanized municipality south of Medellín in the Aburrá Valley, neighboring Medellín, Envigado, Sabaneta and La Estrella.",
+      "history": "The settlement was founded in 1743 around a chapel and its first streets. In 1832 the creation of the District of Itagüí was approved, separating it from Envigado."
+    },
+    "pt-BR": {
+      "title": "Itagüí",
+      "location": "Município densamente urbanizado ao sul de Medellín, no Vale de Aburrá, vizinho de Medellín, Envigado, Sabaneta e La Estrella.",
+      "history": "O povoado foi fundado em 1743 em torno de uma capela e de suas primeiras ruas. Em 1832 foi aprovada a criação do Distrito de Itagüí, então separado de Envigado."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-07-1200.webp",
+  "sources": [
+    "https://www.itagui.gov.co/sitio/ver_noticia/el-municipio-de-itagui-cumple-193anos",
+    "https://www.itagui.gov.co/micrositios/micrositio/Itag-turstica",
+    "https://itagui.gov.co/uploads/micrositios/files/950c0-documento-pest-ciudad-itagu-i-2021-2040-final_compressed-2-.pdf"
+  ],
+  "attractions": [
+    {
+      "id": "QC-07-7",
+      "municipality": "Itagüí",
+      "title_es": "Museo Comunitario Graciliano Arcila Vélez",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-07-7.webp",
+      "image_sha256": "7ca701d7abae8a4195462f26d23b72d4409d08adcbe5b85d551cbef2ad8f1534",
+      "source": {
+        "source_url": "https://ciudadsur.co/en-un-museo-comunitario-de-itagui-se-conservan-tesoros-arqueologico-de-hace-2-000-asi-puedes-recorrerlo/",
+        "url": "https://ciudadsur.co/wp-content/uploads/2026/09/museo-arquelogico-Itagui.jpg",
+        "published_at": "2026-09-21",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "credit": "Veeduría Territorial Itagüí",
+        "checked_at": "2026-11-03"
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-07-2",
+      "municipality": "Itagüí",
+      "title_es": "Casa Museo Ditaires",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-07-2.webp",
+      "image_sha256": "3e9cdcc385747e212a23f3a25962e66e402ae5ab3451193ffe3c38e6987322e7",
+      "source": {
+        "url": "https://itaguihoy.com/wp-content/uploads/2024/09/Casa-Museo-Ditaires1-1.jpg",
+        "source_url": "https://itaguihoy.com/hoy-hay-conversatorio-historico-sobre-ditaires/",
+        "published_at": "2024-09-12",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "status": "referencia_utilizada_pendiente_aprobacion"
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Casa Museo Ditaires",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-07-3",
+      "municipality": "Itagüí",
+      "title_es": "Centro Cultural Caribe",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-07-3.webp",
+      "image_sha256": "459ae65f484bd2131ff9562980927d9158e87965851be6102740a55cd45c5989",
+      "source": {
+        "url": "https://vivirenelpoblado.com/wp-content/uploads/2022/08/Nuevo-Teatro-Caribe-en-Itagui-en-el-sur-del-Valle-de-Aburra-01%C2%B4.jpg",
+        "source_url": "https://vivirenelpoblado.com/nuevo-teatro-caribe-en-itagui-en-el-sur-del-valle-de-aburra/",
+        "published_at": "2022-08",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "checked_at": "2026-11-03",
+        "status": "referencia_utilizada_pendiente_aprobacion"
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.17282597412994,
+        "longitude": -75.6076219560337,
+        "precision": "punto_directorio_Comfenalco_no_entrada_validada",
+        "source_url": "https://infolocal.comfenalcoantioquia.com/index.php/centro-cultural-caribe",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.1728259741299400,-75.60762195603370"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Centro Cultural Caribe",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

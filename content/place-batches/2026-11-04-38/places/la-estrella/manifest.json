@@ -1,0 +1,205 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "la-estrella",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Antioquia",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "La Estrella",
+        "headline": "La Estrella",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipio del sur del Valle de Aburrá, Antioquia, ubicado al occidente del río Medellín y vecino de Medellín, Itagüí, Envigado, Sabaneta y Caldas.",
+        "meta_description": "Municipio del sur del Valle de Aburrá, Antioquia, ubicado al occidente del río Medellín y vecino de Medellín, Itagüí, Envigado, Sabaneta y Caldas."
+      },
+      "en": {
+        "display_name": "La Estrella",
+        "headline": "La Estrella",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipality in the south of the Aburrá Valley, Antioquia, located west of the Medellín River and neighboring Medellín, Itagüí, Envigado, Sabaneta and Caldas.",
+        "meta_description": "Municipality in the south of the Aburrá Valley, Antioquia, located west of the Medellín River and neighboring Medellín, Itagüí, Envigado, Sabaneta and Caldas."
+      },
+      "pt-BR": {
+        "display_name": "La Estrella",
+        "headline": "La Estrella",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Município no sul do Vale de Aburrá, em Antioquia, situado a oeste do rio Medellín e vizinho de Medellín, Itagüí, Envigado, Sabaneta e Caldas.",
+        "meta_description": "Município no sul do Vale de Aburrá, em Antioquia, situado a oeste do rio Medellín e vizinho de Medellín, Itagüí, Envigado, Sabaneta e Caldas."
+      }
+    },
+    "history": {
+      "es": [
+        "El poblado, conocido antes como Ancón, fue fundado en 1685 como Nuestra Señora de La Estrella. Su origen está ligado a población indígena anacona y a una tradición agrícola que antecede su crecimiento residencial contemporáneo."
+      ],
+      "en": [
+        "The settlement, formerly known as Ancón, was founded in 1685 as Nuestra Señora de La Estrella. Its origins are linked to Anacona Indigenous people and an agricultural tradition that predates its contemporary residential growth."
+      ],
+      "pt-BR": [
+        "O povoado, anteriormente conhecido como Ancón, foi fundado em 1685 como Nuestra Señora de La Estrella. Sua origem está ligada à população indígena anacona e a uma tradição agrícola anterior ao crescimento residencial contemporâneo."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte a la historia municipal en el Museo Casa Consistorial.",
+        "Combinar el recorrido por el centro con una jornada recreativa en el parque Comfama."
+      ],
+      "en": [
+        "Explore the town's history at Museo Casa Consistorial.",
+        "Combine a walk through the centre with a recreation outing at Comfama park."
+      ],
+      "pt-BR": [
+        "Conhecer a história municipal no Museo Casa Consistorial.",
+        "Combinar um passeio pelo centro com uma jornada recreativa no parque Comfama."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-08.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de La Estrella.",
+      "en": "Illustration of La Estrella.",
+      "pt-BR": "Ilustração de La Estrella."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-08-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.1578278,
+      "longitude": -75.642973,
+      "translations": {
+        "es": {
+          "name": "Museo Casa Consistorial",
+          "description": "Museo de La Estrella situado en la Casa Consistorial.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=1396174974099564038"
+        },
+        "en": {
+          "name": "Museo Casa Consistorial",
+          "description": "Museum in La Estrella housed in the Casa Consistorial.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=1396174974099564038"
+        },
+        "pt-BR": {
+          "name": "Museo Casa Consistorial",
+          "description": "Museu de La Estrella instalado na Casa Consistorial.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=1396174974099564038"
+        }
+      },
+      "image": {
+        "file": "images/QC-08-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://2024.laestrella.gov.co/sitio/ver_noticia/museoinaugurado",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Casa Consistorial.",
+          "en": "Illustration of Museo Casa Consistorial.",
+          "pt-BR": "Ilustração de Museo Casa Consistorial."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-08-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.1535145,
+      "longitude": -75.6511216,
+      "translations": {
+        "es": {
+          "name": "Parque Comfama La Estrella",
+          "description": "Parque recreativo de Comfama en La Estrella.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=8220934097480413422"
+        },
+        "en": {
+          "name": "Parque Comfama La Estrella",
+          "description": "Comfama recreation park in La Estrella.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=8220934097480413422"
+        },
+        "pt-BR": {
+          "name": "Parque Comfama La Estrella",
+          "description": "Parque recreativo da Comfama em La Estrella.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=8220934097480413422"
+        }
+      },
+      "image": {
+        "file": "images/QC-08-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.comfama.com/cultura-y-ocio/parques/parque-la-estrella/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque Comfama La Estrella.",
+          "en": "Illustration of Parque Comfama La Estrella.",
+          "pt-BR": "Ilustração de Parque Comfama La Estrella."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://2024.laestrella.gov.co/municipio"
+      },
+      {
+        "reference": "https://2024.laestrella.gov.co/sitio/ver_noticia/museoinaugurado"
+      },
+      {
+        "reference": "https://2024.laestrella.gov.co/sitio/ver_noticia/Parque-Ambiental-Miraflores"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-08-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-08-4: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

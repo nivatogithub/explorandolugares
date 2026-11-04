@@ -1,0 +1,55 @@
+{
+  "number": 28,
+  "slug": "clemencia",
+  "name": "Clemencia",
+  "translations": {
+    "es": {
+      "title": "Clemencia",
+      "location": "Municipio del norte de Bolívar, entre Cartagena de Indias, Santa Catalina, Santa Rosa de Lima y Villanueva.",
+      "history": "Clemencia fue creado como municipio mediante la Ordenanza 17 de 1995, con territorio segregado de Santa Catalina."
+    },
+    "en": {
+      "title": "Clemencia",
+      "location": "A northern Bolívar municipality between Cartagena de Indias, Santa Catalina, Santa Rosa de Lima and Villanueva.",
+      "history": "Clemencia was created as a municipality by Ordinance 17 of 1995, with territory separated from Santa Catalina."
+    },
+    "pt-BR": {
+      "title": "Clemência",
+      "location": "Município do norte de Bolívar, entre Cartagena das Índias, Santa Catalina, Santa Rosa de Lima e Villanueva.",
+      "history": "Clemência foi criado como município pela Ordenança 17 de 1995, com território desmembrado de Santa Catalina."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-28-1200.webp",
+  "sources": [
+    "https://www.clemencia-bolivar.gov.co/",
+    "https://www.diccionariodecolombia.expert/diccionario-enciclopedico/clemencia/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-28-2",
+      "municipality": "Clemencia",
+      "title_es": "Biblioteca pública · Casa Cultural",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-28-2.webp",
+      "image_sha256": "58eb4e57a5069ed29f8018921deab1dd9dc588e4584dd582ae9e07355b191df9",
+      "source": {
+        "source_url": "https://caracol.com.co/2024/07/24/alcaldia-de-clemencia-invertira-190-millones-en-la-biblioteca-municipal/",
+        "url": "https://cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/KJTKG6UXL5A7RL7ADPUXMMIV6M.jpg",
+        "published_at": "2024-07-24",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": "Casa de la Cultura de Clemencia",
+      "identity_changed": true,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

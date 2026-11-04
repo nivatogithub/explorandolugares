@@ -1,0 +1,55 @@
+{
+  "number": 33,
+  "slug": "los-patios",
+  "name": "Los Patios",
+  "translations": {
+    "es": {
+      "title": "Los Patios",
+      "location": "Municipio de Norte de Santander, a 7 km de Cúcuta y parte del Área Metropolitana de Cúcuta.",
+      "history": "El territorio reunió haciendas y caseríos desde el siglo XVIII; fue reconocido como municipio el 10 de diciembre de 1985."
+    },
+    "en": {
+      "title": "Los Patios",
+      "location": "A municipality in Norte de Santander, 7 km from Cúcuta and part of the Cúcuta Metropolitan Area.",
+      "history": "The territory brought together estates and hamlets from the eighteenth century; it was recognized as a municipality on 10 December 1985."
+    },
+    "pt-BR": {
+      "title": "Los Patios",
+      "location": "Município de Norte de Santander, a 7 km de Cúcuta e parte da Área Metropolitana de Cúcuta.",
+      "history": "O território reuniu fazendas e povoados desde o século XVIII; foi reconhecido como município em 10 de dezembro de 1985."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-33-1200.webp",
+  "sources": [
+    "https://amc.gov.co/amc/los-patios/",
+    "https://www.lospatios-nortedesantander.gov.co/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-33-5",
+      "municipality": "Los Patios",
+      "title_es": "Museo Los Vados · colección arqueológica",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-33-5.webp",
+      "image_sha256": "91d90239529bb9ad9fd02f363568511328d01b1e441f4b7c862312c052a34519",
+      "source": {
+        "source_url": "https://www.orbedatos.com/los-patios-da-ejemplo-y-visibiliza-su-patrimonio-cultural/",
+        "url": "https://orbedatos.com/wp-content/uploads/2023/08/El-Museo-Vados.-1024x642.jpg",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

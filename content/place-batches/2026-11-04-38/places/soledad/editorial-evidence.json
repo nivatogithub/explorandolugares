@@ -1,0 +1,113 @@
+{
+  "number": 10,
+  "slug": "soledad",
+  "name": "Soledad",
+  "translations": {
+    "es": {
+      "title": "Soledad",
+      "location": "Municipio del Atlántico integrado al entorno metropolitano de Barranquilla.",
+      "history": "La documentación municipal sitúa su poblamiento en 1598; su historia conserva una fuerte relación con el legado bolivariano y el antiguo casco urbano."
+    },
+    "en": {
+      "title": "Soledad",
+      "location": "A municipality in Atlántico integrated into Barranquilla's metropolitan setting.",
+      "history": "Municipal documentation dates its settlement to 1598; its history remains closely linked to Bolívar's legacy and the old town center."
+    },
+    "pt-BR": {
+      "title": "Soledad",
+      "location": "Município do Atlântico integrado ao entorno metropolitano de Barranquilla.",
+      "history": "A documentação municipal data seu povoamento de 1598; sua história mantém forte vínculo com o legado bolivariano e o centro histórico."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-10-1200.webp",
+  "sources": [
+    "https://soledadatlantico.micolombiadigital.gov.co/sites/soledadatlantico/content/files/000129/6405_pdt-soledad-confiable-20162019corregido-2-1-1.pdf",
+    "https://www.atlantico.gov.co/index.php/museos/4015-casa-museo-bolivariano-de-soledad?font-size=smaller"
+  ],
+  "attractions": [
+    {
+      "id": "QC-10-2",
+      "municipality": "Soledad",
+      "title_es": "Casa Museo Bolivariano",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-10-2-v1-1200.webp",
+      "image_sha256": "a1ac7b1c8f79622b6be8ecef9f800cb4f02c38f6aa5153d0df64008d711e5ef1",
+      "source": {
+        "id": "QC-10-2-R1",
+        "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/a8/f1/fc/la-casa-museo-simon-bolivar.jpg?h=800&s=1&w=1400",
+        "source_url": "https://www.tripadvisor.com/Attraction_Review-g2440181-d7930986-Reviews-Casa_Museo_Simon_Bolivar-Soledad_Atlantico_Department.html",
+        "title": "Casa Museo Simón Bolivar - All You SHOULD Know Before Going 2026 (with Reviews)",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Referencia localizada; falta contraste visual, actualidad y permiso de uso. No es una imagen generada.",
+        "preview_checked_at": "2026-11-03"
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 10.9156355,
+        "longitude": -74.762397852,
+        "precision": "punto_ficha_cartografica_no_entrada_validada",
+        "source_url": "https://www.waze.com/live-map/directions/museo-bolivariano-soledad?to=place.w.186908781.1869349956.4541515",
+        "address": "Soledad, Colombia",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=10.9156355%2C-74.762397852"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Casa Museo Bolivariano",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-10-3",
+      "municipality": "Soledad",
+      "title_es": "Parque Muvdi",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-10-3-v1-1200.webp",
+      "image_sha256": "c72586443f592b3348561d7b496d0b4e5a1fc43ab45022c5cd019e3524cc8d6d",
+      "source": {
+        "id": "QC-10-3-REV-NOV03",
+        "url": "https://impactonews.co/wp-content/uploads/2025/04/Parque-Muvdi-Soledad-Semana-Santa-3-570x450.jpg",
+        "source_url": "https://impactonews.co/semana-santa-en-el-parque-muvdi-el-mejor-plan-familiar-en-soledad/",
+        "title": "Parque Muvdi · referencia corregida",
+        "captured_at": null,
+        "published_at": "2025-04-11",
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Vista de la estructura acuática, no una piscina genérica. Publicada en 2025; fecha exacta de captura no acreditada."
+      },
+      "geo": {
+        "status": "ubicacion_contrastada_google_maps",
+        "latitude": 10.928071,
+        "longitude": -74.7800433,
+        "precision": "punto_ficha_no_entrada_validada",
+        "source_url": "https://www.google.com/maps/search/?api=1&query=Parque+Muvdi+Soledad",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=10.928071,-74.7800433",
+        "address": "Calle 30 #37-133, Soledad, Atlántico",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Parque Muvdi",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

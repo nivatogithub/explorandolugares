@@ -1,0 +1,36 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "yumbo",
+  "businesses": [
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Torettos Restaurante & Hotel",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://torettos.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "name": "Royal Films — Único Yumbo",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://unico.com.co/tiendas/royal-films-yumbo/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

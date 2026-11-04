@@ -1,0 +1,56 @@
+{
+  "number": 38,
+  "slug": "san-diego",
+  "name": "San Diego",
+  "translations": {
+    "es": {
+      "title": "San Diego",
+      "location": "Municipio del norte del Cesar, en el valle del río Cesar y parte del entorno metropolitano de Valledupar.",
+      "history": "La Gobernación del Cesar registra la fundación de San Diego en 1609 y su erección municipal en 1976."
+    },
+    "en": {
+      "title": "San Diego",
+      "location": "A municipality in northern Cesar, in the Cesar River valley and part of Valledupar’s metropolitan setting.",
+      "history": "The Cesar departmental government records San Diego’s founding in 1609 and its municipal incorporation in 1976."
+    },
+    "pt-BR": {
+      "title": "San Diego",
+      "location": "Município do norte do Cesar, no vale do rio Cesar e parte do entorno metropolitano de Valledupar.",
+      "history": "O governo departamental do Cesar registra a fundação de San Diego em 1609 e sua emancipação municipal em 1976."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-38-1200.webp",
+  "sources": [
+    "https://www.cesar.gov.co/d/es/nosotros/el-departamento/historia",
+    "https://www.sandiego-cesar.gov.co/",
+    "https://cesar.gov.co/d/filesmain/ofiplaneacion/planes/plan_vial.pdf"
+  ],
+  "attractions": [
+    {
+      "id": "QC-38-4",
+      "municipality": "San Diego",
+      "title_es": "Ruta Santa · murales públicos",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-38-4.webp",
+      "image_sha256": "d822043c17df1719e962d7dd4dcc1d382d62650794022c1038d96afe62936b54",
+      "source": {
+        "source_url": "https://semanariolacalle.com/la-ruta-santa-de-san-diego-fe-pintada-en-los-muros-del-alma/",
+        "url": "https://cdn.semanariolacalle.com/2025/04/La-%E2%80%98Ruta-Santa-de-San-Diego_-fe-pintada-en-los-muros-del-alma-1-scaled.jpg",
+        "published_at": "2025-04-13",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

@@ -1,0 +1,575 @@
+{
+    "scope": "dev1 only; editorial publication requirements remain pending",
+    "checks": [
+        {
+            "route": "\/lugares\/barbosa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/barbosa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/barbosa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/bello\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/bello\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/bello\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/caldas\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/caldas\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/caldas\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/copacabana\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/copacabana\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/copacabana\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/envigado\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/envigado\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/envigado\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/girardota\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/girardota\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/girardota\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/itagui\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/itagui\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/itagui\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/la-estrella\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/la-estrella\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/la-estrella\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/sabaneta\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/sabaneta\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/sabaneta\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/soledad\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/soledad\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/soledad\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/malambo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/malambo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/malambo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/galapa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/galapa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/galapa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/yumbo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/yumbo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/yumbo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/palmira\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/palmira\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/palmira\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/candelaria\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/candelaria\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/candelaria\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/dagua\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/dagua\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/dagua\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/cota\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/cota\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/cota\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/funza\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/funza\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/funza\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/mosquera\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/mosquera\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/mosquera\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/madrid\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/madrid\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/madrid\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/facatativa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/facatativa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/facatativa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/tenjo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/tenjo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/tenjo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/gachancipa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/gachancipa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/gachancipa\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/sibate\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/sibate\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/sibate\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/arjona\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/arjona\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/arjona\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/santa-rosa-de-lima\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/santa-rosa-de-lima\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/santa-rosa-de-lima\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/clemencia\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/clemencia\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/clemencia\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/pueblo-viejo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/pueblo-viejo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/pueblo-viejo\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/la-virginia\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/la-virginia\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/la-virginia\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/cucuta\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/cucuta\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/cucuta\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/los-patios\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/los-patios\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/los-patios\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/el-zulia\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/el-zulia\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/el-zulia\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/san-cayetano\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/san-cayetano\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/san-cayetano\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/puerto-santander\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/puerto-santander\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/puerto-santander\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/la-paz\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/la-paz\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/la-paz\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/san-diego\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/san-diego\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/san-diego\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/manaure\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/manaure\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/manaure\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/lugares\/agustin-codazzi\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/en\/lugares\/agustin-codazzi\/",
+            "status": 200,
+            "anonymous": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/agustin-codazzi\/",
+            "status": 200,
+            "anonymous": true
+        }
+    ]
+}

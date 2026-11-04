@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "clemencia",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Bolívar",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Clemencia",
+        "headline": "Clemencia",
+        "eyebrow": "Bolívar, Colombia",
+        "intro": "Municipio del norte de Bolívar, entre Cartagena de Indias, Santa Catalina, Santa Rosa de Lima y Villanueva.",
+        "meta_description": "Municipio del norte de Bolívar, entre Cartagena de Indias, Santa Catalina, Santa Rosa de Lima y Villanueva."
+      },
+      "en": {
+        "display_name": "Clemencia",
+        "headline": "Clemencia",
+        "eyebrow": "Bolívar, Colombia",
+        "intro": "A northern Bolívar municipality between Cartagena de Indias, Santa Catalina, Santa Rosa de Lima and Villanueva.",
+        "meta_description": "A northern Bolívar municipality between Cartagena de Indias, Santa Catalina, Santa Rosa de Lima and Villanueva."
+      },
+      "pt-BR": {
+        "display_name": "Clemência",
+        "headline": "Clemência",
+        "eyebrow": "Bolívar, Colombia",
+        "intro": "Município do norte de Bolívar, entre Cartagena das Índias, Santa Catalina, Santa Rosa de Lima e Villanueva.",
+        "meta_description": "Município do norte de Bolívar, entre Cartagena das Índias, Santa Catalina, Santa Rosa de Lima e Villanueva."
+      }
+    },
+    "history": {
+      "es": [
+        "Clemencia fue creado como municipio mediante la Ordenanza 17 de 1995, con territorio segregado de Santa Catalina."
+      ],
+      "en": [
+        "Clemencia was created as a municipality by Ordinance 17 of 1995, with territory separated from Santa Catalina."
+      ],
+      "pt-BR": [
+        "Clemência foi criado como município pela Ordenança 17 de 1995, com território desmembrado de Santa Catalina."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte a la vida cultural local a través de su biblioteca y Casa Cultural.",
+        "Incluir el centro de Clemencia en un recorrido por los municipios del norte de Bolívar."
+      ],
+      "en": [
+        "Explore local cultural life through the library and Casa Cultural.",
+        "Include central Clemencia in a route through northern Bolívar's municipalities."
+      ],
+      "pt-BR": [
+        "Conhecer a vida cultural local por meio da biblioteca e da Casa Cultural.",
+        "Incluir o centro de Clemencia em um passeio pelos municípios do norte de Bolívar."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-28.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Clemencia.",
+      "en": "Illustration of Clemencia.",
+      "pt-BR": "Ilustração de Clemencia."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-28-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.5686473,
+      "longitude": -75.3287421,
+      "translations": {
+        "es": {
+          "name": "Biblioteca pública · Casa Cultural",
+          "description": "Biblioteca pública y espacio cultural del municipio de Clemencia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=8017911082407089264"
+        },
+        "en": {
+          "name": "Biblioteca pública · Casa Cultural",
+          "description": "Public library and cultural space in the municipality of Clemencia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=8017911082407089264"
+        },
+        "pt-BR": {
+          "name": "Biblioteca pública · Casa Cultural",
+          "description": "Biblioteca pública e espaço cultural do município de Clemencia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=8017911082407089264"
+        }
+      },
+      "image": {
+        "file": "images/QC-28-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://caracol.com.co/2024/07/24/alcaldia-de-clemencia-invertira-190-millones-en-la-biblioteca-municipal/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Biblioteca pública · Casa Cultural.",
+          "en": "Illustration of Biblioteca pública · Casa Cultural.",
+          "pt-BR": "Ilustração de Biblioteca pública · Casa Cultural."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.clemencia-bolivar.gov.co/"
+      },
+      {
+        "reference": "https://www.diccionariodecolombia.expert/diccionario-enciclopedico/clemencia/"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-28-2: coordenadas pendientes",
+      "QC-28-2: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

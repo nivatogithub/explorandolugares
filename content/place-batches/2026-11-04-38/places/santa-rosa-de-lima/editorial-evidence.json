@@ -1,0 +1,55 @@
+{
+  "number": 27,
+  "slug": "santa-rosa-de-lima",
+  "name": "Santa Rosa de Lima",
+  "translations": {
+    "es": {
+      "title": "Santa Rosa de Lima",
+      "location": "Municipio del norte de Bolívar, en el corredor terrestre entre Cartagena y el departamento del Atlántico.",
+      "history": "Una reseña institucional sitúa la fundación del poblado en 1735 y registra el antiguo nombre de Santa Rosa de Alipaya."
+    },
+    "en": {
+      "title": "Santa Rosa de Lima",
+      "location": "A municipality in northern Bolívar, on the land corridor between Cartagena and Atlántico department.",
+      "history": "An institutional historical account dates the town’s founding to 1735 and records its former name, Santa Rosa de Alipaya."
+    },
+    "pt-BR": {
+      "title": "Santa Rosa de Lima",
+      "location": "Município do norte de Bolívar, no corredor terrestre entre Cartagena e o departamento do Atlántico.",
+      "history": "Um relato histórico institucional situa a fundação do povoado em 1735 e registra seu antigo nome, Santa Rosa de Alipaya."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-27-1200.webp",
+  "sources": [
+    "https://www.santarosabolivar.gov.co/",
+    "https://repositoriocdim.esap.edu.co/bitstreams/fc625279-536f-4e5c-baf4-beeb08fc5f6e/download"
+  ],
+  "attractions": [
+    {
+      "id": "QC-27-3",
+      "municipality": "Santa Rosa de Lima",
+      "title_es": "Interior de la iglesia Santa Rosa de Lima",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-27-3.webp",
+      "image_sha256": "babec53c27cfb1cf1871f43eb647fc130173a5ec32e931680f54a6de04bbbfd1",
+      "source": {
+        "source_url": "https://www.eluniversal.com.co/regional/bolivar/2025/08/09/santa-rosa-de-lima-bolivar-un-viaje-al-corazon-de-la-tradicion-y-la-memoria/",
+        "url": "https://cloudfront-us-east-1.images.arcpublishing.com/vanguardiaeluniversal/XB3AND7YT5GONLNM7JBLRXTM4E.JPG",
+        "published_at": "2025-08-08",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

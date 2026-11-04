@@ -1,0 +1,81 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "madrid",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Raíces Gastrobar",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://raicesgastrobarmadrid.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Restaurante Bugambil",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://restaurantebugambil.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "La Cocina de Criss",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://lacocinadecriss1.wixsite.com/madrid",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "name": "Royal Films — Casa Blanca",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.casablancacentrocomercial.com/portfolio/cinema-royal-films-local-94/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "María José Parrilla — Madrid",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.mariajoseparrilla.com/restaurantes/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

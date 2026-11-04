@@ -1,0 +1,21 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "la-paz",
+  "businesses": [
+    {
+      "category_code": "servicios",
+      "information_status": "PUBLICO",
+      "name": "Punto de Pago — Natumarket La Paz",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://powwi.co/wp-content/uploads/2025/02/Cesar.pdf",
+          "checked_at": "2026-11-04",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

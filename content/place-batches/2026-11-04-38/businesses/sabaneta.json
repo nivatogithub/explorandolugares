@@ -1,0 +1,81 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "sabaneta",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Donde Estela",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://linktr.ee/dondeestela",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Portón Sabaneta",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.portonsabanetahotel.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Distrito 21",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://sabaneta.gov.co/files/opendata/json/alojamientos.php",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel 45 Park",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://sabaneta.gov.co/files/opendata/json/alojamientos.php",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Tres Altares",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://sabaneta.gov.co/files/opendata/json/alojamientos.php",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

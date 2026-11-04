@@ -1,0 +1,103 @@
+{
+  "reason": "Retirados por instrucción del usuario: identidad visual o ubicación insuficientemente comprobadas.",
+  "records": [
+    {
+      "id": "QC-33-4",
+      "municipality": "los-patios",
+      "name": "Estoraques de Agualinda",
+      "previous_geo": null,
+      "status": "ubicacion_general_documentada_no_acceso",
+      "entrance_verified": false,
+      "candidate": {
+        "latitude": 7.7802,
+        "longitude": -72.5135,
+        "source_url": "https://mapa.cultura.red/",
+        "name": "Zona arqueologica Vereda Agua Linda"
+      },
+      "note": "Imagen cuestionada: el enlace del usuario identifica Área Natural Única Los Estoraques en La Playa de Belén (8.2208666,-73.2384662). Orbe Datos rotula la referencia como Estoraques de Agua Linda; existe conflicto de atribución visual que no está resuelto. No publicar esta imagen como Agualinda ni trasladar las coordenadas de La Playa a Los Patios.",
+      "latitude": 7.7802,
+      "longitude": -72.5135,
+      "precision": "zona_arqueologica_no_formacion_exacta",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=7.7802,-72.5135",
+      "checked_at": "2026-11-04",
+      "sources": [
+        "https://mapa.cultura.red/",
+        "https://www.orbedatos.com/los-patios-da-ejemplo-y-visibiliza-su-patrimonio-cultural/",
+        "https://maps.app.goo.gl/KsFCTEeqjn48SDRL6"
+      ],
+      "reference_source_url": "https://www.orbedatos.com/los-patios-da-ejemplo-y-visibiliza-su-patrimonio-cultural/",
+      "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-33-4.webp",
+      "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
+      "review_group": "precision",
+      "manual_review_required": true,
+      "ready_for_import": false,
+      "identity_cross_checked": false,
+      "review_image": "../../portadas/revision-40/atractivos-lote-5/generadas/QC-33-4.webp",
+      "user_evidence_url": "https://maps.app.goo.gl/KsFCTEeqjn48SDRL6",
+      "publication_hold": true,
+      "image_review_status": "atribucion_geografica_cuestionada"
+    },
+    {
+      "id": "QC-34-2",
+      "municipality": "el-zulia",
+      "name": "Cascadas de San Miguel",
+      "previous_geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "status": "identidad_confirmada_coordenada_pendiente",
+      "entrance_verified": false,
+      "sources": [
+        "https://nortepositivo.com/el-zulia-naturaleza-fe-y-tradicion-en-el-corazon-de-norte-de-santander/",
+        "https://repositorio.sena.edu.co/bitstream/handle/11404/5036/a_que_sabe_el_norte.pdf?sequence=1",
+        "https://mapa.cultura.red/",
+        "https://maps.app.goo.gl/gaV4Xo9nk5nQdtJJ9"
+      ],
+      "note": "Imagen sin correspondencia geográfica confirmada. El enlace aportado por el usuario identifica Cascada San Miguel en Santa Rosa de Cabal, Risaralda (4.8370331,-75.5479474); es otro municipio y no prueba la referencia usada para El Zulia. Se mantiene fuera de publicación hasta verificar foto y ubicación.",
+      "manual_review_required": true,
+      "reference_source_url": "https://nortepositivo.com/el-zulia-naturaleza-fe-y-tradicion-en-el-corazon-de-norte-de-santander/",
+      "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-34-2.webp",
+      "checked_at": "2026-11-04",
+      "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
+      "review_group": "sin_coordenada",
+      "ready_for_import": false,
+      "identity_cross_checked": false,
+      "review_image": "../../portadas/revision-40/atractivos-lote-4/generadas/QC-34-2.webp",
+      "user_evidence_url": "https://maps.app.goo.gl/gaV4Xo9nk5nQdtJJ9",
+      "publication_hold": true,
+      "image_review_status": "atribucion_geografica_cuestionada"
+    },
+    {
+      "id": "QC-37-4",
+      "municipality": "la-paz",
+      "name": "Ruta del Jilguero · murales de Jorge Oñate",
+      "previous_geo": null,
+      "status": "identidad_confirmada_coordenada_pendiente",
+      "entrance_verified": false,
+      "sources": [
+        "https://www.cesar.gov.co/d/es/noticias/boletines/7264-boletin-2025-36",
+        "https://www.elheraldo.co/cesar/2025/04/01/asi-luce-la-la-ruta-del-jilguero-en-homenaje-a-jorge-onate/?openSidebar=true",
+        "https://semanariolacalle.com/mural-mas-grande-del-caribe-es-en-honor-a-jorge-onate/"
+      ],
+      "note": "La noticia aportada por el usuario describe otro mural: Nació mi poesía, Valledupar, calle 11 con carrera cuarta, barrio Novalito, marzo de 2021. La referencia seleccionada corresponde a Primer Congo de Oro de la Ruta del Jilguero, inaugurada en La Paz el 31 de marzo de 2025 según Gobernación del Cesar. Sigue pendiente el punto exacto del mural de la imagen.",
+      "manual_review_required": true,
+      "reference_source_url": "https://www.radionacional.co/musica/artistas-colombianos/jorge-onate-vallenato-en-cesar-inauguran-la-ruta-del-jilguero-en-su",
+      "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-37-4.webp",
+      "checked_at": "2026-11-04",
+      "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
+      "review_group": "sin_coordenada",
+      "ready_for_import": false,
+      "identity_cross_checked": false,
+      "review_image": "../../portadas/revision-40/atractivos-lote-5/generadas/QC-37-4.webp",
+      "user_evidence_url": "https://semanariolacalle.com/mural-mas-grande-del-caribe-es-en-honor-a-jorge-onate/",
+      "publication_hold": true,
+      "image_review_status": "ubicacion_exacta_pendiente"
+    }
+  ],
+  "dev1_applied": false
+}

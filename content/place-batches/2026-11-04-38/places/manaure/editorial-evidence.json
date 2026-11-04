@@ -1,0 +1,56 @@
+{
+  "number": 39,
+  "slug": "manaure",
+  "name": "Manaure Balcón del Cesar",
+  "translations": {
+    "es": {
+      "title": "Manaure Balcón del Cesar",
+      "location": "Municipio del nordeste del Cesar, en la Serranía del Perijá, limítrofe con La Guajira y Venezuela.",
+      "history": "El asentamiento fue erigido corregimiento de La Paz en 1913 y la Asamblea del Cesar lo erigió municipio mediante la Ordenanza 28 de 1980."
+    },
+    "en": {
+      "title": "Manaure, Balcony of Cesar",
+      "location": "A municipality in northeastern Cesar, in the Perijá Mountains, bordering La Guajira and Venezuela.",
+      "history": "The settlement became a district of La Paz in 1913, and the Cesar Assembly established it as a municipality through Ordinance 28 of 1980."
+    },
+    "pt-BR": {
+      "title": "Manaure Balcão do Cesar",
+      "location": "Município do nordeste do Cesar, na Serranía del Perijá, na fronteira com La Guajira e a Venezuela.",
+      "history": "O povoado tornou-se corregimento de La Paz em 1913, e a Assembleia do Cesar o elevou a município pela Ordenança 28 de 1980."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-39-1200.webp",
+  "sources": [
+    "https://www.igac.gov.co/sites/default/files/2024-11/SPB_Urbano_VF.pdf",
+    "https://www.cesar.gov.co/d/es/nosotros/el-departamento/historia",
+    "https://www.cesar.gov.co/d/es/45-institucional?start=20"
+  ],
+  "attractions": [
+    {
+      "id": "QC-39-3",
+      "municipality": "Manaure Balcón del Cesar",
+      "title_es": "Cerro de la Cruz · vista documentada en 2024",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-39-3.webp",
+      "image_sha256": "1a3e4527811a1fd59505211133e3969338f360ece9be5c9a09cf52c279513012",
+      "source": {
+        "source_url": "https://es.wikiloc.com/rutas-senderismo/ruta-fototuristica-al-cerro-de-la-cruz-manaure-balcon-del-cesar-181335800",
+        "url": "https://s1.wklcdn.com/image_504/15136384/181335826/112666189Master.jpg",
+        "published_at": "2024-08-17",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": "Cerro de la Cruz",
+      "identity_changed": true,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

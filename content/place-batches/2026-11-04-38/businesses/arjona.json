@@ -1,0 +1,51 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "arjona",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Asadero La Ruta 40",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.asaderoruta40.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Droguería Geti",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.bancamia.net.co/wp-content/uploads/2025/03/PLANTILLA-CBs-PROPIOS.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "Papelería y Variedades Las Nieves",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.bancamia.net.co/wp-content/uploads/2025/03/PLANTILLA-CBs-PROPIOS.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

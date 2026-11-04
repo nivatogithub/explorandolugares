@@ -1,0 +1,81 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "candelaria",
+  "businesses": [
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "KongTainers Plaza",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.kongtainers.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Alitas KMI — KongTainers",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.kongtainers.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Tadama Sushi — KongTainers",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.kongtainers.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Heliconias",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://vallepatin.org.co/wp-content/uploads/2025/03/CONVOCATORIA-2DA-PARADA-XXII-RANKING-DEPARTAMENTAL-CANDELARIA-ABRIL-2025.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "La Esquina de la Chuleta",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://vallepatin.org.co/wp-content/uploads/2025/03/CONVOCATORIA-2DA-PARADA-XXII-RANKING-DEPARTAMENTAL-CANDELARIA-ABRIL-2025.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

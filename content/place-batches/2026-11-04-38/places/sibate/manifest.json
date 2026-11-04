@@ -1,0 +1,205 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "sibate",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Cundinamarca",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Sibaté, Cundinamarca",
+        "headline": "Sibaté, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Municipio de Cundinamarca, ubicado a 27 kilómetros al sur de Bogotá, en la Sabana Sur Occidental.",
+        "meta_description": "Municipio de Cundinamarca, ubicado a 27 kilómetros al sur de Bogotá, en la Sabana Sur Occidental."
+      },
+      "en": {
+        "display_name": "Sibaté, Cundinamarca",
+        "headline": "Sibaté, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "A Cundinamarca municipality located 27 kilometres south of Bogotá, in the southwestern southern savanna.",
+        "meta_description": "A Cundinamarca municipality located 27 kilometres south of Bogotá, in the southwestern southern savanna."
+      },
+      "pt-BR": {
+        "display_name": "Sibaté, Cundinamarca",
+        "headline": "Sibaté, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Município de Cundinamarca, localizado a 27 quilômetros ao sul de Bogotá, na Sabana Sul Ocidental.",
+        "meta_description": "Município de Cundinamarca, localizado a 27 quilômetros ao sul de Bogotá, na Sabana Sul Ocidental."
+      }
+    },
+    "history": {
+      "es": [
+        "Aunque el nombre aparece en fuentes desde el siglo XVII, Sibaté se constituyó formalmente como municipio mediante ordenanzas de 1967 y 1968. Su historia local también conserva la memoria ferroviaria de la Estación Santa Isabel."
+      ],
+      "en": [
+        "Although its name appears in sources from the 17th century, Sibaté was formally established as a municipality through ordinances of 1967 and 1968. Its local history also preserves the railway memory of Santa Isabel Station."
+      ],
+      "pt-BR": [
+        "Embora seu nome apareça em fontes desde o século XVII, Sibaté foi constituído formalmente como município por meio de ordenanças de 1967 e 1968. Sua história local também preserva a memória ferroviária da Estação Santa Isabel."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer la antigua Estación Santa Isabel y su memoria ferroviaria.",
+        "Reconocer el Alto de la Inmaculada como referente del paisaje local."
+      ],
+      "en": [
+        "Discover the former Santa Isabel station and its railway heritage.",
+        "Explore Alto de la Inmaculada as a local landscape landmark."
+      ],
+      "pt-BR": [
+        "Conhecer a antiga Estação Santa Isabel e sua memória ferroviária.",
+        "Reconhecer o Alto de la Inmaculada como referência da paisagem local."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-24.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "https://detour.cundinamarca.gov.co/cities/sibate",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Sibaté.",
+      "en": "Illustration of Sibaté.",
+      "pt-BR": "Ilustração de Sibaté."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-24-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.49201,
+      "longitude": -74.25975,
+      "translations": {
+        "es": {
+          "name": "Antigua Estación Santa Isabel",
+          "description": "Antigua estación ferroviaria Santa Isabel, en Sibaté.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Antigua Estación Santa Isabel",
+          "description": "Former Santa Isabel railway station, in Sibaté.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Antigua Estación Santa Isabel",
+          "description": "Antiga estação ferroviária Santa Isabel, em Sibaté.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/QC-24-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://sibate-cundinamarca.gov.co/MiMunicipio/Paginas/Sitios-de-Interes-.aspx",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Antigua Estación Santa Isabel.",
+          "en": "Illustration of Antigua Estación Santa Isabel.",
+          "pt-BR": "Ilustração de Antigua Estación Santa Isabel."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-24-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.4881777,
+      "longitude": -74.2576974,
+      "translations": {
+        "es": {
+          "name": "Alto de la Inmaculada",
+          "description": "Alto de la Inmaculada, referente del paisaje de Sibaté.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=2446152384654980150"
+        },
+        "en": {
+          "name": "Alto de la Inmaculada",
+          "description": "Alto de la Inmaculada, a landmark in Sibaté's landscape.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=2446152384654980150"
+        },
+        "pt-BR": {
+          "name": "Alto de la Inmaculada",
+          "description": "Alto de la Inmaculada, referência da paisagem de Sibaté.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=2446152384654980150"
+        }
+      },
+      "image": {
+        "file": "images/QC-24-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://sibate-cundinamarca.gov.co/MiMunicipio/Paginas/Sitios-de-Interes-.aspx",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Alto de la Inmaculada.",
+          "en": "Illustration of Alto de la Inmaculada.",
+          "pt-BR": "Ilustração de Alto de la Inmaculada."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.sibate-cundinamarca.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx"
+      },
+      {
+        "reference": "https://www.sibate-cundinamarca.gov.co/MiMunicipio/Paginas/Presentacion.aspx"
+      },
+      {
+        "reference": "https://sibate-cundinamarca.gov.co/Ciudadanos/PortaldeNinos/Enterate/Paginas/Sitios-de-Interes.aspx"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-24-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-24-3: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

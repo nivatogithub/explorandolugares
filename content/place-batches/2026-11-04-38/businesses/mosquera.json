@@ -1,0 +1,36 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "mosquera",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Tartaruga",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://tartaruga.com.co/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "name": "Royal Films — Ecoplaza",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://cms.colsubsidio.com/sites/default/files/Documentos/colsubsidio/2026/terminos-y-condiciones-jueves-de-cine-royal-films.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

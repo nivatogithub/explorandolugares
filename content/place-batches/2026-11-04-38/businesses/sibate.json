@@ -1,0 +1,21 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "sibate",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Restaurante Mirador El Paraíso",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://haroll824.wixsite.com/restaurante-elpariso",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

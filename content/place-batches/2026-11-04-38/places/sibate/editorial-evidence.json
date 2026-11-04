@@ -1,0 +1,109 @@
+{
+  "number": 24,
+  "slug": "sibate",
+  "name": "Sibaté",
+  "translations": {
+    "es": {
+      "title": "Sibaté, Cundinamarca",
+      "location": "Municipio de Cundinamarca, ubicado a 27 kilómetros al sur de Bogotá, en la Sabana Sur Occidental.",
+      "history": "Aunque el nombre aparece en fuentes desde el siglo XVII, Sibaté se constituyó formalmente como municipio mediante ordenanzas de 1967 y 1968. Su historia local también conserva la memoria ferroviaria de la Estación Santa Isabel."
+    },
+    "en": {
+      "title": "Sibaté, Cundinamarca",
+      "location": "A Cundinamarca municipality located 27 kilometres south of Bogotá, in the southwestern southern savanna.",
+      "history": "Although its name appears in sources from the 17th century, Sibaté was formally established as a municipality through ordinances of 1967 and 1968. Its local history also preserves the railway memory of Santa Isabel Station."
+    },
+    "pt-BR": {
+      "title": "Sibaté, Cundinamarca",
+      "location": "Município de Cundinamarca, localizado a 27 quilômetros ao sul de Bogotá, na Sabana Sul Ocidental.",
+      "history": "Embora seu nome apareça em fontes desde o século XVII, Sibaté foi constituído formalmente como município por meio de ordenanças de 1967 e 1968. Sua história local também preserva a memória ferroviária da Estação Santa Isabel."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-24-1200.webp",
+  "sources": [
+    "https://www.sibate-cundinamarca.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx",
+    "https://www.sibate-cundinamarca.gov.co/MiMunicipio/Paginas/Presentacion.aspx",
+    "https://sibate-cundinamarca.gov.co/Ciudadanos/PortaldeNinos/Enterate/Paginas/Sitios-de-Interes.aspx"
+  ],
+  "attractions": [
+    {
+      "id": "QC-24-2",
+      "municipality": "Sibaté",
+      "title_es": "Antigua Estación Santa Isabel",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-24-2-v2-1200.webp",
+      "image_sha256": "d94e1183baa866500f77c686641eec9a6da0d2ae3b01d36692981c3ce8b5e2bd",
+      "source": {
+        "id": "QC-24-2-R1",
+        "url": "https://sibate-cundinamarca.gov.co/MiMunicipio/PublishingImages/Paginas/Sitios-de-Interes-/Sitios__Palacio%20Muni.jpg",
+        "source_url": "https://sibate-cundinamarca.gov.co/MiMunicipio/Paginas/Sitios-de-Interes-.aspx",
+        "title": "Mi Municipio",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Referencia localizada; falta contraste visual, actualidad y permiso de uso. No es una imagen generada."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Antigua Estación Santa Isabel",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-24-3",
+      "municipality": "Sibaté",
+      "title_es": "Alto de la Inmaculada",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-24-3-v2-1200.webp",
+      "image_sha256": "78376c69945575a466196f23d8d3286c289d36154dd69f72e81f50db538123ca",
+      "source": {
+        "id": "QC-24-3-R1",
+        "url": "https://sibate-cundinamarca.gov.co/MiMunicipio/PublishingImages/Paginas/Sitios-de-Interes-/Sitios__Inmaculada.jpg",
+        "source_url": "https://sibate-cundinamarca.gov.co/MiMunicipio/Paginas/Sitios-de-Interes-.aspx",
+        "title": "Mi Municipio",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Referencia localizada; falta contraste visual, actualidad y permiso de uso. No es una imagen generada."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Alto de la Inmaculada",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

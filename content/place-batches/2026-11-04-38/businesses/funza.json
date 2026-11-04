@@ -1,0 +1,36 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "funza",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Pacho Parrilla",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://palalea9228.wixsite.com/pachoparrillabarcafe",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Caminito de Piedra",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.caminitodepiedra.com/nosotros",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

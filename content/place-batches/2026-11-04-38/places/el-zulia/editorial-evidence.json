@@ -1,0 +1,53 @@
+{
+  "number": 34,
+  "slug": "el-zulia",
+  "name": "El Zulia",
+  "translations": {
+    "es": {
+      "title": "El Zulia",
+      "location": "Municipio del oriente de Norte de Santander, integrante del Área Metropolitana de Cúcuta y atravesado por los ríos Zulia, Peralonso y San Miguel.",
+      "history": "La tradición local vincula su nombre con la indígena Zulia; la entidad metropolitana registra su fundación el 30 de octubre de 1959."
+    },
+    "en": {
+      "title": "El Zulia",
+      "location": "A municipality in eastern Norte de Santander, part of the Cúcuta Metropolitan Area and crossed by the Zulia, Peralonso and San Miguel rivers.",
+      "history": "Local tradition links its name to the Indigenous woman Zulia; the metropolitan authority records its founding on 30 October 1959."
+    },
+    "pt-BR": {
+      "title": "El Zulia",
+      "location": "Município do leste de Norte de Santander, integrante da Área Metropolitana de Cúcuta e banhado pelos rios Zulia, Peralonso e San Miguel.",
+      "history": "A tradição local associa seu nome à indígena Zulia; a autoridade metropolitana registra sua fundação em 30 de outubro de 1959."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-34-1200.webp",
+  "sources": [
+    "https://amc.gov.co/amc/el-zulia/",
+    "https://www.elzulia-nortedesantander.gov.co/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-34-4",
+      "municipality": "El Zulia",
+      "title_es": "Pozo Paraíso",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-34-4.webp",
+      "image_sha256": "e54207e797fc2ddb8b6505ad03e86ea31db73ef3a53174a7b7201b287275b3da",
+      "source": {
+        "source_url": "https://www.elduendeviajerocol.com/lugares/pozo-paraiso/",
+        "checked_at": "2026-11-03",
+        "captured_at": null,
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

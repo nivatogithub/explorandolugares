@@ -1,0 +1,21 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "puerto-santander",
+  "businesses": [
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Droguería Insercoop Puerto Santander",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.insercoop.com.co/estados_financieros/2024/certificado_de_existencia_y_representaci%C3%B3n_legal.pdf",
+          "checked_at": "2026-11-04",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

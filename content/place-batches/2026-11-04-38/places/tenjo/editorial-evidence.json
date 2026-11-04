@@ -1,0 +1,98 @@
+{
+  "number": 22,
+  "slug": "tenjo",
+  "name": "Tenjo",
+  "translations": {
+    "es": {
+      "title": "Tenjo, Cundinamarca",
+      "location": "Municipio de Sabana Centro, al noroccidente de Bogotá, entre paisajes rurales y montañosos de Cundinamarca.",
+      "history": "Tenjo forma parte de un territorio de tradición muisca. En 1603 se ordenó construir un templo doctrinero para los cacicazgos del valle; el templo entregado en 1637 sigue siendo un referente patrimonial."
+    },
+    "en": {
+      "title": "Tenjo, Cundinamarca",
+      "location": "A Sabana Centro municipality northwest of Bogotá, among Cundinamarca's rural and mountainous landscapes.",
+      "history": "Tenjo is part of a territory with Muisca tradition. In 1603, a doctrinal church was ordered for the valley's chiefdoms; the temple delivered in 1637 remains a heritage landmark."
+    },
+    "pt-BR": {
+      "title": "Tenjo, Cundinamarca",
+      "location": "Município de Sabana Centro, a noroeste de Bogotá, entre paisagens rurais e montanhosas de Cundinamarca.",
+      "history": "Tenjo integra um território de tradição muisca. Em 1603 foi ordenada a construção de um templo doutrinário para os cacicados do vale; o templo entregue em 1637 continua sendo uma referência patrimonial."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-22-1200.webp",
+  "sources": [
+    "https://www.tenjo-cundinamarca.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+    "https://bogota.gov.co/mi-ciudad/cultura-recreacion-y-deporte/bicibogota-region-un-viaje-en-bicicleta-al-corazon-de-colombia"
+  ],
+  "attractions": [
+    {
+      "id": "QC-22-2",
+      "municipality": "Tenjo",
+      "title_es": "Centro Cultural Nohora Matallana",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-22-2-fachada-v2-1200.webp",
+      "image_sha256": "7983560783016bafca19b020bdd657f8fbdc962e8235b7771cd9769f92476fcf",
+      "source": {
+        "id": "QC-22-2-FACHADA",
+        "url": "https://www.infobae.com/resizer/v2/ZSUYZD4TZJHFTC7WAGFI7GI7H4.jpg?auth=56926e8ce50bff8778f86251182fef2488664f0a050f4737a27a1a2323f4229c&height=512&quality=85&smart=true&width=1024",
+        "source_url": "https://www.infobae.com/america/colombia/2021/11/17/seis-departamentos-del-pais-se-encontraran-en-el-ii-festival-cine-chicu-de-tenjo-cundinamarca/",
+        "published_at": "2021-11-17",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true,
+        "current_appearance_verified": false,
+        "note": "Fecha de toma y aspecto actual no acreditados.",
+        "user_approved": false
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 4.86802,
+        "longitude": -74.15409,
+        "precision": "punto_cartografico_del_inmueble_no_entrada_validada",
+        "source_url": "https://mapcarta.com/es/W1447300396",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=4.86802%2C-74.15409"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Centro Cultural Nohora Matallana",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-22-4",
+      "municipality": "Tenjo",
+      "title_es": "Museo de Ovnilogía y Cultura Ancestral",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-22-4-v1-1200.webp",
+      "image_sha256": "64a5aacc35b30dab4608e6c3df22aae8a3d687786bb4b59f48ffb74295ae8fe4",
+      "source": {
+        "url": "https://visitatenjo.com/wp-content/uploads/2025/12/museo-ovnilogia.jpeg",
+        "source_url": "https://visitatenjo.com/lugares-visit/museo-de-ovnilogia-y-cultura-ancestral/",
+        "captured_at": null,
+        "published_at": null,
+        "note": "Exhibición exterior del museo: esculturas y objeto expositivo; no representa un avistamiento real."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "address": null,
+        "entrance_verified": false,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20de%20Ovnilog%C3%ADa%20y%20Cultura%20Ancestral%20Tenjo%20Colombia"
+      },
+      "geo_status": "pending",
+      "legacy_name": "Museo de Ovnilogía y Cultura Ancestral",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "bello",
+  "businesses": [
+    {
+      "category_code": "vida-nocturna",
+      "information_status": "PUBLICO",
+      "name": "Bizancio Restaurante Bar",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://bizanciobar.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Tertulias Colombia",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.tertuliascolombia.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Mirador La Luna",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.miradorlaluna.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Cruz Verde — Plaza Fabricato",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.comfama.com/convenios/saludable/droguerias-cruz-verde",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "number": 23,
+  "slug": "gachancipa",
+  "name": "Gachancipá",
+  "translations": {
+    "es": {
+      "title": "Gachancipá, Cundinamarca",
+      "location": "Municipio de Cundinamarca, en la sabana al norte de Bogotá y vinculado a la provincia de Sabana Centro.",
+      "history": "Su historia se remonta a comunidades muiscas. Fue fundado oficialmente el 21 de septiembre de 1593 por fray Domingo de las Casas y conserva una relación histórica con los caminos de la sabana."
+    },
+    "en": {
+      "title": "Gachancipá, Cundinamarca",
+      "location": "A Cundinamarca municipality on the savanna north of Bogotá, linked to the Sabana Centro province.",
+      "history": "Its history reaches back to Muisca communities. It was officially founded on September 21, 1593 by Friar Domingo de las Casas and retains a historical connection to the savanna's old routes."
+    },
+    "pt-BR": {
+      "title": "Gachancipá, Cundinamarca",
+      "location": "Município de Cundinamarca, na savana ao norte de Bogotá e ligado à província de Sabana Centro.",
+      "history": "Sua história remonta a comunidades muiscas. Foi fundada oficialmente em 21 de setembro de 1593 por frei Domingo de las Casas e mantém uma ligação histórica com os antigos caminhos da savana."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-23-1200.webp",
+  "sources": [
+    "https://geoportal.ant.gov.co/Planes-UAF/25295_GACHANCIPA_PUBLICACION/25295_Gachancip%C3%A1_Cundinamarca/DTC%20Gachancip%C3%A1%20-%20Cundinamarca%20CB.pdf",
+    "https://www.mincit.gov.co/prensa/noticias/turismo/museo-campesino-de-gachancipa-premio-internacional",
+    "https://bogota.gov.co/mi-ciudad/cultura-recreacion-y-deporte/bicibogota-region-un-viaje-en-bicicleta-al-corazon-de-colombia"
+  ],
+  "attractions": [
+    {
+      "id": "QC-23-2",
+      "municipality": "Gachancipá",
+      "title_es": "Museo Campesino de Gachancipá",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-23-2-v1-1200.webp",
+      "image_sha256": "0a07ddaf66e401e7c344a4a85870eecee8d7ff72f5b7be655297d8805c3f50bb",
+      "source": {
+        "id": "QC-23-2-R1",
+        "url": "https://detourcdn.gumlet.io/galeria_multimedia_gallery/11._Museo_Campesino_iCoGy64.JPG?w=800",
+        "source_url": "https://detour.cundinamarca.gov.co/geomarker/museo-campesino",
+        "title": "De Tour Cundinamarca",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Referencia localizada; falta contraste visual, actualidad y permiso de uso. No es una imagen generada."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Museo Campesino de Gachancipá",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-23-3",
+      "municipality": "Gachancipá",
+      "title_es": "Estación del Ferrocarril de Gachancipá",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-23-3-v1-1200.webp",
+      "image_sha256": "9d48b888d636d7cbfd9645c10cc3a62da05ba34c30b36878f920d3efa1f92c22",
+      "source": {
+        "id": "QC-23-3-REV-NOV03",
+        "url": "https://caracol.com.co/resizer/v2/DXCYTUVNBRCWTGNQ6Z2YLMWOSM.png?auth=5d3ba338911b8f4a883334e5157a59a0e21e5c1c58606477a84e27f08ac2f13f&quality=70&smart=true&width=1600",
+        "source_url": "https://caracol.com.co/2025/03/20/que-significa-el-nombre-del-pueblo-gachancipa-es-el-municipio-mas-pequeno-de-cundinamarca/",
+        "title": "Estación del Ferrocarril de Gachancipá · referencia corregida",
+        "published_at": "2025-03-21",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Solo se utilizó la foto de la estación en el panel derecho. Caracol la atribuye a Miller Acosta; publicación de 2025, captura sin acreditar. Se descartó la fotografía amarilla fechada en 2014."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 4.99126,
+        "longitude": -73.87425,
+        "precision": "punto_OSM_no_entrada_validada",
+        "source_url": "https://mapcarta.com/es/W1395582593",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=4.99126%2C-73.87425"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Estación del Ferrocarril de Gachancipá",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

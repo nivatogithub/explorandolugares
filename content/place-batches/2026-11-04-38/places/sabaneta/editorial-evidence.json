@@ -1,0 +1,112 @@
+{
+  "number": 9,
+  "slug": "sabaneta",
+  "name": "Sabaneta",
+  "translations": {
+    "es": {
+      "title": "Sabaneta",
+      "location": "Municipio del sur del Valle de Aburrá, Antioquia, a 14 km de Medellín.",
+      "history": "Fue corregimiento de Envigado desde 1903 y se erigió como municipio de Antioquia en 1967, con vigencia desde 1968."
+    },
+    "en": {
+      "title": "Sabaneta",
+      "location": "A municipality in the southern Aburrá Valley, Antioquia, 14 km from Medellín.",
+      "history": "It was a district of Envigado from 1903 and became a municipality of Antioquia in 1967, effective in 1968."
+    },
+    "pt-BR": {
+      "title": "Sabaneta",
+      "location": "Município no sul do Vale de Aburrá, Antioquia, a 14 km de Medellín.",
+      "history": "Foi distrito de Envigado desde 1903 e tornou-se município de Antioquia em 1967, com vigência a partir de 1968."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-09-1200.webp",
+  "sources": [
+    "https://sabaneta.gov.co/acerca-del-municipio/informacion-general/tramites-y-servicios/tramites-y-servicios/",
+    "https://sabaneta.gov.co/acerca-del-municipio/lugares-de-interes/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-09-2",
+      "municipality": "Sabaneta",
+      "title_es": "Casa de la Cultura La Barquereña",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-09-2-v1-1200.webp",
+      "image_sha256": "6908b6fbc81af04f68810c3c31fb09f507f30155ad315f656de42757a1b5c2b2",
+      "source": {
+        "id": "QC-09-2-R2",
+        "url": "https://vivirenelpoblado.com/wp-content/uploads/2025/02/02-13-secretaria-de-cultura-sabaneta.jpg",
+        "source_url": "https://vivirenelpoblado.com/sabaneta-vivira-una-semana-dedicada-al-medio-ambiente-y-la-sostenibilidad/",
+        "title": "Casa de la Cultura La Barquereña · nueva referencia",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Vista a color de patio y arcos, publicada por Vivir en El Poblado. Fecha de toma sin acreditar; la ruta del archivo indica febrero de 2025, no prueba captura."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.15036,
+        "longitude": -75.61243,
+        "precision": "punto_cartografico_del_inmueble_no_entrada_validada",
+        "source_url": "https://mapcarta.com/es/W134548686",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.15036%2C-75.61243"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Casa de la Cultura La Barquereña",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-09-3",
+      "municipality": "Sabaneta",
+      "title_es": "Parque Ecológico La Romera",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-09-3-v1-1200.webp",
+      "image_sha256": "4fc560cbbbe1c1d6056188cf15ba7330169e851856827bc2562b6cdf8f7e4d07",
+      "source": {
+        "id": "QC-09-3-REAL-NOV03",
+        "url": "https://s0.wklcdn.com/image_274/8232391/205944555/125746272.700x525.jpg",
+        "source_url": "https://es.wikiloc.com/rutas-senderismo/la-romera-y-alto-la-romera-desde-parque-de-sabaneta-205944536",
+        "title": "Acceso identificado de La Romera · John Jaime Pérez",
+        "captured_at": null,
+        "published_at": "2025-03-23",
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Foto de la puerta con el nombre La Romera y señalización de la reserva, no árboles genéricos. Pertenece a una ruta publicada en marzo de 2025; la fecha exacta de toma no está acreditada. No ampliar el campo visual inventando elementos fuera de la foto."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.119971691,
+        "longitude": -75.597556236,
+        "precision": "punto_ficha_cartografica_no_entrada_validada",
+        "source_url": "https://www.waze.com/es/live-map/directions/parque-ecologico-la-romera-sabaneta?to=place.w.186384445.1863844452.2446029",
+        "address": "Sabaneta, Colombia",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.119971691%2C-75.597556236"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Parque Ecológico La Romera",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

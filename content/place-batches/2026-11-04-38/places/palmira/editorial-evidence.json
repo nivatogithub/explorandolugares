@@ -1,0 +1,127 @@
+{
+  "number": 14,
+  "slug": "palmira",
+  "name": "Palmira",
+  "translations": {
+    "es": {
+      "title": "Palmira",
+      "location": "Municipio del Valle del Cauca, en el valle geográfico del río Cauca y al oriente de Cali.",
+      "history": "La actual Palmira surgió del poblado de Llanogrande; obtuvo vida institucional como villa por la Ley 156 de 1824."
+    },
+    "en": {
+      "title": "Palmira",
+      "location": "A municipality in Valle del Cauca, in the Cauca River valley and east of Cali.",
+      "history": "Present-day Palmira emerged from the settlement of Llanogrande; it gained institutional status as a town under Law 156 of 1824."
+    },
+    "pt-BR": {
+      "title": "Palmira",
+      "location": "Município do Valle del Cauca, no vale geográfico do rio Cauca e a leste de Cali.",
+      "history": "A atual Palmira surgiu do povoado de Llanogrande; obteve vida institucional como vila pela Lei 156 de 1824."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-14-1200.webp",
+  "sources": [
+    "https://palmira.gov.co/palmira-con-202-anos-de-vida-republicana-vive-en-la-memoria-de-sus-habitantes/",
+    "https://palmira.gov.co/conoce-todo-lo-que-puedes-hacer-en-palmira-a-traves-de-estas-cinco-rutas-turisticas/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-14-2",
+      "municipality": "Palmira",
+      "title_es": "Museo Arqueológico de Palmira",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-14-2-v1-1200.webp",
+      "image_sha256": "a534ada3b70e5d24a6538c4a7768a43338070501fc83681d63d770f0828cadf9",
+      "source": {
+        "id": "QC-14-2-R1",
+        "url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/35/ff/54/entrada-al-museo.jpg?h=800&s=1&w=1400",
+        "source_url": "https://www.tripadvisor.com/Attraction_Review-g1725989-d30400829-Reviews-Museo_Arqueologico_De_Palmira-Palmira_Valle_del_Cauca_Department.html",
+        "title": "Museo Arqueológico De Palmira (Colombia): Hours, Address - Tripadvisor",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "candidata_pendiente_revision_visual",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Fachada y rótulo Museo Arqueológico de Palmira visibles. Fecha de captura desconocida. Oferta del museo contrastada con su operador.",
+        "preview_checked_at": "2026-11-03"
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Museo Arqueológico de Palmira",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-14-3",
+      "municipality": "Palmira",
+      "title_es": "Bosque Municipal",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-14-3-v1-1200.webp",
+      "image_sha256": "eb6f5087ecf9d56cc54b4a0f8bee771bb725847737be90fc52636280210ccf82",
+      "source": {
+        "url": "https://palmira.gov.co/wp-content/uploads/2025/08/bosque-municipal-1024x684.jpg",
+        "source_url": "https://palmira.gov.co/a-partir-del-19-de-agosto-se-prohibira-el-ingreso-de-mascotas-a-las-instalaciones-de-el-bosque-municipal/",
+        "published_at": "2025-08",
+        "captured_at": null
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 3.5264511,
+        "longitude": -76.28704479999999,
+        "precision": "punto_ficha_cartografica_no_entrada_validada",
+        "source_url": "https://www.waze.com/es/live-map/directions/co/valle-del-cauca/palmira/bosque-municipal-palmira?to=place.ChIJ6XqUZdsEOo4RjZXPkszwTcE",
+        "address": "Cl. 31 #15-120, Palmira, Valle del Cauca, Colombia",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=3.5264511%2C-76.28704479999999"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Bosque Municipal",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-14-5",
+      "municipality": "Palmira",
+      "title_es": "Museo Aéreo Fénix",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-2/generadas/QC-14-5-v1-1200.webp",
+      "image_sha256": "1f524aeb5932e6ae8f4793e297a394ae521b7d54212ac771677de8a28d3f245f",
+      "source": {
+        "url": "https://www.elpais.com.co/resizer/v2/PYH3NHDLDJCOBGQ4SJKIFZJSKQ.jpeg?auth=fa72061d06fd3f077c019a21f47831b4f2972bf53e1351846d8bb9deb69c76db&quality=75&smart=true&width=1920",
+        "source_url": "https://www.elpais.com.co/turismo/cuanto-cuesta-la-entrada-al-museo-aereo-del-fenix-y-como-llegar-1542.html",
+        "published_at": "2024-08-15",
+        "captured_at": null,
+        "note": "Foto atribuida al museo. Fuente actual del operador museoaereofenix.org confirma visitas. Fecha exacta de toma no acreditada."
+      },
+      "geo": {
+        "status": "pendiente",
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Museo Aéreo Fénix",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

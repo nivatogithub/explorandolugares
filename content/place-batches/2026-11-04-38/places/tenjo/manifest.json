@@ -1,0 +1,202 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "tenjo",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Cundinamarca",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Tenjo, Cundinamarca",
+        "headline": "Tenjo, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Municipio de Sabana Centro, al noroccidente de Bogotá, entre paisajes rurales y montañosos de Cundinamarca.",
+        "meta_description": "Municipio de Sabana Centro, al noroccidente de Bogotá, entre paisajes rurales y montañosos de Cundinamarca."
+      },
+      "en": {
+        "display_name": "Tenjo, Cundinamarca",
+        "headline": "Tenjo, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "A Sabana Centro municipality northwest of Bogotá, among Cundinamarca's rural and mountainous landscapes.",
+        "meta_description": "A Sabana Centro municipality northwest of Bogotá, among Cundinamarca's rural and mountainous landscapes."
+      },
+      "pt-BR": {
+        "display_name": "Tenjo, Cundinamarca",
+        "headline": "Tenjo, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Município de Sabana Centro, a noroeste de Bogotá, entre paisagens rurais e montanhosas de Cundinamarca.",
+        "meta_description": "Município de Sabana Centro, a noroeste de Bogotá, entre paisagens rurais e montanhosas de Cundinamarca."
+      }
+    },
+    "history": {
+      "es": [
+        "Tenjo forma parte de un territorio de tradición muisca. En 1603 se ordenó construir un templo doctrinero para los cacicazgos del valle; el templo entregado en 1637 sigue siendo un referente patrimonial."
+      ],
+      "en": [
+        "Tenjo is part of a territory with Muisca tradition. In 1603, a doctrinal church was ordered for the valley's chiefdoms; the temple delivered in 1637 remains a heritage landmark."
+      ],
+      "pt-BR": [
+        "Tenjo integra um território de tradição muisca. Em 1603 foi ordenada a construção de um templo doutrinário para os cacicados do vale; o templo entregue em 1637 continua sendo uma referência patrimonial."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer la actividad cultural vinculada al Centro Cultural Nohora Matallana.",
+        "Explorar una propuesta museística singular dedicada a relatos sobre ovnis y cultura ancestral."
+      ],
+      "en": [
+        "Discover the cultural life associated with Centro Cultural Nohora Matallana.",
+        "Explore an unusual museum theme focused on UFO accounts and ancestral culture."
+      ],
+      "pt-BR": [
+        "Conhecer a atividade cultural ligada ao Centro Cultural Nohora Matallana.",
+        "Explorar uma proposta museológica singular dedicada a relatos sobre ovnis e cultura ancestral."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-22.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Tenjo.",
+      "en": "Illustration of Tenjo.",
+      "pt-BR": "Ilustração de Tenjo."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-22-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.8681058,
+      "longitude": -74.1539816,
+      "translations": {
+        "es": {
+          "name": "Centro Cultural Nohora Matallana",
+          "description": "Centro cultural de Tenjo que lleva el nombre de Nohora Matallana.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Centro Cultural Nohora Matallana",
+          "description": "Cultural centre in Tenjo named after Nohora Matallana.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Centro Cultural Nohora Matallana",
+          "description": "Centro cultural de Tenjo que leva o nome de Nohora Matallana.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/QC-22-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.infobae.com/america/colombia/2021/11/17/seis-departamentos-del-pais-se-encontraran-en-el-ii-festival-cine-chicu-de-tenjo-cundinamarca/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Centro Cultural Nohora Matallana.",
+          "en": "Illustration of Centro Cultural Nohora Matallana.",
+          "pt-BR": "Ilustração de Centro Cultural Nohora Matallana."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-22-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.8697851,
+      "longitude": -74.1184242,
+      "translations": {
+        "es": {
+          "name": "Museo de Ovnilogía y Cultura Ancestral",
+          "description": "Museo de Tenjo cuya temática reúne relatos sobre ovnis y cultura ancestral.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Museo de Ovnilogía y Cultura Ancestral",
+          "description": "Museum in Tenjo whose themes include UFO accounts and ancestral culture.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Museo de Ovnilogía y Cultura Ancestral",
+          "description": "Museu de Tenjo cuja temática reúne relatos sobre ovnis e cultura ancestral.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/QC-22-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://visitatenjo.com/lugares-visit/museo-de-ovnilogia-y-cultura-ancestral/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo de Ovnilogía y Cultura Ancestral.",
+          "en": "Illustration of Museo de Ovnilogía y Cultura Ancestral.",
+          "pt-BR": "Ilustração de Museo de Ovnilogía y Cultura Ancestral."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.tenjo-cundinamarca.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+      },
+      {
+        "reference": "https://bogota.gov.co/mi-ciudad/cultura-recreacion-y-deporte/bicibogota-region-un-viaje-en-bicicleta-al-corazon-de-colombia"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-22-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-22-4: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

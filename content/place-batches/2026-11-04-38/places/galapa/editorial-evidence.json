@@ -1,0 +1,86 @@
+{
+  "number": 12,
+  "slug": "galapa",
+  "name": "Galapa",
+  "translations": {
+    "es": {
+      "title": "Galapa",
+      "location": "Municipio del Atlántico, a unos 8 km de Barranquilla e integrante de su área metropolitana.",
+      "history": "Existía como pueblo indígena a la llegada española; la documentación municipal registra su creación como municipio por la Ley 37 de 1873."
+    },
+    "en": {
+      "title": "Galapa",
+      "location": "A municipality in Atlántico, about 8 km from Barranquilla and part of its metropolitan area.",
+      "history": "It existed as an Indigenous town when the Spanish arrived; municipal documentation records its creation as a municipality under Law 37 of 1873."
+    },
+    "pt-BR": {
+      "title": "Galapa",
+      "location": "Município do Atlântico, a cerca de 8 km de Barranquilla e integrante de sua área metropolitana.",
+      "history": "Já existia como povoado indígena na chegada dos espanhóis; a documentação municipal registra sua criação como município pela Lei 37 de 1873."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-12-1200.webp",
+  "sources": [
+    "https://galapa-atlantico.gov.co/Transparencia/Normatividad/Acuerdo%20011%20-%202016.pdf",
+    "https://www.galapa-atlantico.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+  ],
+  "attractions": [
+    {
+      "id": "QC-12-2",
+      "municipality": "Galapa",
+      "title_es": "Museo Arqueológico de Galapa — MUGA",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-12-2.webp",
+      "image_sha256": "f03a05099aef464537b6c30d52320e99774f507d36a028ee5205b7e0a6374c20",
+      "source": {
+        "url": "https://cdns3.museumspedia.net/media/items/1920x/17828-Museo-Arqueologico-de-Galapa-MUGA-SkQfy.jpg",
+        "source_url": "https://museumspedia.net/es/i/17828-museo-arqueologico-de-galapa-muga/",
+        "published_at": null,
+        "captured_at": null,
+        "visual_reviewed": true,
+        "checked_at": "2026-11-03",
+        "status": "referencia_utilizada_pendiente_aprobacion"
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 10.89975,
+        "longitude": -74.88589,
+        "precision": "punto_cartografico_del_inmueble_no_entrada_validada",
+        "source_url": "https://mapcarta.com/N4081254333",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=10.89975%2C-74.88589"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Museo Arqueológico de Galapa — MUGA",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-12-4",
+      "municipality": "Galapa",
+      "title_es": "Plaza de la Madre",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-12-4-v2.webp",
+      "image_sha256": "3b69a11c0bf6961bc27d81db57b9a9a65cd41766170d997bac1d5400fe5b2420",
+      "source": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Plazadelamadregalapa.jpg",
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

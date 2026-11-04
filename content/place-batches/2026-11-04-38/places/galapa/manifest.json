@@ -1,0 +1,204 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "galapa",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Atlántico",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Galapa",
+        "headline": "Galapa",
+        "eyebrow": "Atlántico, Colombia",
+        "intro": "Municipio del Atlántico, a unos 8 km de Barranquilla e integrante de su área metropolitana.",
+        "meta_description": "Municipio del Atlántico, a unos 8 km de Barranquilla e integrante de su área metropolitana."
+      },
+      "en": {
+        "display_name": "Galapa",
+        "headline": "Galapa",
+        "eyebrow": "Atlántico, Colombia",
+        "intro": "A municipality in Atlántico, about 8 km from Barranquilla and part of its metropolitan area.",
+        "meta_description": "A municipality in Atlántico, about 8 km from Barranquilla and part of its metropolitan area."
+      },
+      "pt-BR": {
+        "display_name": "Galapa",
+        "headline": "Galapa",
+        "eyebrow": "Atlántico, Colombia",
+        "intro": "Município do Atlântico, a cerca de 8 km de Barranquilla e integrante de sua área metropolitana.",
+        "meta_description": "Município do Atlântico, a cerca de 8 km de Barranquilla e integrante de sua área metropolitana."
+      }
+    },
+    "history": {
+      "es": [
+        "Existía como pueblo indígena a la llegada española; la documentación municipal registra su creación como municipio por la Ley 37 de 1873."
+      ],
+      "en": [
+        "It existed as an Indigenous town when the Spanish arrived; municipal documentation records its creation as a municipality under Law 37 of 1873."
+      ],
+      "pt-BR": [
+        "Já existia como povoado indígena na chegada dos espanhóis; a documentação municipal registra sua criação como município pela Lei 37 de 1873."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte al patrimonio arqueológico de Galapa en el MUGA.",
+        "Recorrer espacios públicos del municipio, como la Plaza de la Madre."
+      ],
+      "en": [
+        "Explore Galapa's archaeological heritage at MUGA.",
+        "Discover the town's public spaces, including Plaza de la Madre."
+      ],
+      "pt-BR": [
+        "Conhecer o patrimônio arqueológico de Galapa no MUGA.",
+        "Percorrer espaços públicos do município, como a Plaza de la Madre."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-12.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Galapa.",
+      "en": "Illustration of Galapa.",
+      "pt-BR": "Ilustração de Galapa."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-12-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.8998607,
+      "longitude": -74.8859153,
+      "translations": {
+        "es": {
+          "name": "Museo Arqueológico de Galapa — MUGA",
+          "description": "Museo Arqueológico de Galapa, conocido como MUGA.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6931317580664274914"
+        },
+        "en": {
+          "name": "Museo Arqueológico de Galapa — MUGA",
+          "description": "Galapa Archaeological Museum, known as MUGA.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6931317580664274914"
+        },
+        "pt-BR": {
+          "name": "Museo Arqueológico de Galapa — MUGA",
+          "description": "Museu Arqueológico de Galapa, conhecido como MUGA.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6931317580664274914"
+        }
+      },
+      "image": {
+        "file": "images/QC-12-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://museumspedia.net/es/i/17828-museo-arqueologico-de-galapa-muga/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Arqueológico de Galapa — MUGA.",
+          "en": "Illustration of Museo Arqueológico de Galapa — MUGA.",
+          "pt-BR": "Ilustração de Museo Arqueológico de Galapa — MUGA."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-12-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.8991036,
+      "longitude": -74.8857059,
+      "translations": {
+        "es": {
+          "name": "Plaza de la Madre",
+          "description": "Plaza de la Madre, espacio público de Galapa con un monumento dedicado a la maternidad.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3034859524406762716"
+        },
+        "en": {
+          "name": "Plaza de la Madre",
+          "description": "Plaza de la Madre, a public space in Galapa with a monument dedicated to motherhood.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3034859524406762716"
+        },
+        "pt-BR": {
+          "name": "Plaza de la Madre",
+          "description": "Plaza de la Madre, espaço público de Galapa com um monumento dedicado à maternidade.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3034859524406762716"
+        }
+      },
+      "image": {
+        "file": "images/QC-12-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Plazadelamadregalapa.jpg",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Plaza de la Madre.",
+          "en": "Illustration of Plaza de la Madre.",
+          "pt-BR": "Ilustração de Plaza de la Madre."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://galapa-atlantico.gov.co/Transparencia/Normatividad/Acuerdo%20011%20-%202016.pdf"
+      },
+      {
+        "reference": "https://www.galapa-atlantico.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-12-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-12-2: aprobación visual no registrada en el inventario",
+      "QC-12-4: coordenadas pendientes",
+      "QC-12-4: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

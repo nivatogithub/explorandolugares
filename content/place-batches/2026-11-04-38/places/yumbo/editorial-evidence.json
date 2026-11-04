@@ -1,0 +1,112 @@
+{
+  "number": 13,
+  "slug": "yumbo",
+  "name": "Yumbo",
+  "translations": {
+    "es": {
+      "title": "Yumbo",
+      "location": "Municipio del Valle del Cauca, en la margen izquierda del río Cauca y vecino de Cali.",
+      "history": "El territorio estaba habitado por una comunidad indígena antes de la llegada española; Yumbo fue creado como municipio en 1864."
+    },
+    "en": {
+      "title": "Yumbo",
+      "location": "A municipality in Valle del Cauca, on the left bank of the Cauca River and next to Cali.",
+      "history": "The territory was inhabited by an Indigenous community before Spanish arrival; Yumbo was created as a municipality in 1864."
+    },
+    "pt-BR": {
+      "title": "Yumbo",
+      "location": "Município do Valle del Cauca, na margem esquerda do rio Cauca e vizinho de Cali.",
+      "history": "O território era habitado por uma comunidade indígena antes da chegada espanhola; Yumbo foi criado como município em 1864."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-13-1200.webp",
+  "sources": [
+    "https://www.yumbo.gov.co/loader.php?idFile=39682&lFuncion=exposeDocument&lServicio=Tools2&lTipo=descargas&tmp=f02a3460f3b73736d5575a6415a8e81a&urlDeleteFunction=https%3A%2F%2Fwww.yumbo.gov.co%2Floader.php%3FlServicio%3DTools2%26lTipo%3Ddescargas%26lFuncion%3DdeleteTemporalFile%26tmp%3Df02a3460f3b73736d5575a6415a8e81a",
+    "https://www.yumbo.gov.co/publicaciones/78/sitios-de-interes/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-13-2",
+      "municipality": "Yumbo",
+      "title_es": "Museo Comunitario de Mulaló",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-13-2-v1-1200.webp",
+      "image_sha256": "c963b0383de4123c3bf0a6ed70ae9e9381fc8d6ba75f714ae1432d32057911da",
+      "source": {
+        "id": "QC-13-2-R1",
+        "url": "https://www.museoscomunitarios.org/images/Museos/mulalo.jpg",
+        "source_url": "https://www.museoscomunitarios.org/mulalo",
+        "title": "Mulaló - Museos Comunitarios de América",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Referencia localizada; falta contraste visual, actualidad y permiso de uso. No es una imagen generada.",
+        "preview_checked_at": "2026-11-03"
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 3.63535,
+        "longitude": -76.48377,
+        "precision": "punto_OSM_no_entrada_validada",
+        "source_url": "https://mapcarta.com/es/W231975716",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=3.63535%2C-76.48377"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Museo Comunitario de Mulaló",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-13-3",
+      "municipality": "Yumbo",
+      "title_es": "Museo Arqueológico de Montañitas",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-13-3-v1-1200.webp",
+      "image_sha256": "eca3f461175dfb015e43ddf75b170c8fae57e7f8588ed7b11fa319a2f71b3b80",
+      "source": {
+        "id": "QC-13-3-R1",
+        "url": "https://elquindiano.com/wp-content/uploads/2021/09/b202109190806441.jpg",
+        "source_url": "https://elquindiano.com/noticia/142236/un-museo-en-la-montana/",
+        "title": "Museo Arqueológico de Montañitas — reportaje",
+        "published_at": "2021-09-19",
+        "note": "Captura sin fecha; el relato también circulaba en 2019. Describe cierre por reparaciones durante aquella visita, no confirma funcionamiento actual.",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "preview_checked_at": "2026-11-03"
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Museo Arqueológico de Montañitas",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

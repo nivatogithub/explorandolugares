@@ -1,0 +1,251 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "palmira",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Valle del Cauca",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Palmira",
+        "headline": "Palmira",
+        "eyebrow": "Valle del Cauca, Colombia",
+        "intro": "Municipio del Valle del Cauca, en el valle geográfico del río Cauca y al oriente de Cali.",
+        "meta_description": "Municipio del Valle del Cauca, en el valle geográfico del río Cauca y al oriente de Cali."
+      },
+      "en": {
+        "display_name": "Palmira",
+        "headline": "Palmira",
+        "eyebrow": "Valle del Cauca, Colombia",
+        "intro": "A municipality in Valle del Cauca, in the Cauca River valley and east of Cali.",
+        "meta_description": "A municipality in Valle del Cauca, in the Cauca River valley and east of Cali."
+      },
+      "pt-BR": {
+        "display_name": "Palmira",
+        "headline": "Palmira",
+        "eyebrow": "Valle del Cauca, Colombia",
+        "intro": "Município do Valle del Cauca, no vale geográfico do rio Cauca e a leste de Cali.",
+        "meta_description": "Município do Valle del Cauca, no vale geográfico do rio Cauca e a leste de Cali."
+      }
+    },
+    "history": {
+      "es": [
+        "La actual Palmira surgió del poblado de Llanogrande; obtuvo vida institucional como villa por la Ley 156 de 1824."
+      ],
+      "en": [
+        "Present-day Palmira emerged from the settlement of Llanogrande; it gained institutional status as a town under Law 156 of 1824."
+      ],
+      "pt-BR": [
+        "A atual Palmira surgiu do povoado de Llanogrande; obteve vida institucional como vila pela Lei 156 de 1824."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Reunir arqueología y aviación en un recorrido por el Museo Arqueológico y el Museo Aéreo Fénix.",
+        "Disfrutar una pausa entre espacios verdes en el Bosque Municipal."
+      ],
+      "en": [
+        "Combine archaeology and aviation with visits to the archaeological museum and Museo Aéreo Fénix.",
+        "Enjoy a break among green spaces at Bosque Municipal."
+      ],
+      "pt-BR": [
+        "Reunir arqueologia e aviação em um passeio pelo museu arqueológico e pelo Museo Aéreo Fénix.",
+        "Fazer uma pausa entre áreas verdes no Bosque Municipal."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-14.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Catredal_Nuestra_Se%C3%B1ora_del_Palmar_y_Alcald%C3%ADa_Municipal_de_Palmira.jpg",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Palmira.",
+      "en": "Illustration of Palmira.",
+      "pt-BR": "Ilustração de Palmira."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-14-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.5258759,
+      "longitude": -76.3048335,
+      "translations": {
+        "es": {
+          "name": "Museo Arqueológico de Palmira",
+          "description": "Museo dedicado al patrimonio arqueológico de Palmira.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6962852450772423616"
+        },
+        "en": {
+          "name": "Museo Arqueológico de Palmira",
+          "description": "Museum dedicated to Palmira's archaeological heritage.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6962852450772423616"
+        },
+        "pt-BR": {
+          "name": "Museo Arqueológico de Palmira",
+          "description": "Museu dedicado ao patrimônio arqueológico de Palmira.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6962852450772423616"
+        }
+      },
+      "image": {
+        "file": "images/QC-14-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.tripadvisor.com/Attraction_Review-g1725989-d30400829-Reviews-Museo_Arqueologico_De_Palmira-Palmira_Valle_del_Cauca_Department.html",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Arqueológico de Palmira.",
+          "en": "Illustration of Museo Arqueológico de Palmira.",
+          "pt-BR": "Ilustração de Museo Arqueológico de Palmira."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-14-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.5264511,
+      "longitude": -76.2870448,
+      "translations": {
+        "es": {
+          "name": "Bosque Municipal",
+          "description": "El Bosque Municipal es un espacio verde y recreativo de Palmira.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13929053983953884557"
+        },
+        "en": {
+          "name": "Bosque Municipal",
+          "description": "The Bosque Municipal is a green and recreational space in Palmira.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13929053983953884557"
+        },
+        "pt-BR": {
+          "name": "Bosque Municipal",
+          "description": "O Bosque Municipal é um espaço verde e recreativo de Palmira.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13929053983953884557"
+        }
+      },
+      "image": {
+        "file": "images/QC-14-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://palmira.gov.co/a-partir-del-19-de-agosto-se-prohibira-el-ingreso-de-mascotas-a-las-instalaciones-de-el-bosque-municipal/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Bosque Municipal.",
+          "en": "Illustration of Bosque Municipal.",
+          "pt-BR": "Ilustração de Bosque Municipal."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-14-5",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.553931,
+      "longitude": -76.385869,
+      "translations": {
+        "es": {
+          "name": "Museo Aéreo Fénix",
+          "description": "Museo dedicado a la aviación en el municipio de Palmira.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=9146798965373177554"
+        },
+        "en": {
+          "name": "Museo Aéreo Fénix",
+          "description": "Museum dedicated to aviation in the municipality of Palmira.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=9146798965373177554"
+        },
+        "pt-BR": {
+          "name": "Museo Aéreo Fénix",
+          "description": "Museu dedicado à aviação no município de Palmira.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=9146798965373177554"
+        }
+      },
+      "image": {
+        "file": "images/QC-14-5.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.elpais.com.co/turismo/cuanto-cuesta-la-entrada-al-museo-aereo-del-fenix-y-como-llegar-1542.html",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Aéreo Fénix.",
+          "en": "Illustration of Museo Aéreo Fénix.",
+          "pt-BR": "Ilustração de Museo Aéreo Fénix."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://palmira.gov.co/palmira-con-202-anos-de-vida-republicana-vive-en-la-memoria-de-sus-habitantes/"
+      },
+      {
+        "reference": "https://palmira.gov.co/conoce-todo-lo-que-puedes-hacer-en-palmira-a-traves-de-estas-cinco-rutas-turisticas/"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-14-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-14-3: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-14-5: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

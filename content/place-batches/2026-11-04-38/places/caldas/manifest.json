@@ -1,0 +1,205 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "caldas",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Antioquia",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Caldas, Antioquia",
+        "headline": "Caldas, Antioquia",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipio ubicado al sur del Valle de Aburrá, Antioquia, como conexión metropolitana hacia el Suroeste y el Oriente antioqueño.",
+        "meta_description": "Municipio ubicado al sur del Valle de Aburrá, Antioquia, como conexión metropolitana hacia el Suroeste y el Oriente antioqueño."
+      },
+      "en": {
+        "display_name": "Caldas, Antioquia",
+        "headline": "Caldas, Antioquia",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipality in the south of the Aburrá Valley, Antioquia, linking the metropolitan area with southwestern and eastern Antioquia.",
+        "meta_description": "Municipality in the south of the Aburrá Valley, Antioquia, linking the metropolitan area with southwestern and eastern Antioquia."
+      },
+      "pt-BR": {
+        "display_name": "Caldas, Antioquia",
+        "headline": "Caldas, Antioquia",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Município situado no sul do Vale de Aburrá, em Antioquia, conectando a região metropolitana ao Sudoeste e ao Oriente antioquenho.",
+        "meta_description": "Município situado no sul do Vale de Aburrá, em Antioquia, conectando a região metropolitana ao Sudoeste e ao Oriente antioquenho."
+      }
+    },
+    "history": {
+      "es": [
+        "El caserío de La Valeria surgió hacia 1840. En 1848 se creó el Distrito de Caldas, nombre elegido en memoria de Francisco José de Caldas."
+      ],
+      "en": [
+        "The hamlet of La Valeria emerged around 1840. In 1848 the District of Caldas was created, named in memory of Francisco José de Caldas."
+      ],
+      "pt-BR": [
+        "O povoado de La Valeria surgiu por volta de 1840. Em 1848 foi criado o Distrito de Caldas, nome escolhido em memória de Francisco José de Caldas."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte a la tradición cerámica de Caldas a través de su museo de la loza.",
+        "Conocer el entorno natural del Alto de San Miguel."
+      ],
+      "en": [
+        "Explore Caldas's ceramic tradition through its earthenware museum.",
+        "Discover the natural surroundings of Alto de San Miguel."
+      ],
+      "pt-BR": [
+        "Conhecer a tradição cerâmica de Caldas por meio de seu museu da louça.",
+        "Descobrir o ambiente natural do Alto de San Miguel."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-03.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Caldas.",
+      "en": "Illustration of Caldas.",
+      "pt-BR": "Ilustração de Caldas."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-03-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.0926063,
+      "longitude": -75.6393044,
+      "translations": {
+        "es": {
+          "name": "Museo de la Loza y la Cerámica Contemporánea",
+          "description": "Museo de Caldas dedicado a la loza y la cerámica contemporánea.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=12347324952783684889"
+        },
+        "en": {
+          "name": "Museo de la Loza y la Cerámica Contemporánea",
+          "description": "Museum in Caldas dedicated to earthenware and contemporary ceramics.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=12347324952783684889"
+        },
+        "pt-BR": {
+          "name": "Museo de la Loza y la Cerámica Contemporánea",
+          "description": "Museu de Caldas dedicado à louça e à cerâmica contemporânea.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=12347324952783684889"
+        }
+      },
+      "image": {
+        "file": "images/QC-03-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://reddemuseosdeantioquia.com/portfolio/museo-de-la-loza-y-la-ceramica-contemporanea/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo de la Loza y la Cerámica Contemporánea.",
+          "en": "Illustration of Museo de la Loza y la Cerámica Contemporánea.",
+          "pt-BR": "Ilustração de Museo de la Loza y la Cerámica Contemporánea."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-03-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.027536,
+      "longitude": -75.5960622,
+      "translations": {
+        "es": {
+          "name": "Reserva Alto de San Miguel",
+          "description": "Reserva natural del Alto de San Miguel, en el municipio de Caldas, Antioquia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=17476897834352520338"
+        },
+        "en": {
+          "name": "Reserva Alto de San Miguel",
+          "description": "Alto de San Miguel nature reserve, in Caldas, Antioquia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=17476897834352520338"
+        },
+        "pt-BR": {
+          "name": "Reserva Alto de San Miguel",
+          "description": "Reserva natural Alto de San Miguel, no município de Caldas, Antioquia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=17476897834352520338"
+        }
+      },
+      "image": {
+        "file": "images/QC-03-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://caldasantioquia.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Reserva Alto de San Miguel.",
+          "en": "Illustration of Reserva Alto de San Miguel.",
+          "pt-BR": "Ilustração de Reserva Alto de San Miguel."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.caldasantioquia.gov.co/MiMunicipio/Paginas/Ubicacion.aspx"
+      },
+      {
+        "reference": "https://caldasantioquia.gov.co/MiMunicipio/Paginas/Resena-Historica.aspx"
+      },
+      {
+        "reference": "https://www.caldasantioquia.gov.co/wp-content/uploads/2024/09/1.-Diagnostico-Generalidades-y-Contexto.pdf"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-03-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-03-3: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

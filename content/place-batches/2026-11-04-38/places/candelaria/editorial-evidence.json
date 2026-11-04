@@ -1,0 +1,108 @@
+{
+  "number": 15,
+  "slug": "candelaria",
+  "name": "Candelaria",
+  "translations": {
+    "es": {
+      "title": "Candelaria",
+      "location": "Municipio del Valle del Cauca, en el entorno oriental de Cali y junto al río Cauca.",
+      "history": "Su historia reúne presencia indígena, el posterior poblado de Villa de la Candelaria y su erección como municipio en 1864."
+    },
+    "en": {
+      "title": "Candelaria",
+      "location": "A municipality in Valle del Cauca, east of Cali and alongside the Cauca River.",
+      "history": "Its history includes Indigenous presence, the later town of Villa de la Candelaria, and its establishment as a municipality in 1864."
+    },
+    "pt-BR": {
+      "title": "Candelaria",
+      "location": "Município do Valle del Cauca, no entorno oriental de Cali e junto ao rio Cauca.",
+      "history": "Sua história reúne presença indígena, o posterior povoado de Villa de la Candelaria e sua elevação a município em 1864."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-15-1200.webp",
+  "sources": [
+    "https://www.candelaria-valle.gov.co/publicaciones/77/pasado-presente-y-futuro/",
+    "https://www.candelaria-valle.gov.co/publicaciones/73/sitios-de-interes/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-15-2",
+      "municipality": "Candelaria",
+      "title_es": "Escuela de Música de Candelaria",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-15-2.webp",
+      "image_sha256": "60c9d1f03eacb2b4329cde189a67c052776c3add1b40898a99703444f71e193e",
+      "source": {
+        "id": "QC-15-2-REEMPLAZO-1",
+        "url": "https://static.wixstatic.com/media/4359e2_f4e7f0b3e9244878ba327f849d679613~mv2_d_3939_5209_s_4_2.jpg/v1/fill/w_980%2Ch_1296%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_auto/4359e2_f4e7f0b3e9244878ba327f849d679613~mv2_d_3939_5209_s_4_2.jpg",
+        "source_url": "https://www.tallerespaciocolectivo.com/escuela-de-musica-de-candelaria",
+        "title": "Escuela de Música · Federico Cairoli",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_utilizada_pendiente_aprobacion",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "La página fecha el proyecto en 2016, no la fotografía. Requiere contraste reciente antes de generación."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Escuela de Música de Candelaria",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-15-3",
+      "municipality": "Candelaria",
+      "title_es": "Capilla de El Cabuyal",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-15-3.webp",
+      "image_sha256": "108c4fdf34d56ee70da44ffa29a5545b9ff74c5e75556c2dbbcc02497cdbbba6",
+      "source": {
+        "id": "QC-15-3-R1",
+        "url": "https://www.semana.com/resizer/v2/K6D5EPPGIJAXHD4Z7RQXA7RVGU.jpg?auth=3e9a9ee26072d080bfebcbc8b52f4e3f6c08eca8d79c41a4e5c8dd975d08dd1c&height=961&width=1280",
+        "source_url": "https://www.semana.com/turismo/articulo/el-pueblo-vallecaucano-que-celebra-mas-de-480-anos-un-destino-que-enamora-con-su-historia-cultura-y-atractivos-unicos/202603/",
+        "title": "El pueblo vallecaucano que celebra más de 480 años, un destino que enamora con su historia, cultura y atractivos únicos",
+        "published_at": "2026-02-04",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_utilizada_pendiente_aprobacion",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "preview_checked_at": "2026-11-03"
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Capilla de El Cabuyal",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

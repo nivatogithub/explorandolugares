@@ -1,0 +1,254 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "facatativa",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Cundinamarca",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Facatativá, Cundinamarca",
+        "headline": "Facatativá, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Cabecera de la provincia de Sabana Occidente, en el extremo occidental de la sabana de Bogotá.",
+        "meta_description": "Cabecera de la provincia de Sabana Occidente, en el extremo occidental de la sabana de Bogotá."
+      },
+      "en": {
+        "display_name": "Facatativá, Cundinamarca",
+        "headline": "Facatativá, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "The seat of Sabana Occidente province, at the western edge of the Bogotá savanna.",
+        "meta_description": "The seat of Sabana Occidente province, at the western edge of the Bogotá savanna."
+      },
+      "pt-BR": {
+        "display_name": "Facatativá, Cundinamarca",
+        "headline": "Facatativá, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Sede da província de Sabana Occidente, no extremo oeste da savana de Bogotá.",
+        "meta_description": "Sede da província de Sabana Occidente, no extremo oeste da savana de Bogotá."
+      }
+    },
+    "history": {
+      "es": [
+        "Facatativá conserva referencias del territorio muisca y de los caminos que conectaron la sabana con el occidente del país. El Parque Arqueológico de Facatativá fue declarado Bien de Interés Cultural del ámbito nacional."
+      ],
+      "en": [
+        "Facatativá preserves traces of Muisca territory and of the routes that connected the savanna with western Colombia. Facatativá Archaeological Park was declared a National Cultural Heritage Asset."
+      ],
+      "pt-BR": [
+        "Facatativá preserva referências do território muisca e dos caminhos que conectaram a savana ao oeste do país. O Parque Arqueológico de Facatativá foi declarado Bem de Interesse Cultural de âmbito nacional."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte al patrimonio arqueológico de Piedras del Tunjo.",
+        "Combinar ese recorrido con la memoria ferroviaria y los espacios culturales de Facatativá."
+      ],
+      "en": [
+        "Explore the archaeological heritage of Piedras del Tunjo.",
+        "Combine that visit with Facatativá's railway heritage and cultural venues."
+      ],
+      "pt-BR": [
+        "Conhecer o patrimônio arqueológico de Piedras del Tunjo.",
+        "Combinar esse passeio com a memória ferroviária e os espaços culturais de Facatativá."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-21.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Facatativá.",
+      "en": "Illustration of Facatativá.",
+      "pt-BR": "Ilustração de Facatativá."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-21-1",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.8147715,
+      "longitude": -74.346474,
+      "translations": {
+        "es": {
+          "name": "Parque Arqueológico de Facatativá",
+          "description": "Parque arqueológico de Facatativá, también conocido como Piedras del Tunjo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=16419959579231948148"
+        },
+        "en": {
+          "name": "Parque Arqueológico de Facatativá",
+          "description": "Facatativá's archaeological park, also known as Piedras del Tunjo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=16419959579231948148"
+        },
+        "pt-BR": {
+          "name": "Parque Arqueológico de Facatativá",
+          "description": "Parque arqueológico de Facatativá, também conhecido como Piedras del Tunjo.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=16419959579231948148"
+        }
+      },
+      "image": {
+        "file": "images/QC-21-1.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://facaapp.gov.co/parque-arqueologico/la-piedra-de-la-rana/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque Arqueológico de Facatativá.",
+          "en": "Illustration of Parque Arqueológico de Facatativá.",
+          "pt-BR": "Ilustração de Parque Arqueológico de Facatativá."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-21-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.808528,
+      "longitude": -74.355208,
+      "translations": {
+        "es": {
+          "name": "Museo Ferroviario de Sabana Occidente",
+          "description": "Museo dedicado al patrimonio ferroviario de Sabana Occidente, en Facatativá.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7830186272982043748"
+        },
+        "en": {
+          "name": "Museo Ferroviario de Sabana Occidente",
+          "description": "Museum dedicated to the railway heritage of Sabana Occidente, in Facatativá.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7830186272982043748"
+        },
+        "pt-BR": {
+          "name": "Museo Ferroviario de Sabana Occidente",
+          "description": "Museu dedicado ao patrimônio ferroviário de Sabana Occidente, em Facatativá.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7830186272982043748"
+        }
+      },
+      "image": {
+        "file": "images/QC-21-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.facaapp.gov.co/sitios-turisticos/museo/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Ferroviario de Sabana Occidente.",
+          "en": "Illustration of Museo Ferroviario de Sabana Occidente.",
+          "pt-BR": "Ilustração de Museo Ferroviario de Sabana Occidente."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-21-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.809108,
+      "longitude": -74.3541565,
+      "translations": {
+        "es": {
+          "name": "Casa de la Cultura Abelardo Forero Benavides",
+          "description": "Espacio cultural de Facatativá que lleva el nombre de Abelardo Forero Benavides.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=18207458226708320476"
+        },
+        "en": {
+          "name": "Casa de la Cultura Abelardo Forero Benavides",
+          "description": "Cultural venue in Facatativá named after Abelardo Forero Benavides.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=18207458226708320476"
+        },
+        "pt-BR": {
+          "name": "Casa de la Cultura Abelardo Forero Benavides",
+          "description": "Espaço cultural de Facatativá que leva o nome de Abelardo Forero Benavides.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=18207458226708320476"
+        }
+      },
+      "image": {
+        "file": "images/QC-21-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=wh9mAoJC0SnWM2XvNzEwkQ&viewpoint=4.8092524,-74.3542241&heading=201.71&pitch=13.59",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Casa de la Cultura Abelardo Forero Benavides.",
+          "en": "Illustration of Casa de la Cultura Abelardo Forero Benavides.",
+          "pt-BR": "Ilustração de Casa de la Cultura Abelardo Forero Benavides."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.facaapp.gov.co/sitios-turisticos/"
+      },
+      {
+        "reference": "https://www.facaapp.gov.co/parque-arqueologico/"
+      },
+      {
+        "reference": "https://normograma.mincultura.gov.co/mincultura/compilacion/docs/resolucion_mincultura_2427_2020.htm"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-21-1: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-21-3: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-21-4: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

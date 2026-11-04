@@ -1,0 +1,86 @@
+{
+  "number": 36,
+  "slug": "puerto-santander",
+  "name": "Puerto Santander",
+  "translations": {
+    "es": {
+      "title": "Puerto Santander",
+      "location": "Municipio fronterizo de Norte de Santander, a 55 km de Cúcuta, conectado con Venezuela por el Puente Internacional La Unión.",
+      "history": "Surgió en la hacienda Las Virtudes junto a una estación ferroviaria y fue fundado el 4 de julio de 1926; obtuvo categoría municipal en 1993."
+    },
+    "en": {
+      "title": "Puerto Santander",
+      "location": "A border municipality in Norte de Santander, 55 km from Cúcuta, connected to Venezuela by the La Unión International Bridge.",
+      "history": "It emerged at the Las Virtudes estate beside a railway station and was founded on 4 July 1926; it received municipal status in 1993."
+    },
+    "pt-BR": {
+      "title": "Puerto Santander",
+      "location": "Município fronteiriço de Norte de Santander, a 55 km de Cúcuta, conectado à Venezuela pela Ponte Internacional La Unión.",
+      "history": "Surgiu na fazenda Las Virtudes ao lado de uma estação ferroviária e foi fundado em 4 de julho de 1926; recebeu categoria municipal em 1993."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-36-1200.webp",
+  "sources": [
+    "https://amc.gov.co/amc/puerto-santander/",
+    "https://www.puertosantander-nortedesantander.gov.co/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-36-3",
+      "municipality": "Puerto Santander",
+      "title_es": "Puente Internacional La Unión",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-36-3.webp",
+      "image_sha256": "d6de704c70c780dd339ae9c4b84d1d727bdf6b72432f91bead25034ae7a3c158",
+      "source": {
+        "url": "https://laopinion.co/sites/default/files/styles/portada_principal_747x420/public/2025-05/PUERTO%20SANTANDER.png?itok=OQ87kLUy",
+        "source_url": "https://laopinion.co/region/puerto-santander-gestiona-construccion-de-nuevo-puente-binacional",
+        "published_at": "2025-05-16",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "status": "referencia_utilizada_pendiente_aprobacion"
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 8.36522,
+        "longitude": -72.40421,
+        "precision": "punto_OSM_no_entrada_validada",
+        "source_url": "https://mapcarta.com/es/W875833297",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=8.36522%2C-72.40421"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Puente Internacional La Unión",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-36-4",
+      "municipality": "Puerto Santander",
+      "title_es": "Biblioteca Pública Municipal Leonel Quintero Trujillo",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-36-4.webp",
+      "image_sha256": "5dd8bb1ff4ccf4ca487edbcef8a7b149903dfa1de4e6e61e2f00b414ac051647",
+      "source": {
+        "source_url": "https://redbiblionorte.com/redbiblionorte/portfolio/view/21",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

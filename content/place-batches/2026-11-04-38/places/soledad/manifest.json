@@ -1,0 +1,202 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "soledad",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Atlántico",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Soledad",
+        "headline": "Soledad",
+        "eyebrow": "Atlántico, Colombia",
+        "intro": "Municipio del Atlántico integrado al entorno metropolitano de Barranquilla.",
+        "meta_description": "Municipio del Atlántico integrado al entorno metropolitano de Barranquilla."
+      },
+      "en": {
+        "display_name": "Soledad",
+        "headline": "Soledad",
+        "eyebrow": "Atlántico, Colombia",
+        "intro": "A municipality in Atlántico integrated into Barranquilla's metropolitan setting.",
+        "meta_description": "A municipality in Atlántico integrated into Barranquilla's metropolitan setting."
+      },
+      "pt-BR": {
+        "display_name": "Soledad",
+        "headline": "Soledad",
+        "eyebrow": "Atlántico, Colombia",
+        "intro": "Município do Atlântico integrado ao entorno metropolitano de Barranquilla.",
+        "meta_description": "Município do Atlântico integrado ao entorno metropolitano de Barranquilla."
+      }
+    },
+    "history": {
+      "es": [
+        "La documentación municipal sitúa su poblamiento en 1598; su historia conserva una fuerte relación con el legado bolivariano y el antiguo casco urbano."
+      ],
+      "en": [
+        "Municipal documentation dates its settlement to 1598; its history remains closely linked to Bolívar's legacy and the old town center."
+      ],
+      "pt-BR": [
+        "A documentação municipal data seu povoamento de 1598; sua história mantém forte vínculo com o legado bolivariano e o centro histórico."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte a la memoria de Simón Bolívar en la casa museo del municipio.",
+        "Complementar el recorrido cultural con una salida al Parque Muvdi."
+      ],
+      "en": [
+        "Explore the memory of Simón Bolívar at the town's house museum.",
+        "Complement a cultural visit with an outing to Parque Muvdi."
+      ],
+      "pt-BR": [
+        "Conhecer a memória de Simón Bolívar na casa-museu do município.",
+        "Complementar o passeio cultural com uma visita ao Parque Muvdi."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-10.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Soledad.",
+      "en": "Illustration of Soledad.",
+      "pt-BR": "Ilustração de Soledad."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-10-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.9158019,
+      "longitude": -74.7625989,
+      "translations": {
+        "es": {
+          "name": "Casa Museo Bolivariano",
+          "description": "Casa museo de Soledad vinculada a la memoria de Simón Bolívar.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=12749099572107753546"
+        },
+        "en": {
+          "name": "Casa Museo Bolivariano",
+          "description": "House museum in Soledad associated with the memory of Simón Bolívar.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=12749099572107753546"
+        },
+        "pt-BR": {
+          "name": "Casa Museo Bolivariano",
+          "description": "Casa-museu de Soledad ligada à memória de Simón Bolívar.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=12749099572107753546"
+        }
+      },
+      "image": {
+        "file": "images/QC-10-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.tripadvisor.com/Attraction_Review-g2440181-d7930986-Reviews-Casa_Museo_Simon_Bolivar-Soledad_Atlantico_Department.html",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Casa Museo Bolivariano.",
+          "en": "Illustration of Casa Museo Bolivariano.",
+          "pt-BR": "Ilustração de Casa Museo Bolivariano."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-10-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.928071,
+      "longitude": -74.7800433,
+      "translations": {
+        "es": {
+          "name": "Parque Muvdi",
+          "description": "Parque recreativo Muvdi, en Soledad, Atlántico.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=907747373708195150"
+        },
+        "en": {
+          "name": "Parque Muvdi",
+          "description": "Muvdi recreation park, in Soledad, Atlántico.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=907747373708195150"
+        },
+        "pt-BR": {
+          "name": "Parque Muvdi",
+          "description": "Parque recreativo Muvdi, em Soledad, Atlántico.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=907747373708195150"
+        }
+      },
+      "image": {
+        "file": "images/QC-10-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://impactonews.co/semana-santa-en-el-parque-muvdi-el-mejor-plan-familiar-en-soledad/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque Muvdi.",
+          "en": "Illustration of Parque Muvdi.",
+          "pt-BR": "Ilustração de Parque Muvdi."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://soledadatlantico.micolombiadigital.gov.co/sites/soledadatlantico/content/files/000129/6405_pdt-soledad-confiable-20162019corregido-2-1-1.pdf"
+      },
+      {
+        "reference": "https://www.atlantico.gov.co/index.php/museos/4015-casa-museo-bolivariano-de-soledad?font-size=smaller"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-10-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-10-3: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

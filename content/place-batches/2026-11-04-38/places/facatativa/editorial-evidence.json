@@ -1,0 +1,153 @@
+{
+  "number": 21,
+  "slug": "facatativa",
+  "name": "Facatativá",
+  "translations": {
+    "es": {
+      "title": "Facatativá, Cundinamarca",
+      "location": "Cabecera de la provincia de Sabana Occidente, en el extremo occidental de la sabana de Bogotá.",
+      "history": "Facatativá conserva referencias del territorio muisca y de los caminos que conectaron la sabana con el occidente del país. El Parque Arqueológico de Facatativá fue declarado Bien de Interés Cultural del ámbito nacional."
+    },
+    "en": {
+      "title": "Facatativá, Cundinamarca",
+      "location": "The seat of Sabana Occidente province, at the western edge of the Bogotá savanna.",
+      "history": "Facatativá preserves traces of Muisca territory and of the routes that connected the savanna with western Colombia. Facatativá Archaeological Park was declared a National Cultural Heritage Asset."
+    },
+    "pt-BR": {
+      "title": "Facatativá, Cundinamarca",
+      "location": "Sede da província de Sabana Occidente, no extremo oeste da savana de Bogotá.",
+      "history": "Facatativá preserva referências do território muisca e dos caminhos que conectaram a savana ao oeste do país. O Parque Arqueológico de Facatativá foi declarado Bem de Interesse Cultural de âmbito nacional."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-21-1200.webp",
+  "sources": [
+    "https://www.facaapp.gov.co/sitios-turisticos/",
+    "https://www.facaapp.gov.co/parque-arqueologico/",
+    "https://normograma.mincultura.gov.co/mincultura/compilacion/docs/resolucion_mincultura_2427_2020.htm"
+  ],
+  "attractions": [
+    {
+      "id": "QC-21-1",
+      "municipality": "Facatativá",
+      "title_es": "Parque Arqueológico de Facatativá",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-1/generadas/QC-21-1-v1-1200.webp",
+      "image_sha256": "3b8d6cec858f75e30ab4390e27704570f375431f692d0604cdd061703dc7ef1f",
+      "source": {
+        "id": "QC-21-1-NOV03",
+        "url": "https://facaapp.gov.co/media/fenpubc3/whatsapp-image-2026-05-06-at-41444-pm.jpeg",
+        "source_url": "https://facaapp.gov.co/parque-arqueologico/la-piedra-de-la-rana/",
+        "title": "Piedra de la Rana — portal turístico municipal",
+        "note": "Formación rocosa identificable y completa. Incluye elementos gráficos institucionales: referencia documental, no archivo autorizado para republicar. El nombre del archivo menciona 2026, pero no se da por probada la fecha de captura.",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 4.816681444,
+        "longitude": -74.345708781,
+        "precision": "punto_ficha_cartografica_no_entrada_validada",
+        "source_url": "https://www.waze.com/live-map/directions/parque-arqueologico-de-facatativa-calle-5a?to=place.w.187236400.1872036322.2222614",
+        "address": "Calle 5ª, Facatativá, Cundinamarca, Colombia",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=4.816681444%2C-74.345708781"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Parque Arqueológico de Facatativá",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-21-3",
+      "municipality": "Facatativá",
+      "title_es": "Museo Ferroviario de Sabana Occidente",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-1/generadas/QC-21-3-v1-1200.webp",
+      "image_sha256": "d3596a8a4fb8567b21c47d6dc43bdec90baccc7e0c83461782f96066a8311532",
+      "source": {
+        "id": "QC-21-3-R1",
+        "url": "https://www.facaapp.gov.co/media/eugj424o/ferro-min.png",
+        "source_url": "https://www.facaapp.gov.co/sitios-turisticos/museo/",
+        "title": "Museo Ferroviario · Alcaldía de Facatativá",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "candidata_pendiente_revision_visual",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Edificio ferroviario completo con rampa, galería y ventanas identificables. Foto institucional sin fecha de captura acreditada; operación contrastada con agenda de octubre de 2026."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 4.80857,
+        "longitude": -74.35526,
+        "precision": "punto_cartografico_del_inmueble_no_entrada_validada",
+        "source_url": "https://mapcarta.com/es/W1443200768",
+        "address": "Carrera 1 #5-43, Facatativá",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=4.80857%2C-74.35526"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Museo Ferroviario de Sabana Occidente",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-21-4",
+      "municipality": "Facatativá",
+      "title_es": "Casa de la Cultura Abelardo Forero Benavides",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-1/generadas/QC-21-4-v1-1200.webp",
+      "image_sha256": "4df1f27f1728b65418a307ca85f2e31a6b901f2d3894d6ce387019c684906a61",
+      "source": {
+        "id": "QC-21-4-NOV03",
+        "url": "https://streetviewpixels-pa.clients6.google.com/v1/thumbnail?cb_client=maps_sv.tactile&w=900&h=600&pitch=-13.588182067810664&panoid=wh9mAoJC0SnWM2XvNzEwkQ&yaw=201.71001105262854",
+        "source_url": "https://www.google.com/maps/@?api=1&map_action=pano&pano=wh9mAoJC0SnWM2XvNzEwkQ&viewpoint=4.8092524,-74.3542241&heading=201.71&pitch=13.59",
+        "title": "Casa de la Cultura — Street View septiembre 2024",
+        "note": "Miniatura inspeccionada: fachada identificable, Street View septiembre de 2024. Corregir perspectiva sin alterar vanos ni balaustrada. No inventar laterales fuera del encuadre.",
+        "published_at": null,
+        "captured_at": "2024-09",
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada_no_aprobada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false
+      },
+      "geo": {
+        "status": "ubicacion_contrastada_google_maps",
+        "latitude": 4.809108,
+        "longitude": -74.3541565,
+        "precision": "punto_cartografico_del_inmueble_no_entrada_validada",
+        "source_url": "https://www.google.com/maps/search/?api=1&query=Casa+De+La+Cultura+De+Facatativa&query_place_id=ChIJC714QmF8P44R3JC2Ocrirfw",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=4.80904%2C-74.35436"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Casa de la Cultura Abelardo Forero Benavides",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

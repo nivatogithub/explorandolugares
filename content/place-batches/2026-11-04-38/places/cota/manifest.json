@@ -1,0 +1,207 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "cota",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Cundinamarca",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Cota, Cundinamarca",
+        "headline": "Cota, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Municipio de la provincia de Sabana Centro, al noroccidente de Bogotá.",
+        "meta_description": "Municipio de la provincia de Sabana Centro, al noroccidente de Bogotá."
+      },
+      "en": {
+        "display_name": "Cota, Cundinamarca",
+        "headline": "Cota, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "A municipality in the Sabana Centro province, northwest of Bogotá.",
+        "meta_description": "A municipality in the Sabana Centro province, northwest of Bogotá."
+      },
+      "pt-BR": {
+        "display_name": "Cota, Cundinamarca",
+        "headline": "Cota, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Município da província de Sabana Centro, a noroeste de Bogotá.",
+        "meta_description": "Município da província de Sabana Centro, a noroeste de Bogotá."
+      }
+    },
+    "history": {
+      "es": [
+        "Territorio de presencia muisca, Cota fue fundada como municipio el 29 de noviembre de 1604. Su patrimonio conserva vínculos con la tradición indígena y agrícola de la sabana."
+      ],
+      "en": [
+        "A territory with Muisca presence, Cota was founded as a municipality on November 29, 1604. Its heritage remains connected to the indigenous and agricultural traditions of the savanna."
+      ],
+      "pt-BR": [
+        "Território de presença muisca, Cota foi fundada como município em 29 de novembro de 1604. Seu patrimônio mantém vínculos com as tradições indígenas e agrícolas da savana."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte a la presencia y memoria muisca en el municipio.",
+        "Reconocer el cerro Majuy como referente natural y cultural de Cota."
+      ],
+      "en": [
+        "Explore the Muisca presence and heritage in the municipality.",
+        "Discover Majuy hill as a natural and cultural landmark of Cota."
+      ],
+      "pt-BR": [
+        "Conhecer a presença e a memória muisca no município.",
+        "Reconhecer o cerro Majuy como referência natural e cultural de Cota."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-17.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Cota.",
+      "en": "Illustration of Cota.",
+      "pt-BR": "Ilustração de Cota."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-17-6",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.8143314,
+      "longitude": -74.1074112,
+      "translations": {
+        "es": {
+          "name": "Casa del Resguardo Indígena Muisca de Cota",
+          "description": "Casa del Resguardo Indígena Muisca de Cota, referente de la presencia muisca en el municipio.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=14720947811553320477"
+        },
+        "en": {
+          "name": "Casa del Resguardo Indígena Muisca de Cota",
+          "description": "House of the Muisca Indigenous Reserve of Cota, a landmark of the Muisca presence in the municipality.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=14720947811553320477"
+        },
+        "pt-BR": {
+          "name": "Casa del Resguardo Indígena Muisca de Cota",
+          "description": "Casa do Resguardo Indígena Muisca de Cota, referência da presença muisca no município.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=14720947811553320477"
+        }
+      },
+      "image": {
+        "file": "images/QC-17-6.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.resguardoindigenamuiscadecota.org/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Casa del Resguardo Indígena Muisca de Cota.",
+          "en": "Illustration of Casa del Resguardo Indígena Muisca de Cota.",
+          "pt-BR": "Ilustração de Casa del Resguardo Indígena Muisca de Cota."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-17-7",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": null,
+      "longitude": null,
+      "translations": {
+        "es": {
+          "name": "Cerro Majuy · roca de cumbre",
+          "description": "Formación rocosa de la cumbre del cerro Majuy, en Cota.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Cerro Majuy · roca de cumbre",
+          "description": "Rock formation at the summit of Majuy hill, in Cota.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Cerro Majuy · roca de cumbre",
+          "description": "Formação rochosa no cume do cerro Majuy, em Cota.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/QC-17-7.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://es.wikiloc.com/rutas-carrera-por-montana/cerro-el-majuy-cota-88967015",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Cerro Majuy · roca de cumbre.",
+          "en": "Illustration of Cerro Majuy · roca de cumbre.",
+          "pt-BR": "Ilustração de Cerro Majuy · roca de cumbre."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.cota-cundinamarca.gov.co/MiMunicipio/Paginas/Informacion-del-Municipio.aspx"
+      },
+      {
+        "reference": "https://cota-cundinamarca.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx"
+      },
+      {
+        "reference": "https://www.cota-cundinamarca.gov.co/SECRETARIASYENTIDADES/Documents/Infografia%20Turismo-%202023.pdf"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-17-6: coordenadas pendientes",
+      "QC-17-6: aprobación visual no registrada en el inventario",
+      "QC-17-7: coordenadas pendientes",
+      "QC-17-7: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

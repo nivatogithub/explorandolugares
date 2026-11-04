@@ -1,0 +1,66 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "manaure",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Casa Vieja — Hostal y Restaurante",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://mantur.co/descubre/donde-comer-en-manaure",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Restaurante Heliconias El Peñón",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://mantur.co/descubre/donde-comer-en-manaure",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "La Teresita Hostal",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://mantur.co/descubre/donde-comer-en-manaure",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "name": "Son del Balcón",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://mantur.co/descubre/donde-comer-en-manaure",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

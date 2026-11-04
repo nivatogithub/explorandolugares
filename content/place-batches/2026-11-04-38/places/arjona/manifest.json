@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "arjona",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Bolívar",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Arjona",
+        "headline": "Arjona",
+        "eyebrow": "Bolívar, Colombia",
+        "intro": "Municipio de Bolívar, en el entorno metropolitano de Cartagena de Indias.",
+        "meta_description": "Municipio de Bolívar, en el entorno metropolitano de Cartagena de Indias."
+      },
+      "en": {
+        "display_name": "Arjona",
+        "headline": "Arjona",
+        "eyebrow": "Bolívar, Colombia",
+        "intro": "A municipality in Bolívar, within the wider Cartagena de Indias metropolitan area.",
+        "meta_description": "A municipality in Bolívar, within the wider Cartagena de Indias metropolitan area."
+      },
+      "pt-BR": {
+        "display_name": "Arjona",
+        "headline": "Arjona",
+        "eyebrow": "Bolívar, Colombia",
+        "intro": "Município de Bolívar, no entorno metropolitano de Cartagena das Índias.",
+        "meta_description": "Município de Bolívar, no entorno metropolitano de Cartagena das Índias."
+      }
+    },
+    "history": {
+      "es": [
+        "Arjona cuenta con una trayectoria histórica de 250 años reconocida por el Congreso de la República."
+      ],
+      "en": [
+        "Arjona has a 250-year historical trajectory recognized by Colombia’s Congress."
+      ],
+      "pt-BR": [
+        "Arjona tem uma trajetória histórica de 250 anos reconhecida pelo Congresso da República da Colômbia."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte al patrimonio religioso de Arjona a través del interior de Nuestra Señora de la Candelaria.",
+        "Dedicar una parada al centro municipal durante un recorrido por el interior de Bolívar."
+      ],
+      "en": [
+        "Explore Arjona's religious heritage inside Nuestra Señora de la Candelaria church.",
+        "Include a stop in the town centre while travelling through inland Bolívar."
+      ],
+      "pt-BR": [
+        "Conhecer o patrimônio religioso de Arjona no interior da igreja Nuestra Señora de la Candelaria.",
+        "Incluir uma parada no centro municipal durante um passeio pelo interior de Bolívar."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-25.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Arjona.",
+      "en": "Illustration of Arjona.",
+      "pt-BR": "Ilustração de Arjona."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-25-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.254778,
+      "longitude": -75.3424373,
+      "translations": {
+        "es": {
+          "name": "Interior de Nuestra Señora de la Candelaria",
+          "description": "Vista interior del templo de Nuestra Señora de la Candelaria, en Arjona.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7655359139500640364"
+        },
+        "en": {
+          "name": "Interior de Nuestra Señora de la Candelaria",
+          "description": "Interior view of Nuestra Señora de la Candelaria church, in Arjona.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7655359139500640364"
+        },
+        "pt-BR": {
+          "name": "Interior de Nuestra Señora de la Candelaria",
+          "description": "Vista interior do templo de Nuestra Señora de la Candelaria, em Arjona.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7655359139500640364"
+        }
+      },
+      "image": {
+        "file": "images/QC-25-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.eluniversal.com.co/suplementos/facetas/2022/01/29/la-curiosa-historia-de-como-se-construyo-la-iglesia-catolica-de-arjona/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Interior de Nuestra Señora de la Candelaria.",
+          "en": "Illustration of Interior de Nuestra Señora de la Candelaria.",
+          "pt-BR": "Ilustração de Interior de Nuestra Señora de la Candelaria."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.arjona-bolivar.gov.co/"
+      },
+      {
+        "reference": "https://www.camara.gov.co/250-anos-municipio-arjona-546/"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-25-4: coordenadas pendientes",
+      "QC-25-4: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

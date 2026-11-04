@@ -1,0 +1,46 @@
+{
+    "environment": "dev1",
+    "before": [
+        {
+            "id": 1000530,
+            "slug": "qc-33-4",
+            "publication_status": "archived",
+            "destination_slug": "los-patios"
+        },
+        {
+            "id": 1000532,
+            "slug": "qc-34-2",
+            "publication_status": "archived",
+            "destination_slug": "el-zulia"
+        },
+        {
+            "id": 1000539,
+            "slug": "qc-37-4",
+            "publication_status": "archived",
+            "destination_slug": "la-paz"
+        }
+    ],
+    "after": [
+        {
+            "id": 1000530,
+            "slug": "qc-33-4",
+            "publication_status": "archived",
+            "destination_slug": "los-patios"
+        },
+        {
+            "id": 1000532,
+            "slug": "qc-34-2",
+            "publication_status": "archived",
+            "destination_slug": "el-zulia"
+        },
+        {
+            "id": 1000539,
+            "slug": "qc-37-4",
+            "publication_status": "archived",
+            "destination_slug": "la-paz"
+        }
+    ],
+    "reason_rows_checked": 0,
+    "identity_preserved": true,
+    "deleted_rows": 0
+}

@@ -1,0 +1,56 @@
+{
+  "number": 37,
+  "slug": "la-paz",
+  "name": "La Paz",
+  "translations": {
+    "es": {
+      "title": "La Paz",
+      "location": "Municipio del norte del Cesar, vecino de Valledupar y de la Serranía del Perijá, con frontera oriental con Venezuela.",
+      "history": "Fue fundado el 24 de enero de 1775 por familias ganaderas procedentes de Valledupar; al crearse el Cesar en 1967, quedó como cabecera municipal de La Paz."
+    },
+    "en": {
+      "title": "La Paz",
+      "location": "A municipality in northern Cesar, near Valledupar and the Perijá Mountains, with an eastern border with Venezuela.",
+      "history": "It was founded on 24 January 1775 by cattle-ranching families from Valledupar; when Cesar was created in 1967, it became the municipal seat of La Paz."
+    },
+    "pt-BR": {
+      "title": "La Paz",
+      "location": "Município do norte do Cesar, vizinho de Valledupar e da Serranía del Perijá, com fronteira oriental com a Venezuela.",
+      "history": "Foi fundada em 24 de janeiro de 1775 por famílias criadoras de gado vindas de Valledupar; com a criação do Cesar em 1967, tornou-se a sede municipal de La Paz."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-37-1200.webp",
+  "sources": [
+    "https://www.lapazrobles-cesar.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx",
+    "https://www.lapazrobles-cesar.gov.co/MiMunicipio/Paginas/Como-llegar-al-municipio.aspx",
+    "https://www.cesar.gov.co/d/es/nosotros/el-departamento/historia"
+  ],
+  "attractions": [
+    {
+      "id": "QC-37-3",
+      "municipality": "La Paz",
+      "title_es": "Parque Almojabanero Dalinda Sierra",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-37-3.webp",
+      "image_sha256": "eb39abf279dc0f70cf23639c833cdd57bd2b23683876865e8a2a4dde08152a79",
+      "source": {
+        "source_url": "https://ulianamolano.wixsite.com/artepublico-unad/post/parque-almojabanero-dalinda-sierra",
+        "url": "https://static.wixstatic.com/media/ec04ee_66aa49addecf4ee9aa8cb709c1591f12~mv2.jpg/v1/fill/w_1000%2Ch_750%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01/ec04ee_66aa49addecf4ee9aa8cb709c1591f12~mv2.jpg",
+        "published_at": "2022-02-13",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

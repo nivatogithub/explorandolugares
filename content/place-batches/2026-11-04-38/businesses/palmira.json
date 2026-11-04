@@ -1,0 +1,81 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "palmira",
+  "businesses": [
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel H&M Palmira",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://hotelhympalmira.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Restaurante Doña Pastora",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://donapastora.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "name": "Cinemark — Llanogrande Palmira",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.cinemark.com.co/teatros/palmira",
+          "checked_at": "2026-11-04",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "name": "Cinemark — Unicentro Palmira",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.cinemark.com.co/teatros/palmira",
+          "checked_at": "2026-11-04",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "Unicentro Palmira",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.unicentropalmira.com/",
+          "checked_at": "2026-11-04",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

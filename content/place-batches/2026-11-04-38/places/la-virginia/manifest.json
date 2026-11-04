@@ -1,0 +1,254 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "la-virginia",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Risaralda",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "La Virginia",
+        "headline": "La Virginia",
+        "eyebrow": "Risaralda, Colombia",
+        "intro": "Municipio de Risaralda, a unos 30 km al occidente de Pereira, en la confluencia de los ríos Cauca y Risaralda.",
+        "meta_description": "Municipio de Risaralda, a unos 30 km al occidente de Pereira, en la confluencia de los ríos Cauca y Risaralda."
+      },
+      "en": {
+        "display_name": "La Virginia",
+        "headline": "La Virginia",
+        "eyebrow": "Risaralda, Colombia",
+        "intro": "A municipality in Risaralda, about 30 km west of Pereira, at the confluence of the Cauca and Risaralda rivers.",
+        "meta_description": "A municipality in Risaralda, about 30 km west of Pereira, at the confluence of the Cauca and Risaralda rivers."
+      },
+      "pt-BR": {
+        "display_name": "La Virginia",
+        "headline": "La Virginia",
+        "eyebrow": "Risaralda, Colombia",
+        "intro": "Município de Risaralda, cerca de 30 km a oeste de Pereira, na confluência dos rios Cauca e Risaralda.",
+        "meta_description": "Município de Risaralda, cerca de 30 km a oeste de Pereira, na confluência dos rios Cauca e Risaralda."
+      }
+    },
+    "history": {
+      "es": [
+        "Una agenda ambiental institucional registra que el municipio fue fundado en 1959 y que sus primeros asentamientos se relacionan con un palenque de personas esclavizadas fugitivas."
+      ],
+      "en": [
+        "An institutional environmental agenda records that the municipality was founded in 1959 and that its early settlement is associated with a palenque of people fleeing enslavement."
+      ],
+      "pt-BR": [
+        "Uma agenda ambiental institucional registra que o município foi fundado em 1959 e que seus primeiros assentamentos se relacionam a um palenque de pessoas escravizadas fugitivas."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte a la memoria musical del Caballero Gaucho a través de los murales.",
+        "Combinar el patrimonio del puente Bernardo Arango con el paisaje del sendero Guásimo."
+      ],
+      "en": [
+        "Explore Caballero Gaucho's musical legacy through the murals.",
+        "Combine the heritage of Bernardo Arango bridge with the landscape of the Guásimo trail."
+      ],
+      "pt-BR": [
+        "Conhecer a memória musical do Caballero Gaucho por meio dos murais.",
+        "Combinar o patrimônio da ponte Bernardo Arango com a paisagem da trilha Guásimo."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-31.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de La Virginia.",
+      "en": "Illustration of La Virginia.",
+      "pt-BR": "Ilustração de La Virginia."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-31-6",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.8968048,
+      "longitude": -75.8451492,
+      "translations": {
+        "es": {
+          "name": "Sendero ecológico Guásimo",
+          "description": "Sendero ecológico Guásimo, en La Virginia, Risaralda.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=15644530568265570051"
+        },
+        "en": {
+          "name": "Sendero ecológico Guásimo",
+          "description": "Guásimo ecological trail, in La Virginia, Risaralda.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=15644530568265570051"
+        },
+        "pt-BR": {
+          "name": "Sendero ecológico Guásimo",
+          "description": "Trilha ecológica Guásimo, em La Virginia, Risaralda.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=15644530568265570051"
+        }
+      },
+      "image": {
+        "file": "images/QC-31-6.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://caracol.com.co/2023/06/16/sector-hotelero-de-risaralda-busca-recuperar-perdidas-del-primer-semestre/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Sendero ecológico Guásimo.",
+          "en": "Illustration of Sendero ecológico Guásimo.",
+          "pt-BR": "Ilustração de Sendero ecológico Guásimo."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-31-5",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.8946442,
+      "longitude": -75.8802737,
+      "translations": {
+        "es": {
+          "name": "Calle del Caballero Gaucho · murales",
+          "description": "Murales de La Virginia dedicados a la memoria del Caballero Gaucho.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13034153047010691630"
+        },
+        "en": {
+          "name": "Calle del Caballero Gaucho · murales",
+          "description": "Murals in La Virginia dedicated to the memory of Caballero Gaucho.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13034153047010691630"
+        },
+        "pt-BR": {
+          "name": "Calle del Caballero Gaucho · murales",
+          "description": "Murais de La Virginia dedicados à memória do Caballero Gaucho.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13034153047010691630"
+        }
+      },
+      "image": {
+        "file": "images/QC-31-5.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.destinocafe.com/?p=5463",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Calle del Caballero Gaucho · murales.",
+          "en": "Illustration of Calle del Caballero Gaucho · murales.",
+          "pt-BR": "Ilustração de Calle del Caballero Gaucho · murales."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-31-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.8921525,
+      "longitude": -75.8828558,
+      "translations": {
+        "es": {
+          "name": "Puente Bernardo Arango",
+          "description": "Puente Bernardo Arango, elemento del paisaje y del patrimonio de La Virginia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3438828268144502370"
+        },
+        "en": {
+          "name": "Puente Bernardo Arango",
+          "description": "Bernardo Arango bridge, part of La Virginia's landscape and heritage.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3438828268144502370"
+        },
+        "pt-BR": {
+          "name": "Puente Bernardo Arango",
+          "description": "Ponte Bernardo Arango, elemento da paisagem e do patrimônio de La Virginia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3438828268144502370"
+        }
+      },
+      "image": {
+        "file": "images/QC-31-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.pereira.gov.co/publicaciones/2783/gobierno-de-la-ciudad-apoya-embellecimiento-del-puente-bernardo-arango-de-la-virginia/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Puente Bernardo Arango.",
+          "en": "Illustration of Puente Bernardo Arango.",
+          "pt-BR": "Ilustração de Puente Bernardo Arango."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.lavirginia-risaralda.gov.co/"
+      },
+      {
+        "reference": "https://cdn2.f-cdn.com/files/download/224517242/AGENDA%20AMBIENTAL%20LA%20VIRGINIA%20RISARALDA-%20Documento%20oficial.pdf"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-31-6: coordenadas pendientes",
+      "QC-31-6: aprobación visual no registrada en el inventario",
+      "QC-31-5: coordenadas pendientes",
+      "QC-31-5: aprobación visual no registrada en el inventario",
+      "QC-31-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-31-2: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

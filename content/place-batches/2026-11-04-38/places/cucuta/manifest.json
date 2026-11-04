@@ -1,0 +1,254 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "cucuta",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Norte de Santander",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Cúcuta",
+        "headline": "Cúcuta",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "Capital de Norte de Santander y núcleo del área metropolitana de Cúcuta, en la frontera con Venezuela.",
+        "meta_description": "Capital de Norte de Santander y núcleo del área metropolitana de Cúcuta, en la frontera con Venezuela."
+      },
+      "en": {
+        "display_name": "Cúcuta",
+        "headline": "Cúcuta",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "Capital of Norte de Santander and core of the Cúcuta metropolitan area, on the border with Venezuela.",
+        "meta_description": "Capital of Norte de Santander and core of the Cúcuta metropolitan area, on the border with Venezuela."
+      },
+      "pt-BR": {
+        "display_name": "Cúcuta",
+        "headline": "Cúcuta",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "Capital de Norte de Santander e núcleo da área metropolitana de Cúcuta, na fronteira com a Venezuela.",
+        "meta_description": "Capital de Norte de Santander e núcleo da área metropolitana de Cúcuta, na fronteira com a Venezuela."
+      }
+    },
+    "history": {
+      "es": [
+        "San José de Cúcuta fue fundado el 17 de junio de 1733 a orillas del río Pamplonita; su historia está vinculada a la independencia y al intercambio fronterizo."
+      ],
+      "en": [
+        "San José de Cúcuta was founded on 17 June 1733 on the banks of the Pamplonita River; its history is tied to independence and cross-border exchange."
+      ],
+      "pt-BR": [
+        "San José de Cúcuta foi fundada em 17 de junho de 1733 às margens do rio Pamplonita; sua história está ligada à independência e ao intercâmbio fronteiriço."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Recorrer espacios del patrimonio cultural de Cúcuta, como la Torre del Reloj y la Quinta Teresa.",
+        "Conocer la Biblioteca Pública Julio Pérez Ferrero como parte de ese recorrido urbano."
+      ],
+      "en": [
+        "Explore Cúcuta's cultural heritage at landmarks such as Torre del Reloj and Quinta Teresa.",
+        "Include Biblioteca Pública Julio Pérez Ferrero in your urban route."
+      ],
+      "pt-BR": [
+        "Percorrer espaços do patrimônio cultural de Cúcuta, como a Torre del Reloj e a Quinta Teresa.",
+        "Conhecer a Biblioteca Pública Julio Pérez Ferrero como parte desse passeio urbano."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-32.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Catedral_de_C%C3%BAcuta_NS_(1).jpg",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Cúcuta.",
+      "en": "Illustration of Cúcuta.",
+      "pt-BR": "Ilustração de Cúcuta."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-32-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 7.8839855,
+      "longitude": -72.5017735,
+      "translations": {
+        "es": {
+          "name": "Torre del Reloj",
+          "description": "La Torre del Reloj forma parte del patrimonio cultural del centro de Cúcuta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=11218705340821011194"
+        },
+        "en": {
+          "name": "Torre del Reloj",
+          "description": "The Torre del Reloj is part of the cultural heritage of central Cúcuta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=11218705340821011194"
+        },
+        "pt-BR": {
+          "name": "Torre del Reloj",
+          "description": "A Torre del Reloj faz parte do patrimônio cultural do centro de Cúcuta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=11218705340821011194"
+        }
+      },
+      "image": {
+        "file": "images/QC-32-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://revistactiva.com/dia-mundial-fotografia-5-lugares-cucuta-fotos/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Torre del Reloj.",
+          "en": "Illustration of Torre del Reloj.",
+          "pt-BR": "Ilustração de Torre del Reloj."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-32-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 7.8851204,
+      "longitude": -72.4995286,
+      "translations": {
+        "es": {
+          "name": "Biblioteca Pública Julio Pérez Ferrero",
+          "description": "Biblioteca pública de Cúcuta que lleva el nombre de Julio Pérez Ferrero.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=2235552499383001663"
+        },
+        "en": {
+          "name": "Biblioteca Pública Julio Pérez Ferrero",
+          "description": "Public library in Cúcuta named after Julio Pérez Ferrero.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=2235552499383001663"
+        },
+        "pt-BR": {
+          "name": "Biblioteca Pública Julio Pérez Ferrero",
+          "description": "Biblioteca pública de Cúcuta que leva o nome de Julio Pérez Ferrero.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=2235552499383001663"
+        }
+      },
+      "image": {
+        "file": "images/QC-32-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.bibliocucuta.org/portal/portal/view/22",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Biblioteca Pública Julio Pérez Ferrero.",
+          "en": "Illustration of Biblioteca Pública Julio Pérez Ferrero.",
+          "pt-BR": "Ilustração de Biblioteca Pública Julio Pérez Ferrero."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-32-5",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 7.8817694,
+      "longitude": -72.5015185,
+      "translations": {
+        "es": {
+          "name": "Centro Cultural Quinta Teresa",
+          "description": "La Quinta Teresa es un espacio cultural y arquitectónico de Cúcuta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=10595117165397776772"
+        },
+        "en": {
+          "name": "Centro Cultural Quinta Teresa",
+          "description": "Quinta Teresa is a cultural and architectural landmark in Cúcuta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=10595117165397776772"
+        },
+        "pt-BR": {
+          "name": "Centro Cultural Quinta Teresa",
+          "description": "A Quinta Teresa é um espaço cultural e arquitetônico de Cúcuta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=10595117165397776772"
+        }
+      },
+      "image": {
+        "file": "images/QC-32-5.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://colombia.travel/es/cucuta",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Centro Cultural Quinta Teresa.",
+          "en": "Illustration of Centro Cultural Quinta Teresa.",
+          "pt-BR": "Ilustração de Centro Cultural Quinta Teresa."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://cucuta.gov.co/oficina-de-promocion-turistica-bienvenidos-a-cucuta/"
+      },
+      {
+        "reference": "https://colombia.travel/es/cucuta"
+      },
+      {
+        "reference": "https://nortesantander.co/cucuta/"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-32-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-32-3: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-32-5: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

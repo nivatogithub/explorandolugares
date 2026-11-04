@@ -1,0 +1,112 @@
+{
+  "number": 16,
+  "slug": "dagua",
+  "name": "Dagua",
+  "translations": {
+    "es": {
+      "title": "Dagua",
+      "location": "Municipio montañoso del occidente del Valle del Cauca, en el corredor entre Cali y Buenaventura.",
+      "history": "La cabecera actual se relaciona con los caseríos de Caldas y Remedios y con el Ferrocarril del Pacífico; la alcaldía registra su fundación en 1909."
+    },
+    "en": {
+      "title": "Dagua",
+      "location": "A mountainous municipality in western Valle del Cauca, on the corridor between Cali and Buenaventura.",
+      "history": "The present-day town center is linked to the hamlets of Caldas and Remedios and to the Pacific Railway; the mayor's office records its founding in 1909."
+    },
+    "pt-BR": {
+      "title": "Dagua",
+      "location": "Município montanhoso do oeste do Valle del Cauca, no corredor entre Cali e Buenaventura.",
+      "history": "A sede atual está ligada aos povoados de Caldas e Remedios e à Ferrovia do Pacífico; a prefeitura registra sua fundação em 1909."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-16-1200.webp",
+  "sources": [
+    "https://ogpt.valledelcauca.gov.co/storage/Clientes/ogpt/principal/imagenes/contenidos/2461-pdm%20dagua.pdf",
+    "https://comunales.valledelcauca.gov.co/municipios-del-valle-del-cauca/dagua"
+  ],
+  "attractions": [
+    {
+      "id": "QC-16-7",
+      "municipality": "Dagua",
+      "title_es": "Cañón del Anchicayá · Siete Charcos",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-16-7.webp",
+      "image_sha256": "cb61aa53c42bee100826b75134a0530d06719122f526aafdb64bdd93f7bf2966",
+      "source": {
+        "source_url": "https://es.wikiloc.com/rutas-moto-trail/cali-7-charcos-de-anchicaya-cali-142748342",
+        "url": "https://s0.wklcdn.com/image_69/2083258/142748342/90339660Master.jpg",
+        "published_at": "2023-08-06",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "checked_at": "2026-11-03",
+        "validation_url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-farallones-de-cali/"
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-16-6",
+      "municipality": "Dagua",
+      "title_es": "Cascada Manto de la Virgen",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-16-6.webp",
+      "image_sha256": "20510a750a16c4f05f181612810b6303eed47c1ce7dbc164c0cde593cc1b446f",
+      "source": {
+        "source_url": "https://www.wikiloc.com/hiking-trails/cascada-manto-de-la-virgen-199441890",
+        "url": "https://s0.wklcdn.com/image_201/6031516/199441896/122543589.700x525.jpg",
+        "published_at": "2025-01-26",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "checked_at": "2026-11-03",
+        "validation_url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-farallones-de-cali/"
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-16-2",
+      "municipality": "Dagua",
+      "title_es": "Bosque seco de Atuncela",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-16-2.webp",
+      "image_sha256": "0d9309b089ba4cbb6b7cef58c655cf1a475e50a168db3d3cdac5c0fe563bbfeb",
+      "source": {
+        "url": "https://cvc.gov.co/sites/default/files/2023-07/179%20%281%29.jpg",
+        "source_url": "https://cvc.gov.co/boletin-prensa-179-2023",
+        "published_at": "2023-07-12",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "checked_at": "2026-11-03",
+        "status": "referencia_utilizada_pendiente_aprobacion"
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Bosque seco de Atuncela",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "barbosa",
+  "businesses": [
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Yarumito Finca Hotel",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://yarumitofincahotel.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Antioquia Tropical Club",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.antioquiatropicalclub.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "Anfomotos y Repuestos",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.bancamia.net.co/wp-content/uploads/2025/03/PLANTILLA-CBs-PROPIOS.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

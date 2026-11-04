@@ -1,0 +1,21 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "el-zulia",
+  "businesses": [
+    {
+      "category_code": "servicios",
+      "information_status": "PUBLICO",
+      "name": "Coguásimales Service — Avenida 11",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.bancoagrario.gov.co/system/files/2025-03/punto_de_pago_iii.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

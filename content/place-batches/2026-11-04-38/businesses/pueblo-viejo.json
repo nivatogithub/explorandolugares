@@ -1,0 +1,21 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "pueblo-viejo",
+  "businesses": [
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "Costa Fina — Asociación Diseñadoras Artesanales de Tasajera",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://costafina.com.co/wp-content/uploads/2025/09/7-CAMARA-DE-COMERCIO-2025.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "el-zulia",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Norte de Santander",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "El Zulia",
+        "headline": "El Zulia",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "Municipio del oriente de Norte de Santander, integrante del Área Metropolitana de Cúcuta y atravesado por los ríos Zulia, Peralonso y San Miguel.",
+        "meta_description": "Municipio del oriente de Norte de Santander, integrante del Área Metropolitana de Cúcuta y atravesado por los ríos Zulia, Peralonso y San Miguel."
+      },
+      "en": {
+        "display_name": "El Zulia",
+        "headline": "El Zulia",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "A municipality in eastern Norte de Santander, part of the Cúcuta Metropolitan Area and crossed by the Zulia, Peralonso and San Miguel rivers.",
+        "meta_description": "A municipality in eastern Norte de Santander, part of the Cúcuta Metropolitan Area and crossed by the Zulia, Peralonso and San Miguel rivers."
+      },
+      "pt-BR": {
+        "display_name": "El Zulia",
+        "headline": "El Zulia",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "Município do leste de Norte de Santander, integrante da Área Metropolitana de Cúcuta e banhado pelos rios Zulia, Peralonso e San Miguel.",
+        "meta_description": "Município do leste de Norte de Santander, integrante da Área Metropolitana de Cúcuta e banhado pelos rios Zulia, Peralonso e San Miguel."
+      }
+    },
+    "history": {
+      "es": [
+        "La tradición local vincula su nombre con la indígena Zulia; la entidad metropolitana registra su fundación el 30 de octubre de 1959."
+      ],
+      "en": [
+        "Local tradition links its name to the Indigenous woman Zulia; the metropolitan authority records its founding on 30 October 1959."
+      ],
+      "pt-BR": [
+        "A tradição local associa seu nome à indígena Zulia; a autoridade metropolitana registra sua fundação em 30 de outubro de 1959."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer el paisaje de agua de Pozo Paraíso.",
+        "Explorar una faceta natural del entorno de Cúcuta."
+      ],
+      "en": [
+        "Discover the waterscape of Pozo Paraíso.",
+        "Explore the natural side of the Cúcuta area."
+      ],
+      "pt-BR": [
+        "Conhecer a paisagem de água de Pozo Paraíso.",
+        "Descobrir uma face natural dos arredores de Cúcuta."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-34.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "https://www.viajarenverano.com/el-zulia-norte-de-santander/",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de El Zulia.",
+      "en": "Illustration of El Zulia.",
+      "pt-BR": "Ilustração de El Zulia."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-34-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 8.1473301,
+      "longitude": -72.599798,
+      "translations": {
+        "es": {
+          "name": "Pozo Paraíso",
+          "description": "Pozo Paraíso, paraje natural del municipio de El Zulia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3660357929697088189"
+        },
+        "en": {
+          "name": "Pozo Paraíso",
+          "description": "Pozo Paraíso, a natural site in the municipality of El Zulia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3660357929697088189"
+        },
+        "pt-BR": {
+          "name": "Pozo Paraíso",
+          "description": "Pozo Paraíso, local natural do município de El Zulia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3660357929697088189"
+        }
+      },
+      "image": {
+        "file": "images/QC-34-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.elduendeviajerocol.com/lugares/pozo-paraiso/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Pozo Paraíso.",
+          "en": "Illustration of Pozo Paraíso.",
+          "pt-BR": "Ilustração de Pozo Paraíso."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://amc.gov.co/amc/el-zulia/"
+      },
+      {
+        "reference": "https://www.elzulia-nortedesantander.gov.co/"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-34-4: coordenadas pendientes",
+      "QC-34-4: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

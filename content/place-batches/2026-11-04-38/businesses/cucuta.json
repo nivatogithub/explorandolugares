@@ -1,0 +1,96 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "cucuta",
+  "businesses": [
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "Unicentro Cúcuta",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://unicentrocucuta.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel B’quin Plaza",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.hotelbquinplaza.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Arizona Suites",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.hotelarizonasuites.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Blu",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://hotelblucucuta.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Restaurante La Pera",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://atlantisplazahotel.com/restaurante/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "name": "Royal Films — Unicentro Cúcuta",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://unicentrocucuta.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

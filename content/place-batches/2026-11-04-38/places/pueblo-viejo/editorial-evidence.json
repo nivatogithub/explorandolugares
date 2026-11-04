@@ -1,0 +1,79 @@
+{
+  "number": 30,
+  "slug": "pueblo-viejo",
+  "name": "Pueblo Viejo",
+  "translations": {
+    "es": {
+      "title": "Pueblo Viejo",
+      "location": "Municipio de Magdalena, entre la Ciénaga Grande de Santa Marta y el litoral Caribe.",
+      "history": "Pueblo Viejo es un municipio caribeño cuya fundación cumple cinco siglos según una iniciativa conmemorativa radicada ante el Congreso."
+    },
+    "en": {
+      "title": "Pueblo Viejo",
+      "location": "A municipality in Magdalena, between the Ciénaga Grande de Santa Marta lagoon complex and the Caribbean coast.",
+      "history": "Pueblo Viejo is a Caribbean municipality whose founding reaches five centuries, according to a commemorative bill introduced in Congress."
+    },
+    "pt-BR": {
+      "title": "Pueblo Viejo",
+      "location": "Município de Magdalena, entre o complexo lagunar da Ciénaga Grande de Santa Marta e o litoral do Caribe.",
+      "history": "Pueblo Viejo é um município caribenho cuja fundação completa cinco séculos, segundo um projeto comemorativo apresentado ao Congresso."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-30-1200.webp",
+  "sources": [
+    "https://www.puebloviejomagdalena.gov.co/",
+    "https://odecweb.magdalena.gov.co/pueblo/",
+    "https://www.camara.gov.co/500-anos-de-puebloviejo-254/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-30-3",
+      "municipality": "Pueblo Viejo",
+      "title_es": "Parador Turístico Ciénaga Mágica",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-30-3-v2.webp",
+      "image_sha256": "c1c8a7e894cd3ae78e7fc909e7395bfdb6d175074299a776a40186b708077a40",
+      "source": {
+        "source_url": "https://www.bluradio.com/turismo/magdalena-tiene-nuevo-atractivo-turistico-el-parador-cienaga-magica-en-puebloviejo-rg10",
+        "url": "https://caracol-brightspot.s3.us-west-2.amazonaws.com/e2/92/615b18ab459a897537e7b8c86ab9/parador-cienaga-magica.jpg",
+        "published_at": "2025-04-17",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": "Parador de Isla del Rosario — acceso a la Ciénaga Grande",
+      "identity_changed": true,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-30-4",
+      "municipality": "Pueblo Viejo",
+      "title_es": "Playa de Tasajera · paisaje pesquero",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-30-4.webp",
+      "image_sha256": "2bf2837f1c3deb4e5e3394955e856bc3832b639a13e976bd1c0802a4be52f91c",
+      "source": {
+        "source_url": "https://www.behance.net/gallery/137268461/Tasajera-magdalena/modules/776271187",
+        "url": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/e1a8a1137268461.62081b0ae10e3.jpg",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

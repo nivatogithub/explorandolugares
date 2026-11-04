@@ -1,0 +1,110 @@
+{
+  "number": 31,
+  "slug": "la-virginia",
+  "name": "La Virginia",
+  "translations": {
+    "es": {
+      "title": "La Virginia",
+      "location": "Municipio de Risaralda, a unos 30 km al occidente de Pereira, en la confluencia de los ríos Cauca y Risaralda.",
+      "history": "Una agenda ambiental institucional registra que el municipio fue fundado en 1959 y que sus primeros asentamientos se relacionan con un palenque de personas esclavizadas fugitivas."
+    },
+    "en": {
+      "title": "La Virginia",
+      "location": "A municipality in Risaralda, about 30 km west of Pereira, at the confluence of the Cauca and Risaralda rivers.",
+      "history": "An institutional environmental agenda records that the municipality was founded in 1959 and that its early settlement is associated with a palenque of people fleeing enslavement."
+    },
+    "pt-BR": {
+      "title": "La Virginia",
+      "location": "Município de Risaralda, cerca de 30 km a oeste de Pereira, na confluência dos rios Cauca e Risaralda.",
+      "history": "Uma agenda ambiental institucional registra que o município foi fundado em 1959 e que seus primeiros assentamentos se relacionam a um palenque de pessoas escravizadas fugitivas."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-31-1200.webp",
+  "sources": [
+    "https://www.lavirginia-risaralda.gov.co/",
+    "https://cdn2.f-cdn.com/files/download/224517242/AGENDA%20AMBIENTAL%20LA%20VIRGINIA%20RISARALDA-%20Documento%20oficial.pdf"
+  ],
+  "attractions": [
+    {
+      "id": "QC-31-6",
+      "municipality": "La Virginia",
+      "title_es": "Sendero ecológico Guásimo",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-31-6.webp",
+      "image_sha256": "ca8517e47c73d23420d2f015a4fe3da14affe6112926d6b5961f05c1fa93b5e9",
+      "source": {
+        "source_url": "https://caracol.com.co/2023/06/16/sector-hotelero-de-risaralda-busca-recuperar-perdidas-del-primer-semestre/",
+        "published_at": "2023-06-16",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "credit": "Cotelco capítulo Risaralda, vía Caracol Radio",
+        "checked_at": "2026-11-03",
+        "validation_url": "https://www.carder.gov.co/la-carder-y-la-fundacion-natura-fortalecen-la-gobernanza-ambiental-en-habitantes-del-guasimo/"
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-31-5",
+      "municipality": "La Virginia",
+      "title_es": "Calle del Caballero Gaucho · murales",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-31-5.webp",
+      "image_sha256": "71418c454b0439fe1390cc45d6e00d7479b6a1dc991dbc1dc7c0a0b3bf5457bf",
+      "source": {
+        "source_url": "https://www.destinocafe.com/?p=5463",
+        "url": "https://www.destinocafe.com/wp-content/uploads/2024/11/IMG_4241.jpeg",
+        "published_at": "2024-11-04",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "checked_at": "2026-11-03"
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-31-2",
+      "municipality": "La Virginia",
+      "title_es": "Puente Bernardo Arango",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-31-2.webp",
+      "image_sha256": "6d89a3c77e74c489e587ddc85d660e4a1b9121b75634ddcde2b00962acd9de65",
+      "source": {
+        "url": "https://www.pereira.gov.co/info/pereira_se/media/pub/thumbs/thpub_700X400_2783.webp",
+        "source_url": "https://www.pereira.gov.co/publicaciones/2783/gobierno-de-la-ciudad-apoya-embellecimiento-del-puente-bernardo-arango-de-la-virginia/",
+        "published_at": "2020-12-18",
+        "captured_at": null,
+        "visual_reviewed": true,
+        "status": "referencia_utilizada_pendiente_aprobacion"
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Puente Bernardo Arango",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

@@ -1,0 +1,199 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "bello",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Antioquia",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Bello",
+        "headline": "Bello",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipio del norte del Valle de Aburrá, contiguo a Medellín y parte de su área metropolitana.",
+        "meta_description": "Municipio del norte del Valle de Aburrá, contiguo a Medellín y parte de su área metropolitana."
+      },
+      "en": {
+        "display_name": "Bello",
+        "headline": "Bello",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipality in the north of the Aburrá Valley, adjoining Medellín and part of its metropolitan area.",
+        "meta_description": "Municipality in the north of the Aburrá Valley, adjoining Medellín and part of its metropolitan area."
+      },
+      "pt-BR": {
+        "display_name": "Bello",
+        "headline": "Bello",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Município no norte do Vale de Aburrá, vizinho de Medellín e integrante de sua região metropolitana.",
+        "meta_description": "Município no norte do Vale de Aburrá, vizinho de Medellín e integrante de sua região metropolitana."
+      }
+    },
+    "history": {
+      "es": [
+        "El asentamiento de Hato Viejo tiene antecedentes desde el siglo XVI. En 1883 adoptó el nombre Bello, en homenaje a Andrés Bello, y en 1913 se consolidó como municipio."
+      ],
+      "en": [
+        "The settlement of Hato Viejo dates back to the 16th century. In 1883 it adopted the name Bello, in tribute to Andrés Bello, and it became an established municipality in 1913."
+      ],
+      "pt-BR": [
+        "O povoado de Hato Viejo tem antecedentes desde o século XVI. Em 1883 adotou o nome Bello, em homenagem a Andrés Bello, e consolidou-se como município em 1913."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer la historia de Marco Fidel Suárez en el museo que conserva su choza natal.",
+        "Descubrir el cerro Quitasol como referente del paisaje del norte del Valle de Aburrá."
+      ],
+      "en": [
+        "Discover Marco Fidel Suárez's story at the museum preserving his birthplace hut.",
+        "Discover Quitasol hill, a landmark in the northern Aburrá Valley landscape."
+      ],
+      "pt-BR": [
+        "Conhecer a história de Marco Fidel Suárez no museu que conserva sua cabana natal.",
+        "Descobrir o cerro Quitasol, referência da paisagem do norte do Vale de Aburrá."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-02.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Bello.",
+      "en": "Illustration of Bello.",
+      "pt-BR": "Ilustração de Bello."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-02-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.3365326,
+      "longitude": -75.5595171,
+      "translations": {
+        "es": {
+          "name": "Museo Choza Marco Fidel Suárez",
+          "description": "Museo de Bello dedicado a la memoria de Marco Fidel Suárez y su choza natal.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5337280843070812772"
+        },
+        "en": {
+          "name": "Museo Choza Marco Fidel Suárez",
+          "description": "Museum in Bello dedicated to Marco Fidel Suárez and the hut where he was born.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5337280843070812772"
+        },
+        "pt-BR": {
+          "name": "Museo Choza Marco Fidel Suárez",
+          "description": "Museu de Bello dedicado à memória de Marco Fidel Suárez e à cabana onde nasceu.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5337280843070812772"
+        }
+      },
+      "image": {
+        "file": "images/QC-02-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.aestahora.com.co/la-nueva-cara-del-museo-choza-marco-fidel-suarez/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Museo Choza Marco Fidel Suárez.",
+          "en": "Illustration of Museo Choza Marco Fidel Suárez.",
+          "pt-BR": "Ilustração de Museo Choza Marco Fidel Suárez."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-02-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.3726707,
+      "longitude": -75.5581859,
+      "translations": {
+        "es": {
+          "name": "Cerro Quitasol",
+          "description": "Cerro Quitasol, referente natural del paisaje de Bello.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=14559528185219350849"
+        },
+        "en": {
+          "name": "Cerro Quitasol",
+          "description": "Cerro Quitasol, a natural landmark in Bello's landscape.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=14559528185219350849"
+        },
+        "pt-BR": {
+          "name": "Cerro Quitasol",
+          "description": "Cerro Quitasol, referência natural da paisagem de Bello.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=14559528185219350849"
+        }
+      },
+      "image": {
+        "file": "images/QC-02-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://jaywalktheworld.com/cerro-quitasol-bello-medellin/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Cerro Quitasol.",
+          "en": "Illustration of Cerro Quitasol.",
+          "pt-BR": "Ilustração de Cerro Quitasol."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://bello.gov.co/MiMunicipio/Paginas/Informacion-del-Municipio.aspx"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-02-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-02-3: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

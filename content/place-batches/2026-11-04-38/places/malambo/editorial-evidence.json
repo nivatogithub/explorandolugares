@@ -1,0 +1,102 @@
+{
+  "number": 11,
+  "slug": "malambo",
+  "name": "Malambo",
+  "translations": {
+    "es": {
+      "title": "Malambo",
+      "location": "Municipio del Atlántico, sobre la ribera occidental del río Magdalena y a 12 km de Barranquilla.",
+      "history": "El territorio fue un importante asentamiento indígena asociado al cacique Malambo; fue erigido municipio mediante la Ordenanza 024 de 1912."
+    },
+    "en": {
+      "title": "Malambo",
+      "location": "A municipality in Atlántico, on the western bank of the Magdalena River and 12 km from Barranquilla.",
+      "history": "Its territory was an important Indigenous settlement associated with Chief Malambo; it was established as a municipality by Ordinance 024 of 1912."
+    },
+    "pt-BR": {
+      "title": "Malambo",
+      "location": "Município do Atlântico, na margem ocidental do rio Magdalena e a 12 km de Barranquilla.",
+      "history": "Seu território foi um importante assentamento indígena associado ao cacique Malambo; tornou-se município pela Ordenança 024 de 1912."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-11-1200.webp",
+  "sources": [
+    "https://malambo-atlantico.gov.co/MiMunicipio/Paginas/Informacion-del-Municipio.aspx",
+    "https://malambo-atlantico.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx",
+    "https://www.malambo-atlantico.gov.co/Ciudadanos/PortaldeNinos/Enterate/Paginas/Sitios-de-interes.aspx"
+  ],
+  "attractions": [
+    {
+      "id": "QC-11-2",
+      "municipality": "Malambo",
+      "title_es": "Interior de la parroquia Santa María Magdalena",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-11-2-v1-1200.webp",
+      "image_sha256": "2bf76585967c0ebf2c2b34db12994d9347f2cf078c08b0f58dd38d8f3a2691b0",
+      "source": {
+        "id": "QC-11-2-INTERIOR-2022",
+        "url": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RwRkeSbdd-G091YMWzF6sZLbTS1SdLGqGmopUYjrU6ZjaYhvg9AKFP7GJzq8Qi8hwDv1tSJzGtApiCEjJIOglmj1J-w1yXGpKjWlAH8ANIDGOTARGj8NRuqeBUJ-2-7or9w3A=w1600-h3200-k-no",
+        "source_url": "https://www.google.com/maps/search/?api=1&query=Parroquia+Santa+Mar%C3%ADa+Magdalena+Malambo",
+        "title": "Interior de la parroquia Santa María Magdalena",
+        "author": "Omar Martínez",
+        "captured_at": "2022-06",
+        "published_at": "2022-06",
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "PROPUESTA DE SUSTITUCIÓN: reemplaza el parque de juegos. Vista interior de la parroquia, distinta de la fachada usada en portada. Foto de Omar Martínez; Google Maps indica captura y publicación en junio de 2022. Recorte del altar y la nave; no acredita horario actual de visita."
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": "Parque de la Cultura Fabio Miranda",
+      "identity_changed": true,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-11-3",
+      "municipality": "Malambo",
+      "title_es": "Museo Carlos Angulo Valdez",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-11-3-v1-1200.webp",
+      "image_sha256": "f6c720019a2eb84e2c5ef8808d48b3ab8b83a43c8314c1e17b65a73b7578df60",
+      "source": {
+        "id": "QC-11-3-CONF-NOV03",
+        "url": "https://www.malambo-atlantico.gov.co/NuestraAlcaldia/SaladePrensa/PublishingImages/MUSEO%20DE%20MALAMBO.jfif",
+        "source_url": "https://www.malambo-atlantico.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/Malambo-celebra-la-apertura-del-Museo-Carlos-Angulo-Valdez.aspx",
+        "title": "Museo Carlos Angulo Valdez",
+        "published_at": "2024-08-30",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "sin_licencia_acreditada_referencia_para_revision",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Collage institucional inspeccionado con colección y personas: evidencia documental, no foto principal lista.",
+        "editorial_role": "secundaria_no_principal"
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "address": null,
+        "entrance_verified": false,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=Museo%20Carlos%20Angulo%20Valdez%20Malambo%20Colombia"
+      },
+      "geo_status": "pending",
+      "legacy_name": "Museo Carlos Angulo Valdez",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

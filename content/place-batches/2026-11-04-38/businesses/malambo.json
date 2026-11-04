@@ -1,0 +1,51 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "malambo",
+  "businesses": [
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Droguerías Farmavida — Malambo",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://drogueriasfarmavida.com/quienes-somos/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Restaurante y Cafetería Café Lunch",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.bancamia.com.co/wp-content/uploads/2026/01/PLANTILLA-PUNTOS-SUPERGIROS-Dic.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Las Olas Malambo",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://cotelcoatlantico.org/images/pdf/directorio_arte_2025_WEB_FORMATO_250704_135839.pdf",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

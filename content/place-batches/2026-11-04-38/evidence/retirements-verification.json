@@ -1,0 +1,953 @@
+{
+    "checks": [
+        {
+            "route": "\/lugares\/los-patios\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/en\/lugares\/los-patios\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/los-patios\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/lugares\/el-zulia\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/en\/lugares\/el-zulia\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/el-zulia\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/lugares\/la-paz\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/en\/lugares\/la-paz\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/la-paz\/",
+            "status": 200,
+            "retired_absent": true
+        }
+    ],
+    "places": [
+        {
+            "id": 10012,
+            "slug": "barbosa",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000464,
+                    "slug": "qc-01-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000465,
+                    "slug": "qc-01-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000466,
+                    "slug": "qc-01-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10013,
+            "slug": "bello",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000467,
+                    "slug": "qc-02-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000468,
+                    "slug": "qc-02-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10014,
+            "slug": "caldas",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000469,
+                    "slug": "qc-03-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000470,
+                    "slug": "qc-03-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10015,
+            "slug": "copacabana",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000471,
+                    "slug": "qc-04-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000472,
+                    "slug": "qc-04-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000473,
+                    "slug": "qc-04-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10016,
+            "slug": "envigado",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000474,
+                    "slug": "qc-05-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000475,
+                    "slug": "qc-05-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000476,
+                    "slug": "qc-05-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10017,
+            "slug": "girardota",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000477,
+                    "slug": "qc-06-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000478,
+                    "slug": "qc-06-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10018,
+            "slug": "itagui",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000479,
+                    "slug": "qc-07-7",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000480,
+                    "slug": "qc-07-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000481,
+                    "slug": "qc-07-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10019,
+            "slug": "la-estrella",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000482,
+                    "slug": "qc-08-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000483,
+                    "slug": "qc-08-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10020,
+            "slug": "sabaneta",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000484,
+                    "slug": "qc-09-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000485,
+                    "slug": "qc-09-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10021,
+            "slug": "soledad",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000486,
+                    "slug": "qc-10-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000487,
+                    "slug": "qc-10-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10022,
+            "slug": "malambo",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000488,
+                    "slug": "qc-11-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000489,
+                    "slug": "qc-11-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10023,
+            "slug": "galapa",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000490,
+                    "slug": "qc-12-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000491,
+                    "slug": "qc-12-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10024,
+            "slug": "yumbo",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000492,
+                    "slug": "qc-13-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000493,
+                    "slug": "qc-13-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10025,
+            "slug": "palmira",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000494,
+                    "slug": "qc-14-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000495,
+                    "slug": "qc-14-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000496,
+                    "slug": "qc-14-5",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10026,
+            "slug": "candelaria",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000497,
+                    "slug": "qc-15-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000498,
+                    "slug": "qc-15-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10027,
+            "slug": "dagua",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000499,
+                    "slug": "qc-16-7",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000500,
+                    "slug": "qc-16-6",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000501,
+                    "slug": "qc-16-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10028,
+            "slug": "cota",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000502,
+                    "slug": "qc-17-6",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000503,
+                    "slug": "qc-17-7",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10029,
+            "slug": "funza",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000504,
+                    "slug": "qc-18-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000505,
+                    "slug": "qc-18-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10030,
+            "slug": "mosquera",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000506,
+                    "slug": "qc-19-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000507,
+                    "slug": "qc-19-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10031,
+            "slug": "madrid",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000508,
+                    "slug": "qc-20-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000509,
+                    "slug": "qc-20-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10032,
+            "slug": "facatativa",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000510,
+                    "slug": "qc-21-1",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000511,
+                    "slug": "qc-21-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000512,
+                    "slug": "qc-21-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10033,
+            "slug": "tenjo",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000513,
+                    "slug": "qc-22-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000514,
+                    "slug": "qc-22-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10034,
+            "slug": "gachancipa",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000515,
+                    "slug": "qc-23-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000516,
+                    "slug": "qc-23-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10035,
+            "slug": "sibate",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000517,
+                    "slug": "qc-24-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000518,
+                    "slug": "qc-24-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10036,
+            "slug": "arjona",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000519,
+                    "slug": "qc-25-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10037,
+            "slug": "santa-rosa-de-lima",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000520,
+                    "slug": "qc-27-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10038,
+            "slug": "clemencia",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000521,
+                    "slug": "qc-28-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10039,
+            "slug": "pueblo-viejo",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000522,
+                    "slug": "qc-30-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000523,
+                    "slug": "qc-30-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10040,
+            "slug": "la-virginia",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000524,
+                    "slug": "qc-31-6",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000525,
+                    "slug": "qc-31-5",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000526,
+                    "slug": "qc-31-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10041,
+            "slug": "cucuta",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000527,
+                    "slug": "qc-32-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000528,
+                    "slug": "qc-32-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000529,
+                    "slug": "qc-32-5",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10042,
+            "slug": "los-patios",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000530,
+                    "slug": "qc-33-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "archived"
+                },
+                {
+                    "id": 1000531,
+                    "slug": "qc-33-5",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10043,
+            "slug": "el-zulia",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000532,
+                    "slug": "qc-34-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "archived"
+                },
+                {
+                    "id": 1000533,
+                    "slug": "qc-34-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10044,
+            "slug": "san-cayetano",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000534,
+                    "slug": "qc-35-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000535,
+                    "slug": "qc-35-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10045,
+            "slug": "puerto-santander",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000536,
+                    "slug": "qc-36-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000537,
+                    "slug": "qc-36-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10046,
+            "slug": "la-paz",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000539,
+                    "slug": "qc-37-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "archived"
+                },
+                {
+                    "id": 1000538,
+                    "slug": "qc-37-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10047,
+            "slug": "san-diego",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000540,
+                    "slug": "qc-38-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10048,
+            "slug": "manaure",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000541,
+                    "slug": "qc-39-3",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        },
+        {
+            "id": 10049,
+            "slug": "agustin-codazzi",
+            "latitude": null,
+            "longitude": null,
+            "publication_status": "published",
+            "attractions": [
+                {
+                    "id": 1000542,
+                    "slug": "qc-40-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                },
+                {
+                    "id": 1000543,
+                    "slug": "qc-40-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "published"
+                }
+            ]
+        }
+    ]
+}

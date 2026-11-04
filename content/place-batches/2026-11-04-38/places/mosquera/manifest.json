@@ -1,0 +1,205 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "mosquera",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Cundinamarca",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Mosquera, Cundinamarca",
+        "headline": "Mosquera, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Municipio de Sabana Occidente, al occidente de Bogotá, en la sabana cundinamarquesa.",
+        "meta_description": "Municipio de Sabana Occidente, al occidente de Bogotá, en la sabana cundinamarquesa."
+      },
+      "en": {
+        "display_name": "Mosquera, Cundinamarca",
+        "headline": "Mosquera, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "A Sabana Occidente municipality west of Bogotá, on the Cundinamarca savanna.",
+        "meta_description": "A Sabana Occidente municipality west of Bogotá, on the Cundinamarca savanna."
+      },
+      "pt-BR": {
+        "display_name": "Mosquera, Cundinamarca",
+        "headline": "Mosquera, Cundinamarca",
+        "eyebrow": "Cundinamarca, Colombia",
+        "intro": "Município de Sabana Occidente, a oeste de Bogotá, na savana de Cundinamarca.",
+        "meta_description": "Município de Sabana Occidente, a oeste de Bogotá, na savana de Cundinamarca."
+      }
+    },
+    "history": {
+      "es": [
+        "El asentamiento conocido como Cuatro Esquinas se consolidó como municipio en 1861 y recibió el nombre de Mosquera en honor a Tomás Cipriano de Mosquera. El territorio también registra vestigios muiscas y paleontológicos."
+      ],
+      "en": [
+        "The settlement known as Cuatro Esquinas became a municipality in 1861 and was named Mosquera in honor of Tomás Cipriano de Mosquera. The area also records Muisca and paleontological remains."
+      ],
+      "pt-BR": [
+        "O povoado conhecido como Cuatro Esquinas consolidou-se como município em 1861 e recebeu o nome de Mosquera em homenagem a Tomás Cipriano de Mosquera. O território também registra vestígios muiscas e paleontológicos."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Contrastar el paisaje de la laguna de La Herrera con los suelos áridos de Sabrinsky.",
+        "Descubrir dos ambientes naturales distintos dentro del mismo municipio de la Sabana."
+      ],
+      "en": [
+        "Contrast the landscape of Laguna de La Herrera with Sabrinsky's arid terrain.",
+        "Discover two different natural environments within the same savanna municipality."
+      ],
+      "pt-BR": [
+        "Contrastar a paisagem da Laguna de La Herrera com os solos áridos de Sabrinsky.",
+        "Descobrir dois ambientes naturais distintos no mesmo município da savana."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-19.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Iglesia_mosquera_2012.jpg",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Mosquera.",
+      "en": "Illustration of Mosquera.",
+      "pt-BR": "Ilustração de Mosquera."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-19-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.6915627,
+      "longitude": -74.2766178,
+      "translations": {
+        "es": {
+          "name": "Laguna de La Herrera",
+          "description": "Laguna de La Herrera, referente natural de Mosquera, Cundinamarca.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=17917386824166585862"
+        },
+        "en": {
+          "name": "Laguna de La Herrera",
+          "description": "Laguna de La Herrera, a natural landmark in Mosquera, Cundinamarca.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=17917386824166585862"
+        },
+        "pt-BR": {
+          "name": "Laguna de La Herrera",
+          "description": "Laguna de La Herrera, referência natural de Mosquera, Cundinamarca.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=17917386824166585862"
+        }
+      },
+      "image": {
+        "file": "images/QC-19-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.eltiempo.com/bogota/la-herrera-un-paraiso-natural-en-la-sabana-cronica-701369",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Laguna de La Herrera.",
+          "en": "Illustration of Laguna de La Herrera.",
+          "pt-BR": "Ilustração de Laguna de La Herrera."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-19-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 4.666315,
+      "longitude": -74.2854537,
+      "translations": {
+        "es": {
+          "name": "Desierto de Sabrinsky",
+          "description": "Paisaje de suelos áridos conocido como desierto de Sabrinsky, en Mosquera.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13611609674112414004"
+        },
+        "en": {
+          "name": "Desierto de Sabrinsky",
+          "description": "Arid landscape known as the Sabrinsky desert, in Mosquera.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13611609674112414004"
+        },
+        "pt-BR": {
+          "name": "Desierto de Sabrinsky",
+          "description": "Paisagem de solos áridos conhecida como deserto de Sabrinsky, em Mosquera.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=13611609674112414004"
+        }
+      },
+      "image": {
+        "file": "images/QC-19-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://comisionfilmicacolombia.com/locacion/zabriskie-point/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Desierto de Sabrinsky.",
+          "en": "Illustration of Desierto de Sabrinsky.",
+          "pt-BR": "Ilustração de Desierto de Sabrinsky."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://mosqueracundinamarca.micolombiadigital.gov.co/sites/mosqueracundinamarca/content/files/000077/3809_plansectorialdeturismomosqueraturisticaunaventanaalmundo.pdf"
+      },
+      {
+        "reference": "https://mosqueracundinamarca.micolombiadigital.gov.co/sites/mosqueracundinamarca/content/files/000060/2995_fichaestadstica2016mosqueratareadetodos.pdf"
+      },
+      {
+        "reference": "https://detour.cundinamarca.gov.co/cities/mosquera"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-19-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-19-3: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "number": 2,
+  "slug": "bello",
+  "name": "Bello",
+  "translations": {
+    "es": {
+      "title": "Bello",
+      "location": "Municipio del norte del Valle de Aburrá, contiguo a Medellín y parte de su área metropolitana.",
+      "history": "El asentamiento de Hato Viejo tiene antecedentes desde el siglo XVI. En 1883 adoptó el nombre Bello, en homenaje a Andrés Bello, y en 1913 se consolidó como municipio."
+    },
+    "en": {
+      "title": "Bello",
+      "location": "Municipality in the north of the Aburrá Valley, adjoining Medellín and part of its metropolitan area.",
+      "history": "The settlement of Hato Viejo dates back to the 16th century. In 1883 it adopted the name Bello, in tribute to Andrés Bello, and it became an established municipality in 1913."
+    },
+    "pt-BR": {
+      "title": "Bello",
+      "location": "Município no norte do Vale de Aburrá, vizinho de Medellín e integrante de sua região metropolitana.",
+      "history": "O povoado de Hato Viejo tem antecedentes desde o século XVI. Em 1883 adotou o nome Bello, em homenagem a Andrés Bello, e consolidou-se como município em 1913."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-02-1200.webp",
+  "sources": [
+    "https://bello.gov.co/MiMunicipio/Paginas/Informacion-del-Municipio.aspx"
+  ],
+  "attractions": [
+    {
+      "id": "QC-02-2",
+      "municipality": "Bello",
+      "title_es": "Museo Choza Marco Fidel Suárez",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-02-2-v1-1200.webp",
+      "image_sha256": "3ddd9894b03cd16bd787e374232deb1480292136235007efea264bcc695c76d5",
+      "source": {
+        "id": "QC-02-2-R1",
+        "url": "https://www.aestahora.com.co/wp-content/uploads/2023/06/Foto-mfs-1.jpg",
+        "source_url": "https://www.aestahora.com.co/la-nueva-cara-del-museo-choza-marco-fidel-suarez/",
+        "title": "Choza Marco Fidel Suárez · noticia de recuperación",
+        "published_at": "2023-06-24",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "user_approved": false,
+        "note": "",
+        "preview_load_verified": true
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.33649949,
+        "longitude": -75.55961149,
+        "precision": "punto_ficha_Waze_no_acceso_verificado",
+        "source_url": "https://www.waze.com/es/live-map/directions/casa-museo-choza-marco-fidel-suarez-calle-52a-bello?to=place.w.186384447.1864106618.928583",
+        "address": "Calle 52A, Bello",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.33649949%2C-75.55961149"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Museo Choza Marco Fidel Suárez",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-02-3",
+      "municipality": "Bello",
+      "title_es": "Cerro Quitasol",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-02-3-v1-1200.webp",
+      "image_sha256": "6351fdf903e3ed4f7a11cd70ebef82be20662fa49e8cb635c23c2f8e044835a8",
+      "source": {
+        "id": "QC-02-3-R3",
+        "url": "https://jaywalktheworld.com/wp-content/uploads/2022/05/cerro-quitasol-ridgeline-1-me.jpg",
+        "source_url": "https://jaywalktheworld.com/cerro-quitasol-bello-medellin/",
+        "title": "Cerro Quitasol · cresta de la ruta y vista de Bello",
+        "published_at": "2022-05-14",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Foto de la crónica original de Phillip (Jaywalk the World), publicada en mayo de 2022. Muestra la cresta de la ruta, ladera y Bello en el valle; el caminante ocupa una porción pequeña. No es una vista frontal de toda la montaña ni prueba el estado posterior al incendio de 2026. El empedrado se conserva como detalle complementario.",
+        "editorial_role": "principal_candidata"
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.356236934,
+        "longitude": -75.541137695,
+        "precision": "punto_ficha_cartografica_no_entrada_validada",
+        "source_url": "https://www.waze.com/live-map/directions/cerro-quitasol-bello?to=place.w.186449984.1864237692.6636767",
+        "address": "Bello, Colombia",
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.356236934%2C-75.541137695"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Cerro Quitasol",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

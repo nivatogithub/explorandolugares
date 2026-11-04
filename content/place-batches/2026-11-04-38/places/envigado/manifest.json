@@ -1,0 +1,254 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "envigado",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Antioquia",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Envigado",
+        "headline": "Envigado",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipio del sur del Valle de Aburrá, Antioquia, vecino de Medellín, Itagüí, Sabaneta, Caldas, Rionegro y El Retiro.",
+        "meta_description": "Municipio del sur del Valle de Aburrá, Antioquia, vecino de Medellín, Itagüí, Sabaneta, Caldas, Rionegro y El Retiro."
+      },
+      "en": {
+        "display_name": "Envigado",
+        "headline": "Envigado",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipality in the south of the Aburrá Valley, Antioquia, neighboring Medellín, Itagüí, Sabaneta, Caldas, Rionegro and El Retiro.",
+        "meta_description": "Municipality in the south of the Aburrá Valley, Antioquia, neighboring Medellín, Itagüí, Sabaneta, Caldas, Rionegro and El Retiro."
+      },
+      "pt-BR": {
+        "display_name": "Envigado",
+        "headline": "Envigado",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Município no sul do Vale de Aburrá, em Antioquia, vizinho de Medellín, Itagüí, Sabaneta, Caldas, Rionegro e El Retiro.",
+        "meta_description": "Município no sul do Vale de Aburrá, em Antioquia, vizinho de Medellín, Itagüí, Sabaneta, Caldas, Rionegro e El Retiro."
+      }
+    },
+    "history": {
+      "es": [
+        "Documentos coloniales registran el nombre Envigado desde el siglo XVIII. El sitio se organizó como partido o pedanía en 1775 y su historia combina tradición rural, patrimonio cultural e industrialización posterior."
+      ],
+      "en": [
+        "Colonial records mention the name Envigado from the 18th century. The settlement was organized as a district in 1775, and its history combines rural traditions, cultural heritage and later industrialization."
+      ],
+      "pt-BR": [
+        "Documentos coloniais registram o nome Envigado desde o século XVIII. O local foi organizado como distrito em 1775, e sua história combina tradição rural, patrimônio cultural e industrialização posterior."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Acercarte al legado de Fernando González en la Casa Museo Otraparte.",
+        "Combinar espacios culturales como Débora Arango con una salida al entorno de El Salado."
+      ],
+      "en": [
+        "Explore Fernando González's legacy at Casa Museo Otraparte.",
+        "Combine cultural venues such as Débora Arango with a visit to the El Salado area."
+      ],
+      "pt-BR": [
+        "Conhecer o legado de Fernando González na Casa Museo Otraparte.",
+        "Combinar espaços culturais como Débora Arango com um passeio pelo setor de El Salado."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-05.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Envigado.",
+      "en": "Illustration of Envigado.",
+      "pt-BR": "Ilustração de Envigado."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-05-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.1792522,
+      "longitude": -75.5839678,
+      "translations": {
+        "es": {
+          "name": "Casa Museo Otraparte",
+          "description": "Casa museo vinculada a Fernando González en Envigado.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=8545741094880886875"
+        },
+        "en": {
+          "name": "Casa Museo Otraparte",
+          "description": "House museum associated with Fernando González in Envigado.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=8545741094880886875"
+        },
+        "pt-BR": {
+          "name": "Casa Museo Otraparte",
+          "description": "Casa-museu ligada a Fernando González em Envigado.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=8545741094880886875"
+        }
+      },
+      "image": {
+        "file": "images/QC-05-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://caracol.com.co/2025/04/24/envigado-celebra-los-130-anos-de-fernando-gonzalez-con-la-fiesta-criolla-de-otraparte/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Casa Museo Otraparte.",
+          "en": "Illustration of Casa Museo Otraparte.",
+          "pt-BR": "Ilustração de Casa Museo Otraparte."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-05-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.1381102,
+      "longitude": -75.5707439,
+      "translations": {
+        "es": {
+          "name": "Parque Ecoturístico El Salado",
+          "description": "Parque ecoturístico de Envigado en el sector de El Salado.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6152997668994911805"
+        },
+        "en": {
+          "name": "Parque Ecoturístico El Salado",
+          "description": "Ecotourism park in the El Salado area of Envigado.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6152997668994911805"
+        },
+        "pt-BR": {
+          "name": "Parque Ecoturístico El Salado",
+          "description": "Parque de ecoturismo no setor de El Salado, em Envigado.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=6152997668994911805"
+        }
+      },
+      "image": {
+        "file": "images/QC-05-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.semana.com/turismo/articulo/cinco-pueblos-para-visitar-cerca-de-medellin-recomendados-por-la-ia/202509/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque Ecoturístico El Salado.",
+          "en": "Illustration of Parque Ecoturístico El Salado.",
+          "pt-BR": "Ilustração de Parque Ecoturístico El Salado."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-05-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.1722747,
+      "longitude": -75.5910947,
+      "translations": {
+        "es": {
+          "name": "Biblioteca Pública y Parque Cultural Débora Arango",
+          "description": "Biblioteca pública y parque cultural que llevan el nombre de Débora Arango en Envigado.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Biblioteca Pública y Parque Cultural Débora Arango",
+          "description": "Public library and cultural park named after Débora Arango in Envigado.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Biblioteca Pública y Parque Cultural Débora Arango",
+          "description": "Biblioteca pública e parque cultural que levam o nome de Débora Arango em Envigado.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/QC-05-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.comfama.com/sala-de-prensa/programacion-especial-debora-arango/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Biblioteca Pública y Parque Cultural Débora Arango.",
+          "en": "Illustration of Biblioteca Pública y Parque Cultural Débora Arango.",
+          "pt-BR": "Ilustração de Biblioteca Pública y Parque Cultural Débora Arango."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://efpc.envigado.gov.co/wp-content/uploads/2025/04/PDM-ENVIGADO-2024-2027.pdf"
+      },
+      {
+        "reference": "https://www.centrodehistoriaenvigado.com/historia-de-envigado/cronologia/"
+      },
+      {
+        "reference": "https://efpc.envigado.gov.co/wp-content/uploads/2025/06/PLAN-ZONA-11.pdf"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-05-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-05-3: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-05-4: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "envigado",
+  "businesses": [
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Arame",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://hotelarame.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "La Mayoría Restaurante y Fonda",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://lamayoria.com/conocenos/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "R. Bistro",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://restauranterbistro.wixsite.com/rbistro",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Cruz Verde — Otraparte",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.comfama.com/convenios/saludable/droguerias-cruz-verde",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "licores",
+      "information_status": "PUBLICO",
+      "name": "Licores Danny Valen La 38",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://grupogdc.co/es-CO/nuestras-tiendas.php",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

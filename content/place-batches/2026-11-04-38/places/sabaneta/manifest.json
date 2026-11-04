@@ -1,0 +1,202 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "sabaneta",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Antioquia",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Sabaneta",
+        "headline": "Sabaneta",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipio del sur del Valle de Aburrá, Antioquia, a 14 km de Medellín.",
+        "meta_description": "Municipio del sur del Valle de Aburrá, Antioquia, a 14 km de Medellín."
+      },
+      "en": {
+        "display_name": "Sabaneta",
+        "headline": "Sabaneta",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "A municipality in the southern Aburrá Valley, Antioquia, 14 km from Medellín.",
+        "meta_description": "A municipality in the southern Aburrá Valley, Antioquia, 14 km from Medellín."
+      },
+      "pt-BR": {
+        "display_name": "Sabaneta",
+        "headline": "Sabaneta",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Município no sul do Vale de Aburrá, Antioquia, a 14 km de Medellín.",
+        "meta_description": "Município no sul do Vale de Aburrá, Antioquia, a 14 km de Medellín."
+      }
+    },
+    "history": {
+      "es": [
+        "Fue corregimiento de Envigado desde 1903 y se erigió como municipio de Antioquia en 1967, con vigencia desde 1968."
+      ],
+      "en": [
+        "It was a district of Envigado from 1903 and became a municipality of Antioquia in 1967, effective in 1968."
+      ],
+      "pt-BR": [
+        "Foi distrito de Envigado desde 1903 e tornou-se município de Antioquia em 1967, com vigência a partir de 1968."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Conocer la Casa de la Cultura La Barquereña y la identidad cultural del municipio.",
+        "Contrastar el centro urbano con el paisaje ecológico de La Romera."
+      ],
+      "en": [
+        "Discover Casa de la Cultura La Barquereña and the town's cultural identity.",
+        "Contrast the town centre with the natural landscape of La Romera."
+      ],
+      "pt-BR": [
+        "Conhecer a Casa de la Cultura La Barquereña e a identidade cultural do município.",
+        "Contrastar o centro urbano com a paisagem natural de La Romera."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-09.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Sabaneta.",
+      "en": "Illustration of Sabaneta.",
+      "pt-BR": "Ilustração de Sabaneta."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-09-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.1504909,
+      "longitude": -75.6129507,
+      "translations": {
+        "es": {
+          "name": "Casa de la Cultura La Barquereña",
+          "description": "Casa de la cultura de Sabaneta conocida como La Barquereña.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4398843915270684706"
+        },
+        "en": {
+          "name": "Casa de la Cultura La Barquereña",
+          "description": "Sabaneta's cultural centre, known as La Barquereña.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4398843915270684706"
+        },
+        "pt-BR": {
+          "name": "Casa de la Cultura La Barquereña",
+          "description": "Casa da cultura de Sabaneta conhecida como La Barquereña.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4398843915270684706"
+        }
+      },
+      "image": {
+        "file": "images/QC-09-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://vivirenelpoblado.com/sabaneta-vivira-una-semana-dedicada-al-medio-ambiente-y-la-sostenibilidad/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Casa de la Cultura La Barquereña.",
+          "en": "Illustration of Casa de la Cultura La Barquereña.",
+          "pt-BR": "Ilustração de Casa de la Cultura La Barquereña."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-09-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.1199292,
+      "longitude": -75.5974556,
+      "translations": {
+        "es": {
+          "name": "Parque Ecológico La Romera",
+          "description": "Parque ecológico de La Romera, en la zona rural de Sabaneta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3380432658992177914"
+        },
+        "en": {
+          "name": "Parque Ecológico La Romera",
+          "description": "La Romera ecological park, in rural Sabaneta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3380432658992177914"
+        },
+        "pt-BR": {
+          "name": "Parque Ecológico La Romera",
+          "description": "Parque ecológico La Romera, na zona rural de Sabaneta.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=3380432658992177914"
+        }
+      },
+      "image": {
+        "file": "images/QC-09-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://es.wikiloc.com/rutas-senderismo/la-romera-y-alto-la-romera-desde-parque-de-sabaneta-205944536",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque Ecológico La Romera.",
+          "en": "Illustration of Parque Ecológico La Romera.",
+          "pt-BR": "Ilustração de Parque Ecológico La Romera."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://sabaneta.gov.co/acerca-del-municipio/informacion-general/tramites-y-servicios/tramites-y-servicios/"
+      },
+      {
+        "reference": "https://sabaneta.gov.co/acerca-del-municipio/lugares-de-interes/"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-09-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-09-3: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

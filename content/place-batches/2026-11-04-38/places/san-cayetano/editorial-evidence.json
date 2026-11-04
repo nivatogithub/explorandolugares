@@ -1,0 +1,90 @@
+{
+  "number": 35,
+  "slug": "san-cayetano",
+  "name": "San Cayetano",
+  "translations": {
+    "es": {
+      "title": "San Cayetano",
+      "location": "Municipio de Norte de Santander, a 17 km de Cúcuta, dentro del Área Metropolitana de Cúcuta.",
+      "history": "Fue fundado en 1773 por Calixto Lara y Pedro Santander; tras el terremoto de 1875, el poblado fue reedificado en el mismo sitio."
+    },
+    "en": {
+      "title": "San Cayetano",
+      "location": "A municipality in Norte de Santander, 17 km from Cúcuta, within the Cúcuta Metropolitan Area.",
+      "history": "It was founded in 1773 by Calixto Lara and Pedro Santander; after the 1875 earthquake, the town was rebuilt on the same site."
+    },
+    "pt-BR": {
+      "title": "São Caetano",
+      "location": "Município de Norte de Santander, a 17 km de Cúcuta, dentro da Área Metropolitana de Cúcuta.",
+      "history": "Foi fundado em 1773 por Calixto Lara e Pedro Santander; após o terremoto de 1875, o povoado foi reconstruído no mesmo local."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-35-1200.webp",
+  "sources": [
+    "https://amc.gov.co/amc/san-cayetano/",
+    "https://www.sancayetano-nortedesantander.gov.co/"
+  ],
+  "attractions": [
+    {
+      "id": "QC-35-3",
+      "municipality": "San Cayetano",
+      "title_es": "Pozo Azul de San Cayetano",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-35-3.webp",
+      "image_sha256": "6c94b84ad83ecbd45166b6abf6531d3958809890ce6e61f915fa27d45ca0b7d9",
+      "source": {
+        "id": "QC-35-3-REEMPLAZO-1",
+        "url": "https://www.semana.com/resizer/v2/LPYU3EMHUBDG3FYGUP6HSFZ4BQ.jpeg?auth=fb00c8e6354ad551ae56bdb50d7c7d197c2af020fd9aa7495dd2c9218da82680&smart=true&quality=75&width=1280&height=720",
+        "source_url": "https://www.semana.com/amp/turismo/articulo/este-es-el-pozo-azul-escondido-en-san-cayetano-norte-de-santander/202400/",
+        "title": "Pozo Azul · imágenes atribuidas a @rodandoconelpri",
+        "published_at": "2024-09-15",
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_utilizada_pendiente_aprobacion",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "La imagen es un díptico de dos vistas reales. Para una imagen final usar solamente una vista, preferentemente la derecha; nunca fusionarlas espacialmente. Fecha de captura no acreditada."
+      },
+      "geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "geo_status": "pending",
+      "legacy_name": "Pozo Azul de San Cayetano",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-35-4",
+      "municipality": "San Cayetano",
+      "title_es": "Monumento a Mercedes Ábrego · Urimaco",
+      "image_status": "pending",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-35-4.webp",
+      "image_sha256": "7b5591b2b78a81ef0c4f094f1fc138b7cb330a0cae61f193da1074dda9aa7619",
+      "source": {
+        "source_url": "https://es.wikiloc.com/rutas-senderismo/colombia-urimaco-termotasajero-san-cayetano-n-s-130329157",
+        "checked_at": "2026-11-03",
+        "visual_reviewed": true
+      },
+      "geo": null,
+      "geo_status": "pending",
+      "legacy_name": null,
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

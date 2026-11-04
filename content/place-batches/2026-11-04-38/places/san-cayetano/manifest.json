@@ -1,0 +1,204 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "san-cayetano",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Norte de Santander",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "San Cayetano",
+        "headline": "San Cayetano",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "Municipio de Norte de Santander, a 17 km de Cúcuta, dentro del Área Metropolitana de Cúcuta.",
+        "meta_description": "Municipio de Norte de Santander, a 17 km de Cúcuta, dentro del Área Metropolitana de Cúcuta."
+      },
+      "en": {
+        "display_name": "San Cayetano",
+        "headline": "San Cayetano",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "A municipality in Norte de Santander, 17 km from Cúcuta, within the Cúcuta Metropolitan Area.",
+        "meta_description": "A municipality in Norte de Santander, 17 km from Cúcuta, within the Cúcuta Metropolitan Area."
+      },
+      "pt-BR": {
+        "display_name": "São Caetano",
+        "headline": "São Caetano",
+        "eyebrow": "Norte de Santander, Colombia",
+        "intro": "Município de Norte de Santander, a 17 km de Cúcuta, dentro da Área Metropolitana de Cúcuta.",
+        "meta_description": "Município de Norte de Santander, a 17 km de Cúcuta, dentro da Área Metropolitana de Cúcuta."
+      }
+    },
+    "history": {
+      "es": [
+        "Fue fundado en 1773 por Calixto Lara y Pedro Santander; tras el terremoto de 1875, el poblado fue reedificado en el mismo sitio."
+      ],
+      "en": [
+        "It was founded in 1773 by Calixto Lara and Pedro Santander; after the 1875 earthquake, the town was rebuilt on the same site."
+      ],
+      "pt-BR": [
+        "Foi fundado em 1773 por Calixto Lara e Pedro Santander; após o terremoto de 1875, o povoado foi reconstruído no mesmo local."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Combinar el paisaje natural de Pozo Azul con una visita al sector de Urimaco.",
+        "Acercarte a la memoria de Mercedes Ábrego a través de su monumento."
+      ],
+      "en": [
+        "Combine the natural landscape of Pozo Azul with a visit to the Urimaco area.",
+        "Explore the memory of Mercedes Ábrego through her monument."
+      ],
+      "pt-BR": [
+        "Combinar a paisagem natural de Pozo Azul com uma visita ao setor de Urimaco.",
+        "Conhecer a memória de Mercedes Ábrego por meio de seu monumento."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-35.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "https://commons.wikimedia.org/wiki/File:Sancayetano_NS_jul_2023.jpg",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de San Cayetano.",
+      "en": "Illustration of San Cayetano.",
+      "pt-BR": "Ilustração de San Cayetano."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-35-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 7.811243,
+      "longitude": -72.5840682,
+      "translations": {
+        "es": {
+          "name": "Pozo Azul de San Cayetano",
+          "description": "Pozo Azul, paraje natural de San Cayetano, Norte de Santander.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=10560138342214091323"
+        },
+        "en": {
+          "name": "Pozo Azul de San Cayetano",
+          "description": "Pozo Azul, a natural site in San Cayetano, Norte de Santander.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=10560138342214091323"
+        },
+        "pt-BR": {
+          "name": "Pozo Azul de San Cayetano",
+          "description": "Pozo Azul, local natural de San Cayetano, Norte de Santander.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=10560138342214091323"
+        }
+      },
+      "image": {
+        "file": "images/QC-35-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.semana.com/amp/turismo/articulo/este-es-el-pozo-azul-escondido-en-san-cayetano-norte-de-santander/202400/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Pozo Azul de San Cayetano.",
+          "en": "Illustration of Pozo Azul de San Cayetano.",
+          "pt-BR": "Ilustração de Pozo Azul de San Cayetano."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-35-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 7.8985917,
+      "longitude": -72.590082,
+      "translations": {
+        "es": {
+          "name": "Monumento a Mercedes Ábrego · Urimaco",
+          "description": "Monumento a Mercedes Ábrego en Urimaco, municipio de San Cayetano.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4934810578259045892"
+        },
+        "en": {
+          "name": "Monumento a Mercedes Ábrego · Urimaco",
+          "description": "Monument to Mercedes Ábrego in Urimaco, in the municipality of San Cayetano.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4934810578259045892"
+        },
+        "pt-BR": {
+          "name": "Monumento a Mercedes Ábrego · Urimaco",
+          "description": "Monumento a Mercedes Ábrego em Urimaco, município de San Cayetano.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4934810578259045892"
+        }
+      },
+      "image": {
+        "file": "images/QC-35-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://es.wikiloc.com/rutas-senderismo/colombia-urimaco-termotasajero-san-cayetano-n-s-130329157",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Monumento a Mercedes Ábrego · Urimaco.",
+          "en": "Illustration of Monumento a Mercedes Ábrego · Urimaco.",
+          "pt-BR": "Ilustração de Monumento a Mercedes Ábrego · Urimaco."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://amc.gov.co/amc/san-cayetano/"
+      },
+      {
+        "reference": "https://www.sancayetano-nortedesantander.gov.co/"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-35-3: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-35-3: aprobación visual no registrada en el inventario",
+      "QC-35-4: coordenadas pendientes",
+      "QC-35-4: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

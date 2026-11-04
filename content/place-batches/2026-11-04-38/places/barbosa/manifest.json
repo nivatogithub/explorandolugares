@@ -1,0 +1,254 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "barbosa",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Antioquia",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "Barbosa",
+        "headline": "Barbosa",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipio del extremo norte del Valle de Aburrá, Antioquia, integrado al Área Metropolitana del Valle de Aburrá.",
+        "meta_description": "Municipio del extremo norte del Valle de Aburrá, Antioquia, integrado al Área Metropolitana del Valle de Aburrá."
+      },
+      "en": {
+        "display_name": "Barbosa",
+        "headline": "Barbosa",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Municipality at the northern end of the Aburrá Valley in Antioquia, part of the Valle de Aburrá Metropolitan Area.",
+        "meta_description": "Municipality at the northern end of the Aburrá Valley in Antioquia, part of the Valle de Aburrá Metropolitan Area."
+      },
+      "pt-BR": {
+        "display_name": "Barbosa",
+        "headline": "Barbosa",
+        "eyebrow": "Antioquia, Colombia",
+        "intro": "Município no extremo norte do Vale de Aburrá, em Antioquia, integrado à Região Metropolitana do Vale de Aburrá.",
+        "meta_description": "Município no extremo norte do Vale de Aburrá, em Antioquia, integrado à Região Metropolitana do Vale de Aburrá."
+      }
+    },
+    "history": {
+      "es": [
+        "Fundado en 1795, Barbosa fue conocido como Hatillo de Barbosa y otros nombres rurales antes de consolidar su vida municipal. Su ubicación lo convirtió en puerta norte del Valle de Aburrá."
+      ],
+      "en": [
+        "Founded in 1795, Barbosa was known as Hatillo de Barbosa and by other rural names before consolidating its municipal life. Its location made it the northern gateway to the Aburrá Valley."
+      ],
+      "pt-BR": [
+        "Fundada em 1795, Barbosa foi conhecida como Hatillo de Barbosa e por outros nomes rurais antes de consolidar sua vida municipal. Sua localização a tornou a porta norte do Vale de Aburrá."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Combinar una salida al Parque de las Aguas con un recorrido por el centro de Barbosa.",
+        "Acercarte a la memoria ferroviaria de El Hatillo."
+      ],
+      "en": [
+        "Combine a trip to Parque de las Aguas with a walk through central Barbosa.",
+        "Explore El Hatillo's railway heritage."
+      ],
+      "pt-BR": [
+        "Combinar um passeio ao Parque de las Aguas com uma caminhada pelo centro de Barbosa.",
+        "Conhecer a memória ferroviária de El Hatillo."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-01.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "https://www.elcolombiano.com/antioquia/seguridad/imputacion-del-alcalde-de-barbosa-por-contrato-para-contener-al-covid-OI13394192",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de Barbosa.",
+      "en": "Illustration of Barbosa.",
+      "pt-BR": "Ilustração de Barbosa."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-01-2",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.4081486,
+      "longitude": -75.4227486,
+      "translations": {
+        "es": {
+          "name": "Parque de las Aguas",
+          "description": "Parque acuático situado en Barbosa, Antioquia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "en": {
+          "name": "Parque de las Aguas",
+          "description": "Water park located in Barbosa, Antioquia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        },
+        "pt-BR": {
+          "name": "Parque de las Aguas",
+          "description": "Parque aquático localizado em Barbosa, Antioquia.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": ""
+        }
+      },
+      "image": {
+        "file": "images/QC-01-2.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://paisa.alerta.com.co/quejodromo/llegan-mas-de-200-flotadores-al-parque-de-las-aguas-en-barbosa-186209",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque de las Aguas.",
+          "en": "Illustration of Parque de las Aguas.",
+          "pt-BR": "Ilustração de Parque de las Aguas."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-01-3",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.412922,
+      "longitude": -75.392394,
+      "translations": {
+        "es": {
+          "name": "Estación del Ferrocarril El Hatillo",
+          "description": "Antigua estación ferroviaria del sector de El Hatillo, en Barbosa.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7533956005260676724"
+        },
+        "en": {
+          "name": "Estación del Ferrocarril El Hatillo",
+          "description": "Former railway station in the El Hatillo area of Barbosa.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7533956005260676724"
+        },
+        "pt-BR": {
+          "name": "Estación del Ferrocarril El Hatillo",
+          "description": "Antiga estação ferroviária do setor de El Hatillo, em Barbosa.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=7533956005260676724"
+        }
+      },
+      "image": {
+        "file": "images/QC-01-3.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n+Hatillo+Barbosa&query_place_id=ChIJ1VYt0HY9RI4RdM779hH9jWg",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Estación del Ferrocarril El Hatillo.",
+          "en": "Illustration of Estación del Ferrocarril El Hatillo.",
+          "pt-BR": "Ilustração de Estación del Ferrocarril El Hatillo."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    },
+    {
+      "slug": "qc-01-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 6.4357982,
+      "longitude": -75.3291321,
+      "translations": {
+        "es": {
+          "name": "Parque Diego Echavarría Misas",
+          "description": "Parque de Barbosa conocido también como el segundo parque.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4558879625103894933"
+        },
+        "en": {
+          "name": "Parque Diego Echavarría Misas",
+          "description": "Park in Barbosa also known locally as the second park.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4558879625103894933"
+        },
+        "pt-BR": {
+          "name": "Parque Diego Echavarría Misas",
+          "description": "Parque de Barbosa também conhecido localmente como o segundo parque.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=4558879625103894933"
+        }
+      },
+      "image": {
+        "file": "images/QC-01-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://www.google.com/maps/search/?api=1&query=Parque+Diego+Echavarria+Misas+Barbosa+Antioquia",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Parque Diego Echavarría Misas.",
+          "en": "Illustration of Parque Diego Echavarría Misas.",
+          "pt-BR": "Ilustração de Parque Diego Echavarría Misas."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://barbosa.gov.co/MiMunicipio/Paginas/Informacion-del-Municipio.aspx"
+      },
+      {
+        "reference": "https://barbosa.gov.co/MiMunicipio/Paginas/Pasado-Presente-y-Futuro.aspx"
+      },
+      {
+        "reference": "https://barbosa.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-01-2: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-01-3: coordenada documental conservada en expediente, pendiente de contraste",
+      "QC-01-4: coordenada documental conservada en expediente, pendiente de contraste"
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "san-diego",
+    "country_code": "CO",
+    "destination_type": "municipality",
+    "department": "Cesar",
+    "subregion": "",
+    "publication_status": "draft",
+    "latitude": null,
+    "longitude": null,
+    "translations": {
+      "es": {
+        "display_name": "San Diego",
+        "headline": "San Diego",
+        "eyebrow": "Cesar, Colombia",
+        "intro": "Municipio del norte del Cesar, en el valle del río Cesar y parte del entorno metropolitano de Valledupar.",
+        "meta_description": "Municipio del norte del Cesar, en el valle del río Cesar y parte del entorno metropolitano de Valledupar."
+      },
+      "en": {
+        "display_name": "San Diego",
+        "headline": "San Diego",
+        "eyebrow": "Cesar, Colombia",
+        "intro": "A municipality in northern Cesar, in the Cesar River valley and part of Valledupar’s metropolitan setting.",
+        "meta_description": "A municipality in northern Cesar, in the Cesar River valley and part of Valledupar’s metropolitan setting."
+      },
+      "pt-BR": {
+        "display_name": "San Diego",
+        "headline": "San Diego",
+        "eyebrow": "Cesar, Colombia",
+        "intro": "Município do norte do Cesar, no vale do rio Cesar e parte do entorno metropolitano de Valledupar.",
+        "meta_description": "Município do norte do Cesar, no vale do rio Cesar e parte do entorno metropolitano de Valledupar."
+      }
+    },
+    "history": {
+      "es": [
+        "La Gobernación del Cesar registra la fundación de San Diego en 1609 y su erección municipal en 1976."
+      ],
+      "en": [
+        "The Cesar departmental government records San Diego’s founding in 1609 and its municipal incorporation in 1976."
+      ],
+      "pt-BR": [
+        "O governo departamental do Cesar registra a fundação de San Diego em 1609 e sua emancipação municipal em 1976."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Recorrer los murales públicos de la Ruta Santa.",
+        "Acercarte a una expresión de arte e identidad local en San Diego, Cesar."
+      ],
+      "en": [
+        "Explore the public murals of Ruta Santa.",
+        "Discover an expression of local art and identity in San Diego, Cesar."
+      ],
+      "pt-BR": [
+        "Percorrer os murais públicos da Ruta Santa.",
+        "Conhecer uma expressão de arte e identidade local em San Diego, Cesar."
+      ]
+    },
+    "sources": {
+      "es": [],
+      "en": [],
+      "pt-BR": []
+    }
+  },
+  "hero_image": {
+    "file": "images/portada-38.webp",
+    "image_origin": "ai_generated",
+    "image_creator": "Explorando Lugares · imagen generada con IA",
+    "image_source_url": "https://portalvallenato.net/2018/11/25/la-plaza-de-san-diego-tiene-nombre-de-poeta/",
+    "image_license": "",
+    "image_license_url": "",
+    "alt": {
+      "es": "Ilustración de San Diego.",
+      "en": "Illustration of San Diego.",
+      "pt-BR": "Ilustração de San Diego."
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  "places": [
+    {
+      "slug": "qc-38-4",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 10.3349885,
+      "longitude": -73.1809345,
+      "translations": {
+        "es": {
+          "name": "Ruta Santa · murales públicos",
+          "description": "Conjunto de murales públicos de la Ruta Santa, en San Diego, Cesar.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5691199075995293834"
+        },
+        "en": {
+          "name": "Ruta Santa · murales públicos",
+          "description": "Public murals along Ruta Santa, in San Diego, Cesar.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5691199075995293834"
+        },
+        "pt-BR": {
+          "name": "Ruta Santa · murales públicos",
+          "description": "Conjunto de murais públicos da Ruta Santa, em San Diego, Cesar.",
+          "external_url": "",
+          "external_label": "",
+          "map_url": "https://www.google.com/maps?cid=5691199075995293834"
+        }
+      },
+      "image": {
+        "file": "images/QC-38-4.webp",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares · imagen generada con IA",
+        "image_source_url": "https://semanariolacalle.com/la-ruta-santa-de-san-diego-fe-pintada-en-los-muros-del-alma/",
+        "image_license": "",
+        "image_license_url": "",
+        "alt": {
+          "es": "Ilustración de Ruta Santa · murales públicos.",
+          "en": "Illustration of Ruta Santa · murales públicos.",
+          "pt-BR": "Ilustração de Ruta Santa · murales públicos."
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        }
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-03",
+    "sources": [
+      {
+        "reference": "https://www.cesar.gov.co/d/es/nosotros/el-departamento/historia"
+      },
+      {
+        "reference": "https://www.sandiego-cesar.gov.co/"
+      },
+      {
+        "reference": "https://cesar.gov.co/d/filesmain/ofiplaneacion/planes/plan_vial.pdf"
+      }
+    ],
+    "notes": [
+      "Paquete de borrador para revisión; no autoriza publicar.",
+      "Revisión editorial en dev1",
+      "Geolocalización del centro municipal pendiente",
+      "Actualidad y procedencia de las referencias según expediente interno",
+      "QC-38-4: coordenadas pendientes",
+      "QC-38-4: aprobación visual no registrada en el inventario"
+    ]
+  }
+}

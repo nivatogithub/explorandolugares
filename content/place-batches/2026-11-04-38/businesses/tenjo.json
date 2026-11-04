@@ -1,0 +1,66 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "tenjo",
+  "businesses": [
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Hogaza Pan Artesanal",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitatenjo.com/que-hacer/donde-comer-en-tenjo/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Cocoa Café",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitatenjo.com/que-hacer/donde-comer-en-tenjo/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "experiencias",
+      "information_status": "PUBLICO",
+      "name": "Faunáticos",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.parquefaunaticos.com/restaurantes",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Martín & Espino Café",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://visitatenjo.com/que-hacer/donde-comer-en-tenjo/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

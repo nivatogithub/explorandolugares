@@ -1,0 +1,113 @@
+{
+  "number": 6,
+  "slug": "girardota",
+  "name": "Girardota",
+  "translations": {
+    "es": {
+      "title": "Girardota",
+      "location": "Municipio del norte del Valle de Aburrá, Antioquia, a 26 km de Medellín y recorrido por el río Medellín.",
+      "history": "El territorio fue habitado por pueblos nutabes y yamesíes. En 1833 se erigió la parroquia de Girardota, nombre que recuerda al coronel Atanasio Girardot; en 1913 se oficializó la forma actual del nombre."
+    },
+    "en": {
+      "title": "Girardota",
+      "location": "Municipality in the north of the Aburrá Valley, Antioquia, 26 km from Medellín and crossed by the Medellín River.",
+      "history": "The territory was inhabited by Nutabe and Yamesí peoples. In 1833 the parish of Girardota was established, named in memory of Colonel Atanasio Girardot; the current name was made official in 1913."
+    },
+    "pt-BR": {
+      "title": "Girardota",
+      "location": "Município no norte do Vale de Aburrá, em Antioquia, a 26 km de Medellín e atravessado pelo rio Medellín.",
+      "history": "O território foi habitado pelos povos nutabes e yamesíes. Em 1833 foi erigida a paróquia de Girardota, nome que recorda o coronel Atanasio Girardot; a forma atual do nome foi oficializada em 1913."
+    }
+  },
+  "cover_file": "../imagenes-web/portada-06-1200.webp",
+  "sources": [
+    "https://www.girardota.gov.co/MiMunicipio/Paginas/Presentacion.aspx",
+    "https://www.girardota.gov.co/MiMunicipio/Paginas/Rese%C3%B1a-Historica.aspx",
+    "https://www.girardota.gov.co/Transparencia/PBOT/Documento%20Resumen%20PBOT%202025.pdf"
+  ],
+  "attractions": [
+    {
+      "id": "QC-06-2",
+      "municipality": "Girardota",
+      "title_es": "Casa de la Cultura Pedrito Ruiz",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-06-2-v1-1200.webp",
+      "image_sha256": "08a8bd2e55e72a7f1b7a8fb7138dbe9daad530e2a8eb91c6178b720495a7e590",
+      "source": {
+        "id": "QC-06-2-R1",
+        "url": "https://girardotahoy.com/wp-content/uploads/2023/03/casa-de-la-cultura-696x464.jpg",
+        "source_url": "https://girardotahoy.com/casa-de-la-cultura-de-girardota-ya-abrio-inscripciones-para-sus-diferentes-cursos/",
+        "title": "Casa de la Cultura de Girardota ya abrió inscripciones para sus diferentes cursos - Girardota Hoy | Noticias de Girardota",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Referencia localizada; falta contraste visual, actualidad y permiso de uso. No es una imagen generada."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.375230312347412,
+        "longitude": -75.44953918457031,
+        "precision": "punto_inventario_cultural_no_entrada_validada",
+        "address": "Carrera 16 no. 11 - 37",
+        "source_url": "https://www.datos.gov.co/resource/te39-v28f.json?divipola=05308",
+        "checked_at": "2026-11-03",
+        "entrance_verified": false,
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.375230312347412%2C-75.44953918457031"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Casa de la Cultura Pedrito Ruiz",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    },
+    {
+      "id": "QC-06-3",
+      "municipality": "Girardota",
+      "title_es": "Cascada de San Antonio — vereda El Cano",
+      "image_status": "approved",
+      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-06-3-v1-1200.webp",
+      "image_sha256": "88eacb168c2f1bfaa29d06ed8efbb62caf6329346a17cbfada0edbbac1ca1de3",
+      "source": {
+        "id": "QC-06-3-R1",
+        "url": "https://girardota.gov.co/MiMunicipio/PublishingImages/Paginas/Sitios-de-Interes/CASCADA%20SAN%20ANTONIO%20GIRARDOTA%20A.JPG",
+        "source_url": "https://girardota.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+        "title": "Sitios de Interés",
+        "published_at": null,
+        "captured_at": null,
+        "checked_at": "2026-11-03",
+        "usage_rights": "pendiente_no_autorizada_para_publicacion",
+        "status": "referencia_inspeccionada",
+        "visual_reviewed": true,
+        "preview_load_verified": true,
+        "user_approved": false,
+        "note": "Referencia localizada; falta contraste visual, actualidad y permiso de uso. No es una imagen generada."
+      },
+      "geo": {
+        "status": "coordenada_documentada_pendiente_contraste",
+        "latitude": 6.35241,
+        "longitude": -75.42577,
+        "precision": "punto_OSM_no_entrada_validada",
+        "source_url": "https://mapcarta.com/es/N6067909731",
+        "address": null,
+        "entrance_verified": false,
+        "checked_at": "2026-11-03",
+        "map_url": "https://www.google.com/maps/search/?api=1&query=6.35241%2C-75.42577"
+      },
+      "geo_status": "documented_pending_validation",
+      "legacy_name": "Cascada de San Antonio — vereda El Cano",
+      "identity_changed": false,
+      "texts_status": "pending_final_selection",
+      "package_validated": false,
+      "created_in_dev1": false
+    }
+  ],
+  "status": "prepared_source_not_imported",
+  "created_in_dev1": false,
+  "preprod_ready": false
+}

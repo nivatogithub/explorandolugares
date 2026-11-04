@@ -1,0 +1,66 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "soledad",
+  "businesses": [
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Boutique Campanario del Río",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://campanariodelrio.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "Centro Comercial Nuestro Atlántico",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://nuestroatlantico.com/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Droguerías Farmavida — Soledad",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://drogueriasfarmavida.com/quienes-somos/",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "name": "Cinemark — Gran Plaza del Sol",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.cinemark.com.co/teatros/soledad",
+          "checked_at": "2026-11-03",
+          "note": "Fuente documental; no equivale a confirmación telefónica de operación. No se incorporan horarios, teléfonos ni afirmaciones promocionales."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}
