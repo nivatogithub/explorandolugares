@@ -1,33 +1,6 @@
 {
-  "consultado": "04/11/2026 16:04",
+  "consultado": "04/11/2026 16:57",
   "lugares": [
-    {
-      "slug": "el-penol",
-      "name": "El Peñol",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "hospedaje": 1
-      }
-    },
-    {
-      "slug": "socorro",
-      "name": "El Socorro",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "hospedaje": 1
-      }
-    },
-    {
-      "slug": "giron",
-      "name": "Girón",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "alimentacion": 1
-      }
-    },
     {
       "slug": "la-ceja",
       "name": "La Ceja",
@@ -65,39 +38,12 @@
       }
     },
     {
-      "slug": "mompox",
-      "name": "Santa Cruz de Mompox",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "hospedaje": 1
-      }
-    },
-    {
       "slug": "sopetran",
       "name": "Sopetrán",
       "batch": "30",
       "total": 1,
       "cats": {
         "alimentacion": 1
-      }
-    },
-    {
-      "slug": "venecia",
-      "name": "Venecia",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "hospedaje": 1
-      }
-    },
-    {
-      "slug": "villa-de-leyva",
-      "name": "Villa de Leyva",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "hospedaje": 1
       }
     },
     {
@@ -111,18 +57,8 @@
       }
     },
     {
-      "slug": "buga",
-      "name": "Guadalajara de Buga",
-      "batch": "30",
-      "total": 2,
-      "cats": {
-        "hospedaje": 1,
-        "alimentacion": 1
-      }
-    },
-    {
-      "slug": "guaduas",
-      "name": "Guaduas",
+      "slug": "el-penol",
+      "name": "El Peñol",
       "batch": "30",
       "total": 2,
       "cats": {
@@ -136,16 +72,6 @@
       "total": 2,
       "cats": {
         "hospedaje": 2
-      }
-    },
-    {
-      "slug": "puerto-triunfo",
-      "name": "Puerto Triunfo",
-      "batch": "30",
-      "total": 2,
-      "cats": {
-        "hospedaje": 1,
-        "alimentacion": 1
       }
     },
     {
@@ -178,13 +104,12 @@
       }
     },
     {
-      "slug": "tamesis",
-      "name": "Támesis",
+      "slug": "venecia",
+      "name": "Venecia",
       "batch": "30",
       "total": 2,
       "cats": {
-        "hospedaje": 1,
-        "alimentacion": 1
+        "hospedaje": 2
       }
     },
     {
@@ -195,16 +120,6 @@
       "cats": {
         "alimentacion": 2,
         "comercio": 1
-      }
-    },
-    {
-      "slug": "el-carmen-de-viboral",
-      "name": "El Carmen de Viboral",
-      "batch": "30",
-      "total": 3,
-      "cats": {
-        "hospedaje": 2,
-        "alimentacion": 1
       }
     },
     {
@@ -247,13 +162,31 @@
       }
     },
     {
-      "slug": "honda",
-      "name": "Honda",
+      "slug": "el-carmen-de-viboral",
+      "name": "El Carmen de Viboral",
       "batch": "30",
       "total": 4,
       "cats": {
-        "hospedaje": 2,
-        "alimentacion": 2
+        "hospedaje": 3,
+        "alimentacion": 1
+      }
+    },
+    {
+      "slug": "socorro",
+      "name": "El Socorro",
+      "batch": "30",
+      "total": 4,
+      "cats": {
+        "hospedaje": 4
+      }
+    },
+    {
+      "slug": "guaduas",
+      "name": "Guaduas",
+      "batch": "30",
+      "total": 4,
+      "cats": {
+        "hospedaje": 4
       }
     },
     {
@@ -289,13 +222,32 @@
       }
     },
     {
-      "slug": "barichara",
-      "name": "Barichara",
+      "slug": "mompox",
+      "name": "Santa Cruz de Mompox",
       "batch": "30",
-      "total": 6,
+      "total": 4,
+      "cats": {
+        "hospedaje": 4
+      }
+    },
+    {
+      "slug": "tamesis",
+      "name": "Támesis",
+      "batch": "30",
+      "total": 4,
       "cats": {
         "hospedaje": 3,
-        "alimentacion": 3
+        "alimentacion": 1
+      }
+    },
+    {
+      "slug": "giron",
+      "name": "Girón",
+      "batch": "30",
+      "total": 5,
+      "cats": {
+        "hospedaje": 3,
+        "alimentacion": 2
       }
     },
     {
@@ -310,15 +262,6 @@
       }
     },
     {
-      "slug": "mongui",
-      "name": "Monguí",
-      "batch": "30",
-      "total": 6,
-      "cats": {
-        "hospedaje": 6
-      }
-    },
-    {
       "slug": "san-diego",
       "name": "San Diego",
       "batch": "38",
@@ -330,13 +273,42 @@
       }
     },
     {
-      "slug": "rionegro",
-      "name": "Rionegro",
+      "slug": "mongui",
+      "name": "Monguí",
+      "batch": "30",
+      "total": 7,
+      "cats": {
+        "hospedaje": 7
+      }
+    },
+    {
+      "slug": "puerto-triunfo",
+      "name": "Puerto Triunfo",
+      "batch": "30",
+      "total": 7,
+      "cats": {
+        "hospedaje": 6,
+        "alimentacion": 1
+      }
+    },
+    {
+      "slug": "buga",
+      "name": "Guadalajara de Buga",
       "batch": "30",
       "total": 8,
       "cats": {
-        "hospedaje": 6,
-        "alimentacion": 2
+        "hospedaje": 7,
+        "alimentacion": 1
+      }
+    },
+    {
+      "slug": "honda",
+      "name": "Honda",
+      "batch": "30",
+      "total": 8,
+      "cats": {
+        "hospedaje": 5,
+        "alimentacion": 3
       }
     },
     {
@@ -385,6 +357,26 @@
       }
     },
     {
+      "slug": "rionegro",
+      "name": "Rionegro",
+      "batch": "30",
+      "total": 10,
+      "cats": {
+        "hospedaje": 8,
+        "alimentacion": 2
+      }
+    },
+    {
+      "slug": "barichara",
+      "name": "Barichara",
+      "batch": "30",
+      "total": 11,
+      "cats": {
+        "hospedaje": 8,
+        "alimentacion": 3
+      }
+    },
+    {
       "slug": "agustin-codazzi",
       "name": "Agustín Codazzi",
       "batch": "38",
@@ -404,6 +396,15 @@
         "alimentacion": 2,
         "comercio": 4,
         "salud": 1
+      }
+    },
+    {
+      "slug": "villa-de-leyva",
+      "name": "Villa de Leyva",
+      "batch": "30",
+      "total": 13,
+      "cats": {
+        "hospedaje": 13
       }
     },
     {
