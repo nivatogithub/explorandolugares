@@ -1,0 +1,32 @@
+[
+  {
+    "destination_slug": "sopetran",
+    "name": "Restaurante Central",
+    "category_code": "alimentacion",
+    "latitude": 6.5012054,
+    "longitude": -75.7425232,
+    "source_map": "https://www.openstreetmap.org/node/5460622021",
+    "source_identity": "https://restaurantesencolombia.click/antioquia/sopetran/",
+    "evidence": "Nombre y teléfono en fuente pública coinciden con mapa; operación actual sin confirmar directamente."
+  },
+  {
+    "destination_slug": "necocli",
+    "name": "Hotel San Sebastián de Urabá",
+    "category_code": "hospedaje",
+    "latitude": 8.42133,
+    "longitude": -76.78581,
+    "source_map": "https://www.openstreetmap.org/way/708427544",
+    "source_identity": "https://portalnecocli.com/directorio/",
+    "evidence": "Nombre y dirección Calle 46 49-50 coinciden con directorio. Punto redondeado de referencia."
+  },
+  {
+    "destination_slug": "necocli",
+    "name": "Hotel Panorama Suite",
+    "category_code": "hospedaje",
+    "latitude": 8.42509,
+    "longitude": -76.78398,
+    "source_map": "https://www.openstreetmap.org/node/4762499834",
+    "source_identity": "https://old.amawebs.com/storage/data/08/55/80/doc/l29gi50dfnl.pdf",
+    "evidence": "Nombre y municipio constan en documentación de servicios. Punto redondeado de referencia; vigencia operacional no confirmada."
+  }
+]
