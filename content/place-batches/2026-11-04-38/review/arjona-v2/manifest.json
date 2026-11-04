@@ -1,0 +1,43 @@
+{
+  "destination": "arjona",
+  "asset": "portada",
+  "status": "pendiente_aprobacion_usuario",
+  "references": [
+    {
+      "file": "referencia-frontal.jpg",
+      "source": "Referencia previa de la galería; fecha y autor pendientes"
+    },
+    {
+      "file": "referencia-torres.jpg",
+      "source": "https://www.eluniversal.com.co/suplementos/facetas/2022/01/29/la-curiosa-historia-de-como-se-construyo-la-iglesia-catolica-de-arjona/",
+      "date": "2022-01-29",
+      "license": "no confirmada"
+    }
+  ],
+  "date": "2026-11-04",
+  "tool": "built-in image_gen",
+  "prompt_file": "prompt.txt",
+  "files": {
+    "referencia-frontal.jpg": {
+      "sha256": "f03d6b68a72cd7b70c69d3d84a193d54f0b21ccb390c36f2449d8bece4bf0fd8",
+      "bytes": 153998
+    },
+    "referencia-torres.jpg": {
+      "sha256": "71ff03b43329b99a47c21be916f7640d77c82e765ae95743e11130eefd05e14a",
+      "bytes": 134082
+    },
+    "portada-actual.webp": {
+      "sha256": "c5e31430b33ddf6ec65e9668b560ddbcc3ba2aa28819e17129806628d68fb8a1",
+      "bytes": 226838
+    },
+    "propuesta-master.png": {
+      "sha256": "36379fed417fb6fa14c0146523e4b96c91ca1416eb27e0d5b218cebe58a49181",
+      "bytes": 3316167
+    },
+    "propuesta-1200.webp": {
+      "sha256": "d2002c406924f832f8e53382dad59e66737f3a1df63556e3ad8337d622b74b66",
+      "bytes": 245100
+    }
+  },
+  "deployed": false
+}
