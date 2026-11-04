@@ -1,15 +1,6 @@
 {
-  "consultado": "04/11/2026 17:49",
+  "consultado": "04/11/2026 17:56",
   "lugares": [
-    {
-      "slug": "la-playa-de-belen",
-      "name": "La Playa de Belén",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "hospedaje": 1
-      }
-    },
     {
       "slug": "san-carlos",
       "name": "San Carlos",
@@ -57,8 +48,8 @@
       }
     },
     {
-      "slug": "necocli",
-      "name": "Necoclí",
+      "slug": "la-playa-de-belen",
+      "name": "La Playa de Belén",
       "batch": "30",
       "total": 2,
       "cats": {
@@ -100,6 +91,15 @@
       "total": 3,
       "cats": {
         "alimentacion": 3
+      }
+    },
+    {
+      "slug": "necocli",
+      "name": "Necoclí",
+      "batch": "30",
+      "total": 3,
+      "cats": {
+        "hospedaje": 3
       }
     },
     {
