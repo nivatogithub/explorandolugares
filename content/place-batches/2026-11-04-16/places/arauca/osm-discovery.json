@@ -1,0 +1,603 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-70.76916,7.07352,-70.74516,7.097519999999999",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    7.08552,
+    -70.75716
+  ],
+  "raw_sha256": "edf1563bc6d0b66e349dbde59cfe3703daf44466ba591920647eb0d589b6fe56",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Hotel Santa Bárbara",
+      "category": "accommodation",
+      "latitude": 7.0858495,
+      "longitude": -70.7541067,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1712152298",
+      "source_updated_at": "2025-05-15T01:58:46Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Santa Bárbara",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "La Posada del Duque",
+      "category": "accommodation",
+      "latitude": 7.0811324,
+      "longitude": -70.7479501,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1823548835",
+      "source_updated_at": "2013-09-30T00:26:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "La Posada del Duque",
+        "tourism": "motel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Nova Park",
+      "category": "accommodation",
+      "latitude": 7.0837596,
+      "longitude": -70.7573325,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1823561637",
+      "source_updated_at": "2012-07-13T01:42:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Nova Park",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Las Acacias",
+      "category": "restaurants",
+      "latitude": 7.0812836,
+      "longitude": -70.7496095,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2478242757",
+      "source_updated_at": "2013-09-30T21:20:03Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Las Acacias"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Heladería y Frutería la Campiña",
+      "category": "cafes",
+      "latitude": 7.0814206,
+      "longitude": -70.7522051,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3296817176",
+      "source_updated_at": "2020-03-17T06:48:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Calle 16",
+        "amenity": "ice_cream",
+        "name": "Heladería y Frutería la Campiña"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Muñecas show",
+      "category": "nightlife",
+      "latitude": 7.0889798,
+      "longitude": -70.755611,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4549374243",
+      "source_updated_at": "2016-12-11T15:42:51Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "bar",
+        "name": "Muñecas show",
+        "name:es": "Muñecas show"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Amadeus show",
+      "category": "nightlife",
+      "latitude": 7.0887728,
+      "longitude": -70.755827,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4549374674",
+      "source_updated_at": "2016-12-11T15:42:59Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "bar",
+        "name": "Amadeus show",
+        "name:es": "Amadeus show"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante",
+      "category": "restaurants",
+      "latitude": 7.0863649,
+      "longitude": -70.7567262,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7148764046",
+      "source_updated_at": "2020-01-21T13:13:53Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Capri",
+      "category": "accommodation",
+      "latitude": 7.0863799,
+      "longitude": -70.7570613,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7148780376",
+      "source_updated_at": "2020-01-21T13:12:52Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "description": "Apartaestudios económicos",
+        "name": "Hotel Capri",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Asados y gallina",
+      "category": "restaurants",
+      "latitude": 7.0804917,
+      "longitude": -70.754816,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7154557993",
+      "source_updated_at": "2020-01-23T17:35:45Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Asados y gallina"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Donde Carmen",
+      "category": "restaurants",
+      "latitude": 7.0826302,
+      "longitude": -70.7502993,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7177319330",
+      "source_updated_at": "2020-02-01T14:37:36Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Donde Carmen",
+        "opening_hours": "Mo-Sa 09:00-17:00"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Bar",
+      "category": "nightlife",
+      "latitude": 7.0815853,
+      "longitude": -70.7652392,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7179488571",
+      "source_updated_at": "2020-02-02T17:39:46Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "bar",
+        "name": "Bar"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pikarepa",
+      "category": "restaurants",
+      "latitude": 7.0902927,
+      "longitude": -70.7578732,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7182923366",
+      "source_updated_at": "2020-02-04T01:18:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Pikarepa"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Verano Plaza",
+      "category": "accommodation",
+      "latitude": 7.0886155,
+      "longitude": -70.7541243,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7301315117",
+      "source_updated_at": "2020-03-17T06:33:20Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Verano Plaza",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Sogueros Parrilla Bar",
+      "category": "restaurants",
+      "latitude": 7.0808517,
+      "longitude": -70.7585343,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7301786012",
+      "source_updated_at": "2020-03-17T10:58:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Sogueros Parrilla Bar"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Sanbara",
+      "category": "accommodation",
+      "latitude": 7.0890029,
+      "longitude": -70.7542455,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13117131997",
+      "source_updated_at": "2026-09-21T10:27:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Arauca",
+        "addr:postcode": "810001",
+        "addr:street": "Carrera 16 #24-61",
+        "alt_name": "Gran Hotel Internacional Sanbara",
+        "bar": "yes",
+        "contact:facebook": "https://www.facebook.com/hotelsanbara2016",
+        "email": "reservas@hotelsanbara.com.co",
+        "internet_access": "yes",
+        "internet_access:fee": "customers",
+        "name": "Hotel Sanbara",
+        "phone": "+57 310 3310907",
+        "reservation": "recommended",
+        "tourism": "hotel",
+        "website": "https://hotelsanbara.com.co/app/index.php",
+        "wheelchair": "yes"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque de la Juventud",
+      "category": "attraction_candidate",
+      "latitude": 7.080663700000001,
+      "longitude": -70.74846819999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/77659101",
+      "source_updated_at": "2026-07-15T14:47:44Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque de la Juventud"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Caldas",
+      "category": "attraction_candidate",
+      "latitude": 7.087414,
+      "longitude": -70.75794175,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/171301537",
+      "source_updated_at": "2012-07-13T01:49:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque Caldas"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Los Heroes",
+      "category": "attraction_candidate",
+      "latitude": 7.0824427,
+      "longitude": -70.75351535,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/240054843",
+      "source_updated_at": "2013-09-30T21:12:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque Los Heroes"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Biosaludable",
+      "category": "attraction_candidate",
+      "latitude": 7.0868871,
+      "longitude": -70.76355495,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/263303942",
+      "source_updated_at": "2015-05-21T12:53:23Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Biosaludable"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Biosaludable",
+      "category": "attraction_candidate",
+      "latitude": 7.0864397,
+      "longitude": -70.76569764999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/264693073",
+      "source_updated_at": "2014-03-06T02:17:19Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Biosaludable"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Simón Bolívar",
+      "category": "attraction_candidate",
+      "latitude": 7.0851989,
+      "longitude": -70.75776445,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/264693352",
+      "source_updated_at": "2014-03-06T02:29:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque Simón Bolívar"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "7 de Agosto",
+      "category": "attraction_candidate",
+      "latitude": 7.087369499999999,
+      "longitude": -70.76107625,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/272967667",
+      "source_updated_at": "2014-04-08T23:29:16Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "7 de Agosto"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Malecón Ecoturístico",
+      "category": "attraction_candidate",
+      "latitude": 7.0916168,
+      "longitude": -70.74846895,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/322901516",
+      "source_updated_at": "2022-10-12T11:08:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Malecón Ecoturístico"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Miramar",
+      "category": "attraction_candidate",
+      "latitude": 7.09355115,
+      "longitude": -70.76291685000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/322943952",
+      "source_updated_at": "2015-01-18T20:21:37Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque Miramar"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "De la Paz",
+      "category": "attraction_candidate",
+      "latitude": 7.083713449999999,
+      "longitude": -70.76520045,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/322951214",
+      "source_updated_at": "2015-01-18T20:57:44Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "De la Paz"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Córdoba",
+      "category": "attraction_candidate",
+      "latitude": 7.087937200000001,
+      "longitude": -70.7569264,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/323876519",
+      "source_updated_at": "2015-01-23T20:29:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque Córdoba"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Los Poetas",
+      "category": "attraction_candidate",
+      "latitude": 7.0802411,
+      "longitude": -70.76173695,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/326103434",
+      "source_updated_at": "2015-02-02T16:58:44Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque Los Poetas"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Santander",
+      "category": "attraction_candidate",
+      "latitude": 7.09408775,
+      "longitude": -70.75691385,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/326159845",
+      "source_updated_at": "2025-03-03T22:17:12Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque Santander"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Juguitos Pablito",
+      "category": "restaurants",
+      "latitude": 7.07543565,
+      "longitude": -70.75541530000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1284460106",
+      "source_updated_at": "2026-11-03T21:44:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "building": "yes",
+        "cuisine": "juice",
+        "name": "Juguitos Pablito"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

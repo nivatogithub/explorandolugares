@@ -1,0 +1,27 @@
+{
+  "query_url": "https://nominatim.openstreetmap.org/search?q=San+Jos%C3%A9+del+Guaviare%2C+Colombia&format=jsonv2&countrycodes=co&limit=5",
+  "results": [
+    {
+      "place_id": 307930241,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 11378346,
+      "lat": "2.5716141",
+      "lon": "-72.6426515",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 12,
+      "importance": 0.4094405247320548,
+      "addresstype": "city",
+      "name": "San José del Guaviare",
+      "display_name": "San José del Guaviare, Guaviare, RAP Amazonía, 950001, Colombia",
+      "boundingbox": [
+        "2.0118692",
+        "2.9248366",
+        "-73.6570937",
+        "-70.5067608"
+      ]
+    }
+  ],
+  "use": "Discovery bounds only, not an approved destination point"
+}

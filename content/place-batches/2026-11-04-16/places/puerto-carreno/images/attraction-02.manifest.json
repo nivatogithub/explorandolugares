@@ -1,0 +1,51 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "Laguna El Pañuelo, Reserva Bojonawi",
+    "source_url": "https://omacha.org/reserva-natural-bojonawi/",
+    "original_url": "https://omacha.org/wp-content/uploads/2012/05/www.omacha.org_images_la_fundacion_orinoco_bojonawi_boj1.jpg",
+    "license": "No confirmada; referencia de revisión privada",
+    "license_url": null,
+    "author_html": "Consultar fuente original",
+    "checked_at": "2026-11-04",
+    "sha256": "73e2405592946d0b66a436f113a0dca1e5f8c031d8e3eb6a57dfc570e0173e76",
+    "approval": null,
+    "publication_rights_status": "unconfirmed",
+    "user_scope": "Explicit user override of confirmation prerequisite for draft generation; does not establish photographer permission"
+  },
+  "master_path": "/Users/nivato/.codex/generated_images/01a1a7a5-8b15-7733-b0f9-da4294d1d1d9/exec-cacd0c8c-7531-4a5b-b462-114c1498bc11.png",
+  "master_sha256": "d5cff3f64723844e99a3601df5e172d7a439d8e88b8a56f4a045a554f2bb9301",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/attraction-02-1200.webp",
+      "sha256": "2a07f11a474d917d4cfd710bee2abec67ec946e2f28dad1149541a1b1e8be776",
+      "bytes": 79142
+    },
+    {
+      "file": "images/attraction-02-640.webp",
+      "sha256": "aa2d3dbddfd2959b8f573377a645af51bf701a3f42b7e23695bcefe63e0849c9",
+      "bytes": 25566
+    }
+  ],
+  "visual_review": {
+    "date": "2026-11-04",
+    "status": "review_candidate_not_human_approved",
+    "checks": [
+      "Output inspected against identified reference",
+      "Composition and principal geographic elements retained",
+      "Color output; no text overlay"
+    ],
+    "limitations": [
+      "Illustrations are not evidence of current conditions or access.",
+      "Original 300x200: fine texture is illustrative, not verified detail."
+    ]
+  },
+  "publication_ready": false,
+  "generation_prompt": "Create a faithful editorial ink/gouache illustration from this identified reference of Laguna El Pañuelo in Reserva Bojonawi, broad grey-brown water with smooth dark granite shore foreground left and rocky outcrop opposite right backed by dense low forest. Preserve the camera, exact shapes of rocks, gaps, shoreline and relative distances. Landscape3:2 crop of existing view, do not extend or invent scenery. Clearly painted yet realistic, natural full colors, fine visible brushwork, no text, no logos, no added people, structures or animals. Reference has limited resolution; do not invent fine geographic details absent from it. Private review draft.",
+  "prompt_record": "exact"
+}

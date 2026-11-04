@@ -1,0 +1,322 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-77.2860963,5.692435000000001,-77.2560963,5.722435",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    5.707435,
+    -77.2710963
+  ],
+  "raw_sha256": "8d8663d37d7528f5503d722de63e52f6accac1392a9f75d6a0a82fbc30cbcc1a",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Empanadas Dónde Inés",
+      "category": "restaurants",
+      "latitude": 5.7077509,
+      "longitude": -77.2657494,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790519",
+      "source_updated_at": "2022-08-15T21:57:40Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Empanadas Dónde Inés",
+        "name:en": "Empanadas Dónde Ines"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Jesusita",
+      "category": "accommodation",
+      "latitude": 5.7053065,
+      "longitude": -77.2722863,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9992862324",
+      "source_updated_at": "2022-09-01T13:38:54Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Jesusita",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Sapi’s Lancia a ElValle",
+      "category": "tour_operators",
+      "latitude": 5.7072656,
+      "longitude": -77.2678807,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9994895217",
+      "source_updated_at": "2022-09-02T12:12:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Sapi’s Lancia a ElValle",
+        "name:en": "Sapi’s boat to ElValle",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Canita",
+      "category": "accommodation",
+      "latitude": 5.7099982,
+      "longitude": -77.2661637,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13909571001",
+      "source_updated_at": "2026-06-04T12:32:55Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Barrio union",
+        "check_date": "2026-06-04",
+        "internet_access": "wlan",
+        "name": "Hotel Canita",
+        "phone": "+573216637244;+573186642266",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Ricuras de Panguí",
+      "category": "cafes",
+      "latitude": 5.7084277,
+      "longitude": -77.2662831,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13909594001",
+      "source_updated_at": "2026-06-04T12:42:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Calle Bellavista",
+        "check_date": "2026-06-04",
+        "name": "Ricuras de Panguí",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Escombros del Mar",
+      "category": "accommodation",
+      "latitude": 5.7092441,
+      "longitude": -77.2660941,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13910816001",
+      "source_updated_at": "2026-09-21T10:27:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "check_date": "2026-06-04",
+        "contact:facebook": "escombrosdelmarhostal",
+        "contact:instagram": "escombrosdelmarhostal",
+        "email": "escombrosdelmarhostal@gmail.com",
+        "name": "Escombros del Mar",
+        "phone": "+57 321 2336818",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "La Azotea",
+      "category": "restaurants",
+      "latitude": 5.7082578,
+      "longitude": -77.2666391,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13920944301",
+      "source_updated_at": "2026-06-08T18:39:00Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2026-06-04",
+        "cuisine": "burger;fish;local;regional",
+        "name": "La Azotea"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Obera Pacific",
+      "category": "accommodation",
+      "latitude": 5.7094557,
+      "longitude": -77.2668048,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13920944401",
+      "source_updated_at": "2026-06-08T18:39:02Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "check_date": "2026-06-04",
+        "name": "Obera Pacific",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Nuquimar",
+      "category": "accommodation",
+      "latitude": 5.7127114500000005,
+      "longitude": -77.26412955,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/675282451",
+      "source_updated_at": "2019-03-15T16:31:49Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Nuquimar",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Arena Azul",
+      "category": "accommodation",
+      "latitude": 5.7129335999999995,
+      "longitude": -77.26354760000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/675282453",
+      "source_updated_at": "2019-03-15T16:31:49Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:postcode": "276058",
+        "addr:street": "Calle 13",
+        "building": "yes",
+        "name": "Arena Azul",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Puerta del Sol",
+      "category": "accommodation",
+      "latitude": 5.7105996,
+      "longitude": -77.26582884999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/675282494",
+      "source_updated_at": "2019-03-15T16:31:12Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Puerta del Sol",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pacífico Travel",
+      "category": "accommodation",
+      "latitude": 5.7076654,
+      "longitude": -77.26613145,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/675282496",
+      "source_updated_at": "2019-03-15T15:49:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Pacífico Travel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Delfín Real",
+      "category": "accommodation",
+      "latitude": 5.709774250000001,
+      "longitude": -77.2660738,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/677086210",
+      "source_updated_at": "2019-03-15T16:31:12Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Delfín Real",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pola",
+      "category": "restaurants",
+      "latitude": 5.7096346,
+      "longitude": -77.26619595,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/677086211",
+      "source_updated_at": "2019-03-15T16:31:12Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Pola"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Iracas del Mar",
+      "category": "accommodation",
+      "latitude": 5.7162331,
+      "longitude": -77.26226835,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1460595219",
+      "source_updated_at": "2025-12-22T20:48:53Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Iracas del Mar",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "Laguna Damas del Nare",
+    "source_url": "https://www.welovevillavo.com/post/laguna-damas-del-nare-una-oportunidad-para-disfrutar-de-los-delfines-rosados",
+    "original_url": "https://static.wixstatic.com/media/a7501f_a0ed2820702947b9a887b98a87e4cec0~mv2.jpeg/v1/fill/w_984%2Ch_554%2Cal_c%2Cq_90/a7501f_a0ed2820702947b9a887b98a87e4cec0~mv2.jpeg",
+    "license": "No confirmada; referencia de revisión privada",
+    "license_url": null,
+    "author_html": "Consultar fuente original",
+    "checked_at": "2026-11-04",
+    "sha256": "59e517ceb33a05f1afce7bf041315d7eb2f0a7fa9ad8fd9945c673866e4a801f",
+    "approval": null,
+    "publication_rights_status": "unconfirmed",
+    "user_scope": "Explicit user override of confirmation prerequisite for draft generation; does not establish photographer permission"
+  },
+  "master_path": "/Users/nivato/.codex/generated_images/01a1a7a5-8b15-7733-b0f9-da4294d1d1d9/exec-a0c1afc4-3745-48c9-afa7-0dc7713111c3.png",
+  "master_sha256": "0fd297b9d1737137b36bdfd9ba35c22526afb338388c841ef7aeb8274b4acef8",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/attraction-03-1200.webp",
+      "sha256": "5f1cf86421a4c84090d37a067445826390592017513f12e94d1fb6dcae848ae4",
+      "bytes": 249472
+    },
+    {
+      "file": "images/attraction-03-640.webp",
+      "sha256": "1816e3930358f33e4338bfb9035e09834f14f956c9820a2d56a052c005c433f4",
+      "bytes": 84172
+    }
+  ],
+  "visual_review": {
+    "date": "2026-11-04",
+    "status": "review_candidate_not_human_approved",
+    "checks": [
+      "Output inspected against identified reference",
+      "Composition and principal geographic elements retained",
+      "Color output; no text overlay"
+    ],
+    "limitations": [
+      "Illustrations are not evidence of current conditions or access."
+    ]
+  },
+  "publication_ready": false,
+  "generation_prompt": "Transform this identified photograph of Laguna Damas del Nare: canoe with existing passengers wearing lifejackets, distant forest shoreline and open calm water into a clearly illustrated semi-realistic editorial ink/gouache rendition. 3:2 landscape, use existing view only, crop without inventing new geography. Preserve camera position, relative distances, shoreline, exact rock shapes and existing elements. Natural full colors, legible details and subtle brush texture. No extra people, animals, dolphins, buildings, bridges, boats, mountains or text. Do not alter anatomy or boat geometry. No claims of current conditions, private review illustration.",
+  "prompt_record": "exact"
+}

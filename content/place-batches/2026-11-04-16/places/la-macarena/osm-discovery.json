@@ -1,0 +1,327 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-73.80275,2.16897,-73.77275,2.19897",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    2.18397,
+    -73.78775
+  ],
+  "raw_sha256": "c9dffead2d2c75b567c72908ce44d03d5b0b625bd33776d16f10b939d40c036c",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "La Cascada",
+      "category": "accommodation",
+      "latitude": 2.1834971,
+      "longitude": -73.7867131,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/965614804",
+      "source_updated_at": "2010-10-26T02:39:57Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "La Cascada",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Mi Tierrita",
+      "category": "restaurants",
+      "latitude": 2.1845144,
+      "longitude": -73.7872421,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/965614889",
+      "source_updated_at": "2024-09-16T21:37:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Mi Tierrita"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Residencia Macarena",
+      "category": "accommodation",
+      "latitude": 2.1842624,
+      "longitude": -73.7881448,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4367158791",
+      "source_updated_at": "2024-02-13T14:33:59Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Residencia Macarena",
+        "name:es": "Recidencia Macarena",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Antony's",
+      "category": "accommodation",
+      "latitude": 2.1845643,
+      "longitude": -73.7873249,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4452381363",
+      "source_updated_at": "2024-09-16T21:37:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Antony's",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Victor",
+      "category": "accommodation",
+      "latitude": 2.17932,
+      "longitude": -73.7843808,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4519928989",
+      "source_updated_at": "2016-11-25T03:47:04Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "vía a Caño Cristales",
+        "name": "Hotel Victor",
+        "name:es": "Hotel Victor",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "hotel de mariana$",
+      "category": "accommodation",
+      "latitude": 2.1843489,
+      "longitude": -73.7870684,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4922225121",
+      "source_updated_at": "2017-06-18T13:44:13Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "hotel de mariana$",
+        "name:en": "hotel de Mariana$",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Paparazzi",
+      "category": "nightlife",
+      "latitude": 2.1846826,
+      "longitude": -73.7876625,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4942378571",
+      "source_updated_at": "2017-06-29T14:48:11Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "bar",
+        "name": "Paparazzi",
+        "smoking": "outside"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Los Cristales",
+      "category": "accommodation",
+      "latitude": 2.1837652,
+      "longitude": -73.7866292,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5040138321",
+      "source_updated_at": "2017-08-17T00:36:38Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "calle 5 # 7 - 20",
+        "name": "Los Cristales",
+        "name:es": "Los Cristales",
+        "opening_hours": "24/7",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Sazon Caqueteño",
+      "category": "restaurants",
+      "latitude": 2.1842925,
+      "longitude": -73.7870418,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5278713962",
+      "source_updated_at": "2017-12-12T00:41:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Sazon Caqueteño"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Marín",
+      "category": "accommodation",
+      "latitude": 2.1815234,
+      "longitude": -73.786982,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5452365124",
+      "source_updated_at": "2018-03-04T01:08:36Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Marín",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Antojitos",
+      "category": "restaurants",
+      "latitude": 2.1829868,
+      "longitude": -73.7863126,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5553110121",
+      "source_updated_at": "2018-04-14T18:59:58Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Antojitos"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Lithos. El Café de los Cinco Colores",
+      "category": "cafes",
+      "latitude": 2.1824199,
+      "longitude": -73.7857154,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5559601633",
+      "source_updated_at": "2022-12-12T08:49:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "name": "Lithos. El Café de los Cinco Colores"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Posada Los Cristales",
+      "category": "accommodation",
+      "latitude": 2.1802545,
+      "longitude": -73.7821652,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11070293706",
+      "source_updated_at": "2023-07-27T00:57:28Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Posada Los Cristales",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel La Nevera",
+      "category": "accommodation",
+      "latitude": 2.1842773,
+      "longitude": -73.792676,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12245029802",
+      "source_updated_at": "2024-10-11T22:07:42Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel La Nevera",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque",
+      "category": "attraction_candidate",
+      "latitude": 2.18397335,
+      "longitude": -73.787749,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/82993033",
+      "source_updated_at": "2019-04-28T07:46:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "landuse": "village_green",
+        "leisure": "park",
+        "name": "Parque"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Punto Verde",
+      "category": "accommodation",
+      "latitude": 2.1843813,
+      "longitude": -73.7887327,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1249924080",
+      "source_updated_at": "2024-09-16T20:27:22Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Punto Verde",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

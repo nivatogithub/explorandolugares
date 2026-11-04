@@ -1,0 +1,120 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-67.93799,3.85304,-67.91399,3.87704",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    3.86504,
+    -67.92599
+  ],
+  "raw_sha256": "486214504e7b80de10b408daa30c389134e42cbc953f7510cb1ada1f4b97a59a",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Cabaña de Joaco",
+      "category": "restaurants",
+      "latitude": 3.8634949,
+      "longitude": -67.9191463,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1117536658",
+      "source_updated_at": "2011-01-23T20:27:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Cabaña de Joaco"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Residencias El Turista del Guainia",
+      "category": "accommodation",
+      "latitude": 3.8669826,
+      "longitude": -67.9308167,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4937557423",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:postcode": "472",
+        "addr:street": "calle 16 3",
+        "email": "residenciaselturistadelguainia@gmail.com",
+        "internet_access": "wlan",
+        "name": "Residencias El Turista del Guainia",
+        "name:es": "Residencias El Turista del Guainia",
+        "opening_hours": "24/7",
+        "phone": "+57 316 8192783",
+        "tourism": "hotel",
+        "website": "http://viktorguarin.blogspot.com.co/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Turismo de Naturaleza por el Guainía",
+      "category": "tour_operators",
+      "latitude": 3.866924,
+      "longitude": -67.9242893,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9215404021",
+      "source_updated_at": "2021-11-01T04:19:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Turismo de Naturaleza por el Guainía",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Sal & Pimienta - Fusion Gourmet",
+      "category": "restaurants",
+      "latitude": 3.8711226,
+      "longitude": -67.9233754,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12158967783",
+      "source_updated_at": "2026-07-18T21:59:11Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Inírida",
+        "addr:housenumber": "9 - 86",
+        "addr:street": "Calle 25",
+        "amenity": "restaurant",
+        "name": "Sal & Pimienta - Fusion Gourmet",
+        "phone": "+57 322 8991909"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Sandwich Express",
+      "category": "restaurants",
+      "latitude": 3.868036,
+      "longitude": -67.9246745,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12158967784",
+      "source_updated_at": "2024-09-06T02:19:34Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Sandwich Express"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

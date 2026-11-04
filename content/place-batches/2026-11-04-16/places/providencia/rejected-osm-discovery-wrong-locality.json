@@ -1,0 +1,622 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-81.7354155,12.5225979,-81.7054155,12.5525979",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    12.5375979,
+    -81.7204155
+  ],
+  "raw_sha256": "8f541cc35549e1b7b5cc335002b0e2381bd79f1706a774bbc94bbc8bec69b7e9",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Hotel Sol Caribe Campo",
+      "category": "accommodation",
+      "latitude": 12.5383324,
+      "longitude": -81.7110694,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/313845501",
+      "source_updated_at": "2015-10-12T00:52:46Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Sol Caribe Campo",
+        "operator": "Solar Hoteles",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Kattys Paradise",
+      "category": "accommodation",
+      "latitude": 12.5432122,
+      "longitude": -81.707893,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1269638942",
+      "source_updated_at": "2011-05-01T20:01:13Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Kattys Paradise",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "The Grog",
+      "category": "restaurants",
+      "latitude": 12.5431958,
+      "longitude": -81.7055586,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1278910629",
+      "source_updated_at": "2017-01-04T22:56:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "regional",
+        "name": "The Grog"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "El Rincón de la Langosta",
+      "category": "restaurants",
+      "latitude": 12.5487295,
+      "longitude": -81.7305125,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3166752302",
+      "source_updated_at": "2014-11-04T16:13:45Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "El Rincón de la Langosta"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Blue Cove Hotel",
+      "category": "accommodation",
+      "latitude": 12.5275884,
+      "longitude": -81.7316185,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3166752303",
+      "source_updated_at": "2019-08-12T20:44:59Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Blue Cove Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cocoplum Beach Hotel",
+      "category": "accommodation",
+      "latitude": 12.5433402,
+      "longitude": -81.7060965,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3167072961",
+      "source_updated_at": "2014-11-04T18:41:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Cocoplum Beach Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Playa Tranquilo bed & Breakfast",
+      "category": "accommodation",
+      "latitude": 12.5337863,
+      "longitude": -81.7335934,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3406301419",
+      "source_updated_at": "2026-09-18T10:07:17Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Playa Tranquilo bed & Breakfast",
+        "phone": "+57 318 8032667",
+        "smoking": "separated",
+        "tourism": "hotel",
+        "website": "http://www.playatranquilo.com"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Posada Green Sea",
+      "category": "accommodation",
+      "latitude": 12.5365809,
+      "longitude": -81.7080829,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3544808566",
+      "source_updated_at": "2019-11-09T23:48:30Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "San Luis",
+        "addr:street": "Harmony Hill Via San Luis",
+        "name": "Posada Green Sea",
+        "operator": "Flory Perez",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Moonshine Restaurant",
+      "category": "restaurants",
+      "latitude": 12.526088,
+      "longitude": -81.7283068,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3556687864",
+      "source_updated_at": "2019-01-13T17:01:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Moonshine Restaurant"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Gustavo's Bar",
+      "category": "nightlife",
+      "latitude": 12.5484545,
+      "longitude": -81.7204315,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3790921359",
+      "source_updated_at": "2015-10-18T01:41:20Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "bar",
+        "name": "Gustavo's Bar"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Kingston Jerk Spot",
+      "category": "restaurants",
+      "latitude": 12.533052,
+      "longitude": -81.7078934,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5181075821",
+      "source_updated_at": "2017-10-22T02:34:08Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "barbecue;caribbean",
+        "name": "Kingston Jerk Spot"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Mushe Fast Food",
+      "category": "restaurants",
+      "latitude": 12.5322547,
+      "longitude": -81.7082129,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5211228929",
+      "source_updated_at": "2017-11-04T22:04:02Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Mushe Fast Food"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Lucille's Lodging",
+      "category": "accommodation",
+      "latitude": 12.5319589,
+      "longitude": -81.7087791,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5211231441",
+      "source_updated_at": "2019-08-12T22:05:36Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Lucille's Lodging",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante Cafetería Tamara",
+      "category": "restaurants",
+      "latitude": 12.5429783,
+      "longitude": -81.7071502,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5211243771",
+      "source_updated_at": "2017-11-04T22:14:20Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Cafetería Tamara"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Big Mama",
+      "category": "nightlife",
+      "latitude": 12.5289392,
+      "longitude": -81.7346208,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5401706621",
+      "source_updated_at": "2019-12-09T00:59:44Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "bar",
+        "name": "Big Mama"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Miss Lydia",
+      "category": "restaurants",
+      "latitude": 12.5260929,
+      "longitude": -81.7121454,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5418878523",
+      "source_updated_at": "2018-02-17T20:32:11Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Miss Lydia"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante Lydia",
+      "category": "restaurants",
+      "latitude": 12.5261221,
+      "longitude": -81.7121107,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5433935722",
+      "source_updated_at": "2018-02-24T18:38:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Lydia",
+        "name:en": "Lydia's restaurant"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Ground Road Native Place",
+      "category": "accommodation",
+      "latitude": 12.5312991,
+      "longitude": -81.7091826,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5719136270",
+      "source_updated_at": "2018-06-28T04:05:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Ground Road Native Place",
+        "payment:credit_cards": "no",
+        "smoking": "no",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante Fabiola",
+      "category": "restaurants",
+      "latitude": 12.5461955,
+      "longitude": -81.7301011,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5724614324",
+      "source_updated_at": "2019-11-09T23:48:30Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Fabiola"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cueva de Morgan",
+      "category": "attraction_candidate",
+      "latitude": 12.542381,
+      "longitude": -81.7292159,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5724627223",
+      "source_updated_at": "2025-09-14T20:25:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Cueva de Morgan",
+        "natural": "cave_entrance",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Natural Blow Holes",
+      "category": "attraction_candidate",
+      "latitude": 12.5365002,
+      "longitude": -81.733438,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6059022685",
+      "source_updated_at": "2023-10-30T21:52:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Natural Blow Holes",
+        "name:en": "Natural Blow Holes",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Blue Cove",
+      "category": "attraction_candidate",
+      "latitude": 12.5256328,
+      "longitude": -81.7288237,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6059022785",
+      "source_updated_at": "2019-08-12T20:44:59Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Blue Cove",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Coconut Paradise Lodge",
+      "category": "accommodation",
+      "latitude": 12.5419268,
+      "longitude": -81.7159625,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6336637686",
+      "source_updated_at": "2019-03-13T23:46:23Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Coconut Paradise Lodge",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Miraflores Hotel",
+      "category": "accommodation",
+      "latitude": 12.5236501,
+      "longitude": -81.7282525,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6960914043",
+      "source_updated_at": "2019-11-09T23:48:30Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Miraflores Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Mergulho san Andrés",
+      "category": "attraction_candidate",
+      "latitude": 12.535899,
+      "longitude": -81.7334029,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7836176385",
+      "source_updated_at": "2025-09-14T20:25:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Mergulho san Andrés",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Mergulho san Andrés",
+      "category": "attraction_candidate",
+      "latitude": 12.5385674,
+      "longitude": -81.7328715,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7836176785",
+      "source_updated_at": "2020-08-22T23:45:26Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Mergulho san Andrés",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Big V Raizal Home",
+      "category": "accommodation",
+      "latitude": 12.5285245,
+      "longitude": -81.7117634,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9395620417",
+      "source_updated_at": "2023-08-22T00:35:46Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Big V Raizal Home",
+        "name:ru": "Big V Raizal Home Супер хостел",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Fuente de mar",
+      "category": "attraction_candidate",
+      "latitude": 12.5364966,
+      "longitude": -81.7334224,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9397556517",
+      "source_updated_at": "2023-08-22T00:35:46Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Fuente de mar",
+        "name:ru": "Морской фонтан",
+        "tourism": "viewpoint"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Shipwreck",
+      "category": "attraction_candidate",
+      "latitude": 12.5394924,
+      "longitude": -81.7061934,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9953180717",
+      "source_updated_at": "2022-08-14T17:47:02Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Shipwreck",
+        "name:en": "shipwreck",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cueva de Morgan",
+      "category": "attraction_candidate",
+      "latitude": 12.5424585,
+      "longitude": -81.7296281,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12434308112",
+      "source_updated_at": "2025-09-14T20:25:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Cueva de Morgan",
+        "name:en": "Morgan Cave",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Jardin Botanico de San Andres",
+      "category": "attraction_candidate",
+      "latitude": 12.5371776,
+      "longitude": -81.71159259999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/713176581",
+      "source_updated_at": "2019-11-09T23:48:30Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Jardin Botanico de San Andres"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

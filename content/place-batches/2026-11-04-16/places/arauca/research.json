@@ -1,0 +1,441 @@
+{
+  "slug": "arauca",
+  "name": "Arauca",
+  "country_code": "CO",
+  "department_code": "81",
+  "municipality_code": "81001",
+  "municipality_name": "Arauca",
+  "type": "municipality",
+  "status": "prepared_for_private_review",
+  "public": false,
+  "intro_draft_es": "Arauca combina el paisaje del río fronterizo con la cultura llanera y un centro urbano que permite acercarse a la vida cotidiana de esta región. Su catedral y el malecón ofrecen dos miradas diferentes de la ciudad; las excursiones fluviales se coordinan con operadores locales.",
+  "source_url": "https://colombia.travel/es/arauca",
+  "source_checked_at": "2026-11-04",
+  "previous_plan": "crecimiento-colombia/colombia/departamentos/arauca/lugares/arauca/lugar.json",
+  "previous_plan_state": "planned",
+  "geolocation": {
+    "latitude": 7.0851989,
+    "longitude": -70.75776445,
+    "point_kind": "mapped_building_or_site_reference_not_entrance",
+    "source_url": "https://www.openstreetmap.org/way/264693352",
+    "site_name": "Parque Simón Bolívar"
+  },
+  "attractions": [
+    {
+      "name": "Catedral Santa Bárbara de Arauca",
+      "geolocation": {
+        "latitude": 7.08552,
+        "longitude": -70.75716,
+        "point_kind": "building_location_not_entrance",
+        "source_url": "https://mapcarta.com/es/W166669582",
+        "osm_id": "way/166669582"
+      },
+      "description_es": "La catedral se encuentra junto al Parque Simón Bolívar y forma parte del recorrido por el centro de Arauca. Su torre con reloj, fachada clara y detalles amarillos la distinguen del entorno urbano.",
+      "status": "identity_and_mapped_site_verified_access_pending",
+      "image_key": "attraction-01",
+      "image": {
+        "file": "images/attraction-01-1200.webp",
+        "status": "pending_human_review"
+      },
+      "public_map_url": null
+    },
+    {
+      "name": "Malecón Ecoturístico del río Arauca",
+      "geolocation": {
+        "latitude": 7.09162,
+        "longitude": -70.74847,
+        "kind": "mapped_park_area_reference",
+        "source_url": "https://mapcarta.com/es/W322901516",
+        "osm_id": "way/322901516"
+      },
+      "status": "identified_location_access_conditions_pending",
+      "note": "Punto de referencia del parque, no entrada exacta. No confundir con todo el frente fluvial urbano.",
+      "image_key": "attraction-02",
+      "image": {
+        "file": "images/attraction-02-1200.webp",
+        "status": "pending_human_review"
+      },
+      "public_map_url": null,
+      "description_es": "Un paseo para acercarse al paisaje del río Arauca desde la ciudad y observar sus orillas. La luz del atardecer ofrece otra manera de apreciar este escenario fluvial; las salidas en embarcación se organizan por separado."
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Avistamiento de toninas en el río Arauca",
+      "operator": "Araucatur",
+      "offer_url": "https://araucatur.com/",
+      "geolocation": null,
+      "location_exception": "Itinerant river excursion; meeting point not established. Do not pin office as tour site.",
+      "public_description_es": "Recorrido fluvial para observar la fauna del río Arauca, sin garantizar encuentros con animales.",
+      "status": "operator_offer_documented"
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Hotel Sanbara",
+      "category": "accommodation",
+      "address": "Carrera 16 #24-61, Arauca",
+      "phone": "+573103310907",
+      "email": "reservas@hotelsanbara.com.co",
+      "website": "https://hotelsanbara.com.co",
+      "source_url": "https://mapcarta.com/es/N13117131997",
+      "geolocation": {
+        "latitude": 7.089,
+        "longitude": -70.75425,
+        "point_kind": "mapped_site_not_verified_entrance"
+      },
+      "status": "documented_unclaimed",
+      "verified_business": false,
+      "public": false,
+      "claimed": false
+    },
+    {
+      "name": "Araucatur",
+      "category": "tour_operator",
+      "address": "Calle 22 N°19-49, Arauca",
+      "phone": "+573203842822",
+      "email": "viajesarauca@hotmail.com",
+      "source_url": "https://araucatur.com/",
+      "geolocation": null,
+      "status": "documented_geolocation_pending",
+      "verified_business": false,
+      "public": false,
+      "claimed": false
+    },
+    {
+      "name": "Hotel Quinta del Sol",
+      "category": "accommodation",
+      "address": "Carrera 16 #14-15, Arauca",
+      "phone": "+573175997074",
+      "source_url": "https://hotelquintadelsol.co/",
+      "geolocation": null,
+      "status": "documented_geolocation_pending",
+      "verified_business": false,
+      "public": false,
+      "claimed": false
+    },
+    {
+      "name": "Hotel Santa Bárbara",
+      "category": "accommodation",
+      "latitude": 7.0858495,
+      "longitude": -70.7541067,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1712152298",
+      "source_updated_at": "2025-05-15T01:58:46Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Santa Bárbara",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 7.0858495,
+        "longitude": -70.7541067,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1712152298"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Hotel Nova Park",
+      "category": "accommodation",
+      "latitude": 7.0837596,
+      "longitude": -70.7573325,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1823561637",
+      "source_updated_at": "2012-07-13T01:42:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Nova Park",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 7.0837596,
+        "longitude": -70.7573325,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1823561637"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Las Acacias",
+      "category": "restaurants",
+      "latitude": 7.0812836,
+      "longitude": -70.7496095,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2478242757",
+      "source_updated_at": "2013-09-30T21:20:03Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Las Acacias"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 7.0812836,
+        "longitude": -70.7496095,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2478242757"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Heladería y Frutería la Campiña",
+      "category": "cafes",
+      "latitude": 7.0814206,
+      "longitude": -70.7522051,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3296817176",
+      "source_updated_at": "2020-03-17T06:48:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Calle 16",
+        "amenity": "ice_cream",
+        "name": "Heladería y Frutería la Campiña"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 7.0814206,
+        "longitude": -70.7522051,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/3296817176"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Hotel Capri",
+      "category": "accommodation",
+      "latitude": 7.0863799,
+      "longitude": -70.7570613,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7148780376",
+      "source_updated_at": "2020-01-21T13:12:52Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "description": "Apartaestudios económicos",
+        "name": "Hotel Capri",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 7.0863799,
+        "longitude": -70.7570613,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/7148780376"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Donde Carmen",
+      "category": "restaurants",
+      "latitude": 7.0826302,
+      "longitude": -70.7502993,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7177319330",
+      "source_updated_at": "2020-02-01T14:37:36Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Donde Carmen",
+        "opening_hours": "Mo-Sa 09:00-17:00"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 7.0826302,
+        "longitude": -70.7502993,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/7177319330"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Pikarepa",
+      "category": "restaurants",
+      "latitude": 7.0902927,
+      "longitude": -70.7578732,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7182923366",
+      "source_updated_at": "2020-02-04T01:18:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Pikarepa"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 7.0902927,
+        "longitude": -70.7578732,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/7182923366"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Hotel Verano Plaza",
+      "category": "accommodation",
+      "latitude": 7.0886155,
+      "longitude": -70.7541243,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7301315117",
+      "source_updated_at": "2020-03-17T06:33:20Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Verano Plaza",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 7.0886155,
+        "longitude": -70.7541243,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/7301315117"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Sogueros Parrilla Bar",
+      "category": "restaurants",
+      "latitude": 7.0808517,
+      "longitude": -70.7585343,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7301786012",
+      "source_updated_at": "2020-03-17T10:58:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Sogueros Parrilla Bar"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 7.0808517,
+        "longitude": -70.7585343,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/7301786012"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Juguitos Pablito",
+      "category": "restaurants",
+      "latitude": 7.07543565,
+      "longitude": -70.75541530000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1284460106",
+      "source_updated_at": "2026-11-03T21:44:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "building": "yes",
+        "cuisine": "juice",
+        "name": "Juguitos Pablito"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 7.07543565,
+        "longitude": -70.75541530000001,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/1284460106"
+      },
+      "source_license": "ODbL 1.0"
+    }
+  ],
+  "media": {
+    "hero": {
+      "status": "pending_human_review",
+      "file": "images/hero-1200.webp",
+      "approval": null,
+      "image_key": "hero"
+    },
+    "style": "Follow repository image skill; never mislabel illustrations as photographs"
+  },
+  "requirements": {
+    "business_target": 30,
+    "business_categories": [
+      "accommodation",
+      "restaurants",
+      "cafes",
+      "tour_operators",
+      "crafts",
+      "transport"
+    ],
+    "image_format": "webp",
+    "aspect_ratio": "3:2",
+    "locales": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "publication_blockers": [
+      "Verified named locations and precise coordinates",
+      "Photo references and visual review",
+      "Documented business records",
+      "Verified operator offers if experiences included",
+      "Full ES EN PT-BR editorial and SEO review"
+    ]
+  },
+  "boundary_notes": [],
+  "research_supplement": "verified-research.json",
+  "business_selection_note": "Named OSM public listings, excluding generic labels, attractions, duplicates and nightlife. Mapping does not verify ownership, legal registration, current operation or alliance.",
+  "review_ready_summary": {
+    "images_generated": 3,
+    "images_expected": 3,
+    "attractions_with_site_coordinates": 2,
+    "named_business_records": 13,
+    "businesses_with_coordinates": 11,
+    "business_target": 30,
+    "status": "private_review_not_publication_ready",
+    "remaining": [
+      "Human visual approval",
+      "Complete missing business coordinates and current identity checks",
+      "Public named map links",
+      "Full EN/PT-BR editorial and SEO",
+      "Business target gap where present"
+    ]
+  },
+  "why_visit_es": [
+    "Acercarse al paisaje del río Arauca desde el malecón.",
+    "Conocer la catedral y los espacios del centro urbano.",
+    "Explorar la cultura llanera y consultar recorridos fluviales con operadores locales."
+  ]
+}

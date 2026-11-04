@@ -1,0 +1,486 @@
+{
+  "slug": "la-macarena",
+  "name": "La Macarena",
+  "country_code": "CO",
+  "department_code": "50",
+  "municipality_code": "50350",
+  "municipality_name": "La Macarena",
+  "type": "municipality",
+  "status": "prepared_for_private_review",
+  "public": false,
+  "intro_draft_es": "Ríos, formaciones rocosas y recorridos regulados en el entorno de la Serranía de La Macarena.",
+  "source_url": "https://www.parquesnacionales.gov.co/sala-prensa/noticias/ordenar-para-conservar-una-apuesta-que-cambio-el-turismo-en-los-parques-nacionales/",
+  "source_checked_at": "2026-11-04",
+  "previous_plan": "crecimiento-colombia/colombia/departamentos/meta/lugares/la-macarena/lugar.json",
+  "previous_plan_state": "planned",
+  "geolocation": {
+    "latitude": 2.18397,
+    "longitude": -73.78775,
+    "source_url": "https://mapcarta.com/es/W82993033",
+    "label": "Parque junto a la parroquia Nuestra Señora de La Macarena",
+    "point_kind": "identified_central_square",
+    "checked_at": "2026-11-04",
+    "maps_url": null
+  },
+  "attractions": [
+    {
+      "name": "Caño Cristales",
+      "status": "documented_for_review",
+      "source_url": "https://www.parquesnacionales.gov.co/sala-prensa/noticias/inicia-temporada-en-cano-cristales-naturalmente-responsable/",
+      "municipal_boundary": "documented_source",
+      "geolocation": {
+        "latitude": 2.26417,
+        "longitude": -73.79439,
+        "source_url": "https://mapcarta.com/es/N2408417816",
+        "label": "Pozos de Caño Cristales, referencia de un sector del río; no punto de ingreso",
+        "point_kind": "site_reference_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "maps_url": null
+      },
+      "image": null,
+      "description_es": "Los colores de las plantas acuáticas cambian con las condiciones naturales del caño. La visita está regulada y depende de la temporada y de los senderos autorizados."
+    },
+    {
+      "name": "Mirador y Cristalitos",
+      "status": "documented_for_review",
+      "source_url": "https://www.parquesnacionales.gov.co/wp-content/uploads/2024/06/ABC-LA-MACARENA-2024.pdf",
+      "municipal_boundary": "documented_source",
+      "geolocation": {
+        "latitude": 2.22039,
+        "longitude": -73.79253,
+        "source_url": "https://mapcarta.com/es/N5010088221",
+        "label": "Caño Cristalitos",
+        "point_kind": "site_reference_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "maps_url": null
+      },
+      "image": null,
+      "description_es": "Este escenario combina paisaje de la serranía y un caño con vegetación acuática. El acceso requiere gestionar las condiciones de visita aplicables."
+    },
+    {
+      "name": "Raudal de Angosturas I",
+      "status": "documented_for_review",
+      "source_url": "https://www.parquesnacionales.gov.co/sala-prensa/noticias/inicia-temporada-en-cano-cristales-naturalmente-responsable/",
+      "municipal_boundary": "documented_source",
+      "geolocation": {
+        "latitude": 2.3015555555555554,
+        "longitude": -73.89211111111112,
+        "label": "Mirador 1 del sendero Petroglifos Angosturas I",
+        "point_kind": "official_documented_viewpoint_not_entrance",
+        "source_url": "https://www.parquesnacionales.gov.co/wp-content/uploads/2020/10/plan-de-manejo-del-pnn-tinigua-2018-2023.pdf#page=277",
+        "source_date": "2018",
+        "checked_at": "2026-11-04",
+        "note": "Punto de mirador documentado, no coordenada de toda la garganta ni autorización actual de acceso."
+      },
+      "image": null,
+      "description_es": "El estrechamiento del río Guayabero reúne paisaje rocoso y senderos con vestigios arqueológicos. Las rutas y modalidades dependen de las condiciones del río."
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Recorrido guiado por Caño Cristales",
+      "description_es": "Recorre senderos habilitados del caño con acompañamiento y gestión de ingreso. La ruta depende de la temporada y las autorizaciones.",
+      "operator_evidence": "Aventura Tours SAS",
+      "source_url": "https://www.cano-cristales.com/cano-cristales-tour/",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 2.26417,
+        "longitude": -73.79439,
+        "source_url": "https://mapcarta.com/es/N2408417816",
+        "label": "Pozos de Caño Cristales, referencia de un sector del río; no punto de ingreso",
+        "point_kind": "excursion_destination_reference_not_meeting_point",
+        "checked_at": "2026-11-04",
+        "maps_url": null
+      },
+      "geolocation_exception": "Coordenada del atractivo visitado. El punto de encuentro se confirma con el operador.",
+      "status": "documented_offer_for_review",
+      "public": false
+    },
+    {
+      "name": "Excursión a Cristalitos",
+      "description_es": "Combina desplazamiento por el Guayabero y caminata para conocer el escenario de Cristalitos, según condiciones de ingreso.",
+      "operator_evidence": "Cristales Tinigua Tour",
+      "source_url": "https://www.cristalestiniguatour.com/cano-cristalitos/",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 2.22039,
+        "longitude": -73.79253,
+        "source_url": "https://mapcarta.com/es/N5010088221",
+        "label": "Caño Cristalitos",
+        "point_kind": "excursion_destination_reference_not_meeting_point",
+        "checked_at": "2026-11-04",
+        "maps_url": null
+      },
+      "geolocation_exception": "Coordenada del atractivo visitado. El punto de encuentro se confirma con el operador.",
+      "status": "documented_offer_for_review",
+      "public": false
+    },
+    {
+      "name": "Recorrido por el Raudal de Angosturas",
+      "description_es": "Excursión fluvial y caminata interpretativa por el sector del raudal, sujeta a las condiciones de acceso.",
+      "operator_evidence": "Guaya Ecotours",
+      "source_url": "https://guayaecotours.com/tour/raudal-de-angosturas/",
+      "geolocation": {
+        "latitude": 2.3015555555555554,
+        "longitude": -73.89211111111112,
+        "label": "Mirador 1 del sendero Petroglifos Angosturas I",
+        "point_kind": "documented_viewpoint_on_excursion_not_meeting_point",
+        "source_url": "https://www.parquesnacionales.gov.co/wp-content/uploads/2020/10/plan-de-manejo-del-pnn-tinigua-2018-2023.pdf#page=277",
+        "source_date": "2018",
+        "checked_at": "2026-11-04",
+        "note": "Punto de mirador documentado, no coordenada de toda la garganta ni autorización actual de acceso."
+      },
+      "status": "documented_offer_for_review",
+      "public": false
+    }
+  ],
+  "businesses": [
+    {
+      "name": "La Cascada",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/965614804",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1834971,
+        "longitude": -73.7867131,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/965614804",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Mi Tierrita",
+      "category": "restaurants",
+      "source_url": "https://www.openstreetmap.org/node/965614889",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1845144,
+        "longitude": -73.7872421,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/965614889",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Residencia Macarena",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/4367158791",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1842624,
+        "longitude": -73.7881448,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4367158791",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Hotel Antony's",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/4452381363",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1845643,
+        "longitude": -73.7873249,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4452381363",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Hotel Victor",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/4519928989",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.17932,
+        "longitude": -73.7843808,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4519928989",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": "vía a Caño Cristales",
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Paparazzi",
+      "category": "nightlife",
+      "source_url": "https://www.openstreetmap.org/node/4942378571",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1846826,
+        "longitude": -73.7876625,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4942378571",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Los Cristales",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/5040138321",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1837652,
+        "longitude": -73.7866292,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5040138321",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": "calle 5 # 7 - 20",
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Sazon Caqueteño",
+      "category": "restaurants",
+      "source_url": "https://www.openstreetmap.org/node/5278713962",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1842925,
+        "longitude": -73.7870418,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5278713962",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Hotel Marín",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/5452365124",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1815234,
+        "longitude": -73.786982,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5452365124",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Antojitos",
+      "category": "restaurants",
+      "source_url": "https://www.openstreetmap.org/node/5553110121",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1829868,
+        "longitude": -73.7863126,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5553110121",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Lithos. El Café de los Cinco Colores",
+      "category": "cafes",
+      "source_url": "https://www.openstreetmap.org/node/5559601633",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1824199,
+        "longitude": -73.7857154,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5559601633",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Posada Los Cristales",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/11070293706",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1802545,
+        "longitude": -73.7821652,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/11070293706",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Hotel La Nevera",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/12245029802",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1842773,
+        "longitude": -73.792676,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/12245029802",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Punto Verde",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/way/1249924080",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 2.1843813,
+        "longitude": -73.7887327,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/1249924080",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    }
+  ],
+  "media": {
+    "hero": {
+      "status": "reference_pending",
+      "file": null,
+      "approval": null
+    },
+    "style": "Follow repository image skill; never mislabel illustrations as photographs"
+  },
+  "requirements": {
+    "business_target": 30,
+    "business_categories": [
+      "accommodation",
+      "restaurants",
+      "cafes",
+      "tour_operators",
+      "crafts",
+      "transport"
+    ],
+    "image_format": "webp",
+    "aspect_ratio": "3:2",
+    "locales": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "publication_blockers": [
+      "Verified named locations and precise coordinates",
+      "Photo references and visual review",
+      "Documented business records",
+      "Verified operator offers if experiences included",
+      "Full ES EN PT-BR editorial and SEO review"
+    ]
+  },
+  "why_visit_es": [
+    "Conocer Caño Cristales en temporada habilitada.",
+    "Recorrer paisajes del río Guayabero con acompañamiento local.",
+    "Descubrir escenarios diferentes del mismo territorio sin reducir la visita a una sola fotografía."
+  ],
+  "history_draft_es": "La vida del municipio está ligada al río Guayabero y a la Serranía de La Macarena. El turismo de naturaleza se desarrolla en escenarios con regulación ambiental y participación de operadores y comunidades locales."
+}

@@ -1,0 +1,131 @@
+{
+  "central_reference": {
+    "latitude": 6.22456,
+    "longitude": -77.40344,
+    "source_url": "https://mapcarta.com/es/19724328",
+    "point_kind": "named_urban_locality_node",
+    "checked_at": "2026-11-04"
+  },
+  "attractions": [
+    {
+      "name": "El Valle",
+      "description_es": "Centro poblado junto al río Valle; el punto identifica su parque embarcadero.",
+      "geolocation": {
+        "latitude": 6.10337,
+        "longitude": -77.42722,
+        "source_url": "https://mapcarta.com/es/N9149811659",
+        "point_kind": "named_embarcadero_park",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending"
+    },
+    {
+      "name": "Playa El Almejal",
+      "description_es": "Playa del Pacífico junto a El Valle, con selva y litoral rocoso en sus extremos.",
+      "geolocation": {
+        "latitude": 6.11087,
+        "longitude": -77.4347,
+        "source_url": "https://mapcarta.com/es/N5090194133",
+        "point_kind": "mapped_site_reference_not_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending"
+    },
+    {
+      "name": "Ensenada de Utría",
+      "description_es": "Ensenada protegida visitada en excursiones desde El Valle. El punto describe la bahía, no el desembarcadero.",
+      "geolocation": {
+        "latitude": 5.99461,
+        "longitude": -77.34118,
+        "source_url": "https://mapcarta.com/es/19678400",
+        "point_kind": "bay_reference_not_arrival",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending"
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Ecolodge El Almejal",
+      "source_url": "https://www.almejal.com.co/",
+      "category": "accommodation",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false
+    },
+    {
+      "name": "Ecolodge Playa Alegre",
+      "source_url": "https://playaalegre.com.co/en/plan-avistamiento-de-ballenas/",
+      "category": "accommodation",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false
+    },
+    {
+      "name": "Hakuna Matata Ecolodge",
+      "source_url": "https://hakunaecolodge.com/",
+      "category": "accommodation",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false,
+      "location": {
+        "latitude": 6.11171,
+        "longitude": -77.43418,
+        "kind": "mapped_hostel",
+        "source_url": "https://mapcarta.com/es/N9939762937",
+        "osm_id": "node/9939762937"
+      }
+    },
+    {
+      "name": "Fundación MarAdentro",
+      "source_url": "https://www.fundacionmaradentro.com/ballenasjorobadas",
+      "category": "tour_operator",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false
+    },
+    {
+      "name": "Bahía Solano Me Llama",
+      "source_url": "https://www.bahiasolanomellama.com/",
+      "category": "tour_operator",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Avistamiento de ballenas",
+      "operator": "Fundación MarAdentro",
+      "offer_url": "https://www.fundacionmaradentro.com/ballenasjorobadas",
+      "description_es": "Salida marina de temporada para observar ballenas y conocer su ambiente; no garantiza avistamientos.",
+      "geolocation": null,
+      "location_exception": "Itinerant activity; actual meeting point not verified.",
+      "status": "operator_offer_documented"
+    },
+    {
+      "name": "Observación de aves",
+      "operator": "Ecolodge El Almejal",
+      "offer_url": "https://www.almejal.com.co/",
+      "description_es": "Recorrido de observación de aves en el entorno de selva del Pacífico.",
+      "geolocation": null,
+      "location_exception": "Itinerant activity; actual meeting point not verified.",
+      "status": "operator_offer_documented"
+    }
+  ],
+  "boundary_notes": [
+    "Utría abarca más de un municipio. La ensenada se presenta como excursión desde Bahía Solano, no toda el área del parque como propiedad exclusiva municipal.",
+    "Mecana y El Valle pertenecen al municipio y son distintos de la cabecera Ciudad Mutis."
+  ],
+  "slug": "bahia-solano",
+  "checked_at": "2026-11-04",
+  "public": false,
+  "status": "partial_verified_research",
+  "pending": [
+    "Human visual approval",
+    "Named public map links",
+    "Current business identity and missing business coordinates",
+    "EN/PT-BR copy and SEO",
+    "Reach business target with actual verified sources"
+  ]
+}

@@ -1,0 +1,611 @@
+{
+  "slug": "mitu",
+  "checked_at": "2026-11-04",
+  "status": "research_in_progress",
+  "geolocation": {
+    "latitude": 1.25873,
+    "longitude": -70.23664,
+    "kind": "identified_urban_locality_node_not_municipal_centroid",
+    "source_url": "https://mapcarta.com/es/19695030",
+    "primary_map_url": "https://www.openstreetmap.org/node/468625164",
+    "verification": "documented_coordinate; not a verified entrance"
+  },
+  "attractions": [
+    {
+      "name": "Parque Santander",
+      "status": "candidate",
+      "source_url": "https://mapcarta.com/W865093068",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 1.25872,
+        "longitude": -70.23663,
+        "kind": "mapped_park_reference_not_gate",
+        "source_url": "https://mapcarta.com/W865093068"
+      },
+      "image": {
+        "file": "images/attraction-01-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-01.manifest.json"
+      },
+      "image_key": "attraction-01",
+      "description_es": "Espacio central de Mitú para reconocer el entorno urbano junto al río Vaupés.",
+      "latitude": 1.25872,
+      "longitude": -70.23663,
+      "coordinate_kind": "mapped_park_reference_not_gate",
+      "current_access": "confirm_with_local_manager"
+    },
+    {
+      "name": "Malecón del río Vaupés",
+      "status": "candidate",
+      "source_url": "https://revistas.sena.edu.co/index.php/rnova/article/download/616/680/1818",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 1.2521472222222223,
+        "longitude": -70.23587222222223,
+        "kind": "published_2016_study_sector_reference_not_entrance",
+        "source_url": "https://revistas.sena.edu.co/index.php/rnova/article/download/616/680/1818"
+      },
+      "image": {
+        "file": "images/attraction-02-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-02.manifest.json"
+      },
+      "image_key": "attraction-02",
+      "description_es": "Recorrido urbano junto al río para observar la relación de Mitú con su principal vía fluvial.",
+      "latitude": 1.2521472222222223,
+      "longitude": -70.23587222222223,
+      "coordinate_kind": "published_2016_study_sector_reference_not_entrance",
+      "current_access": "confirm_with_local_manager"
+    },
+    {
+      "name": "Cerro de Urania",
+      "status": "candidate",
+      "source_url": "https://www.colombiaoculta.org/selva/mitu",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": null,
+        "longitude": null,
+        "kind": "pending_peak_coordinates; community telecom location not substituted",
+        "source_url": "https://www.colombiaoculta.org/selva/mitu"
+      },
+      "image": {
+        "file": "images/attraction-03-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-03.manifest.json"
+      },
+      "image_key": "attraction-03",
+      "description_es": "Mirador natural asociado a la comunidad Mituseño-Urania, con vista del bosque y el río Vaupés.",
+      "latitude": null,
+      "longitude": null,
+      "coordinate_kind": "pending_peak_coordinates; community telecom location not substituted",
+      "current_access": "confirm_with_local_manager",
+      "additional_sources": [
+        "https://colombia.travel/es/mitu/sube-al-cerro-de-odocabeba-urania",
+        "https://www.cachiveratours.com/servicios/pasadias/"
+      ],
+      "research_caution": "La dirección cardinal genérica de Colombia Travel no coincide con las rutas documentadas; no inferir coordenadas de esa descripción.",
+      "approach_reference": {
+        "latitude": 1.271027,
+        "longitude": -70.202477,
+        "kind": "documented_bridge_at_community_approach_not_hill_summit_or_verified_trailhead",
+        "source_url": "https://users.ugent.be/~hmatheve/hm/COLOMBIA14.html",
+        "source_date": "2014",
+        "corroboration_url": "https://colombiabirdfair.com/salidas-de-pajareo/post-tour-colombia-birdfair/",
+        "note": "El informe documenta el puente al final de la carretera de Urania. El itinerario Birdfair pasa por puente Mituseño antes de senderos y Cerro Urania. No sustituye la coordenada del cerro; acceso y guía deben verificarse."
+      }
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Martica La Santandereana",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Restaurante y Cafetería Germes",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Séptimo Cielo",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "El Laurel JR",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Ivan Pollo Al Carbon",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Restaurante Tucán Macun",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Restaurante Doña Yenny",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "YOGO FELD",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Steak house",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Maloka San Victorino",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Restaurante Sazón Costeño",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "La Loma del sabor",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Mi Ranchito Asadero Y Restaurante",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Beiju Fusión Amazónica",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Sabor de la Selva",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Cumbiana Restaurante",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Restaurante Miriti",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Restaurante Gourmet Los Paisas",
+      "category": "restaurant",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "source_type": "secondary_directory",
+      "geolocation": null,
+      "status": "candidate_identity_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Posada Turística Quenari Wii",
+      "category": "accommodation",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "geolocation": null,
+      "status": "candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Hotel Mitú Real",
+      "category": "accommodation",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "geolocation": {
+        "latitude": 1.2602791,
+        "longitude": -70.2352792,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/11872769030"
+      },
+      "status": "mapped_candidate_current_operation_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false,
+      "additional_sources": [
+        "https://www.openstreetmap.org/node/11872769030"
+      ]
+    },
+    {
+      "name": "Hotel Brasilia Vaupés",
+      "category": "accommodation",
+      "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
+      "geolocation": {
+        "latitude": 1.2541788,
+        "longitude": -70.232672,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/7494777904"
+      },
+      "status": "mapped_candidate_current_operation_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false,
+      "additional_sources": [
+        "https://www.openstreetmap.org/node/7494777904"
+      ]
+    },
+    {
+      "name": "Hotel Wazay",
+      "category": "accommodation",
+      "latitude": 1.2601561,
+      "longitude": -70.2353125,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4222650042",
+      "source_updated_at": "2025-07-25T14:50:16Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Wazay",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 1.2601561,
+        "longitude": -70.2353125,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4222650042"
+      }
+    },
+    {
+      "name": "Carayuru",
+      "category": "accommodation",
+      "latitude": 1.2523461,
+      "longitude": -70.2357972,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9191812830",
+      "source_updated_at": "2021-10-21T22:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Mitu",
+        "addr:housenumber": "av 15",
+        "addr:street": "# 8-106",
+        "internet_access": "no",
+        "name": "Carayuru",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 1.2523461,
+        "longitude": -70.2357972,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9191812830"
+      }
+    },
+    {
+      "name": "All Grill",
+      "category": "restaurants",
+      "latitude": 1.2525979,
+      "longitude": -70.2313947,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9191812831",
+      "source_updated_at": "2021-10-21T22:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "All Grill"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 1.2525979,
+        "longitude": -70.2313947,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9191812831"
+      }
+    },
+    {
+      "name": "Los Paisas",
+      "category": "restaurants",
+      "latitude": 1.2593821,
+      "longitude": -70.2354804,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11872769032",
+      "source_updated_at": "2024-05-01T21:55:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Los Paisas"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 1.2593821,
+        "longitude": -70.2354804,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/11872769032"
+      }
+    },
+    {
+      "name": "Texas Burger",
+      "category": "restaurants",
+      "latitude": 1.2562704,
+      "longitude": -70.2349272,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12695988536",
+      "source_updated_at": "2025-04-07T21:01:19Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Mitú, Vaupés",
+        "addr:housenumber": "11A-22",
+        "addr:street": "Transversal 13",
+        "amenity": "fast_food",
+        "name": "Texas Burger"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 1.2562704,
+        "longitude": -70.2349272,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/12695988536"
+      }
+    },
+    {
+      "name": "Hotel La Voragine",
+      "category": "accommodation",
+      "latitude": 1.25951455,
+      "longitude": -70.23646794999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1089958011",
+      "source_updated_at": "2026-06-22T18:46:25Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Hotel La Voragine",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 1.25951455,
+        "longitude": -70.23646794999999,
+        "kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/1089958011"
+      }
+    },
+    {
+      "name": "Holy",
+      "category": "restaurants",
+      "latitude": 1.2585918999999999,
+      "longitude": -70.23600995000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1278911741",
+      "source_updated_at": "2024-05-01T21:55:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Holy"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 1.2585918999999999,
+        "longitude": -70.23600995000001,
+        "kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/1278911741"
+      }
+    },
+    {
+      "name": "Hotel Los Paisas",
+      "category": "accommodation",
+      "latitude": 1.2593249499999999,
+      "longitude": -70.2355654,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1352390535",
+      "source_updated_at": "2025-01-18T19:20:13Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Hotel Los Paisas",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 1.2593249499999999,
+        "longitude": -70.2355654,
+        "kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/1352390535"
+      }
+    },
+    {
+      "name": "Hotel JM",
+      "category": "accommodation",
+      "latitude": 1.25707255,
+      "longitude": -70.23618875,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1531484853",
+      "source_updated_at": "2026-06-22T18:46:25Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Hotel JM",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 1.25707255,
+        "longitude": -70.23618875,
+        "kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/1531484853"
+      }
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Caminata guiada en Mituseño-Urania",
+      "description_es": "Recorrido acompañado para conocer el paisaje y las historias del territorio.",
+      "operator_internal": "Colombia Oculta",
+      "source_url": "https://www.colombiaoculta.org/selva/mitu",
+      "source_checked_at": "2026-11-04",
+      "status": "documented_offer",
+      "public": false,
+      "geolocation": null,
+      "geolocation_exception": "mobile_excursion; meeting point depends on confirmed booking",
+      "guaranteed_availability": false
+    },
+    {
+      "name": "Recorrido guiado en canoa por el río Vaupés",
+      "operator": "Posada Quenari Wii y guías locales",
+      "source_url": "https://www.posadaquenariwii.com/experiencias",
+      "documented_duration": "2 horas en oferta consultada; confirmar",
+      "status": "documented_offer_current_availability_pending",
+      "geolocation": null,
+      "geolocation_exception": "Mobile activity; meeting point must be supplied by operator, not invented."
+    }
+  ],
+  "image_references": [],
+  "limitations": [
+    "No publication authorized; images and content require review.",
+    "Mapped coordinates do not establish present operation or visitor access."
+  ],
+  "source_quality_note": "The secondary directory miscategorizes several institutions and reserves; only explicitly named food/accommodation candidates were retained, not its taxonomy or ratings."
+}

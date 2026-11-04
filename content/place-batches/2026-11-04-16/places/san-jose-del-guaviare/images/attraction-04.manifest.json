@@ -1,0 +1,50 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "Puentes naturales",
+    "source_url": "https://www.tripadvisor.ch/Attraction_Review-g3493972-d10246350-Reviews-Estadero_Flintstones_Natural_Bridges-San_Jose_del_Guaviare_Guaviare_Department.html",
+    "original_url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/ba/1b/e3/caption.jpg?h=1200&s=1&w=1200",
+    "license": "No confirmada; referencia de revisión privada",
+    "license_url": null,
+    "author_html": "Consultar fuente original",
+    "checked_at": "2026-11-04",
+    "sha256": "8cae6c9827d95925f88799e60fcbc41021160a9aca5dec4369be00e44937ffca",
+    "approval": null,
+    "publication_rights_status": "unconfirmed",
+    "user_scope": "Explicit user override of confirmation prerequisite for draft generation; does not establish photographer permission"
+  },
+  "master_path": "/Users/nivato/.codex/generated_images/01a1a7a5-8b15-7733-b0f9-da4294d1d1d9/exec-76b2a4bb-94b6-4ae6-87b2-0458af90a1b4.png",
+  "master_sha256": "e3c6159be96b91fac2516196504f573316d78df2c730b012e88ddf9f99960f4d",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/attraction-04-1200.webp",
+      "sha256": "b068a3647752ca294e6a1f4d8bebe0ddb1d894277eb9a427d38fdf0ff546a6dc",
+      "bytes": 287160
+    },
+    {
+      "file": "images/attraction-04-640.webp",
+      "sha256": "c2c2d03268f4a422e074bf2a1d0bf50886a041da50f3db9feacd23667a1fd025",
+      "bytes": 89494
+    }
+  ],
+  "visual_review": {
+    "date": "2026-11-04",
+    "status": "review_candidate_not_human_approved",
+    "checks": [
+      "Output inspected against identified reference",
+      "Composition and principal geographic elements retained",
+      "Color output; no text overlay"
+    ],
+    "limitations": [
+      "Illustrations are not evidence of current conditions or access."
+    ]
+  },
+  "publication_ready": false,
+  "generation_prompt": "Create a faithful editorial ink/gouache illustration from this identified reference of Puentes Naturales near San José del Guaviare, view from beneath the enormous horizontally layered natural rock slabs and narrow gaps with vines and vegetation. Preserve the camera, exact shapes of rocks, gaps, shoreline and relative distances. Landscape3:2 crop of existing view, do not extend or invent scenery. Clearly painted yet realistic, natural full colors, fine visible brushwork, no text, no logos, no added people, structures or animals. Reference has limited resolution; do not invent fine geographic details absent from it. Private review draft.",
+  "prompt_record": "exact"
+}

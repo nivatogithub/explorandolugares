@@ -1,0 +1,2081 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-77.64995,0.80871,-77.61995,0.8387100000000001",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    0.82371,
+    -77.63495
+  ],
+  "raw_sha256": "adbca7f11c980ee24f6fa69d1993afb5e88ebd005cbd8e1996799374863b273d",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Hotel Metropol",
+      "category": "accommodation",
+      "latitude": 0.8278926,
+      "longitude": -77.6317948,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1107905493",
+      "source_updated_at": "2014-08-17T22:49:55Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Metropol",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Mi Casita",
+      "category": "restaurants",
+      "latitude": 0.8235688,
+      "longitude": -77.6355206,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1561964243",
+      "source_updated_at": "2011-12-25T23:00:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Mi Casita"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Zaracay",
+      "category": "accommodation",
+      "latitude": 0.824072,
+      "longitude": -77.6403086,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1561964252",
+      "source_updated_at": "2015-10-12T13:43:49Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Zaracay",
+        "source": "survey",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Rumichaca",
+      "category": "accommodation",
+      "latitude": 0.8242983,
+      "longitude": -77.6402324,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1732411652",
+      "source_updated_at": "2012-04-26T22:16:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Rumichaca",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Norman",
+      "category": "accommodation",
+      "latitude": 0.8283812,
+      "longitude": -77.6316354,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3023492322",
+      "source_updated_at": "2020-02-29T20:51:20Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "designation": "Hotel",
+        "name": "Hotel Norman",
+        "source": "314 7003080",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Los Andes",
+      "category": "accommodation",
+      "latitude": 0.8265912,
+      "longitude": -77.6391928,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3225069899",
+      "source_updated_at": "2016-10-15T12:26:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Ipiales",
+        "addr:housenumber": "14-44",
+        "addr:street": "Carrera 5",
+        "internet_access": "wlan",
+        "name": "Hotel Los Andes",
+        "phone": "+31-55805475",
+        "tourism": "hotel",
+        "website": "http://www.hotelosandes.com/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pizza",
+      "category": "restaurants",
+      "latitude": 0.8259232,
+      "longitude": -77.6398554,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3690722960",
+      "source_updated_at": "2015-08-11T04:15:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Pizza"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pizza Express",
+      "category": "restaurants",
+      "latitude": 0.8259715,
+      "longitude": -77.639901,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3690722961",
+      "source_updated_at": "2015-08-11T04:15:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Pizza Express"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Andino",
+      "category": "accommodation",
+      "latitude": 0.8261271,
+      "longitude": -77.639909,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3690725417",
+      "source_updated_at": "2015-08-11T04:20:54Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Andino",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Broaster King",
+      "category": "restaurants",
+      "latitude": 0.8238424,
+      "longitude": -77.6377864,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3819364577",
+      "source_updated_at": "2015-11-05T18:39:43Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Broaster King"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Fontanar",
+      "category": "accommodation",
+      "latitude": 0.8263678,
+      "longitude": -77.6321054,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3819401387",
+      "source_updated_at": "2016-03-11T17:56:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Fontanar",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Santa Ana",
+      "category": "accommodation",
+      "latitude": 0.8264842,
+      "longitude": -77.6325457,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3819401388",
+      "source_updated_at": "2016-03-11T17:57:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Santa Ana",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel San José",
+      "category": "accommodation",
+      "latitude": 0.827361,
+      "longitude": -77.6323674,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3819401389",
+      "source_updated_at": "2017-05-21T21:14:57Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel San José",
+        "name:en": "Hotel San José",
+        "name:es": "Hotel San José",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Santa Isabel",
+      "category": "accommodation",
+      "latitude": 0.8252212,
+      "longitude": -77.6402738,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3918936282",
+      "source_updated_at": "2016-09-05T21:19:49Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "14 - 27",
+        "name": "Santa Isabel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hôtel plazza la 14",
+      "category": "accommodation",
+      "latitude": 0.8232336,
+      "longitude": -77.6407269,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4317704593",
+      "source_updated_at": "2016-07-24T00:57:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hôtel plazza la 14",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Don Lucho",
+      "category": "accommodation",
+      "latitude": 0.8244181,
+      "longitude": -77.6372357,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4396508291",
+      "source_updated_at": "2016-09-11T20:08:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Don Lucho",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Norman",
+      "category": "accommodation",
+      "latitude": 0.8265277,
+      "longitude": -77.6322577,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4396508292",
+      "source_updated_at": "2016-09-11T20:08:25Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "6-10",
+        "addr:street": "Carrera 3 A",
+        "internet_access": "wlan",
+        "name": "Hotel Norman",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Kapuchino",
+      "category": "accommodation",
+      "latitude": 0.8236618,
+      "longitude": -77.6401958,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4396518891",
+      "source_updated_at": "2016-09-11T20:08:16Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Kapuchino",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Suiza Apart Suites",
+      "category": "accommodation",
+      "latitude": 0.8233266,
+      "longitude": -77.6400407,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4396541590",
+      "source_updated_at": "2016-09-11T20:08:19Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "13-29",
+        "addr:street": "Carrera 10",
+        "name": "Suiza Apart Suites",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Imperio Real",
+      "category": "accommodation",
+      "latitude": 0.8263722,
+      "longitude": -77.6323177,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4396541591",
+      "source_updated_at": "2016-09-11T20:08:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Imperio Real",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Gran Hotel Ipiales",
+      "category": "accommodation",
+      "latitude": 0.8310215,
+      "longitude": -77.6450249,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4587064489",
+      "source_updated_at": "2017-01-03T13:53:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Gran Hotel Ipiales",
+        "name:en": "Gran hotel Ipiales",
+        "name:es": "Gran Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "hostal",
+      "category": "accommodation",
+      "latitude": 0.8219825,
+      "longitude": -77.6258972,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4675606990",
+      "source_updated_at": "2020-07-09T17:29:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "hostal",
+        "name:es": "hostal",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante Pezcaldito",
+      "category": "restaurants",
+      "latitude": 0.8235422,
+      "longitude": -77.633052,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4743691122",
+      "source_updated_at": "2017-03-19T19:20:59Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Pezcaldito",
+        "name:es": "Restaurante Pezcaldito"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Marques Plaza Hotel",
+      "category": "accommodation",
+      "latitude": 0.825188,
+      "longitude": -77.6392656,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4799427030",
+      "source_updated_at": "2017-04-17T18:15:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Marques Plaza Hotel",
+        "name:es": "Marques Plaza Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Danny",
+      "category": "accommodation",
+      "latitude": 0.8282085,
+      "longitude": -77.639136,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4799427031",
+      "source_updated_at": "2017-04-17T18:15:30Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Danny",
+        "name:es": "Hotel Danny",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Oro Verde",
+      "category": "accommodation",
+      "latitude": 0.8267476,
+      "longitude": -77.6379314,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4799486022",
+      "source_updated_at": "2017-04-17T18:15:28Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Oro Verde",
+        "name:es": "Hotel Oro Verde",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Bellavista Ipiales",
+      "category": "accommodation",
+      "latitude": 0.8273114,
+      "longitude": -77.6372342,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4799487522",
+      "source_updated_at": "2017-04-17T18:15:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Bellavista Ipiales",
+        "name:es": "Hotel Bellavista Ipiales",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Sol De La Frontera",
+      "category": "accommodation",
+      "latitude": 0.8284471,
+      "longitude": -77.6394932,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4799487523",
+      "source_updated_at": "2024-08-10T16:08:03Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "check_date": "2024-08-10",
+        "name": "Hotel Sol De La Frontera",
+        "name:es": "Hotel Sol De La Frontera",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Hojarasco",
+      "category": "accommodation",
+      "latitude": 0.8307543,
+      "longitude": -77.6409723,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4799487524",
+      "source_updated_at": "2020-03-01T21:36:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Hojarasco",
+        "name:es": "Hotel Hojarasco",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Amigos",
+      "category": "accommodation",
+      "latitude": 0.8262609,
+      "longitude": -77.6381692,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4799487721",
+      "source_updated_at": "2017-04-17T18:15:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Amigos",
+        "name:es": "Hotel Amigos",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Ana Sofia",
+      "category": "accommodation",
+      "latitude": 0.8242799,
+      "longitude": -77.6371555,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800063322",
+      "source_updated_at": "2017-04-18T02:08:26Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Ana Sofia",
+        "name:es": "Hotel Ana Sofia",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Colonial",
+      "category": "accommodation",
+      "latitude": 0.8239575,
+      "longitude": -77.6363712,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800063323",
+      "source_updated_at": "2017-04-18T02:08:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Colonial",
+        "name:es": "Hotel Colonial",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel San Fernando",
+      "category": "accommodation",
+      "latitude": 0.8270721,
+      "longitude": -77.6395787,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800063325",
+      "source_updated_at": "2017-04-18T02:08:34Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel San Fernando",
+        "name:es": "Hotel San Fernando",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Harley",
+      "category": "accommodation",
+      "latitude": 0.8281303,
+      "longitude": -77.6413395,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800063326",
+      "source_updated_at": "2017-04-18T02:08:35Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Harley",
+        "name:es": "Hotel Harley",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Torres de Oro",
+      "category": "accommodation",
+      "latitude": 0.8266114,
+      "longitude": -77.6389829,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800078521",
+      "source_updated_at": "2017-04-18T02:08:19Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Torres de Oro",
+        "name:es": "Hotel Torres de Oro",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Emperador",
+      "category": "accommodation",
+      "latitude": 0.826342,
+      "longitude": -77.6396709,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800078522",
+      "source_updated_at": "2017-04-18T02:08:20Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Emperador",
+        "name:es": "Hotel Emperador",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Diana",
+      "category": "accommodation",
+      "latitude": 0.8267592,
+      "longitude": -77.6400798,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800078523",
+      "source_updated_at": "2025-09-01T00:27:08Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Diana",
+        "name:es": "Hotel Diana",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Oasis",
+      "category": "accommodation",
+      "latitude": 0.8244965,
+      "longitude": -77.6371851,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800078524",
+      "source_updated_at": "2017-04-18T02:08:25Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Oasis",
+        "name:es": "Hotel Oasis",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Don Luis",
+      "category": "accommodation",
+      "latitude": 0.8253713,
+      "longitude": -77.6380911,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800078525",
+      "source_updated_at": "2017-04-18T02:08:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Don Luis",
+        "name:es": "Hotel Don Luis",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante Cafeteria Kactus",
+      "category": "restaurants",
+      "latitude": 0.8305169,
+      "longitude": -77.6376735,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800078526",
+      "source_updated_at": "2017-04-18T02:08:36Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Cafeteria Kactus",
+        "name:es": "Restaurante Cafeteria Kactus"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel San Andreas",
+      "category": "accommodation",
+      "latitude": 0.8263862,
+      "longitude": -77.6397855,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800078721",
+      "source_updated_at": "2017-04-18T02:08:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel San Andreas",
+        "name:es": "Hotel San Andreas",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Casa Vieja",
+      "category": "accommodation",
+      "latitude": 0.8250853,
+      "longitude": -77.6387348,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800078722",
+      "source_updated_at": "2017-04-18T02:08:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Casa Vieja",
+        "name:es": "Hotel Casa Vieja",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Korpawsy",
+      "category": "accommodation",
+      "latitude": 0.8239918,
+      "longitude": -77.6365702,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800078723",
+      "source_updated_at": "2017-04-18T02:08:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Korpawsy",
+        "name:es": "Hotel Korpawsy",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel San Felipe",
+      "category": "accommodation",
+      "latitude": 0.826856,
+      "longitude": -77.6388241,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4800078724",
+      "source_updated_at": "2017-04-18T02:08:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel San Felipe",
+        "name:es": "Hotel San Felipe",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Belmonte",
+      "category": "accommodation",
+      "latitude": 0.8262512,
+      "longitude": -77.637799,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4868612121",
+      "source_updated_at": "2017-05-21T21:14:57Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Belmonte",
+        "name:en": "Hotel Belmonte",
+        "name:es": "Hotel Belmonte",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cafe with Luggage Storage",
+      "category": "cafes",
+      "latitude": 0.8269286,
+      "longitude": -77.6308742,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4872516623",
+      "source_updated_at": "2017-05-23T17:18:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "name": "Cafe with Luggage Storage",
+        "name:en": "Cafe with Luggage Storage",
+        "name:es": "Cafe with Luggage Storage"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "La Terraza",
+      "category": "restaurants",
+      "latitude": 0.8250466,
+      "longitude": -77.6389806,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4939448023",
+      "source_updated_at": "2019-09-03T18:55:42Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "internet_access": "wlan",
+        "name": "La Terraza",
+        "name:es": "La Terraza"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "El Mundo del pollo",
+      "category": "restaurants",
+      "latitude": 0.8228708,
+      "longitude": -77.6333817,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4939448124",
+      "source_updated_at": "2017-06-28T03:16:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "chicken",
+        "name": "El Mundo del pollo",
+        "name:es": "El Mundo del pollo"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "La bodega del pollo",
+      "category": "restaurants",
+      "latitude": 0.8233846,
+      "longitude": -77.6338988,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4939448125",
+      "source_updated_at": "2017-06-28T03:16:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "chicken",
+        "name": "La bodega del pollo",
+        "name:es": "La bodega del pollo"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Majos",
+      "category": "restaurants",
+      "latitude": 0.827266,
+      "longitude": -77.6312971,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4939448129",
+      "source_updated_at": "2017-06-28T03:16:44Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "local",
+        "name": "Majos",
+        "name:es": "Majos"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pimpy",
+      "category": "restaurants",
+      "latitude": 0.8274449,
+      "longitude": -77.6315393,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4939448132",
+      "source_updated_at": "2017-06-28T03:17:23Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "local",
+        "name": "Pimpy",
+        "name:es": "Pimpy"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Panextra",
+      "category": "cafes",
+      "latitude": 0.8254715,
+      "longitude": -77.6385368,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4939448135",
+      "source_updated_at": "2017-06-28T03:18:13Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Panextra",
+        "name:es": "Panextra",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Tollima",
+      "category": "restaurants",
+      "latitude": 0.8255586,
+      "longitude": -77.6385437,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4939448136",
+      "source_updated_at": "2017-06-28T03:18:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Tollima",
+        "name:es": "Tollima"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Casa Estrella",
+      "category": "restaurants",
+      "latitude": 0.8256419,
+      "longitude": -77.6395522,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4939448137",
+      "source_updated_at": "2017-06-28T03:18:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Casa Estrella",
+        "name:es": "Casa Estrella"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Punto Riko",
+      "category": "restaurants",
+      "latitude": 0.8274072,
+      "longitude": -77.6314048,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4939448140",
+      "source_updated_at": "2017-06-28T03:21:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "local",
+        "name": "Punto Riko",
+        "name:es": "Punto Riko"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Asadero",
+      "category": "restaurants",
+      "latitude": 0.8220875,
+      "longitude": -77.6316502,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4939448223",
+      "source_updated_at": "2017-06-28T03:16:17Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "chicken",
+        "name": "Asadero",
+        "name:es": "Asadero"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Mr. Pollo",
+      "category": "restaurants",
+      "latitude": 0.8302587,
+      "longitude": -77.6415074,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4982909740",
+      "source_updated_at": "2023-02-17T18:44:35Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "chicken",
+        "name": "Mr. Pollo"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Damasco",
+      "category": "accommodation",
+      "latitude": 0.8247805,
+      "longitude": -77.6365657,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5021077022",
+      "source_updated_at": "2017-08-07T23:59:55Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "11-44",
+        "addr:postcode": "524060",
+        "addr:street": "Carrera 5",
+        "name": "Hotel Damasco",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel sueño real",
+      "category": "accommodation",
+      "latitude": 0.8278137,
+      "longitude": -77.6326457,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5156118021",
+      "source_updated_at": "2017-10-08T23:17:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Hotel sueño real",
+        "opening_hours": "24/7",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Reina Isabella",
+      "category": "accommodation",
+      "latitude": 0.8237098,
+      "longitude": -77.6356816,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5216305222",
+      "source_updated_at": "2017-11-07T15:07:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Reina Isabella",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Dinastia",
+      "category": "accommodation",
+      "latitude": 0.8286591,
+      "longitude": -77.6356861,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5413022311",
+      "source_updated_at": "2018-02-14T20:17:17Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Dinastia",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Maria Bonita",
+      "category": "accommodation",
+      "latitude": 0.8300166,
+      "longitude": -77.6345247,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5413022313",
+      "source_updated_at": "2018-02-14T20:17:19Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Maria Bonita",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "La Merced",
+      "category": "restaurants",
+      "latitude": 0.8302981,
+      "longitude": -77.6339619,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5413022826",
+      "source_updated_at": "2018-02-14T20:17:20Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "La Merced"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Jhon Marc",
+      "category": "accommodation",
+      "latitude": 0.826921,
+      "longitude": -77.6392162,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5617919621",
+      "source_updated_at": "2018-05-14T16:38:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "1460",
+        "addr:street": "Carrera 4",
+        "internet_access": "wlan",
+        "name": "Hotel Jhon Marc",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Maria Bonita",
+      "category": "accommodation",
+      "latitude": 0.8254985,
+      "longitude": -77.639475,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5617919721",
+      "source_updated_at": "2018-05-14T16:38:43Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "132-13106",
+        "addr:street": "Carrera 6",
+        "internet_access": "wlan",
+        "name": "Hotel Maria Bonita",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Camino Real",
+      "category": "accommodation",
+      "latitude": 0.8260375,
+      "longitude": -77.6378758,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5876683385",
+      "source_updated_at": "2025-07-04T21:21:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Camino Real",
+        "opening_hours": "24/7",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Llantas",
+      "category": "tour_operators",
+      "latitude": 0.8304916,
+      "longitude": -77.635858,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5919466286",
+      "source_updated_at": "2018-09-20T23:58:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Llantas",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Llantas",
+      "category": "tour_operators",
+      "latitude": 0.8297479,
+      "longitude": -77.6250134,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5919560485",
+      "source_updated_at": "2018-09-21T02:02:58Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Llantas",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Llantad",
+      "category": "tour_operators",
+      "latitude": 0.8302168,
+      "longitude": -77.6315079,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5919560585",
+      "source_updated_at": "2018-09-21T02:02:59Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Llantad",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Llantas",
+      "category": "tour_operators",
+      "latitude": 0.8305023,
+      "longitude": -77.6342733,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5919560685",
+      "source_updated_at": "2018-09-21T02:03:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Llantas",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "MOWA Hotel",
+      "category": "accommodation",
+      "latitude": 0.8278847,
+      "longitude": -77.6320381,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5922490794",
+      "source_updated_at": "2018-09-22T14:19:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "MOWA Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Royal Class",
+      "category": "accommodation",
+      "latitude": 0.8260784,
+      "longitude": -77.6378244,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5935029685",
+      "source_updated_at": "2025-07-04T21:21:32Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Royal Class",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Captain Morgan",
+      "category": "nightlife",
+      "latitude": 0.8308971,
+      "longitude": -77.646391,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5937751385",
+      "source_updated_at": "2026-03-20T20:17:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "22a-2",
+        "addr:street": "Carrera 6",
+        "amenity": "pub",
+        "name": "Captain Morgan"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Six Avenue Hostal",
+      "category": "accommodation",
+      "latitude": 0.824121,
+      "longitude": -77.6366659,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6513685627",
+      "source_updated_at": "2019-05-31T16:46:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "ipiales",
+        "addr:housenumber": "#10-59",
+        "addr:street": "Carretera 6ta",
+        "guest_house": "hostel",
+        "internet_access": "yes",
+        "name": "Six Avenue Hostal",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Panesa",
+      "category": "cafes",
+      "latitude": 0.8223366,
+      "longitude": -77.6321296,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6612783986",
+      "source_updated_at": "2019-07-14T09:31:47Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "31",
+        "addr:street": "Carrera 6",
+        "name": "Panesa",
+        "opening_hours": "Mo-Su 07:00-20:00",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Press Burguer",
+      "category": "restaurants",
+      "latitude": 0.8244106,
+      "longitude": -77.6383031,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6612783994",
+      "source_updated_at": "2026-09-15T10:40:17Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "12 - 28",
+        "addr:street": "Carrera 7",
+        "amenity": "restaurant",
+        "email": "pressburguer99@hotmail.com",
+        "name": "Press Burguer",
+        "name:pt": "Press Buguer",
+        "phone": "+57 607 7732831"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Zona de parqueo",
+      "category": "accommodation",
+      "latitude": 0.8302766,
+      "longitude": -77.6410438,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6757027187",
+      "source_updated_at": "2019-08-29T13:14:26Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Calle 18",
+        "name": "Zona de parqueo",
+        "name:en": "Parking Zone",
+        "opening_hours": "24/7",
+        "tourism": "camp_site"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pan Fino",
+      "category": "cafes",
+      "latitude": 0.8240328,
+      "longitude": -77.6364563,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10059022517",
+      "source_updated_at": "2022-09-28T16:06:04Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Pan Fino",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Asadero la Abuela",
+      "category": "restaurants",
+      "latitude": 0.8207793,
+      "longitude": -77.6207765,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11040404553",
+      "source_updated_at": "2023-07-11T21:00:19Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2023-07-11",
+        "cuisine": "Cuy;Gallina",
+        "name": "Asadero la Abuela"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Antojos pancha",
+      "category": "restaurants",
+      "latitude": 0.8325391,
+      "longitude": -77.6449918,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11043117534",
+      "source_updated_at": "2023-07-13T01:38:44Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "check_date": "2023-07-12",
+        "cuisine": "mexican",
+        "name": "Antojos pancha"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Juan Valdez",
+      "category": "cafes",
+      "latitude": 0.8268656,
+      "longitude": -77.6408355,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11043118116",
+      "source_updated_at": "2023-07-12T23:13:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "check_date": "2023-07-12",
+        "cuisine": "coffee_shop",
+        "name": "Juan Valdez",
+        "outdoor_seating": "no",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "El Sabor del Pan",
+      "category": "cafes",
+      "latitude": 0.8263997,
+      "longitude": -77.639564,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11444790317",
+      "source_updated_at": "2023-12-22T19:26:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "check_date": "2023-12-22",
+        "name": "El Sabor del Pan",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "La Reina",
+      "category": "restaurants",
+      "latitude": 0.8264229,
+      "longitude": -77.6394507,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11444797774",
+      "source_updated_at": "2023-12-22T19:26:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2023-12-22",
+        "name": "La Reina"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Avanty",
+      "category": "accommodation",
+      "latitude": 0.823917,
+      "longitude": -77.6424271,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11670320369",
+      "source_updated_at": "2024-02-27T22:26:56Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Avanty",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Buona",
+      "category": "restaurants",
+      "latitude": 0.8258215,
+      "longitude": -77.6399266,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11670454769",
+      "source_updated_at": "2024-02-27T23:39:19Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Buona"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Arepaisita",
+      "category": "restaurants",
+      "latitude": 0.8292674,
+      "longitude": -77.6434413,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11674220869",
+      "source_updated_at": "2024-02-29T00:10:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Arepaisita"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Mi Tolipaisa",
+      "category": "restaurants",
+      "latitude": 0.8261454,
+      "longitude": -77.6416018,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11678484769",
+      "source_updated_at": "2024-02-29T20:05:42Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Mi Tolipaisa"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Xanticohostel",
+      "category": "accommodation",
+      "latitude": 0.8239809,
+      "longitude": -77.6364063,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12517355901",
+      "source_updated_at": "2025-01-20T02:35:22Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Xanticohostel",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Sultana del Sur",
+      "category": "cafes",
+      "latitude": 0.8245127,
+      "longitude": -77.6385476,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12980821501",
+      "source_updated_at": "2025-07-05T21:05:26Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Sultana del Sur",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel San Alejo",
+      "category": "accommodation",
+      "latitude": 0.8281434,
+      "longitude": -77.6368528,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/14132186001",
+      "source_updated_at": "2026-08-28T20:23:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel San Alejo",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel El Paisa",
+      "category": "accommodation",
+      "latitude": 0.8241287,
+      "longitude": -77.6391853,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/14135605404",
+      "source_updated_at": "2026-08-30T19:00:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel El Paisa",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Plaza La Pola",
+      "category": "attraction_candidate",
+      "latitude": 0.825623,
+      "longitude": -77.63902655000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/316398878",
+      "source_updated_at": "2026-06-10T19:32:30Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "area": "yes",
+        "highway": "pedestrian",
+        "name": "Plaza La Pola",
+        "place": "square",
+        "surface": "paved",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Plaza Santander",
+      "category": "attraction_candidate",
+      "latitude": 0.8287666499999999,
+      "longitude": -77.642449,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/375155947",
+      "source_updated_at": "2019-10-21T20:01:26Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Plaza Santander"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Gran Plaza",
+      "category": "attraction_candidate",
+      "latitude": 0.8301813,
+      "longitude": -77.64862015,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/550921226",
+      "source_updated_at": "2022-01-23T04:29:08Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque Gran Plaza"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Infantil",
+      "category": "attraction_candidate",
+      "latitude": 0.8307943,
+      "longitude": -77.641907,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/550921227",
+      "source_updated_at": "2018-01-04T18:35:35Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "description": "Parque Infantil Ipiales",
+        "leisure": "park",
+        "name": "Parque Infantil"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Lirios Norte",
+      "category": "attraction_candidate",
+      "latitude": 0.8332354,
+      "longitude": -77.63713755,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/643092878",
+      "source_updated_at": "2018-11-22T12:30:58Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque Lirios Norte"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque deportivo lirios norte",
+      "category": "attraction_candidate",
+      "latitude": 0.8336666500000001,
+      "longitude": -77.63706565000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/643092957",
+      "source_updated_at": "2020-07-08T14:32:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "description": "Parque con cancha para microfutbol y juegos para niños ubicado en el barrio Lirios Norte de Ipiales",
+        "leisure": "park",
+        "name": "Parque deportivo lirios norte"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "HOTEL NOCHE BUENA",
+      "category": "accommodation",
+      "latitude": 0.8296041000000001,
+      "longitude": -77.62898899999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/777297140",
+      "source_updated_at": "2025-11-15T15:15:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "HOTEL NOCHE BUENA",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Angasmayo",
+      "category": "accommodation",
+      "latitude": 0.82674665,
+      "longitude": -77.6412072,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/777565430",
+      "source_updated_at": "2022-01-23T04:29:08Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Hotel Angasmayo",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Plaza 20 de Julio",
+      "category": "attraction_candidate",
+      "latitude": 0.8237104,
+      "longitude": -77.6349469,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1155078185",
+      "source_updated_at": "2026-06-10T14:24:03Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "alt_name": "Parque de la Independencia",
+        "area": "yes",
+        "description": "La Plaza 20 de Julio, parque principal del municipio de Ipiales, es un espacio emblemático que enmarca los orígenes de esta maravillosa altiplanicie.",
+        "highway": "pedestrian",
+        "name": "Plaza 20 de Julio",
+        "place": "square",
+        "surface": "paved",
+        "tourism": "attraction",
+        "website": "https://turismo.alcaldiadeipiales.gov.co/publicaciones/5072/plaza-20-de-julio/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Chambu",
+      "category": "attraction_candidate",
+      "latitude": 0.8335523,
+      "longitude": -77.6495206,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1312311515",
+      "source_updated_at": "2025-09-16T01:36:09Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "access": "yes",
+        "addr:city": "Ipiales",
+        "leisure": "park",
+        "name": "Parque Chambu",
+        "opening_hours": "24/7",
+        "operator": "Barrio Chambu",
+        "operator:type": "public"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "minpy",
+      "category": "restaurants",
+      "latitude": 0.8303812500000001,
+      "longitude": -77.64570309999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1433599122",
+      "source_updated_at": "2025-09-27T17:44:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "cuisine": "chicken",
+        "name": "minpy"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

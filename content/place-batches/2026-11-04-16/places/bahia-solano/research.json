@@ -1,0 +1,689 @@
+{
+  "slug": "bahia-solano",
+  "name": "Bahía Solano",
+  "country_code": "CO",
+  "department_code": "27",
+  "municipality_code": "27075",
+  "municipality_name": "Bahía Solano",
+  "type": "municipality",
+  "status": "prepared_for_private_review",
+  "public": false,
+  "intro_draft_es": "Bahía Solano reúne costa del Pacífico, selva húmeda y poblaciones como Ciudad Mutis y El Valle. Las playas de arena oscura y los manglares distinguen su paisaje. Las salidas de naturaleza y al Parque Utría requieren coordinación local según las condiciones del mar y los accesos autorizados.",
+  "source_url": "https://colombia.travel/es/blog/bahia-solano-colombia-un-destino-que-te-encantara",
+  "source_checked_at": "2026-11-04",
+  "previous_plan": "crecimiento-colombia/colombia/departamentos/choco/lugares/bahia-solano/lugar.json",
+  "previous_plan_state": "planned",
+  "geolocation": {
+    "latitude": 6.22456,
+    "longitude": -77.40344,
+    "source_url": "https://mapcarta.com/es/19724328",
+    "point_kind": "named_urban_locality_node",
+    "checked_at": "2026-11-04"
+  },
+  "attractions": [
+    {
+      "name": "El Valle",
+      "description_es": "Población costera del municipio de Bahía Solano, junto a la desembocadura del río Valle. Permite combinar la vida local con recorridos por la costa y funciona como punto de organización de excursiones de naturaleza.",
+      "geolocation": {
+        "latitude": 6.10337,
+        "longitude": -77.42722,
+        "source_url": "https://mapcarta.com/es/N9149811659",
+        "point_kind": "named_embarcadero_park",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending",
+      "image_key": "attraction-01",
+      "image": {
+        "file": "images/attraction-01-1200.webp",
+        "status": "pending_human_review"
+      },
+      "public_map_url": null
+    },
+    {
+      "name": "Playa El Almejal",
+      "description_es": "Una playa de arena oscura junto a El Valle, donde el mar abierto del Pacífico se encuentra con la selva. El paisaje cambia con las mareas y permite apreciar sus formaciones rocosas; las condiciones del oleaje requieren atención y orientación local.",
+      "geolocation": {
+        "latitude": 6.11087,
+        "longitude": -77.4347,
+        "source_url": "https://mapcarta.com/es/N5090194133",
+        "point_kind": "mapped_site_reference_not_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending",
+      "image_key": "attraction-02",
+      "image": {
+        "file": "images/attraction-02-1200.webp",
+        "status": "pending_human_review"
+      },
+      "public_map_url": null
+    },
+    {
+      "name": "Ensenada de Utría",
+      "description_es": "El mar se interna entre laderas cubiertas de selva y sectores de manglar en esta ensenada del Parque Nacional Natural Utría. Se conoce mediante recorridos autorizados, coordinados según las condiciones de acceso y navegación.",
+      "geolocation": {
+        "latitude": 5.99461,
+        "longitude": -77.34118,
+        "source_url": "https://mapcarta.com/es/19678400",
+        "point_kind": "bay_reference_not_arrival",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending",
+      "image_key": "attraction-03",
+      "image": {
+        "file": "images/attraction-03-1200.webp",
+        "status": "pending_human_review"
+      },
+      "public_map_url": null
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Avistamiento de ballenas",
+      "operator": "Fundación MarAdentro",
+      "offer_url": "https://www.fundacionmaradentro.com/ballenasjorobadas",
+      "description_es": "Salida marina de temporada para observar ballenas y conocer su ambiente; no garantiza avistamientos.",
+      "geolocation": null,
+      "location_exception": "Itinerant activity; actual meeting point not verified.",
+      "status": "operator_offer_documented"
+    },
+    {
+      "name": "Observación de aves",
+      "operator": "Ecolodge El Almejal",
+      "offer_url": "https://www.almejal.com.co/",
+      "description_es": "Recorrido de observación de aves en el entorno de selva del Pacífico.",
+      "geolocation": null,
+      "location_exception": "Itinerant activity; actual meeting point not verified.",
+      "status": "operator_offer_documented"
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Ecolodge El Almejal",
+      "source_url": "https://www.almejal.com.co/",
+      "category": "accommodation",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false,
+      "public": false,
+      "claimed": false
+    },
+    {
+      "name": "Ecolodge Playa Alegre",
+      "source_url": "https://playaalegre.com.co/en/plan-avistamiento-de-ballenas/",
+      "category": "accommodation",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false,
+      "public": false,
+      "claimed": false
+    },
+    {
+      "name": "Hakuna Matata Ecolodge",
+      "source_url": "https://hakunaecolodge.com/",
+      "category": "accommodation",
+      "geolocation": {
+        "latitude": 6.11171,
+        "longitude": -77.43418,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://mapcarta.com/es/N9939762937"
+      },
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false,
+      "location": {
+        "latitude": 6.11171,
+        "longitude": -77.43418,
+        "kind": "mapped_hostel",
+        "source_url": "https://mapcarta.com/es/N9939762937",
+        "osm_id": "node/9939762937"
+      },
+      "public": false,
+      "claimed": false
+    },
+    {
+      "name": "Fundación MarAdentro",
+      "source_url": "https://www.fundacionmaradentro.com/ballenasjorobadas",
+      "category": "tour_operator",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false,
+      "public": false,
+      "claimed": false
+    },
+    {
+      "name": "Bahía Solano Me Llama",
+      "source_url": "https://www.bahiasolanomellama.com/",
+      "category": "tour_operator",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false,
+      "public": false,
+      "claimed": false
+    },
+    {
+      "name": "Hotel Bahía Solano",
+      "category": "accommodation",
+      "latitude": 6.2264656,
+      "longitude": -77.4066693,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3048058621",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "Celular": "3216392037",
+        "name": "Hotel Bahía Solano",
+        "phone": "+57 314 8217037",
+        "tourism": "hotel",
+        "website": "https://hotelbahiasolano.com/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2264656,
+        "longitude": -77.4066693,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/3048058621"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Rocas de Cabo Marzo",
+      "category": "accommodation",
+      "latitude": 6.2269539,
+      "longitude": -77.4079498,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3048123052",
+      "source_updated_at": "2020-07-17T20:34:20Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Rocas de Cabo Marzo",
+        "tourism": "hotel",
+        "website": "http://posadarocasdecabomarzo.com/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2269539,
+        "longitude": -77.4079498,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/3048123052"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Posada El Acuario",
+      "category": "accommodation",
+      "latitude": 6.2275959,
+      "longitude": -77.4078273,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6202842486",
+      "source_updated_at": "2021-12-22T22:29:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Posada El Acuario",
+        "name:en": "Posada El Acuario",
+        "name:es": "Posada El Acuario",
+        "name:fr": "Posada El Acuario",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2275959,
+        "longitude": -77.4078273,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6202842486"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Hotel Yubarta",
+      "category": "accommodation",
+      "latitude": 6.2269874,
+      "longitude": -77.4071092,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9906567906",
+      "source_updated_at": "2022-07-23T21:25:38Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Yubarta",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2269874,
+        "longitude": -77.4071092,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9906567906"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Balboa Inn",
+      "category": "accommodation",
+      "latitude": 6.2269486,
+      "longitude": -77.4066952,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9906590929",
+      "source_updated_at": "2022-07-23T21:27:30Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Balboa Inn",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2269486,
+        "longitude": -77.4066952,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9906590929"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Hotel Bahía Yubarta",
+      "category": "accommodation",
+      "latitude": 6.2269771,
+      "longitude": -77.4070967,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9950190317",
+      "source_updated_at": "2022-08-12T22:31:18Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Hotel Bahía Yubarta",
+        "name:en": "Bahia Yubarta Hotel",
+        "phone": "+57 311 3891888",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2269771,
+        "longitude": -77.4070967,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9950190317"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Hotel Pacífico Azul",
+      "category": "accommodation",
+      "latitude": 6.2250753,
+      "longitude": -77.4055063,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9951766617",
+      "source_updated_at": "2022-08-13T23:50:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Pacífico Azul",
+        "name:en": "Pacífico Azul Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2250753,
+        "longitude": -77.4055063,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9951766617"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Centro de buceo Ankla Azul",
+      "category": "tour_operators",
+      "latitude": 6.226778,
+      "longitude": -77.4068166,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790317",
+      "source_updated_at": "2022-08-15T21:57:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "contact:instagram": "anklaazul",
+        "name": "Centro de buceo Ankla Azul",
+        "name:en": "Ankla Azul Diving Center",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.226778,
+        "longitude": -77.4068166,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9955790317"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Hotel Costa Chocó",
+      "category": "accommodation",
+      "latitude": 6.2269559,
+      "longitude": -77.4066824,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790318",
+      "source_updated_at": "2022-08-15T21:57:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Costa Chocó",
+        "name:en": "Costa Chocó Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2269559,
+        "longitude": -77.4066824,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9955790318"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Restaurante La Casa Negra",
+      "category": "restaurants",
+      "latitude": 6.2269125,
+      "longitude": -77.4072719,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790418",
+      "source_updated_at": "2022-08-15T21:57:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante La Casa Negra",
+        "name:en": "La Casa Negra Restaurant"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2269125,
+        "longitude": -77.4072719,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9955790418"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Restaurante Bra y Vic",
+      "category": "restaurants",
+      "latitude": 6.2267398,
+      "longitude": -77.4058921,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790517",
+      "source_updated_at": "2022-08-15T21:57:35Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Bra y Vic",
+        "name:en": "Bra y Vic Restaurant"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2267398,
+        "longitude": -77.4058921,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9955790517"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Arepas y panzeroti \"Los Palitos\"",
+      "category": "restaurants",
+      "latitude": 6.2255702,
+      "longitude": -77.4055601,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790518",
+      "source_updated_at": "2022-08-15T21:57:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Arepas y panzeroti \"Los Palitos\"",
+        "name:en": "Arepas and panzeroti \"Los Palitos\""
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2255702,
+        "longitude": -77.4055601,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9955790518"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Posada Del Mar",
+      "category": "accommodation",
+      "latitude": 6.2261463,
+      "longitude": -77.4073136,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10004287917",
+      "source_updated_at": "2022-09-06T13:28:28Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Posada Del Mar",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2261463,
+        "longitude": -77.4073136,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/10004287917"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Marea",
+      "category": "restaurants",
+      "latitude": 6.2279934,
+      "longitude": -77.409501,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10004287918",
+      "source_updated_at": "2022-09-06T13:28:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Marea"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2279934,
+        "longitude": -77.409501,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/10004287918"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Amongus Parrilla",
+      "category": "restaurants",
+      "latitude": 6.2263775,
+      "longitude": -77.4057921,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11119170505",
+      "source_updated_at": "2023-08-16T14:46:58Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Amongus Parrilla"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2263775,
+        "longitude": -77.4057921,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/11119170505"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Madre Agua",
+      "category": "tour_operators",
+      "latitude": 6.2256618,
+      "longitude": -77.4062079,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13032329201",
+      "source_updated_at": "2025-07-28T20:57:25Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Madre Agua",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.2256618,
+        "longitude": -77.4062079,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/13032329201"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Posada Don Ai (Playa Alegra)",
+      "category": "accommodation",
+      "source_url": "https://mapcarta.com/es/N4417864892",
+      "geolocation": {
+        "latitude": 6.11249,
+        "longitude": -77.43414,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://mapcarta.com/es/N4417864892"
+      },
+      "status": "identity_duplicate_check_pending",
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "deduplication_note": "No confundir automáticamente con Ecolodge Playa Alegre; verificar identidad/nombre histórico antes de contar como comercio independiente."
+    },
+    {
+      "name": "William el paisa",
+      "category": "accommodation",
+      "source_url": "https://mapcarta.com/es/N6541506488",
+      "geolocation": {
+        "latitude": 6.10791,
+        "longitude": -77.43244,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://mapcarta.com/es/N6541506488"
+      },
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    }
+  ],
+  "media": {
+    "hero": {
+      "status": "pending_human_review",
+      "file": "images/hero-1200.webp",
+      "approval": null,
+      "image_key": "hero"
+    },
+    "style": "Follow repository image skill; never mislabel illustrations as photographs"
+  },
+  "requirements": {
+    "business_target": 30,
+    "business_categories": [
+      "accommodation",
+      "restaurants",
+      "cafes",
+      "tour_operators",
+      "crafts",
+      "transport"
+    ],
+    "image_format": "webp",
+    "aspect_ratio": "3:2",
+    "locales": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "publication_blockers": [
+      "Verified named locations and precise coordinates",
+      "Photo references and visual review",
+      "Documented business records",
+      "Verified operator offers if experiences included",
+      "Full ES EN PT-BR editorial and SEO review"
+    ]
+  },
+  "boundary_notes": [
+    "Utría abarca más de un municipio. La ensenada se presenta como excursión desde Bahía Solano, no toda el área del parque como propiedad exclusiva municipal.",
+    "Mecana y El Valle pertenecen al municipio y son distintos de la cabecera Ciudad Mutis."
+  ],
+  "research_supplement": "verified-research.json",
+  "business_selection_note": "Named OSM public listings, excluding generic labels, attractions, duplicates and nightlife. Mapping does not verify ownership, legal registration, current operation or alliance.",
+  "review_ready_summary": {
+    "images_generated": 4,
+    "images_expected": 4,
+    "attractions_with_site_coordinates": 3,
+    "named_business_records": 23,
+    "businesses_with_coordinates": 19,
+    "business_target": 30,
+    "status": "private_review_not_publication_ready",
+    "remaining": [
+      "Human visual approval",
+      "Complete missing business coordinates and current identity checks",
+      "Public named map links",
+      "Full EN/PT-BR editorial and SEO",
+      "Business target gap where present"
+    ]
+  },
+  "why_visit_es": [
+    "Combinar las playas del Pacífico con el paisaje de selva.",
+    "Conocer El Valle y la playa El Almejal.",
+    "Consultar las condiciones de visita a Utría y las excursiones de temporada."
+  ]
+}

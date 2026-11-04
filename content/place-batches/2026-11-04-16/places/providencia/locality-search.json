@@ -1,0 +1,27 @@
+{
+  "query_url": "https://nominatim.openstreetmap.org/search?q=Providencia+y+Santa+Catalina%2C+Colombia&format=jsonv2&countrycodes=co&limit=5",
+  "results": [
+    {
+      "place_id": 309940061,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 2287617,
+      "lat": "12.5375979",
+      "lon": "-81.7204155",
+      "category": "place",
+      "type": "island",
+      "place_rank": 17,
+      "importance": 0.4653617291402255,
+      "addresstype": "island",
+      "name": "Isla de San Andrés",
+      "display_name": "Isla de San Andrés, La Loma, Archipiélago de San Andrés, Providencia y Santa Catalina, Colombia",
+      "boundingbox": [
+        "12.4802608",
+        "12.5949121",
+        "-81.7356633",
+        "-81.6872761"
+      ]
+    }
+  ],
+  "use": "Discovery bounds only, not an approved destination point"
+}

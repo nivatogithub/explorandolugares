@@ -1,0 +1,120 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "File:Sapzurro_Beach_(Colombia).jpeg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sapzurro_Beach_(Colombia).jpeg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Sapzurro_Beach_%28Colombia%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "preview_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Sapzurro_Beach_%28Colombia%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 720,
+    "height": 540,
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "author_html": "<a href=\"//commons.wikimedia.org/wiki/User:RichardMills65\" title=\"User:RichardMills65\">RichardMills65</a>",
+    "description_html": "Sapzurro Beach (Colombia)",
+    "captured_at": "2013-04-28 16:30:41",
+    "coordinates": [],
+    "metadata": {
+      "DateTime": {
+        "value": "2013-04-28 22:33:01",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+      },
+      "ObjectName": {
+        "value": "Sapzurro Beach (Colombia)",
+        "source": "mediawiki-metadata"
+      },
+      "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+      },
+      "Categories": {
+        "value": "Acandí|Self-published work|Marine deposition in Colombia|Beaches of Chocó Department",
+        "source": "commons-categories",
+        "hidden": ""
+      },
+      "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+      },
+      "ImageDescription": {
+        "value": "Sapzurro Beach (Colombia)",
+        "source": "commons-desc-page"
+      },
+      "DateTimeOriginal": {
+        "value": "2013-04-28 16:30:41",
+        "source": "commons-desc-page"
+      },
+      "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+      },
+      "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/wiki/User:RichardMills65\" title=\"User:RichardMills65\">RichardMills65</a>",
+        "source": "commons-desc-page"
+      },
+      "LicenseShortName": {
+        "value": "CC BY-SA 3.0",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "UsageTerms": {
+        "value": "Creative Commons Attribution-Share Alike 3.0",
+        "source": "commons-desc-page"
+      },
+      "AttributionRequired": {
+        "value": "true",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "LicenseUrl": {
+        "value": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "commons-desc-page"
+      },
+      "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "License": {
+        "value": "cc-by-sa-3.0",
+        "source": "commons-templates",
+        "hidden": ""
+      }
+    },
+    "approval": null,
+    "checked_at": "2026-11-04",
+    "sha256": "5875a641154ac167a3d47750242559a4d27b65717aa2b53a4fca139e38136c51"
+  },
+  "master_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/unificacion-presentacion/content/place-batches/2026-11-04-16/places/capurgana/masters/exec-d4fef062-fb14-4639-b5df-994a9cbd454f.png",
+  "master_sha256": "f139a2239804990f0344bf97b1084adb99c154b76cd604476e1682ec33baa3a8",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/attraction-02-1200.webp",
+      "sha256": "58774a3fc80e141cd6d177eea0398a9caffdbc0965f888538da5e03d44b9297b",
+      "bytes": 229848
+    },
+    {
+      "file": "images/attraction-02-640.webp",
+      "sha256": "2c2eaaddc772ccc5cc95c80e51e103628c515516e0cc07ce2ab0b834d58f5209",
+      "bytes": 78194
+    }
+  ],
+  "technical_review": {
+    "checked_at": "2026-11-04",
+    "result": "candidate_ready_for_human_comparison",
+    "notes": "Inspected generated image and identified reference; ink/gouache style. Retains broad camera/composition. Historic references do not verify current infrastructure. Human approval still required."
+  },
+  "prompt_summary": "Faithful 3:2 ink/gouache editorial transformation from identified reference; retain camera, geographic shapes and architecture; no added sites, infrastructure or logos."
+}

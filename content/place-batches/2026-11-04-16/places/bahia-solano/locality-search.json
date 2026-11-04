@@ -1,0 +1,27 @@
+{
+  "query_url": "https://nominatim.openstreetmap.org/search?q=Bah%C3%ADa+Solano%2C+Colombia&format=jsonv2&countrycodes=co&limit=5",
+  "results": [
+    {
+      "place_id": 307212956,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 1343136,
+      "lat": "6.2245644",
+      "lon": "-77.4034389",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 12,
+      "importance": 0.3876315200642101,
+      "addresstype": "town",
+      "name": "Bahía Solano (Mutis)",
+      "display_name": "Bahía Solano (Mutis), Pacífico Norte, Chocó, RAP Pacífico, Colombia",
+      "boundingbox": [
+        "5.9883615",
+        "6.8094769",
+        "-77.4849234",
+        "-77.2179786"
+      ]
+    }
+  ],
+  "use": "Discovery bounds only, not an approved destination point"
+}

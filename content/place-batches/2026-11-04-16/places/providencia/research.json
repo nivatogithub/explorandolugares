@@ -1,0 +1,772 @@
+{
+  "slug": "providencia",
+  "name": "Providencia y Santa Catalina",
+  "country_code": "CO",
+  "department_code": "88",
+  "municipality_code": "88564",
+  "municipality_name": "Providencia y Santa Catalina",
+  "type": "municipality",
+  "status": "prepared_for_private_review",
+  "public": false,
+  "intro_draft_es": "Providencia combina montañas cubiertas de vegetación, pequeños cayos y paisajes marinos del Caribe. El Pico, Cayo Cangrejo y la vecina Santa Catalina ofrecen experiencias distintas. El buceo se realiza con operadores especializados y los sitios protegidos conservan sus propias condiciones de acceso.",
+  "source_url": "https://colombia.travel/es/providencia",
+  "source_checked_at": "2026-11-04",
+  "previous_plan": "crecimiento-colombia/colombia/departamentos/san-andres-providencia-y-santa-catalina/lugares/providencia/lugar.json",
+  "previous_plan_state": "planned",
+  "geolocation": {
+    "latitude": 13.37542,
+    "longitude": -81.36909,
+    "source_url": "https://mapcarta.com/es/33933694",
+    "point_kind": "named_urban_locality_reference",
+    "checked_at": "2026-11-04"
+  },
+  "attractions": [
+    {
+      "name": "Cayo Cangrejo",
+      "description_es": "Un pequeño cayo rocoso y cubierto de vegetación dentro del Parque Nacional Natural Old Providence McBean Lagoon. El contraste entre su relieve y las aguas del entorno es parte de su atractivo; la visita está sujeta a las condiciones del área protegida.",
+      "geolocation": {
+        "latitude": 13.37653,
+        "longitude": -81.34637,
+        "source_url": "https://mapcarta.com/es/19720884",
+        "point_kind": "islet_reference",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending",
+      "image_key": "attraction-01",
+      "image": {
+        "file": "images/attraction-01-1200.webp",
+        "status": "pending_human_review"
+      },
+      "public_map_url": null
+    },
+    {
+      "name": "El Pico",
+      "description_es": "La elevación interior de Providencia ofrece una perspectiva del relieve de la isla y los colores del mar. El ascenso es una actividad de caminata que requiere conocer el acceso habilitado y las condiciones del recorrido.",
+      "geolocation": {
+        "latitude": 13.34701,
+        "longitude": -81.374138,
+        "point_kind": "documented_summit_photo_viewpoint_not_trailhead",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Isla_de_Providencia_desde_el_Peak.jpg",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending",
+      "image_key": "attraction-02",
+      "image": {
+        "file": "images/attraction-02-1200.webp",
+        "status": "pending_human_review"
+      },
+      "public_map_url": null
+    },
+    {
+      "name": "Santa Catalina",
+      "description_es": "La isla vecina de Providencia combina paisaje costero, vegetación y memoria histórica. Sus recorridos permiten conocer un entorno distinto de los cayos y las montañas del interior de Providencia.",
+      "geolocation": {
+        "latitude": 13.38798,
+        "longitude": -81.37467,
+        "source_url": "https://mapcarta.com/es/19683396",
+        "point_kind": "island_reference_not_access",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending",
+      "image_key": "attraction-03",
+      "image": {
+        "file": "images/attraction-03-1200.webp",
+        "status": "pending_human_review"
+      },
+      "public_map_url": null
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Buceo de iniciación",
+      "operator": "The Dive Shop Old Providence",
+      "offer_url": "https://www.thediveshopoldprovidence.com/es/",
+      "description_es": "Introducción al buceo con centro especializado; sujeta a requisitos del operador.",
+      "geolocation": null,
+      "location_exception": "Itinerant activity; actual meeting point not verified.",
+      "status": "operator_offer_documented"
+    },
+    {
+      "name": "Inmersiones para buzos certificados",
+      "operator": "The Dive Shop Old Providence",
+      "offer_url": "https://www.thediveshopoldprovidence.com/es/",
+      "description_es": "Exploración submarina acompañada para personas con certificación de buceo.",
+      "geolocation": null,
+      "location_exception": "Itinerant activity; actual meeting point not verified.",
+      "status": "operator_offer_documented"
+    }
+  ],
+  "businesses": [
+    {
+      "name": "The Dive Shop Old Providence",
+      "source_url": "https://www.thediveshopoldprovidence.com/es/",
+      "category": "tour_operator",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false,
+      "public": false,
+      "claimed": false
+    },
+    {
+      "name": "Providencia Travel",
+      "source_url": "https://providenciatravel.com/producto/actividades/mini-curso-buceo-providencia/",
+      "category": "tour_operator",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false,
+      "public": false,
+      "claimed": false
+    },
+    {
+      "name": "Cafe & More",
+      "category": "cafes",
+      "latitude": 13.3811301,
+      "longitude": -81.3691664,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6279519988",
+      "source_updated_at": "2019-02-14T21:40:46Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "name": "Cafe & More"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3811301,
+        "longitude": -81.3691664,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6279519988"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Gourmet Pizza",
+      "category": "restaurants",
+      "latitude": 13.3814729,
+      "longitude": -81.3683732,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6279528185",
+      "source_updated_at": "2019-02-14T21:39:03Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Gourmet Pizza"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3814729,
+        "longitude": -81.3683732,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6279528185"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Bizocheria",
+      "category": "cafes",
+      "latitude": 13.3812212,
+      "longitude": -81.3685956,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6279529085",
+      "source_updated_at": "2019-02-14T21:39:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Bizocheria",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3812212,
+        "longitude": -81.3685956,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6279529085"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Miss Francia's Home",
+      "category": "accommodation",
+      "latitude": 13.3831262,
+      "longitude": -81.3722776,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6284518986",
+      "source_updated_at": "2020-11-23T04:42:34Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Miss Francia's Home",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3831262,
+        "longitude": -81.3722776,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6284518986"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "W&M Services",
+      "category": "tour_operators",
+      "latitude": 13.381121,
+      "longitude": -81.3695483,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6284518994",
+      "source_updated_at": "2019-02-18T23:06:59Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "W&M Services",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.381121,
+        "longitude": -81.3695483,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6284518994"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Hotel Old Providencia",
+      "category": "accommodation",
+      "latitude": 13.3810515,
+      "longitude": -81.3686716,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6284518997",
+      "source_updated_at": "2019-02-17T15:57:16Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Old Providencia",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3810515,
+        "longitude": -81.3686716,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6284518997"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Shell Sea B & B",
+      "category": "accommodation",
+      "latitude": 13.3824803,
+      "longitude": -81.3754455,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6284527785",
+      "source_updated_at": "2023-08-13T05:19:11Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "yes",
+        "name": "Shell Sea B & B",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3824803,
+        "longitude": -81.3754455,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6284527785"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Nativa Sunshine",
+      "category": "accommodation",
+      "latitude": 13.3828848,
+      "longitude": -81.3726753,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6284527786",
+      "source_updated_at": "2019-02-17T15:53:44Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Nativa Sunshine",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3828848,
+        "longitude": -81.3726753,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6284527786"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Di Duk",
+      "category": "cafes",
+      "latitude": 13.3811933,
+      "longitude": -81.369583,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6284532487",
+      "source_updated_at": "2019-02-18T23:07:12Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "name": "Di Duk"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3811933,
+        "longitude": -81.369583,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6284532487"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Posada Lia",
+      "category": "accommodation",
+      "latitude": 13.3812342,
+      "longitude": -81.3694517,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6287229288",
+      "source_updated_at": "2019-02-18T23:08:47Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Posada Lia",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3812342,
+        "longitude": -81.3694517,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6287229288"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Los Olivos",
+      "category": "restaurants",
+      "latitude": 13.3821926,
+      "longitude": -81.3755805,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7123727686",
+      "source_updated_at": "2020-01-11T04:21:49Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "caribbean",
+        "name": "Los Olivos"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3821926,
+        "longitude": -81.3755805,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/7123727686"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Posada Aleeny",
+      "category": "accommodation",
+      "latitude": 13.3684324,
+      "longitude": -81.3701052,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9945498017",
+      "source_updated_at": "2022-08-10T16:23:48Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Posada Aleeny",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3684324,
+        "longitude": -81.3701052,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9945498017"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Posada Jasmina",
+      "category": "accommodation",
+      "latitude": 13.3669679,
+      "longitude": -81.376211,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9945498018",
+      "source_updated_at": "2022-08-10T16:23:49Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Posada Jasmina",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3669679,
+        "longitude": -81.376211,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9945498018"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Eneidy",
+      "category": "restaurants",
+      "latitude": 13.3819632,
+      "longitude": -81.3692038,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11396921754",
+      "source_updated_at": "2026-07-09T00:50:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2024-10-06",
+        "cuisine": "caribbean",
+        "name": "Eneidy",
+        "opening_hours": "12:00-17:00"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3819632,
+        "longitude": -81.3692038,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/11396921754"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Chelo's Fussion Place",
+      "category": "restaurants",
+      "latitude": 13.3819286,
+      "longitude": -81.3633663,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11399227341",
+      "source_updated_at": "2023-12-06T23:26:38Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Chelo's Fussion Place"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3819286,
+        "longitude": -81.3633663,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/11399227341"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Marlin's Ice Cream",
+      "category": "cafes",
+      "latitude": 13.38180125,
+      "longitude": -81.36796335,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/640163734",
+      "source_updated_at": "2026-10-15T01:00:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "ice_cream",
+        "building": "yes",
+        "name": "Marlin's Ice Cream"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.38180125,
+        "longitude": -81.36796335,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/640163734"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Cafetería La Rikura",
+      "category": "restaurants",
+      "latitude": 13.381822849999999,
+      "longitude": -81.3680814,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/640163735",
+      "source_updated_at": "2026-10-15T01:00:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "building": "yes",
+        "cuisine": "empanada;buñuelo;arepa;chorizo;palo_de_queso;papa_rellena",
+        "fast_food": "cafeteria",
+        "name": "Cafetería La Rikura",
+        "opening_hours": "Tu-Fr 05:30- 16:30, Sa 05:30- 14:00",
+        "operator": "Donde Secre",
+        "phone": "311 8926700"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.381822849999999,
+        "longitude": -81.3680814,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/640163735"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Restaurante Miss Lucy",
+      "category": "restaurants",
+      "latitude": 13.38141405,
+      "longitude": -81.36632765,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/640163782",
+      "source_updated_at": "2026-10-17T01:23:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Restaurante Miss Lucy"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.38141405,
+        "longitude": -81.36632765,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/640163782"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Eneida",
+      "category": "restaurants",
+      "latitude": 13.38380595,
+      "longitude": -81.37045785000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/642715119",
+      "source_updated_at": "2020-02-25T16:04:56Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Eneida"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.38380595,
+        "longitude": -81.37045785000001,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/642715119"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "La Emperanza",
+      "category": "restaurants",
+      "latitude": 13.3838284,
+      "longitude": -81.370632,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/642715121",
+      "source_updated_at": "2020-02-25T16:04:56Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "La Emperanza"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.3838284,
+        "longitude": -81.370632,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/642715121"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Bully's Place B&B, Breakfast and Fast food",
+      "category": "accommodation",
+      "latitude": 13.385489499999998,
+      "longitude": -81.36998765,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/642717151",
+      "source_updated_at": "2025-01-07T01:06:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "guest_house": "bed_and_breakfast",
+        "name": "Bully's Place B&B, Breakfast and Fast food",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.385489499999998,
+        "longitude": -81.36998765,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/642717151"
+      },
+      "source_license": "ODbL 1.0"
+    },
+    {
+      "name": "Coral Mint",
+      "category": "accommodation",
+      "latitude": 13.38329285,
+      "longitude": -81.3630109,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1568659973",
+      "source_updated_at": "2026-10-16T01:02:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Coral Mint",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_public_listing_current_operation_unconfirmed",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 13.38329285,
+        "longitude": -81.3630109,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/1568659973"
+      },
+      "source_license": "ODbL 1.0"
+    }
+  ],
+  "media": {
+    "hero": {
+      "status": "pending_human_review",
+      "file": "images/hero-1200.webp",
+      "approval": null,
+      "image_key": "hero"
+    },
+    "style": "Follow repository image skill; never mislabel illustrations as photographs"
+  },
+  "requirements": {
+    "business_target": 30,
+    "business_categories": [
+      "accommodation",
+      "restaurants",
+      "cafes",
+      "tour_operators",
+      "crafts",
+      "transport"
+    ],
+    "image_format": "webp",
+    "aspect_ratio": "3:2",
+    "locales": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "publication_blockers": [
+      "Verified named locations and precise coordinates",
+      "Photo references and visual review",
+      "Documented business records",
+      "Verified operator offers if experiences included",
+      "Full ES EN PT-BR editorial and SEO review"
+    ]
+  },
+  "boundary_notes": [
+    "No confundir Providencia con isla San Andrés ni homónimos continentales.",
+    "Cayo Cangrejo forma parte de McBean Lagoon: evitar duplicar la misma vista como dos atractivos. Manglar o sector marino separado requiere su propio acceso y referencia."
+  ],
+  "research_supplement": "verified-research.json",
+  "business_selection_note": "Named OSM public listings, excluding generic labels, attractions, duplicates and nightlife. Mapping does not verify ownership, legal registration, current operation or alliance.",
+  "review_ready_summary": {
+    "images_generated": 4,
+    "images_expected": 4,
+    "attractions_with_site_coordinates": 3,
+    "named_business_records": 24,
+    "businesses_with_coordinates": 22,
+    "business_target": 30,
+    "status": "private_review_not_publication_ready",
+    "remaining": [
+      "Human visual approval",
+      "Complete missing business coordinates and current identity checks",
+      "Public named map links",
+      "Full EN/PT-BR editorial and SEO",
+      "Business target gap where present"
+    ]
+  },
+  "why_visit_es": [
+    "Contemplar el mar y los paisajes de las islas desde Cayo Cangrejo y The Peak.",
+    "Conocer Santa Catalina como parte del entorno insular.",
+    "Consultar experiencias locales sin confundir el destino con San Andrés."
+  ]
+}

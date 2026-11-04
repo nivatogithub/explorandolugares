@@ -1,0 +1,50 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "Puerta de Orión",
+    "source_url": "https://www.agendahoy.co/2018/11/una-de-las-maravillas-de-san-jose-del.html",
+    "original_url": "https://2.bp.blogspot.com/-8Zr3T2s6eBs/XAFyz6F_xGI/AAAAAAAATpM/xMEOhcodAygqTYGU5P2czD-rOqijKTlNwCLcBGAs/s1600/IMG_1016.JPG",
+    "license": "No confirmada; referencia de revisión privada",
+    "license_url": null,
+    "author_html": "Consultar fuente original",
+    "checked_at": "2026-11-04",
+    "sha256": "1796486a7a9d2bc89c47ca0d7878c68f83aa9273022f336bd5e2bb9c43c12a33",
+    "approval": null,
+    "publication_rights_status": "unconfirmed",
+    "user_scope": "Explicit user override of confirmation prerequisite for draft generation; does not establish photographer permission"
+  },
+  "master_path": "/Users/nivato/.codex/generated_images/01a1a7a5-8b15-7733-b0f9-da4294d1d1d9/exec-e7f40737-1a2c-4d2d-b08d-f73adb0d0fee.png",
+  "master_sha256": "6d4994f1d5cb3bf5881473c0a86e081bd4f4cffe12006152084f58466f39f1b6",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/attraction-02-1200.webp",
+      "sha256": "3a7b2e24023d37fbbb8bc4670f96a78260209be995c696b579ee1a7e78ff478d",
+      "bytes": 280644
+    },
+    {
+      "file": "images/attraction-02-640.webp",
+      "sha256": "447cc7c65eb4b50dd9b1ed69016a05db4ccdf0429d3fbf0513aa61af2d7fc911",
+      "bytes": 91970
+    }
+  ],
+  "visual_review": {
+    "date": "2026-11-04",
+    "status": "review_candidate_not_human_approved",
+    "checks": [
+      "Output inspected against identified reference",
+      "Composition and principal geographic elements retained",
+      "Color output; no text overlay"
+    ],
+    "limitations": [
+      "Illustrations are not evidence of current conditions or access."
+    ]
+  },
+  "publication_ready": false,
+  "generation_prompt": "Transform this identified photograph of Puerta de Orión, exact irregular sandstone arch and two apertures, tree in front and path beneath, two small hikers into a clearly illustrated semi-realistic editorial ink/gouache rendition. 3:2 landscape, use existing view only, crop without inventing new geography. Preserve camera position, relative distances, shoreline, exact rock shapes and existing elements. Natural full colors, legible details and subtle brush texture. No extra people, animals, dolphins, buildings, bridges, boats, mountains or text. Do not alter anatomy or boat geometry. No claims of current conditions, private review illustration.",
+  "prompt_record": "exact"
+}

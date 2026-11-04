@@ -1,0 +1,76 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-75.0567379,5.5096466,-75.0267379,5.539646599999999",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    5.5246466,
+    -75.0417379
+  ],
+  "raw_sha256": "02ccfff66f5c33bd27a9d73905df9f4c5d099b5ad58dce05fa05648ac54825ff",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Mirador antigua estación de policia",
+      "category": "attraction_candidate",
+      "latitude": 5.52505655,
+      "longitude": -75.04204214999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/924954741",
+      "source_updated_at": "2025-09-24T04:08:55Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Mirador antigua estación de policia",
+        "tourism": "viewpoint"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Medina",
+      "category": "accommodation",
+      "latitude": 5.52472925,
+      "longitude": -75.04123215,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1070386949",
+      "source_updated_at": "2025-09-24T04:08:55Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "building:levels": "1",
+        "name": "Hotel Medina",
+        "ref:codcat": "176620500000000090020000000000",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Kiosko",
+      "category": "cafes",
+      "latitude": 5.5246267,
+      "longitude": -75.0415552,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1070389113",
+      "source_updated_at": "2025-09-24T04:08:55Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "building": "yes",
+        "building:levels": "3",
+        "name": "Kiosko",
+        "source": "microsoft/BuildingFootprints"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

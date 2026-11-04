@@ -1,0 +1,10 @@
+{
+  "status": "specific_site_coordinate_unresolved",
+  "checked_at": "2026-11-04",
+  "official_route_qr": "https://www.komoot.com/es-es/tour/1990013176?share_token=amK8zDASjtOkN5BR1RucmzmPEiw87oM0PZ7yyFkiN104h2q3GG&ref=wtd-qr",
+  "findings": [
+    "Official ministry QR decoded; public route has unnamed waypoints, insufficient to label a coordinate Coco Viejo.",
+    "Maps CID from artisan source returned generic map centered on Medellin; coordinate rejected.",
+    "Vymaps returned HTTP403. Do not substitute El Coco locality for petrogliphs."
+  ]
+}

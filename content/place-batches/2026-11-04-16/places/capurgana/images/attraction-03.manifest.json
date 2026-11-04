@@ -1,0 +1,45 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "El Cielo, Capurganá",
+    "source_url": "https://brisabahia.com/experiences/",
+    "original_url": "https://brisabahia.com/wp-content/uploads/2026/09/el-cielo-1-rotated.jpg",
+    "license": "No confirmada; referencia de revisión privada",
+    "license_url": null,
+    "author_html": "Consultar fuente original",
+    "checked_at": "2026-11-04",
+    "sha256": "0913ed4033f4ece956bbf8142d7c7eda233dbfda275b4a17f7d8d6c3f7cf3df9",
+    "approval": null,
+    "publication_rights_status": "unconfirmed",
+    "user_scope": "Explicit user override of confirmation prerequisite for draft generation; does not establish photographer permission"
+  },
+  "master_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/unificacion-presentacion/content/place-batches/2026-11-04-16/places/capurgana/masters/exec-50b46e7a-d93d-45d7-b85b-1ec6812be1af.png",
+  "master_sha256": "05da5a594ffd44814b2281d3e33c4fb2cf48406488a30387f9f1a0781690ce4d",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/attraction-03-1200.webp",
+      "sha256": "36fc7ec63f5de15605a4bbcf1ff1d94a4cd362344977d00709244604e5ee683f",
+      "bytes": 288410
+    },
+    {
+      "file": "images/attraction-03-640.webp",
+      "sha256": "99e18f8c86f19006718a0dd21a385d2675ec3ad986bd21f7f19a89c1b0cf86ee",
+      "bytes": 100286
+    }
+  ],
+  "technical_review": {
+    "checked_at": "2026-11-04",
+    "result": "candidate_ready_for_human_comparison",
+    "notes": "Inspected generated image and identified reference; ink/gouache style. Retains broad camera/composition. Historic references do not verify current infrastructure. Human approval still required."
+  },
+  "prompt_summary": "Faithful 3:2 ink/gouache editorial transformation from identified reference; retain camera, geographic shapes and architecture; no added sites, infrastructure or logos.",
+  "publication_blockers": [
+    "Reference rights pending; private review only",
+    "Human approval"
+  ]
+}

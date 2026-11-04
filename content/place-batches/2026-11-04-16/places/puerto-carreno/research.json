@@ -1,0 +1,301 @@
+{
+  "slug": "puerto-carreno",
+  "name": "Puerto Carreño",
+  "country_code": "CO",
+  "department_code": "99",
+  "municipality_code": "99001",
+  "municipality_name": "Puerto Carreño",
+  "type": "municipality",
+  "status": "prepared_for_private_review",
+  "public": false,
+  "intro_draft_es": "Puerto Carreño se relaciona con los grandes ríos de la Orinoquía y con los paisajes de sabana y roca del Vichada. La reserva Bojonawi ofrece un contexto de conservación donde conocer bosques, humedales y la laguna El Pañuelo.",
+  "source_url": "https://colombia.travel/es/puerto-carreno",
+  "source_checked_at": "2026-11-04",
+  "previous_plan": "crecimiento-colombia/colombia/departamentos/vichada/lugares/puerto-carreno/lugar.json",
+  "previous_plan_state": "planned",
+  "geolocation": {
+    "latitude": 6.19092,
+    "longitude": -67.48419,
+    "kind": "identified_urban_locality_node_not_municipal_centroid",
+    "source_url": "https://mapcarta.com/es/19688716",
+    "primary_map_url": "https://www.openstreetmap.org/node/310714964",
+    "verification": "documented_coordinate; not a verified entrance"
+  },
+  "attractions": [
+    {
+      "name": "Orilla urbana del río Orinoco",
+      "status": "candidate",
+      "source_url": "https://www.openstreetmap.org/way/350278870",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 6.1841597,
+        "longitude": -67.47399057142857,
+        "kind": "mapped_pier_site_reference_not_exact_entrance",
+        "source_url": "https://www.openstreetmap.org/way/350278870"
+      },
+      "image": {
+        "file": "images/attraction-01-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-01.manifest.json"
+      },
+      "image_key": "attraction-01",
+      "description_es": "Sector ribereño del puerto sobre el Orinoco, donde se observa la actividad fluvial de Puerto Carreño. La referencia corresponde al embarcadero existente, no al futuro proyecto de malecón.",
+      "latitude": 6.1841597,
+      "longitude": -67.47399057142857,
+      "coordinate_kind": "mapped_pier_site_reference_not_exact_entrance",
+      "current_access": "confirm_with_local_manager",
+      "additional_sources": [
+        "https://elrinconcolombiano.com/malecon-del-puerto-de-puerto-carreno-vichada/"
+      ]
+    },
+    {
+      "name": "Reserva Natural Bojonawi",
+      "status": "candidate",
+      "source_url": "https://www.relcomlatinoamerica.net/images/AICOMS/Colombia/Bojonawi/AICOM_A-CO-007_Bojonawi.pdf",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 6.070482,
+        "longitude": -67.518656,
+        "kind": "published_approximate_reserve_reference_not_entrance",
+        "source_url": "https://www.relcomlatinoamerica.net/images/AICOMS/Colombia/Bojonawi/AICOM_A-CO-007_Bojonawi.pdf"
+      },
+      "image": {
+        "file": "images/attraction-02-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-02.manifest.json"
+      },
+      "image_key": "attraction-02",
+      "description_es": "Reserva administrada con bosques de galería, sabanas y la laguna El Pañuelo. La visita debe coordinarse con sus responsables.",
+      "latitude": 6.070482,
+      "longitude": -67.518656,
+      "coordinate_kind": "published_approximate_reserve_reference_not_entrance",
+      "current_access": "confirm_with_local_manager"
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Recorrido guiado por Bojonawi y la laguna El Pañuelo",
+      "operator": "Frontera Travel",
+      "source_url": "https://fronteratravel.co/uploads/tripPdfs/2320/en/ENG.-ITI.-Bogota--Orinoco--Cartagena.pdf",
+      "evidence": "Day 8 offers kayak through flooded forest to Laguna El Pañuelo and transfer Puerto Carreño.",
+      "status": "documented_offer_current_availability_pending",
+      "publication_caution": "Source contains airport/geographic inconsistencies in day 3; do not reproduce full itinerary. Verify offer with provider before public availability claim. No guaranteed wildlife sightings.",
+      "geolocation": {
+        "latitude": 6.070482,
+        "longitude": -67.518656,
+        "kind": "reserve_reference_not_meeting_point"
+      }
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Hotel Tierra Azul",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Hotel Orinoco",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Hotel Cacique Samanare",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Hotel El Lago",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Mango Hotel",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": {
+        "latitude": 6.1848803,
+        "longitude": -67.481099,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1428280828"
+      },
+      "status": "mapped_candidate_current_operation_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false,
+      "additional_sources": [
+        "https://www.openstreetmap.org/node/1428280828"
+      ]
+    },
+    {
+      "name": "Hotel Voragine",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Hotel El Morichal",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Hotel Los Delfines",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Hotel Mi Vichada",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Casa Hotel Victoria",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Hotel Martha Helena",
+      "category": "accommodation",
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "source_type": "secondary_local_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Carreño Plaza",
+      "category": "accommodation",
+      "latitude": 6.1852961,
+      "longitude": -67.4814792,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5517551721",
+      "source_updated_at": "2018-03-31T01:17:45Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Carreño Plaza",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 6.1852961,
+        "longitude": -67.4814792,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5517551721"
+      }
+    }
+  ],
+  "media": {
+    "hero": {
+      "status": "pending_human_review",
+      "file": "images/hero-1200.webp",
+      "approval": null,
+      "kind": "ai_editorial_illustration",
+      "manifest": "images/hero.manifest.json"
+    },
+    "style": "Follow repository image skill; never mislabel illustrations as photographs"
+  },
+  "requirements": {
+    "business_target": 30,
+    "business_categories": [
+      "accommodation",
+      "restaurants",
+      "cafes",
+      "tour_operators",
+      "crafts",
+      "transport"
+    ],
+    "image_format": "webp",
+    "aspect_ratio": "3:2",
+    "locales": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "publication_blockers": [
+      "Verified named locations and precise coordinates",
+      "Photo references and visual review",
+      "Documented business records",
+      "Verified operator offers if experiences included",
+      "Full ES EN PT-BR editorial and SEO review"
+    ]
+  },
+  "excursion_candidates": [
+    {
+      "name": "Parque Nacional Natural El Tuparro y Raudal de Maipures",
+      "note": "Do not attribute to Puerto Carreño municipal jurisdiction; verify Cumaribo boundaries and operator itinerary",
+      "status": "boundary_and_offer_pending"
+    }
+  ],
+  "research_limitations": [
+    "No publication authorized; images and content require review.",
+    "Mapped coordinates do not establish present operation or visitor access."
+  ],
+  "verified_research_file": "verified-research.json",
+  "title_es": "Puerto Carreño: paisajes del Orinoco y naturaleza del Vichada",
+  "why_visit_es": [
+    "Para observar paisajes fluviales y conocer iniciativas de conservación. Las visitas a reservas y los recorridos por el río deben coordinarse con sus responsables; no se presentan como accesos libres ni como actividades disponibles todos los días."
+  ],
+  "editorial_status": "review_draft",
+  "sources_are_internal": true
+}

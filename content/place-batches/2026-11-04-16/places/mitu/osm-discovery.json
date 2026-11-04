@@ -1,0 +1,256 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-70.24864,1.24673,-70.22464,1.27073",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    1.25873,
+    -70.23664
+  ],
+  "raw_sha256": "50a4be38d11e436b0b142e29ce23f99f8ab4d636b72a9e5220a761f04f2a8776",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Hotel Wazay",
+      "category": "accommodation",
+      "latitude": 1.2601561,
+      "longitude": -70.2353125,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4222650042",
+      "source_updated_at": "2025-07-25T14:50:16Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Wazay",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Brasilia Vaupés",
+      "category": "accommodation",
+      "latitude": 1.2541788,
+      "longitude": -70.232672,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7494777904",
+      "source_updated_at": "2021-10-21T22:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Mitú",
+        "addr:housenumber": "10",
+        "addr:street": "Carrerera",
+        "internet_access": "no",
+        "name": "Hotel Brasilia Vaupés",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Carayuru",
+      "category": "accommodation",
+      "latitude": 1.2523461,
+      "longitude": -70.2357972,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9191812830",
+      "source_updated_at": "2021-10-21T22:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Mitu",
+        "addr:housenumber": "av 15",
+        "addr:street": "# 8-106",
+        "internet_access": "no",
+        "name": "Carayuru",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "All Grill",
+      "category": "restaurants",
+      "latitude": 1.2525979,
+      "longitude": -70.2313947,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9191812831",
+      "source_updated_at": "2021-10-21T22:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "All Grill"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Mitú Real",
+      "category": "accommodation",
+      "latitude": 1.2602791,
+      "longitude": -70.2352792,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11872769030",
+      "source_updated_at": "2024-05-01T21:55:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Mitú Real",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Los Paisas",
+      "category": "restaurants",
+      "latitude": 1.2593821,
+      "longitude": -70.2354804,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11872769032",
+      "source_updated_at": "2024-05-01T21:55:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Los Paisas"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Texas Burger",
+      "category": "restaurants",
+      "latitude": 1.2562704,
+      "longitude": -70.2349272,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12695988536",
+      "source_updated_at": "2025-04-07T21:01:19Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Mitú, Vaupés",
+        "addr:housenumber": "11A-22",
+        "addr:street": "Transversal 13",
+        "amenity": "fast_food",
+        "name": "Texas Burger"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Santander",
+      "category": "attraction_candidate",
+      "latitude": 1.2587237999999998,
+      "longitude": -70.23662870000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/865093068",
+      "source_updated_at": "2022-08-28T23:17:46Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Mitú",
+        "leisure": "park",
+        "name": "Parque Santander"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel La Voragine",
+      "category": "accommodation",
+      "latitude": 1.25951455,
+      "longitude": -70.23646794999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1089958011",
+      "source_updated_at": "2026-06-22T18:46:25Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Hotel La Voragine",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Holy",
+      "category": "restaurants",
+      "latitude": 1.2585918999999999,
+      "longitude": -70.23600995000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1278911741",
+      "source_updated_at": "2024-05-01T21:55:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Holy"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Los Paisas",
+      "category": "accommodation",
+      "latitude": 1.2593249499999999,
+      "longitude": -70.2355654,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1352390535",
+      "source_updated_at": "2025-01-18T19:20:13Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Hotel Los Paisas",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel JM",
+      "category": "accommodation",
+      "latitude": 1.25707255,
+      "longitude": -70.23618875,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1531484853",
+      "source_updated_at": "2026-06-22T18:46:25Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Hotel JM",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

@@ -1,0 +1,1079 @@
+{
+  "slug": "san-jose-del-guaviare",
+  "checked_at": "2026-11-04",
+  "status": "research_in_progress",
+  "geolocation": {
+    "latitude": 2.5716,
+    "longitude": -72.6427,
+    "kind": "identified_urban_locality_node_not_municipal_centroid",
+    "source_url": "https://mapcarta.com/es/20002768",
+    "primary_map_url": "https://www.openstreetmap.org/node/554374965",
+    "verification": "documented_coordinate; not a verified entrance"
+  },
+  "attractions": [
+    {
+      "name": "Cerro Azul",
+      "status": "candidate",
+      "source_url": "https://mapcarta.com/W741266404",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 2.53065,
+        "longitude": -72.86609,
+        "kind": "mapped_site_reference_not_entrance",
+        "source_url": "https://mapcarta.com/W741266404"
+      },
+      "image": {
+        "file": "images/attraction-01-1200.webp",
+        "kind": "licensed_photograph",
+        "approval": null,
+        "manifest": "images/attraction-01.manifest.json"
+      },
+      "image_key": "attraction-01",
+      "description_es": "Paneles de arte rupestre de La Lindosa; la visita guiada requiere respetar las áreas arqueológicas y sus reglas de conservación.",
+      "latitude": 2.53065,
+      "longitude": -72.86609,
+      "coordinate_kind": "mapped_site_reference_not_entrance",
+      "current_access": "confirm_with_local_manager"
+    },
+    {
+      "name": "Puerta de Orión",
+      "status": "candidate",
+      "source_url": "https://mapcarta.com/es/N2616354163",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 2.51084,
+        "longitude": -72.70732,
+        "kind": "mapped_site_reference_not_entrance",
+        "source_url": "https://mapcarta.com/es/N2616354163"
+      },
+      "image": {
+        "file": "images/attraction-02-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-02.manifest.json"
+      },
+      "image_key": "attraction-02",
+      "description_es": "Formación de roca con una abertura natural, en un paisaje de sabanas y afloramientos rocosos.",
+      "latitude": 2.51084,
+      "longitude": -72.70732,
+      "coordinate_kind": "mapped_site_reference_not_entrance",
+      "current_access": "confirm_with_local_manager"
+    },
+    {
+      "name": "Laguna Damas del Nare",
+      "status": "candidate",
+      "source_url": "https://viveguaviare.com/donde-ir/",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 2.76673,
+        "longitude": -72.24291,
+        "kind": "mapped_waterbody_reference_not_entrance",
+        "source_url": "https://mapcarta.com/W1227404347",
+        "primary_map_url": "https://www.openstreetmap.org/way/1227404347",
+        "corroboration_url": "https://patrimonionatural.org.co/wp-content/uploads/2024/08/02-ESPECIFICACIONES-TECNICAS.pdf"
+      },
+      "image": {
+        "file": "images/attraction-03-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-03.manifest.json"
+      },
+      "image_key": "attraction-03",
+      "description_es": "Laguna vinculada a una iniciativa de turismo comunitario; observación responsable de fauna sin garantizar avistamientos.",
+      "latitude": 2.76673,
+      "longitude": -72.24291,
+      "coordinate_kind": "mapped_waterbody_reference_not_entrance",
+      "current_access": "confirm_with_local_manager",
+      "additional_sources": [
+        "https://patrimonionatural.org.co/wp-content/uploads/2024/08/02-ESPECIFICACIONES-TECNICAS.pdf"
+      ]
+    },
+    {
+      "name": "Puentes naturales",
+      "status": "candidate",
+      "source_url": "https://mapcarta.com/es/N5049660521",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 2.53994,
+        "longitude": -72.71393,
+        "kind": "mapped_site_reference_not_entrance",
+        "source_url": "https://mapcarta.com/es/N5049660521"
+      },
+      "image": {
+        "file": "images/attraction-04-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-04.manifest.json"
+      },
+      "image_key": "attraction-04",
+      "description_es": "Estructuras naturales de roca que permiten observar las formas del paisaje de La Lindosa.",
+      "latitude": 2.53994,
+      "longitude": -72.71393,
+      "coordinate_kind": "mapped_site_reference_not_entrance",
+      "current_access": "confirm_with_local_manager"
+    }
+  ],
+  "businesses": [
+    {
+      "name": "San José Capital",
+      "category": "accommodation",
+      "latitude": 2.5705679,
+      "longitude": -72.6437207,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1339817225",
+      "source_updated_at": "2021-10-14T05:29:05Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "San José Capital",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5705679,
+        "longitude": -72.6437207,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1339817225"
+      }
+    },
+    {
+      "name": "Los Trigales",
+      "category": "cafes",
+      "latitude": 2.5696494,
+      "longitude": -72.6422953,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1659703941",
+      "source_updated_at": "2020-07-10T00:36:48Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "spanish",
+        "name": "Los Trigales"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5696494,
+        "longitude": -72.6422953,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1659703941"
+      }
+    },
+    {
+      "name": "El Portico",
+      "category": "accommodation",
+      "latitude": 2.5725225,
+      "longitude": -72.6437634,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1914939592",
+      "source_updated_at": "2013-02-15T23:57:11Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "El Portico",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5725225,
+        "longitude": -72.6437634,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1914939592"
+      }
+    },
+    {
+      "name": "Shalom",
+      "category": "accommodation",
+      "latitude": 2.5658249,
+      "longitude": -72.64323,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1914948416",
+      "source_updated_at": "2012-09-15T05:17:30Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Shalom",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5658249,
+        "longitude": -72.64323,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1914948416"
+      }
+    },
+    {
+      "name": "Sancho Pizza",
+      "category": "restaurants",
+      "latitude": 2.562904,
+      "longitude": -72.6387968,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2038433890",
+      "source_updated_at": "2025-01-27T13:35:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Sancho Pizza"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.562904,
+        "longitude": -72.6387968,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2038433890"
+      }
+    },
+    {
+      "name": "Carnes & Carnes",
+      "category": "restaurants",
+      "latitude": 2.5704344,
+      "longitude": -72.6427599,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2156763236",
+      "source_updated_at": "2013-02-15T23:56:59Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Carnes & Carnes",
+        "source": "survey"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5704344,
+        "longitude": -72.6427599,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2156763236"
+      }
+    },
+    {
+      "name": "El Barco",
+      "category": "restaurants",
+      "latitude": 2.572057,
+      "longitude": -72.6470061,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2156763237",
+      "source_updated_at": "2013-09-30T21:34:05Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "El Barco"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.572057,
+        "longitude": -72.6470061,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2156763237"
+      }
+    },
+    {
+      "name": "Mi mamá",
+      "category": "restaurants",
+      "latitude": 2.5699593,
+      "longitude": -72.6424656,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2156763238",
+      "source_updated_at": "2013-02-15T23:56:59Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Mi mamá",
+        "source": "survey"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5699593,
+        "longitude": -72.6424656,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2156763238"
+      }
+    },
+    {
+      "name": "Pantojados",
+      "category": "cafes",
+      "latitude": 2.5703691,
+      "longitude": -72.641669,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2156763240",
+      "source_updated_at": "2015-04-27T21:03:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "name": "Pantojados",
+        "source": "survey"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5703691,
+        "longitude": -72.641669,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2156763240"
+      }
+    },
+    {
+      "name": "Donde Juliana",
+      "category": "restaurants",
+      "latitude": 2.560106,
+      "longitude": -72.6396525,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2478231635",
+      "source_updated_at": "2020-07-10T01:23:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "Asadero",
+        "name": "Donde Juliana"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.560106,
+        "longitude": -72.6396525,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2478231635"
+      }
+    },
+    {
+      "name": "El Colombia",
+      "category": "cafes",
+      "latitude": 2.5721389,
+      "longitude": -72.643605,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2478255031",
+      "source_updated_at": "2013-09-30T21:31:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "coffee_shop",
+        "name": "El Colombia"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5721389,
+        "longitude": -72.643605,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2478255031"
+      }
+    },
+    {
+      "name": "La Portada",
+      "category": "restaurants",
+      "latitude": 2.5711945,
+      "longitude": -72.6443152,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2478255032",
+      "source_updated_at": "2020-07-31T16:54:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "chicken",
+        "name": "La Portada"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5711945,
+        "longitude": -72.6443152,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2478255032"
+      }
+    },
+    {
+      "name": "La Hamburguesería",
+      "category": "restaurants",
+      "latitude": 2.5680407,
+      "longitude": -72.6394762,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2671640479",
+      "source_updated_at": "2021-03-03T15:58:48Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "cuisine": "burger",
+        "name": "La Hamburguesería"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5680407,
+        "longitude": -72.6394762,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2671640479"
+      }
+    },
+    {
+      "name": "Empanadas de la Olla",
+      "category": "cafes",
+      "latitude": 2.574115,
+      "longitude": -72.6419585,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/2671645654",
+      "source_updated_at": "2020-07-10T00:36:48Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "name": "Empanadas de la Olla"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.574115,
+        "longitude": -72.6419585,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/2671645654"
+      }
+    },
+    {
+      "name": "Nomada´s",
+      "category": "restaurants",
+      "latitude": 2.5700202,
+      "longitude": -72.642137,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3330037217",
+      "source_updated_at": "2015-02-04T15:14:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Nomada´s"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5700202,
+        "longitude": -72.642137,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/3330037217"
+      }
+    },
+    {
+      "name": "cafe makú",
+      "category": "cafes",
+      "latitude": 2.5709921,
+      "longitude": -72.6427648,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3377085294",
+      "source_updated_at": "2015-04-27T22:55:22Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "name": "cafe makú"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5709921,
+        "longitude": -72.6427648,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/3377085294"
+      }
+    },
+    {
+      "name": "Hotel Aeropuerto",
+      "category": "accommodation",
+      "latitude": 2.5708715,
+      "longitude": -72.6388116,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3377145870",
+      "source_updated_at": "2026-04-24T10:39:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Aeropuerto",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5708715,
+        "longitude": -72.6388116,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/3377145870"
+      }
+    },
+    {
+      "name": "El Compa",
+      "category": "restaurants",
+      "latitude": 2.5602025,
+      "longitude": -72.6397148,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4224524129",
+      "source_updated_at": "2020-07-10T01:23:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "Asadero",
+        "name": "El Compa"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5602025,
+        "longitude": -72.6397148,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4224524129"
+      }
+    },
+    {
+      "name": "Pizza La Toscana",
+      "category": "restaurants",
+      "latitude": 2.5705878,
+      "longitude": -72.6425158,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4506661689",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "9-55",
+        "addr:street": "Carrera 23",
+        "amenity": "fast_food",
+        "cuisine": "pizza",
+        "name": "Pizza La Toscana",
+        "name:es": "pizza la toscana",
+        "opening_hours": "Mo-Su 16:00-23:00",
+        "phone": "+57 312 3673273"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5705878,
+        "longitude": -72.6425158,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4506661689"
+      }
+    },
+    {
+      "name": "Las Delicias",
+      "category": "restaurants",
+      "latitude": 2.5714998,
+      "longitude": -72.6449352,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4886712521",
+      "source_updated_at": "2020-07-08T17:42:34Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Las Delicias",
+        "name:es": "Las Delicias"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5714998,
+        "longitude": -72.6449352,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4886712521"
+      }
+    },
+    {
+      "name": "Yurupary",
+      "category": "accommodation",
+      "latitude": 2.5719935,
+      "longitude": -72.6437856,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4951995021",
+      "source_updated_at": "2017-07-05T04:37:09Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Yurupary",
+        "name:es": "Yurupary",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5719935,
+        "longitude": -72.6437856,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4951995021"
+      }
+    },
+    {
+      "name": "Restaurante El Dorado",
+      "category": "restaurants",
+      "latitude": 2.5717451,
+      "longitude": -72.6455703,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4957179123",
+      "source_updated_at": "2017-07-07T17:21:42Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante El Dorado",
+        "name:es": "Restaurante El Dorado"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5717451,
+        "longitude": -72.6455703,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4957179123"
+      }
+    },
+    {
+      "name": "Leoni Pizzeria",
+      "category": "restaurants",
+      "latitude": 2.5694993,
+      "longitude": -72.6425102,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5297328508",
+      "source_updated_at": "2026-02-27T03:04:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "San Jose Del Guaviare",
+        "addr:housenumber": "22-32",
+        "addr:street": "Calle 10",
+        "amenity": "restaurant",
+        "cuisine": "italian",
+        "name": "Leoni Pizzeria",
+        "opening_hours": "24/7",
+        "website": "https://leoni-pizzeria.business.site/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5694993,
+        "longitude": -72.6425102,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5297328508"
+      }
+    },
+    {
+      "name": "Hotel Colombia",
+      "category": "accommodation",
+      "latitude": 2.5722383,
+      "longitude": -72.6435917,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5467605323",
+      "source_updated_at": "2026-07-19T23:13:36Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "7-96",
+        "addr:street": "Carrera 23",
+        "internet_access": "wlan",
+        "name": "Hotel Colombia",
+        "opening_hours": "24/7",
+        "phone": "+57 310 6083781",
+        "tourism": "hotel",
+        "website": "https://hotel-colombia.business.site/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5722383,
+        "longitude": -72.6435917,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5467605323"
+      }
+    },
+    {
+      "name": "Hotel Triunfo",
+      "category": "accommodation",
+      "latitude": 2.570669,
+      "longitude": -72.6454398,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5543648922",
+      "source_updated_at": "2018-04-10T19:30:57Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Hotel Triunfo",
+        "opening_hours": "24/7",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.570669,
+        "longitude": -72.6454398,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5543648922"
+      }
+    },
+    {
+      "name": "Fruteria y Comidas Rapidas Mickey Mouse",
+      "category": "restaurants",
+      "latitude": 2.5709753,
+      "longitude": -72.6419494,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/8415175613",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Carrera 24",
+        "amenity": "restaurant",
+        "cuisine": "ENSALADAS_DE_FRUTAS;HAMBUGUESAS;PERROS_CALIENTES;CARNES_A_LA_PLANCHA",
+        "name": "Fruteria y Comidas Rapidas Mickey Mouse",
+        "opening_hours": "Mo-Su 09:00-21:00",
+        "phone": "+57 321 6762608",
+        "wheelchair": "yes"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5709753,
+        "longitude": -72.6419494,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/8415175613"
+      }
+    },
+    {
+      "name": "Artesanal Burguer",
+      "category": "restaurants",
+      "latitude": 2.5715606,
+      "longitude": -72.6415011,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/8922849224",
+      "source_updated_at": "2021-07-15T15:25:13Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "cuisine": "burger;friture",
+        "name": "Artesanal Burguer"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5715606,
+        "longitude": -72.6415011,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/8922849224"
+      }
+    },
+    {
+      "name": "Catumaré Comidas Amazonicas",
+      "category": "restaurants",
+      "latitude": 2.5772067,
+      "longitude": -72.6402585,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10218809418",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Catumaré Comidas Amazonicas",
+        "phone": "+57 322 8440623"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5772067,
+        "longitude": -72.6402585,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/10218809418"
+      }
+    },
+    {
+      "name": "Hostal el ermitaño",
+      "category": "accommodation",
+      "latitude": 2.5624646,
+      "longitude": -72.6347071,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10295366410",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "24-64",
+        "addr:street": "Calle 21",
+        "email": "elermitaño7@gmail.com",
+        "internet_access": "wlan",
+        "name": "Hostal el ermitaño",
+        "opening_hours": "24/7",
+        "phone": "+57 322 3647790",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5624646,
+        "longitude": -72.6347071,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/10295366410"
+      }
+    },
+    {
+      "name": "Black comida gourmet super recomendado",
+      "category": "restaurants",
+      "latitude": 2.5704271,
+      "longitude": -72.6424042,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10295921009",
+      "source_updated_at": "2022-12-30T21:52:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "international",
+        "name": "Black comida gourmet super recomendado",
+        "name:en": "Black gourmet food"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5704271,
+        "longitude": -72.6424042,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/10295921009"
+      }
+    },
+    {
+      "name": "hotel",
+      "category": "accommodation",
+      "latitude": 2.5717476,
+      "longitude": -72.6416777,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10846733403",
+      "source_updated_at": "2023-04-27T17:13:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5717476,
+        "longitude": -72.6416777,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/10846733403"
+      }
+    },
+    {
+      "name": "ONEF Travels and Tours",
+      "category": "tour_operators",
+      "latitude": 2.5715751,
+      "longitude": -72.6382685,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12362340768",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "San Jose Del Guaviare",
+        "addr:postcode": "950001",
+        "addr:street": "Calle 10 #20C - 25",
+        "currency:COP": "yes",
+        "currency:USD": "yes",
+        "email": "inef@onef.com.co",
+        "image": "https://drive.google.com/file/d/1GcLUAKs07eR2DTSWYJSXpWfeb01M_6aP/view?usp=drive_link",
+        "mobile": "+573112487848",
+        "name": "ONEF Travels and Tours",
+        "opening_hours": "Mo-Su 06:00-18:00",
+        "operator": "Inversiones ONEF",
+        "payment:app": "yes",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:google_pay": "yes",
+        "payment:paypal": "yes",
+        "phone": "+57 310 7596307",
+        "ref:vatin": "901711770-2",
+        "shop": "travel_agency",
+        "short_name": "ONEF",
+        "website": "https://guaviare.onef.com.co/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5715751,
+        "longitude": -72.6382685,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/12362340768"
+      }
+    },
+    {
+      "name": "Mistura",
+      "category": "restaurants",
+      "latitude": 2.5639721,
+      "longitude": -72.6370404,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12536239261",
+      "source_updated_at": "2025-01-27T13:35:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Mistura"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.5639721,
+        "longitude": -72.6370404,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/12536239261"
+      }
+    },
+    {
+      "name": "MICKEY MOUSE",
+      "category": "restaurants",
+      "latitude": 2.57100505,
+      "longitude": -72.6420186,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/906186168",
+      "source_updated_at": "2026-05-01T22:26:47Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Carrera 24",
+        "amenity": "restaurant",
+        "building": "yes",
+        "cuisine": "ENSALADAS_DE_FRUTAS;CARTA_A_LA_PLANCHA",
+        "name": "MICKEY MOUSE"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 2.57100505,
+        "longitude": -72.6420186,
+        "kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/906186168"
+      }
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Recorrido de arte rupestre",
+      "description_es": "Visita guiada para conocer los paneles de Cerro Azul y su contexto territorial.",
+      "operator_internal": "Vive Guaviare",
+      "source_url": "https://viveguaviare.com/vive-la-aventura/",
+      "source_checked_at": "2026-11-04",
+      "status": "documented_offer",
+      "public": false,
+      "geolocation": null,
+      "geolocation_exception": "mobile_excursion; meeting point depends on confirmed booking",
+      "guaranteed_availability": false
+    },
+    {
+      "name": "Recorrido por la laguna Damas del Nare",
+      "description_es": "Salida acompañada por anfitriones locales para observar el paisaje y la fauna de la laguna.",
+      "operator_internal": "Vive Guaviare",
+      "source_url": "https://viveguaviare.com/donde-ir/",
+      "source_checked_at": "2026-11-04",
+      "status": "documented_offer",
+      "public": false,
+      "geolocation": null,
+      "geolocation_exception": "mobile_excursion; meeting point depends on confirmed booking",
+      "guaranteed_availability": false
+    }
+  ],
+  "image_references": [],
+  "limitations": [
+    "No publication authorized; images and content require review.",
+    "Mapped coordinates do not establish present operation or visitor access."
+  ],
+  "rejected_geolocations": [
+    {
+      "name": "Cerro Azul, Miraflores",
+      "reason": "Namesake peak in a different municipality; not the archaeological site."
+    },
+    {
+      "name": "Puerta de Orion viewpoint node9028991759",
+      "reason": "Different mapped point 4km away; use attraction node2616354163."
+    }
+  ]
+}

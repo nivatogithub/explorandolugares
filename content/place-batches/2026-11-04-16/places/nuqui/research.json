@@ -1,0 +1,837 @@
+{
+  "slug": "nuqui",
+  "name": "Nuquí",
+  "country_code": "CO",
+  "department_code": "27",
+  "municipality_code": "27495",
+  "municipality_name": "Nuquí",
+  "type": "municipality",
+  "status": "prepared_for_private_review",
+  "public": false,
+  "intro_draft_es": "Costa del Pacífico, selva y comunidades costeras.",
+  "source_url": "https://colombia.travel/es/nuqui",
+  "source_checked_at": "2026-11-04",
+  "previous_plan": "crecimiento-colombia/colombia/departamentos/choco/lugares/nuqui/lugar.json",
+  "previous_plan_state": "planned",
+  "geolocation": {
+    "latitude": 5.707435,
+    "longitude": -77.2710963,
+    "source_url": "https://www.openstreetmap.org/node/316222471",
+    "label": "Nuquí, núcleo urbano cartografiado",
+    "point_kind": "mapped_locality_core",
+    "checked_at": "2026-11-04",
+    "maps_url": null
+  },
+  "attractions": [
+    {
+      "name": "Guachalito",
+      "status": "documented_for_review",
+      "source_url": "https://colombia.travel/es/nuqui",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 5.6287,
+        "longitude": -77.40592,
+        "source_url": "https://mapcarta.com/es/N7714966225",
+        "label": "Guachalito: referencia de localidad, no entrada de playa",
+        "point_kind": "locality_reference",
+        "checked_at": "2026-11-04",
+        "maps_url": null
+      },
+      "image": null,
+      "description_es": "Un sector costero de playas, vegetación y alojamientos rurales, distinto del casco urbano de Nuquí."
+    },
+    {
+      "name": "Termales",
+      "status": "documented_for_review",
+      "source_url": "https://colombia.travel/es/nuqui",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 5.60405,
+        "longitude": -77.43857,
+        "source_url": "https://mapcarta.com/es/N9993340117",
+        "label": "Baños de Termales",
+        "point_kind": "site_reference_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "maps_url": null
+      },
+      "image": null,
+      "description_es": "Las aguas termales son una alternativa a la playa en el entorno de la comunidad de Termales. El acceso es administrado."
+    },
+    {
+      "name": "Coquí",
+      "status": "documented_for_review",
+      "source_url": "https://colombia.travel/es/nuqui",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 5.60772,
+        "longitude": -77.36113,
+        "source_url": "https://mapcarta.com/es/19717550",
+        "label": "Coquí: núcleo del pueblo",
+        "point_kind": "locality_reference",
+        "checked_at": "2026-11-04",
+        "maps_url": null
+      },
+      "image": null,
+      "description_es": "Un pueblo costero del municipio desde el que se conoce la relación de las comunidades con el mar y el manglar."
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Avistamiento de ballenas",
+      "operator_evidence": "Casa Balae",
+      "source_url": "https://casabalae.com/actividades/",
+      "source_checked_at": "2026-11-04",
+      "status": "documented_offer_for_review",
+      "geolocation": {
+        "latitude": 5.6244125,
+        "longitude": -77.4214529,
+        "point_kind": "operator_base_not_confirmed_excursion_departure",
+        "label": "Casa Balae, punto del alojamiento publicado por el operador",
+        "source_url": "https://casabalae.com/actividades/",
+        "maps_url": "https://www.google.com/maps/place/Casa+Balae/@5.6244125,-77.4236469,17z/data=!3m1!4b1!4m5!3m4!1s0x8e49030e78f6988f:0xcdd65bb32a29e82e!8m2!3d5.6244125!4d-77.4214529",
+        "checked_at": "2026-11-04"
+      },
+      "public": false,
+      "notes": "Oferta estacional julio–octubre según operador; no garantizar avistamientos."
+    },
+    {
+      "name": "Recorrido en canoa por el río Joví",
+      "operator_evidence": "Casa Balae",
+      "source_url": "https://casabalae.com/actividades/",
+      "source_checked_at": "2026-11-04",
+      "status": "documented_offer_for_review",
+      "geolocation": {
+        "latitude": 5.6244125,
+        "longitude": -77.4214529,
+        "point_kind": "operator_base_not_confirmed_excursion_departure",
+        "label": "Casa Balae, punto del alojamiento publicado por el operador",
+        "source_url": "https://casabalae.com/actividades/",
+        "maps_url": "https://www.google.com/maps/place/Casa+Balae/@5.6244125,-77.4236469,17z/data=!3m1!4b1!4m5!3m4!1s0x8e49030e78f6988f:0xcdd65bb32a29e82e!8m2!3d5.6244125!4d-77.4214529",
+        "checked_at": "2026-11-04"
+      },
+      "public": false,
+      "notes": "El punto de encuentro y transporte deben verificarse; no ubicar con el centro municipal."
+    },
+    {
+      "name": "Visita a las aguas termales",
+      "operator_evidence": "Casa Balae",
+      "source_url": "https://casabalae.com/actividades/",
+      "source_checked_at": "2026-11-04",
+      "status": "documented_offer_for_review",
+      "geolocation": {
+        "latitude": 5.60405,
+        "longitude": -77.43857,
+        "source_url": "https://mapcarta.com/es/N9993340117",
+        "label": "Baños de Termales",
+        "point_kind": "site_reference_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "maps_url": null
+      },
+      "public": false,
+      "notes": "Verificar acceso comunitario y ubicación antes de publicar."
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Empanadas Dónde Inés",
+      "category": "restaurants",
+      "source_url": "https://www.openstreetmap.org/node/9955790519",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7077509,
+        "longitude": -77.2657494,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9955790519",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Jesusita",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/9992862324",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7053065,
+        "longitude": -77.2722863,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9992862324",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Hotel Canita",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/13909571001",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7099982,
+        "longitude": -77.2661637,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/13909571001",
+        "checked_at": "2026-11-04"
+      },
+      "phone": "+573216637244;+573186642266",
+      "website": null,
+      "address_description": "Barrio union",
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Ricuras de Panguí",
+      "category": "cafes",
+      "source_url": "https://www.openstreetmap.org/node/13909594001",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7084277,
+        "longitude": -77.2662831,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/13909594001",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": "Calle Bellavista",
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Escombros del Mar",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/13910816001",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7092441,
+        "longitude": -77.2660941,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/13910816001",
+        "checked_at": "2026-11-04"
+      },
+      "phone": "+57 321 2336818",
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "La Azotea",
+      "category": "restaurants",
+      "source_url": "https://www.openstreetmap.org/node/13920944301",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7082578,
+        "longitude": -77.2666391,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/13920944301",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Obera Pacific",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/13920944401",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7094557,
+        "longitude": -77.2668048,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/13920944401",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Nuquimar",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/way/675282451",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7127114500000005,
+        "longitude": -77.26412955,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/675282451",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Arena Azul",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/way/675282453",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7129335999999995,
+        "longitude": -77.26354760000001,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/675282453",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": "Calle 13",
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Puerta del Sol",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/way/675282494",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7105996,
+        "longitude": -77.26582884999999,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/675282494",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Pacífico Travel",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/way/675282496",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7076654,
+        "longitude": -77.26613145,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/675282496",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Delfín Real",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/way/677086210",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.709774250000001,
+        "longitude": -77.2660738,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/677086210",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Pola",
+      "category": "restaurants",
+      "source_url": "https://www.openstreetmap.org/way/677086211",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7096346,
+        "longitude": -77.26619595,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/677086211",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Iracas del Mar",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/way/1460595219",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.7162331,
+        "longitude": -77.26226835,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/1460595219",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "La Joviseña",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/3951510936",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6289855,
+        "longitude": -77.4052646,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/3951510936",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": "https://www.lajovisena.com/",
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Hotel El Cantil Ecolodge",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/3974236001",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6242852,
+        "longitude": -77.4201054,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/3974236001",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": "http://www.elcantil.com",
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Cabañas Playa Terco",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/3974236002",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6189808,
+        "longitude": -77.4287336,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/3974236002",
+        "checked_at": "2026-11-04"
+      },
+      "phone": "+57 312 7682533",
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Nautilos",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/4430079396",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.629483,
+        "longitude": -77.4059203,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4430079396",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Beto & Marta Cabañas",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/6092742986",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6290828,
+        "longitude": -77.4067392,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6092742986",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Brisas del Mar",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/6786215285",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6291923,
+        "longitude": -77.4049738,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6786215285",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": "Guachalito",
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Pura Vida",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/6817803686",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6085898,
+        "longitude": -77.4385675,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6817803686",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Casa Maniki",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/7286841085",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6116717,
+        "longitude": -77.4350825,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/7286841085",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": "https://casamaniki.com/",
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Restaurante Apapache",
+      "category": "restaurants",
+      "source_url": "https://www.openstreetmap.org/node/9956994517",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6107643,
+        "longitude": -77.4358402,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9956994517",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Posada Las Palmas",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/9958300818",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6281147,
+        "longitude": -77.4047075,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9958300818",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Hospedaje Bahía Terco",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/9958300819",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6192812,
+        "longitude": -77.4283687,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9958300819",
+        "checked_at": "2026-11-04"
+      },
+      "phone": "+57 312 215 8139;+57 312 811 8153",
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Hotel Mar y Río",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/9958300917",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6274389,
+        "longitude": -77.404359,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9958300917",
+        "checked_at": "2026-11-04"
+      },
+      "phone": "+573113513406",
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review",
+      "official_source_url": "https://maryrionuqui.com/",
+      "email": "Reservas@maryrionuqui.com"
+    },
+    {
+      "name": "Peñas de Guachalito",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/node/9958301017",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6293759,
+        "longitude": -77.405557,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9958301017",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Restaurante Choibá",
+      "category": "restaurants",
+      "source_url": "https://www.openstreetmap.org/node/13909542002",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.6160442,
+        "longitude": -77.3832008,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/13909542002",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Hotel La Kuka",
+      "category": "accommodation",
+      "source_url": "https://www.openstreetmap.org/way/723774667",
+      "source_checked_at": "2026-11-04",
+      "evidence": "Named OpenStreetMap feature; current trading activity not independently confirmed",
+      "geolocation": {
+        "latitude": 5.62751815,
+        "longitude": -77.40969045,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/723774667",
+        "checked_at": "2026-11-04"
+      },
+      "phone": null,
+      "website": null,
+      "address_description": null,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false,
+      "status": "documented_directory_candidate_for_review"
+    },
+    {
+      "name": "Casa Balae",
+      "category": "accommodation",
+      "source_url": "https://casabalae.com/",
+      "address_description": "Playa Guachalito, entre Termales y Joví, Nuquí",
+      "phone": "+573105118157",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 5.6244125,
+        "longitude": -77.4214529,
+        "point_kind": "operator_published_maps_place",
+        "label": "Casa Balae, punto del alojamiento publicado por el operador",
+        "source_url": "https://casabalae.com/actividades/",
+        "maps_url": "https://www.google.com/maps/place/Casa+Balae/@5.6244125,-77.4236469,17z/data=!3m1!4b1!4m5!3m4!1s0x8e49030e78f6988f:0xcdd65bb32a29e82e!8m2!3d5.6244125!4d-77.4214529",
+        "checked_at": "2026-11-04"
+      },
+      "status": "documented_directory_candidate_for_review",
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "public": false
+    }
+  ],
+  "media": {
+    "hero": {
+      "status": "reference_pending",
+      "file": null,
+      "approval": null
+    },
+    "style": "Follow repository image skill; never mislabel illustrations as photographs"
+  },
+  "requirements": {
+    "business_target": 30,
+    "business_categories": [
+      "accommodation",
+      "restaurants",
+      "cafes",
+      "tour_operators",
+      "crafts",
+      "transport"
+    ],
+    "image_format": "webp",
+    "aspect_ratio": "3:2",
+    "locales": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "publication_blockers": [
+      "Verified named locations and precise coordinates",
+      "Photo references and visual review",
+      "Documented business records",
+      "Verified operator offers if experiences included",
+      "Full ES EN PT-BR editorial and SEO review"
+    ]
+  },
+  "why_visit_es": [
+    "Conocer comunidades costeras y paisajes del Pacífico chocoano.",
+    "Combinar playa, ríos y aguas termales.",
+    "Participar en excursiones de naturaleza con oferta local documentada."
+  ],
+  "history_draft_es": "Las comunidades costeras y sus vínculos con el mar y los ríos forman parte de la identidad de Nuquí. La visita permite acercarse al paisaje del golfo de Tribugá y a localidades como Coquí y Termales."
+}

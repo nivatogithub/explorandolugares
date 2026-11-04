@@ -1,0 +1,50 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "Orilla fluvial de Puerto Carreño",
+    "source_url": "https://colombia.co/amazonia-orinoquia-colombiana/vichada/puerto-carreno",
+    "original_url": "https://colombia.co/sites/default/files/2025-01/paisaje-fluvial-puerto-carreno.jpg",
+    "license": "No confirmada; referencia de revisión privada",
+    "license_url": null,
+    "author_html": "Consultar fuente original",
+    "checked_at": "2026-11-04",
+    "sha256": "f62f5593d7e0b4f548118d200cb2b392cb215d3e490c5af1fdac4b3c5f238c1f",
+    "approval": null,
+    "publication_rights_status": "unconfirmed",
+    "user_scope": "Explicit user override of confirmation prerequisite for draft generation; does not establish photographer permission"
+  },
+  "master_path": "/Users/nivato/.codex/generated_images/01a1a7a5-8b15-7733-b0f9-da4294d1d1d9/exec-781d6c04-9785-4428-aa4f-13ff064b175d.png",
+  "master_sha256": "ecccfb3f108e7e81da9e201af8530efe6e68f5505035ee77f0f19e3257019387",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/attraction-01-640.webp",
+      "sha256": "cf9370e5f775c8a6444b67a29c5b39a8a53b81b5035d3e77cfab4767653f52a9",
+      "bytes": 60828
+    },
+    {
+      "file": "images/attraction-01-1200.webp",
+      "sha256": "7285383530e87fb6c10fcd0a935cf006a12cfd0399f01c1e0baedbd781481140",
+      "bytes": 182098
+    }
+  ],
+  "visual_review": {
+    "date": "2026-11-04",
+    "status": "review_candidate_not_human_approved",
+    "checks": [
+      "Output inspected against identified reference",
+      "Composition and principal geographic elements retained",
+      "Color output; no text overlay"
+    ],
+    "limitations": [
+      "Illustrations are not evidence of current conditions or access."
+    ]
+  },
+  "publication_ready": false,
+  "generation_prompt": "Transforma esta referencia identificada de la orilla fluvial de Puerto Carreño, Colombia, en una ilustración editorial semirrealista de tinta y gouache, a color, horizontal 3:2. Preserva estrictamente punto de vista, rampa metálica de embarcación del lado izquierdo con cadenas, río amplio, línea baja de vegetación en horizonte, barcos lejanos del lado derecho y hierba de la orilla en primer plano; cielo nublado de atardecer con apertura dorada central. Mantén proporciones y distribución reales con recorte mínimo, sin inventar malecón moderno, puentes, montañas, casas, personas ni servicios. Trazos y pinceladas visibles, paleta natural contenida, legibilidad clara en tarjeta. Sin títulos ni texto ni logotipos. La referencia determina geografía y cámara, no imaginar otro paisaje.",
+  "prompt_record": "exact"
+}

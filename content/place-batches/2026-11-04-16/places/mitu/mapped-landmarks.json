@@ -1,0 +1,66 @@
+{
+  "source_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-70.22869999999999,1.2493,-70.1887,1.2893000000000001",
+  "license": "ODbL 1.0",
+  "checked_at": "2026-11-04",
+  "items": [
+    {
+      "name": "Calle 14",
+      "latitude": 1.2563455600000002,
+      "longitude": -70.22971457999999,
+      "point_kind": "mapped_feature_reference_not_verified_entrance",
+      "source_url": "https://www.openstreetmap.org/way/239767731",
+      "tags": {
+        "highway": "residential",
+        "name": "Calle 14"
+      }
+    },
+    {
+      "name": "Carrera 3",
+      "latitude": 1.2602503,
+      "longitude": -70.227545875,
+      "point_kind": "mapped_feature_reference_not_verified_entrance",
+      "source_url": "https://www.openstreetmap.org/way/361788692",
+      "tags": {
+        "highway": "residential",
+        "name": "Carrera 3",
+        "source:geometry": "Bing"
+      }
+    },
+    {
+      "name": "Carrera 4",
+      "latitude": 1.2607494333333333,
+      "longitude": -70.2282926,
+      "point_kind": "mapped_feature_reference_not_verified_entrance",
+      "source_url": "https://www.openstreetmap.org/way/361788713",
+      "tags": {
+        "highway": "residential",
+        "name": "Carrera 4",
+        "source:geometry": "Bing"
+      }
+    },
+    {
+      "name": "Calle 18",
+      "latitude": 1.26169942,
+      "longitude": -70.22879216,
+      "point_kind": "mapped_feature_reference_not_verified_entrance",
+      "source_url": "https://www.openstreetmap.org/way/865093095",
+      "tags": {
+        "highway": "residential",
+        "name": "Calle 18",
+        "source:geometry": "Bing"
+      }
+    },
+    {
+      "name": "Calle 16",
+      "latitude": 1.2596728750000001,
+      "longitude": -70.22835065,
+      "point_kind": "mapped_feature_reference_not_verified_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1294886131",
+      "tags": {
+        "highway": "residential",
+        "name": "Calle 16",
+        "source:geometry": "Bing"
+      }
+    }
+  ]
+}

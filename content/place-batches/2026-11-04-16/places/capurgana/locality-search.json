@@ -1,0 +1,27 @@
+{
+  "query_url": "https://nominatim.openstreetmap.org/search?q=Capurgan%C3%A1%2C+Colombia&format=jsonv2&countrycodes=co&limit=5",
+  "results": [
+    {
+      "place_id": 307618264,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 703260210,
+      "lat": "8.6365992",
+      "lon": "-77.3471937",
+      "category": "place",
+      "type": "village",
+      "place_rank": 19,
+      "importance": 0.14671353246356905,
+      "addresstype": "village",
+      "name": "Capurganá",
+      "display_name": "Capurganá, Acandí, Darién, Chocó, RAP Pacífico, 278017, Colombia",
+      "boundingbox": [
+        "8.6165992",
+        "8.6565992",
+        "-77.3671937",
+        "-77.3271937"
+      ]
+    }
+  ],
+  "use": "Discovery bounds only, not an approved destination point"
+}

@@ -1,0 +1,120 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "File:Cayo Cangrejo, providencia, Colombia.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cayo_Cangrejo,_providencia,_Colombia.JPG",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Cayo_Cangrejo%2C_providencia%2C_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "preview_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Cayo_Cangrejo%2C_providencia%2C_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 1024,
+    "height": 768,
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "author_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Roberto_San_Andr%C3%A9s&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Roberto San Andrés (page does not exist)\">Roberto San Andrés</a>",
+    "description_html": "Cayo Cangrejo, Colombia",
+    "captured_at": "2011",
+    "coordinates": [],
+    "metadata": {
+      "DateTime": {
+        "value": "2011-04-29 18:37:23",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+      },
+      "ObjectName": {
+        "value": "Cayo Cangrejo, providencia, Colombia",
+        "source": "mediawiki-metadata"
+      },
+      "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+      },
+      "Categories": {
+        "value": "CC-Zero|Cayo Cangrejo|Self-published work",
+        "source": "commons-categories",
+        "hidden": ""
+      },
+      "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+      },
+      "ImageDescription": {
+        "value": "Cayo Cangrejo, Colombia",
+        "source": "commons-desc-page"
+      },
+      "DateTimeOriginal": {
+        "value": "2011",
+        "source": "commons-desc-page"
+      },
+      "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+      },
+      "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Roberto_San_Andr%C3%A9s&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Roberto San Andrés (page does not exist)\">Roberto San Andrés</a>",
+        "source": "commons-desc-page"
+      },
+      "LicenseShortName": {
+        "value": "CC0",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "UsageTerms": {
+        "value": "Creative Commons Zero, Public Domain Dedication",
+        "source": "commons-desc-page"
+      },
+      "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "LicenseUrl": {
+        "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "commons-desc-page"
+      },
+      "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "License": {
+        "value": "cc0",
+        "source": "commons-templates",
+        "hidden": ""
+      }
+    },
+    "approval": null,
+    "checked_at": "2026-11-04",
+    "sha256": "06167ca01247d3970bd6e82804c39a7a9453669d3ba0394ff169cccc8edb9dec"
+  },
+  "master_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/unificacion-presentacion/content/place-batches/2026-11-04-16/places/providencia/masters/exec-74d29c38-ba28-4957-9ec5-5866da2cd0a9.png",
+  "master_sha256": "a9fbad37172f7d02ba287717e20f24321ce40be60f3c2ae566704ab6043d0174",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/attraction-01-640.webp",
+      "sha256": "2e786eef529cd9abdaee2daa42ac3943b554eaab81ab21ce5c8fda997bb66d20",
+      "bytes": 44320
+    },
+    {
+      "file": "images/attraction-01-1200.webp",
+      "sha256": "b70ee61d8151197ca2a677abfe86ca1dbce1ca9faf8c5d77307a3b418447e78b",
+      "bytes": 129966
+    }
+  ],
+  "technical_review": {
+    "checked_at": "2026-11-04",
+    "result": "candidate_ready_for_human_comparison",
+    "notes": "Inspected generated image and identified reference; ink/gouache style. Retains broad camera/composition. Historic references do not verify current infrastructure. Human approval still required."
+  },
+  "prompt_summary": "Faithful 3:2 ink/gouache editorial transformation from identified reference; retain camera, geographic shapes and architecture; no added sites, infrastructure or logos."
+}

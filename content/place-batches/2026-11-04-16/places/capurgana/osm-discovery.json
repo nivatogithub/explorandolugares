@@ -1,0 +1,767 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-77.3621937,8.621599199999999,-77.3321937,8.6515992",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    8.6365992,
+    -77.3471937
+  ],
+  "raw_sha256": "7c0827918b318bd7af21deb765322771565c05ab9155d40a91659a0b91db9596",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Hospedaje Hector's House",
+      "category": "accommodation",
+      "latitude": 8.6363809,
+      "longitude": -77.3467643,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4295495690",
+      "source_updated_at": "2016-07-11T01:57:53Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hospedaje Hector's House",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Reggae salsa",
+      "category": "nightlife",
+      "latitude": 8.6361735,
+      "longitude": -77.3480395,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4479296995",
+      "source_updated_at": "2016-11-03T15:44:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "nightclub",
+        "name": "Reggae salsa",
+        "name:es": "Reggae salsa"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "La Bohemia",
+      "category": "accommodation",
+      "latitude": 8.634406,
+      "longitude": -77.3473934,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4769513722",
+      "source_updated_at": "2017-04-01T14:45:53Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "La Bohemia",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante",
+      "category": "restaurants",
+      "latitude": 8.6371283,
+      "longitude": -77.3477899,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5333384722",
+      "source_updated_at": "2018-01-11T14:58:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cabaña Tucan Capurganá",
+      "category": "accommodation",
+      "latitude": 8.6289947,
+      "longitude": -77.3449287,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5368228574",
+      "source_updated_at": "2018-01-28T15:25:17Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Cabaña Tucan Capurganá",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Macondo Bar",
+      "category": "nightlife",
+      "latitude": 8.6354483,
+      "longitude": -77.3472556,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5687992223",
+      "source_updated_at": "2018-06-13T13:51:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "bar",
+        "name": "Macondo Bar"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hostel Capurgana",
+      "category": "accommodation",
+      "latitude": 8.6377002,
+      "longitude": -77.3467816,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5688012924",
+      "source_updated_at": "2018-06-13T13:51:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hostel Capurgana",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Katamaran",
+      "category": "accommodation",
+      "latitude": 8.6377348,
+      "longitude": -77.3462382,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5689260521",
+      "source_updated_at": "2018-06-14T01:35:36Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Katamaran",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cavatappi",
+      "category": "restaurants",
+      "latitude": 8.636885,
+      "longitude": -77.34724,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5695668821",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "italian",
+        "internet_access": "wlan",
+        "name": "Cavatappi",
+        "phone": "+57 313 2953305"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Reserva natural la Coquerita",
+      "category": "attraction_candidate",
+      "latitude": 8.6513735,
+      "longitude": -77.3497879,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5921341385",
+      "source_updated_at": "2018-09-21T18:51:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Camino a la Coquerita",
+        "name": "Reserva natural la Coquerita",
+        "name:en": "Natural reserve la Coquerita",
+        "name:it": "Riserva naturale la Coquerita",
+        "opening_hours": "Mo-Su 07:00-18:00",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hernán Patacon",
+      "category": "restaurants",
+      "latitude": 8.6373471,
+      "longitude": -77.3469453,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5986981287",
+      "source_updated_at": "2018-10-15T20:48:43Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "fish;seafood;regional;local",
+        "name": "Hernán Patacon"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "La Bohemia",
+      "category": "accommodation",
+      "latitude": 8.6343165,
+      "longitude": -77.3474519,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6003693480",
+      "source_updated_at": "2018-10-21T23:30:09Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "no",
+        "name": "La Bohemia",
+        "tourism": "hostel",
+        "wheelchair": "no"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Casa Costa",
+      "category": "accommodation",
+      "latitude": 8.6371992,
+      "longitude": -77.3476823,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6003693482",
+      "source_updated_at": "2018-10-21T23:30:09Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Casa Costa",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hostal Los Delfines",
+      "category": "accommodation",
+      "latitude": 8.6369874,
+      "longitude": -77.348048,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6003693483",
+      "source_updated_at": "2018-10-21T23:30:09Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hostal Los Delfines",
+        "tourism": "hostel",
+        "wheelchair": "no"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cabana Samatha",
+      "category": "accommodation",
+      "latitude": 8.6358691,
+      "longitude": -77.3492977,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6003693687",
+      "source_updated_at": "2018-10-21T23:30:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Cabana Samatha",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hostal Patio Bonito",
+      "category": "accommodation",
+      "latitude": 8.6356303,
+      "longitude": -77.3495547,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6003693690",
+      "source_updated_at": "2018-10-21T23:30:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hostal Patio Bonito",
+        "tourism": "hostel",
+        "wheelchair": "no"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cabana Los Almendros",
+      "category": "accommodation",
+      "latitude": 8.6362528,
+      "longitude": -77.3489359,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6003693691",
+      "source_updated_at": "2018-10-21T23:30:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Cabana Los Almendros",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Acuali Eco Hostal",
+      "category": "accommodation",
+      "latitude": 8.6373756,
+      "longitude": -77.3530491,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6043066786",
+      "source_updated_at": "2018-11-07T02:50:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Acuali Eco Hostal",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "El arca de Noé",
+      "category": "restaurants",
+      "latitude": 8.6371354,
+      "longitude": -77.3471903,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6233730085",
+      "source_updated_at": "2019-01-24T17:13:02Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "El arca de Noé"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Isla del Poe",
+      "category": "accommodation",
+      "latitude": 8.631837,
+      "longitude": -77.3478175,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6233730685",
+      "source_updated_at": "2019-01-24T17:13:05Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Isla del Poe",
+        "tourism": "camp_site"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hilltop Capurgana",
+      "category": "accommodation",
+      "latitude": 8.6291292,
+      "longitude": -77.3429889,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6309377785",
+      "source_updated_at": "2019-03-01T00:12:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Hilltop Capurgana",
+        "opening_hours": "24/7",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Start of El Cielo trail",
+      "category": "attraction_candidate",
+      "latitude": 8.6287708,
+      "longitude": -77.3529795,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6379782845",
+      "source_updated_at": "2019-04-02T23:04:40Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Start of El Cielo trail",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Nautilos",
+      "category": "accommodation",
+      "latitude": 8.6399479,
+      "longitude": -77.3464016,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6405276885",
+      "source_updated_at": "2019-04-14T23:51:28Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Nautilos",
+        "name:fr": "Nautilios",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Josephinas",
+      "category": "restaurants",
+      "latitude": 8.6391733,
+      "longitude": -77.3466344,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6405277385",
+      "source_updated_at": "2019-04-14T23:51:35Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Josephinas"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cabaña Kosta Azul Capurgana",
+      "category": "accommodation",
+      "latitude": 8.6347428,
+      "longitude": -77.349273,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6424074621",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Cabaña Kosta Azul Capurgana",
+        "phone": "+57 322 8379187",
+        "rooms": "8",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hostal El Gecko",
+      "category": "accommodation",
+      "latitude": 8.6363835,
+      "longitude": -77.3475685,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6489035285",
+      "source_updated_at": "2019-05-21T18:18:22Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hostal El Gecko",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cheap good food",
+      "category": "restaurants",
+      "latitude": 8.6360946,
+      "longitude": -77.347549,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6548018685",
+      "source_updated_at": "2019-06-14T16:08:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Cheap good food"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hostal Corocora",
+      "category": "accommodation",
+      "latitude": 8.6355485,
+      "longitude": -77.3489472,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6788747687",
+      "source_updated_at": "2019-09-11T16:05:11Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hostal Corocora",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Piscinas de la Coquerita, Reserva Natural",
+      "category": "attraction_candidate",
+      "latitude": 8.651326,
+      "longitude": -77.3498128,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6790652588",
+      "source_updated_at": "2019-09-12T15:00:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Piscinas de la Coquerita, Reserva Natural",
+        "name:en": "Coquerita pools",
+        "opening_hours": "Mo-Su 08:30-17:30",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pago para el Sendero ecológico",
+      "category": "attraction_candidate",
+      "latitude": 8.6378222,
+      "longitude": -77.3537462,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6802435586",
+      "source_updated_at": "2019-09-17T14:47:45Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Pago para el Sendero ecológico",
+        "name:en": "Toll for the Sendero ecológico",
+        "tourism": "attraction"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Jugos",
+      "category": "restaurants",
+      "latitude": 8.6419287,
+      "longitude": -77.3578898,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6802435587",
+      "source_updated_at": "2021-09-06T17:14:03Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Jugos"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Mirador Sendero Ecológico",
+      "category": "attraction_candidate",
+      "latitude": 8.6452873,
+      "longitude": -77.3603044,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6802438392",
+      "source_updated_at": "2019-09-17T14:47:45Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Mirador Sendero Ecológico",
+        "tourism": "viewpoint"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Puerta Azul",
+      "category": "accommodation",
+      "latitude": 8.628073,
+      "longitude": -77.3438989,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9906858118",
+      "source_updated_at": "2022-07-24T02:42:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Puerta Azul",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Finca El Regalo",
+      "category": "accommodation",
+      "latitude": 8.6244652,
+      "longitude": -77.3427688,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11198157537",
+      "source_updated_at": "2023-09-17T18:04:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Finca El Regalo",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "La Pelu",
+      "category": "restaurants",
+      "latitude": 8.6370119,
+      "longitude": -77.3468193,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12770576501",
+      "source_updated_at": "2025-04-20T16:00:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "La Pelu"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hospedaje Kairos",
+      "category": "accommodation",
+      "latitude": 8.6365942,
+      "longitude": -77.3466653,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/14216525057",
+      "source_updated_at": "2026-09-26T00:34:28Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hospedaje Kairos",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante Kairos",
+      "category": "restaurants",
+      "latitude": 8.6365849,
+      "longitude": -77.3465947,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/14217461388",
+      "source_updated_at": "2026-09-26T00:36:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Kairos"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Los Kunas",
+      "category": "accommodation",
+      "latitude": 8.63761595,
+      "longitude": -77.34679405,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/702583934",
+      "source_updated_at": "2019-07-09T03:10:52Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "beds": "22",
+        "building": "yes",
+        "building:levels": "2",
+        "internet_access": "yes",
+        "internet_access:fee": "no",
+        "name": "Los Kunas",
+        "rooms": "8",
+        "smoking": "separated",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

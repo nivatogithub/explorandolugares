@@ -1,0 +1,774 @@
+{
+  "slug": "mocoa",
+  "name": "Mocoa",
+  "country_code": "CO",
+  "department_code": "86",
+  "municipality_code": "86001",
+  "municipality_name": "Mocoa",
+  "type": "municipality",
+  "status": "prepared_for_private_review",
+  "public": false,
+  "intro_draft_es": "Mocoa es un punto de partida para conocer bosques, quebradas y cascadas del piedemonte amazónico. Fin del Mundo y Ojo de Dios son sitios de visita administrada que requieren planear el acceso y las condiciones del recorrido.",
+  "source_url": "https://colombia.travel/es/mocoa",
+  "source_checked_at": "2026-11-04",
+  "previous_plan": "crecimiento-colombia/colombia/departamentos/putumayo/lugares/mocoa/lugar.json",
+  "previous_plan_state": "planned",
+  "geolocation": {
+    "name": "Parque General Santander",
+    "latitude": 1.14679,
+    "longitude": -76.64822,
+    "coordinate_kind": "identified_park_site_reference_not_entrance",
+    "source_url": "https://fontur.com.co/sites/default/files/2024-01/Plan%20de%20Desarrollo%20Tur%C3%ADstico_Mocoa.PDF",
+    "verification": "named_site_and_coordinates_documented",
+    "public_maps_url": null
+  },
+  "attractions": [
+    {
+      "name": "Cascadas del Fin del Mundo",
+      "status": "candidate",
+      "source_url": "https://colombia.travel/es/mocoa",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 1.10377,
+        "longitude": -76.61593,
+        "source_url": "https://mapcarta.com/N2077040383",
+        "coordinate_kind": "identified_site_reference_not_entrance",
+        "status": "documented_reference",
+        "checked_at": "2026-11-04",
+        "public_maps_url": null,
+        "corroborating_source": "https://commons.wikimedia.org/wiki/Category:Cascadas_Fin_del_Mundo",
+        "note": "OSM waterfall/viewpoint reference within approximately 60m of Commons object. Distant Wikidata point rejected; reference is not trail entrance."
+      },
+      "image": "images/attraction-01-1200.webp",
+      "image_key": "attraction-01",
+      "verification": {
+        "name": "Fin del Mundo",
+        "geolocation_candidates": [
+          {
+            "name": "Fin del Mundo",
+            "latitude": 1.103657,
+            "longitude": -76.615403,
+            "coordinate_kind": "identified_site_not_entrance",
+            "source_url": "https://commons.wikimedia.org/wiki/Category:Cascadas_Fin_del_Mundo",
+            "checked_at": "2026-11-04",
+            "status": "documented_site_coordinates",
+            "public_maps_url": null
+          }
+        ],
+        "status": "coordinate_conflict_wikidata_7km_off_no_public_pin",
+        "note": "FONTUR entry 1°10344N 76°62776 is ambiguous and closer to access; do not silently interpret as waterfall."
+      },
+      "description_es": "Un conjunto de cascadas y pozos de la quebrada Dantayaco entre bosque del piedemonte amazónico. La ilustración representa un pozo del recorrido, no la caída principal. El acceso y las condiciones de visita deben confirmarse con el responsable.",
+      "image_status": "pending_human_review"
+    },
+    {
+      "name": "Ojo de Dios",
+      "status": "candidate",
+      "source_url": "https://colombia.travel/es/mocoa",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 1.09584,
+        "longitude": -76.61107,
+        "source_url": "https://mapcarta.com/es/N5567800922",
+        "coordinate_kind": "identified_site_reference_not_entrance",
+        "status": "mapped_waterfall_reference_not_access_verified",
+        "checked_at": "2026-11-04",
+        "public_maps_url": null
+      },
+      "image": "images/attraction-02-1200.webp",
+      "image_key": "attraction-02",
+      "verification": {
+        "name": "Ojo de Dios",
+        "geolocation_candidates": [
+          {
+            "name": "Ojo de Dios",
+            "latitude": 1.09584,
+            "longitude": -76.61107,
+            "coordinate_kind": "identified_site_not_entrance",
+            "source_url": "https://mapcarta.com/es/N5567800922",
+            "checked_at": "2026-11-04",
+            "status": "documented_site_coordinates",
+            "public_maps_url": null
+          },
+          {
+            "name": "Ojo de Dios",
+            "latitude": 1.0992944444444444,
+            "longitude": -76.61333333333333,
+            "coordinate_kind": "identified_site_not_entrance",
+            "source_url": "https://fontur.com.co/sites/default/files/2024-01/Plan%20de%20Desarrollo%20Tur%C3%ADstico_Mocoa.PDF",
+            "checked_at": "2026-11-04",
+            "status": "documented_site_coordinates",
+            "public_maps_url": null
+          }
+        ],
+        "status": "coordinate_conflict_requires_named_maps_resolution"
+      },
+      "description_es": "El agua atraviesa una abertura natural de la roca antes de caer a un pozo rodeado de bosque. Existe un aviso de cierre temporal de acceso; se conserva como patrimonio natural documentado, sin invitar a ingresar mientras no se confirme su reapertura.",
+      "access_status": "reported_temporarily_closed",
+      "access_source": "https://www.ecoturismoputumayo.com/atractivos-turisticos/cascada-ojo-de-dios/",
+      "publication_blocker": "Confirm access status; FONTUR inventory point differs about460m, retain discrepancy.",
+      "image_status": "pending_human_review"
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Caminata a las cascadas Fin del Mundo",
+      "description_es": "Recorrido acompañado por senderos de bosque hacia las cascadas de la quebrada Dantayaco.",
+      "operator_evidence": "Rioselva Viajes y Turismo",
+      "offer_url": "https://www.visitaputumayo.com/planes/tour-fin-del-mundo/",
+      "checked_at": "2026-11-04",
+      "status": "offer_documented_not_availability_confirmed",
+      "geolocation": null,
+      "location_exception": "Mobile activity: meeting point must be confirmed with operator; no invented pin",
+      "public": false,
+      "operator_is_advertiser": false
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Residencias Ibagué",
+      "category": "accommodation",
+      "latitude": 1.1465657,
+      "longitude": -76.6469708,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4636438289",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Residencias Ibagué",
+        "name:es": "Residencias Ibagué",
+        "opening_hours": "24/7",
+        "phone": "+57 608 4296721",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1465657,
+        "longitude": -76.6469708,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4636438289"
+      }
+    },
+    {
+      "name": "Café del Parque",
+      "category": "cafes",
+      "latitude": 1.1469303,
+      "longitude": -76.6479281,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4687725589",
+      "source_updated_at": "2017-04-04T20:50:37Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "internet_access": "wlan",
+        "name": "Café del Parque"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1469303,
+        "longitude": -76.6479281,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4687725589"
+      }
+    },
+    {
+      "name": "Gira el Sol",
+      "category": "restaurants",
+      "latitude": 1.1521794,
+      "longitude": -76.6498603,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4771970554",
+      "source_updated_at": "2020-12-11T17:31:16Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "diet:vegetarian": "yes",
+        "name": "Gira el Sol"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1521794,
+        "longitude": -76.6498603,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4771970554"
+      }
+    },
+    {
+      "name": "Arrocito en Bajo",
+      "category": "restaurants",
+      "latitude": 1.1545052,
+      "longitude": -76.6476896,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4775819873",
+      "source_updated_at": "2017-04-04T22:33:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "thai",
+        "name": "Arrocito en Bajo"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1545052,
+        "longitude": -76.6476896,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4775819873"
+      }
+    },
+    {
+      "name": "Al Humo",
+      "category": "restaurants",
+      "latitude": 1.148781,
+      "longitude": -76.6484147,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4775819874",
+      "source_updated_at": "2017-04-25T22:12:18Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "regional",
+        "name": "Al Humo"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.148781,
+        "longitude": -76.6484147,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4775819874"
+      }
+    },
+    {
+      "name": "Hotel Continental",
+      "category": "accommodation",
+      "latitude": 1.1464123,
+      "longitude": -76.6473211,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4795317725",
+      "source_updated_at": "2017-04-15T15:35:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Continental",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1464123,
+        "longitude": -76.6473211,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4795317725"
+      }
+    },
+    {
+      "name": "Hotel Central",
+      "category": "accommodation",
+      "latitude": 1.1466168,
+      "longitude": -76.6473527,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4795317726",
+      "source_updated_at": "2017-04-15T15:35:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Hotel Central",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1466168,
+        "longitude": -76.6473527,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4795317726"
+      }
+    },
+    {
+      "name": "Kilote Italian Restaurant",
+      "category": "restaurants",
+      "latitude": 1.1473798,
+      "longitude": -76.6469902,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4987023264",
+      "source_updated_at": "2018-04-28T03:34:40Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Kilote Italian Restaurant"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1473798,
+        "longitude": -76.6469902,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4987023264"
+      }
+    },
+    {
+      "name": "Fontana Real",
+      "category": "accommodation",
+      "latitude": 1.1457277,
+      "longitude": -76.6471508,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4987027270",
+      "source_updated_at": "2017-07-22T18:34:18Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Fontana Real",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1457277,
+        "longitude": -76.6471508,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4987027270"
+      }
+    },
+    {
+      "name": "Sumawasi",
+      "category": "accommodation",
+      "latitude": 1.1377593,
+      "longitude": -76.6521491,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402126230",
+      "source_updated_at": "2019-04-13T12:33:49Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Sumawasi",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1377593,
+        "longitude": -76.6521491,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6402126230"
+      }
+    },
+    {
+      "name": "Hotel HK",
+      "category": "accommodation",
+      "latitude": 1.1471209,
+      "longitude": -76.6474344,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402127422",
+      "source_updated_at": "2019-04-13T12:37:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel HK",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1471209,
+        "longitude": -76.6474344,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6402127422"
+      }
+    },
+    {
+      "name": "El Solar",
+      "category": "restaurants",
+      "latitude": 1.1548324,
+      "longitude": -76.6480202,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402140585",
+      "source_updated_at": "2019-04-13T12:46:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "El Solar"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1548324,
+        "longitude": -76.6480202,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6402140585"
+      }
+    },
+    {
+      "name": "Hotel Kawari",
+      "category": "accommodation",
+      "latitude": 1.1578048,
+      "longitude": -76.6486554,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402147385",
+      "source_updated_at": "2019-04-13T12:50:34Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Kawari",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1578048,
+        "longitude": -76.6486554,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6402147385"
+      }
+    },
+    {
+      "name": "Restaurante Arapaima",
+      "category": "restaurants",
+      "latitude": 1.1465702,
+      "longitude": -76.6575454,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402154113",
+      "source_updated_at": "2019-04-13T12:53:44Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Arapaima"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1465702,
+        "longitude": -76.6575454,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6402154113"
+      }
+    },
+    {
+      "name": "Alejandro I",
+      "category": "accommodation",
+      "latitude": 1.1474834,
+      "longitude": -76.6475536,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10727905005",
+      "source_updated_at": "2023-03-11T16:41:05Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Alejandro I",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1474834,
+        "longitude": -76.6475536,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/10727905005"
+      }
+    },
+    {
+      "name": "Hostel Sinai",
+      "category": "accommodation",
+      "latitude": 1.1396538,
+      "longitude": -76.6491319,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12525124802",
+      "source_updated_at": "2025-01-22T23:44:37Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hostel Sinai",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1396538,
+        "longitude": -76.6491319,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/12525124802"
+      }
+    },
+    {
+      "name": "Hotel Marly Plaza",
+      "category": "accommodation",
+      "latitude": 1.14610015,
+      "longitude": -76.64766565,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/484397812",
+      "source_updated_at": "2017-04-07T02:37:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "building:levels": "5",
+        "building:levels:underground": "1",
+        "name": "Hotel Marly Plaza",
+        "source": "IGAC, 2008,",
+        "stars": "4",
+        "tipo_const": "NO CONVENCIONAL",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.14610015,
+        "longitude": -76.64766565,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/484397812"
+      }
+    },
+    {
+      "name": "Hotel Inga Real",
+      "category": "accommodation",
+      "latitude": 1.14681145,
+      "longitude": -76.6475955,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/484397817",
+      "source_updated_at": "2017-04-07T02:37:02Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "building:levels": "5",
+        "building:levels:underground": "1",
+        "name": "Hotel Inga Real",
+        "source": "IGAC, 2008,",
+        "tipo_const": "NO CONVENCIONAL",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.14681145,
+        "longitude": -76.6475955,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/484397817"
+      }
+    },
+    {
+      "name": "Arepas Con Todo",
+      "category": "restaurants",
+      "latitude": 1.1455053,
+      "longitude": -76.6520797,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/484569347",
+      "source_updated_at": "2017-04-07T02:04:43Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "building": "yes",
+        "building:levels": "7",
+        "building:levels:underground": "1",
+        "name": "Arepas Con Todo",
+        "source": "IGAC, 2008,",
+        "tipo_const": "NO CONVENCIONAL"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "maps_url": null,
+      "license": "ODbL 1.0",
+      "geolocation": {
+        "latitude": 1.1455053,
+        "longitude": -76.6520797,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/484569347"
+      }
+    },
+    {
+      "name": "Cafetería Antojitos",
+      "category": "cafes",
+      "latitude": 1.19784,
+      "longitude": -76.64307,
+      "source_url": "https://mapcarta.com/es/N10776023605",
+      "source_checked_at": "2026-11-04",
+      "point_kind": "mapped_named_site_not_guaranteed_entrance",
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "public": false,
+      "claimed": false,
+      "license": "Source cartographic metadata; upstream OSM/GeoNames as attributed by Mapcarta",
+      "geolocation": {
+        "latitude": 1.19784,
+        "longitude": -76.64307,
+        "point_kind": "mapped_named_site_not_guaranteed_entrance",
+        "source_url": "https://mapcarta.com/es/N10776023605"
+      },
+      "verified_business": false
+    },
+    {
+      "name": "Asomicamping",
+      "category": "accommodation",
+      "latitude": 1.0941,
+      "longitude": -76.65419,
+      "source_url": "https://mapcarta.com/es/N4795450825",
+      "source_checked_at": "2026-11-04",
+      "point_kind": "mapped_named_site_not_guaranteed_entrance",
+      "status": "cartographic_candidate_current_operation_unconfirmed",
+      "public": false,
+      "claimed": false,
+      "license": "Source cartographic metadata; upstream OSM/GeoNames as attributed by Mapcarta",
+      "geolocation": {
+        "latitude": 1.0941,
+        "longitude": -76.65419,
+        "point_kind": "mapped_named_site_not_guaranteed_entrance",
+        "source_url": "https://mapcarta.com/es/N4795450825"
+      },
+      "verified_business": false
+    }
+  ],
+  "media": {
+    "hero": {
+      "status": "pending_human_review",
+      "file": "images/hero-1200.webp",
+      "approval": null
+    },
+    "style": "Follow repository image skill; never mislabel illustrations as photographs"
+  },
+  "requirements": {
+    "business_target": 30,
+    "business_categories": [
+      "accommodation",
+      "restaurants",
+      "cafes",
+      "tour_operators",
+      "crafts",
+      "transport"
+    ],
+    "image_format": "webp",
+    "aspect_ratio": "3:2",
+    "locales": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "publication_blockers": [
+      "Verified named locations and precise coordinates",
+      "Photo references and visual review",
+      "Documented business records",
+      "Verified operator offers if experiences included",
+      "Full ES EN PT-BR editorial and SEO review"
+    ]
+  },
+  "editorial_locales": {
+    "es": {
+      "title": "Mocoa, senderos y cascadas del piedemonte",
+      "intro": "Mocoa es un punto de partida para conocer bosques, quebradas y cascadas del piedemonte amazónico. Fin del Mundo y Ojo de Dios son sitios de visita administrada que requieren planear el acceso y las condiciones del recorrido.",
+      "why_visit": [
+        "Conocer cascadas y formaciones naturales en un entorno de bosque.",
+        "Caminar por recorridos administrados con información previa de acceso.",
+        "Combinar servicios de la ciudad con salidas de naturaleza."
+      ]
+    },
+    "en": {
+      "title": "Mocoa, foothill trails and waterfalls",
+      "intro": "Mocoa is a starting point for exploring forests, streams and waterfalls in the Amazon foothills. Fin del Mundo and Ojo de Dios are managed visitor sites where access and route conditions should be checked in advance.",
+      "why_visit": [
+        "Discover waterfalls and natural formations in a forest setting.",
+        "Walk managed routes with access information checked beforehand.",
+        "Combine city services with nature outings."
+      ]
+    },
+    "pt-BR": {
+      "title": "Mocoa, trilhas e cachoeiras do sopé amazônico",
+      "intro": "Mocoa é um ponto de partida para conhecer florestas, riachos e cachoeiras do sopé amazônico. Fin del Mundo e Ojo de Dios são locais de visita administrada: é preciso planejar o acesso e as condições do percurso.",
+      "why_visit": [
+        "Conhecer cachoeiras e formações naturais em meio à floresta.",
+        "Percorrer trilhas administradas com informações prévias de acesso.",
+        "Combinar os serviços da cidade com passeios de natureza."
+      ]
+    }
+  },
+  "verification_notes": [
+    "Sitios naturales documentados por inventario municipal; oferta no garantiza disponibilidad ni acceso libre.",
+    "Directorio público de prestadores2025 https://www.visitaputumayo.com/wp-content/uploads/2025/05/Prestadores-Turisticos-2025.pdf"
+  ],
+  "photo_references": [
+    "references/attraction-01.json",
+    "references/attraction-02.json",
+    "references/hero.json"
+  ],
+  "research_supplement": "verified-research.json",
+  "editorial_exclusions": [
+    {
+      "name": "Parque General Santander",
+      "reason": "Central georeference retained; no distinct authorized image and low added editorial value versus natural attractions."
+    }
+  ],
+  "why_visit_es": [
+    "Conocer cascadas y formaciones naturales en un entorno de bosque.",
+    "Caminar por recorridos administrados con información previa de acceso.",
+    "Combinar servicios de la ciudad con salidas de naturaleza."
+  ]
+}

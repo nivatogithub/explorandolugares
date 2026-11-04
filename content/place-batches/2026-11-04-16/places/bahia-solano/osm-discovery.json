@@ -1,0 +1,436 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-77.41544,6.212560000000001,-77.39144,6.23656",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    6.22456,
+    -77.40344
+  ],
+  "raw_sha256": "2512381015fb6c1e2e30fbb92dc84ad1016333596e6901026b12e09f1c60e56a",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Hotel Bahía Solano",
+      "category": "accommodation",
+      "latitude": 6.2264656,
+      "longitude": -77.4066693,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3048058621",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "Celular": "3216392037",
+        "name": "Hotel Bahía Solano",
+        "phone": "+57 314 8217037",
+        "tourism": "hotel",
+        "website": "https://hotelbahiasolano.com/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Rocas de Cabo Marzo",
+      "category": "accommodation",
+      "latitude": 6.2269539,
+      "longitude": -77.4079498,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3048123052",
+      "source_updated_at": "2020-07-17T20:34:20Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Rocas de Cabo Marzo",
+        "tourism": "hotel",
+        "website": "http://posadarocasdecabomarzo.com/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Posada El Acuario",
+      "category": "accommodation",
+      "latitude": 6.2275959,
+      "longitude": -77.4078273,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6202842486",
+      "source_updated_at": "2021-12-22T22:29:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Posada El Acuario",
+        "name:en": "Posada El Acuario",
+        "name:es": "Posada El Acuario",
+        "name:fr": "Posada El Acuario",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pizzeria",
+      "category": "restaurants",
+      "latitude": 6.2275402,
+      "longitude": -77.408073,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6202846785",
+      "source_updated_at": "2019-01-12T09:02:13Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "italian_pizza",
+        "name": "Pizzeria",
+        "opening_hours": "24/7"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Agencia para salir ver ballenas y aves",
+      "category": "tour_operators",
+      "latitude": 6.2273467,
+      "longitude": -77.4073381,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6202889385",
+      "source_updated_at": "2019-01-12T09:02:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Agencia para salir ver ballenas y aves",
+        "name:en": "Whales and birds",
+        "name:fr": "Agence pour sortir voir les baleines et des oiseaux",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Yubarta",
+      "category": "accommodation",
+      "latitude": 6.2269874,
+      "longitude": -77.4071092,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9906567906",
+      "source_updated_at": "2022-07-23T21:25:38Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Yubarta",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Balboa Inn",
+      "category": "accommodation",
+      "latitude": 6.2269486,
+      "longitude": -77.4066952,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9906590929",
+      "source_updated_at": "2022-07-23T21:27:30Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Balboa Inn",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Bahía Yubarta",
+      "category": "accommodation",
+      "latitude": 6.2269771,
+      "longitude": -77.4070967,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9950190317",
+      "source_updated_at": "2022-08-12T22:31:18Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Hotel Bahía Yubarta",
+        "name:en": "Bahia Yubarta Hotel",
+        "phone": "+57 311 3891888",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Pacífico Azul",
+      "category": "accommodation",
+      "latitude": 6.2250753,
+      "longitude": -77.4055063,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9951766617",
+      "source_updated_at": "2022-08-13T23:50:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Pacífico Azul",
+        "name:en": "Pacífico Azul Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Centro de buceo Ankla Azul",
+      "category": "tour_operators",
+      "latitude": 6.226778,
+      "longitude": -77.4068166,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790317",
+      "source_updated_at": "2022-08-15T21:57:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "contact:instagram": "anklaazul",
+        "name": "Centro de buceo Ankla Azul",
+        "name:en": "Ankla Azul Diving Center",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Costa Chocó",
+      "category": "accommodation",
+      "latitude": 6.2269559,
+      "longitude": -77.4066824,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790318",
+      "source_updated_at": "2022-08-15T21:57:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Costa Chocó",
+        "name:en": "Costa Chocó Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Panadería",
+      "category": "cafes",
+      "latitude": 6.2256195,
+      "longitude": -77.4034819,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790417",
+      "source_updated_at": "2022-08-15T21:57:28Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Panadería",
+        "name:en": "Bakery",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante La Casa Negra",
+      "category": "restaurants",
+      "latitude": 6.2269125,
+      "longitude": -77.4072719,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790418",
+      "source_updated_at": "2022-08-15T21:57:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante La Casa Negra",
+        "name:en": "La Casa Negra Restaurant"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante Bra y Vic",
+      "category": "restaurants",
+      "latitude": 6.2267398,
+      "longitude": -77.4058921,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790517",
+      "source_updated_at": "2022-08-15T21:57:35Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Bra y Vic",
+        "name:en": "Bra y Vic Restaurant"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Arepas y panzeroti \"Los Palitos\"",
+      "category": "restaurants",
+      "latitude": 6.2255702,
+      "longitude": -77.4055601,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790518",
+      "source_updated_at": "2022-08-15T21:57:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Arepas y panzeroti \"Los Palitos\"",
+        "name:en": "Arepas and panzeroti \"Los Palitos\""
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Panadería",
+      "category": "cafes",
+      "latitude": 6.2256837,
+      "longitude": -77.4061103,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790617",
+      "source_updated_at": "2022-08-15T21:57:38Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Panadería",
+        "name:en": "Bakery",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Posada Del Mar",
+      "category": "accommodation",
+      "latitude": 6.2261463,
+      "longitude": -77.4073136,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10004287917",
+      "source_updated_at": "2022-09-06T13:28:28Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Posada Del Mar",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Marea",
+      "category": "restaurants",
+      "latitude": 6.2279934,
+      "longitude": -77.409501,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10004287918",
+      "source_updated_at": "2022-09-06T13:28:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Marea"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Amongus Parrilla",
+      "category": "restaurants",
+      "latitude": 6.2263775,
+      "longitude": -77.4057921,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11119170505",
+      "source_updated_at": "2023-08-16T14:46:58Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Amongus Parrilla"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Madre Agua",
+      "category": "tour_operators",
+      "latitude": 6.2256618,
+      "longitude": -77.4062079,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13032329201",
+      "source_updated_at": "2025-07-28T20:57:25Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Madre Agua",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque",
+      "category": "attraction_candidate",
+      "latitude": 6.2278392,
+      "longitude": -77.40541285,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/300701088",
+      "source_updated_at": "2024-11-25T23:46:48Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

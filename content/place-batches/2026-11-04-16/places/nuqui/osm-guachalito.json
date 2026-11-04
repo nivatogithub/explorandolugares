@@ -1,0 +1,342 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-77.44091999999999,5.5937,-77.37092,5.6637",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    5.6287,
+    -77.40592
+  ],
+  "raw_sha256": "08a97295abdee877ede3fe32a0fa67149455f306f4e09dd94b92ba4a313aac80",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "La Joviseña",
+      "category": "accommodation",
+      "latitude": 5.6289855,
+      "longitude": -77.4052646,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3951510936",
+      "source_updated_at": "2024-07-10T15:02:34Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "ele": "3",
+        "name": "La Joviseña",
+        "operator": "Elizabeth y Benjamín",
+        "smoking": "outside",
+        "tourism": "hotel",
+        "website": "https://www.lajovisena.com/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel El Cantil Ecolodge",
+      "category": "accommodation",
+      "latitude": 5.6242852,
+      "longitude": -77.4201054,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3974236001",
+      "source_updated_at": "2016-01-28T17:28:59Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel El Cantil Ecolodge",
+        "tourism": "hotel",
+        "website": "http://www.elcantil.com"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cabañas Playa Terco",
+      "category": "accommodation",
+      "latitude": 5.6189808,
+      "longitude": -77.4287336,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3974236002",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "nuqui",
+        "description": "CABAÑAS PLAYA TERCO, Para los que desean pasar luna de miel y a vacacionar se ofrece: SERVICIOS QUE OFRECE: Plan 3 noches 4 días $600.000 por personas $ 80% para niños entre 4 a 8 años, Menores de 4 años no pagan. INCLUYE: - Recibimiento en el Aeropuert",
+        "image": "https://www.instagram.com/p/CM6XOMsla-q/?utm_source=ig_web_copy_link",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Cabañas Playa Terco",
+        "operator": "Adriano Hernandez perea",
+        "phone": "+57 312 7682533",
+        "reservation": "yes",
+        "rooms": "6",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Nautilos",
+      "category": "accommodation",
+      "latitude": 5.629483,
+      "longitude": -77.4059203,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4430079396",
+      "source_updated_at": "2016-10-04T03:06:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Nautilos",
+        "name:es": "Nautilos",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Beto & Marta Cabañas",
+      "category": "accommodation",
+      "latitude": 5.6290828,
+      "longitude": -77.4067392,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6092742986",
+      "source_updated_at": "2018-11-26T13:28:23Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Beto & Marta Cabañas",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Brisas del Mar",
+      "category": "accommodation",
+      "latitude": 5.6291923,
+      "longitude": -77.4049738,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6786215285",
+      "source_updated_at": "2019-09-10T16:40:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Guachalito",
+        "name": "Brisas del Mar",
+        "operator": "“Rica”",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pura Vida",
+      "category": "accommodation",
+      "latitude": 5.6085898,
+      "longitude": -77.4385675,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6817803686",
+      "source_updated_at": "2019-09-23T15:41:11Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Pura Vida",
+        "operator": "Paulino",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Casa Maniki",
+      "category": "accommodation",
+      "latitude": 5.6116717,
+      "longitude": -77.4350825,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/7286841085",
+      "source_updated_at": "2020-03-20T02:57:04Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "email": "casamaniki@gmail.com",
+        "name": "Casa Maniki",
+        "tourism": "guest_house",
+        "website": "https://casamaniki.com/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante Apapache",
+      "category": "restaurants",
+      "latitude": 5.6107643,
+      "longitude": -77.4358402,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9956994517",
+      "source_updated_at": "2022-08-22T02:58:42Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Apapache",
+        "name:en": "Apapache Restaurant"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Posada Las Palmas",
+      "category": "accommodation",
+      "latitude": 5.6281147,
+      "longitude": -77.4047075,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9958300818",
+      "source_updated_at": "2022-08-17T02:52:22Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Posada Las Palmas",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hospedaje Bahía Terco",
+      "category": "accommodation",
+      "latitude": 5.6192812,
+      "longitude": -77.4283687,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9958300819",
+      "source_updated_at": "2022-08-17T02:52:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hospedaje Bahía Terco",
+        "phone": "+57 312 215 8139;+57 312 811 8153",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Mar y Río",
+      "category": "accommodation",
+      "latitude": 5.6274389,
+      "longitude": -77.404359,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9958300917",
+      "source_updated_at": "2022-08-17T02:52:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Mar y Río",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Peñas de Guachalito",
+      "category": "accommodation",
+      "latitude": 5.6293759,
+      "longitude": -77.405557,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9958301017",
+      "source_updated_at": "2022-08-17T02:52:27Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Peñas de Guachalito",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Apapache",
+      "category": "restaurants",
+      "latitude": 5.6107704,
+      "longitude": -77.4358221,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9989731417",
+      "source_updated_at": "2022-08-31T03:45:48Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Apapache"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante Choibá",
+      "category": "restaurants",
+      "latitude": 5.6160442,
+      "longitude": -77.3832008,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13909542002",
+      "source_updated_at": "2026-06-04T12:23:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "check_date": "2026-06-04",
+        "contact:instagram": "restaurantechoiba",
+        "cuisine": "fish;local;regional;seafood",
+        "name": "Restaurante Choibá"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel La Kuka",
+      "category": "accommodation",
+      "latitude": 5.62751815,
+      "longitude": -77.40969045,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/723774667",
+      "source_updated_at": "2025-12-28T23:25:20Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel La Kuka",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

@@ -1,0 +1,635 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-76.66022,1.13479,-76.63622,1.15879",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    1.14679,
+    -76.64822
+  ],
+  "raw_sha256": "8783e8a0fab2c719227f94bc4ebb42650de0f3af0cd1762387631d56332416e9",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Residencias Ibagué",
+      "category": "accommodation",
+      "latitude": 1.1465657,
+      "longitude": -76.6469708,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4636438289",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Residencias Ibagué",
+        "name:es": "Residencias Ibagué",
+        "opening_hours": "24/7",
+        "phone": "+57 608 4296721",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Café del Parque",
+      "category": "cafes",
+      "latitude": 1.1469303,
+      "longitude": -76.6479281,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4687725589",
+      "source_updated_at": "2017-04-04T20:50:37Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "internet_access": "wlan",
+        "name": "Café del Parque"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Gira el Sol",
+      "category": "restaurants",
+      "latitude": 1.1521794,
+      "longitude": -76.6498603,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4771970554",
+      "source_updated_at": "2020-12-11T17:31:16Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "diet:vegetarian": "yes",
+        "name": "Gira el Sol"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Arrocito en Bajo",
+      "category": "restaurants",
+      "latitude": 1.1545052,
+      "longitude": -76.6476896,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4775819873",
+      "source_updated_at": "2017-04-04T22:33:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "thai",
+        "name": "Arrocito en Bajo"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Al Humo",
+      "category": "restaurants",
+      "latitude": 1.148781,
+      "longitude": -76.6484147,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4775819874",
+      "source_updated_at": "2017-04-25T22:12:18Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "cuisine": "regional",
+        "name": "Al Humo"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Continental",
+      "category": "accommodation",
+      "latitude": 1.1464123,
+      "longitude": -76.6473211,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4795317725",
+      "source_updated_at": "2017-04-15T15:35:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Continental",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Central",
+      "category": "accommodation",
+      "latitude": 1.1466168,
+      "longitude": -76.6473527,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4795317726",
+      "source_updated_at": "2017-04-15T15:35:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Hotel Central",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Albergue personal de Cruz Roja",
+      "category": "accommodation",
+      "latitude": 1.1559077,
+      "longitude": -76.6471568,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4795417476",
+      "source_updated_at": "2017-04-15T16:45:39Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "idp:camp_site": "spontaneous_camp",
+        "name": "Albergue personal de Cruz Roja",
+        "operator": "Cruz Roja",
+        "tourism": "camp_site"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "ITP",
+      "category": "accommodation",
+      "latitude": 1.1583095,
+      "longitude": -76.6515617,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4795590440",
+      "source_updated_at": "2017-04-15T18:48:52Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "idp:camp_site": "organized_camp",
+        "name": "ITP",
+        "operator": "Ejercito",
+        "tourism": "camp_site"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Cruzada Cristiana",
+      "category": "accommodation",
+      "latitude": 1.1541368,
+      "longitude": -76.6493623,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4795590441",
+      "source_updated_at": "2017-04-15T18:48:52Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "idp:camp_site": "spontaneous_camp",
+        "name": "Cruzada Cristiana",
+        "operator": "Particular",
+        "tourism": "camp_site"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "OZIP",
+      "category": "accommodation",
+      "latitude": 1.1524997,
+      "longitude": -76.6475478,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4795590448",
+      "source_updated_at": "2017-04-15T18:48:52Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "idp:camp_site": "spontaneous_camp",
+        "name": "OZIP",
+        "operator": "Particular",
+        "tourism": "camp_site"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Fray Placido",
+      "category": "accommodation",
+      "latitude": 1.1454549,
+      "longitude": -76.6533373,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4795606922",
+      "source_updated_at": "2017-04-15T18:57:48Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "idp:camp_site": "organized_camp",
+        "name": "Fray Placido",
+        "operator": "Policia",
+        "tourism": "camp_site"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Kilote Italian Restaurant",
+      "category": "restaurants",
+      "latitude": 1.1473798,
+      "longitude": -76.6469902,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4987023264",
+      "source_updated_at": "2018-04-28T03:34:40Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Kilote Italian Restaurant"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Central",
+      "category": "accommodation",
+      "latitude": 1.146252,
+      "longitude": -76.6466971,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4987023277",
+      "source_updated_at": "2017-07-22T18:35:02Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Central",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Continental",
+      "category": "accommodation",
+      "latitude": 1.1460869,
+      "longitude": -76.6468006,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4987025317",
+      "source_updated_at": "2017-07-22T18:35:54Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Continental",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Fontana Real",
+      "category": "accommodation",
+      "latitude": 1.1457277,
+      "longitude": -76.6471508,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4987027270",
+      "source_updated_at": "2017-07-22T18:34:18Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Fontana Real",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Sumawasi",
+      "category": "accommodation",
+      "latitude": 1.1377593,
+      "longitude": -76.6521491,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402126230",
+      "source_updated_at": "2019-04-13T12:33:49Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Sumawasi",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Pescado",
+      "category": "restaurants",
+      "latitude": 1.1446854,
+      "longitude": -76.647799,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402127159",
+      "source_updated_at": "2019-04-13T12:34:58Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Pescado"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel HK",
+      "category": "accommodation",
+      "latitude": 1.1471209,
+      "longitude": -76.6474344,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402127422",
+      "source_updated_at": "2019-04-13T12:37:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel HK",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "El Solar",
+      "category": "restaurants",
+      "latitude": 1.1548324,
+      "longitude": -76.6480202,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402140585",
+      "source_updated_at": "2019-04-13T12:46:50Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "El Solar"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Kawari",
+      "category": "accommodation",
+      "latitude": 1.1578048,
+      "longitude": -76.6486554,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402147385",
+      "source_updated_at": "2019-04-13T12:50:34Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Kawari",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Restaurante Arapaima",
+      "category": "restaurants",
+      "latitude": 1.1465702,
+      "longitude": -76.6575454,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6402154113",
+      "source_updated_at": "2019-04-13T12:53:44Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Arapaima"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Alejandro I",
+      "category": "accommodation",
+      "latitude": 1.1474834,
+      "longitude": -76.6475536,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10727905005",
+      "source_updated_at": "2023-03-11T16:41:05Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Alejandro I",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hostel Sinai",
+      "category": "accommodation",
+      "latitude": 1.1396538,
+      "longitude": -76.6491319,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12525124802",
+      "source_updated_at": "2025-01-22T23:44:37Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hostel Sinai",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Plaza de Mercado Emprender Mocoa",
+      "category": "attraction_candidate",
+      "latitude": 1.1487394,
+      "longitude": -76.6462283,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13271160725",
+      "source_updated_at": "2026-05-30T03:54:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Mocoa-Putumayo",
+        "addr:housenumber": "Carrera 11",
+        "addr:postcode": "860001",
+        "addr:street": "Calle 13 Junto a la Terminal de Transporte",
+        "description": "Espacio representativo del Folclor, la Gastronomia y las costumbres del Putumayo",
+        "leisure": "park",
+        "name": "Plaza de Mercado Emprender Mocoa",
+        "opening_hours": "Mo-Su 06:00-18:00",
+        "operator": "Alcaldia Municipal de Mocoa",
+        "operator:type": "government"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Marly Plaza",
+      "category": "accommodation",
+      "latitude": 1.14610015,
+      "longitude": -76.64766565,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/484397812",
+      "source_updated_at": "2017-04-07T02:37:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "building:levels": "5",
+        "building:levels:underground": "1",
+        "name": "Hotel Marly Plaza",
+        "source": "IGAC, 2008,",
+        "stars": "4",
+        "tipo_const": "NO CONVENCIONAL",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Inga Real",
+      "category": "accommodation",
+      "latitude": 1.14681145,
+      "longitude": -76.6475955,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/484397817",
+      "source_updated_at": "2017-04-07T02:37:02Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "building:levels": "5",
+        "building:levels:underground": "1",
+        "name": "Hotel Inga Real",
+        "source": "IGAC, 2008,",
+        "tipo_const": "NO CONVENCIONAL",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Arepas Con Todo",
+      "category": "restaurants",
+      "latitude": 1.1455053,
+      "longitude": -76.6520797,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/484569347",
+      "source_updated_at": "2017-04-07T02:04:43Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "building": "yes",
+        "building:levels": "7",
+        "building:levels:underground": "1",
+        "name": "Arepas Con Todo",
+        "source": "IGAC, 2008,",
+        "tipo_const": "NO CONVENCIONAL"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Los Mocoanitos",
+      "category": "attraction_candidate",
+      "latitude": 1.14751725,
+      "longitude": -76.65088755,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/484665925",
+      "source_updated_at": "2017-04-05T20:17:23Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Los Mocoanitos",
+        "natural": "wood"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Los Mocoanitos",
+      "category": "attraction_candidate",
+      "latitude": 1.14694815,
+      "longitude": -76.65082375,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/484857178",
+      "source_updated_at": "2017-04-05T04:05:41Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Los Mocoanitos"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

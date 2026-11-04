@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-04",
+  "status": "private_review_prepared",
+  "scope": [
+    {
+      "slug": "leticia",
+      "name": "Leticia",
+      "department_code": "91",
+      "municipality_code": "91001",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "arauca",
+      "name": "Arauca",
+      "department_code": "81",
+      "municipality_code": "81001",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "florencia",
+      "name": "Florencia",
+      "department_code": "18",
+      "municipality_code": "18001",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "popayan",
+      "name": "Popayán",
+      "department_code": "19",
+      "municipality_code": "19001",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "nuqui",
+      "name": "Nuquí",
+      "department_code": "27",
+      "municipality_code": "27495",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "bahia-solano",
+      "name": "Bahía Solano",
+      "department_code": "27",
+      "municipality_code": "27075",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "capurgana",
+      "name": "Capurganá",
+      "department_code": "27",
+      "municipality_code": "27006",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "inirida",
+      "name": "Inírida",
+      "department_code": "94",
+      "municipality_code": "94001",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "san-jose-del-guaviare",
+      "name": "San José del Guaviare",
+      "department_code": "95",
+      "municipality_code": "95001",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "la-macarena",
+      "name": "La Macarena",
+      "department_code": "50",
+      "municipality_code": "50350",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "ipiales",
+      "name": "Ipiales",
+      "department_code": "52",
+      "municipality_code": "52356",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "mocoa",
+      "name": "Mocoa",
+      "department_code": "86",
+      "municipality_code": "86001",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "salento",
+      "name": "Salento",
+      "department_code": "63",
+      "municipality_code": "63690",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "providencia",
+      "name": "Providencia y Santa Catalina",
+      "department_code": "88",
+      "municipality_code": "88564",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "mitu",
+      "name": "Mitú",
+      "department_code": "97",
+      "municipality_code": "97001",
+      "status": "prepared_for_private_review"
+    },
+    {
+      "slug": "puerto-carreno",
+      "name": "Puerto Carreño",
+      "department_code": "99",
+      "municipality_code": "99001",
+      "status": "prepared_for_private_review"
+    }
+  ],
+  "count": 16,
+  "production_authorized": false,
+  "runtime_environment_modified": false,
+  "note": "Research workspace, not importable PlacePackages. Candidates are not approved attractions.",
+  "publication_ready": false,
+  "review": "review.html",
+  "validation": "validation.json"
+}

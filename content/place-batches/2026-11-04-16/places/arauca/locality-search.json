@@ -1,0 +1,48 @@
+{
+  "query_url": "https://nominatim.openstreetmap.org/search?q=Arauca%2C+Colombia&format=jsonv2&countrycodes=co&limit=5",
+  "results": [
+    {
+      "place_id": 308518635,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 1388045,
+      "lat": "6.6666755",
+      "lon": "-71.0000086",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 8,
+      "importance": 0.5000401298709155,
+      "addresstype": "state",
+      "name": "Arauca",
+      "display_name": "Arauca, RAP Llanos, Colombia",
+      "boundingbox": [
+        "6.0383514",
+        "7.1042357",
+        "-72.3683074",
+        "-69.4362020"
+      ]
+    },
+    {
+      "place_id": 308451320,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 11312178,
+      "lat": "7.0851994",
+      "lon": "-70.7577762",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 12,
+      "importance": 0.4186100659669763,
+      "addresstype": "city",
+      "name": "Arauca",
+      "display_name": "Arauca, RAP Llanos, 810001, Colombia",
+      "boundingbox": [
+        "6.4839409",
+        "7.1042357",
+        "-71.2062682",
+        "-69.7613605"
+      ]
+    }
+  ],
+  "use": "Discovery bounds only, not an approved destination point"
+}

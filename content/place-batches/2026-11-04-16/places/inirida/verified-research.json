@@ -1,0 +1,634 @@
+{
+  "slug": "inirida",
+  "checked_at": "2026-11-04",
+  "status": "research_in_progress",
+  "geolocation": {
+    "latitude": 3.86504,
+    "longitude": -67.92599,
+    "kind": "identified_urban_locality_node_not_municipal_centroid",
+    "source_url": "https://mapcarta.com/es/19688578/Mapa",
+    "primary_map_url": "https://www.openstreetmap.org/node/468686404",
+    "verification": "documented_coordinate; not a verified entrance"
+  },
+  "attractions": [
+    {
+      "name": "Cerros de Mavecure",
+      "status": "candidate",
+      "source_url": "https://es.wikipedia.org/wiki/Cerros_de_Mavicure",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 3.4655,
+        "longitude": -67.975805555556,
+        "kind": "landform_reference_not_trail_entrance",
+        "source_url": "https://es.wikipedia.org/wiki/Cerros_de_Mavicure"
+      },
+      "image": {
+        "file": "images/attraction-01-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-01.manifest.json"
+      },
+      "image_key": "attraction-01",
+      "description_es": "Tres formaciones rocosas del Escudo Guayanés junto al río Inírida. La visita se organiza con las comunidades del sector.",
+      "latitude": 3.4655,
+      "longitude": -67.975805555556,
+      "coordinate_kind": "landform_reference_not_trail_entrance",
+      "factual_source": "https://www.colparques.net/MAVECURI"
+    },
+    {
+      "name": "Sabanas de la flor de Inírida",
+      "status": "candidate",
+      "source_url": "https://www.orniverse.com/site/13003/sendero-ecoturistico-flor-de-inirida-kenke",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 3.81244,
+        "longitude": -67.84375,
+        "kind": "named_trail_reference_not_entrance",
+        "source_url": "https://www.orniverse.com/site/13003/sendero-ecoturistico-flor-de-inirida-kenke"
+      },
+      "image": {
+        "file": "images/attraction-02-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-02.manifest.json"
+      },
+      "image_key": "attraction-02",
+      "description_es": "Las sabanas de arenas blancas albergan la flor de Inírida. Un sitio documentado para conocer este paisaje es el sendero de Kenke; su acceso se coordina con la administración local.",
+      "latitude": 3.81244,
+      "longitude": -67.84375,
+      "coordinate_status": "pending",
+      "coordinate_kind": "named_KENKE_trail_reference_not_all_savannas"
+    },
+    {
+      "name": "Laguna de las Brujas",
+      "status": "candidate",
+      "source_url": "https://revistas.sena.edu.co/index.php/rnova/article/download/616/680/1818",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": 3.857755555555556,
+        "longitude": -67.9348138888889,
+        "kind": "published_study_sector_reference_not_entrance",
+        "source_url": "https://revistas.sena.edu.co/index.php/rnova/article/download/616/680/1818"
+      },
+      "image": {
+        "file": "images/attraction-03-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-03.manifest.json"
+      },
+      "image_key": "attraction-03",
+      "description_es": "Humedal cercano al casco urbano con paisaje de aguas y vegetación ribereña.",
+      "latitude": 3.857755555555556,
+      "longitude": -67.9348138888889,
+      "coordinate_kind": "published_study_sector_reference_not_entrance",
+      "source_date": "2016",
+      "access": "pending_current_access_confirmation"
+    },
+    {
+      "name": "Coco Viejo",
+      "status": "candidate",
+      "source_url": "https://colombia.travel/es/guania/sabanas-flor-de-inirida",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": null,
+        "longitude": null,
+        "kind": null,
+        "source_url": "https://colombia.travel/es/guania/sabanas-flor-de-inirida"
+      },
+      "image": {
+        "file": "images/attraction-04-1200.webp",
+        "kind": "ai_editorial_illustration",
+        "approval": null,
+        "manifest": "images/attraction-04.manifest.json"
+      },
+      "image_key": "attraction-04",
+      "description_es": "Comunidad relacionada con artesanías y petroglifos; requiere coordinación local para una visita respetuosa.",
+      "latitude": null,
+      "longitude": null,
+      "coordinate_status": "pending",
+      "editorial_caution": "ICANH documented vandalism at Turema Yavi Kuway on 2025-02-06. Illustration/reference does not certify current preservation or access.",
+      "additional_sources": [
+        "https://www.icanh.gov.co/prensa/actualidad-icanh/el-icanh-rechaza-el-ataque-contra-los-petroglifos-de-turema-yavi-kuway-en-inirida-guainia",
+        "https://www.mincultura.gov.co/direcciones/estrategia-desarrollo-y-emprendimiento/Documents/cartillas/GUAINI%CC%81A%20Diajke.pdf"
+      ],
+      "map_candidate": {
+        "url": "https://www.google.com/maps?cid=3429124506334809666",
+        "source_url": "https://colombiaartesanal.com.co/artesanos/nancy-torcuato/?lang=en",
+        "status": "named_link_published_by_institution_final_destination_pending",
+        "kind": "workshop_reference_not_petroglyph_location"
+      }
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Hotel Mavicure",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Parature",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Toninas",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Portal Real",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel de lujo Fuente del Guainía",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Cabaña Guainiana",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Yakapana",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hospedaje Guainía",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Safari",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Las Vegas",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Gran Zulima",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Orinoco Real",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Tucunaré",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Tres Fronteras",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Flor de Inírida",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Guacamayos",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Brayan",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Casa Rosas",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Ribason",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Hotel Tamtra",
+      "category": "accommodation",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Toninas Tours",
+      "category": "tour_operator",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Guainía Tours",
+      "category": "tour_operator",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Fundación Biológica Aroma Verde",
+      "category": "tour_operator",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Estrella Fluvial del Guainía",
+      "category": "tour_operator",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Fundación Antrópico",
+      "category": "tour_operator",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "North Amazon Travel HBC",
+      "category": "tour_operator",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Agencia Pesca Deportiva El Sam",
+      "category": "tour_operator",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Orinoco Nature Tours",
+      "category": "tour_operator",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Monstruo Mancipe",
+      "category": "tour_operator",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Pesque y Suelte Jaipac",
+      "category": "tour_operator",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "source_type": "municipal_public_directory",
+      "geolocation": null,
+      "status": "documented_candidate_pending_coordinates",
+      "claimed": false,
+      "verified_business": false,
+      "public": false
+    },
+    {
+      "name": "Cabaña de Joaco",
+      "category": "restaurant",
+      "source_url": "https://mapcarta.com/es/N1117536658",
+      "geolocation": {
+        "latitude": 3.8634949,
+        "longitude": -67.9191463,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1117536658"
+      },
+      "status": "mapped_candidate_current_operation_pending",
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "additional_sources": [
+        "https://www.openstreetmap.org/node/1117536658"
+      ]
+    },
+    {
+      "name": "Sal & Pimienta - Fusion Gourmet",
+      "category": "restaurant",
+      "source_url": "https://mapcarta.com/N12158967783",
+      "geolocation": {
+        "latitude": 3.8711226,
+        "longitude": -67.9233754,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/12158967783"
+      },
+      "status": "mapped_candidate_current_operation_pending",
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "additional_sources": [
+        "https://www.openstreetmap.org/node/12158967783"
+      ]
+    },
+    {
+      "name": "Residencias El Turista del Guainia",
+      "category": "accommodation",
+      "latitude": 3.8669826,
+      "longitude": -67.9308167,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4937557423",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:postcode": "472",
+        "addr:street": "calle 16 3",
+        "email": "residenciaselturistadelguainia@gmail.com",
+        "internet_access": "wlan",
+        "name": "Residencias El Turista del Guainia",
+        "name:es": "Residencias El Turista del Guainia",
+        "opening_hours": "24/7",
+        "phone": "+57 316 8192783",
+        "tourism": "hotel",
+        "website": "http://viktorguarin.blogspot.com.co/"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 3.8669826,
+        "longitude": -67.9308167,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4937557423"
+      }
+    },
+    {
+      "name": "Turismo de Naturaleza por el Guainía",
+      "category": "tour_operators",
+      "latitude": 3.866924,
+      "longitude": -67.9242893,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9215404021",
+      "source_updated_at": "2021-11-01T04:19:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Turismo de Naturaleza por el Guainía",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 3.866924,
+        "longitude": -67.9242893,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/9215404021"
+      }
+    },
+    {
+      "name": "Sandwich Express",
+      "category": "restaurants",
+      "latitude": 3.868036,
+      "longitude": -67.9246745,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/12158967784",
+      "source_updated_at": "2024-09-06T02:19:34Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Sandwich Express"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "geolocation": {
+        "latitude": 3.868036,
+        "longitude": -67.9246745,
+        "kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/12158967784"
+      }
+    },
+    {
+      "name": "Sipada — Nancy Torcuato",
+      "category": "crafts",
+      "source_url": "https://colombiaartesanal.com.co/artesanos/nancy-torcuato/",
+      "source_type": "institutional_artisan_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    },
+    {
+      "name": "Atuma — Zulma Torcuato",
+      "category": "crafts",
+      "source_url": "https://colombiaartesanal.com.co/artesanos/zulma-torcuato/",
+      "source_type": "institutional_artisan_directory",
+      "geolocation": null,
+      "status": "documented_candidate_current_operation_and_coordinates_pending",
+      "public": false,
+      "claimed": false,
+      "verified_business": false
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Navegación y caminata en Mavecure",
+      "description_es": "Recorrido fluvial y caminata acompañada para conocer los cerros y el territorio ribereño.",
+      "operator_internal": "Colombia Inspira",
+      "source_url": "https://www.colombiainspira.com/experiencias-1",
+      "source_checked_at": "2026-11-04",
+      "status": "documented_offer",
+      "public": false,
+      "geolocation": null,
+      "geolocation_exception": "mobile_excursion; meeting point depends on confirmed booking",
+      "guaranteed_availability": false
+    },
+    {
+      "name": "Caminata por las sabanas de la flor de Inírida",
+      "operator": "Jota Travels",
+      "source_url": "https://jotatravels.com/tour-ecoparque-kenke-santuario-de-la-flor-de-inirida/",
+      "status": "documented_offer_availability_pending",
+      "geolocation": {
+        "latitude": 3.81244,
+        "longitude": -67.84375,
+        "kind": "trail_reference_not_meeting_point"
+      }
+    },
+    {
+      "name": "Alfarería y memoria de Coco Viejo",
+      "operator": "Nancy Torcuato / comunidad de Coco Viejo",
+      "source_url": "https://www.mincultura.gov.co/direcciones/estrategia-desarrollo-y-emprendimiento/Documents/cartillas/GUAINI%CC%81A%20Diajke.pdf",
+      "evidence": "Cartilla institucional Ruta cultural Diajke, parada 2: interpretación de petroglifos y taller de alfarería, duración documental 1 h 30 min.",
+      "status": "documented_offer_current_availability_pending",
+      "geolocation": null,
+      "publication_caution": "Confirmar disponibilidad, autorización comunitaria y estado de petroglifos; sin horarios ni tarifas inferidos."
+    }
+  ],
+  "image_references": [],
+  "limitations": [
+    "No publication authorized; images and content require review.",
+    "Mapped coordinates do not establish present operation or visitor access."
+  ]
+}

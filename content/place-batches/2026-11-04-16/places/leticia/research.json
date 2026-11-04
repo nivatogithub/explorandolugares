@@ -1,0 +1,1173 @@
+{
+  "slug": "leticia",
+  "name": "Leticia",
+  "country_code": "CO",
+  "department_code": "91",
+  "municipality_code": "91001",
+  "municipality_name": "Leticia",
+  "type": "municipality",
+  "status": "prepared_for_private_review",
+  "public": false,
+  "intro_draft_es": "Leticia reúne la vida de una ciudad amazónica y las rutas fluviales de una región de selva. El parque Santander y el muelle permiten acercarse a su ritmo cotidiano; las salidas organizadas llevan a lagos y reservas del entorno.",
+  "source_url": "https://colombia.travel/es/leticia",
+  "source_checked_at": "2026-11-04",
+  "previous_plan": "crecimiento-colombia/colombia/departamentos/amazonas/lugares/leticia/lugar.json",
+  "previous_plan_state": "planned",
+  "geolocation": {
+    "name": "Parque Santander",
+    "latitude": -4.21269,
+    "longitude": -69.94306,
+    "coordinate_kind": "identified_park_site_reference_not_entrance",
+    "source_url": "https://mapcarta.com/W500808762",
+    "verification": "named_site_and_coordinates_documented",
+    "public_maps_url": null
+  },
+  "attractions": [
+    {
+      "name": "Muelle turístico de Leticia",
+      "status": "candidate",
+      "source_url": "https://colombia.travel/es/leticia",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": -4.215388888888889,
+        "longitude": -69.94515555555556,
+        "source_url": "https://www.camara.gov.co/wp-content/uploads/2025/10/proyectos-ley/documentos/proyecto-30039/pl_085_2023c_distrito_turistico_amazonas-f3d5ecf8.pdf",
+        "coordinate_kind": "named_tourist_malecon_documented_northern_endpoint_not_boarding_ramp",
+        "status": "documented_reference",
+        "checked_at": "2026-11-04",
+        "public_maps_url": null,
+        "note": "DIMAR diagnosis quoted by Chamber bill 2023: tourist malecón distinct from Victoria Regia cargo dock. Floating ramps and boarding points change; not operator departure guarantee."
+      },
+      "image": "images/attraction-01-1200.webp",
+      "image_key": "attraction-01",
+      "description_es": "El malecón reúne embarcaderos y movimiento cotidiano de pasajeros y carga menor frente al sector de la isla de La Fantasía. Permite acercarse a la vida fluvial de Leticia; el punto de salida de una excursión se confirma con su operador.",
+      "image_status": "pending_human_review",
+      "image_kind": "licensed_photograph",
+      "image_note": "Fotografía real histórica del muelle y la isla de La Fantasía. Preservar proporción panorámica; adaptación ilustrada descartada."
+    },
+    {
+      "name": "Parque Santander",
+      "status": "candidate",
+      "source_url": "https://colombia.travel/es/leticia",
+      "municipal_boundary": "pending_check",
+      "geolocation": {
+        "latitude": -4.21269,
+        "longitude": -69.94306,
+        "coordinate_kind": "identified_site_not_entrance",
+        "source_url": "https://mapcarta.com/W500808762"
+      },
+      "image": "images/attraction-02-1200.webp",
+      "image_key": "attraction-02",
+      "verification": {
+        "name": "Parque Santander",
+        "latitude": -4.21269,
+        "longitude": -69.94306,
+        "coordinate_kind": "identified_site_not_entrance",
+        "source_url": "https://mapcarta.com/W500808762",
+        "checked_at": "2026-11-04",
+        "status": "documented_site_coordinates",
+        "public_maps_url": null
+      },
+      "description_es": "Un espacio arbolado del centro de Leticia con senderos, pérgolas y una fuente. Su entorno permite reconocer el ritmo urbano de la capital amazónica, junto a la catedral de Nuestra Señora de la Paz.",
+      "image_status": "pending_human_review",
+      "image_kind": "ai_editorial_illustration"
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Recorrido por los lagos Yahuarcaca",
+      "description_es": "Navegación por los lagos y observación del paisaje amazónico en un recorrido organizado desde Leticia.",
+      "operator_evidence": "Amazon Experience Jungle Tours",
+      "offer_url": "https://www.amazonexperience.com.co/es/experiencia-lagos-yahuarcaca/",
+      "checked_at": "2026-11-04",
+      "status": "offer_documented_not_availability_confirmed",
+      "geolocation": null,
+      "location_exception": "Mobile activity: meeting point must be confirmed with operator; no invented pin",
+      "public": false,
+      "operator_is_advertiser": false
+    },
+    {
+      "name": "Caminata y observación de naturaleza amazónica",
+      "description_es": "Recorridos guiados por senderos y ambientes acuáticos de una reserva de la vereda La Milagrosa.",
+      "operator_evidence": "Reserva Victoria Regia",
+      "offer_url": "https://reservavictoriaregia.com/",
+      "checked_at": "2026-11-04",
+      "status": "offer_documented_not_availability_confirmed",
+      "geolocation": null,
+      "location_exception": "Mobile activity: meeting point must be confirmed with operator; no invented pin",
+      "public": false,
+      "operator_is_advertiser": false
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Barbacoas",
+      "category": "cafes",
+      "latitude": -4.2148578,
+      "longitude": -69.9418346,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1605493121",
+      "source_updated_at": "2019-11-24T23:38:23Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "name": "Barbacoas"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2148578,
+        "longitude": -69.9418346,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1605493121"
+      }
+    },
+    {
+      "name": "Todo Rico",
+      "category": "cafes",
+      "latitude": -4.2147537,
+      "longitude": -69.9418687,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1605512763",
+      "source_updated_at": "2019-11-24T23:38:23Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "description": "Panadería, pastelería, café (en el sitio o para llevar)",
+        "name": "Todo Rico",
+        "seats": "20",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2147537,
+        "longitude": -69.9418687,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1605512763"
+      }
+    },
+    {
+      "name": "Tío Tom",
+      "category": "nightlife",
+      "latitude": -4.2166453,
+      "longitude": -69.942555,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1605523833",
+      "source_updated_at": "2017-06-17T17:16:37Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "bar",
+        "name": "Tío Tom"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2166453,
+        "longitude": -69.942555,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/1605523833"
+      }
+    },
+    {
+      "name": "Waira Suites Hotel",
+      "category": "accommodation",
+      "latitude": -4.2163574,
+      "longitude": -69.9414895,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3238648223",
+      "source_updated_at": "2022-04-08T03:07:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Leticia",
+        "addr:postcode": "910001",
+        "addr:street": "Avenida Vásquez Cobo",
+        "name": "Waira Suites Hotel",
+        "opening_hours": "24/7",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2163574,
+        "longitude": -69.9414895,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/3238648223"
+      }
+    },
+    {
+      "name": "Legends Rock Bar",
+      "category": "nightlife",
+      "latitude": -4.2174763,
+      "longitude": -69.9403208,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4567355089",
+      "source_updated_at": "2017-06-17T17:16:38Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "pub",
+        "cuisine": "burger;barbecue",
+        "name": "Legends Rock Bar",
+        "name:en": "Legends Rock Bar",
+        "name:es": "Legends Rock Bar"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2174763,
+        "longitude": -69.9403208,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4567355089"
+      }
+    },
+    {
+      "name": "La Barra",
+      "category": "restaurants",
+      "latitude": -4.2154247,
+      "longitude": -69.9420036,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4701465510",
+      "source_updated_at": "2019-03-21T23:26:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "La Barra"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2154247,
+        "longitude": -69.9420036,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4701465510"
+      }
+    },
+    {
+      "name": "Restaurante Heladeria el Viejo Tolima",
+      "category": "restaurants",
+      "latitude": -4.2154269,
+      "longitude": -69.9422135,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4701466952",
+      "source_updated_at": "2020-11-22T15:33:00Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Restaurante Heladeria el Viejo Tolima",
+        "name:es": "Restaurante Heladeria el Viejo Tolima"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2154269,
+        "longitude": -69.9422135,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4701466952"
+      }
+    },
+    {
+      "name": "El Santo Ángel",
+      "category": "restaurants",
+      "latitude": -4.2108605,
+      "longitude": -69.9429638,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4704640889",
+      "source_updated_at": "2020-10-29T20:56:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "11-119",
+        "addr:street": "Avenida Vásquez Cobo",
+        "amenity": "restaurant",
+        "name": "El Santo Ángel",
+        "name:es": "El Santo Ángel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2108605,
+        "longitude": -69.9429638,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4704640889"
+      }
+    },
+    {
+      "name": "Casa del Pan",
+      "category": "cafes",
+      "latitude": -4.2118212,
+      "longitude": -69.9429453,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4721308990",
+      "source_updated_at": "2017-03-07T00:14:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "10-20",
+        "addr:street": "Calle 11",
+        "name": "Casa del Pan",
+        "opening_hours": "Mo-Su 07:00-18:00",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2118212,
+        "longitude": -69.9429453,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4721308990"
+      }
+    },
+    {
+      "name": "Govindas Vegetarian",
+      "category": "restaurants",
+      "latitude": -4.2144833,
+      "longitude": -69.9408861,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4835772521",
+      "source_updated_at": "2020-11-03T21:02:04Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "diet:vegetarian": "yes",
+        "name": "Govindas Vegetarian"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2144833,
+        "longitude": -69.9408861,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4835772521"
+      }
+    },
+    {
+      "name": "Hotel Zuruma",
+      "category": "accommodation",
+      "latitude": -4.2122963,
+      "longitude": -69.9397293,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4920920290",
+      "source_updated_at": "2017-06-17T17:16:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Calle 10 No. 7-62",
+        "name": "Hotel Zuruma",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2122963,
+        "longitude": -69.9397293,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4920920290"
+      }
+    },
+    {
+      "name": "Herencias de Mãe",
+      "category": "restaurants",
+      "latitude": -4.2149747,
+      "longitude": -69.9406018,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4978168521",
+      "source_updated_at": "2024-11-18T23:03:02Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "8-22",
+        "addr:street": "Carrera 9",
+        "amenity": "restaurant",
+        "name": "Herencias de Mãe",
+        "opening_hours": "Mo-Su 10:00-18:00"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2149747,
+        "longitude": -69.9406018,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/4978168521"
+      }
+    },
+    {
+      "name": "Amazon Jungle Trips",
+      "category": "tour_operators",
+      "latitude": -4.2165974,
+      "longitude": -69.9370993,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5035538923",
+      "source_updated_at": "2017-08-14T21:36:42Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Amazon Jungle Trips",
+        "name:es": "Amazon Jungle Trips",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2165974,
+        "longitude": -69.9370993,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5035538923"
+      }
+    },
+    {
+      "name": "Amazon Xplorer Travel",
+      "category": "tour_operators",
+      "latitude": -4.2153371,
+      "longitude": -69.9415875,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5035564822",
+      "source_updated_at": "2017-08-14T21:36:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Amazon Xplorer Travel",
+        "name:es": "Amazon Xplorer Travel",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2153371,
+        "longitude": -69.9415875,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5035564822"
+      }
+    },
+    {
+      "name": "Amazonas Extremo",
+      "category": "tour_operators",
+      "latitude": -4.2156129,
+      "longitude": -69.942132,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5040967723",
+      "source_updated_at": "2017-08-17T11:49:54Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Amazonas Extremo",
+        "name:es": "Amazonas Extremo",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2156129,
+        "longitude": -69.942132,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5040967723"
+      }
+    },
+    {
+      "name": "Açai Amazonas",
+      "category": "cafes",
+      "latitude": -4.2149296,
+      "longitude": -69.9386652,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5045254421",
+      "source_updated_at": "2017-08-19T19:04:46Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "ice_cream",
+        "name": "Açai Amazonas",
+        "name:es": "Açai Amazonas"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2149296,
+        "longitude": -69.9386652,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5045254421"
+      }
+    },
+    {
+      "name": "Pirañita Hostel",
+      "category": "accommodation",
+      "latitude": -4.2145553,
+      "longitude": -69.9379779,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5252992823",
+      "source_updated_at": "2017-11-28T21:42:51Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Calle 8 # 6-42",
+        "internet_access": "wlan",
+        "name": "Pirañita Hostel",
+        "name:de": "Pirañita Hostel",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2145553,
+        "longitude": -69.9379779,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5252992823"
+      }
+    },
+    {
+      "name": "Panadería La Cremapan",
+      "category": "cafes",
+      "latitude": -4.2106848,
+      "longitude": -69.9424769,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5316338921",
+      "source_updated_at": "2020-10-12T15:19:37Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "name": "Panadería La Cremapan"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2106848,
+        "longitude": -69.9424769,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5316338921"
+      }
+    },
+    {
+      "name": "Tentaciones del Amazonas",
+      "category": "cafes",
+      "latitude": -4.2151065,
+      "longitude": -69.9405308,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5323102631",
+      "source_updated_at": "2018-01-06T02:49:35Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Tentaciones del Amazonas",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2151065,
+        "longitude": -69.9405308,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5323102631"
+      }
+    },
+    {
+      "name": "City Turismo Amazonas",
+      "category": "tour_operators",
+      "latitude": -4.2136618,
+      "longitude": -69.9423596,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5323110121",
+      "source_updated_at": "2019-03-22T00:16:58Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "City Turismo Amazonas",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2136618,
+        "longitude": -69.9423596,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5323110121"
+      }
+    },
+    {
+      "name": "The Donut Company",
+      "category": "restaurants",
+      "latitude": -4.2149197,
+      "longitude": -69.9386218,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5458046821",
+      "source_updated_at": "2020-07-26T23:13:28Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "cuisine": "donut",
+        "name": "The Donut Company",
+        "opening_hours": "Mo-Sa 13:00-21:00"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2149197,
+        "longitude": -69.9386218,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5458046821"
+      }
+    },
+    {
+      "name": "Hotel Shaday",
+      "category": "accommodation",
+      "latitude": -4.2138128,
+      "longitude": -69.9405797,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5710158339",
+      "source_updated_at": "2020-11-03T20:16:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "9-82",
+        "addr:street": "Calle 9",
+        "alt_name": "Hotel Shaddai",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Hotel Shaday",
+        "payment:mastercard": "yes",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2138128,
+        "longitude": -69.9405797,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5710158339"
+      }
+    },
+    {
+      "name": "Amazonas Exotic Adventure",
+      "category": "tour_operators",
+      "latitude": -4.2153516,
+      "longitude": -69.9417159,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5772442053",
+      "source_updated_at": "2018-07-20T07:13:45Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Amazonas Exotic Adventure",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2153516,
+        "longitude": -69.9417159,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/5772442053"
+      }
+    },
+    {
+      "name": "Eco Hostal Refugio La Floresta",
+      "category": "accommodation",
+      "latitude": -4.2148689,
+      "longitude": -69.9381962,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6120231985",
+      "source_updated_at": "2018-12-06T00:15:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "internet_access": "wlan",
+        "name": "Eco Hostal Refugio La Floresta",
+        "name:en": "Eco Hostel Refugge La Floresta",
+        "tourism": "guest_house"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2148689,
+        "longitude": -69.9381962,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6120231985"
+      }
+    },
+    {
+      "name": "Hotel Santa Helena",
+      "category": "accommodation",
+      "latitude": -4.2160278,
+      "longitude": -69.9395725,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6152564687",
+      "source_updated_at": "2018-12-21T22:07:42Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:street": "Calle 7",
+        "name": "Hotel Santa Helena",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2160278,
+        "longitude": -69.9395725,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6152564687"
+      }
+    },
+    {
+      "name": "La Casa del Kurupira",
+      "category": "accommodation",
+      "latitude": -4.2171115,
+      "longitude": -69.9401335,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6335433089",
+      "source_updated_at": "2019-03-13T12:51:18Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "La Casa del Kurupira",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2171115,
+        "longitude": -69.9401335,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6335433089"
+      }
+    },
+    {
+      "name": "Hostel Casa de las Palmas",
+      "category": "accommodation",
+      "latitude": -4.2090981,
+      "longitude": -69.9447508,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6810315682",
+      "source_updated_at": "2026-10-19T16:06:05Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "check_date": "2026-09-30",
+        "name": "Hostel Casa de las Palmas",
+        "tourism": "hostel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2090981,
+        "longitude": -69.9447508,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6810315682"
+      }
+    },
+    {
+      "name": "Gamboa Excursiones",
+      "category": "tour_operators",
+      "latitude": -4.216236,
+      "longitude": -69.9417891,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6810323146",
+      "source_updated_at": "2020-11-03T21:02:04Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Gamboa Excursiones",
+        "shop": "travel_agency"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.216236,
+        "longitude": -69.9417891,
+        "point_kind": "mapped_site_node",
+        "source_url": "https://www.openstreetmap.org/node/6810323146"
+      }
+    },
+    {
+      "name": "Decameron Decalodge Ticuna",
+      "category": "accommodation",
+      "latitude": -4.21804175,
+      "longitude": -69.94300960000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/427919248",
+      "source_updated_at": "2026-09-21T10:27:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Leticia",
+        "addr:housenumber": "6-11",
+        "addr:street": "Carrera 11",
+        "air_conditioning": "yes",
+        "bar": "yes",
+        "brand": "Hoteles Decameron",
+        "internet_access": "yes",
+        "internet_access:fee": "customers",
+        "name": "Decameron Decalodge Ticuna",
+        "opening_hours": "24/7",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "phone": "+57 601 6280020",
+        "reservation": "yes",
+        "smoking": "outside",
+        "swimming_pool": "outdoor",
+        "tourism": "hotel",
+        "website": "https://www.decameron.com/es/hoteles/amazonas/decameron-decalodge-ticuna/",
+        "wikidata": "Q141368376"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.21804175,
+        "longitude": -69.94300960000001,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/427919248"
+      }
+    },
+    {
+      "name": "Hotel Anaconda",
+      "category": "accommodation",
+      "latitude": -4.2162167,
+      "longitude": -69.94235325,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/870563444",
+      "source_updated_at": "2022-01-04T07:30:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "layer": "-1",
+        "name": "Hotel Anaconda",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null,
+      "editorial_selection": "named_establishment_in_urban_context",
+      "commercial_plan": "free_candidate",
+      "operating_status": "not_independently_confirmed",
+      "verification": "cartographic_record_with_site_coordinates_only",
+      "source_license": "ODbL 1.0",
+      "checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": -4.2162167,
+        "longitude": -69.94235325,
+        "point_kind": "mapped_building_or_site_reference_not_entrance",
+        "source_url": "https://www.openstreetmap.org/way/870563444"
+      }
+    }
+  ],
+  "media": {
+    "hero": {
+      "status": "pending_human_review",
+      "file": "images/hero-1200.webp",
+      "approval": null
+    },
+    "style": "Follow repository image skill; never mislabel illustrations as photographs"
+  },
+  "requirements": {
+    "business_target": 30,
+    "business_categories": [
+      "accommodation",
+      "restaurants",
+      "cafes",
+      "tour_operators",
+      "crafts",
+      "transport"
+    ],
+    "image_format": "webp",
+    "aspect_ratio": "3:2",
+    "locales": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "publication_blockers": [
+      "Verified named locations and precise coordinates",
+      "Photo references and visual review",
+      "Documented business records",
+      "Verified operator offers if experiences included",
+      "Full ES EN PT-BR editorial and SEO review"
+    ]
+  },
+  "editorial_locales": {
+    "es": {
+      "title": "Leticia, a orillas del Amazonas",
+      "intro": "Leticia reúne la vida de una ciudad amazónica y las rutas fluviales de una región de selva. El parque Santander y el muelle permiten acercarse a su ritmo cotidiano; las salidas organizadas llevan a lagos y reservas del entorno.",
+      "why_visit": [
+        "Conocer la vida urbana junto al río Amazonas.",
+        "Recorrer espacios de naturaleza con anfitriones y operadores locales.",
+        "Usar la ciudad como punto de partida para excursiones, distinguiendo los destinos colombianos de los recorridos internacionales."
+      ]
+    },
+    "en": {
+      "title": "Leticia, on the banks of the Amazon",
+      "intro": "Leticia brings together everyday Amazonian city life and river routes through the rainforest region. Santander Park and the waterfront offer a first look at the city; organised outings explore nearby lakes and reserves.",
+      "why_visit": [
+        "Discover daily life beside the Amazon River.",
+        "Explore natural settings with local hosts and operators.",
+        "Start regional excursions while distinguishing Colombian destinations from cross-border trips."
+      ]
+    },
+    "pt-BR": {
+      "title": "Leticia, às margens do Amazonas",
+      "intro": "Leticia reúne a vida de uma cidade amazônica e as rotas fluviais de uma região de floresta. O Parque Santander e o cais ajudam a conhecer seu cotidiano; passeios organizados levam a lagos e reservas dos arredores.",
+      "why_visit": [
+        "Conhecer a vida urbana às margens do rio Amazonas.",
+        "Visitar ambientes naturais com anfitriões e operadores locais.",
+        "Partir para excursões, distinguindo os destinos colombianos dos passeios internacionais."
+      ]
+    }
+  },
+  "verification_notes": [
+    "No atribuir Puerto Nariño, reservas de Perú ni Tabatinga a Leticia. Diferenciar excursiones transfronterizas.",
+    "La foto del muelle tiene coordenada de cámara, no una entrada verificada."
+  ],
+  "photo_references": [
+    "references/attraction-01.json",
+    "references/attraction-02.json",
+    "references/hero.json"
+  ],
+  "research_supplement": "verified-research.json",
+  "why_visit_es": [
+    "Conocer la vida urbana junto al río Amazonas.",
+    "Recorrer espacios de naturaleza con anfitriones y operadores locales.",
+    "Usar la ciudad como punto de partida para excursiones, distinguiendo los destinos colombianos de los recorridos internacionales."
+  ]
+}

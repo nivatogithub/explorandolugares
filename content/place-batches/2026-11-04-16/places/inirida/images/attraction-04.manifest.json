@@ -1,0 +1,51 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "Petroglifos de Coco Viejo",
+    "source_url": "https://guainiatrankipanajo.com/en/turismo/coco-viejola-estrella-fluvial-67dce/galeria",
+    "original_url": "https://imagescdn.citix.com.co/citix/production/tours/deec51e6-93c9-494f-a0d3-2fe3d5567dce/6acbaea281738d30e978da30b4f6199d.jpg",
+    "license": "No confirmada; referencia de revisión privada",
+    "license_url": null,
+    "author_html": "Consultar fuente original",
+    "checked_at": "2026-11-04",
+    "sha256": "4519199342b0f2df83fc5fb71f5604d3cf0e9c215fabe3384b61594f644dc91c",
+    "approval": null,
+    "publication_rights_status": "unconfirmed",
+    "user_scope": "Explicit user override of confirmation prerequisite for draft generation; does not establish photographer permission"
+  },
+  "master_path": "/Users/nivato/.codex/generated_images/01a1a7a5-8b15-7733-b0f9-da4294d1d1d9/exec-4409d9c3-08a1-4e60-9b0a-80fe0189f128.png",
+  "master_sha256": "f56113a693627c96109aa853081081ac6ba1f3e8b289ec7693913c12537bdd9b",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/attraction-04-1200.webp",
+      "sha256": "bedd90a2dede33802d84fdc80374d2848c608cd6fe8dd73b49630f242ab93c98",
+      "bytes": 235272
+    },
+    {
+      "file": "images/attraction-04-640.webp",
+      "sha256": "74cc697b290f69779b7692339e25a18473be05b39e0dfbbc3610b65c0801de37",
+      "bytes": 74508
+    }
+  ],
+  "visual_review": {
+    "date": "2026-11-04",
+    "status": "review_candidate_not_human_approved",
+    "checks": [
+      "Output inspected against identified reference",
+      "Composition and principal geographic elements retained",
+      "Color output; no text overlay"
+    ],
+    "limitations": [
+      "Illustrations are not evidence of current conditions or access.",
+      "Simplified petroglyph lines require human comparison; not an archaeological record."
+    ]
+  },
+  "publication_ready": false,
+  "generation_prompt": "Transform this identified photograph of Coco Viejo riverside petroglyph boulder, preserve BOTH exact engraved anthropomorphic figures and their line shapes, no additional or replaced ancient symbols into a clearly illustrated realistic editorial ink and gouache rendition. Preserve camera, composition, precise placement, geometry, spacing and appearance of all elements. Landscape3:2 crop, never extend unseen scenery. Natural full color, balanced saturation, visible fine brushwork. No invented objects, people, text, signs, monuments, foliage or architecture. Do not change colors or silhouettes that identify the place. Private review draft.",
+  "prompt_record": "exact"
+}

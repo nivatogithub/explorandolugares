@@ -1,0 +1,120 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "File:Isla Santa Catalina island, Colombia.JPG",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Isla_Santa_Catalina_island,_Colombia.JPG",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Isla_Santa_Catalina_island%2C_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "preview_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Isla_Santa_Catalina_island%2C_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "width": 937,
+    "height": 545,
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "author_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Roberto_San_Andr%C3%A9s&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Roberto San Andrés (page does not exist)\">Roberto San Andrés</a>",
+    "description_html": "Santa Catalina island, Colombia",
+    "captured_at": "2011",
+    "coordinates": [],
+    "metadata": {
+      "DateTime": {
+        "value": "2011-04-29 18:37:26",
+        "source": "mediawiki-metadata",
+        "hidden": ""
+      },
+      "ObjectName": {
+        "value": "Isla Santa Catalina island, Colombia",
+        "source": "mediawiki-metadata"
+      },
+      "CommonsMetadataExtension": {
+        "value": 1.2,
+        "source": "extension",
+        "hidden": ""
+      },
+      "Categories": {
+        "value": "CC-Zero|Isla Santa Catalina (Colombia)|Self-published work",
+        "source": "commons-categories",
+        "hidden": ""
+      },
+      "Assessments": {
+        "value": "",
+        "source": "commons-categories",
+        "hidden": ""
+      },
+      "ImageDescription": {
+        "value": "Santa Catalina island, Colombia",
+        "source": "commons-desc-page"
+      },
+      "DateTimeOriginal": {
+        "value": "2011",
+        "source": "commons-desc-page"
+      },
+      "Credit": {
+        "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "source": "commons-desc-page"
+      },
+      "Artist": {
+        "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Roberto_San_Andr%C3%A9s&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Roberto San Andrés (page does not exist)\">Roberto San Andrés</a>",
+        "source": "commons-desc-page"
+      },
+      "LicenseShortName": {
+        "value": "CC0",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "UsageTerms": {
+        "value": "Creative Commons Zero, Public Domain Dedication",
+        "source": "commons-desc-page"
+      },
+      "AttributionRequired": {
+        "value": "false",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "LicenseUrl": {
+        "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source": "commons-desc-page"
+      },
+      "Copyrighted": {
+        "value": "True",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "Restrictions": {
+        "value": "",
+        "source": "commons-desc-page",
+        "hidden": ""
+      },
+      "License": {
+        "value": "cc0",
+        "source": "commons-templates",
+        "hidden": ""
+      }
+    },
+    "approval": null,
+    "checked_at": "2026-11-04",
+    "sha256": "59e5812bea6756a67692c7cb9866c0060f6bb95e4263e8da15210b2bb9eb25f0"
+  },
+  "master_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/unificacion-presentacion/content/place-batches/2026-11-04-16/places/providencia/masters/exec-27af61b4-2bb5-411c-8590-cb82c18944ef.png",
+  "master_sha256": "dd1453eb61fbc9aa20fda7aa93552e17ae296e41600d0f4e2616dfc0880e8e3b",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/attraction-03-1200.webp",
+      "sha256": "40695f7098e47910d3e6d268556db96ac269b4a15b8ac721b9bc3b2b4183788e",
+      "bytes": 122118
+    },
+    {
+      "file": "images/attraction-03-640.webp",
+      "sha256": "f3bfb4b1a08d8591a1e2422c988550187285132b7541b172f7d1bd7c924715bc",
+      "bytes": 38754
+    }
+  ],
+  "technical_review": {
+    "checked_at": "2026-11-04",
+    "result": "candidate_ready_for_human_comparison",
+    "notes": "Inspected generated image and identified reference; ink/gouache style. Retains broad camera/composition. Historic references do not verify current infrastructure. Human approval still required."
+  },
+  "prompt_summary": "Faithful 3:2 ink/gouache editorial transformation from identified reference; retain camera, geographic shapes and architecture; no added sites, infrastructure or logos."
+}

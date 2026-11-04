@@ -1,0 +1,91 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-67.49619,6.178920000000001,-67.47219,6.20292",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    6.19092,
+    -67.48419
+  ],
+  "raw_sha256": "fbf9f4f6f54f6526ecc4b9ca488a400190a285837ee96752720e91fd7e9f0507",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Mango Hotel",
+      "category": "accommodation",
+      "latitude": 6.1848803,
+      "longitude": -67.481099,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/1428280828",
+      "source_updated_at": "2011-09-09T19:38:25Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Mango Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Carreño Plaza",
+      "category": "accommodation",
+      "latitude": 6.1852961,
+      "longitude": -67.4814792,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5517551721",
+      "source_updated_at": "2018-03-31T01:17:45Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Carreño Plaza",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque",
+      "category": "attraction_candidate",
+      "latitude": 6.192691549999999,
+      "longitude": -67.48690955000001,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/350278867",
+      "source_updated_at": "2021-02-18T03:50:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque",
+        "source": "bing"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Santander",
+      "category": "attraction_candidate",
+      "latitude": 6.185487999999999,
+      "longitude": -67.48235084999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/444992340",
+      "source_updated_at": "2020-10-30T00:58:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:city": "Puerto Carreño",
+        "leisure": "park",
+        "name": "Parque Santander"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}

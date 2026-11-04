@@ -1,0 +1,69 @@
+{
+  "query_url": "https://nominatim.openstreetmap.org/search?q=Nuqu%C3%AD%2C+Colombia&format=jsonv2&countrycodes=co&limit=5",
+  "results": [
+    {
+      "place_id": 308161244,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 316222471,
+      "lat": "5.7074350",
+      "lon": "-77.2710963",
+      "category": "place",
+      "type": "town",
+      "place_rank": 18,
+      "importance": 0.37878580059237354,
+      "addresstype": "town",
+      "name": "Nuquí",
+      "display_name": "Nuquí, Pacífico Norte, Chocó, RAP Pacífico, Colombia",
+      "boundingbox": [
+        "5.6674350",
+        "5.7474350",
+        "-77.3110963",
+        "-77.2310963"
+      ]
+    },
+    {
+      "place_id": 308159353,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 4061117,
+      "lat": "5.7515739",
+      "lon": "-77.2153630",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 12,
+      "importance": 0.240044859235523,
+      "addresstype": "county",
+      "name": "Nuquí",
+      "display_name": "Nuquí, Pacífico Norte, Chocó, RAP Pacífico, Colombia",
+      "boundingbox": [
+        "5.4858992",
+        "6.0177286",
+        "-77.5260837",
+        "-77.1376509"
+      ]
+    },
+    {
+      "place_id": 308722938,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 19013963,
+      "lat": "6.5095700",
+      "lon": "-75.9262171",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.18670416800183104,
+      "addresstype": "city",
+      "name": "Nurqui",
+      "display_name": "Nurqui, Guasabra, Santa Fe de Antioquia, Occidente, Antioquia, RAP del Agua y la Montaña, Colombia",
+      "boundingbox": [
+        "6.4945228",
+        "6.5245950",
+        "-75.9427900",
+        "-75.9162350"
+      ]
+    }
+  ],
+  "use": "Discovery bounds only, not an approved destination point"
+}

@@ -1,0 +1,95 @@
+{
+  "slug": "arauca",
+  "checked_at": "2026-11-04",
+  "public": false,
+  "status": "partial_verified_research",
+  "attractions": [
+    {
+      "name": "Catedral Santa Bárbara de Arauca",
+      "geolocation": {
+        "latitude": 7.08552,
+        "longitude": -70.75716,
+        "point_kind": "building_location_not_entrance",
+        "source_url": "https://mapcarta.com/es/W166669582",
+        "osm_id": "way/166669582"
+      },
+      "description_es": "Templo del centro urbano, junto al Parque Simón Bolívar.",
+      "status": "identity_and_mapped_site_verified_access_pending"
+    },
+    {
+      "name": "Malecón Ecoturístico del río Arauca",
+      "geolocation": {
+        "latitude": 7.09162,
+        "longitude": -70.74847,
+        "kind": "mapped_park_area_reference",
+        "source_url": "https://mapcarta.com/es/W322901516",
+        "osm_id": "way/322901516"
+      },
+      "status": "identified_location_access_conditions_pending",
+      "note": "Punto de referencia del parque, no entrada exacta. No confundir con todo el frente fluvial urbano."
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Hotel Sanbara",
+      "category": "accommodation",
+      "address": "Carrera 16 #24-61, Arauca",
+      "phone": "+573103310907",
+      "email": "reservas@hotelsanbara.com.co",
+      "website": "https://hotelsanbara.com.co",
+      "source_url": "https://mapcarta.com/es/N13117131997",
+      "geolocation": {
+        "latitude": 7.089,
+        "longitude": -70.75425,
+        "point_kind": "mapped_site_not_verified_entrance"
+      },
+      "status": "documented_unclaimed",
+      "verified_business": false
+    },
+    {
+      "name": "Araucatur",
+      "category": "tour_operator",
+      "address": "Calle 22 N°19-49, Arauca",
+      "phone": "+573203842822",
+      "email": "viajesarauca@hotmail.com",
+      "source_url": "https://araucatur.com/",
+      "geolocation": null,
+      "status": "documented_geolocation_pending",
+      "verified_business": false
+    },
+    {
+      "name": "Hotel Quinta del Sol",
+      "category": "accommodation",
+      "address": "Carrera 16 #14-15, Arauca",
+      "phone": "+573175997074",
+      "source_url": "https://hotelquintadelsol.co/",
+      "geolocation": null,
+      "status": "documented_geolocation_pending",
+      "verified_business": false
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Avistamiento de toninas en el río Arauca",
+      "operator": "Araucatur",
+      "offer_url": "https://araucatur.com/",
+      "geolocation": null,
+      "location_exception": "Itinerant river excursion; meeting point not established. Do not pin office as tour site.",
+      "public_description_es": "Recorrido fluvial para observar la fauna del río Arauca, sin garantizar encuentros con animales.",
+      "status": "operator_offer_documented"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.arauca-arauca.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "finding": "Página institucional consultada sin fichas visibles; no acredita negocios."
+    }
+  ],
+  "pending": [
+    "Human visual approval",
+    "Named public map links",
+    "Current business identity and missing business coordinates",
+    "EN/PT-BR copy and SEO",
+    "Reach business target with actual verified sources"
+  ]
+}

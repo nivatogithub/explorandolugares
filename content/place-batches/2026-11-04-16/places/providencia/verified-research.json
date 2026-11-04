@@ -1,0 +1,106 @@
+{
+  "central_reference": {
+    "latitude": 13.37542,
+    "longitude": -81.36909,
+    "source_url": "https://mapcarta.com/es/33933694",
+    "point_kind": "named_urban_locality_reference",
+    "checked_at": "2026-11-04"
+  },
+  "attractions": [
+    {
+      "name": "Cayo Cangrejo",
+      "description_es": "Pequeño cayo del Parque Nacional Natural Old Providence McBean Lagoon.",
+      "geolocation": {
+        "latitude": 13.37653,
+        "longitude": -81.34637,
+        "source_url": "https://mapcarta.com/es/19720884",
+        "point_kind": "islet_reference",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending"
+    },
+    {
+      "name": "El Pico",
+      "description_es": "Elevación interior de Providencia; falta precisar el acceso al sendero.",
+      "geolocation": {
+        "latitude": 13.34701,
+        "longitude": -81.374138,
+        "point_kind": "documented_summit_photo_viewpoint_not_trailhead",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Isla_de_Providencia_desde_el_Peak.jpg",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending"
+    },
+    {
+      "name": "Santa Catalina",
+      "description_es": "Isla vecina a Providencia, de paisaje costero y memoria histórica.",
+      "geolocation": {
+        "latitude": 13.38798,
+        "longitude": -81.37467,
+        "source_url": "https://mapcarta.com/es/19683396",
+        "point_kind": "island_reference_not_access",
+        "checked_at": "2026-11-04"
+      },
+      "status": "mapped_identity_verified_access_pending"
+    }
+  ],
+  "businesses": [
+    {
+      "name": "The Dive Shop Old Providence",
+      "source_url": "https://www.thediveshopoldprovidence.com/es/",
+      "category": "tour_operator",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false
+    },
+    {
+      "name": "Providencia Travel",
+      "source_url": "https://providenciatravel.com/producto/actividades/mini-curso-buceo-providencia/",
+      "category": "tour_operator",
+      "geolocation": null,
+      "status": "documented_unclaimed_geo_pending",
+      "verified_business": false
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Buceo de iniciación",
+      "operator": "The Dive Shop Old Providence",
+      "offer_url": "https://www.thediveshopoldprovidence.com/es/",
+      "description_es": "Introducción al buceo con centro especializado; sujeta a requisitos del operador.",
+      "geolocation": null,
+      "location_exception": "Itinerant activity; actual meeting point not verified.",
+      "status": "operator_offer_documented"
+    },
+    {
+      "name": "Inmersiones para buzos certificados",
+      "operator": "The Dive Shop Old Providence",
+      "offer_url": "https://www.thediveshopoldprovidence.com/es/",
+      "description_es": "Exploración submarina acompañada para personas con certificación de buceo.",
+      "geolocation": null,
+      "location_exception": "Itinerant activity; actual meeting point not verified.",
+      "status": "operator_offer_documented"
+    }
+  ],
+  "boundary_notes": [
+    "No confundir Providencia con isla San Andrés ni homónimos continentales.",
+    "Cayo Cangrejo forma parte de McBean Lagoon: evitar duplicar la misma vista como dos atractivos. Manglar o sector marino separado requiere su propio acceso y referencia."
+  ],
+  "excluded_or_pending": [
+    {
+      "name": "Parque Old Providence McBean Lagoon",
+      "reason": "Mantener Cayo Cangrejo como sitio específico; no duplicar tarjeta genérica del mismo cayo. Sector manglar requiere evidencia e imagen independiente."
+    }
+  ],
+  "slug": "providencia",
+  "checked_at": "2026-11-04",
+  "public": false,
+  "status": "partial_verified_research",
+  "pending": [
+    "Human visual approval",
+    "Named public map links",
+    "Current business identity and missing business coordinates",
+    "EN/PT-BR copy and SEO",
+    "Reach business target with actual verified sources"
+  ]
+}

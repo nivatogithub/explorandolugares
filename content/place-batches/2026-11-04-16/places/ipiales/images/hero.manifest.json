@@ -1,0 +1,40 @@
+{
+  "role": "hero",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "File:Ipiales - Plaza 20 de Julio.jpg",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ipiales_-_Plaza_20_de_Julio.jpg",
+    "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ipiales_-_Plaza_20_de_Julio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "preview_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Ipiales_-_Plaza_20_de_Julio.jpg/1280px-Ipiales_-_Plaza_20_de_Julio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "width": 2048,
+    "height": 1536,
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "author_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Geomarcowik&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Geomarcowik (page does not exist)\">Geomarcowik</a>",
+    "description_html": "Toma aérea de la Plaza 20 de Julio en Ipiales.",
+    "captured_at": "2022-09-01",
+    "coordinates": [],
+    "approval": null,
+    "file": "places/ipiales/references/hero.jpg",
+    "sha256": "17491bd6aa894df917cdb38d09425636cd7b2e4dcea4646794c10b9d8449b96d",
+    "selected_for_review": true
+  },
+  "master_path": "/Users/nivato/.codex/generated_images/01a14472-a69a-7000-a166-018373a345ca/exec-c81c93cb-d998-42b3-91e2-236febed0419.png",
+  "master_sha256": "5ce8e8d5ff9a553350fefe9c76505bf68fbb5ed025ddd24885f6172d545c91ba",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "pending_human_review",
+  "outputs": [
+    {
+      "file": "images/hero-640.webp",
+      "sha256": "8ed87aa0af6f6384f5458f7d5dd609c54f8e5f3edaf773600679cf93fb4fd9b2",
+      "bytes": 104034
+    },
+    {
+      "file": "images/hero-1200.webp",
+      "sha256": "6cd1153a4fcbce4a6c3ee80944288885096345888b7855847e2eaf9525e53bc7",
+      "bytes": 336248
+    }
+  ]
+}

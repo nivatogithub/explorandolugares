@@ -1,0 +1,547 @@
+{
+  "query_url": "https://api.openstreetmap.org/api/0.6/map?bbox=-75.62248,1.60518,-75.60648,1.62118",
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "discovery_center": [
+    1.61318,
+    -75.61448
+  ],
+  "raw_sha256": "e06d56d110e8589e043e7675e27f3e8b6ab02ca331df49531739a0afe3965aaa",
+  "boundary_check": "Bounding-box discovery is not proof of municipality membership",
+  "candidates": [
+    {
+      "name": "Hotel",
+      "category": "accommodation",
+      "latitude": 1.6211076,
+      "longitude": -75.6108967,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/671423384",
+      "source_updated_at": "2010-03-21T14:14:02Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Floristería Víctoria Regía",
+      "category": "nightlife",
+      "latitude": 1.6135608,
+      "longitude": -75.6137975,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4537375390",
+      "source_updated_at": "2022-12-10T18:16:30Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "32",
+        "addr:postcode": "180001",
+        "amenity": "bar",
+        "internet_access": "wlan",
+        "name": "Floristería Víctoria Regía",
+        "name:es": "Floristería Víctoria Regía",
+        "opening_hours": "Mo-Su 08:00-12:00",
+        "phone": "+57 608 4355150"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel guacamayas",
+      "category": "accommodation",
+      "latitude": 1.6085953,
+      "longitude": -75.6091306,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4538514521",
+      "source_updated_at": "2016-12-04T21:09:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel guacamayas",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Burbujas",
+      "category": "accommodation",
+      "latitude": 1.6088516,
+      "longitude": -75.6092701,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4538514522",
+      "source_updated_at": "2016-12-04T21:09:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Burbujas",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "casa de Moni",
+      "category": "accommodation",
+      "latitude": 1.6077681,
+      "longitude": -75.6171097,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/4540147190",
+      "source_updated_at": "2016-12-05T20:20:10Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "casa de Moni",
+        "name:es": "casa de Moni",
+        "tourism": "camp_site"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Comederos del Mercado",
+      "category": "restaurants",
+      "latitude": 1.616089,
+      "longitude": -75.6154496,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5079308422",
+      "source_updated_at": "2017-09-04T15:27:16Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Comederos del Mercado",
+        "name:es": "Comederos del Mercado"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Govindas",
+      "category": "restaurants",
+      "latitude": 1.6185248,
+      "longitude": -75.6099796,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5084344523",
+      "source_updated_at": "2020-12-11T17:31:02Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "diet:vegetarian": "yes",
+        "name": "Govindas",
+        "name:es": "Govindas"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Café & Kaaba",
+      "category": "cafes",
+      "latitude": 1.6147698,
+      "longitude": -75.6157289,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5084346023",
+      "source_updated_at": "2019-06-06T23:27:40Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "cuisine": "ice_cream;cake;local;coffee_shop",
+        "name": "Café & Kaaba",
+        "name:es": "Café & Kaaba"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Emaya",
+      "category": "accommodation",
+      "latitude": 1.6175886,
+      "longitude": -75.6128308,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/5089168915",
+      "source_updated_at": "2017-09-08T16:12:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Emaya",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Bar Las Muñecas",
+      "category": "nightlife",
+      "latitude": 1.6175744,
+      "longitude": -75.6130364,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6484726985",
+      "source_updated_at": "2019-05-20T02:36:04Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "bar",
+        "name": "Bar Las Muñecas"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Andinos Plaza",
+      "category": "accommodation",
+      "latitude": 1.6184738,
+      "longitude": -75.6120423,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6525257293",
+      "source_updated_at": "2026-09-21T10:27:15Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "addr:housenumber": "9-07",
+        "addr:street": "Calle 18",
+        "name": "Hotel Andinos Plaza",
+        "phone": "+57 310 2948575",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Caquetá Real",
+      "category": "accommodation",
+      "latitude": 1.6183831,
+      "longitude": -75.6123122,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6525271671",
+      "source_updated_at": "2019-06-05T18:54:07Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Caquetá Real",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "American",
+      "category": "nightlife",
+      "latitude": 1.6104485,
+      "longitude": -75.6077187,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6530709725",
+      "source_updated_at": "2019-06-07T01:45:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "bar",
+        "name": "American"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Mister Burger",
+      "category": "restaurants",
+      "latitude": 1.6104653,
+      "longitude": -75.6077554,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6530714389",
+      "source_updated_at": "2019-06-07T01:45:01Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "fast_food",
+        "name": "Mister Burger"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Emaze",
+      "category": "accommodation",
+      "latitude": 1.6202988,
+      "longitude": -75.6091194,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11076291105",
+      "source_updated_at": "2023-07-30T01:51:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "Hotel Emaze",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Croissant",
+      "category": "restaurants",
+      "latitude": 1.6151188,
+      "longitude": -75.6141221,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13556496401",
+      "source_updated_at": "2026-02-13T18:42:29Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Croissant"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "La Bruncheria",
+      "category": "cafes",
+      "latitude": 1.6116925,
+      "longitude": -75.6103809,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13556496501",
+      "source_updated_at": "2026-02-13T18:42:38Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "name": "La Bruncheria",
+        "shop": "bakery"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Croissant sede 2",
+      "category": "restaurants",
+      "latitude": 1.6171372,
+      "longitude": -75.6100841,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13587028701",
+      "source_updated_at": "2026-02-21T12:57:46Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Croissant sede 2"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Chop suey",
+      "category": "restaurants",
+      "latitude": 1.6179817,
+      "longitude": -75.6135158,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/14134005601",
+      "source_updated_at": "2026-08-29T22:24:17Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Chop suey"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque de la Inmaculada",
+      "category": "attraction_candidate",
+      "latitude": 1.6195967,
+      "longitude": -75.6138417,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/14174056602",
+      "source_updated_at": "2026-09-11T18:42:33Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque de la Inmaculada"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Puntocafé",
+      "category": "cafes",
+      "latitude": 1.6146143,
+      "longitude": -75.613437,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/14175321901",
+      "source_updated_at": "2026-09-12T14:17:04Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "cafe",
+        "name": "Puntocafé"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Santander",
+      "category": "attraction_candidate",
+      "latitude": 1.6149342500000001,
+      "longitude": -75.61323105,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/522719525",
+      "source_updated_at": "2019-07-29T02:44:14Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Parque Santander"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Parque Santander",
+      "category": "attraction_candidate",
+      "latitude": 1.61318145,
+      "longitude": -75.614482,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/628420073",
+      "source_updated_at": "2021-05-02T00:22:31Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "alt_name": "Plaza Pizarro",
+        "leisure": "park",
+        "name": "Parque Santander"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Plaza Zona Rosa",
+      "category": "attraction_candidate",
+      "latitude": 1.61027735,
+      "longitude": -75.60831089999999,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/628420084",
+      "source_updated_at": "2018-09-26T22:15:45Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "leisure": "park",
+        "name": "Plaza Zona Rosa"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Rincón Moreliano",
+      "category": "restaurants",
+      "latitude": 1.61460125,
+      "longitude": -75.6156029,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/695513993",
+      "source_updated_at": "2026-09-21T10:27:21Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "amenity": "restaurant",
+        "building": "yes",
+        "name": "Rincón Moreliano",
+        "phone": "+57 316 3964296"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Luna Azul",
+      "category": "accommodation",
+      "latitude": 1.6179769,
+      "longitude": -75.6119756,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/766783809",
+      "source_updated_at": "2020-01-26T22:35:06Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "name": "Hotel Luna Azul",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    },
+    {
+      "name": "Hotel Royal Plaza",
+      "category": "accommodation",
+      "latitude": 1.61528515,
+      "longitude": -75.61270065,
+      "point_kind": "mapped_building_or_site_reference_not_entrance",
+      "source_url": "https://www.openstreetmap.org/way/1286620005",
+      "source_updated_at": "2024-05-25T17:00:24Z",
+      "source_checked_at": "2026-11-04",
+      "tags": {
+        "building": "yes",
+        "layer": "1",
+        "name": "Hotel Royal Plaza",
+        "tourism": "hotel"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "mapped_candidate_requires_identity_and_boundary_review",
+      "maps_url": null
+    }
+  ]
+}
