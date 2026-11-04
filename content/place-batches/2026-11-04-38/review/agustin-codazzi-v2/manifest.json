@@ -1,0 +1,29 @@
+{
+  "destination": "agustin-codazzi",
+  "asset": "portada",
+  "status": "pendiente_aprobacion_usuario",
+  "reference": "Foto aportada por el usuario; autor, fecha y licencia no confirmados",
+  "factual_source": "https://comisionfilmicacolombia.com/locacion/plaza-alfonso-avila-quintero/",
+  "date": "2026-11-04",
+  "tool": "built-in image_gen",
+  "prompt": "Ilustración editorial semirrealista a partir de la referencia aportada, respetando fachada de ladrillo, agujas blancas, arcos, plaza, luminarias y entorno; personas anónimas, sin deformaciones ni arquitectura inventada.",
+  "files": {
+    "referencia-usuario.png": {
+      "sha256": "8203189b015d21761939c27af46dee691db8adebcfcdd9ccc9073d2aefec4ac8",
+      "bytes": 742577
+    },
+    "portada-actual.webp": {
+      "sha256": "d3dd9b53536a380d1c1975ae6a2b20be72662e76b2f38e1e43e930a99d74f6c5",
+      "bytes": 192210
+    },
+    "propuesta-master.png": {
+      "sha256": "0c60585cce03c11fd41a8e47bcc8b5be43ea53087a2079760aa227a2e267f529",
+      "bytes": 3456971
+    },
+    "propuesta-1200.webp": {
+      "sha256": "e18250347d07a127b900ab703f913b6a95f5fef7ee4f77a7b73a6ec5cad4243b",
+      "bytes": 243830
+    }
+  },
+  "deployed": false
+}
