@@ -38,3 +38,7 @@ La promoción incremental de los 38 a otro ambiente aún requiere integración c
 ## Ajuste posterior del propietario — 4 de noviembre
 
 También se retiraron QC-16-2 (Atuncela) y QC-30-4 (Tasajera). Los cinco están archivados en dev1; 15 rutas verificadas. San Antonio QC-06-3 quedó actualizado en dev1 a 6.353044,-75.4259681 con el enlace Maps compartido por el propietario. Majuy es la única excepción pendiente: la cima de la ruta aportada muestra antenas y no confirma la roca de la imagen. Estos datos posteriores prevalecen sobre los recibos históricos anteriores.
+
+## Majuy aprobado — 4 de noviembre
+
+QC-17-7 usa ahora la foto georreferenciada de Wikiloc y su nueva ilustración aprobada por el propietario. Se sustituyó el WebP del paquete y se actualizaron los tres idiomas y las coordenadas 4.8048233,-74.1195667. Hay 75 puntos identificados; este es un punto fotográfico, no un acceso. No tiene ficha nombrada de Google Maps verificada; el enlace público queda vacío. Este ajuste está preparado en Git, aún no aplicado a dev1.

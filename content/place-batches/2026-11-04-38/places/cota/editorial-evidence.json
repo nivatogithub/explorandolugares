@@ -52,22 +52,32 @@
     {
       "id": "QC-17-7",
       "municipality": "Cota",
-      "title_es": "Cerro Majuy · roca de cumbre",
-      "image_status": "pending",
-      "image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-17-7.webp",
-      "image_sha256": "ce9a3362b4146d51cab2f498b8374a6c277c8d0e0b9a8c58aa60bb8826144fa2",
+      "title_es": "Serranía del Majuy · mirador rocoso",
+      "image_status": "approved",
+      "image": "images/QC-17-7.webp",
+      "image_sha256": "a3870cb94a814ec0d124b4cff2d471ec9407e59ab4574fae4ccb76ee49ae9849",
       "source": {
-        "source_url": "https://es.wikiloc.com/rutas-carrera-por-montana/cerro-el-majuy-cota-88967015",
-        "checked_at": "2026-11-03",
+        "source_url": "https://es.wikiloc.com/rutas-senderismo/serrania-del-majuy-cota-76399724#wp-76399729",
+        "url": "https://s2.wklcdn.com/image_169/5077464/76399729/49883144Master.jpg",
+        "author": "Mario Andrés",
+        "published_at": "2021-06",
         "visual_reviewed": true
       },
-      "geo": null,
-      "geo_status": "pending",
+      "geo": {
+        "latitude": 4.8048233,
+        "longitude": -74.1195667,
+        "point_type": "photo_waypoint_not_access"
+      },
+      "geo_status": "photo_waypoint_confirmed",
       "legacy_name": null,
       "identity_changed": false,
-      "texts_status": "pending_final_selection",
+      "texts_status": "reviewed",
       "package_validated": false,
-      "created_in_dev1": false
+      "created_in_dev1": false,
+      "approval": {
+        "date": "2026-11-04",
+        "text": "aprobada, aunque en google no muetra la foto"
+      }
     }
   ],
   "status": "prepared_source_not_imported",

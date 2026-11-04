@@ -1378,37 +1378,36 @@
   {
     "id": "QC-17-7",
     "municipality": "cota",
-    "name": "Cerro Majuy · roca de cumbre",
+    "name": "Serranía del Majuy · mirador rocoso",
     "previous_geo": null,
-    "status": "ubicacion_general_documentada_no_acceso",
+    "status": "punto_fotografico_confirmado",
     "entrance_verified": false,
-    "latitude": 4.8197,
-    "longitude": -74.1165,
-    "map_url": "https://www.google.com/maps/search/?api=1&query=4.8197000,-74.1165000",
+    "latitude": 4.8048233,
+    "longitude": -74.1195667,
+    "map_url": "",
     "checked_at": "2026-11-04",
-    "precision": "referencia_area_no_entrada",
+    "precision": "punto_fotografico_no_acceso",
     "sources": [
-      "https://mapcarta.com/es/N703340827",
-      "https://es.wikiloc.com/rutas-carrera-por-montana/cerro-el-majuy-cota-88967015",
-      "https://es.wikiloc.com/rutas-senderismo/serrania-del-majuy-cota-76399724"
+      "https://es.wikiloc.com/rutas-senderismo/serrania-del-majuy-cota-76399724#wp-76399729"
     ],
-    "note": "Punto rocoso identificado en la ruta aportada por el usuario: 4.8048233,-74.1195667, waypoint 76399729. No es la cima con antenas. La foto muestra afloramiento rocoso y valle; falta confirmar que corresponda a la roca aislada de la ilustración aprobada. No se cambia el punto definitivo sin resolver esa correspondencia.",
-    "reference_source_url": "https://es.wikiloc.com/rutas-carrera-por-montana/cerro-el-majuy-cota-88967015",
-    "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-17-7.webp",
+    "note": "Foto real y punto Wikiloc identificados; nueva ilustración aprobada por el propietario el 2026-11-04. No es la cima ni la entrada. Sin ficha nombrada verificada en Google Maps.",
+    "reference_source_url": "https://es.wikiloc.com/rutas-senderismo/serrania-del-majuy-cota-76399724#wp-76399729",
+    "reference_image": "review/majuy-v2/original.jpg",
     "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
-    "review_group": "precision",
-    "manual_review_required": true,
-    "ready_for_import": false,
-    "identity_cross_checked": false,
-    "review_image": "../../portadas/revision-40/atractivos-lote-4/generadas/QC-17-7.webp",
+    "review_group": "confirmed",
+    "manual_review_required": false,
+    "ready_for_import": true,
+    "identity_cross_checked": true,
+    "review_image": "review/majuy-v2/generada-1200.webp",
     "candidate_from_user_route": {
       "latitude": 4.8048233,
       "longitude": -74.1195667,
       "waypoint": "76399729",
       "source_url": "https://es.wikiloc.com/rutas-senderismo/serrania-del-majuy-cota-76399724#wp-76399729",
       "evidence": "Foto abierta: roca aflorante en primer plano, bloque al fondo a izquierda y valle con invernaderos. Coordenadas del enlace visible Busca rutas que pasen por aquí. No equivale al hito Cima con antenas.",
-      "image_match": "No se pudo establecer correspondencia inequívoca con la roca aislada de la ilustración aprobada."
-    }
+      "image_match": "Referencia original sustituida por la foto real de este waypoint; nueva ilustración aprobada."
+    },
+    "google_maps_status": "named_listing_not_verified"
   },
   {
     "id": "QC-18-2",
