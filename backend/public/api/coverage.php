@@ -35,7 +35,7 @@ try{
     $destination=null;
     if(isset($_GET['destination'])&&$_GET['destination']!==''){
         $candidate=$_GET['destination'];$found=false;
-        foreach($result['departments'] as $dep)foreach($dep['places'] as $place)if($place['status']==='published'&&$place['url']==='/destinos/'.$candidate.'/'&&($department===null||($department===$dep['code']||($department==='25'&&$dep['code']==='11'))))$found=true;
+        foreach($result['departments'] as $dep)foreach($dep['places'] as $place)if($place['status']==='published'&&$place['url']==='/lugares/'.$candidate.'/'&&($department===null||($department===$dep['code']||($department==='25'&&$dep['code']==='11'))))$found=true;
         if(!$found){http_response_code(404);echo '{"error":"Lugar no publicado en este ámbito"}';exit;}$destination=$candidate;
     }
     $result['audience']=['status'=>'aggregate_only','cookies'=>false,'visitor_identifiers'=>false];
