@@ -1,15 +1,6 @@
 {
-  "consultado": "04/11/2026 17:37",
+  "consultado": "04/11/2026 17:43",
   "lugares": [
-    {
-      "slug": "la-ceja",
-      "name": "La Ceja",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "alimentacion": 1
-      }
-    },
     {
       "slug": "la-playa-de-belen",
       "name": "La Playa de Belén",
@@ -54,6 +45,15 @@
       "cats": {
         "hospedaje": 1,
         "alimentacion": 1
+      }
+    },
+    {
+      "slug": "la-ceja",
+      "name": "La Ceja",
+      "batch": "30",
+      "total": 2,
+      "cats": {
+        "alimentacion": 2
       }
     },
     {
