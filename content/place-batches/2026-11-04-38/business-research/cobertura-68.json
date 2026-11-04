@@ -1,5 +1,5 @@
 {
-  "consultado": "04/11/2026 15:22",
+  "consultado": "04/11/2026 15:41",
   "lugares": [
     {
       "slug": "el-penol",
@@ -37,13 +37,6 @@
       "cats": {}
     },
     {
-      "slug": "san-rafael",
-      "name": "San Rafael",
-      "batch": "30",
-      "total": 0,
-      "cats": {}
-    },
-    {
       "slug": "lorica",
       "name": "Santa Cruz de Lorica",
       "batch": "30",
@@ -53,13 +46,6 @@
     {
       "slug": "mompox",
       "name": "Santa Cruz de Mompox",
-      "batch": "30",
-      "total": 0,
-      "cats": {}
-    },
-    {
-      "slug": "santa-rosa-de-osos",
-      "name": "Santa Rosa de Osos",
       "batch": "30",
       "total": 0,
       "cats": {}
@@ -182,15 +168,6 @@
       }
     },
     {
-      "slug": "pore",
-      "name": "Pore",
-      "batch": "30",
-      "total": 2,
-      "cats": {
-        "hospedaje": 2
-      }
-    },
-    {
       "slug": "puerto-triunfo",
       "name": "Puerto Triunfo",
       "batch": "30",
@@ -250,6 +227,16 @@
       }
     },
     {
+      "slug": "san-rafael",
+      "name": "San Rafael",
+      "batch": "30",
+      "total": 3,
+      "cats": {
+        "hospedaje": 2,
+        "experiencias": 1
+      }
+    },
+    {
       "slug": "santa-rosa-de-lima",
       "name": "Santa Rosa de Lima",
       "batch": "38",
@@ -272,6 +259,16 @@
     {
       "slug": "honda",
       "name": "Honda",
+      "batch": "30",
+      "total": 4,
+      "cats": {
+        "hospedaje": 2,
+        "alimentacion": 2
+      }
+    },
+    {
+      "slug": "pore",
+      "name": "Pore",
       "batch": "30",
       "total": 4,
       "cats": {
@@ -388,6 +385,16 @@
         "alimentacion": 2,
         "comercio": 4,
         "salud": 1
+      }
+    },
+    {
+      "slug": "santa-rosa-de-osos",
+      "name": "Santa Rosa de Osos",
+      "batch": "30",
+      "total": 14,
+      "cats": {
+        "hospedaje": 7,
+        "alimentacion": 7
       }
     },
     {
