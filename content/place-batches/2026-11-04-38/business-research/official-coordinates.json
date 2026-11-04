@@ -1,0 +1,1435 @@
+[
+  {
+    "business_name": "Yarumito Finca Hotel",
+    "destination_slug": "barbosa",
+    "category_code": "hospedaje",
+    "source_url": "https://yarumitofincahotel.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://yarumitofincahotel.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Antioquia Tropical Club",
+    "destination_slug": "barbosa",
+    "category_code": "hospedaje",
+    "source_url": "https://www.antioquiatropicalclub.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.antioquiatropicalclub.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Bizancio Restaurante Bar",
+    "destination_slug": "bello",
+    "category_code": "vida-nocturna",
+    "source_url": "https://bizanciobar.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://bizanciobar.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Tertulias Colombia",
+    "destination_slug": "bello",
+    "category_code": "alimentacion",
+    "source_url": "https://www.tertuliascolombia.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.tertuliascolombia.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Mirador La Luna",
+    "destination_slug": "bello",
+    "category_code": "alimentacion",
+    "source_url": "https://www.miradorlaluna.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [
+      {
+        "name": "Mirador La Luna",
+        "latitude": 6.3373,
+        "longitude": -75.5553,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bello",
+          "addressRegion": "Antioquia",
+          "addressCountry": "CO"
+        },
+        "schema_type": "Restaurant",
+        "status": "candidate_requires_business_and_municipality_match"
+      }
+    ],
+    "resolved_url": "https://www.miradorlaluna.com/",
+    "http_status": 200,
+    "status": "coordinates_found"
+  },
+  {
+    "business_name": "Restaurante El Abuelo — Caldas",
+    "destination_slug": "caldas",
+    "category_code": "alimentacion",
+    "source_url": "https://www.elabuelo.co/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.elabuelo.co/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Club El Zarzal",
+    "destination_slug": "copacabana",
+    "category_code": "hospedaje",
+    "source_url": "https://www.clubzarzal.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.clubzarzal.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Texas Burger",
+    "destination_slug": "copacabana",
+    "category_code": "alimentacion",
+    "source_url": "https://texasburger.com.co/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://texasburger.com.co/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Arame",
+    "destination_slug": "envigado",
+    "category_code": "hospedaje",
+    "source_url": "https://hotelarame.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://hotelarame.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "La Mayoría Restaurante y Fonda",
+    "destination_slug": "envigado",
+    "category_code": "alimentacion",
+    "source_url": "https://lamayoria.com/conocenos/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://lamayoria.com/conocenos/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "R. Bistro",
+    "destination_slug": "envigado",
+    "category_code": "alimentacion",
+    "source_url": "https://restauranterbistro.wixsite.com/rbistro",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://restauranterbistro.wixsite.com/rbistro",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Ancestros Ecoparque",
+    "destination_slug": "girardota",
+    "category_code": "hospedaje",
+    "source_url": "https://girardotatravel.org/hospedaje",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://girardotatravel.org/hospedaje",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Mountain View",
+    "destination_slug": "girardota",
+    "category_code": "hospedaje",
+    "source_url": "https://girardotatravel.org/hospedaje",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://girardotatravel.org/hospedaje",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Sky Natural",
+    "destination_slug": "girardota",
+    "category_code": "hospedaje",
+    "source_url": "https://girardotatravel.org/hospedaje",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://girardotatravel.org/hospedaje",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Entre Los Pinos Glamping",
+    "destination_slug": "girardota",
+    "category_code": "hospedaje",
+    "source_url": "https://girardotatravel.org/hospedaje",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://girardotatravel.org/hospedaje",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Benevento",
+    "destination_slug": "girardota",
+    "category_code": "hospedaje",
+    "source_url": "https://girardotatravel.org/hospedaje",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://girardotatravel.org/hospedaje",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Truchera Piedra Lisa",
+    "destination_slug": "girardota",
+    "category_code": "alimentacion",
+    "source_url": "https://girardotatravel.org/gastronomia",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://girardotatravel.org/gastronomia",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Campanario Encanto Cultural",
+    "destination_slug": "girardota",
+    "category_code": "alimentacion",
+    "source_url": "https://girardotatravel.org/gastronomia",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://girardotatravel.org/gastronomia",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Q’Chingon",
+    "destination_slug": "girardota",
+    "category_code": "alimentacion",
+    "source_url": "https://girardotatravel.org/gastronomia",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://girardotatravel.org/gastronomia",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Ruiseñor Itagüí",
+    "destination_slug": "itagui",
+    "category_code": "hospedaje",
+    "source_url": "https://www.hotelruisenoritagui.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.hotelruisenoritagui.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Macedonia Plaza",
+    "destination_slug": "itagui",
+    "category_code": "hospedaje",
+    "source_url": "https://hotelmacedoniaplazaitagui.com/servicio/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://hotelmacedoniaplazaitagui.com/servicio/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Plaza Arrayanes",
+    "destination_slug": "itagui",
+    "category_code": "comercio",
+    "source_url": "https://plazaarrayanes.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://plazaarrayanes.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "VIUZ",
+    "destination_slug": "itagui",
+    "category_code": "vida-nocturna",
+    "source_url": "https://www.viuz.com.co/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.viuz.com.co/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Los Chalets",
+    "destination_slug": "la-estrella",
+    "category_code": "hospedaje",
+    "source_url": "https://loschalets.com/restaurante/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://loschalets.com/restaurante/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Donde Estela",
+    "destination_slug": "sabaneta",
+    "category_code": "alimentacion",
+    "source_url": "https://linktr.ee/dondeestela",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "status": "source_unavailable",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "business_name": "Hotel Boutique Campanario del Río",
+    "destination_slug": "soledad",
+    "category_code": "hospedaje",
+    "source_url": "https://campanariodelrio.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [
+      {
+        "name": "Hotel Boutique Campanario del Río",
+        "latitude": 10.916407,
+        "longitude": -74.7622619,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle 13 #20-42",
+          "addressLocality": "Soledad",
+          "addressRegion": "Atlántico",
+          "postalCode": "083003",
+          "addressCountry": "CO"
+        },
+        "schema_type": "Hotel",
+        "status": "candidate_requires_business_and_municipality_match"
+      }
+    ],
+    "resolved_url": "https://campanariodelrio.com/",
+    "http_status": 200,
+    "status": "coordinates_found"
+  },
+  {
+    "business_name": "Centro Comercial Nuestro Atlántico",
+    "destination_slug": "soledad",
+    "category_code": "comercio",
+    "source_url": "https://nuestroatlantico.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://nuestroatlantico.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Droguerías Farmavida — Soledad",
+    "destination_slug": "soledad",
+    "category_code": "salud",
+    "source_url": "https://drogueriasfarmavida.com/quienes-somos/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://drogueriasfarmavida.com/quienes-somos/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Droguerías Farmavida — Malambo",
+    "destination_slug": "malambo",
+    "category_code": "salud",
+    "source_url": "https://drogueriasfarmavida.com/quienes-somos/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://drogueriasfarmavida.com/quienes-somos/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Droguerías Farmavida — Galapa",
+    "destination_slug": "galapa",
+    "category_code": "salud",
+    "source_url": "https://drogueriasfarmavida.com/quienes-somos/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://drogueriasfarmavida.com/quienes-somos/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Torettos Restaurante & Hotel",
+    "destination_slug": "yumbo",
+    "category_code": "hospedaje",
+    "source_url": "https://torettos.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://torettos.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "KongTainers Plaza",
+    "destination_slug": "candelaria",
+    "category_code": "comercio",
+    "source_url": "https://www.kongtainers.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.kongtainers.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Alitas KMI — KongTainers",
+    "destination_slug": "candelaria",
+    "category_code": "alimentacion",
+    "source_url": "https://www.kongtainers.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.kongtainers.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Tadama Sushi — KongTainers",
+    "destination_slug": "candelaria",
+    "category_code": "alimentacion",
+    "source_url": "https://www.kongtainers.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.kongtainers.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Raíces Gastrobar",
+    "destination_slug": "madrid",
+    "category_code": "alimentacion",
+    "source_url": "https://raicesgastrobarmadrid.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://raicesgastrobarmadrid.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Restaurante Bugambil",
+    "destination_slug": "madrid",
+    "category_code": "alimentacion",
+    "source_url": "https://restaurantebugambil.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://restaurantebugambil.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "La Cocina de Criss",
+    "destination_slug": "madrid",
+    "category_code": "alimentacion",
+    "source_url": "https://lacocinadecriss1.wixsite.com/madrid",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [
+      {
+        "name": "La Cocina de Criss",
+        "latitude": 4.730281300000001,
+        "longitude": -74.25947959999999,
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CO",
+          "addressLocality": "Madrid",
+          "addressRegion": "CUN",
+          "postalCode": "250030",
+          "streetAddress": "1-05 Calle 7"
+        },
+        "schema_type": "Restaurant",
+        "status": "candidate_requires_business_and_municipality_match"
+      }
+    ],
+    "resolved_url": "https://lacocinadecriss1.wixsite.com/madrid",
+    "http_status": 200,
+    "status": "coordinates_found"
+  },
+  {
+    "business_name": "Tartaruga",
+    "destination_slug": "mosquera",
+    "category_code": "alimentacion",
+    "source_url": "https://tartaruga.com.co/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://tartaruga.com.co/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hoteles Sahara",
+    "destination_slug": "facatativa",
+    "category_code": "hospedaje",
+    "source_url": "https://hotelessaharafacatativa.com.co/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://hotelessaharafacatativa.com.co/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hogaza Pan Artesanal",
+    "destination_slug": "tenjo",
+    "category_code": "alimentacion",
+    "source_url": "https://visitatenjo.com/que-hacer/donde-comer-en-tenjo/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://visitatenjo.com/que-hacer/donde-comer-en-tenjo/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Cocoa Café",
+    "destination_slug": "tenjo",
+    "category_code": "alimentacion",
+    "source_url": "https://visitatenjo.com/que-hacer/donde-comer-en-tenjo/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://visitatenjo.com/que-hacer/donde-comer-en-tenjo/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Faunáticos",
+    "destination_slug": "tenjo",
+    "category_code": "experiencias",
+    "source_url": "https://www.parquefaunaticos.com/restaurantes",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.parquefaunaticos.com/restaurantes",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Costa Fina — Asociación Diseñadoras Artesanales de Tasajera",
+    "destination_slug": "pueblo-viejo",
+    "category_code": "comercio",
+    "source_url": "https://costafina.com.co/wp-content/uploads/2025/09/7-CAMARA-DE-COMERCIO-2025.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://costafina.com.co/wp-content/uploads/2025/09/7-CAMARA-DE-COMERCIO-2025.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Unicentro Cúcuta",
+    "destination_slug": "cucuta",
+    "category_code": "comercio",
+    "source_url": "https://unicentrocucuta.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://unicentrocucuta.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel B’quin Plaza",
+    "destination_slug": "cucuta",
+    "category_code": "hospedaje",
+    "source_url": "https://www.hotelbquinplaza.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.hotelbquinplaza.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Arizona Suites",
+    "destination_slug": "cucuta",
+    "category_code": "hospedaje",
+    "source_url": "https://www.hotelarizonasuites.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.hotelarizonasuites.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Blu",
+    "destination_slug": "cucuta",
+    "category_code": "hospedaje",
+    "source_url": "https://hotelblucucuta.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://hotelblucucuta.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Restaurante La Pera",
+    "destination_slug": "cucuta",
+    "category_code": "alimentacion",
+    "source_url": "https://atlantisplazahotel.com/restaurante/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://atlantisplazahotel.com/restaurante/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Gran Ester",
+    "destination_slug": "los-patios",
+    "category_code": "hospedaje",
+    "source_url": "https://hotelgranester.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://hotelgranester.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Restaurante La Esquina Verde",
+    "destination_slug": "san-diego",
+    "category_code": "alimentacion",
+    "source_url": "https://queresto.com/esquinaverde/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [
+      {
+        "name": "Restaurante La Esquina Verde",
+        "latitude": 10.23244,
+        "longitude": -73.27349,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Parque Recreacional San Diego",
+          "addressLocality": "San Diego",
+          "addressCountry": "CO"
+        },
+        "schema_type": "Restaurant",
+        "status": "candidate_requires_business_and_municipality_match"
+      }
+    ],
+    "resolved_url": "https://queresto.com/esquinaverde/",
+    "http_status": 200,
+    "status": "coordinates_found"
+  },
+  {
+    "business_name": "Vástago Restaurante",
+    "destination_slug": "agustin-codazzi",
+    "category_code": "alimentacion",
+    "source_url": "https://linktr.ee/vastago.restaurante1",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://linktr.ee/vastago.restaurante1",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Cruz Verde — Plaza Fabricato",
+    "destination_slug": "bello",
+    "category_code": "salud",
+    "source_url": "https://www.comfama.com/convenios/saludable/droguerias-cruz-verde",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.comfama.com/convenios/saludable/droguerias-cruz-verde",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Cruz Verde — Otraparte",
+    "destination_slug": "envigado",
+    "category_code": "salud",
+    "source_url": "https://www.comfama.com/convenios/saludable/droguerias-cruz-verde",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://validate.perfdrive.com/4eae35f1b35977a00ebd8086c259d4c9/?ssa=c573ccea-6f87-4917-b4cc-1c8dd6893dfc&ssb=28111247721&ssc=https%3A%2F%2Fwww.comfama.com%2Fconvenios%2Fsaludable%2Fdroguerias-cruz-verde&ssi=7f4ad955-cidf-4408-9f7f-f5dbf141edd4&ssk=botmanager_support@radware.com&ssm=29015831933107361103349972649289&ssn=52baa553e58bc7ab347a372922bc28f33a368be0b573-5985-47ba-ae03ac&sso=95d5ddaa-2f34df3826441ad660c41ce2bddf76870d2aa6d22e7edbc4&ssp=02023506671793867430179388630445870&ssq=02838541077393227887910773836572829202365&ssr=MjA2LjYyLjE0My4xOTg=&sst=ExplorandoLugares-EditorialResearch/1.0%20(+https://explorandolugares.com)&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImNvbWZhbWEuY29tIiwidXpteCI6IjdmYzAwMDlkYjlhNjdiLWM2NDQtNDRjZS05YTg1LWY4ZmY5MzVhNzg3ZDEtMTc5MzgxMDc3MzUyMzAtMDBjZGIyOTZjMzkwMjY0MmZjMjEwIiwiX191em1mIjoiN2Y5MDAwOGJlMGI1NzMtNTk4NS00N2JhLWFkYWEtMmYzNGRmMzgyNjQ0MS0xNzkzODEwNzczNTIzMC0wMDU5OTE4ZmY3MTBjMDQzZmMzMTAifQ==",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel H&M Palmira",
+    "destination_slug": "palmira",
+    "category_code": "hospedaje",
+    "source_url": "https://hotelhympalmira.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://hotelhympalmira.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Restaurante Doña Pastora",
+    "destination_slug": "palmira",
+    "category_code": "alimentacion",
+    "source_url": "https://donapastora.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://donapastora.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Araucana Lodge",
+    "destination_slug": "dagua",
+    "category_code": "hospedaje",
+    "source_url": "https://www.araucanalodge.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.araucanalodge.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Pacho Parrilla",
+    "destination_slug": "funza",
+    "category_code": "alimentacion",
+    "source_url": "https://palalea9228.wixsite.com/pachoparrillabarcafe",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [
+      {
+        "name": "Pacho Parrilla Funza - Restaurante Bar Café",
+        "latitude": 4.7153858,
+        "longitude": -74.2124678,
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CO",
+          "addressLocality": "Funza",
+          "addressRegion": "Cundinamarca",
+          "postalCode": "250020",
+          "streetAddress": "1247 Calle 13"
+        },
+        "schema_type": "Restaurant",
+        "status": "candidate_requires_business_and_municipality_match"
+      }
+    ],
+    "resolved_url": "https://palalea9228.wixsite.com/pachoparrillabarcafe",
+    "http_status": 200,
+    "status": "coordinates_found"
+  },
+  {
+    "business_name": "Caminito de Piedra",
+    "destination_slug": "funza",
+    "category_code": "alimentacion",
+    "source_url": "https://www.caminitodepiedra.com/nosotros",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.caminitodepiedra.com/nosotros",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Restaurante Mirador El Paraíso",
+    "destination_slug": "sibate",
+    "category_code": "alimentacion",
+    "source_url": "https://haroll824.wixsite.com/restaurante-elpariso",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://haroll824.wixsite.com/restaurante-elpariso",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Portón Sabaneta",
+    "destination_slug": "sabaneta",
+    "category_code": "hospedaje",
+    "source_url": "https://www.portonsabanetahotel.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.portonsabanetahotel.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Distrito 21",
+    "destination_slug": "sabaneta",
+    "category_code": "hospedaje",
+    "source_url": "https://sabaneta.gov.co/files/opendata/json/alojamientos.php",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://sabaneta.gov.co/files/opendata/json/alojamientos.php",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel 45 Park",
+    "destination_slug": "sabaneta",
+    "category_code": "hospedaje",
+    "source_url": "https://sabaneta.gov.co/files/opendata/json/alojamientos.php",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://sabaneta.gov.co/files/opendata/json/alojamientos.php",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Tres Altares",
+    "destination_slug": "sabaneta",
+    "category_code": "hospedaje",
+    "source_url": "https://sabaneta.gov.co/files/opendata/json/alojamientos.php",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://sabaneta.gov.co/files/opendata/json/alojamientos.php",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Plaza Garibaldi",
+    "destination_slug": "caldas",
+    "category_code": "hospedaje",
+    "source_url": "https://www.cotelcoantioquia.org/properties-2-5/hotel-plaza-garibaldi",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://cotelcoantioquia.org/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Nogal Plaza",
+    "destination_slug": "la-virginia",
+    "category_code": "hospedaje",
+    "source_url": "https://www.hotelnogalplaza.com.co/contacto/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.hotelnogalplaza.com.co/contacto/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Casa Vieja — Hostal y Restaurante",
+    "destination_slug": "manaure",
+    "category_code": "alimentacion",
+    "source_url": "https://mantur.co/descubre/donde-comer-en-manaure",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [
+      {
+        "name": "Manaure Balcón del Cesar",
+        "latitude": 10.3912,
+        "longitude": -73.0272,
+        "address": null,
+        "schema_type": "City",
+        "status": "rejected_municipal_center_not_business",
+        "rejection_reason": "El sitio devuelve el centro de Manaure, no la ubicación del establecimiento."
+      }
+    ],
+    "resolved_url": "https://mantur.co/descubre/donde-comer-en-manaure",
+    "http_status": 200,
+    "status": "coordinates_found"
+  },
+  {
+    "business_name": "Restaurante Heliconias El Peñón",
+    "destination_slug": "manaure",
+    "category_code": "alimentacion",
+    "source_url": "https://mantur.co/descubre/donde-comer-en-manaure",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [
+      {
+        "name": "Manaure Balcón del Cesar",
+        "latitude": 10.3912,
+        "longitude": -73.0272,
+        "address": null,
+        "schema_type": "City",
+        "status": "rejected_municipal_center_not_business",
+        "rejection_reason": "El sitio devuelve el centro de Manaure, no la ubicación del establecimiento."
+      }
+    ],
+    "resolved_url": "https://mantur.co/descubre/donde-comer-en-manaure",
+    "http_status": 200,
+    "status": "coordinates_found"
+  },
+  {
+    "business_name": "La Teresita Hostal",
+    "destination_slug": "manaure",
+    "category_code": "hospedaje",
+    "source_url": "https://mantur.co/descubre/donde-comer-en-manaure",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [
+      {
+        "name": "Manaure Balcón del Cesar",
+        "latitude": 10.3912,
+        "longitude": -73.0272,
+        "address": null,
+        "schema_type": "City",
+        "status": "rejected_municipal_center_not_business",
+        "rejection_reason": "El sitio devuelve el centro de Manaure, no la ubicación del establecimiento."
+      }
+    ],
+    "resolved_url": "https://mantur.co/descubre/donde-comer-en-manaure",
+    "http_status": 200,
+    "status": "coordinates_found"
+  },
+  {
+    "business_name": "Son del Balcón",
+    "destination_slug": "manaure",
+    "category_code": "cultura",
+    "source_url": "https://mantur.co/descubre/donde-comer-en-manaure",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [
+      {
+        "name": "Manaure Balcón del Cesar",
+        "latitude": 10.3912,
+        "longitude": -73.0272,
+        "address": null,
+        "schema_type": "City",
+        "status": "rejected_municipal_center_not_business",
+        "rejection_reason": "El sitio devuelve el centro de Manaure, no la ubicación del establecimiento."
+      }
+    ],
+    "resolved_url": "https://mantur.co/descubre/donde-comer-en-manaure",
+    "http_status": 200,
+    "status": "coordinates_found"
+  },
+  {
+    "business_name": "GHL Style Hotel Bogotá Occidente",
+    "destination_slug": "cota",
+    "category_code": "hospedaje",
+    "source_url": "https://www.ghlhoteles.com/en/hotels/colombia/bogota/style-hotel-bogota-occidente/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.ghlhoteles.com/en/hotels/colombia/bogota/style-hotel-bogota-occidente/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Asadero La Ruta 40",
+    "destination_slug": "arjona",
+    "category_code": "alimentacion",
+    "source_url": "https://www.asaderoruta40.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.asaderoruta40.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Droguería Geti",
+    "destination_slug": "arjona",
+    "category_code": "salud",
+    "source_url": "https://www.bancamia.net.co/wp-content/uploads/2025/03/PLANTILLA-CBs-PROPIOS.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "status": "source_unavailable",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "business_name": "Papelería y Variedades Las Nieves",
+    "destination_slug": "arjona",
+    "category_code": "comercio",
+    "source_url": "https://www.bancamia.net.co/wp-content/uploads/2025/03/PLANTILLA-CBs-PROPIOS.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "status": "source_unavailable",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "business_name": "Anfomotos y Repuestos",
+    "destination_slug": "barbosa",
+    "category_code": "comercio",
+    "source_url": "https://www.bancamia.net.co/wp-content/uploads/2025/03/PLANTILLA-CBs-PROPIOS.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "status": "source_unavailable",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "business_name": "Surtimax Clemencia",
+    "destination_slug": "clemencia",
+    "category_code": "comercio",
+    "source_url": "https://cdn.modyo.cloud/uploads/d7f65169-675f-4a67-98b5-8564b26ea0c2/original/Puntos_de_Recaudo_MAYO_2026_-_Puntos_de_recaudo.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://cdn.modyo.cloud/uploads/d7f65169-675f-4a67-98b5-8564b26ea0c2/original/Puntos_de_Recaudo_MAYO_2026_-_Puntos_de_recaudo.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Compu Móvil No Hay Como Dios",
+    "destination_slug": "santa-rosa-de-lima",
+    "category_code": "servicios",
+    "source_url": "https://www.bancoagrario.gov.co/system/files/2025-08/supergiros_0.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.bancoagrario.gov.co/system/files/2025-08/supergiros_0.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Coguásimales Service — Avenida 11",
+    "destination_slug": "el-zulia",
+    "category_code": "servicios",
+    "source_url": "https://www.bancoagrario.gov.co/system/files/2025-03/punto_de_pago_iii.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.bancoagrario.gov.co/system/files/2025-03/punto_de_pago_iii.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Las Palmeras Gachancipá",
+    "destination_slug": "gachancipa",
+    "category_code": "hospedaje",
+    "source_url": "https://www.booking.com/hotel/co/las-palmeras-gachancipa.es.html",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.booking.com/hotel/co/las-palmeras-gachancipa.es.html",
+    "http_status": 202,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Paz Real",
+    "destination_slug": "la-paz",
+    "category_code": "hospedaje",
+    "source_url": "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i58236/hotel-paz-real",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i58236/hotel-paz-real",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Restaurante La Vaquera",
+    "destination_slug": "san-cayetano",
+    "category_code": "alimentacion",
+    "source_url": "https://www.aiyellow.com/restaurantelavaquera-restaurante-asados.almuerzos-churrascos/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.aiyellow.com/restaurantelavaquera-restaurante-asados.almuerzos-churrascos/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Droguería Jesús de la Buena Esperanza",
+    "destination_slug": "puerto-santander",
+    "category_code": "salud",
+    "source_url": "https://ids.gov.co/2024/MEDICAMENTOS/ESTABLECIMIENTOS_AUTORIZADOS_A_2024.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://ids.gov.co/2024/MEDICAMENTOS/ESTABLECIMIENTOS_AUTORIZADOS_A_2024.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Droguería Farmazul",
+    "destination_slug": "el-zulia",
+    "category_code": "salud",
+    "source_url": "https://ids.gov.co/2024/MEDICAMENTOS/LISTADO_ESTABLECIMIENTOS_INSC_MCE_2024.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://ids.gov.co/2024/MEDICAMENTOS/LISTADO_ESTABLECIMIENTOS_INSC_MCE_2024.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "La Rebaja Plus Minimarket — Los Patios",
+    "destination_slug": "los-patios",
+    "category_code": "salud",
+    "source_url": "https://ids.gov.co/2024/MEDICAMENTOS/LISTADO_ESTABLECIMIENTOS_INSC_MCE_2024.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://ids.gov.co/2024/MEDICAMENTOS/LISTADO_ESTABLECIMIENTOS_INSC_MCE_2024.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "SuperGIROS — Provisiones JB",
+    "destination_slug": "san-diego",
+    "category_code": "servicios",
+    "source_url": "https://www.bancamia.com.co/wp-content/uploads/2025/09/PLANTILLA-PUNTOS-SUPERGIROS.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.bancamia.com.co/wp-content/uploads/2025/09/PLANTILLA-PUNTOS-SUPERGIROS.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Fanfanillo Apiario & Farm",
+    "destination_slug": "girardota",
+    "category_code": "experiencias",
+    "source_url": "https://girardotatravel.org/experiencias",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://girardotatravel.org/experiencias",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Asociación de Mujeres de Girardota — Productos de Fique",
+    "destination_slug": "girardota",
+    "category_code": "comercio",
+    "source_url": "https://girardotatravel.org/productos-locales",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://girardotatravel.org/productos-locales",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Licores Danny Valen La 38",
+    "destination_slug": "envigado",
+    "category_code": "licores",
+    "source_url": "https://grupogdc.co/es-CO/nuestras-tiendas.php",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://grupogdc.co/es-CO/ley-124.php?referer=/es-CO/nuestras-tiendas.php",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Agencia Gerbe — Carrera 52 # 50-40",
+    "destination_slug": "itagui",
+    "category_code": "licores",
+    "source_url": "https://grupogdc.co/es-CO/nuestras-tiendas.php",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://grupogdc.co/es-CO/ley-124.php?referer=/es-CO/nuestras-tiendas.php",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Cinemark — Gran Plaza del Sol",
+    "destination_slug": "soledad",
+    "category_code": "cultura",
+    "source_url": "https://www.cinemark.com.co/teatros/soledad",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.cinemark.com.co/teatros/soledad",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Restaurante y Cafetería Café Lunch",
+    "destination_slug": "malambo",
+    "category_code": "alimentacion",
+    "source_url": "https://www.bancamia.com.co/wp-content/uploads/2026/01/PLANTILLA-PUNTOS-SUPERGIROS-Dic.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.bancamia.com.co/wp-content/uploads/2026/01/PLANTILLA-PUNTOS-SUPERGIROS-Dic.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Panadería y Refresquería Mundo Feliz",
+    "destination_slug": "galapa",
+    "category_code": "alimentacion",
+    "source_url": "https://cdn.modyo.cloud/uploads/d7f65169-675f-4a67-98b5-8564b26ea0c2/original/Puntos_de_Recaudo_MAYO_2026_-_Puntos_de_recaudo.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://cdn.modyo.cloud/uploads/d7f65169-675f-4a67-98b5-8564b26ea0c2/original/Puntos_de_Recaudo_MAYO_2026_-_Puntos_de_recaudo.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Tienda La Principal — Calle 13",
+    "destination_slug": "galapa",
+    "category_code": "comercio",
+    "source_url": "https://cdn.modyo.cloud/uploads/d7f65169-675f-4a67-98b5-8564b26ea0c2/original/Puntos_de_Recaudo_MAYO_2026_-_Puntos_de_recaudo.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://cdn.modyo.cloud/uploads/d7f65169-675f-4a67-98b5-8564b26ea0c2/original/Puntos_de_Recaudo_MAYO_2026_-_Puntos_de_recaudo.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Transportes Estrella Medellín — TEMSA",
+    "destination_slug": "la-estrella",
+    "category_code": "transporte",
+    "source_url": "https://temsa.com.co/rutas/1815-estrella-sabaneta/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "status": "source_unavailable",
+    "error": "HTTP Error 500: Internal Server Error"
+  },
+  {
+    "business_name": "Cootranscota",
+    "destination_slug": "cota",
+    "category_code": "transporte",
+    "source_url": "https://www.cootranscota.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "status": "source_unavailable",
+    "error": "<urlopen error [Errno 61] Connection refused>"
+  },
+  {
+    "business_name": "Royal Films — Único Yumbo",
+    "destination_slug": "yumbo",
+    "category_code": "cultura",
+    "source_url": "https://unico.com.co/tiendas/royal-films-yumbo/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://unico.com.co/tiendas/royal-films-yumbo/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Royal Films — Casa Blanca",
+    "destination_slug": "madrid",
+    "category_code": "cultura",
+    "source_url": "https://www.casablancacentrocomercial.com/portfolio/cinema-royal-films-local-94/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.casablancacentrocomercial.com/portfolio/cinema-royal-films-local-94/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Royal Films — Ecoplaza",
+    "destination_slug": "mosquera",
+    "category_code": "cultura",
+    "source_url": "https://cms.colsubsidio.com/sites/default/files/Documentos/colsubsidio/2026/terminos-y-condiciones-jueves-de-cine-royal-films.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://cms.colsubsidio.com/sites/default/files/Documentos/colsubsidio/2026/terminos-y-condiciones-jueves-de-cine-royal-films.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Droguería Insercoop San Cayetano",
+    "destination_slug": "san-cayetano",
+    "category_code": "salud",
+    "source_url": "https://www.insercoop.com.co/estados_financieros/2024/certificado_de_existencia_y_representaci%C3%B3n_legal.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.insercoop.com.co/estados_financieros/2024/certificado_de_existencia_y_representaci%C3%B3n_legal.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Variedades Maraya JJJ",
+    "destination_slug": "san-cayetano",
+    "category_code": "comercio",
+    "source_url": "https://cdn.modyo.cloud/uploads/8098da54-678d-4444-ba7c-1945478b54d0/original/Puntos_de_Recaudo_JUNIO_2025_-_Puntos_de_recaudo.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://cdn.modyo.cloud/uploads/8098da54-678d-4444-ba7c-1945478b54d0/original/Puntos_de_Recaudo_JUNIO_2025_-_Puntos_de_recaudo.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Multipagos Haro",
+    "destination_slug": "los-patios",
+    "category_code": "servicios",
+    "source_url": "https://cdn.modyo.cloud/uploads/8098da54-678d-4444-ba7c-1945478b54d0/original/Puntos_de_Recaudo_JUNIO_2025_-_Puntos_de_recaudo.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://cdn.modyo.cloud/uploads/8098da54-678d-4444-ba7c-1945478b54d0/original/Puntos_de_Recaudo_JUNIO_2025_-_Puntos_de_recaudo.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Las Olas Malambo",
+    "destination_slug": "malambo",
+    "category_code": "hospedaje",
+    "source_url": "https://cotelcoatlantico.org/images/pdf/directorio_arte_2025_WEB_FORMATO_250704_135839.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "status": "source_unavailable",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "business_name": "Martín & Espino Café",
+    "destination_slug": "tenjo",
+    "category_code": "alimentacion",
+    "source_url": "https://visitatenjo.com/que-hacer/donde-comer-en-tenjo/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://visitatenjo.com/que-hacer/donde-comer-en-tenjo/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Factory Green",
+    "destination_slug": "cota",
+    "category_code": "hospedaje",
+    "source_url": "https://www.hotelfactorygreen.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [
+      {
+        "name": "Hotel Factory Green Bogotá Occidente Calle 80",
+        "latitude": 4.74736,
+        "longitude": -74.1442,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Autopista Medellín, Km 3.5 Vía Siberia Costado Sur Siberia-Cota, Área Metropolitana de Bogotá, Bogotá, Cota, Cundinamarca, Colombia",
+          "addressLocality": "Bogotá",
+          "addressRegion": "Cundinamarca",
+          "postalCode": "250017",
+          "addressCountry": "CO"
+        },
+        "schema_type": "Hotel",
+        "status": "candidate_requires_business_and_municipality_match"
+      }
+    ],
+    "resolved_url": "https://www.hotelfactorygreen.com/",
+    "http_status": 200,
+    "status": "coordinates_found"
+  },
+  {
+    "business_name": "Ibis Budget Itagüí",
+    "destination_slug": "itagui",
+    "category_code": "hospedaje",
+    "source_url": "https://www.itagui.gov.co/micrositios/micrositio/Itag-turstica",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.itagui.gov.co/micrositios/micrositio/Itag-turstica",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Central Plaza",
+    "destination_slug": "itagui",
+    "category_code": "hospedaje",
+    "source_url": "https://www.itagui.gov.co/micrositios/micrositio/Itag-turstica",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.itagui.gov.co/micrositios/micrositio/Itag-turstica",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Sixtina Plaza Hotel",
+    "destination_slug": "itagui",
+    "category_code": "hospedaje",
+    "source_url": "https://www.itagui.gov.co/micrositios/micrositio/Itag-turstica",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.itagui.gov.co/micrositios/micrositio/Itag-turstica",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Jacinto Plaza",
+    "destination_slug": "yumbo",
+    "category_code": "hospedaje",
+    "source_url": "https://www.yumbo.gov.co/publicaciones/77/directorio-turistico/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.yumbo.gov.co/publicaciones/77/directorio-turistico/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "El Rancho Yumbeño",
+    "destination_slug": "yumbo",
+    "category_code": "alimentacion",
+    "source_url": "https://www.yumbo.gov.co/publicaciones/77/directorio-turistico/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.yumbo.gov.co/publicaciones/77/directorio-turistico/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Hotel Heliconias",
+    "destination_slug": "candelaria",
+    "category_code": "hospedaje",
+    "source_url": "https://vallepatin.org.co/wp-content/uploads/2025/03/CONVOCATORIA-2DA-PARADA-XXII-RANKING-DEPARTAMENTAL-CANDELARIA-ABRIL-2025.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://vallepatin.org.co/wp-content/uploads/2025/03/CONVOCATORIA-2DA-PARADA-XXII-RANKING-DEPARTAMENTAL-CANDELARIA-ABRIL-2025.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "La Esquina de la Chuleta",
+    "destination_slug": "candelaria",
+    "category_code": "alimentacion",
+    "source_url": "https://vallepatin.org.co/wp-content/uploads/2025/03/CONVOCATORIA-2DA-PARADA-XXII-RANKING-DEPARTAMENTAL-CANDELARIA-ABRIL-2025.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://vallepatin.org.co/wp-content/uploads/2025/03/CONVOCATORIA-2DA-PARADA-XXII-RANKING-DEPARTAMENTAL-CANDELARIA-ABRIL-2025.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Royal Films — Unicentro Cúcuta",
+    "destination_slug": "cucuta",
+    "category_code": "cultura",
+    "source_url": "https://unicentrocucuta.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://unicentrocucuta.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Cinemark — Llanogrande Palmira",
+    "destination_slug": "palmira",
+    "category_code": "cultura",
+    "source_url": "https://www.cinemark.com.co/teatros/palmira",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.cinemark.com.co/teatros/palmira",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Cinemark — Unicentro Palmira",
+    "destination_slug": "palmira",
+    "category_code": "cultura",
+    "source_url": "https://www.cinemark.com.co/teatros/palmira",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.cinemark.com.co/teatros/palmira",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Unicentro Palmira",
+    "destination_slug": "palmira",
+    "category_code": "comercio",
+    "source_url": "https://www.unicentropalmira.com/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.unicentropalmira.com/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "María José Parrilla — Facatativá",
+    "destination_slug": "facatativa",
+    "category_code": "alimentacion",
+    "source_url": "https://www.mariajoseparrilla.com/restaurantes/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.mariajoseparrilla.com/restaurantes/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "María José Parrilla — Madrid",
+    "destination_slug": "madrid",
+    "category_code": "alimentacion",
+    "source_url": "https://www.mariajoseparrilla.com/restaurantes/",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.mariajoseparrilla.com/restaurantes/",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Droguería Insercoop Puerto Santander",
+    "destination_slug": "puerto-santander",
+    "category_code": "salud",
+    "source_url": "https://www.insercoop.com.co/estados_financieros/2024/certificado_de_existencia_y_representaci%C3%B3n_legal.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.insercoop.com.co/estados_financieros/2024/certificado_de_existencia_y_representaci%C3%B3n_legal.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Droguería Insercoop Los Patios",
+    "destination_slug": "los-patios",
+    "category_code": "salud",
+    "source_url": "https://www.insercoop.com.co/estados_financieros/2024/certificado_de_existencia_y_representaci%C3%B3n_legal.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "resolved_url": "https://www.insercoop.com.co/estados_financieros/2024/certificado_de_existencia_y_representaci%C3%B3n_legal.pdf",
+    "http_status": 200,
+    "status": "no_structured_coordinates"
+  },
+  {
+    "business_name": "Punto de Pago — Natumarket La Paz",
+    "destination_slug": "la-paz",
+    "category_code": "servicios",
+    "source_url": "https://powwi.co/wp-content/uploads/2025/02/Cesar.pdf",
+    "checked_at": "2026-11-04",
+    "coordinates_candidates": [],
+    "status": "source_unavailable",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

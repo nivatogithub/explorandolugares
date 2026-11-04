@@ -1,0 +1,22 @@
+Investigación de negocios de 38 municipios — 2026-11-04
+
+Meta solicitada: 1.300–1.500 negocios reales geolocalizados y cobertura amplia de las diez categorías del portal.
+
+Fuente masiva: https://download.geofabrik.de/south-america/colombia-261103.osm.pbf
+MD5 oficial: 72f921a888a4697b13ad2790c3cecd44
+El extracto nacional se conserva temporalmente fuera de Git para evitar versionar 318 MB; el resultado seleccionado y su procedencia sí se versionan.
+Atribución: © OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright
+
+En un entorno Python aislado, instalar requirements.txt y ejecutar:
+python extract.py /ruta/colombia-261103.osm.pbf
+python clean.py
+python select.py
+python report.py
+
+extract.py selecciona objetos cartográficos nombrados, clasifica por etiquetas y asigna el municipio mediante su polígono administrativo. Para polígonos comerciales usa un punto interior, que no implica acceso exacto. Los municipios homónimos se desambiguan con los puntos documentados del lote. Duplicados de igual nombre a menos de 35 m quedan registrados aparte. No se rellenan coordenadas con centros municipales.
+
+collect-official.py consulta las fuentes web previamente documentadas de los 119 negocios originales; conserva respuestas estructuradas y errores, sin copiar páginas completas. Los puntos de tipo City no se consideran coordenadas de negocios.
+
+Los candidatos, la selección equilibrada y la cola de validación no se importan ni se publican automáticamente. Se conserva separado el inventario original de 112 negocios para reconciliar identidades antes de cualquier importación. Tener una coordenada cartográfica no acredita operación actual, titularidad ni aprobación humana.
+
+El directorio gratuito no necesita descripción, portada ni datos promocionales. No crear esos campos artificialmente para satisfacer un conteo.

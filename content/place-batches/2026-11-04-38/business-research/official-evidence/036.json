@@ -1,0 +1,27 @@
+{
+  "business_name": "La Cocina de Criss",
+  "destination_slug": "madrid",
+  "category_code": "alimentacion",
+  "source_url": "https://lacocinadecriss1.wixsite.com/madrid",
+  "checked_at": "2026-11-04",
+  "coordinates_candidates": [
+    {
+      "name": "La Cocina de Criss",
+      "latitude": 4.730281300000001,
+      "longitude": -74.25947959999999,
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CO",
+        "addressLocality": "Madrid",
+        "addressRegion": "CUN",
+        "postalCode": "250030",
+        "streetAddress": "1-05 Calle 7"
+      },
+      "schema_type": "Restaurant",
+      "status": "candidate_requires_business_and_municipality_match"
+    }
+  ],
+  "resolved_url": "https://lacocinadecriss1.wixsite.com/madrid",
+  "http_status": 200,
+  "status": "coordinates_found"
+}

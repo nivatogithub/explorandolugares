@@ -1,0 +1,39 @@
+{
+  "requested_at": "2026-11-04",
+  "target_min": 1300,
+  "target_max": 1500,
+  "scope": "38 approved municipalities, real businesses with exact-source coordinates and broad portal category coverage",
+  "categories": [
+    "hospedaje",
+    "alimentacion",
+    "vida-nocturna",
+    "licores",
+    "comercio",
+    "salud",
+    "cultura",
+    "experiencias",
+    "transporte",
+    "servicios"
+  ],
+  "rules": [
+    "Do not invent businesses, addresses, contacts, coordinates or operation status.",
+    "Do not count candidates as publication-ready.",
+    "Use exact municipal boundaries and preserve OSM provenance and attribution.",
+    "Deduplicate POI node/footprint representations; retain branches at different locations.",
+    "Preserve the initial 112 documented businesses; new research stays separate until reviewed.",
+    "Free listings do not require promotional descriptions.",
+    "No production deployment or outreach authorized by this research request."
+  ],
+  "sources": [
+    {
+      "url": "https://download.geofabrik.de/south-america/colombia-261103.osm.pbf",
+      "use": "bulk cartographic source, municipal boundaries and named businesses",
+      "license": "ODbL 1.0",
+      "attribution": "© OpenStreetMap contributors"
+    },
+    {
+      "path": "../business-ledger.json",
+      "use": "original business websites for cross-check"
+    }
+  ]
+}

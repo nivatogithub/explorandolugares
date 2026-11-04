@@ -1,0 +1,569 @@
+{
+  "target_min": 1300,
+  "target_max": 1500,
+  "located_candidates": 6120,
+  "publication_ready": 0,
+  "municipalities": [
+    {
+      "destination_slug": "agustin-codazzi",
+      "name": "Agustín Codazzi",
+      "department": "Cesar",
+      "boundary_confirmed": true,
+      "located_candidates": 2,
+      "categories": {
+        "alimentacion": 1,
+        "hospedaje": 1
+      }
+    },
+    {
+      "destination_slug": "arjona",
+      "name": "Arjona",
+      "department": "Bolívar",
+      "boundary_confirmed": true,
+      "located_candidates": 1,
+      "categories": {
+        "hospedaje": 1
+      }
+    },
+    {
+      "destination_slug": "barbosa",
+      "name": "Barbosa",
+      "department": "Antioquia",
+      "boundary_confirmed": true,
+      "located_candidates": 25,
+      "categories": {
+        "alimentacion": 8,
+        "comercio": 8,
+        "cultura": 1,
+        "hospedaje": 2,
+        "salud": 3,
+        "servicios": 3
+      }
+    },
+    {
+      "destination_slug": "bello",
+      "name": "Bello",
+      "department": "Antioquia",
+      "boundary_confirmed": true,
+      "located_candidates": 143,
+      "categories": {
+        "alimentacion": 49,
+        "comercio": 53,
+        "cultura": 1,
+        "hospedaje": 5,
+        "licores": 1,
+        "salud": 24,
+        "servicios": 7,
+        "vida-nocturna": 3
+      }
+    },
+    {
+      "destination_slug": "caldas",
+      "name": "Caldas",
+      "department": "Antioquia",
+      "boundary_confirmed": true,
+      "located_candidates": 387,
+      "categories": {
+        "alimentacion": 109,
+        "comercio": 174,
+        "cultura": 3,
+        "hospedaje": 9,
+        "licores": 5,
+        "salud": 32,
+        "servicios": 33,
+        "vida-nocturna": 22
+      }
+    },
+    {
+      "destination_slug": "candelaria",
+      "name": "Candelaria",
+      "department": "Valle del Cauca",
+      "boundary_confirmed": true,
+      "located_candidates": 41,
+      "categories": {
+        "alimentacion": 19,
+        "comercio": 14,
+        "cultura": 1,
+        "salud": 3,
+        "servicios": 1,
+        "vida-nocturna": 3
+      }
+    },
+    {
+      "destination_slug": "clemencia",
+      "name": "Clemencia",
+      "department": "Bolívar",
+      "boundary_confirmed": true,
+      "located_candidates": 1,
+      "categories": {
+        "comercio": 1
+      }
+    },
+    {
+      "destination_slug": "copacabana",
+      "name": "Copacabana",
+      "department": "Antioquia",
+      "boundary_confirmed": true,
+      "located_candidates": 56,
+      "categories": {
+        "alimentacion": 22,
+        "comercio": 12,
+        "cultura": 3,
+        "hospedaje": 1,
+        "salud": 8,
+        "servicios": 6,
+        "vida-nocturna": 4
+      }
+    },
+    {
+      "destination_slug": "cota",
+      "name": "Cota",
+      "department": "Cundinamarca",
+      "boundary_confirmed": true,
+      "located_candidates": 104,
+      "categories": {
+        "alimentacion": 37,
+        "comercio": 45,
+        "hospedaje": 2,
+        "licores": 1,
+        "salud": 5,
+        "servicios": 13,
+        "vida-nocturna": 1
+      }
+    },
+    {
+      "destination_slug": "cucuta",
+      "name": "Cúcuta",
+      "department": "Norte de Santander",
+      "boundary_confirmed": true,
+      "located_candidates": 2769,
+      "categories": {
+        "alimentacion": 597,
+        "comercio": 1212,
+        "cultura": 14,
+        "experiencias": 7,
+        "hospedaje": 138,
+        "licores": 48,
+        "salud": 276,
+        "servicios": 380,
+        "transporte": 6,
+        "vida-nocturna": 91
+      }
+    },
+    {
+      "destination_slug": "dagua",
+      "name": "Dagua",
+      "department": "Valle del Cauca",
+      "boundary_confirmed": true,
+      "located_candidates": 19,
+      "categories": {
+        "alimentacion": 10,
+        "comercio": 2,
+        "hospedaje": 6,
+        "licores": 1
+      }
+    },
+    {
+      "destination_slug": "el-zulia",
+      "name": "El Zulia",
+      "department": "Norte de Santander",
+      "boundary_confirmed": true,
+      "located_candidates": 18,
+      "categories": {
+        "alimentacion": 6,
+        "comercio": 8,
+        "hospedaje": 1,
+        "servicios": 2,
+        "vida-nocturna": 1
+      }
+    },
+    {
+      "destination_slug": "envigado",
+      "name": "Envigado",
+      "department": "Antioquia",
+      "boundary_confirmed": true,
+      "located_candidates": 272,
+      "categories": {
+        "alimentacion": 107,
+        "comercio": 106,
+        "cultura": 2,
+        "experiencias": 1,
+        "hospedaje": 11,
+        "licores": 4,
+        "salud": 16,
+        "servicios": 20,
+        "vida-nocturna": 5
+      }
+    },
+    {
+      "destination_slug": "facatativa",
+      "name": "Facatativá",
+      "department": "Cundinamarca",
+      "boundary_confirmed": true,
+      "located_candidates": 80,
+      "categories": {
+        "alimentacion": 21,
+        "comercio": 37,
+        "cultura": 1,
+        "hospedaje": 2,
+        "licores": 1,
+        "salud": 5,
+        "servicios": 13
+      }
+    },
+    {
+      "destination_slug": "funza",
+      "name": "Funza",
+      "department": "Cundinamarca",
+      "boundary_confirmed": true,
+      "located_candidates": 256,
+      "categories": {
+        "alimentacion": 64,
+        "comercio": 128,
+        "cultura": 1,
+        "hospedaje": 8,
+        "licores": 3,
+        "salud": 24,
+        "servicios": 23,
+        "vida-nocturna": 5
+      }
+    },
+    {
+      "destination_slug": "gachancipa",
+      "name": "Gachancipá",
+      "department": "Cundinamarca",
+      "boundary_confirmed": true,
+      "located_candidates": 10,
+      "categories": {
+        "alimentacion": 1,
+        "comercio": 4,
+        "hospedaje": 1,
+        "licores": 1,
+        "salud": 1,
+        "vida-nocturna": 2
+      }
+    },
+    {
+      "destination_slug": "galapa",
+      "name": "Galapa",
+      "department": "Atlántico",
+      "boundary_confirmed": true,
+      "located_candidates": 6,
+      "categories": {
+        "alimentacion": 2,
+        "comercio": 3,
+        "hospedaje": 1
+      }
+    },
+    {
+      "destination_slug": "girardota",
+      "name": "Girardota",
+      "department": "Antioquia",
+      "boundary_confirmed": true,
+      "located_candidates": 20,
+      "categories": {
+        "alimentacion": 4,
+        "comercio": 8,
+        "hospedaje": 5,
+        "salud": 2,
+        "servicios": 1
+      }
+    },
+    {
+      "destination_slug": "itagui",
+      "name": "Itagüí",
+      "department": "Antioquia",
+      "boundary_confirmed": true,
+      "located_candidates": 191,
+      "categories": {
+        "alimentacion": 33,
+        "comercio": 64,
+        "cultura": 4,
+        "hospedaje": 16,
+        "salud": 37,
+        "servicios": 27,
+        "transporte": 1,
+        "vida-nocturna": 9
+      }
+    },
+    {
+      "destination_slug": "la-estrella",
+      "name": "La Estrella",
+      "department": "Antioquia",
+      "boundary_confirmed": true,
+      "located_candidates": 48,
+      "categories": {
+        "alimentacion": 18,
+        "comercio": 15,
+        "cultura": 1,
+        "hospedaje": 3,
+        "salud": 6,
+        "servicios": 4,
+        "vida-nocturna": 1
+      }
+    },
+    {
+      "destination_slug": "la-paz",
+      "name": "La Paz",
+      "department": "Cesar",
+      "boundary_confirmed": true,
+      "located_candidates": 2,
+      "categories": {
+        "alimentacion": 2
+      }
+    },
+    {
+      "destination_slug": "la-virginia",
+      "name": "La Virginia",
+      "department": "Risaralda",
+      "boundary_confirmed": true,
+      "located_candidates": 33,
+      "categories": {
+        "alimentacion": 3,
+        "comercio": 4,
+        "cultura": 1,
+        "hospedaje": 18,
+        "salud": 2,
+        "servicios": 5
+      }
+    },
+    {
+      "destination_slug": "los-patios",
+      "name": "Los Patios",
+      "department": "Norte de Santander",
+      "boundary_confirmed": true,
+      "located_candidates": 57,
+      "categories": {
+        "alimentacion": 14,
+        "comercio": 28,
+        "licores": 1,
+        "salud": 4,
+        "servicios": 7,
+        "transporte": 1,
+        "vida-nocturna": 2
+      }
+    },
+    {
+      "destination_slug": "madrid",
+      "name": "Madrid",
+      "department": "Cundinamarca",
+      "boundary_confirmed": true,
+      "located_candidates": 57,
+      "categories": {
+        "alimentacion": 10,
+        "comercio": 36,
+        "hospedaje": 1,
+        "salud": 1,
+        "servicios": 7,
+        "vida-nocturna": 2
+      }
+    },
+    {
+      "destination_slug": "malambo",
+      "name": "Malambo",
+      "department": "Atlántico",
+      "boundary_confirmed": true,
+      "located_candidates": 27,
+      "categories": {
+        "alimentacion": 4,
+        "comercio": 17,
+        "hospedaje": 4,
+        "salud": 2
+      }
+    },
+    {
+      "destination_slug": "manaure",
+      "name": "Manaure Balcón del Cesar",
+      "department": "Cesar",
+      "boundary_confirmed": true,
+      "located_candidates": 92,
+      "categories": {
+        "alimentacion": 14,
+        "comercio": 44,
+        "cultura": 1,
+        "hospedaje": 8,
+        "licores": 2,
+        "salud": 8,
+        "servicios": 12,
+        "transporte": 1,
+        "vida-nocturna": 2
+      }
+    },
+    {
+      "destination_slug": "mosquera",
+      "name": "Mosquera",
+      "department": "Cundinamarca",
+      "boundary_confirmed": true,
+      "located_candidates": 303,
+      "categories": {
+        "alimentacion": 117,
+        "comercio": 114,
+        "cultura": 3,
+        "hospedaje": 2,
+        "licores": 4,
+        "salud": 26,
+        "servicios": 36,
+        "vida-nocturna": 1
+      }
+    },
+    {
+      "destination_slug": "palmira",
+      "name": "Palmira",
+      "department": "Valle del Cauca",
+      "boundary_confirmed": true,
+      "located_candidates": 246,
+      "categories": {
+        "alimentacion": 76,
+        "comercio": 81,
+        "cultura": 6,
+        "experiencias": 2,
+        "hospedaje": 10,
+        "licores": 2,
+        "salud": 31,
+        "servicios": 21,
+        "vida-nocturna": 17
+      }
+    },
+    {
+      "destination_slug": "pueblo-viejo",
+      "name": "Pueblo Viejo",
+      "department": "Magdalena",
+      "boundary_confirmed": true,
+      "located_candidates": 4,
+      "categories": {
+        "alimentacion": 3,
+        "salud": 1
+      }
+    },
+    {
+      "destination_slug": "puerto-santander",
+      "name": "Puerto Santander",
+      "department": "Norte de Santander",
+      "boundary_confirmed": true,
+      "located_candidates": 11,
+      "categories": {
+        "alimentacion": 4,
+        "hospedaje": 3,
+        "salud": 2,
+        "servicios": 1,
+        "transporte": 1
+      }
+    },
+    {
+      "destination_slug": "sabaneta",
+      "name": "Sabaneta",
+      "department": "Antioquia",
+      "boundary_confirmed": true,
+      "located_candidates": 209,
+      "categories": {
+        "alimentacion": 54,
+        "comercio": 84,
+        "cultura": 1,
+        "hospedaje": 9,
+        "licores": 2,
+        "salud": 23,
+        "servicios": 31,
+        "transporte": 2,
+        "vida-nocturna": 3
+      }
+    },
+    {
+      "destination_slug": "san-cayetano",
+      "name": "San Cayetano",
+      "department": "Norte de Santander",
+      "boundary_confirmed": true,
+      "located_candidates": 1,
+      "categories": {
+        "alimentacion": 1
+      }
+    },
+    {
+      "destination_slug": "san-diego",
+      "name": "San Diego",
+      "department": "Cesar",
+      "boundary_confirmed": true,
+      "located_candidates": 3,
+      "categories": {
+        "alimentacion": 1,
+        "hospedaje": 1,
+        "servicios": 1
+      }
+    },
+    {
+      "destination_slug": "santa-rosa-de-lima",
+      "name": "Santa Rosa de Lima",
+      "department": "Bolívar",
+      "boundary_confirmed": true,
+      "located_candidates": 3,
+      "categories": {
+        "comercio": 3
+      }
+    },
+    {
+      "destination_slug": "sibate",
+      "name": "Sibaté",
+      "department": "Cundinamarca",
+      "boundary_confirmed": true,
+      "located_candidates": 34,
+      "categories": {
+        "alimentacion": 14,
+        "comercio": 11,
+        "cultura": 1,
+        "licores": 1,
+        "salud": 3,
+        "servicios": 4
+      }
+    },
+    {
+      "destination_slug": "soledad",
+      "name": "Soledad",
+      "department": "Atlántico",
+      "boundary_confirmed": true,
+      "located_candidates": 355,
+      "categories": {
+        "alimentacion": 43,
+        "comercio": 255,
+        "cultura": 1,
+        "experiencias": 1,
+        "hospedaje": 9,
+        "licores": 2,
+        "salud": 16,
+        "servicios": 15,
+        "transporte": 3,
+        "vida-nocturna": 10
+      }
+    },
+    {
+      "destination_slug": "tenjo",
+      "name": "Tenjo",
+      "department": "Cundinamarca",
+      "boundary_confirmed": true,
+      "located_candidates": 25,
+      "categories": {
+        "alimentacion": 12,
+        "comercio": 6,
+        "experiencias": 1,
+        "salud": 1,
+        "servicios": 5
+      }
+    },
+    {
+      "destination_slug": "yumbo",
+      "name": "Yumbo",
+      "department": "Valle del Cauca",
+      "boundary_confirmed": true,
+      "located_candidates": 209,
+      "categories": {
+        "alimentacion": 59,
+        "comercio": 68,
+        "cultura": 1,
+        "hospedaje": 17,
+        "licores": 12,
+        "salud": 19,
+        "servicios": 18,
+        "vida-nocturna": 15
+      }
+    }
+  ],
+  "excluded": 168
+}

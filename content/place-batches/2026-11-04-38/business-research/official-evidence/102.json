@@ -1,0 +1,27 @@
+{
+  "business_name": "Hotel Factory Green",
+  "destination_slug": "cota",
+  "category_code": "hospedaje",
+  "source_url": "https://www.hotelfactorygreen.com/",
+  "checked_at": "2026-11-04",
+  "coordinates_candidates": [
+    {
+      "name": "Hotel Factory Green Bogotá Occidente Calle 80",
+      "latitude": 4.74736,
+      "longitude": -74.1442,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Autopista Medellín, Km 3.5 Vía Siberia Costado Sur Siberia-Cota, Área Metropolitana de Bogotá, Bogotá, Cota, Cundinamarca, Colombia",
+        "addressLocality": "Bogotá",
+        "addressRegion": "Cundinamarca",
+        "postalCode": "250017",
+        "addressCountry": "CO"
+      },
+      "schema_type": "Hotel",
+      "status": "candidate_requires_business_and_municipality_match"
+    }
+  ],
+  "resolved_url": "https://www.hotelfactorygreen.com/",
+  "http_status": 200,
+  "status": "coordinates_found"
+}

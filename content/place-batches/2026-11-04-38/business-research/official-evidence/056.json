@@ -1,0 +1,27 @@
+{
+  "business_name": "Pacho Parrilla",
+  "destination_slug": "funza",
+  "category_code": "alimentacion",
+  "source_url": "https://palalea9228.wixsite.com/pachoparrillabarcafe",
+  "checked_at": "2026-11-04",
+  "coordinates_candidates": [
+    {
+      "name": "Pacho Parrilla Funza - Restaurante Bar Café",
+      "latitude": 4.7153858,
+      "longitude": -74.2124678,
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CO",
+        "addressLocality": "Funza",
+        "addressRegion": "Cundinamarca",
+        "postalCode": "250020",
+        "streetAddress": "1247 Calle 13"
+      },
+      "schema_type": "Restaurant",
+      "status": "candidate_requires_business_and_municipality_match"
+    }
+  ],
+  "resolved_url": "https://palalea9228.wixsite.com/pachoparrillabarcafe",
+  "http_status": 200,
+  "status": "coordinates_found"
+}

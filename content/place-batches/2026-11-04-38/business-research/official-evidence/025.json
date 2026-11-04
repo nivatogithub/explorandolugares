@@ -1,0 +1,27 @@
+{
+  "business_name": "Hotel Boutique Campanario del Río",
+  "destination_slug": "soledad",
+  "category_code": "hospedaje",
+  "source_url": "https://campanariodelrio.com/",
+  "checked_at": "2026-11-04",
+  "coordinates_candidates": [
+    {
+      "name": "Hotel Boutique Campanario del Río",
+      "latitude": 10.916407,
+      "longitude": -74.7622619,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 13 #20-42",
+        "addressLocality": "Soledad",
+        "addressRegion": "Atlántico",
+        "postalCode": "083003",
+        "addressCountry": "CO"
+      },
+      "schema_type": "Hotel",
+      "status": "candidate_requires_business_and_municipality_match"
+    }
+  ],
+  "resolved_url": "https://campanariodelrio.com/",
+  "http_status": 200,
+  "status": "coordinates_found"
+}
