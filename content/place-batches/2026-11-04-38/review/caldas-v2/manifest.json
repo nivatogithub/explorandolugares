@@ -1,0 +1,32 @@
+{
+  "destination": "caldas-antioquia",
+  "asset": "portada",
+  "status": "pendiente_aprobacion_usuario",
+  "reference": "Foto aportada por el usuario; fecha, autor y licencia no confirmados",
+  "fact_sources": [
+    "https://www.puebliandoporantioquia.com.co/subregion-valle-de-aburra/municipio-caldas/",
+    "https://caldashoy.com/este-viernes-la-musica-y-la-parranda-se-toman-caldas/"
+  ],
+  "date": "2026-11-04",
+  "tool": "built-in image_gen",
+  "prompt_file": "prompt.txt",
+  "files": {
+    "referencia-usuario.png": {
+      "sha256": "3ade2136356de2c40d476466a08db24f296a5b985c8c77a5a9d7486d3e8dde0d",
+      "bytes": 516513
+    },
+    "portada-actual.webp": {
+      "sha256": "31fcb5d3e7db1cc028b7542760865ce984b7e07d4bd9a079be3108aac761af39",
+      "bytes": 236930
+    },
+    "propuesta-master.png": {
+      "sha256": "431a3f5cb811a074804340059a4e6d4b99086616cc67803f9ba4cb21be40a1c0",
+      "bytes": 3639912
+    },
+    "propuesta-1200.webp": {
+      "sha256": "e95270c1efc5f6fa63ccaf2f865e622947db25062dbd527c06cb421683e4d27e",
+      "bytes": 278526
+    }
+  },
+  "deployed": false
+}
