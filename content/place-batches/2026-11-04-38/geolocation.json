@@ -1392,7 +1392,7 @@
       "https://es.wikiloc.com/rutas-carrera-por-montana/cerro-el-majuy-cota-88967015",
       "https://es.wikiloc.com/rutas-senderismo/serrania-del-majuy-cota-76399724"
     ],
-    "note": "Cumbre geográfica documentada en OSM. No identifica todavía la roca exacta de la fotografía ni el inicio de la caminata. Pin de Google en Cra. 5 urbana descartado para la cumbre. Ruta aportada por usuario: hito Cima 76399736 está en 4.8154273,-74.119156 y muestra antenas/cerramiento, no la roca aprobada. No sustituir coordenada de la roca por ese punto.",
+    "note": "Punto rocoso identificado en la ruta aportada por el usuario: 4.8048233,-74.1195667, waypoint 76399729. No es la cima con antenas. La foto muestra afloramiento rocoso y valle; falta confirmar que corresponda a la roca aislada de la ilustración aprobada. No se cambia el punto definitivo sin resolver esa correspondencia.",
     "reference_source_url": "https://es.wikiloc.com/rutas-carrera-por-montana/cerro-el-majuy-cota-88967015",
     "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-17-7.webp",
     "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
@@ -1400,7 +1400,15 @@
     "manual_review_required": true,
     "ready_for_import": false,
     "identity_cross_checked": false,
-    "review_image": "../../portadas/revision-40/atractivos-lote-4/generadas/QC-17-7.webp"
+    "review_image": "../../portadas/revision-40/atractivos-lote-4/generadas/QC-17-7.webp",
+    "candidate_from_user_route": {
+      "latitude": 4.8048233,
+      "longitude": -74.1195667,
+      "waypoint": "76399729",
+      "source_url": "https://es.wikiloc.com/rutas-senderismo/serrania-del-majuy-cota-76399724#wp-76399729",
+      "evidence": "Foto abierta: roca aflorante en primer plano, bloque al fondo a izquierda y valle con invernaderos. Coordenadas del enlace visible Busca rutas que pasen por aquí. No equivale al hito Cima con antenas.",
+      "image_match": "No se pudo establecer correspondencia inequívoca con la roca aislada de la ilustración aprobada."
+    }
   },
   {
     "id": "QC-18-2",
