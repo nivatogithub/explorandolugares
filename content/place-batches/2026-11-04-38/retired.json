@@ -97,6 +97,74 @@
       "user_evidence_url": "https://semanariolacalle.com/mural-mas-grande-del-caribe-es-en-honor-a-jorge-onate/",
       "publication_hold": true,
       "image_review_status": "ubicacion_exacta_pendiente"
+    },
+    {
+      "id": "QC-16-2",
+      "municipality": "dagua",
+      "name": "Bosque seco de Atuncela",
+      "previous_geo": {
+        "status": "pendiente",
+        "latitude": null,
+        "longitude": null,
+        "precision": null,
+        "source_url": null,
+        "address": null,
+        "entrance_verified": false
+      },
+      "status": "ubicacion_general_documentada_no_acceso",
+      "entrance_verified": false,
+      "latitude": 3.7464111,
+      "longitude": -76.6874417,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=3.7464111,-76.6874417",
+      "checked_at": "2026-11-04",
+      "precision": "referencia_area_no_entrada",
+      "sources": [
+        "https://www.cvc.gov.co/sites/default/files/2024-06/Documento%20T%C3%A9cnico_Ampliaci%C3%B3n%20DRMI%20Atuncela.pdf"
+      ],
+      "note": "Coordenada geográfica del área protegida publicada por CVC; no es acceso turístico ni punto exacto de la fotografía. No usar la ficha del operador Turisteando como si fuera el bosque.",
+      "reference_source_url": "https://cvc.gov.co/boletin-prensa-179-2023",
+      "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-16-2.webp",
+      "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
+      "review_group": "precision",
+      "manual_review_required": true,
+      "ready_for_import": false,
+      "identity_cross_checked": false,
+      "review_image": "../../portadas/revision-40/atractivos-lote-4/generadas/QC-16-2.webp",
+      "retirement_reason": "Retirado por usuario: referencia del bosque no identifica acceso/atractivo; playa no confirmada."
+    },
+    {
+      "id": "QC-30-4",
+      "municipality": "pueblo-viejo",
+      "name": "Playa de Tasajera · paisaje pesquero",
+      "previous_geo": null,
+      "status": "ubicacion_general_documentada_no_acceso",
+      "entrance_verified": false,
+      "rejected_candidates": [
+        {
+          "latitude": 11.0068,
+          "longitude": -74.3435,
+          "source_url": "https://onlybeaches.com/colombia/magdalena/tasajera/playa-de-tasajera-tasajera",
+          "reason": "Marcador cae en el mar al contrastar Google Maps; página usa fotografías genéricas Unsplash."
+        }
+      ],
+      "note": "Libro La pesca artesanal marítima del departamento del Magdalena publica punto de Tasajera: 10°58.769 N,74°19.688 O. Maps lo sitúa en franja habitada próxima a la costa; referencia del sector pesquero, no acceso confirmado a playa ni punto de la foto. Coordenada OnlyBeaches descartada por estar en mar abierto.",
+      "latitude": 10.979483333333333,
+      "longitude": -74.32813333333333,
+      "precision": "referencia_sector_pesquero_no_playa_exacta",
+      "checked_at": "2026-11-04",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=10.9794833,-74.3281333",
+      "sources": [
+        "https://api.pageplace.de/preview/DT0400.9789587251128_A26245554/preview-9789587251128_A26245554.pdf"
+      ],
+      "reference_source_url": "https://www.behance.net/gallery/137268461/Tasajera-magdalena/modules/776271187",
+      "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-30-4.webp",
+      "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
+      "review_group": "precision",
+      "manual_review_required": true,
+      "ready_for_import": false,
+      "identity_cross_checked": false,
+      "review_image": "../../portadas/revision-40/atractivos-lote-5/generadas/QC-30-4.webp",
+      "retirement_reason": "Retirado por usuario: referencia del bosque no identifica acceso/atractivo; playa no confirmada."
     }
   ],
   "dev1_applied": false

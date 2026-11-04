@@ -1,6 +1,6 @@
 # Lote de 38 municipios — fuente canónica
 
-Rama: `contenido/lote-38-reproducible-20261104`. Este lote conserva 38 municipios, 77 atractivos y 112 fichas comerciales documentadas. No está aprobado para preprod ni producción.
+Rama: `contenido/lote-38-reproducible-20261104`. Este lote conserva 38 municipios, 75 atractivos y 112 fichas comerciales documentadas. No está aprobado para preprod ni producción.
 
 ## Reconstrucción
 
@@ -13,10 +13,10 @@ python3 content/place-batches/2026-11-04-38/build.py --output /tmp/lote38
 El constructor usa exclusivamente los manifiestos y WebP versionados. Produce ZIP individuales, negocios, inventario con SHA-256 e intención editorial. No depende de la base de dev1 ni de rutas personales. Los ZIP son resultados, no fuentes.
 
 - `places/*/manifest.json`: contrato v2, textos ES/EN/PT-BR, motivos de visita, fotos y coordenadas disponibles. Importación en borrador.
-- `places/*/images`: 115 WebP aprobados (38 portadas y 77 atractivos). No incluye las imágenes de los tres descartados.
+- `places/*/images`: 113 WebP aprobados (38 portadas y 75 atractivos). No incluye las imágenes de los cinco descartados.
 - `places/*/editorial-evidence.json`: procedencia y trazabilidad previa; rutas históricas no son dependencias del constructor. Algunos estados antiguos de aprobación son históricos; no confundirlos con la decisión final del usuario.
-- `geolocation.json`: 73 puntos identificados y cuatro excepciones de precisión. Coordenada de sitio no equivale a entrada. Solo se utiliza una ficha Maps nombrada comprobada como enlace público; enlaces numéricos del expediente son investigación interna.
-- `retired.json`: tres identidades excluidas por instrucción del propietario. Conservar esta evidencia; el constructor bloquea su reintroducción. No contiene archivos gráficos de los retirados.
+- `geolocation.json`: 74 puntos identificados y una excepción de precisión. Coordenada de sitio no equivale a entrada. Solo se utiliza una ficha Maps nombrada comprobada como enlace público; enlaces numéricos del expediente son investigación interna.
+- `retired.json`: cinco identidades excluidas por instrucción del propietario. Conservar esta evidencia; el constructor bloquea su reintroducción. No contiene archivos gráficos de los retirados.
 - `businesses`: 112 fichas documentadas. No significa operación confirmada, negocio reclamado, aliado ni geolocalización corroborada. No inventar canales que faltan.
 - `business-ledger.json`: 119 investigados, incluidos siete pendientes que no entran a los paquetes.
 - `evidence`: recibos editoriales limitados a este lote, sin credenciales, cuentas o métricas. Los IDs numéricos son de dev1; en otros ambientes reconciliar por identidad, nunca reemplazar la base.
@@ -27,10 +27,14 @@ Dev1 conserva 38 municipios. El 4 de noviembre se archivaron `los-patios/qc-33-4
 
 Las nuevas coordenadas, motivos de visita y los nuevos paquetes comerciales están preparados; NO se afirma que estén aplicados a dev1. `evidence/retirements-verification.json` refleja lo realmente persistido. No promover los cuatro puntos dudosos como ubicaciones exactas: San Antonio (Girardota), Atuncela (Dagua), Majuy (Cota), Tasajera (Puebloviejo).
 
-El contrato v2 y los 115 WebP fueron validados con `PlacePackage` del checkout del portal `contenido/lote-30-reproducible-20261104`, commit `76c59d01`. La base de esta rama no contiene todavía ese importador; no se ha copiado código de otro worker. Puede repetirse pasando a `validate.php` la ruta de `backend` que contenga el contrato vigente. La reconstrucción no necesita ese runtime.
+El contrato v2 y los 113 WebP fueron validados con `PlacePackage` del checkout del portal `contenido/lote-30-reproducible-20261104`, commit `76c59d01`. La base de esta rama no contiene todavía ese importador; no se ha copiado código de otro worker. Puede repetirse pasando a `validate.php` la ruta de `backend` que contenga el contrato vigente. La reconstrucción no necesita ese runtime.
 
 La promoción incremental de los 38 a otro ambiente aún requiere integración con el importador/servicios vigentes y ensayo idempotente preservando IDs. Generar ZIP válidos NO demuestra promoción completa. No reimportar creando duplicados y no copiar una base de datos entera.
 
 ## Copias antiguas
 
 `trabajo/expansion-cobertura` y `.local/environments/dev1/editorial-38` fueron áreas de preparación/operación. Son históricas; no se usan para reconstruir. Las evidencias de retiradas se conservan para que no se vuelvan a publicar, no como contenido activo. Ninguna limpieza de histórico debe borrar pruebas o medios sin respaldo remoto verificado.
+
+## Ajuste posterior del propietario — 4 de noviembre
+
+También se retiraron QC-16-2 (Atuncela) y QC-30-4 (Tasajera). Los cinco están archivados en dev1; 15 rutas verificadas. San Antonio QC-06-3 quedó actualizado en dev1 a 6.353044,-75.4259681 con el enlace Maps compartido por el propietario. Majuy es la única excepción pendiente: la cima de la ruta aportada muestra antenas y no confirma la roca de la imagen. Estos datos posteriores prevalecen sobre los recibos históricos anteriores.

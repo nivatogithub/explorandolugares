@@ -32,7 +32,7 @@ def build(out):
    for n,raw in sorted(files.items()):
     i=zipfile.ZipInfo(n,(2026,11,4,0,0,0));i.compress_type=zipfile.ZIP_DEFLATED;i.external_attr=0o100644<<16;z.writestr(i,raw)
   inventory.append({'slug':slug,'file':target.name,'sha256':sha(target.read_bytes()),'assets':{n:sha(raw) for n,raw in files.items()},'attractions':len(d['places'])})
- assert len(inventory)==38 and len(seen)==77
+ assert len(inventory)==38 and len(seen)==75
  businesses=[]
  for p in sorted((ROOT/'businesses').glob('*.json')):
   d=json.loads(p.read_text());assert d['schema_version']=='business-import-v1';businesses.append(d)

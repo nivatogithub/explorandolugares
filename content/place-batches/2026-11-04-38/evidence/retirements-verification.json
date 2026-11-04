@@ -44,6 +44,36 @@
             "route": "\/pt-br\/lugares\/la-paz\/",
             "status": 200,
             "retired_absent": true
+        },
+        {
+            "route": "\/lugares\/dagua\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/en\/lugares\/dagua\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/dagua\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/lugares\/pueblo-viejo\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/en\/lugares\/pueblo-viejo\/",
+            "status": 200,
+            "retired_absent": true
+        },
+        {
+            "route": "\/pt-br\/lugares\/pueblo-viejo\/",
+            "status": 200,
+            "retired_absent": true
         }
     ],
     "places": [
@@ -200,8 +230,8 @@
                 {
                     "id": 1000478,
                     "slug": "qc-06-3",
-                    "latitude": null,
-                    "longitude": null,
+                    "latitude": "6.353044",
+                    "longitude": "-75.425968",
                     "publication_status": "published"
                 }
             ]
@@ -435,6 +465,13 @@
             "publication_status": "published",
             "attractions": [
                 {
+                    "id": 1000501,
+                    "slug": "qc-16-2",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "archived"
+                },
+                {
                     "id": 1000499,
                     "slug": "qc-16-7",
                     "latitude": null,
@@ -444,13 +481,6 @@
                 {
                     "id": 1000500,
                     "slug": "qc-16-6",
-                    "latitude": null,
-                    "longitude": null,
-                    "publication_status": "published"
-                },
-                {
-                    "id": 1000501,
-                    "slug": "qc-16-2",
                     "latitude": null,
                     "longitude": null,
                     "publication_status": "published"
@@ -704,15 +734,15 @@
             "publication_status": "published",
             "attractions": [
                 {
-                    "id": 1000522,
-                    "slug": "qc-30-3",
-                    "latitude": null,
-                    "longitude": null,
-                    "publication_status": "published"
-                },
-                {
                     "id": 1000523,
                     "slug": "qc-30-4",
+                    "latitude": null,
+                    "longitude": null,
+                    "publication_status": "archived"
+                },
+                {
+                    "id": 1000522,
+                    "slug": "qc-30-3",
                     "latitude": null,
                     "longitude": null,
                     "publication_status": "published"

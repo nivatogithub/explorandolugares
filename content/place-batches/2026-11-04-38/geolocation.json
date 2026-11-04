@@ -547,28 +547,29 @@
       "checked_at": "2026-11-03",
       "map_url": "https://www.google.com/maps/search/?api=1&query=6.35241%2C-75.42577"
     },
-    "status": "punto_maps_identificado_con_fuente_contextual",
+    "status": "punto_validado_usuario_ficha_maps",
     "entrance_verified": false,
-    "latitude": 6.3531115,
-    "longitude": -75.4277043,
+    "latitude": 6.353044,
+    "longitude": -75.4259681,
     "checked_at": "2026-11-04",
     "precision": "marcador_lugar_no_acceso",
-    "map_url": "https://www.google.com/maps/search/?api=1&query=6.3531115,-75.4277043",
-    "maps_cid": "11433957585539220608",
-    "maps_evidence_url": "https://www.google.com/maps?cid=11433957585539220608",
+    "map_url": "https://maps.app.goo.gl/V1NEbRrWPuCqRLew6",
+    "maps_cid": "856423619932790668",
+    "maps_evidence_url": "https://maps.app.goo.gl/V1NEbRrWPuCqRLew6",
     "reference_source_url": "https://girardota.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
     "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-3/generadas/QC-06-3-v1-1200.webp",
     "sources": [
       "https://www.google.com/maps?cid=11433957585539220608",
       "https://mapcarta.com/es/N6067909731",
-      "https://girardota.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+      "https://girardota.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx",
+      "https://maps.app.goo.gl/V1NEbRrWPuCqRLew6"
     ],
     "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
     "previous_coordinate_delta_m": 228,
-    "review_group": "precision",
-    "manual_review_required": true,
-    "ready_for_import": false,
-    "note": "Maps y OSM identifican cascada San Antonio en El Cano, pero difieren 228 m. Se conserva punto de Maps como candidato; requiere precisar el salto y acceso. La página municipal menciona tanto San Andrés como El Cano en apartados distintos; el PBOT identifica El Cano. Se mantiene la excepción de precisión.",
+    "review_group": "punto_identificado",
+    "manual_review_required": false,
+    "ready_for_import": true,
+    "note": "Usuario confirma correspondencia de fotografía; ficha Cascada de San Antonio - El Salado, Vía Jamundí, Girardota. Coordenada del marcador de esta ficha, no entrada vehicular.",
     "identity_cross_checked": false,
     "review_image": "../../portadas/revision-40/atractivos-lote-3/generadas/QC-06-3-v1-1200.webp"
   },
@@ -1286,39 +1287,6 @@
     "review_image": "../../portadas/revision-40/atractivos-lote-4/generadas/QC-15-3.webp"
   },
   {
-    "id": "QC-16-2",
-    "municipality": "dagua",
-    "name": "Bosque seco de Atuncela",
-    "previous_geo": {
-      "status": "pendiente",
-      "latitude": null,
-      "longitude": null,
-      "precision": null,
-      "source_url": null,
-      "address": null,
-      "entrance_verified": false
-    },
-    "status": "ubicacion_general_documentada_no_acceso",
-    "entrance_verified": false,
-    "latitude": 3.7464111,
-    "longitude": -76.6874417,
-    "map_url": "https://www.google.com/maps/search/?api=1&query=3.7464111,-76.6874417",
-    "checked_at": "2026-11-04",
-    "precision": "referencia_area_no_entrada",
-    "sources": [
-      "https://www.cvc.gov.co/sites/default/files/2024-06/Documento%20T%C3%A9cnico_Ampliaci%C3%B3n%20DRMI%20Atuncela.pdf"
-    ],
-    "note": "Coordenada geográfica del área protegida publicada por CVC; no es acceso turístico ni punto exacto de la fotografía. No usar la ficha del operador Turisteando como si fuera el bosque.",
-    "reference_source_url": "https://cvc.gov.co/boletin-prensa-179-2023",
-    "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-16-2.webp",
-    "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
-    "review_group": "precision",
-    "manual_review_required": true,
-    "ready_for_import": false,
-    "identity_cross_checked": false,
-    "review_image": "../../portadas/revision-40/atractivos-lote-4/generadas/QC-16-2.webp"
-  },
-  {
     "id": "QC-16-6",
     "municipality": "dagua",
     "name": "Cascada Manto de la Virgen",
@@ -1421,9 +1389,10 @@
     "precision": "referencia_area_no_entrada",
     "sources": [
       "https://mapcarta.com/es/N703340827",
-      "https://es.wikiloc.com/rutas-carrera-por-montana/cerro-el-majuy-cota-88967015"
+      "https://es.wikiloc.com/rutas-carrera-por-montana/cerro-el-majuy-cota-88967015",
+      "https://es.wikiloc.com/rutas-senderismo/serrania-del-majuy-cota-76399724"
     ],
-    "note": "Cumbre geográfica documentada en OSM. No identifica todavía la roca exacta de la fotografía ni el inicio de la caminata. Pin de Google en Cra. 5 urbana descartado para la cumbre.",
+    "note": "Cumbre geográfica documentada en OSM. No identifica todavía la roca exacta de la fotografía ni el inicio de la caminata. Pin de Google en Cra. 5 urbana descartado para la cumbre. Ruta aportada por usuario: hito Cima 76399736 está en 4.8154273,-74.119156 y muestra antenas/cerramiento, no la roca aprobada. No sustituir coordenada de la roca por ese punto.",
     "reference_source_url": "https://es.wikiloc.com/rutas-carrera-por-montana/cerro-el-majuy-cota-88967015",
     "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-4/generadas/QC-17-7.webp",
     "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
@@ -2087,39 +2056,6 @@
     "ready_for_import": true,
     "identity_cross_checked": false,
     "review_image": "../../portadas/revision-40/atractivos-lote-5/generadas/QC-30-3-v2.webp"
-  },
-  {
-    "id": "QC-30-4",
-    "municipality": "pueblo-viejo",
-    "name": "Playa de Tasajera · paisaje pesquero",
-    "previous_geo": null,
-    "status": "ubicacion_general_documentada_no_acceso",
-    "entrance_verified": false,
-    "rejected_candidates": [
-      {
-        "latitude": 11.0068,
-        "longitude": -74.3435,
-        "source_url": "https://onlybeaches.com/colombia/magdalena/tasajera/playa-de-tasajera-tasajera",
-        "reason": "Marcador cae en el mar al contrastar Google Maps; página usa fotografías genéricas Unsplash."
-      }
-    ],
-    "note": "Libro La pesca artesanal marítima del departamento del Magdalena publica punto de Tasajera: 10°58.769 N,74°19.688 O. Maps lo sitúa en franja habitada próxima a la costa; referencia del sector pesquero, no acceso confirmado a playa ni punto de la foto. Coordenada OnlyBeaches descartada por estar en mar abierto.",
-    "latitude": 10.979483333333333,
-    "longitude": -74.32813333333333,
-    "precision": "referencia_sector_pesquero_no_playa_exacta",
-    "checked_at": "2026-11-04",
-    "map_url": "https://www.google.com/maps/search/?api=1&query=10.9794833,-74.3281333",
-    "sources": [
-      "https://api.pageplace.de/preview/DT0400.9789587251128_A26245554/preview-9789587251128_A26245554.pdf"
-    ],
-    "reference_source_url": "https://www.behance.net/gallery/137268461/Tasajera-magdalena/modules/776271187",
-    "reference_image": "trabajo/expansion-cobertura/portadas/revision-40/atractivos-lote-5/generadas/QC-30-4.webp",
-    "verification_scope": "Identidad del atractivo, municipio y marcador cartográfico; no certifica horario, disponibilidad ni acceso vehicular.",
-    "review_group": "precision",
-    "manual_review_required": true,
-    "ready_for_import": false,
-    "identity_cross_checked": false,
-    "review_image": "../../portadas/revision-40/atractivos-lote-5/generadas/QC-30-4.webp"
   },
   {
     "id": "QC-31-2",

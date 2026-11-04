@@ -1,0 +1,70 @@
+{
+    "environment": "dev1",
+    "before": [
+        {
+            "id": 1000530,
+            "slug": "qc-33-4",
+            "publication_status": "archived",
+            "destination_slug": "los-patios"
+        },
+        {
+            "id": 1000532,
+            "slug": "qc-34-2",
+            "publication_status": "archived",
+            "destination_slug": "el-zulia"
+        },
+        {
+            "id": 1000539,
+            "slug": "qc-37-4",
+            "publication_status": "archived",
+            "destination_slug": "la-paz"
+        },
+        {
+            "id": 1000501,
+            "slug": "qc-16-2",
+            "publication_status": "published",
+            "destination_slug": "dagua"
+        },
+        {
+            "id": 1000523,
+            "slug": "qc-30-4",
+            "publication_status": "published",
+            "destination_slug": "pueblo-viejo"
+        }
+    ],
+    "after": [
+        {
+            "id": 1000530,
+            "slug": "qc-33-4",
+            "publication_status": "archived",
+            "destination_slug": "los-patios"
+        },
+        {
+            "id": 1000532,
+            "slug": "qc-34-2",
+            "publication_status": "archived",
+            "destination_slug": "el-zulia"
+        },
+        {
+            "id": 1000539,
+            "slug": "qc-37-4",
+            "publication_status": "archived",
+            "destination_slug": "la-paz"
+        },
+        {
+            "id": 1000501,
+            "slug": "qc-16-2",
+            "publication_status": "archived",
+            "destination_slug": "dagua"
+        },
+        {
+            "id": 1000523,
+            "slug": "qc-30-4",
+            "publication_status": "archived",
+            "destination_slug": "pueblo-viejo"
+        }
+    ],
+    "reason_rows_checked": 0,
+    "identity_preserved": true,
+    "deleted_rows": 0
+}

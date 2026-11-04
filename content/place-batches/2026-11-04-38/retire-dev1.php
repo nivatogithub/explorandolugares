@@ -5,7 +5,7 @@ if(PHP_SAPI!=='cli'||!in_array('--apply',$argv,true))throw new RuntimeException(
 $c=require '/srv/state/private/config.php';
 if(empty($c['local_test'])||!str_contains($c['dsn'],'host=127.0.0.1;dbname=el_test_destination_'))throw new RuntimeException('Isolated dev database required');
 $p=new PDO($c['dsn'],$c['db_user'],$c['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
-$targets=['qc-33-4'=>'los-patios','qc-34-2'=>'el-zulia','qc-37-4'=>'la-paz'];$before=[];$after=[];
+$targets=['qc-33-4'=>'los-patios','qc-34-2'=>'el-zulia','qc-37-4'=>'la-paz','qc-16-2'=>'dagua','qc-30-4'=>'pueblo-viejo'];$before=[];$after=[];
 $p->beginTransaction();
 try{
  foreach($targets as $slug=>$destination){
