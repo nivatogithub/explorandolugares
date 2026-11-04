@@ -1,0 +1,6 @@
+<?php
+if(PHP_SAPI!=='cli'||!in_array('--apply',$argv,true))throw new RuntimeException('Explicit apply required');
+$c=require '/srv/state/private/config.php';if(empty($c['local_test'])||!str_contains($c['dsn'],'host=127.0.0.1;dbname=el_test_destination_'))throw new RuntimeException('Dev only');
+$rows=json_decode(file_get_contents('/srv/state/cierre-38-20261104/destination-centers-dev1.json'),true,512,JSON_THROW_ON_ERROR);if(count($rows)!==38)throw new RuntimeException('Unexpected count');
+$p=new PDO($c['dsn'],$c['db_user'],$c['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);$p->beginTransaction();$find=$p->prepare('SELECT id,latitude,longitude FROM destinations WHERE slug=?');$upd=$p->prepare('UPDATE destinations SET latitude=?,longitude=? WHERE id=?');$result=[];
+foreach($rows as $r){$find->execute([$r['slug']]);$found=$find->fetchAll(PDO::FETCH_ASSOC);if(count($found)!==1)throw new RuntimeException('Destination identity mismatch '.$r['slug']);$old=$found[0];$upd->execute([$r['candidate']['latitude'],$r['candidate']['longitude'],$old['id']]);$result[]=['slug'=>$r['slug'],'id'=>$old['id'],'old_latitude'=>$old['latitude'],'old_longitude'=>$old['longitude'],'latitude'=>$r['candidate']['latitude'],'longitude'=>$r['candidate']['longitude']];}$p->commit();echo json_encode($result,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE);

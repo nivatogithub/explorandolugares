@@ -1,0 +1,827 @@
+[
+  {
+    "destination": "tenjo",
+    "slug": "qc-22-2",
+    "latitude": 4.8681058,
+    "longitude": -74.1539816,
+    "map_urls": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  {
+    "destination": "tenjo",
+    "slug": "qc-22-4",
+    "latitude": 4.8697851,
+    "longitude": -74.1184242,
+    "map_urls": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  {
+    "destination": "pueblo-viejo",
+    "slug": "qc-30-3",
+    "latitude": 10.9846116,
+    "longitude": -74.3023151,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=11398294941812605644",
+      "en": "https://www.google.com/maps?cid=11398294941812605644",
+      "pt-BR": "https://www.google.com/maps?cid=11398294941812605644"
+    }
+  },
+  {
+    "destination": "arjona",
+    "slug": "qc-25-4",
+    "latitude": 10.254778,
+    "longitude": -75.3424373,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=7655359139500640364",
+      "en": "https://www.google.com/maps?cid=7655359139500640364",
+      "pt-BR": "https://www.google.com/maps?cid=7655359139500640364"
+    }
+  },
+  {
+    "destination": "bello",
+    "slug": "qc-02-2",
+    "latitude": 6.3365326,
+    "longitude": -75.5595171,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=5337280843070812772",
+      "en": "https://www.google.com/maps?cid=5337280843070812772",
+      "pt-BR": "https://www.google.com/maps?cid=5337280843070812772"
+    }
+  },
+  {
+    "destination": "bello",
+    "slug": "qc-02-3",
+    "latitude": 6.3726707,
+    "longitude": -75.5581859,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=14559528185219350849",
+      "en": "https://www.google.com/maps?cid=14559528185219350849",
+      "pt-BR": "https://www.google.com/maps?cid=14559528185219350849"
+    }
+  },
+  {
+    "destination": "girardota",
+    "slug": "qc-06-2",
+    "latitude": 6.3745317,
+    "longitude": -75.4497833,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=11677542795779015031",
+      "en": "https://www.google.com/maps?cid=11677542795779015031",
+      "pt-BR": "https://www.google.com/maps?cid=11677542795779015031"
+    }
+  },
+  {
+    "destination": "girardota",
+    "slug": "qc-06-3",
+    "latitude": 6.353044,
+    "longitude": -75.4259681,
+    "map_urls": {
+      "es": "https://maps.app.goo.gl/V1NEbRrWPuCqRLew6",
+      "en": "https://maps.app.goo.gl/V1NEbRrWPuCqRLew6",
+      "pt-BR": "https://maps.app.goo.gl/V1NEbRrWPuCqRLew6"
+    }
+  },
+  {
+    "destination": "galapa",
+    "slug": "qc-12-2",
+    "latitude": 10.8998607,
+    "longitude": -74.8859153,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=6931317580664274914",
+      "en": "https://www.google.com/maps?cid=6931317580664274914",
+      "pt-BR": "https://www.google.com/maps?cid=6931317580664274914"
+    }
+  },
+  {
+    "destination": "galapa",
+    "slug": "qc-12-4",
+    "latitude": 10.8991036,
+    "longitude": -74.8857059,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=3034859524406762716",
+      "en": "https://www.google.com/maps?cid=3034859524406762716",
+      "pt-BR": "https://www.google.com/maps?cid=3034859524406762716"
+    }
+  },
+  {
+    "destination": "facatativa",
+    "slug": "qc-21-1",
+    "latitude": 4.8147715,
+    "longitude": -74.346474,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=16419959579231948148",
+      "en": "https://www.google.com/maps?cid=16419959579231948148",
+      "pt-BR": "https://www.google.com/maps?cid=16419959579231948148"
+    }
+  },
+  {
+    "destination": "facatativa",
+    "slug": "qc-21-3",
+    "latitude": 4.808528,
+    "longitude": -74.355208,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=7830186272982043748",
+      "en": "https://www.google.com/maps?cid=7830186272982043748",
+      "pt-BR": "https://www.google.com/maps?cid=7830186272982043748"
+    }
+  },
+  {
+    "destination": "facatativa",
+    "slug": "qc-21-4",
+    "latitude": 4.809108,
+    "longitude": -74.3541565,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=18207458226708320476",
+      "en": "https://www.google.com/maps?cid=18207458226708320476",
+      "pt-BR": "https://www.google.com/maps?cid=18207458226708320476"
+    }
+  },
+  {
+    "destination": "sabaneta",
+    "slug": "qc-09-2",
+    "latitude": 6.1504909,
+    "longitude": -75.6129507,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=4398843915270684706",
+      "en": "https://www.google.com/maps?cid=4398843915270684706",
+      "pt-BR": "https://www.google.com/maps?cid=4398843915270684706"
+    }
+  },
+  {
+    "destination": "sabaneta",
+    "slug": "qc-09-3",
+    "latitude": 6.1199292,
+    "longitude": -75.5974556,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=3380432658992177914",
+      "en": "https://www.google.com/maps?cid=3380432658992177914",
+      "pt-BR": "https://www.google.com/maps?cid=3380432658992177914"
+    }
+  },
+  {
+    "destination": "san-cayetano",
+    "slug": "qc-35-3",
+    "latitude": 7.811243,
+    "longitude": -72.5840682,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=10560138342214091323",
+      "en": "https://www.google.com/maps?cid=10560138342214091323",
+      "pt-BR": "https://www.google.com/maps?cid=10560138342214091323"
+    }
+  },
+  {
+    "destination": "san-cayetano",
+    "slug": "qc-35-4",
+    "latitude": 7.8985917,
+    "longitude": -72.590082,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=4934810578259045892",
+      "en": "https://www.google.com/maps?cid=4934810578259045892",
+      "pt-BR": "https://www.google.com/maps?cid=4934810578259045892"
+    }
+  },
+  {
+    "destination": "dagua",
+    "slug": "qc-16-7",
+    "latitude": 3.6039642,
+    "longitude": -76.8724802,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=4140649010754752979",
+      "en": "https://www.google.com/maps?cid=4140649010754752979",
+      "pt-BR": "https://www.google.com/maps?cid=4140649010754752979"
+    }
+  },
+  {
+    "destination": "dagua",
+    "slug": "qc-16-6",
+    "latitude": 3.536424,
+    "longitude": -76.781335,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=14256601527744320283",
+      "en": "https://www.google.com/maps?cid=14256601527744320283",
+      "pt-BR": "https://www.google.com/maps?cid=14256601527744320283"
+    }
+  },
+  {
+    "destination": "envigado",
+    "slug": "qc-05-2",
+    "latitude": 6.1792522,
+    "longitude": -75.5839678,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=8545741094880886875",
+      "en": "https://www.google.com/maps?cid=8545741094880886875",
+      "pt-BR": "https://www.google.com/maps?cid=8545741094880886875"
+    }
+  },
+  {
+    "destination": "envigado",
+    "slug": "qc-05-3",
+    "latitude": 6.1381102,
+    "longitude": -75.5707439,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=6152997668994911805",
+      "en": "https://www.google.com/maps?cid=6152997668994911805",
+      "pt-BR": "https://www.google.com/maps?cid=6152997668994911805"
+    }
+  },
+  {
+    "destination": "envigado",
+    "slug": "qc-05-4",
+    "latitude": 6.1722747,
+    "longitude": -75.5910947,
+    "map_urls": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  {
+    "destination": "agustin-codazzi",
+    "slug": "qc-40-2",
+    "latitude": 10.0490135,
+    "longitude": -73.2393987,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=5422547268925744478",
+      "en": "https://www.google.com/maps?cid=5422547268925744478",
+      "pt-BR": "https://www.google.com/maps?cid=5422547268925744478"
+    }
+  },
+  {
+    "destination": "agustin-codazzi",
+    "slug": "qc-40-4",
+    "latitude": 10.0279991,
+    "longitude": -73.237642,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=927041633883426104",
+      "en": "https://www.google.com/maps?cid=927041633883426104",
+      "pt-BR": "https://www.google.com/maps?cid=927041633883426104"
+    }
+  },
+  {
+    "destination": "cota",
+    "slug": "qc-17-6",
+    "latitude": 4.8143314,
+    "longitude": -74.1074112,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=14720947811553320477",
+      "en": "https://www.google.com/maps?cid=14720947811553320477",
+      "pt-BR": "https://www.google.com/maps?cid=14720947811553320477"
+    }
+  },
+  {
+    "destination": "cota",
+    "slug": "qc-17-7",
+    "latitude": 4.8048233,
+    "longitude": -74.1195667,
+    "map_urls": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  {
+    "destination": "cucuta",
+    "slug": "qc-32-2",
+    "latitude": 7.8839855,
+    "longitude": -72.5017735,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=11218705340821011194",
+      "en": "https://www.google.com/maps?cid=11218705340821011194",
+      "pt-BR": "https://www.google.com/maps?cid=11218705340821011194"
+    }
+  },
+  {
+    "destination": "cucuta",
+    "slug": "qc-32-3",
+    "latitude": 7.8851204,
+    "longitude": -72.4995286,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=2235552499383001663",
+      "en": "https://www.google.com/maps?cid=2235552499383001663",
+      "pt-BR": "https://www.google.com/maps?cid=2235552499383001663"
+    }
+  },
+  {
+    "destination": "cucuta",
+    "slug": "qc-32-5",
+    "latitude": 7.8817694,
+    "longitude": -72.5015185,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=10595117165397776772",
+      "en": "https://www.google.com/maps?cid=10595117165397776772",
+      "pt-BR": "https://www.google.com/maps?cid=10595117165397776772"
+    }
+  },
+  {
+    "destination": "sibate",
+    "slug": "qc-24-2",
+    "latitude": 4.49201,
+    "longitude": -74.25975,
+    "map_urls": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  {
+    "destination": "sibate",
+    "slug": "qc-24-3",
+    "latitude": 4.4881777,
+    "longitude": -74.2576974,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=2446152384654980150",
+      "en": "https://www.google.com/maps?cid=2446152384654980150",
+      "pt-BR": "https://www.google.com/maps?cid=2446152384654980150"
+    }
+  },
+  {
+    "destination": "mosquera",
+    "slug": "qc-19-2",
+    "latitude": 4.6915627,
+    "longitude": -74.2766178,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=17917386824166585862",
+      "en": "https://www.google.com/maps?cid=17917386824166585862",
+      "pt-BR": "https://www.google.com/maps?cid=17917386824166585862"
+    }
+  },
+  {
+    "destination": "mosquera",
+    "slug": "qc-19-3",
+    "latitude": 4.666315,
+    "longitude": -74.2854537,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=13611609674112414004",
+      "en": "https://www.google.com/maps?cid=13611609674112414004",
+      "pt-BR": "https://www.google.com/maps?cid=13611609674112414004"
+    }
+  },
+  {
+    "destination": "santa-rosa-de-lima",
+    "slug": "qc-27-3",
+    "latitude": 10.443688,
+    "longitude": -75.3702416,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=4130990071867511226",
+      "en": "https://www.google.com/maps?cid=4130990071867511226",
+      "pt-BR": "https://www.google.com/maps?cid=4130990071867511226"
+    }
+  },
+  {
+    "destination": "el-zulia",
+    "slug": "qc-34-4",
+    "latitude": 8.1473301,
+    "longitude": -72.599798,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=3660357929697088189",
+      "en": "https://www.google.com/maps?cid=3660357929697088189",
+      "pt-BR": "https://www.google.com/maps?cid=3660357929697088189"
+    }
+  },
+  {
+    "destination": "itagui",
+    "slug": "qc-07-7",
+    "latitude": 6.1763872,
+    "longitude": -75.6131138,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=7622964245110464421",
+      "en": "https://www.google.com/maps?cid=7622964245110464421",
+      "pt-BR": "https://www.google.com/maps?cid=7622964245110464421"
+    }
+  },
+  {
+    "destination": "itagui",
+    "slug": "qc-07-2",
+    "latitude": 6.1684837,
+    "longitude": -75.6282198,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=6648170238115036387",
+      "en": "https://www.google.com/maps?cid=6648170238115036387",
+      "pt-BR": "https://www.google.com/maps?cid=6648170238115036387"
+    }
+  },
+  {
+    "destination": "itagui",
+    "slug": "qc-07-3",
+    "latitude": 6.1728219,
+    "longitude": -75.6076087,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=14518595522526409642",
+      "en": "https://www.google.com/maps?cid=14518595522526409642",
+      "pt-BR": "https://www.google.com/maps?cid=14518595522526409642"
+    }
+  },
+  {
+    "destination": "los-patios",
+    "slug": "qc-33-5",
+    "latitude": 7.7731801,
+    "longitude": -72.5245908,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=13563504801190054152",
+      "en": "https://www.google.com/maps?cid=13563504801190054152",
+      "pt-BR": "https://www.google.com/maps?cid=13563504801190054152"
+    }
+  },
+  {
+    "destination": "funza",
+    "slug": "qc-18-2",
+    "latitude": 4.7158665,
+    "longitude": -74.2129375,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=9528946341092133243",
+      "en": "https://www.google.com/maps?cid=9528946341092133243",
+      "pt-BR": "https://www.google.com/maps?cid=9528946341092133243"
+    }
+  },
+  {
+    "destination": "funza",
+    "slug": "qc-18-3",
+    "latitude": 4.7007031,
+    "longitude": -74.201079,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=5971657916017210528",
+      "en": "https://www.google.com/maps?cid=5971657916017210528",
+      "pt-BR": "https://www.google.com/maps?cid=5971657916017210528"
+    }
+  },
+  {
+    "destination": "la-paz",
+    "slug": "qc-37-3",
+    "latitude": 10.3866789,
+    "longitude": -73.1709177,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=9809140048289368470",
+      "en": "https://www.google.com/maps?cid=9809140048289368470",
+      "pt-BR": "https://www.google.com/maps?cid=9809140048289368470"
+    }
+  },
+  {
+    "destination": "caldas",
+    "slug": "qc-03-2",
+    "latitude": 6.0926063,
+    "longitude": -75.6393044,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=12347324952783684889",
+      "en": "https://www.google.com/maps?cid=12347324952783684889",
+      "pt-BR": "https://www.google.com/maps?cid=12347324952783684889"
+    }
+  },
+  {
+    "destination": "caldas",
+    "slug": "qc-03-3",
+    "latitude": 6.027536,
+    "longitude": -75.5960622,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=17476897834352520338",
+      "en": "https://www.google.com/maps?cid=17476897834352520338",
+      "pt-BR": "https://www.google.com/maps?cid=17476897834352520338"
+    }
+  },
+  {
+    "destination": "madrid",
+    "slug": "qc-20-3",
+    "latitude": 4.7056021,
+    "longitude": -74.266092,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=2344829584434288637",
+      "en": "https://www.google.com/maps?cid=2344829584434288637",
+      "pt-BR": "https://www.google.com/maps?cid=2344829584434288637"
+    }
+  },
+  {
+    "destination": "madrid",
+    "slug": "qc-20-4",
+    "latitude": 4.7239971,
+    "longitude": -74.2520411,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=6577598002139373016",
+      "en": "https://www.google.com/maps?cid=6577598002139373016",
+      "pt-BR": "https://www.google.com/maps?cid=6577598002139373016"
+    }
+  },
+  {
+    "destination": "la-virginia",
+    "slug": "qc-31-6",
+    "latitude": 4.8968048,
+    "longitude": -75.8451492,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=15644530568265570051",
+      "en": "https://www.google.com/maps?cid=15644530568265570051",
+      "pt-BR": "https://www.google.com/maps?cid=15644530568265570051"
+    }
+  },
+  {
+    "destination": "la-virginia",
+    "slug": "qc-31-5",
+    "latitude": 4.8946442,
+    "longitude": -75.8802737,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=13034153047010691630",
+      "en": "https://www.google.com/maps?cid=13034153047010691630",
+      "pt-BR": "https://www.google.com/maps?cid=13034153047010691630"
+    }
+  },
+  {
+    "destination": "la-virginia",
+    "slug": "qc-31-2",
+    "latitude": 4.8921525,
+    "longitude": -75.8828558,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=3438828268144502370",
+      "en": "https://www.google.com/maps?cid=3438828268144502370",
+      "pt-BR": "https://www.google.com/maps?cid=3438828268144502370"
+    }
+  },
+  {
+    "destination": "san-diego",
+    "slug": "qc-38-4",
+    "latitude": 10.3349885,
+    "longitude": -73.1809345,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=5691199075995293834",
+      "en": "https://www.google.com/maps?cid=5691199075995293834",
+      "pt-BR": "https://www.google.com/maps?cid=5691199075995293834"
+    }
+  },
+  {
+    "destination": "palmira",
+    "slug": "qc-14-2",
+    "latitude": 3.5258759,
+    "longitude": -76.3048335,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=6962852450772423616",
+      "en": "https://www.google.com/maps?cid=6962852450772423616",
+      "pt-BR": "https://www.google.com/maps?cid=6962852450772423616"
+    }
+  },
+  {
+    "destination": "palmira",
+    "slug": "qc-14-3",
+    "latitude": 3.5264511,
+    "longitude": -76.2870448,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=13929053983953884557",
+      "en": "https://www.google.com/maps?cid=13929053983953884557",
+      "pt-BR": "https://www.google.com/maps?cid=13929053983953884557"
+    }
+  },
+  {
+    "destination": "palmira",
+    "slug": "qc-14-5",
+    "latitude": 3.553931,
+    "longitude": -76.385869,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=9146798965373177554",
+      "en": "https://www.google.com/maps?cid=9146798965373177554",
+      "pt-BR": "https://www.google.com/maps?cid=9146798965373177554"
+    }
+  },
+  {
+    "destination": "manaure",
+    "slug": "qc-39-3",
+    "latitude": 10.4014498,
+    "longitude": -73.0143766,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=6835843649857527151",
+      "en": "https://www.google.com/maps?cid=6835843649857527151",
+      "pt-BR": "https://www.google.com/maps?cid=6835843649857527151"
+    }
+  },
+  {
+    "destination": "soledad",
+    "slug": "qc-10-2",
+    "latitude": 10.9158019,
+    "longitude": -74.7625989,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=12749099572107753546",
+      "en": "https://www.google.com/maps?cid=12749099572107753546",
+      "pt-BR": "https://www.google.com/maps?cid=12749099572107753546"
+    }
+  },
+  {
+    "destination": "soledad",
+    "slug": "qc-10-3",
+    "latitude": 10.928071,
+    "longitude": -74.7800433,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=907747373708195150",
+      "en": "https://www.google.com/maps?cid=907747373708195150",
+      "pt-BR": "https://www.google.com/maps?cid=907747373708195150"
+    }
+  },
+  {
+    "destination": "gachancipa",
+    "slug": "qc-23-2",
+    "latitude": 5.0388729,
+    "longitude": -73.8799004,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=8242947426625638311",
+      "en": "https://www.google.com/maps?cid=8242947426625638311",
+      "pt-BR": "https://www.google.com/maps?cid=8242947426625638311"
+    }
+  },
+  {
+    "destination": "gachancipa",
+    "slug": "qc-23-3",
+    "latitude": 4.9912571,
+    "longitude": -73.8742422,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=16568464995046432290",
+      "en": "https://www.google.com/maps?cid=16568464995046432290",
+      "pt-BR": "https://www.google.com/maps?cid=16568464995046432290"
+    }
+  },
+  {
+    "destination": "copacabana",
+    "slug": "qc-04-2",
+    "latitude": 6.3471895,
+    "longitude": -75.5065584,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=15433407542594159514",
+      "en": "https://www.google.com/maps?cid=15433407542594159514",
+      "pt-BR": "https://www.google.com/maps?cid=15433407542594159514"
+    }
+  },
+  {
+    "destination": "copacabana",
+    "slug": "qc-04-3",
+    "latitude": 6.376386,
+    "longitude": -75.4861586,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=13748618924059152331",
+      "en": "https://www.google.com/maps?cid=13748618924059152331",
+      "pt-BR": "https://www.google.com/maps?cid=13748618924059152331"
+    }
+  },
+  {
+    "destination": "copacabana",
+    "slug": "qc-04-4",
+    "latitude": 6.3414725,
+    "longitude": -75.5001943,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=14072107472630896366",
+      "en": "https://www.google.com/maps?cid=14072107472630896366",
+      "pt-BR": "https://www.google.com/maps?cid=14072107472630896366"
+    }
+  },
+  {
+    "destination": "clemencia",
+    "slug": "qc-28-2",
+    "latitude": 10.5686473,
+    "longitude": -75.3287421,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=8017911082407089264",
+      "en": "https://www.google.com/maps?cid=8017911082407089264",
+      "pt-BR": "https://www.google.com/maps?cid=8017911082407089264"
+    }
+  },
+  {
+    "destination": "yumbo",
+    "slug": "qc-13-2",
+    "latitude": 3.6354659,
+    "longitude": -76.4838024,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=10485282699866266106",
+      "en": "https://www.google.com/maps?cid=10485282699866266106",
+      "pt-BR": "https://www.google.com/maps?cid=10485282699866266106"
+    }
+  },
+  {
+    "destination": "yumbo",
+    "slug": "qc-13-3",
+    "latitude": 3.6627005,
+    "longitude": -76.525914,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=4173196691829170542",
+      "en": "https://www.google.com/maps?cid=4173196691829170542",
+      "pt-BR": "https://www.google.com/maps?cid=4173196691829170542"
+    }
+  },
+  {
+    "destination": "puerto-santander",
+    "slug": "qc-36-3",
+    "latitude": 8.365198,
+    "longitude": -72.4041262,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=17625996257562751226",
+      "en": "https://www.google.com/maps?cid=17625996257562751226",
+      "pt-BR": "https://www.google.com/maps?cid=17625996257562751226"
+    }
+  },
+  {
+    "destination": "puerto-santander",
+    "slug": "qc-36-4",
+    "latitude": 8.36247,
+    "longitude": -72.40933,
+    "map_urls": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  {
+    "destination": "la-estrella",
+    "slug": "qc-08-2",
+    "latitude": 6.1578278,
+    "longitude": -75.642973,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=1396174974099564038",
+      "en": "https://www.google.com/maps?cid=1396174974099564038",
+      "pt-BR": "https://www.google.com/maps?cid=1396174974099564038"
+    }
+  },
+  {
+    "destination": "la-estrella",
+    "slug": "qc-08-4",
+    "latitude": 6.1535145,
+    "longitude": -75.6511216,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=8220934097480413422",
+      "en": "https://www.google.com/maps?cid=8220934097480413422",
+      "pt-BR": "https://www.google.com/maps?cid=8220934097480413422"
+    }
+  },
+  {
+    "destination": "barbosa",
+    "slug": "qc-01-2",
+    "latitude": 6.4081486,
+    "longitude": -75.4227486,
+    "map_urls": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    }
+  },
+  {
+    "destination": "barbosa",
+    "slug": "qc-01-3",
+    "latitude": 6.412922,
+    "longitude": -75.392394,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=7533956005260676724",
+      "en": "https://www.google.com/maps?cid=7533956005260676724",
+      "pt-BR": "https://www.google.com/maps?cid=7533956005260676724"
+    }
+  },
+  {
+    "destination": "barbosa",
+    "slug": "qc-01-4",
+    "latitude": 6.4357982,
+    "longitude": -75.3291321,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=4558879625103894933",
+      "en": "https://www.google.com/maps?cid=4558879625103894933",
+      "pt-BR": "https://www.google.com/maps?cid=4558879625103894933"
+    }
+  },
+  {
+    "destination": "candelaria",
+    "slug": "qc-15-2",
+    "latitude": 3.4122149,
+    "longitude": -76.3476628,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=8914023197806357908",
+      "en": "https://www.google.com/maps?cid=8914023197806357908",
+      "pt-BR": "https://www.google.com/maps?cid=8914023197806357908"
+    }
+  },
+  {
+    "destination": "candelaria",
+    "slug": "qc-15-3",
+    "latitude": 3.3248457,
+    "longitude": -76.3485549,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=13806315156051289254",
+      "en": "https://www.google.com/maps?cid=13806315156051289254",
+      "pt-BR": "https://www.google.com/maps?cid=13806315156051289254"
+    }
+  },
+  {
+    "destination": "malambo",
+    "slug": "qc-11-2",
+    "latitude": 10.859304,
+    "longitude": -74.77252,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=5078105611781085224",
+      "en": "https://www.google.com/maps?cid=5078105611781085224",
+      "pt-BR": "https://www.google.com/maps?cid=5078105611781085224"
+    }
+  },
+  {
+    "destination": "malambo",
+    "slug": "qc-11-3",
+    "latitude": 10.8615185,
+    "longitude": -74.7737445,
+    "map_urls": {
+      "es": "https://www.google.com/maps?cid=7375608741274886345",
+      "en": "https://www.google.com/maps?cid=7375608741274886345",
+      "pt-BR": "https://www.google.com/maps?cid=7375608741274886345"
+    }
+  }
+]

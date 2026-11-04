@@ -42,3 +42,9 @@ También se retiraron QC-16-2 (Atuncela) y QC-30-4 (Tasajera). Los cinco están 
 ## Majuy aprobado — 4 de noviembre
 
 QC-17-7 usa ahora la foto georreferenciada de Wikiloc y su nueva ilustración aprobada por el propietario. Se sustituyó el WebP del paquete y se actualizaron los tres idiomas y las coordenadas 4.8048233,-74.1195667. Hay 75 puntos identificados; este es un punto fotográfico, no un acceso. No tiene ficha nombrada de Google Maps verificada; el enlace público queda vacío. Este ajuste está preparado en Git, aún no aplicado a dev1.
+
+## Actualización dev1 — 4 de noviembre, cobertura ampliada
+
+Los 38 centros de localidad se contrastaron con Wikidata o GeoNames y se incorporaron en los manifiestos y dev1. Son referencias del casco urbano, no accesos. Las coordenadas de los 75 atractivos, los mapas disponibles y los motivos de visita en ES/EN/PT-BR se aplicaron en dev1. La corrección aprobada de Majuy está aplicada. Las 114 páginas respondieron HTTP 200 y muestran motivos de visita; ver recibos en `evidence/`.
+
+Dev1 contiene 1.340 fichas gratuitas incorporadas por este lote, con fuentes públicas de RNT, directorios y cartografía. `PUBLICO` no significa operación confirmada, negocio reclamado ni validación individual en campo. En especial los candidatos cartográficos requieren contrastar vigencia y posibles duplicados. Nueve municipios tienen menos de diez fichas y falta ampliar categorías. Los paquetes de negocios individuales previos no contienen todavía esta ampliación: las fuentes reconstruibles y recibos están en `businesses-dev1-*.json` y `evidence/`. Este estado no autoriza preprod ni producción ni certifica la publicación final. No contar el número global como cobertura completa por municipio.

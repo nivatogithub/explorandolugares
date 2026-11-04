@@ -1,0 +1,918 @@
+[
+  {
+    "slug": "tenjo",
+    "candidate": {
+      "name": "Tenjo",
+      "latitude": 4.8713043,
+      "longitude": -74.1473252,
+      "source": "https://www.openstreetmap.org/node/703168684",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Tenjo",
+        "latitude": 4.8727,
+        "longitude": -74.14435,
+        "distance_m": 365,
+        "source": "https://www.geonames.org/3667290"
+      }
+    ]
+  },
+  {
+    "slug": "pueblo-viejo",
+    "candidate": {
+      "name": "Puebloviejo",
+      "latitude": 10.9938824,
+      "longitude": -74.2827969,
+      "source": "https://www.openstreetmap.org/node/12652434036",
+      "type": "town"
+    },
+    "wikidata_id": "Q1441089",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1441089",
+    "wikidata_label": "Puebloviejo",
+    "wikidata_coordinates": [
+      {
+        "latitude": 10.994166666667,
+        "longitude": -74.283333333333,
+        "distance_m": 67,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "arjona",
+    "candidate": {
+      "name": "Arjona",
+      "latitude": 10.2534632,
+      "longitude": -75.3427213,
+      "source": "https://www.openstreetmap.org/node/282916376",
+      "type": "town"
+    },
+    "wikidata_id": "Q671427",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q671427",
+    "wikidata_label": "Arjona",
+    "wikidata_coordinates": [
+      {
+        "latitude": 10.255,
+        "longitude": -75.344722222222,
+        "distance_m": 278,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "bello",
+    "candidate": {
+      "name": "Bello",
+      "latitude": 6.334997,
+      "longitude": -75.5582665,
+      "source": "https://www.openstreetmap.org/node/3306812051",
+      "type": "city"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Bello",
+        "latitude": 6.33732,
+        "longitude": -75.55795,
+        "distance_m": 261,
+        "source": "https://www.geonames.org/3688928"
+      }
+    ]
+  },
+  {
+    "slug": "girardota",
+    "candidate": {
+      "name": "Girardota",
+      "latitude": 6.3773809,
+      "longitude": -75.4459762,
+      "source": "https://www.openstreetmap.org/node/703179520",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Girardota",
+        "latitude": 6.37747,
+        "longitude": -75.44883,
+        "distance_m": 316,
+        "source": "https://www.geonames.org/3682022"
+      }
+    ]
+  },
+  {
+    "slug": "galapa",
+    "candidate": {
+      "name": "Galapa",
+      "latitude": 10.8994371,
+      "longitude": -74.8864007,
+      "source": "https://www.openstreetmap.org/node/703208437",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Galapa",
+        "latitude": 10.89686,
+        "longitude": -74.886,
+        "distance_m": 290,
+        "source": "https://www.geonames.org/3682238"
+      }
+    ]
+  },
+  {
+    "slug": "facatativa",
+    "candidate": {
+      "name": "Facatativá",
+      "latitude": 4.8097276,
+      "longitude": -74.3541838,
+      "source": "https://www.openstreetmap.org/node/277838403",
+      "type": "town"
+    },
+    "wikidata_id": "Q1947594",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1947594",
+    "wikidata_label": "Facatativá",
+    "wikidata_coordinates": [
+      {
+        "latitude": 4.8147222222222,
+        "longitude": -74.355277777778,
+        "distance_m": 568,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "sabaneta",
+    "candidate": {
+      "name": "Sabaneta",
+      "latitude": 6.1515344,
+      "longitude": -75.6153715,
+      "source": "https://www.openstreetmap.org/node/703177110",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Sabaneta",
+        "latitude": 6.15153,
+        "longitude": -75.61657,
+        "distance_m": 133,
+        "source": "https://www.geonames.org/3670475"
+      }
+    ]
+  },
+  {
+    "slug": "san-cayetano",
+    "candidate": {
+      "name": "San Cayetano",
+      "latitude": 7.8775439,
+      "longitude": -72.6244091,
+      "source": "https://www.openstreetmap.org/node/703170181",
+      "type": "town"
+    },
+    "wikidata_id": "Q2434048",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q2434048",
+    "wikidata_label": "San Cayetano",
+    "wikidata_coordinates": [
+      {
+        "latitude": 7.8772222222222,
+        "longitude": -72.624722222222,
+        "distance_m": 50,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "dagua",
+    "candidate": {
+      "name": "Dagua",
+      "latitude": 3.658161,
+      "longitude": -76.6893973,
+      "source": "https://www.openstreetmap.org/node/703168220",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Dagua",
+        "latitude": 3.65716,
+        "longitude": -76.68899,
+        "distance_m": 120,
+        "source": "https://www.geonames.org/3685292"
+      }
+    ]
+  },
+  {
+    "slug": "envigado",
+    "candidate": {
+      "name": "Envigado",
+      "latitude": 6.1701348,
+      "longitude": -75.587415,
+      "source": "https://www.openstreetmap.org/node/703177385",
+      "type": "town"
+    },
+    "wikidata_id": "Q1447266",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1447266",
+    "wikidata_label": "Envigado",
+    "wikidata_coordinates": [
+      {
+        "latitude": 6.1719444444444,
+        "longitude": -75.580277777778,
+        "distance_m": 814,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "agustin-codazzi",
+    "candidate": {
+      "name": "Agustín Codazzi",
+      "latitude": 10.0374894,
+      "longitude": -73.2387011,
+      "source": "https://www.openstreetmap.org/node/703169922",
+      "type": "city"
+    },
+    "wikidata_id": "Q781307",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q781307",
+    "wikidata_label": "Agustín Codazzi",
+    "wikidata_coordinates": [
+      {
+        "latitude": 10.036666666667,
+        "longitude": -73.236944444444,
+        "distance_m": 213,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "cota",
+    "candidate": {
+      "name": "Cota",
+      "latitude": 4.8083869,
+      "longitude": -74.1036768,
+      "source": "https://www.openstreetmap.org/node/703168687",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Cota",
+        "latitude": 4.80938,
+        "longitude": -74.098,
+        "distance_m": 639,
+        "source": "https://www.geonames.org/3685733"
+      }
+    ]
+  },
+  {
+    "slug": "cucuta",
+    "candidate": {
+      "name": "Cúcuta",
+      "latitude": 7.8971458,
+      "longitude": -72.5080387,
+      "source": "https://www.openstreetmap.org/node/703166743",
+      "type": "city"
+    },
+    "wikidata_id": "Q216847",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q216847",
+    "wikidata_label": null,
+    "wikidata_coordinates": [
+      {
+        "latitude": 7.9075,
+        "longitude": -72.504722222222,
+        "distance_m": 1208,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Cúcuta",
+        "latitude": 7.90745,
+        "longitude": -72.5049,
+        "distance_m": 1198,
+        "source": "https://www.geonames.org/3685533"
+      }
+    ]
+  },
+  {
+    "slug": "sibate",
+    "candidate": {
+      "name": "Sibaté",
+      "latitude": 4.4916256,
+      "longitude": -74.2594306,
+      "source": "https://www.openstreetmap.org/node/703168572",
+      "type": "town"
+    },
+    "wikidata_id": "Q1391630",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1391630",
+    "wikidata_label": "Sibaté",
+    "wikidata_coordinates": [
+      {
+        "latitude": 4.4908333333333,
+        "longitude": -74.259444444444,
+        "distance_m": 88,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "mosquera",
+    "candidate": {
+      "name": "Mosquera",
+      "latitude": 4.7002001,
+      "longitude": -74.2385058,
+      "source": "https://www.openstreetmap.org/node/310264548",
+      "type": "town"
+    },
+    "wikidata_id": "Q2432909",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q2432909",
+    "wikidata_label": "Mosquera",
+    "wikidata_coordinates": [
+      {
+        "latitude": 4.707778,
+        "longitude": -74.232778,
+        "distance_m": 1055,
+        "precision": 1e-05
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "santa-rosa-de-lima",
+    "candidate": {
+      "name": "Santa Rosa de Lima",
+      "latitude": 10.4458841,
+      "longitude": -75.369519,
+      "source": "https://www.openstreetmap.org/node/703169665",
+      "type": "town"
+    },
+    "wikidata_id": "Q1526264",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1526264",
+    "wikidata_label": "Santa Rosa",
+    "wikidata_coordinates": [
+      {
+        "latitude": 10.445555555556,
+        "longitude": -75.368611111111,
+        "distance_m": 106,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "el-zulia",
+    "candidate": {
+      "name": "El Zulia",
+      "latitude": 7.9312397,
+      "longitude": -72.6011003,
+      "source": "https://www.openstreetmap.org/node/359102548",
+      "type": "town"
+    },
+    "wikidata_id": "Q1441107",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1441107",
+    "wikidata_label": "El Zulia",
+    "wikidata_coordinates": [
+      {
+        "latitude": 7.9325,
+        "longitude": -72.6025,
+        "distance_m": 208,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "itagui",
+    "candidate": {
+      "name": "Itagüí",
+      "latitude": 6.1724352,
+      "longitude": -75.6093254,
+      "source": "https://www.openstreetmap.org/node/703177218",
+      "type": "town"
+    },
+    "wikidata_id": "Q1527934",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1527934",
+    "wikidata_label": "Itagüí",
+    "wikidata_coordinates": [
+      {
+        "latitude": 6.1726,
+        "longitude": -75.6096,
+        "distance_m": 35,
+        "precision": 0.0001
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "los-patios",
+    "candidate": {
+      "name": "Los Patios",
+      "latitude": 7.8342202,
+      "longitude": -72.5059128,
+      "source": "https://www.openstreetmap.org/node/703170186",
+      "type": "town"
+    },
+    "wikidata_id": "Q634066",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q634066",
+    "wikidata_label": "Los Patios",
+    "wikidata_coordinates": [
+      {
+        "latitude": 7.8341666666667,
+        "longitude": -72.505,
+        "distance_m": 101,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "funza",
+    "candidate": {
+      "name": "Funza",
+      "latitude": 4.7177471,
+      "longitude": -74.2031547,
+      "source": "https://www.openstreetmap.org/node/703168627",
+      "type": "town"
+    },
+    "wikidata_id": "Q608955",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q608955",
+    "wikidata_label": "Funza",
+    "wikidata_coordinates": [
+      {
+        "latitude": 4.7175,
+        "longitude": -74.209444444444,
+        "distance_m": 698,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "la-paz",
+    "candidate": {
+      "name": "La Paz",
+      "latitude": 10.3866045,
+      "longitude": -73.1710014,
+      "source": "https://www.openstreetmap.org/node/703273173",
+      "type": "town"
+    },
+    "wikidata_id": "Q1442342",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1442342",
+    "wikidata_label": "La Paz",
+    "wikidata_coordinates": [
+      {
+        "latitude": 10.385277777778,
+        "longitude": -73.171944444444,
+        "distance_m": 180,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "caldas",
+    "candidate": {
+      "name": "Caldas",
+      "latitude": 6.0918609,
+      "longitude": -75.6356917,
+      "source": "https://www.openstreetmap.org/node/703177096",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Caldas",
+        "latitude": 6.09106,
+        "longitude": -75.63569,
+        "distance_m": 89,
+        "source": "https://www.geonames.org/3687952"
+      }
+    ]
+  },
+  {
+    "slug": "madrid",
+    "candidate": {
+      "name": "Madrid",
+      "latitude": 4.736726,
+      "longitude": -74.2654685,
+      "source": "https://www.openstreetmap.org/node/703168608",
+      "type": "town"
+    },
+    "wikidata_id": "Q2316396",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q2316396",
+    "wikidata_label": "Madrid",
+    "wikidata_coordinates": [
+      {
+        "latitude": 4.7305555555556,
+        "longitude": -74.263888888889,
+        "distance_m": 708,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "la-virginia",
+    "candidate": {
+      "name": "La Virginia",
+      "latitude": 4.8995993,
+      "longitude": -75.8825661,
+      "source": "https://www.openstreetmap.org/node/703168441",
+      "type": "town"
+    },
+    "wikidata_id": "Q2310853",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q2310853",
+    "wikidata_label": "La Virginia",
+    "wikidata_coordinates": [
+      {
+        "latitude": 4.8966666666667,
+        "longitude": -75.883888888889,
+        "distance_m": 358,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "san-diego",
+    "candidate": {
+      "name": "San Diego",
+      "latitude": 10.3326328,
+      "longitude": -73.1796691,
+      "source": "https://www.openstreetmap.org/node/703169933",
+      "type": "town"
+    },
+    "wikidata_id": "Q1524790",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1524790",
+    "wikidata_label": "San Diego",
+    "wikidata_coordinates": [
+      {
+        "latitude": 10.3325,
+        "longitude": -73.180833333333,
+        "distance_m": 128,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "palmira",
+    "candidate": {
+      "name": "Palmira",
+      "latitude": 3.5308373,
+      "longitude": -76.2988048,
+      "source": "https://www.openstreetmap.org/node/4323485991",
+      "type": "city"
+    },
+    "wikidata_id": "Q989858",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q989858",
+    "wikidata_label": "Palmira",
+    "wikidata_coordinates": [
+      {
+        "latitude": 3.5347222222222,
+        "longitude": -76.295555555556,
+        "distance_m": 563,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "manaure",
+    "candidate": {
+      "name": "Manaure Balcón del Cesar",
+      "latitude": 10.3910411,
+      "longitude": -73.0270699,
+      "source": "https://www.openstreetmap.org/node/468769318",
+      "type": "town"
+    },
+    "wikidata_id": "Q936283",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q936283",
+    "wikidata_label": "Manaure Balcón del Cesar",
+    "wikidata_coordinates": [
+      {
+        "latitude": 10.389166666667,
+        "longitude": -73.029166666667,
+        "distance_m": 310,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "soledad",
+    "candidate": {
+      "name": "Soledad",
+      "latitude": 10.9149593,
+      "longitude": -74.7821054,
+      "source": "https://www.openstreetmap.org/node/1037712072",
+      "type": "town"
+    },
+    "wikidata_id": "Q767071",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q767071",
+    "wikidata_label": "Soledad",
+    "wikidata_coordinates": [
+      {
+        "latitude": 10.909722222222,
+        "longitude": -74.785833333333,
+        "distance_m": 710,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "gachancipa",
+    "candidate": {
+      "name": "Gachancipá",
+      "latitude": 4.9920291,
+      "longitude": -73.8721107,
+      "source": "https://www.openstreetmap.org/node/703168799",
+      "type": "town"
+    },
+    "wikidata_id": "Q1575577",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1575577",
+    "wikidata_label": "Gachancipá",
+    "wikidata_coordinates": [
+      {
+        "latitude": 4.9908333333333,
+        "longitude": -73.873055555556,
+        "distance_m": 169,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "copacabana",
+    "candidate": {
+      "name": "Copacabana",
+      "latitude": 6.3461047,
+      "longitude": -75.5080262,
+      "source": "https://www.openstreetmap.org/node/703179488",
+      "type": "town"
+    },
+    "wikidata_id": "Q285891",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q285891",
+    "wikidata_label": "Copacabana",
+    "wikidata_coordinates": [
+      {
+        "latitude": 6.346072042365308,
+        "longitude": -75.50814843851572,
+        "distance_m": 14,
+        "precision": 1e-08
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "clemencia",
+    "candidate": {
+      "name": "Clemencia",
+      "latitude": 10.5684208,
+      "longitude": -75.3250644,
+      "source": "https://www.openstreetmap.org/node/703169913",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Clemencia",
+        "latitude": 10.56645,
+        "longitude": -75.32499,
+        "distance_m": 220,
+        "source": "https://www.geonames.org/3686196"
+      }
+    ]
+  },
+  {
+    "slug": "yumbo",
+    "candidate": {
+      "name": "Yumbo",
+      "latitude": 3.5834664,
+      "longitude": -76.4952223,
+      "source": "https://www.openstreetmap.org/node/589271277",
+      "type": "town"
+    },
+    "wikidata_id": "Q735378",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q735378",
+    "wikidata_label": "Yumbo",
+    "wikidata_coordinates": [
+      {
+        "latitude": 3.5777777777778,
+        "longitude": -76.494444444444,
+        "distance_m": 638,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "puerto-santander",
+    "candidate": {
+      "name": "Puerto Santander",
+      "latitude": 8.3546568,
+      "longitude": -72.4145867,
+      "source": "https://www.openstreetmap.org/node/372319140",
+      "type": "town"
+    },
+    "wikidata_id": "Q1575400",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q1575400",
+    "wikidata_label": "Puerto Santander",
+    "wikidata_coordinates": [
+      {
+        "latitude": 8.3636111111111,
+        "longitude": -72.4075,
+        "distance_m": 1265,
+        "precision": 0.00027777777777778
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Puerto Santander",
+        "latitude": 8.36361,
+        "longitude": -72.4063,
+        "distance_m": 1351,
+        "source": "https://www.geonames.org/3671325"
+      }
+    ]
+  },
+  {
+    "slug": "la-estrella",
+    "candidate": {
+      "name": "La Estrella",
+      "latitude": 6.1576781,
+      "longitude": -75.6433878,
+      "source": "https://www.openstreetmap.org/node/703177105",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "La Estrella",
+        "latitude": 6.15769,
+        "longitude": -75.64317,
+        "distance_m": 24,
+        "source": "https://www.geonames.org/3679065"
+      }
+    ]
+  },
+  {
+    "slug": "barbosa",
+    "candidate": {
+      "name": "Barbosa",
+      "latitude": 6.4370185,
+      "longitude": -75.3313779,
+      "source": "https://www.openstreetmap.org/node/703179605",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Barbosa",
+        "latitude": 6.43809,
+        "longitude": -75.33136,
+        "distance_m": 119,
+        "source": "https://www.geonames.org/3689205"
+      }
+    ]
+  },
+  {
+    "slug": "candelaria",
+    "candidate": {
+      "name": "Candelaria",
+      "latitude": 3.4090481,
+      "longitude": -76.347379,
+      "source": "https://www.openstreetmap.org/node/323307684",
+      "type": "town"
+    },
+    "wikidata_id": "Q2430763",
+    "wikidata_url": "https://www.wikidata.org/wiki/Q2430763",
+    "wikidata_label": "Candelaria",
+    "wikidata_coordinates": [
+      {
+        "latitude": 3.400375,
+        "longitude": -76.347777777778,
+        "distance_m": 965,
+        "precision": 2.7777777777778e-06
+      }
+    ],
+    "status": "corroborado_centro_urbano",
+    "note": "Coordenada de localidad, no necesariamente parque o entrada; Wikidata puede compartir datos con OSM."
+  },
+  {
+    "slug": "malambo",
+    "candidate": {
+      "name": "Malambo",
+      "latitude": 10.8653387,
+      "longitude": -74.7746194,
+      "source": "https://www.openstreetmap.org/node/2674622291",
+      "type": "town"
+    },
+    "wikidata_id": null,
+    "wikidata_url": null,
+    "wikidata_label": null,
+    "wikidata_coordinates": [],
+    "status": "corroborado_centro_urbano",
+    "note": "Centro urbano OSM contrastado con GeoNames; no representa entrada.",
+    "geonames_matches": [
+      {
+        "name": "Malambo",
+        "latitude": 10.85953,
+        "longitude": -74.77386,
+        "distance_m": 652,
+        "source": "https://www.geonames.org/3675595"
+      }
+    ]
+  }
+]
