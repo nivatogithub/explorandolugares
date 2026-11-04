@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Pacho Parrilla",
+    "destination": "funza",
+    "address": "Calle 13 # 12-47",
+    "coordinate": [
+      4.7153858,
+      -74.2124678
+    ],
+    "sources": [
+      "https://palalea9228.wixsite.com/pachoparrillabarcafe",
+      "https://www.rappi.com.co/restaurantes/900501691-pacho-parrilla-funza"
+    ],
+    "status": "nombre_y_direccion_contrastados_coordenada_fuente_propia_pendiente_pin_independiente"
+  },
+  {
+    "name": "La Cocina de Criss",
+    "destination": "madrid",
+    "address": "Calle 7 # 1-05",
+    "coordinate": [
+      4.7302813,
+      -74.2594796
+    ],
+    "sources": [
+      "https://lacocinadecriss1.wixsite.com/madrid",
+      "https://www.tripadvisor.es/Restaurant_Review-g4452819-d24927301-Reviews-La_Cocina_De_Criss-Madrid_Cundinamarca_Department.html",
+      "https://www.waze.com/es/live-map/directions/co/cundinamarca/madrid/la-cocina-de-criss?to=place.ChIJl8QKXgZ5P44Rbs-rIc101h8"
+    ],
+    "status": "direccion_contrastada_pin_pendiente",
+    "note": "Waze señala 1-03, fuente propia y Tripadvisor 1-05; validar ubicación exacta."
+  },
+  {
+    "name": "Hotel Boutique Campanario del Río",
+    "destination": "soledad",
+    "address": "Calle 13 # 20-42",
+    "coordinate": [
+      10.916407,
+      -74.7622619
+    ],
+    "sources": [
+      "https://campanariodelrio.com/",
+      "https://directoriomoteles.com/atlantico/soledad/hotel-boutique-campanario-del-rio/"
+    ],
+    "status": "nombre_y_direccion_contrastados_coordenada_fuente_propia_pendiente_pin_independiente"
+  }
+]
