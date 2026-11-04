@@ -21,13 +21,21 @@ coverage=json.loads(get('/api/coverage.php'))
 assert 'audience' in coverage and 'basic' in coverage['audience']
 assert coverage['country']['coverage_percent'] is not None
 if not args.exclude_coverage:
- assert coverage['country']['municipality_total']==1122
+ scope=json.loads((ROOT/'backend/app/content/coverage-scope.json').read_text())
+ selected={item['code'] for item in scope['municipalities']}
+ assert len(selected)==len(scope['municipalities']) and selected
+ assert coverage['national_scope']=='selected_tourism_municipalities'
+ assert coverage['scope_version']==scope['version']
+ assert coverage['country']['municipality_total']==len(selected)
+ assert sum(d['geographic_municipality_total'] for d in coverage['departments'])==1122
+ observed={m['code'] for d in coverage['departments'] for m in d['municipalities'] if m['in_scope']}
+ assert observed==selected
 assert coverage['country']['counts']['in_progress']==0
 assert all(p['status'] in {'published','in_progress','pending','unknown'} for d in coverage['departments'] for p in d['places'])
 assert all(p.get('url') is None for d in coverage['departments'] for p in d['places'] if p['status']!='published')
 page=get('/cobertura/colombia/')
 if not args.exclude_coverage:
- assert all('data-page-tab="'+tab+'"' in page for tab in ['cobertura','audiencia','participar'])
+ assert all('data-page-tab="'+tab+'"' in page for tab in ['cobertura','visitantes','participar'])
 legacy_measurement=json.loads(get('/api/analytics.php'))
 assert legacy_measurement['enabled'] is False and legacy_measurement['mode']=='aggregate_only'
 assert json.loads(get('/api/activity.php'))['enabled']
