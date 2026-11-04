@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-11-04",
+  "scope": "identidad_y_direccion_no_equivale_a_operacion_actual",
+  "records": [
+    {
+      "destination_slug": "cienaga",
+      "name": "Diamante Real",
+      "address": "Calle 17 17-93",
+      "sources": ["https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i41856/hotel-diamante-real-dc", "https://www.openstreetmap.org/node/9467107917"],
+      "result": "nombre y dirección coinciden; punto OSM de referencia; operación actual no confirmada"
+    },
+    {
+      "destination_slug": "barichara",
+      "name": "Casa Barichara Boutique",
+      "address": "Carrera 11 5-18",
+      "sources": ["https://www.booking.com/hotel/co/casa-barichara-del-pueblo.html", "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i39075/casa-barichara"],
+      "result": "nombre y dirección coinciden en dos fuentes; no se ha confirmado operación directamente"
+    }
+  ],
+  "not_resolved": [
+    {"destination_slug":"rionegro","name":"Hotel San Loma","reason":"Una fuente identifica San Loma en la dirección cartográfica; RNT registra Casa Loma en esa misma dirección. Falta confirmar si es el mismo negocio o un cambio de nombre."}
+  ]
+}
