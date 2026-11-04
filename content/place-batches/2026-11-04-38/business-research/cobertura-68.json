@@ -1,12 +1,14 @@
 {
-  "consultado": "04/11/2026 15:49",
+  "consultado": "04/11/2026 16:04",
   "lugares": [
     {
       "slug": "el-penol",
       "name": "El Peñol",
       "batch": "30",
-      "total": 0,
-      "cats": {}
+      "total": 1,
+      "cats": {
+        "hospedaje": 1
+      }
     },
     {
       "slug": "socorro",
@@ -38,24 +40,6 @@
     {
       "slug": "la-playa-de-belen",
       "name": "La Playa de Belén",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "hospedaje": 1
-      }
-    },
-    {
-      "slug": "mongui",
-      "name": "Monguí",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "hospedaje": 1
-      }
-    },
-    {
-      "slug": "rionegro",
-      "name": "Rionegro",
       "batch": "30",
       "total": 1,
       "cats": {
@@ -99,15 +83,6 @@
       }
     },
     {
-      "slug": "tamesis",
-      "name": "Támesis",
-      "batch": "30",
-      "total": 1,
-      "cats": {
-        "hospedaje": 1
-      }
-    },
-    {
       "slug": "venecia",
       "name": "Venecia",
       "batch": "30",
@@ -133,15 +108,6 @@
       "cats": {
         "hospedaje": 1,
         "alimentacion": 1
-      }
-    },
-    {
-      "slug": "barichara",
-      "name": "Barichara",
-      "batch": "30",
-      "total": 2,
-      "cats": {
-        "hospedaje": 2
       }
     },
     {
@@ -209,6 +175,16 @@
       "total": 2,
       "cats": {
         "hospedaje": 2
+      }
+    },
+    {
+      "slug": "tamesis",
+      "name": "Támesis",
+      "batch": "30",
+      "total": 2,
+      "cats": {
+        "hospedaje": 1,
+        "alimentacion": 1
       }
     },
     {
@@ -313,6 +289,16 @@
       }
     },
     {
+      "slug": "barichara",
+      "name": "Barichara",
+      "batch": "30",
+      "total": 6,
+      "cats": {
+        "hospedaje": 3,
+        "alimentacion": 3
+      }
+    },
+    {
       "slug": "la-paz",
       "name": "La Paz",
       "batch": "38",
@@ -324,6 +310,15 @@
       }
     },
     {
+      "slug": "mongui",
+      "name": "Monguí",
+      "batch": "30",
+      "total": 6,
+      "cats": {
+        "hospedaje": 6
+      }
+    },
+    {
       "slug": "san-diego",
       "name": "San Diego",
       "batch": "38",
@@ -332,6 +327,16 @@
         "hospedaje": 2,
         "alimentacion": 2,
         "servicios": 2
+      }
+    },
+    {
+      "slug": "rionegro",
+      "name": "Rionegro",
+      "batch": "30",
+      "total": 8,
+      "cats": {
+        "hospedaje": 6,
+        "alimentacion": 2
       }
     },
     {
