@@ -97,7 +97,14 @@
       "name": "Playa Spratt Bight",
       "description_es": "La playa del centro de San Andrés se extiende junto al paseo peatonal de la avenida Colombia. Es una opción para disfrutar del mar y caminar por la costa sin salir del sector urbano.",
       "source_url": "https://empresario.colombia.travel/regiones-colombianas/gran-caribe-colombiano/san-andres-y-providencia",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 12.58706,
+        "longitude": -81.69522,
+        "source_url": "https://mapcarta.com/es/W28185601",
+        "point_kind": "named_beach_area",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
       "image_key": "attraction-06",
       "status": "documented_pending_coordinates_image_and_review"
     },
@@ -105,7 +112,14 @@
       "name": "Hoyo Soplador",
       "description_es": "Una abertura en la costa rocosa del sur de la isla por la que el oleaje puede impulsar aire y agua. El efecto depende de las condiciones del mar y no se presenta de forma constante.",
       "source_url": "https://empresario.colombia.travel/regiones-colombianas/gran-caribe-colombiano/san-andres-y-providencia",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 12.48136,
+        "longitude": -81.73111,
+        "source_url": "https://mapcarta.com/es/19681306",
+        "point_kind": "mapped_attraction",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
       "image_key": "attraction-07",
       "status": "documented_pending_coordinates_image_and_review"
     }
