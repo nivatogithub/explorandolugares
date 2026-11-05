@@ -1,0 +1,1048 @@
+{
+    "environment": "dev1",
+    "production_touched": false,
+    "businesses": {
+        "san-andres|Hotel Casablanca": {
+            "id": 500003008,
+            "public_id": "bd0cec4c-ca22-4f58-8dd7-cb54530d7798",
+            "place": "san-andres",
+            "name": "Hotel Casablanca",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|La Regatta": {
+            "id": 500003009,
+            "public_id": "af8b35b4-73ca-44e8-a649-127cfd5f164b",
+            "place": "san-andres",
+            "name": "La Regatta",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Blue Life": {
+            "id": 500003010,
+            "public_id": "49e8fb36-0621-4680-a2eb-2a0685036210",
+            "place": "san-andres",
+            "name": "Blue Life",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Sea Watch Caffé": {
+            "id": 500003011,
+            "public_id": "1cd4dda2-1a77-43a1-bd28-c15499354afe",
+            "place": "san-andres",
+            "name": "Sea Watch Caffé",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Restaurante Mahi-Mahi": {
+            "id": 500003012,
+            "public_id": "2b746fb9-3c99-4e62-b4ed-d063ba1c8105",
+            "place": "san-andres",
+            "name": "Restaurante Mahi-Mahi",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Restaurante La Barcarola": {
+            "id": 500003013,
+            "public_id": "cac17b5e-6b89-4a24-813d-e1fc55c01c6f",
+            "place": "san-andres",
+            "name": "Restaurante La Barcarola",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Restaurante Tropical": {
+            "id": 500003014,
+            "public_id": "0dc6181c-d81a-4b19-9b01-79585e7aaad2",
+            "place": "san-andres",
+            "name": "Restaurante Tropical",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Restaurante Bar Casablanca": {
+            "id": 500003015,
+            "public_id": "81637190-1132-4b20-898e-b4658444d5af",
+            "place": "san-andres",
+            "name": "Restaurante Bar Casablanca",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Decameron Isleño": {
+            "id": 500003016,
+            "public_id": "aedaf648-ee49-435c-8915-76f63bb1945c",
+            "place": "san-andres",
+            "name": "Decameron Isleño",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Decameron Los Delfines": {
+            "id": 500003017,
+            "public_id": "fc8e024b-0b76-4c92-b448-568afc96ac09",
+            "place": "san-andres",
+            "name": "Decameron Los Delfines",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Decameron Marazul": {
+            "id": 500003018,
+            "public_id": "76c709ca-b43c-4b4d-85f7-fcf64685a334",
+            "place": "san-andres",
+            "name": "Decameron Marazul",
+            "state": "published",
+            "has_coordinates": true,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003018,
+                        "name": "Decameron Marazul"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "san-andres|Decameron Maryland": {
+            "id": 500003019,
+            "public_id": "5e26a94e-2a91-4a08-a389-cac4981164ad",
+            "place": "san-andres",
+            "name": "Decameron Maryland",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Decameron San Luis": {
+            "id": 500003020,
+            "public_id": "3ac2300f-10f0-45b4-aa65-09f12a9fe1cc",
+            "place": "san-andres",
+            "name": "Decameron San Luis",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|San Luis Beach House": {
+            "id": 500003021,
+            "public_id": "34d3ccc8-b26f-43cc-970d-3ede21d28b45",
+            "place": "san-andres",
+            "name": "San Luis Beach House",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Samawi Hotel": {
+            "id": 500003022,
+            "public_id": "7b00e868-62b8-4d72-b44c-3869a75ff256",
+            "place": "san-andres",
+            "name": "Samawi Hotel",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Hotel Bahía Sardina": {
+            "id": 500003023,
+            "public_id": "aa589343-d383-49e0-b910-391293da59e0",
+            "place": "san-andres",
+            "name": "Hotel Bahía Sardina",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Sea Avenue Hotel": {
+            "id": 500003024,
+            "public_id": "f5c0e51a-5ac3-4ffa-b159-c54a7a17d527",
+            "place": "san-andres",
+            "name": "Sea Avenue Hotel",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Nattivo Collection Hotel": {
+            "id": 500003025,
+            "public_id": "c5df696e-dc48-4d14-881e-beeeb4e48fb9",
+            "place": "san-andres",
+            "name": "Nattivo Collection Hotel",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Aquamare Hotel": {
+            "id": 500003026,
+            "public_id": "498c2bcf-68c6-4b99-8074-85f817c06ea1",
+            "place": "san-andres",
+            "name": "Aquamare Hotel",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003026,
+                        "name": "Aquamare Hotel"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "san-andres|Sol Caribe Campo": {
+            "id": 500003027,
+            "public_id": "1273b6a4-4e4c-4edd-bc2c-ea05d0c106cc",
+            "place": "san-andres",
+            "name": "Sol Caribe Campo",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Hotel Cocoplum Beach": {
+            "id": 500003028,
+            "public_id": "4499abc6-d960-4767-b23a-978d82af64fc",
+            "place": "san-andres",
+            "name": "Hotel Cocoplum Beach",
+            "state": "published",
+            "has_coordinates": true,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003028,
+                        "name": "Hotel Cocoplum Beach"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "san-andres|Sol Caribe San Andrés": {
+            "id": 500003029,
+            "public_id": "dbdd1138-53a0-41ae-9e68-b1d89bf42759",
+            "place": "san-andres",
+            "name": "Sol Caribe San Andrés",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003029,
+                        "name": "Sol Caribe San Andrés"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "san-andres|Calypso Beach Hotel": {
+            "id": 500003030,
+            "public_id": "b81b43ea-0ed0-4b35-ab43-777002af2de3",
+            "place": "san-andres",
+            "name": "Calypso Beach Hotel",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003030,
+                        "name": "Calypso Beach Hotel"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "san-andres|Centro Comercial New Point Plaza": {
+            "id": 500003031,
+            "public_id": "e7d16639-9afa-41ef-b6ef-88b190c7641b",
+            "place": "san-andres",
+            "name": "Centro Comercial New Point Plaza",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Kids Republic · New Point": {
+            "id": 500003032,
+            "public_id": "20f34afb-ecd2-48fd-b66f-3785206615d0",
+            "place": "san-andres",
+            "name": "Kids Republic · New Point",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|La Riviera · San Andrés": {
+            "id": 500003033,
+            "public_id": "10669aab-4245-499a-ae41-17bec7b4e077",
+            "place": "san-andres",
+            "name": "La Riviera · San Andrés",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003033,
+                        "name": "La Riviera · San Andrés"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "san-andres|Donde Francesca": {
+            "id": 500003034,
+            "public_id": "6cca632c-3501-4464-9ce4-e502ed4cfe65",
+            "place": "san-andres",
+            "name": "Donde Francesca",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Capitán Mandy": {
+            "id": 500003035,
+            "public_id": "9944b250-2a66-475d-9600-870beadc4b9b",
+            "place": "san-andres",
+            "name": "Capitán Mandy",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "san-andres|Sharky Dive Shop": {
+            "id": 500003036,
+            "public_id": "35b875aa-8add-4deb-81c1-6790069e91ee",
+            "place": "san-andres",
+            "name": "Sharky Dive Shop",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003036,
+                        "name": "Sharky Dive Shop"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "san-andres|Sol Caribe Seaflower": {
+            "id": 500003037,
+            "public_id": "d1b7d87e-0a3c-46df-bb88-399ea8aebe20",
+            "place": "san-andres",
+            "name": "Sol Caribe Seaflower",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003037,
+                        "name": "Sol Caribe Seaflower"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Palomino Sunrise": {
+            "id": 500003038,
+            "public_id": "14e3316c-6dea-4bbb-a79a-ca27bd6a961d",
+            "place": "palomino",
+            "name": "Palomino Sunrise",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003038,
+                        "name": "Palomino Sunrise"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Üüttaaka Eco-Hotel": {
+            "id": 500003039,
+            "public_id": "9abf3a25-f1db-4eda-b58c-bb1ceca853db",
+            "place": "palomino",
+            "name": "Üüttaaka Eco-Hotel",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003039,
+                        "name": "Üüttaaka Eco-Hotel"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Naio Hotel & Villas": {
+            "id": 500003040,
+            "public_id": "d75a6cc4-d7d3-4830-bcbf-11f7945c7640",
+            "place": "palomino",
+            "name": "Naio Hotel & Villas",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003040,
+                        "name": "Naio Hotel & Villas"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|The Tiki Hut": {
+            "id": 500003041,
+            "public_id": "69a03158-4532-4490-9276-95918a400170",
+            "place": "palomino",
+            "name": "The Tiki Hut",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003041,
+                        "name": "The Tiki Hut"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|El Zoo Hostel Palomino": {
+            "id": 500003042,
+            "public_id": "d53bcf12-305a-41a9-b37b-3509bf7e9b11",
+            "place": "palomino",
+            "name": "El Zoo Hostel Palomino",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003042,
+                        "name": "El Zoo Hostel Palomino"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Finca Escondida": {
+            "id": 500003043,
+            "public_id": "3a877cab-7267-4a33-aeea-906ac8f125b8",
+            "place": "palomino",
+            "name": "Finca Escondida",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003043,
+                        "name": "Finca Escondida"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Aité Eco Resort": {
+            "id": 500003044,
+            "public_id": "44784a09-3524-460f-b917-25bc38720603",
+            "place": "palomino",
+            "name": "Aité Eco Resort",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003044,
+                        "name": "Aité Eco Resort"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Prima Luna": {
+            "id": 500003045,
+            "public_id": "6e8249f5-f9ae-4aeb-927d-13b5ac91f651",
+            "place": "palomino",
+            "name": "Prima Luna",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003045,
+                        "name": "Prima Luna"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|La Casa del Pavo Real": {
+            "id": 500003046,
+            "public_id": "cf218a35-58c9-4d5f-a6bb-341c00bc09bb",
+            "place": "palomino",
+            "name": "La Casa del Pavo Real",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003046,
+                        "name": "La Casa del Pavo Real"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Dreamer Palomino": {
+            "id": 500003047,
+            "public_id": "e6316066-dd0a-44aa-a6ed-e70ba096e919",
+            "place": "palomino",
+            "name": "Dreamer Palomino",
+            "state": "published",
+            "has_coordinates": true,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003047,
+                        "name": "Dreamer Palomino"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Casa Aloha Palomino": {
+            "id": 500003048,
+            "public_id": "6e3c0bbe-7925-470e-a64b-9ce78b285399",
+            "place": "palomino",
+            "name": "Casa Aloha Palomino",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003048,
+                        "name": "Casa Aloha Palomino"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Coconuco Beach Resort": {
+            "id": 500003049,
+            "public_id": "fbb509ab-c3db-4bea-ab3e-ed1f29895dcd",
+            "place": "palomino",
+            "name": "Coconuco Beach Resort",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003049,
+                        "name": "Coconuco Beach Resort"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|One Santuario Natural": {
+            "id": 500003050,
+            "public_id": "15997829-d12d-4f3d-8624-88935c8d33fd",
+            "place": "palomino",
+            "name": "One Santuario Natural",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003050,
+                        "name": "One Santuario Natural"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Casa Colibrí Palomino": {
+            "id": 500003051,
+            "public_id": "252f9c41-38d3-4eb5-b4e0-ca6ae7bae8bc",
+            "place": "palomino",
+            "name": "Casa Colibrí Palomino",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003051,
+                        "name": "Casa Colibrí Palomino"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Chiniü Hotel": {
+            "id": 500003052,
+            "public_id": "02a7cd8d-3c84-4970-b461-1b3f64fbed5b",
+            "place": "palomino",
+            "name": "Chiniü Hotel",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003052,
+                        "name": "Chiniü Hotel"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "palomino|Holss": {
+            "id": 500003053,
+            "public_id": "e370a24f-4b38-41d5-be86-84751d29787c",
+            "place": "palomino",
+            "name": "Holss",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003053,
+                        "name": "Holss"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Cabo Kite Center": {
+            "id": 500003054,
+            "public_id": "10f4d60e-821b-48f1-893f-5ad27f9e2b1c",
+            "place": "uribia",
+            "name": "Cabo Kite Center",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "uribia|TAWI Kite Center and Hostel": {
+            "id": 500003055,
+            "public_id": "be138926-0286-47f0-96f7-b9f0674e2481",
+            "place": "uribia",
+            "name": "TAWI Kite Center and Hostel",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "uribia|Paradise Kite School": {
+            "id": 500003056,
+            "public_id": "54f7c654-a7e5-4391-90ad-6e2f285aafc7",
+            "place": "uribia",
+            "name": "Paradise Kite School",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003056,
+                        "name": "Paradise Kite School"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Hospedaje y Restaurante Luzmila": {
+            "id": 500003057,
+            "public_id": "5eebcd23-1701-433c-a35f-0db6841668f8",
+            "place": "uribia",
+            "name": "Hospedaje y Restaurante Luzmila",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "uribia|Analauli": {
+            "id": 500003058,
+            "public_id": "6edeeb3b-db52-400e-b143-71541e9e11f7",
+            "place": "uribia",
+            "name": "Analauli",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "uribia|Villa Shaymar": {
+            "id": 500003059,
+            "public_id": "adaaf09c-c232-4415-8bee-a39472235bf1",
+            "place": "uribia",
+            "name": "Villa Shaymar",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003059,
+                        "name": "Villa Shaymar"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Ka’i Kashii": {
+            "id": 500003060,
+            "public_id": "d886363a-9bbe-4f56-a57a-1aa646722665",
+            "place": "uribia",
+            "name": "Ka’i Kashii",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003060,
+                        "name": "Ka’i Kashii"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Salaima": {
+            "id": 500003061,
+            "public_id": "571d49c9-55a8-43ed-9cc9-6e1d2c358e61",
+            "place": "uribia",
+            "name": "Salaima",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003061,
+                        "name": "Salaima"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Arantxa": {
+            "id": 500003062,
+            "public_id": "2c89e504-786c-401e-b739-9f3a04f5e621",
+            "place": "uribia",
+            "name": "Arantxa",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003062,
+                        "name": "Arantxa"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Amistad": {
+            "id": 500003063,
+            "public_id": "2ce18f27-84cc-4184-ab9a-bb2f4d84fede",
+            "place": "uribia",
+            "name": "Amistad",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003063,
+                        "name": "Amistad"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Kayuusipaa": {
+            "id": 500003064,
+            "public_id": "24ee6729-6ee7-41e8-8081-dd161cece68f",
+            "place": "uribia",
+            "name": "Kayuusipaa",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003064,
+                        "name": "Kayuusipaa"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Sumaiwajat": {
+            "id": 500003065,
+            "public_id": "afe4c9a0-1dbe-47be-8922-c7e6b61d13c9",
+            "place": "uribia",
+            "name": "Sumaiwajat",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003065,
+                        "name": "Sumaiwajat"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Shipi’ia Girnu": {
+            "id": 500003066,
+            "public_id": "e7cad9de-eeb3-4be0-80ee-e8115d19c2d8",
+            "place": "uribia",
+            "name": "Shipi’ia Girnu",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003066,
+                        "name": "Shipi’ia Girnu"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Sau Ipa": {
+            "id": 500003067,
+            "public_id": "a7bee108-5c68-42f6-9cf3-5f41bc05e417",
+            "place": "uribia",
+            "name": "Sau Ipa",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "uribia|Reflejos del Sol": {
+            "id": 500003068,
+            "public_id": "db8acf4a-2211-4190-8d9f-89e60597f700",
+            "place": "uribia",
+            "name": "Reflejos del Sol",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003068,
+                        "name": "Reflejos del Sol"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Ranchería Utta": {
+            "id": 500003069,
+            "public_id": "9e701b97-a8ca-498e-89da-b8b8d7522649",
+            "place": "uribia",
+            "name": "Ranchería Utta",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003069,
+                        "name": "Ranchería Utta"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Apalanchii": {
+            "id": 500003070,
+            "public_id": "4552f857-a104-46aa-ba89-e0f394d3260f",
+            "place": "uribia",
+            "name": "Apalanchii",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "uribia|Playa Bonita": {
+            "id": 500003071,
+            "public_id": "4fbed3ef-7520-4ace-9e34-e99c6889a163",
+            "place": "uribia",
+            "name": "Playa Bonita",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003071,
+                        "name": "Playa Bonita"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Mar y Sol": {
+            "id": 500003072,
+            "public_id": "31eb77d1-af31-4303-b3c4-01a1a1ca32b0",
+            "place": "uribia",
+            "name": "Mar y Sol",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003072,
+                        "name": "Mar y Sol"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Mar Abierto": {
+            "id": 500003073,
+            "public_id": "ee34986f-d488-43bf-9bab-efe153fb1dd2",
+            "place": "uribia",
+            "name": "Mar Abierto",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003073,
+                        "name": "Mar Abierto"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|La Ballena Azul": {
+            "id": 500003074,
+            "public_id": "8d7c56f3-30f8-4451-a155-07e2c99c7112",
+            "place": "uribia",
+            "name": "La Ballena Azul",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003074,
+                        "name": "La Ballena Azul"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Su’útpa Kashii": {
+            "id": 500003075,
+            "public_id": "d0f1fa83-76f9-46e0-a667-7f4d27d006fd",
+            "place": "uribia",
+            "name": "Su’útpa Kashii",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003075,
+                        "name": "Su’útpa Kashii"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Jarrinapi": {
+            "id": 500003076,
+            "public_id": "23060296-418d-4b37-9eed-f0527676096f",
+            "place": "uribia",
+            "name": "Jarrinapi",
+            "state": "location_review_required",
+            "error": "El punto del negocio está fuera del municipio seleccionado."
+        },
+        "uribia|Rancho el Coral": {
+            "id": 500003077,
+            "public_id": "722a10ec-73cc-4513-a136-33e9c0008490",
+            "place": "uribia",
+            "name": "Rancho el Coral",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003077,
+                        "name": "Rancho el Coral"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Doña Mery": {
+            "id": 500003078,
+            "public_id": "575dc285-791b-48b6-a41f-22422676ee2e",
+            "place": "uribia",
+            "name": "Doña Mery",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003078,
+                        "name": "Doña Mery"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Damikeisi": {
+            "id": 500003079,
+            "public_id": "fe397553-021e-4294-bb26-ad7f2948ea34",
+            "place": "uribia",
+            "name": "Damikeisi",
+            "state": "published",
+            "has_coordinates": false,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003079,
+                        "name": "Damikeisi"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Posada Urraichipa": {
+            "id": 500003080,
+            "public_id": "52c6ba24-ff42-4351-9098-7c22164b3455",
+            "place": "uribia",
+            "name": "Posada Urraichipa",
+            "state": "published",
+            "has_coordinates": true,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003080,
+                        "name": "Posada Urraichipa"
+                    }
+                ],
+                "skipped": []
+            }
+        },
+        "uribia|Hotel Villa María": {
+            "id": 500003081,
+            "public_id": "7330a5d1-6670-417c-b08c-0900036bb290",
+            "place": "uribia",
+            "name": "Hotel Villa María",
+            "state": "published",
+            "has_coordinates": true,
+            "location_exception": false,
+            "publication_result": {
+                "published": [
+                    {
+                        "id": 500003081,
+                        "name": "Hotel Villa María"
+                    }
+                ],
+                "skipped": []
+            }
+        }
+    }
+}

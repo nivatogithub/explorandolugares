@@ -1,0 +1,33 @@
+{
+    "environment": "dev1",
+    "source_commit": "04d7970ea79b01b48be64edb4be941b5c0189ecd",
+    "release_input_sha256": "769f897a8ee49a3f7aa2acc0a9e1161f30c41043b2cc9194cc940ff1e889afbd",
+    "production_touched": false,
+    "places": [
+        {
+            "slug": "san-andres",
+            "id": 10097,
+            "status": "published",
+            "visible_attractions": 7,
+            "visible_experiences": 5,
+            "url": "http:\/\/127.0.0.1:8086\/lugares\/san-andres\/"
+        },
+        {
+            "slug": "palomino",
+            "id": 10098,
+            "status": "published",
+            "visible_attractions": 3,
+            "visible_experiences": 3,
+            "url": "http:\/\/127.0.0.1:8086\/lugares\/palomino\/"
+        },
+        {
+            "slug": "uribia",
+            "id": 10099,
+            "status": "published",
+            "visible_attractions": 9,
+            "visible_experiences": 3,
+            "url": "http:\/\/127.0.0.1:8086\/lugares\/uribia\/"
+        }
+    ],
+    "other_content_preserved": true
+}
