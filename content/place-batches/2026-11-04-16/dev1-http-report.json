@@ -1,0 +1,569 @@
+{
+    "environment": "dev1",
+    "routes": [
+        {
+            "path": "\/lugares\/arauca\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Arauca.Río y cultura llanera",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/arauca\/"
+        },
+        {
+            "path": "\/en\/lugares\/arauca\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Arauca.River life and Llanero culture",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/arauca\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/arauca\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Arauca.Rio e cultura llanera",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/arauca\/"
+        },
+        {
+            "path": "\/lugares\/bahia-solano\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Bahía Solano.Entre selva y Pacífico",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/bahia-solano\/"
+        },
+        {
+            "path": "\/en\/lugares\/bahia-solano\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Bahía Solano.Between rainforest and Pacific",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/bahia-solano\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/bahia-solano\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Bahía Solano.Entre floresta e Pacífico",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/bahia-solano\/"
+        },
+        {
+            "path": "\/lugares\/capurgana\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Capurganá.Caribe junto al Darién",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/capurgana\/"
+        },
+        {
+            "path": "\/en\/lugares\/capurgana\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Capurganá.Caribbean beside the Darién",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/capurgana\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/capurgana\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Capurganá.Caribe junto ao Darién",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/capurgana\/"
+        },
+        {
+            "path": "\/lugares\/florencia\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Florencia.Puerta al paisaje amazónico",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/florencia\/"
+        },
+        {
+            "path": "\/en\/lugares\/florencia\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Florencia.A gateway to Amazonian landscapes",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/florencia\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/florencia\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Florencia.Entrada para a paisagem amazônica",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/florencia\/"
+        },
+        {
+            "path": "\/lugares\/inirida\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Inírida.Ríos, cerros y sabanas",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/inirida\/"
+        },
+        {
+            "path": "\/en\/lugares\/inirida\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Inírida.Rivers, hills and savannas",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/inirida\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/inirida\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Inírida.Rios, cerros e savanas",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/inirida\/"
+        },
+        {
+            "path": "\/lugares\/ipiales\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Ipiales.Arquitectura sobre el Guáitara",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/ipiales\/"
+        },
+        {
+            "path": "\/en\/lugares\/ipiales\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Ipiales.Architecture above the Guáitara",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/ipiales\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/ipiales\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Ipiales.Arquitetura sobre o Guáitara",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/ipiales\/"
+        },
+        {
+            "path": "\/lugares\/la-macarena\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "La Macarena.Ríos y paisajes de la serranía",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/la-macarena\/"
+        },
+        {
+            "path": "\/en\/lugares\/la-macarena\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "La Macarena.Rivers and mountain landscapes",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/la-macarena\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/la-macarena\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "La Macarena.Rios e paisagens da serra",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/la-macarena\/"
+        },
+        {
+            "path": "\/lugares\/leticia\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Leticia.La vida junto al Amazonas",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/leticia\/"
+        },
+        {
+            "path": "\/en\/lugares\/leticia\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Leticia.Life beside the Amazon",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/leticia\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/leticia\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Leticia.A vida junto ao Amazonas",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/leticia\/"
+        },
+        {
+            "path": "\/lugares\/mitu\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Mitú.Encuentros con el Vaupés",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/mitu\/"
+        },
+        {
+            "path": "\/en\/lugares\/mitu\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Mitú.Discovering the Vaupés",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/mitu\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/mitu\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Mitú.Encontros com o Vaupés",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/mitu\/"
+        },
+        {
+            "path": "\/lugares\/mocoa\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Mocoa.Bosques, senderos y cascadas",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/mocoa\/"
+        },
+        {
+            "path": "\/en\/lugares\/mocoa\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Mocoa.Forests, trails and waterfalls",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/mocoa\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/mocoa\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Mocoa.Florestas, trilhas e cascatas",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/mocoa\/"
+        },
+        {
+            "path": "\/lugares\/nuqui\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Nuquí.Mar, selva y comunidades",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/nuqui\/"
+        },
+        {
+            "path": "\/en\/lugares\/nuqui\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Nuquí.Sea, rainforest and communities",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/nuqui\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/nuqui\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Nuquí.Mar, floresta e comunidades",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/nuqui\/"
+        },
+        {
+            "path": "\/lugares\/popayan\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Popayán.Calles que cuentan historias",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/popayan\/"
+        },
+        {
+            "path": "\/en\/lugares\/popayan\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Popayán.Streets that tell stories",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/popayan\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/popayan\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Popayán.Ruas que contam histórias",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/popayan\/"
+        },
+        {
+            "path": "\/lugares\/providencia\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Providencia y Santa Catalina.Montañas y colores del Caribe",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/providencia\/"
+        },
+        {
+            "path": "\/en\/lugares\/providencia\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Providencia y Santa Catalina.Mountains and Caribbean colours",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/providencia\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/providencia\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Providencia y Santa Catalina.Montanhas e cores do Caribe",
+            "place_images": 4,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/providencia\/"
+        },
+        {
+            "path": "\/lugares\/puerto-carreno\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Puerto Carreño.Encuentros con la Orinoquía",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/puerto-carreno\/"
+        },
+        {
+            "path": "\/en\/lugares\/puerto-carreno\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Puerto Carreño.Discovering the Orinoquía",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/puerto-carreno\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/puerto-carreno\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Puerto Carreño.Encontros com a Orinoquía",
+            "place_images": 3,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/puerto-carreno\/"
+        },
+        {
+            "path": "\/lugares\/salento\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "Salento.Balcones, café y palmas de cera",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/salento\/"
+        },
+        {
+            "path": "\/en\/lugares\/salento\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "Salento.Balconies, coffee and wax palms",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/salento\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/salento\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "Salento.Varandas, café e palmeiras-de-cera",
+            "place_images": 1,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/salento\/"
+        },
+        {
+            "path": "\/lugares\/san-jose-del-guaviare\/",
+            "http": 200,
+            "lang": "es",
+            "heading": "San José del Guaviare.Arte rupestre y naturaleza",
+            "place_images": 5,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/lugares\/san-jose-del-guaviare\/"
+        },
+        {
+            "path": "\/en\/lugares\/san-jose-del-guaviare\/",
+            "http": 200,
+            "lang": "en",
+            "heading": "San José del Guaviare.Rock art and nature",
+            "place_images": 5,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/en\/lugares\/san-jose-del-guaviare\/"
+        },
+        {
+            "path": "\/pt-br\/lugares\/san-jose-del-guaviare\/",
+            "http": 200,
+            "lang": "pt-BR",
+            "heading": "San José del Guaviare.Arte rupestre e natureza",
+            "place_images": 5,
+            "broken_images": [],
+            "canonical": "https:\/\/explorandolugares.com\/pt-br\/lugares\/san-jose-del-guaviare\/"
+        }
+    ],
+    "errors": [],
+    "places": [
+        {
+            "slug": "arauca",
+            "publication_status": "published",
+            "attractions": 2,
+            "experiences": 1,
+            "businesses": 16,
+            "published_businesses": 13
+        },
+        {
+            "slug": "bahia-solano",
+            "publication_status": "published",
+            "attractions": 3,
+            "experiences": 2,
+            "businesses": 23,
+            "published_businesses": 22
+        },
+        {
+            "slug": "capurgana",
+            "publication_status": "published",
+            "attractions": 3,
+            "experiences": 2,
+            "businesses": 28,
+            "published_businesses": 28
+        },
+        {
+            "slug": "florencia",
+            "publication_status": "published",
+            "attractions": 1,
+            "experiences": 1,
+            "businesses": 24,
+            "published_businesses": 24
+        },
+        {
+            "slug": "inirida",
+            "publication_status": "published",
+            "attractions": 3,
+            "experiences": 3,
+            "businesses": 40,
+            "published_businesses": 40
+        },
+        {
+            "slug": "ipiales",
+            "publication_status": "published",
+            "attractions": 1,
+            "experiences": 1,
+            "businesses": 43,
+            "published_businesses": 43
+        },
+        {
+            "slug": "la-macarena",
+            "publication_status": "published",
+            "attractions": 3,
+            "experiences": 3,
+            "businesses": 17,
+            "published_businesses": 17
+        },
+        {
+            "slug": "leticia",
+            "publication_status": "published",
+            "attractions": 2,
+            "experiences": 2,
+            "businesses": 30,
+            "published_businesses": 15
+        },
+        {
+            "slug": "mitu",
+            "publication_status": "published",
+            "attractions": 2,
+            "experiences": 2,
+            "businesses": 30,
+            "published_businesses": 30
+        },
+        {
+            "slug": "mocoa",
+            "publication_status": "published",
+            "attractions": 2,
+            "experiences": 1,
+            "businesses": 21,
+            "published_businesses": 21
+        },
+        {
+            "slug": "nuqui",
+            "publication_status": "published",
+            "attractions": 3,
+            "experiences": 3,
+            "businesses": 30,
+            "published_businesses": 21
+        },
+        {
+            "slug": "popayan",
+            "publication_status": "published",
+            "attractions": 3,
+            "experiences": 2,
+            "businesses": 30,
+            "published_businesses": 30
+        },
+        {
+            "slug": "providencia",
+            "publication_status": "published",
+            "attractions": 3,
+            "experiences": 2,
+            "businesses": 24,
+            "published_businesses": 8
+        },
+        {
+            "slug": "puerto-carreno",
+            "publication_status": "published",
+            "attractions": 2,
+            "experiences": 1,
+            "businesses": 17,
+            "published_businesses": 17
+        },
+        {
+            "slug": "salento",
+            "publication_status": "published",
+            "attractions": 3,
+            "experiences": 1,
+            "businesses": 41,
+            "published_businesses": 41
+        },
+        {
+            "slug": "san-jose-del-guaviare",
+            "publication_status": "published",
+            "attractions": 4,
+            "experiences": 2,
+            "businesses": 34,
+            "published_businesses": 34
+        }
+    ],
+    "total_published_places": 104
+}

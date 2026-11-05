@@ -20,3 +20,9 @@ Reservar dev1 con el controlador compartido. Reconstruir la entrada, comprobar e
 Alcance: 16 destinos, 42 atractivos documentados (40 con coordenadas), 29 experiencias, 59 imágenes y 448 negocios. Coco Viejo y Cerro de Urania conservan sus imágenes y textos pero no se publican como atractivos mientras falte su punto; sus destinos sí se publican. Las experiencias móviles no reciben el punto de un hotel como supuesto lugar de encuentro.
 
 Los enlaces de mapas ausentes se dejan vacíos; no se inventan enlaces cortos ni búsquedas genéricas. Ojo de Dios conserva el aviso de cierre temporal. Las fuentes y aprobaciones de este lote no autorizan producción ni preprod. El despliegue se valida en las tres rutas idiomáticas y se registra con su commit de contenido.
+
+## Resultado comprobado
+
+Publicado en dev1: 16 lugares, 40 atractivos, 29 experiencias y 404 negocios gratuitos. Conservados como borrador: 2 atractivos sin coordenadas y 44 negocios cuyos puntos fueron rechazados por el control territorial. Consultar los recibos para identidades exactas. La excepción de 47 negocios sin coordenadas no elimina ese control.
+
+Preparar negocios con `scripts/import-businesses-dev1.php prepare`. Resolver las 47 excepciones nominales a los IDs locales mediante `scripts/apply-dev1-business-exceptions.py`; se conserva el resto de la política. Publicar con el mismo importador en modo `publish`. Para servir medios nuevos en dev1, generar la configuración limitada con `scripts/build-dev1-media-alias.py` a partir del recibo y habilitarla en Apache de ese ambiente. No copiar configuraciones con IDs de dev1 a otro entorno: regenerarlas desde sus propios recibos.

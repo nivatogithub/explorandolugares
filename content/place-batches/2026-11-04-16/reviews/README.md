@@ -1,3 +1,5 @@
+> Registro histórico de exportaciones iniciales. El estado posterior de aprobación está en los manifiestos de imágenes y la publicación local en los recibos dev1 del lote.
+
 # Revisión recibida el 4 de noviembre de 2026
 
 Se recibieron seis exportaciones. La primera contiene dos aprobaciones de Leticia y una solicitud de cambio en el muelle («acá no hay nada generado»). Las otras cinco tienen `review: {}` y no acreditan decisiones.
