@@ -29,6 +29,18 @@ final class CoverageService
                 $counts[$status]++;
                 $places[]=['id'=>$place['id'],'name'=>$place['name'],'municipality_code'=>$place['municipality_code'],'parent_place_id'=>null,'type'=>$place['type'],'status'=>$status,'url'=>$status==='published'?'/lugares/'.rawurlencode($place['slug']).'/':null];
             }
+            // Match published guides against the complete geography, without guessing ambiguous matches.
+            $aliases=['mompox'=>'13468','buga'=>'76111','la-playa-de-belen'=>'54398','pueblo-viejo'=>'47570','santa-rosa-de-lima'=>'13683','manaure'=>'20443','capurgana'=>'27006','palomino'=>'44090'];
+            $localities=['capurgana'=>'Capurganá','palomino'=>'Palomino'];
+            foreach($rows as $row){
+                if($row['publication_status']!=='published'||self::normalized($row['department'])!==self::normalized($department['name']))continue;
+                $url='/lugares/'.rawurlencode($row['slug']).'/';
+                if(count(array_filter($places,static fn($p)=>$p['url']===$url))>0)continue;
+                $matches=array_values(array_filter($this->geography,static fn($unit)=>$unit['department_code']===$department['code']&&(self::normalized($unit['name'])===self::normalized($row['slug'])||$unit['code']===($aliases[$row['slug']]??null))));
+                if(count($matches)!==1)continue;
+                $unit=$matches[0];
+                $places[]=['id'=>'live-'.$department['code'].'-'.$row['slug'],'name'=>$localities[$row['slug']]??$unit['name'],'municipality_code'=>$unit['code'],'parent_place_id'=>null,'type'=>isset($localities[$row['slug']])?'other':'municipality','status'=>'published','url'=>$url];
+            }
             $selectedCodes=array_column($this->scope['municipalities']??[],'code');
             $scoped=!empty($selectedCodes);
             foreach($this->scope['municipalities']??[] as $selected){
@@ -48,7 +60,7 @@ final class CoverageService
                 $related=array_values(array_filter($places,static fn($p)=>$p['municipality_code']===$unit['code']));
                 $public=count(array_filter($related,static fn($p)=>$p['status']==='published'));
                 $progress=count(array_filter($related,static fn($p)=>$p['status']==='in_progress'));
-                $municipalities[]=['code'=>$unit['code'],'name'=>$unit['name'],'in_scope'=>$inScope,'tracked_count'=>count($related),'published_count'=>$public,'status'=>!$inScope?'outside_scope':($public>0?'published':($progress>0?'in_progress':(!$related?'untracked':($available?'pending':'unknown'))))];
+                $municipalities[]=['code'=>$unit['code'],'name'=>$unit['name'],'in_scope'=>$inScope,'tracked_count'=>count($related),'published_count'=>$public,'status'=>$public>0?'published':(!$inScope?'outside_scope':($progress>0?'in_progress':(!$related?'untracked':($available?'pending':'unknown'))))];
             }
             $allPublished=count(array_filter($rows,static fn($r)=>$r['publication_status']==='published'&&self::normalized($r['department'])===self::normalized($department['name'])));
             $counts['published']=$allPublished;
