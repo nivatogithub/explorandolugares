@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "slug": "palomino",
+  "name": "Palomino",
+  "country_code": "CO",
+  "department_code": "44",
+  "department_name": "La Guajira",
+  "municipality_code": "44090",
+  "municipality_name": "Dibulla",
+  "type": "corregimiento",
+  "status": "editorial_prepared_not_published",
+  "public": false,
+  "geolocation": {
+    "latitude": 11.24417,
+    "longitude": -73.5625,
+    "source_url": "https://en.wikipedia.org/wiki/Palomino,_Colombia",
+    "point_kind": "populated_place_reference_not_entry",
+    "checked_at": "2026-11-04",
+    "public_map_url": null
+  },
+  "intro_draft_es": "Palomino es un corregimiento de Dibulla, en La Guajira, entre la costa del Caribe y las estribaciones de la Sierra Nevada de Santa Marta. Su entorno combina playa, ríos y servicios para organizar una estancia de naturaleza. La guía diferencia los sitios para conocer de las actividades que requieren un prestador.",
+  "why_visit_es": [
+    "Recorrer la costa y reconocer las desembocaduras de los ríos Palomino y San Salvador.",
+    "Organizar actividades como tubing, surf y observación de aves con oferta local documentada.",
+    "Encontrar alojamientos y restaurantes para una estancia junto al Caribe, sin confundir Palomino con otros sectores de Dibulla."
+  ],
+  "attractions": [
+    {
+      "slug": "playa-palomino",
+      "name": "Playa Palomino",
+      "description_es": "La playa reúne la costa abierta del Caribe y la vegetación del borde costero. Es un lugar para caminar y contemplar el paisaje; la anchura de la arena y las condiciones del mar cambian.",
+      "source_url": "https://mapcarta.com/es/W271537481",
+      "geolocation": {
+        "latitude": 11.25576,
+        "longitude": -73.55609,
+        "source_url": "https://mapcarta.com/es/W271537481",
+        "point_kind": "named_beach_area_not_access",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-01",
+      "image_status": "reference_pending",
+      "approval": null
+    },
+    {
+      "slug": "desembocadura-rio-palomino",
+      "name": "Desembocadura del río Palomino",
+      "description_es": "Al oeste del poblado, el río llega al Caribe y forma un paisaje distinto al de la playa central. La visita se plantea desde la orilla, sin prometer condiciones de baño ni cruces del río.",
+      "source_url": "https://manglar.uninorte.edu.co/bitstream/handle/10584/10947/1118839494.pdf",
+      "geolocation": null,
+      "image_key": "attraction-02",
+      "image_status": "reference_pending",
+      "approval": null
+    },
+    {
+      "slug": "desembocadura-rio-san-salvador",
+      "name": "Desembocadura del río San Salvador",
+      "description_es": "Hacia el este de Palomino, este encuentro entre río y mar permite conocer otro tramo del paisaje costero. El acceso y el estado del recorrido deben confirmarse localmente; no se propone cruzar el río.",
+      "source_url": "https://www.alohapalomino.com/es/post/playas-de-palomino-gu%C3%ADa-local-de-mar-r%C3%ADos-y-planes-gratis-2026",
+      "geolocation": null,
+      "image_key": "attraction-03",
+      "image_status": "reference_pending",
+      "approval": null
+    }
+  ],
+  "experiences": [
+    {
+      "slug": "tubing",
+      "name": "Tubing en el río",
+      "description_es": "Un descenso acompañado en flotador permite recorrer parte del entorno fluvial. Confirma el tramo, el equipo, las condiciones del agua y el punto de encuentro con el prestador.",
+      "provider_evidence": [
+        {
+          "provider": "Aité Eco Resort",
+          "offer_url": "https://www.aite.com.co/aventura",
+          "checked_at": "2026-11-04"
+        }
+      ],
+      "geolocation": null,
+      "location_note": "Punto de encuentro y recorrido variables: confirmar con el prestador.",
+      "publication_status": "editorial_review",
+      "public_provider_promotion": false
+    },
+    {
+      "slug": "surf",
+      "name": "Clases de surf",
+      "description_es": "Una clase permite acercarse al surf con acompañamiento y equipo acordados con una escuela. La actividad depende del oleaje y de las condiciones del día.",
+      "provider_evidence": [
+        {
+          "provider": "Aité Eco Resort",
+          "offer_url": "https://www.aite.com.co/aventura",
+          "checked_at": "2026-11-04"
+        }
+      ],
+      "geolocation": null,
+      "location_note": "Punto de encuentro y recorrido variables: confirmar con el prestador.",
+      "publication_status": "editorial_review",
+      "public_provider_promotion": false
+    },
+    {
+      "slug": "observacion-de-aves",
+      "name": "Observación de aves",
+      "description_es": "Una caminata guiada invita a observar las aves del entorno de Palomino. El recorrido y la duración dependen de la oferta contratada; no se garantiza avistar especies concretas.",
+      "provider_evidence": [
+        {
+          "provider": "Aité Eco Resort",
+          "offer_url": "https://www.aite.com.co/aventura",
+          "checked_at": "2026-11-04"
+        }
+      ],
+      "geolocation": null,
+      "location_note": "Punto de encuentro y recorrido variables: confirmar con el prestador.",
+      "publication_status": "editorial_review",
+      "public_provider_promotion": false
+    }
+  ],
+  "territorial_exclusions": [
+    "Parque Tayrona y Quebrada Valencia no se registran como atractivos de Palomino.",
+    "Ciudad Perdida no es un atractivo dentro de Palomino.",
+    "No presentar poblados o espacios indígenas sagrados como visitas de acceso libre.",
+    "No incorporar atractivos de Dibulla cabecera o Mingueo por compartir municipio."
+  ]
+}

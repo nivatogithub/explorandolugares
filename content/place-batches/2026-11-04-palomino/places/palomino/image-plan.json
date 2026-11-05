@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "place_slug": "palomino",
+  "images": [
+    {
+      "key": "cover",
+      "subject": "Palomino: paisaje costero amplio",
+      "status": "reference_selected_license_confirmed",
+      "source_page": "https://commons.wikimedia.org/wiki/File:La_playa_palomino.jpg",
+      "author": "Fabian Abtonio Hoyos Pulido",
+      "license": "CC-BY-SA-4.0",
+      "output_path": null,
+      "approval": null,
+      "notes": "Portada y atractivo requieren composiciones distintas; no entregar la misma foto duplicada."
+    },
+    {
+      "key": "attraction-01",
+      "subject": "Playa Palomino",
+      "status": "reference_selected_license_confirmed",
+      "source_page": "https://commons.wikimedia.org/wiki/File:La_playa_palomino.jpg",
+      "author": "Fabian Abtonio Hoyos Pulido",
+      "license": "CC-BY-SA-4.0",
+      "output_path": null,
+      "approval": null,
+      "notes": "Portada y atractivo requieren composiciones distintas; no entregar la misma foto duplicada."
+    },
+    {
+      "key": "attraction-02",
+      "subject": "Desembocadura río Palomino",
+      "status": "reference_pending",
+      "source_page": null,
+      "author": null,
+      "license": null,
+      "output_path": null,
+      "approval": null,
+      "notes": "Portada y atractivo requieren composiciones distintas; no entregar la misma foto duplicada."
+    },
+    {
+      "key": "attraction-03",
+      "subject": "Desembocadura río San Salvador",
+      "status": "reference_pending",
+      "source_page": null,
+      "author": null,
+      "license": null,
+      "output_path": null,
+      "approval": null,
+      "notes": "Portada y atractivo requieren composiciones distintas; no entregar la misma foto duplicada."
+    }
+  ],
+  "candidate_sources": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Dónde_el_mar_besa_a_el_río.jpg",
+      "subject": "Desembocadura río Palomino",
+      "license_status": "pending_validation"
+    },
+    {
+      "url": "https://www.pexels.com/photo/aerial-view-of-palomino-beach-in-colombia-31342929/",
+      "subject": "Vista aérea Palomino",
+      "license_status": "pending_asset_validation"
+    }
+  ],
+  "rule": "No sustituir San Salvador por una imagen del río Palomino. No declarar generada/aprobada una referencia."
+}
