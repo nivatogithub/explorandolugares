@@ -42,7 +42,8 @@ for folder in sorted((ROOT/'places').iterdir()):
    # A lodging/office reference is not an excursion meeting point.
    if kind=='experience':g={}
    poi={'slug':slug(a['name']),'type':kind,'publication_status':'published' if ready else 'draft','latitude':g.get('latitude'),'longitude':g.get('longitude'),'translations':{l:{'name':names[j],'description':descriptions[j],'map_url':a.get('public_map_url') or '', 'external_url':'','external_label':''} for j,l in enumerate(LOCALES)}}
-   if a.get('image_key'):poi['image']=image(folder,a['image_key'],names)
+   image_key=a.get('image_key') or (f'attraction-{i+1:02}' if kind=='place' else None)
+   if image_key:poi['image']=image(folder,image_key,names)
    if not ready:missing.append({'place':s,'attraction':a['name'],'reason':'missing_site_coordinates'})
    pois.append(poi)
  businesses=[]
