@@ -1,0 +1,456 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "jamundi",
+  "businesses": [
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Hotel Emperador Jamundí",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/8917766117",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "El mirador",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12083151975",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Pollo Kin Kin",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/3331340524",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "La Gondola de Venecia",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/3331340526",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Santorini",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/11501547515",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Panadería Casa Blanca",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/4898731162",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Panadería Riberas",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/4898731163",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Sándwich Qbano",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12084033876",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Matambre parrilla argentina",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12084045981",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "La arepa roja",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12084045984",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Origen cocina artesanal",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12084045985",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Megapan",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12084075292",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "Ferreteria el Samán",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/3331340436",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "SuperInter supermercado",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/3331340517",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "Dollarcity",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/11903098746",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "Carrusel Tienda Infantil",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/9084523857",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "AKT motos",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12084075298",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "comercio",
+      "information_status": "PUBLICO",
+      "name": "YIRE sports",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12084075299",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "licores",
+      "information_status": "PUBLICO",
+      "name": "Rancho y Licores",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/3331340440",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "licores",
+      "information_status": "PUBLICO",
+      "name": "Licores RK",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12081574916",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "licores",
+      "information_status": "PUBLICO",
+      "name": "El Corso",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12084032764",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Centro de Fisioterapia Kinesis",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/3331340439",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Odontología Orthoplan",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/3331340441",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Droguerias Farmacenter",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/4888641522",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "salud",
+      "information_status": "PUBLICO",
+      "name": "Drogueria Sebastián",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/11920910198",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "servicios",
+      "information_status": "PUBLICO",
+      "name": "Bancolombia",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/2285735688",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "servicios",
+      "information_status": "PUBLICO",
+      "name": "Banco de Bogotá",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/4872232243",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "servicios",
+      "information_status": "PUBLICO",
+      "name": "Centro Diagnostico Automotor Jamundi",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/11902380244",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "servicios",
+      "information_status": "PUBLICO",
+      "name": "Estación de Servicio Cottolengo",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/11902380248",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "servicios",
+      "information_status": "PUBLICO",
+      "name": "Cerrajero Jamundi",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/node/12084033879",
+          "checked_at": "2026-11-05",
+          "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

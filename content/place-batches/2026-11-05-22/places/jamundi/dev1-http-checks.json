@@ -1,0 +1,193 @@
+{
+  "environment": "dev1",
+  "pages": [
+    {
+      "url": "http://127.0.0.1:8086/lugares/jamundi/",
+      "status": 200,
+      "title": "Qué ver y hacer en Jamundí, Valle del Cauca | Explorando Lugares",
+      "images": 5,
+      "canonical": [
+        "https://explorandolugares.com/lugares/jamundi/"
+      ],
+      "hreflang": {
+        "en": "https://explorandolugares.com/en/lugares/jamundi/",
+        "es": "https://explorandolugares.com/lugares/jamundi/",
+        "pt-BR": "https://explorandolugares.com/pt-br/lugares/jamundi/",
+        "x-default": "https://explorandolugares.com/lugares/jamundi/"
+      },
+      "html_sha256": "f961effc677404a3e5c19cecfa2f3218764827184a850d9a9afe7f9aa45eac78",
+      "verified_map_links": 3
+    },
+    {
+      "url": "http://127.0.0.1:8086/en/lugares/jamundi/",
+      "status": 200,
+      "title": "Things to do in Jamundí, Valle del Cauca | Explorando Lugares",
+      "images": 5,
+      "canonical": [
+        "https://explorandolugares.com/en/lugares/jamundi/"
+      ],
+      "hreflang": {
+        "en": "https://explorandolugares.com/en/lugares/jamundi/",
+        "es": "https://explorandolugares.com/lugares/jamundi/",
+        "pt-BR": "https://explorandolugares.com/pt-br/lugares/jamundi/",
+        "x-default": "https://explorandolugares.com/lugares/jamundi/"
+      },
+      "html_sha256": "94666e7186f52d98a5e0f3ae9732912b588c7b99bef1e70788b0c1e21f242978",
+      "verified_map_links": 3
+    },
+    {
+      "url": "http://127.0.0.1:8086/pt-br/lugares/jamundi/",
+      "status": 200,
+      "title": "O que fazer em Jamundí, Valle del Cauca | Explorando Lugares",
+      "images": 5,
+      "canonical": [
+        "https://explorandolugares.com/pt-br/lugares/jamundi/"
+      ],
+      "hreflang": {
+        "en": "https://explorandolugares.com/en/lugares/jamundi/",
+        "es": "https://explorandolugares.com/lugares/jamundi/",
+        "pt-BR": "https://explorandolugares.com/pt-br/lugares/jamundi/",
+        "x-default": "https://explorandolugares.com/lugares/jamundi/"
+      },
+      "html_sha256": "9c427d48906100b19c1a978ef9d0070c6128413139340a6070ec7b8417a2b92f",
+      "verified_map_links": 3
+    }
+  ],
+  "local_resources": {
+    "http://127.0.0.1:8086/assets/brand/explorando-lugares-logo-v2-transparent.png": {
+      "status": 200,
+      "bytes": 128161,
+      "sha256": "008f162558e4e8d0021a5afd53a742d5d8f08f55583d57f9e4d31bfbb9c3ffbb",
+      "type": "image/png"
+    },
+    "http://127.0.0.1:8086/assets/destinos/lote-20261105/jamundi/28341a5f4db038bc-jamundi-portada-parque-bajo-palace-v4-recorte.webp": {
+      "status": 200,
+      "bytes": 322076,
+      "sha256": "23c810ad3610f3f43d911df2be29ef9883046c89e4a3b4e0169bef52af9e9a5e",
+      "type": "image/webp"
+    },
+    "http://127.0.0.1:8086/assets/destinos/lote-20261105/jamundi/28341a5f4db038bc-jamundi-cascada-las-gemelas-v1.webp": {
+      "status": 200,
+      "bytes": 346562,
+      "sha256": "2a0ed9cfa3206395e29e77e06805e6486d8c30caf4a3dadd945020ff10eb3a26",
+      "type": "image/webp"
+    },
+    "http://127.0.0.1:8086/assets/destinos/lote-20261105/jamundi/28341a5f4db038bc-jamundi-morro-de-la-cruz-v1.webp": {
+      "status": 200,
+      "bytes": 215640,
+      "sha256": "9e1b6a993289f18b3a77dd94e1a6e2f7d753158f16f8507a358619bbcb4936a9",
+      "type": "image/webp"
+    },
+    "http://127.0.0.1:8086/assets/destinos/lote-20261105/jamundi/28341a5f4db038bc-jamundi-iglesia-de-robles-v1.webp": {
+      "status": 200,
+      "bytes": 244530,
+      "sha256": "d56400d8297eeedd7ecae37d63ad437d86647b95283d3e6fdb398bf532179a86",
+      "type": "image/webp"
+    },
+    "http://127.0.0.1:8086/assets/place-relations.js?v=214c433e6d9a": {
+      "status": 200,
+      "bytes": 967,
+      "sha256": "214c433e6d9a903c825d82d68acb07a5f0ea55810fa70a13a8f70b6b25a40fd2",
+      "type": "text/javascript"
+    },
+    "http://127.0.0.1:8086/assets/compact-business-cards.js?v=371ff99cdcf2": {
+      "status": 200,
+      "bytes": 400,
+      "sha256": "371ff99cdcf2b652804f791b916f9552d7a6f24445626f657b21e1c6a0e1c938",
+      "type": "text/javascript"
+    },
+    "http://127.0.0.1:8086/assets/load-more-cards.js?v=18cdb3a04ae2": {
+      "status": 200,
+      "bytes": 5662,
+      "sha256": "18cdb3a04ae251c7274b778dbb586dcb94f45a5978147eb88b45d75cdcf2d1cb",
+      "type": "text/javascript"
+    },
+    "http://127.0.0.1:8086/assets/main-menu.js?v=c0cb170ec9c6": {
+      "status": 200,
+      "bytes": 2547,
+      "sha256": "c0cb170ec9c62ea558b1010afcde5739ed76df4792d72dec99679d4c51c00fba",
+      "type": "text/javascript"
+    },
+    "http://127.0.0.1:8086/assets/account-entry.js?v=74512a8f4011": {
+      "status": 200,
+      "bytes": 8723,
+      "sha256": "74512a8f4011fb8ddb6f5283dcf565b9a87e81f7fdefd22dc9054f7f2b88457a",
+      "type": "text/javascript"
+    },
+    "http://127.0.0.1:8086/assets/cobertura/analytics.js?v=493cd06fb6bb": {
+      "status": 200,
+      "bytes": 7240,
+      "sha256": "493cd06fb6bbe6736b528cd3463bbf2240a0eabfb8ac7bfe9b76f958d58cc0c1",
+      "type": "text/javascript"
+    },
+    "http://127.0.0.1:8086/assets/contact-phone.js?v=901e4a8bb12c": {
+      "status": 200,
+      "bytes": 1414,
+      "sha256": "901e4a8bb12c76726a0ab6fd7bbf3ffb54a3014faf3f824a3c3c92f49e4e6853",
+      "type": "text/javascript"
+    },
+    "http://127.0.0.1:8086/assets/cobertura/portal-tokens.css?v=e613f3754660": {
+      "status": 200,
+      "bytes": 861,
+      "sha256": "e613f37546609922770253c4a620d3f0ad2dc9eb24f3a9b8d0b32f501f58fbfb",
+      "type": "text/css"
+    },
+    "http://127.0.0.1:8086/assets/style.css?v=86e5408995cb": {
+      "status": 200,
+      "bytes": 115713,
+      "sha256": "86e5408995cb381b2e2d7f68259ed40b1718490883e16b59aac68b8faa484da7",
+      "type": "text/css"
+    },
+    "http://127.0.0.1:8086/assets/portal-identity.css?v=fc046e9505b9": {
+      "status": 200,
+      "bytes": 19691,
+      "sha256": "fc046e9505b9c6b659deaedeb4514c03fbddec667e5f3354d6c89ab68884606e",
+      "type": "text/css"
+    },
+    "http://127.0.0.1:8086/assets/portal-shell.css?v=ed1ecf4e350f": {
+      "status": 200,
+      "bytes": 9860,
+      "sha256": "ed1ecf4e350fd334f3cdedbfe47d52836fb15e9d01c7edfbc46c7b2f8f7aa027",
+      "type": "text/css"
+    },
+    "http://127.0.0.1:8086/assets/account-entry.css?v=18c376be852e": {
+      "status": 200,
+      "bytes": 3466,
+      "sha256": "18c376be852ed6bf6cd3552b81cd829e717884611bc37466246b6cf2d0799edb",
+      "type": "text/css"
+    },
+    "http://127.0.0.1:8086/assets/account-page.css?v=6889d81ef653": {
+      "status": 200,
+      "bytes": 7580,
+      "sha256": "6889d81ef653e2b321cb137e2567eb5574fbc4b172cdbd5870632fc5dd54599c",
+      "type": "text/css"
+    },
+    "http://127.0.0.1:8086/assets/cobertura/analytics.css?v=2825cd17105b": {
+      "status": 200,
+      "bytes": 3459,
+      "sha256": "2825cd17105b2d2de795e6ec00653d1c76ae6a8a792025d12856cf63ec84cc67",
+      "type": "text/css"
+    },
+    "http://127.0.0.1:8086/assets/contact-phone.css?v=3d58c30f62f2": {
+      "status": 200,
+      "bytes": 3540,
+      "sha256": "3d58c30f62f253959a9b1e793a98f802621474196f376f11dd8c0c08cac1ab42",
+      "type": "text/css"
+    },
+    "http://127.0.0.1:8086/assets/style.css?v=destination-preview-3": {
+      "status": 200,
+      "bytes": 115713,
+      "sha256": "86e5408995cb381b2e2d7f68259ed40b1718490883e16b59aac68b8faa484da7",
+      "type": "text/css"
+    },
+    "http://127.0.0.1:8086/assets/directory-tiers.css?v=16868a41e9b5": {
+      "status": 200,
+      "bytes": 7482,
+      "sha256": "16868a41e9b55821637768e3134134c236390643c9a980a5b4994ad0dc66b77a",
+      "type": "text/css"
+    }
+  },
+  "visual_browser_qa": false,
+  "human_approved": false,
+  "production_modified": false
+}

@@ -1,0 +1,30 @@
+{
+  "scope": "Jamundí exact package currently reviewed on dev1; not production deployed",
+  "dev1_url": "http://127.0.0.1:8086/lugares/jamundi/",
+  "attractions": 3,
+  "businesses": 30,
+  "images": 4,
+  "languages": [
+    "es",
+    "en",
+    "pt-BR"
+  ],
+  "cover": "v4 cropped selected by owner",
+  "pending": "Charco del Duende excluded from deployment pending precise point; preserved separately",
+  "maps_general": {
+    "jamundi": "https://www.google.com/maps?cid=12232699799083098750"
+  },
+  "production_instructions": "Use existing approved place import/publication workflow. Preserve existing data and IDs, no statistics reset. Integrate current main and check media approval before production. No old Git history merge.",
+  "files_sha256": {
+    "paquete-destino.json": "9d7707ef5195c04183c3bcde00bb834a7d69aeb99ec37c948f9966ad119e4061",
+    "images/jamundi-portada-parque-bajo-palace-v4-recorte.webp": "23c810ad3610f3f43d911df2be29ef9883046c89e4a3b4e0169bef52af9e9a5e",
+    "images/jamundi-cascada-las-gemelas-v1.webp": "2a0ed9cfa3206395e29e77e06805e6486d8c30caf4a3dadd945020ff10eb3a26",
+    "images/jamundi-morro-de-la-cruz-v1.webp": "9e1b6a993289f18b3a77dd94e1a6e2f7d753158f16f8507a358619bbcb4936a9",
+    "images/jamundi-iglesia-de-robles-v1.webp": "d56400d8297eeedd7ecae37d63ad437d86647b95283d3e6fdb398bf532179a86",
+    "paquete-negocios.json": "d39b87df05688ad5db7e531d62ebb034eb10f43262d135f412c8203f8dcfdb6a",
+    "business-geolocations.json": "4890f4528656cd5fd39ef9b55c32fdd50f05cf86bc809f8b3a882bd776dca89c",
+    "maps-selected.json": "b78222d2b9f8963eab3b912795b05c93a04675c34f9daadeef8eeb5b4461489e",
+    "duende-pending-preserved.json": "9ad156d36dde54cf3edaa19be2130e46e5d70e3b957ae32ae3abf50d78feb1c5",
+    "dev1-http-checks.json": "37c6c4c90b026e3d730e5417ef3828f2d92d25cc52f6f4ba360d128256a3426e"
+  }
+}

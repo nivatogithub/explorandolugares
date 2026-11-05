@@ -1,0 +1,47 @@
+{
+  "records": [
+    {
+      "name": "Cascadas las Gemelas",
+      "address": "Cascadas las Gemelas, Jamundí, Valle del Cauca",
+      "latitude": 3.2014161,
+      "longitude": -76.638155,
+      "fid": "0x8e309baf264951bb:0xdd0c7e2df9520086",
+      "map_url": "https://www.google.com/maps?cid=15928244718024130694",
+      "slug": "cascada-las-gemelas",
+      "checked_at": "2026-11-05",
+      "evidence_file": "gemelas-evidence.json",
+      "payload_sha256": "024fbc0297ea4b92716564f1dab3df47f5b95b1441fd57c84b21b9037bf051f4",
+      "selection_basis": "Nombre y dirección de Jamundí/corregimiento contrastados con fuente turística; no resultado homónimo sin dirección"
+    },
+    {
+      "name": "Morro de la Cruz-San Vicente",
+      "address": "795C+MM Morro de la Cruz-San Vicente, Jamundí, Valle del Cauca",
+      "latitude": 3.2591943999999997,
+      "longitude": -76.62830559999999,
+      "fid": "0x8e309900432f5791:0x76488af6c57e76e",
+      "map_url": "https://www.google.com/maps?cid=532700942954915694",
+      "slug": "morro-de-la-cruz",
+      "checked_at": "2026-11-05",
+      "evidence_file": "morro-evidence.json",
+      "payload_sha256": "5b2c3a7bb06d293f065f9fccc36439a6328b850321d73c806a2d2aeea0246fab",
+      "selection_basis": "Nombre y dirección de Jamundí/corregimiento contrastados con fuente turística; no resultado homónimo sin dirección"
+    },
+    {
+      "name": "Parroquia Nuestra Señora del Perpetuo Socorro",
+      "address": "Parroquia Nuestra Señora del Perpetuo Socorro, Unnamed Road, Robles, Jamundí, Valle del Caucaigl, Robles, Jamundí, Valle del Cauca",
+      "latitude": 3.1291062999999997,
+      "longitude": -76.5937952,
+      "fid": "0x8e3085a3d66921a1:0xe420d4f55e686161",
+      "map_url": "https://www.google.com/maps?cid=16438372790218285409",
+      "slug": "iglesia-de-robles",
+      "checked_at": "2026-11-05",
+      "evidence_file": "robles-evidence.json",
+      "payload_sha256": "f666c82a25252584cc477ae913ade020ec3b7039abda9a1d66601c4f5ec55248",
+      "selection_basis": "Nombre y dirección de Jamundí/corregimiento contrastados con fuente turística; no resultado homónimo sin dirección"
+    }
+  ],
+  "pending": [
+    "petroglifos-charco-duende"
+  ],
+  "visual_google_maps_verified": false
+}
