@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "place_slug": "uribia",
+  "status": "editorial_additions_for_review_not_imported",
+  "source_manifest": "uribia-new-references.json",
+  "hero": {
+    "slug": "plaza-principal-uribia",
+    "source_index": 10,
+    "role": "hero",
+    "source_url": "https://comisionfilmicacolombia.com/locacion/plaza-principal-uribia/",
+    "image_file": "uribia-generated-v2/10-1200.webp",
+    "geolocation": null,
+    "approval": null,
+    "locales": {
+      "es": {
+        "name": "Plaza principal de Uribia",
+        "caption": "La plaza Colombia, en el centro de Uribia, reúne corredores y un obelisco central. La portada muestra la cabecera del municipio que conecta esta guía de la Alta Guajira.",
+        "alt": "Vista de la plaza principal de Uribia y su obelisco"
+      },
+      "en": {
+        "name": "Uribia Main Square",
+        "caption": "Plaza Colombia, in central Uribia, features walkways and a central obelisk. The cover shows the municipal town at the heart of this Alta Guajira guide.",
+        "alt": "View of Uribia main square and its obelisk"
+      },
+      "pt-br": {
+        "name": "Praça principal de Uribia",
+        "caption": "A praça Colombia, no centro de Uribia, reúne passagens e um obelisco central. A capa apresenta a sede do município desta guia da Alta Guajira.",
+        "alt": "Vista da praça principal de Uribia e de seu obelisco"
+      }
+    }
+  },
+  "attraction_addition": {
+    "slug": "centro-cultural-uribia",
+    "source_index": 11,
+    "zone": "uribia-urbana",
+    "source_url": "https://comisionfilmicacolombia.com/locacion/centro-cultural-uribia/",
+    "image_file": "uribia-generated-v2/11-1200.webp",
+    "geolocation": null,
+    "public_map_url": null,
+    "approval": null,
+    "access_status": "programming_and_indoor_access_unconfirmed",
+    "locales": {
+      "es": {
+        "name": "Centro Cultural de Uribia",
+        "description": "Un espacio dedicado a las artes en la cabecera de Uribia, con áreas para danza, música y teatro. Aporta una mirada a la vida cultural urbana del municipio. La programación y el acceso interior requieren confirmación."
+      },
+      "en": {
+        "name": "Uribia Cultural Centre",
+        "description": "An arts venue in the town of Uribia, with spaces for dance, music and theatre. It offers a glimpse of the municipality’s urban cultural life. Programme details and indoor access require confirmation."
+      },
+      "pt-br": {
+        "name": "Centro Cultural de Uribia",
+        "description": "Um espaço dedicado às artes na sede de Uribia, com áreas para dança, música e teatro. Acrescenta uma perspectiva sobre a vida cultural urbana do município. A programação e o acesso ao interior precisam ser confirmados."
+      }
+    }
+  },
+  "image_identity_correction": {
+    "source_index": 8,
+    "previous_label": "Playa del Cabo",
+    "replacement_label": "Playa Dorada junto al Pilón de Azúcar",
+    "image_file": "uribia-generated-v2/08-1200.webp",
+    "action": "Correct image label only; do not merge entities or inherit coordinates",
+    "identity_status": "owner_review_correction_pending_geographic_reconciliation",
+    "keep_distinct_entities": [
+      "playa-el-cabo",
+      "playa-dorada-pilon-de-azucar"
+    ],
+    "new_entity_geolocation": null,
+    "new_entity_public_map_url": null,
+    "do_not_copy_fields_from_playa_el_cabo": [
+      "geolocation",
+      "public_map_url",
+      "description",
+      "access_point"
+    ],
+    "locales": {
+      "es": {
+        "name": "Playa Dorada junto al Pilón de Azúcar",
+        "review_note": "Esta imagen reemplaza el rótulo incorrecto «Playa del Cabo». La playa del poblado y la playa junto al Pilón se conservan como entidades distintas; la ubicación y el acceso de esta última están pendientes de verificar."
+      },
+      "en": {
+        "name": "Playa Dorada beside Pilón de Azúcar",
+        "review_note": "This image replaces the incorrect label “Playa del Cabo”. The village beach and the beach beside Pilón remain separate entities; the latter’s location and access still require verification."
+      },
+      "pt-br": {
+        "name": "Playa Dorada junto ao Pilón de Azúcar",
+        "review_note": "Esta imagem substitui o rótulo incorreto “Playa del Cabo”. A praia do povoado e a praia junto ao Pilón permanecem como entidades diferentes; a localização e o acesso da segunda ainda precisam ser verificados."
+      }
+    }
+  },
+  "evidence": {
+    "checked_at": "2026-11-04",
+    "sources": [
+      "https://comisionfilmicacolombia.com/locacion/plaza-principal-uribia/",
+      "https://comisionfilmicacolombia.com/locacion/centro-cultural-uribia/"
+    ],
+    "scope": "Sources confirm place identity and described spaces, not visiting hours, entry availability or photo reuse permission.",
+    "capture_dates_confirmed": false,
+    "photo_rights_cleared_by_visual_approval": false
+  },
+  "reproducibility_review": {
+    "checked_at": "2026-11-04",
+    "reference_rows": 11,
+    "manifest_rows": 11,
+    "embedded_images": 22,
+    "originals_present": 11,
+    "generated_webp_present": 11,
+    "output_hashes_match_manifest": true,
+    "png_masters_required": false,
+    "isolated_rebuild_exit_code": 0,
+    "rebuilt_html_byte_identical": true,
+    "rebuilt_manifest_byte_identical": true,
+    "limitations": [
+      "Constructor depends on /opt/homebrew/bin/cwebp, not portable without changing dependency resolution.",
+      "Constructor silently skips rows missing both PNG and final WebP; current review has all eleven.",
+      "Beach label correction is hardcoded at index 8; reference JSON still has old label. This additions file records explicit entity separation.",
+      "Visual decisions are localStorage/export JSON, not persisted by the constructor into Git."
+    ]
+  }
+}
