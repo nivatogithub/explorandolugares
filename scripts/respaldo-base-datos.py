@@ -86,7 +86,8 @@ def main():
   while f.read(1048576):pass
  result['local_path']=str(local);result['gzip_verified']=True
  meta=local.with_suffix('.json');meta.write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n');os.chmod(meta,0o600)
- local_options={'directory':str(destination),'remote_directory':str(remote.parent),'apply':True,'retention_class':str(ROOT/'scripts/php/BackupRetention.php')}
+ # Creating a backup must never delete older backups implicitly.
+ local_options={'directory':str(destination),'remote_directory':str(remote.parent),'apply':False,'retention_class':str(ROOT/'scripts/php/BackupRetention.php')}
  code=(ROOT/'scripts/php/backup-retention.php').read_text().replace('<?php','<?php\n$options=json_decode('+repr(json.dumps(local_options))+',true);',1).replace('declare(strict_types=1);','')
  cleanup=subprocess.run(['php'],input=code,text=True,capture_output=True)
  if cleanup.returncode:raise SystemExit('Respaldo guardado y verificado; conservación local detenida para proteger copias.')
