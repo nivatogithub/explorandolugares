@@ -23,3 +23,7 @@ Las nueve atracciones tienen referencias cartográficas; el punto de Bahía Hond
 Faltan las versiones visuales finales y su aprobación, adaptar el expediente al contrato de importación vigente y validar el paquete. No se ha importado ni desplegado Uribia con este trabajo. Estos archivos son fuentes de trabajo versionables, no un paquete publicable completo.
 
 Refugio Pantu queda retenido por fuentes contradictorias sobre cierre temporal. Jepírachi se incluye por instrucción del propietario sin prometer funcionamiento ni ingreso interior. Bahía Portete permanece como contexto, no visita habilitada.
+
+## Revisión visual del propietario
+
+Las nueve ilustraciones nuevas están retenidas por objeción de fidelidad geográfica y acabado. La décima propuesta es la reutilización de Taroa. Comparativo autocontenido: `revision-completa.html`. Ninguna aprobación nueva ni despliegue. Ver `places/uribia/visual-fidelity-audit.json`.

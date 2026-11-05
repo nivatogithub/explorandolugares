@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-11-04",
+  "owner_objection": "Las geografías no se parecen y todas parecen cuadros creados",
+  "publication_allowed": false,
+  "automatic_regeneration_paused": true,
+  "findings": [
+    {
+      "key": "macuira",
+      "finding": "La ilustración aclara y reorganiza visualmente el relieve y vegetación respecto de la foto oscura. No suficiente para aprobar fidelidad.",
+      "decision": "hold_for_reference_comparison"
+    },
+    {
+      "key": "faro-punta-gallinas",
+      "finding": "Adaptación de foto vertical a horizontal cambia tamaño relativo de torre y edificio. Revisar proporciones, estructura y contexto antes de aceptar.",
+      "decision": "hold_for_reference_comparison"
+    },
+    {
+      "key": "faro-cabo",
+      "finding": "Se retiraron turistas y se reinterpretó la ladera. Comparar silueta y escala del faro.",
+      "decision": "hold_for_reference_comparison"
+    },
+    {
+      "key": "jepirachi",
+      "finding": "Referencia histórica no acredita configuración presente. No usar ilustración como prueba del estado actual.",
+      "decision": "hold_for_reference_comparison"
+    }
+  ],
+  "all_new_assets_status": "fidelity_disputed_owner_review_required",
+  "next_action": "Revisar originales y propuestas lado a lado antes de nuevas generaciones; no propagar estas salidas a ningún ambiente."
+}
