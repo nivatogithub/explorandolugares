@@ -19,23 +19,23 @@
     "point_type": "historic central square, not municipal geometric centroid"
   },
   "blockers": [
-    "Aprobación humana de cuatro imágenes pendiente; se permite únicamente revisión local aislada.",
-    "Pruebas de importación/HTTP/SEO y revisión visual del dev pendientes de montaje coordinado por worker principal."
+    "Five added attraction illustrations pending generation; previous three-attraction ZIP is superseded, not a final delivery.",
+    "Human approval and final local QA pending."
   ],
   "progress": {
     "institutional_sources_identified": 5,
-    "draft_attractions": 3,
+    "draft_attractions": 8,
     "coordinate_points_identified": 4,
-    "maps_verified": 4,
+    "maps_verified": 8,
     "images_generated": 4,
     "images_human_approved": 0,
     "imported": false,
     "published": false,
-    "businesses_geolocated": 7
+    "businesses_geolocated": 36
   },
   "next_actions": [
     "Montar candidato en dev1 con el coordinador; verificar importación y render ES/EN/PT-BR.",
     "Revisión visual y aprobación humana de contenido e imágenes antes de promoción."
   ],
-  "ready_for_local_import": true
+  "ready_for_local_import": false
 }

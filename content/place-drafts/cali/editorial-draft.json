@@ -93,6 +93,21 @@
           "section": "places",
           "label": "Alcaldía de Cali: El Gato del Río",
           "url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+        },
+        {
+          "section": "places",
+          "label": "Alcaldía de Cali: reapertura parcial de Cristo Rey,21agosto2026",
+          "url": "https://www.cali.gov.co/boletines/publicaciones/193827/anuncian-apertura-de-cristo-rey-tras-las-inspecciones-realizadas-luego-del-sismo/"
+        },
+        {
+          "section": "places",
+          "label": "Zoológico de Cali: planea tu visita",
+          "url": "https://www.zoologicodecali.com.co/visita"
+        },
+        {
+          "section": "places",
+          "label": "Museo La Tertulia",
+          "url": "https://museolatertulia.com/"
         }
       ],
       "en": [
@@ -125,6 +140,21 @@
           "section": "places",
           "label": "Alcaldía de Cali: El Gato del Río",
           "url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+        },
+        {
+          "section": "places",
+          "label": "Alcaldía de Cali: reapertura parcial de Cristo Rey,21agosto2026",
+          "url": "https://www.cali.gov.co/boletines/publicaciones/193827/anuncian-apertura-de-cristo-rey-tras-las-inspecciones-realizadas-luego-del-sismo/"
+        },
+        {
+          "section": "places",
+          "label": "Zoológico de Cali: planea tu visita",
+          "url": "https://www.zoologicodecali.com.co/visita"
+        },
+        {
+          "section": "places",
+          "label": "Museo La Tertulia",
+          "url": "https://museolatertulia.com/"
         }
       ],
       "pt-BR": [
@@ -157,6 +187,21 @@
           "section": "places",
           "label": "Alcaldía de Cali: El Gato del Río",
           "url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+        },
+        {
+          "section": "places",
+          "label": "Alcaldía de Cali: reapertura parcial de Cristo Rey,21agosto2026",
+          "url": "https://www.cali.gov.co/boletines/publicaciones/193827/anuncian-apertura-de-cristo-rey-tras-las-inspecciones-realizadas-luego-del-sismo/"
+        },
+        {
+          "section": "places",
+          "label": "Zoológico de Cali: planea tu visita",
+          "url": "https://www.zoologicodecali.com.co/visita"
+        },
+        {
+          "section": "places",
+          "label": "Museo La Tertulia",
+          "url": "https://museolatertulia.com/"
         }
       ]
     }
@@ -305,6 +350,156 @@
         "image_license": "",
         "image_license_url": ""
       }
+    },
+    {
+      "slug": "bulevar-rio",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4526661,
+      "longitude": -76.5347844,
+      "translations": {
+        "es": {
+          "name": "Bulevar del Río",
+          "description": "El paseo peatonal junto al río Cali une espacios del centro entre árboles, puentes y arquitectura urbana. La Ermita y el Puente Ortiz ayudan a orientarse en el recorrido.",
+          "map_url": "https://www.google.com/maps?cid=5477684040922625391",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Bulevar del Río",
+          "description": "This pedestrian promenade follows the Cali River through the centre, among trees, bridges and urban architecture. La Ermita and Puente Ortiz are useful landmarks along the way.",
+          "map_url": "https://www.google.com/maps?cid=5477684040922625391",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Bulevar del Río",
+          "description": "O passeio de pedestres acompanha o rio Cali pelo centro, entre árvores, pontes e arquitetura urbana. La Ermita e a Ponte Ortiz ajudam a orientar o percurso.",
+          "map_url": "https://www.google.com/maps?cid=5477684040922625391",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "zoologico-cali",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4481076,
+      "longitude": -76.5568372,
+      "translations": {
+        "es": {
+          "name": "Zoológico de Cali",
+          "description": "Un espacio dedicado a la biodiversidad y la educación ambiental, con un recorrido entre vegetación y hábitats de fauna. Consulta las condiciones de visita vigentes antes de ir.",
+          "map_url": "https://www.google.com/maps?cid=3172202417941265075",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Cali Zoo",
+          "description": "A place devoted to biodiversity and environmental education, with a route through vegetation and wildlife habitats. Check current visiting arrangements before travelling.",
+          "map_url": "https://www.google.com/maps?cid=3172202417941265075",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Zoológico de Cali",
+          "description": "Um espaço dedicado à biodiversidade e à educação ambiental, com um percurso entre vegetação e habitats de fauna. Consulte as condições atuais de visita antes de ir.",
+          "map_url": "https://www.google.com/maps?cid=3172202417941265075",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "cristo-rey",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4360243,
+      "longitude": -76.5647906,
+      "translations": {
+        "es": {
+          "name": "Cristo Rey",
+          "description": "El monumento de brazos abiertos domina la ladera occidental de Cali y ofrece una perspectiva de la ciudad. El ecoparque tiene accesos y tramos diferenciados: confirma cuáles están habilitados antes de subir.",
+          "map_url": "https://www.google.com/maps?cid=12726769678870394303",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Cristo Rey",
+          "description": "The open-armed monument overlooks Cali from its western hills. The ecopark has separate access routes and sections: check which are available before heading up.",
+          "map_url": "https://www.google.com/maps?cid=12726769678870394303",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Cristo Rey",
+          "description": "O monumento de braços abertos se destaca na encosta oeste de Cali e oferece uma perspectiva da cidade. O ecoparque tem acessos e trechos distintos: confirme quais estão disponíveis antes de subir.",
+          "map_url": "https://www.google.com/maps?cid=12726769678870394303",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "museo-tertulia",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4502809,
+      "longitude": -76.5453033,
+      "translations": {
+        "es": {
+          "name": "Museo La Tertulia",
+          "description": "Un referente de las artes visuales de Cali junto al río. Sus edificios y espacios exteriores acompañan una programación de exposiciones y cine que cambia a lo largo del año.",
+          "map_url": "https://www.google.com/maps?cid=8812593101924022379",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "La Tertulia Museum",
+          "description": "A landmark for Cali’s visual arts beside the river. Its buildings and outdoor spaces host a programme of exhibitions and cinema that changes throughout the year.",
+          "map_url": "https://www.google.com/maps?cid=8812593101924022379",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Museu La Tertulia",
+          "description": "Uma referência das artes visuais de Cali junto ao rio. Seus edifícios e espaços externos recebem uma programação de exposições e cinema que muda ao longo do ano.",
+          "map_url": "https://www.google.com/maps?cid=8812593101924022379",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
+    },
+    {
+      "slug": "plaza-cayzedo",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4518194,
+      "longitude": -76.5325303,
+      "translations": {
+        "es": {
+          "name": "Plaza de Cayzedo",
+          "description": "La plaza central reúne palmeras y memoria urbana, rodeada por la Catedral de San Pedro, el Palacio Nacional y otros edificios del centro histórico.",
+          "map_url": "https://www.google.com/maps?cid=11898042663095340097",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Plaza de Cayzedo",
+          "description": "The central square brings together palms and urban history, surrounded by San Pedro Cathedral, the National Palace and other historic-centre buildings.",
+          "map_url": "https://www.google.com/maps?cid=11898042663095340097",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Plaza de Cayzedo",
+          "description": "A praça central reúne palmeiras e memória urbana, cercada pela Catedral de San Pedro, pelo Palacio Nacional e por outros edifícios do centro histórico.",
+          "map_url": "https://www.google.com/maps?cid=11898042663095340097",
+          "external_url": "",
+          "external_label": ""
+        }
+      }
     }
   ],
   "local_research": {
@@ -317,9 +512,9 @@
     "acquisition_strategies": [],
     "sources": [],
     "notes": [
-      "Candidato para revisión local. Imágenes pendientes de aprobación humana por hash. No publicado.",
-      "Se incluyen tres atractivos físicos documentados. No se inventan experiencias para llenar la sección.",
-      "Directorio separado: siete negocios georreferenciados, hospedaje 3, alimentación 2 y cultura 2. Coordenadas en sidecar porque BusinessPackage no las admite."
+      "Ampliación en curso: ocho atractivos físicos representativos y 36 fichas de directorio. Faltan cinco imágenes antes de regenerar ZIP.",
+      "Cristo Rey: boletín municipal21agosto2026 anunció reapertura tramos2y5 y cierrepreventivo3. No se prometen horarios, reserva ni accesibilidad integral.",
+      "Experiencia real de salsa documentada en SwingLatino Bailoteo; incorporación editorial pendiente de imagen sin venue inventado."
     ]
   },
   "hero_image": {
