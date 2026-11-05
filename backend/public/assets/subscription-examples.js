@@ -22,7 +22,7 @@
   const syncView = presentation => { cardButton.setAttribute('aria-pressed',String(presentation==='card')); pageButton.setAttribute('aria-pressed',String(presentation==='page')); };
   const openView = presentation => {
     const url = new URL('/business/demo.php',location.origin);
-    url.searchParams.set('view',dialog.dataset.view); url.searchParams.set('embedded','1'); url.searchParams.set('presentation',presentation);
+    url.searchParams.set('view',dialog.dataset.view); url.searchParams.set('idioma', en ? 'en' : pt ? 'pt-BR' : 'es'); url.searchParams.set('embedded','1'); url.searchParams.set('presentation',presentation);
     loading.hidden = false; syncView(presentation); frame.src = url.href;
   };
   cardButton.addEventListener('click',()=>openView('card')); pageButton.addEventListener('click',()=>openView('page'));
@@ -46,7 +46,7 @@
     event.preventDefault(); trigger = link; loading.hidden = false;
     const view = url.searchParams.get('view'); dialog.dataset.view = view;
     const hasPage = ['page','page_premium'].includes(view); views.hidden = !hasPage;
-    url.searchParams.set('embedded','1'); if(hasPage){url.searchParams.set('presentation','card');syncView('card');} frame.src = url.href;
+    url.searchParams.set('idioma', en ? 'en' : pt ? 'pt-BR' : 'es'); url.searchParams.set('embedded','1'); if(hasPage){url.searchParams.set('presentation','card');syncView('card');} frame.src = url.href;
     document.documentElement.classList.add('subscription-example-open'); dialog.showModal(); close.focus();
   });
 })();

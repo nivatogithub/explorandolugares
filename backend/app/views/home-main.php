@@ -108,7 +108,7 @@ declare(strict_types=1);
 </h2>
 <p><?=$e($copy['business_intro'])?>
 </p>
-<a class="pill" href="/negocios-locales"><?=$e($copy['local_businesses'])?>
+<a class="pill" href="<?=$e($prefix)?>/negocios-locales/"><?=$e($copy['local_businesses'])?>
 </a>
 </div>
 <div class="steps">

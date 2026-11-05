@@ -117,7 +117,7 @@ $format = static fn($value) => number_format((int)$value, 0, '.', $locale === 'e
 <p>
 <?=$escape($copy['travellerBody'])?>
 </p>
-<a href="/contact.php?lang=<?=$escape($locale)?>">
+<a href="/contact.php?lang=<?=$escape(strtolower($locale))?>">
 <?=$escape($copy['suggest'])?>
 </a>
 </div>
