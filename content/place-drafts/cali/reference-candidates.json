@@ -42,5 +42,41 @@
     "reference_human_approved": false,
     "usage": "reference candidate awaiting user selection before further generation",
     "visual_scope": "squirrel monkey on branch in enclosure, not entrance or overall zoo"
+  },
+  {
+    "slug": "bulevar-rio",
+    "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-cali/.local/cali-references/bulevar-walkway-approved-reference.jpg",
+    "sha256": "2e4636a410cf016fb8f26fd323e2c1b30707ed74220fb6b0931c0ca5a7f89fed",
+    "author": "Cathetovar",
+    "capture_date": "2026-10-04",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Explanada_peatonal_sobre_el_Bulevar_del_Río_Puente_Ortiz.jpg",
+    "license": "CC BY-SA 4.0",
+    "reference_human_approved": true,
+    "approval_scope": "reference photo selection and local candidate generation only; not final illustration publication",
+    "supersedes_previous_reference_for_slug": true
+  },
+  {
+    "slug": "zoologico-cali",
+    "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-cali/.local/cali-references/zoo-entrance-approved-reference.jpg",
+    "sha256": "c0299e27a428d073d4013aec1a9ebbfaf88344d08eb8e9b65e4dc3c365101a72",
+    "author": "Petruss",
+    "capture_date": "2013-02-12",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Entrada_Zoologico_de_Cali.jpg",
+    "license": "CC BY-SA 4.0",
+    "reference_human_approved": true,
+    "approval_scope": "reference photo selection and local candidate generation only; not final illustration publication",
+    "supersedes_previous_reference_for_slug": true
+  },
+  {
+    "slug": "plaza-cayzedo",
+    "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/lugar-cali/.local/cali-references/plaza-2026-approved-reference.jpg",
+    "sha256": "6045dbbc5f538205c20c920048bce1089ec60e8526e8ce1d3b50b62519acffbc",
+    "author": "Hurluberlue",
+    "capture_date": "2026-01-27",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Monumento_a_Joaquín_de_Cayzedo_y_Cuero,_Plaza_de_Cayzedo,_Cali.jpg",
+    "license": "CC BY-SA 4.0",
+    "reference_human_approved": true,
+    "approval_scope": "reference photo selection and local candidate generation only; not final illustration publication",
+    "supersedes_previous_reference_for_slug": true
   }
 ]

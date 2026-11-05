@@ -14,21 +14,21 @@
         "eyebrow": "Valle del Cauca · Colombia",
         "headline": "Río, patrimonio y ritmo caleño",
         "intro": "Conoce el centro histórico, recorre el Bulevar del Río y sube a San Antonio. Cali reúne espacios culturales, arte urbano y una tradición salsera que forma parte de su vida cotidiana.",
-        "meta_description": "Qué conocer en Cali: La Ermita, San Antonio y El Gato del Río. Recorre su patrimonio urbano, sus espacios culturales y sus paseos junto al río."
+        "meta_description": "Descubre Cali entre patrimonio, arte y naturaleza: San Antonio, La Ermita, Cristo Rey, el Bulevar del Río, museos y espacios para conocer la ciudad."
       },
       "en": {
         "display_name": "Cali",
         "eyebrow": "Valle del Cauca · Colombia",
         "headline": "Riverside walks, heritage and local rhythm",
         "intro": "Explore the historic centre, walk along the Bulevar del Río and head up to San Antonio. Cali brings together cultural spaces, public art and a salsa tradition woven into everyday life.",
-        "meta_description": "Explore Cali: La Ermita, San Antonio and El Gato del Río. Discover urban heritage, cultural spaces and riverside walks."
+        "meta_description": "Discover Cali through heritage, art and nature: San Antonio, La Ermita, Cristo Rey, riverside walks, museums and places to explore the city."
       },
       "pt-BR": {
         "display_name": "Cali",
         "eyebrow": "Valle del Cauca · Colômbia",
         "headline": "Rio, patrimônio e ritmo caleño",
         "intro": "Conheça o centro histórico, caminhe pelo Bulevar del Río e suba até San Antonio. Cali reúne espaços culturais, arte urbana e uma tradição de salsa presente na vida cotidiana.",
-        "meta_description": "O que conhecer em Cali: La Ermita, San Antonio e El Gato del Río. Descubra seu patrimônio urbano, espaços culturais e passeios junto ao rio."
+        "meta_description": "Descubra Cali entre patrimônio, arte e natureza: San Antonio, La Ermita, Cristo Rey, Bulevar del Río, museus e espaços para conhecer a cidade."
       }
     },
     "history": {
@@ -93,6 +93,21 @@
           "section": "places",
           "label": "Alcaldía de Cali: El Gato del Río",
           "url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+        },
+        {
+          "section": "places",
+          "label": "Alcaldía de Cali: reapertura parcial de Cristo Rey,21agosto2026",
+          "url": "https://www.cali.gov.co/boletines/publicaciones/193827/anuncian-apertura-de-cristo-rey-tras-las-inspecciones-realizadas-luego-del-sismo/"
+        },
+        {
+          "section": "places",
+          "label": "Zoológico de Cali: planea tu visita",
+          "url": "https://www.zoologicodecali.com.co/visita"
+        },
+        {
+          "section": "places",
+          "label": "Museo La Tertulia",
+          "url": "https://museolatertulia.com/"
         }
       ],
       "en": [
@@ -125,6 +140,21 @@
           "section": "places",
           "label": "Alcaldía de Cali: El Gato del Río",
           "url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+        },
+        {
+          "section": "places",
+          "label": "Alcaldía de Cali: reapertura parcial de Cristo Rey,21agosto2026",
+          "url": "https://www.cali.gov.co/boletines/publicaciones/193827/anuncian-apertura-de-cristo-rey-tras-las-inspecciones-realizadas-luego-del-sismo/"
+        },
+        {
+          "section": "places",
+          "label": "Zoológico de Cali: planea tu visita",
+          "url": "https://www.zoologicodecali.com.co/visita"
+        },
+        {
+          "section": "places",
+          "label": "Museo La Tertulia",
+          "url": "https://museolatertulia.com/"
         }
       ],
       "pt-BR": [
@@ -157,6 +187,21 @@
           "section": "places",
           "label": "Alcaldía de Cali: El Gato del Río",
           "url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+        },
+        {
+          "section": "places",
+          "label": "Alcaldía de Cali: reapertura parcial de Cristo Rey,21agosto2026",
+          "url": "https://www.cali.gov.co/boletines/publicaciones/193827/anuncian-apertura-de-cristo-rey-tras-las-inspecciones-realizadas-luego-del-sismo/"
+        },
+        {
+          "section": "places",
+          "label": "Zoológico de Cali: planea tu visita",
+          "url": "https://www.zoologicodecali.com.co/visita"
+        },
+        {
+          "section": "places",
+          "label": "Museo La Tertulia",
+          "url": "https://museolatertulia.com/"
         }
       ]
     }
@@ -305,6 +350,246 @@
         "image_license": "",
         "image_license_url": ""
       }
+    },
+    {
+      "slug": "bulevar-rio",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4526661,
+      "longitude": -76.5347844,
+      "translations": {
+        "es": {
+          "name": "Bulevar del Río",
+          "description": "El paseo peatonal junto al río Cali une espacios del centro entre árboles, puentes y arquitectura urbana. La Ermita y el Puente Ortiz ayudan a orientarse en el recorrido.",
+          "map_url": "https://www.google.com/maps?cid=5477684040922625391",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Bulevar del Río",
+          "description": "This pedestrian promenade follows the Cali River through the centre, among trees, bridges and urban architecture. La Ermita and Puente Ortiz are useful landmarks along the way.",
+          "map_url": "https://www.google.com/maps?cid=5477684040922625391",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Bulevar del Río",
+          "description": "O passeio de pedestres acompanha o rio Cali pelo centro, entre árvores, pontes e arquitetura urbana. La Ermita e a Ponte Ortiz ajudam a orientar o percurso.",
+          "map_url": "https://www.google.com/maps?cid=5477684040922625391",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/cali-bulevar-rio-v1.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Explanada peatonal del Bulevar del Río junto al Puente Ortiz",
+          "en": "Pedestrian esplanade on Bulevar del Río beside Puente Ortiz",
+          "pt-BR": "Esplanada de pedestres do Bulevar del Río junto à Ponte Ortiz"
+        },
+        "caption": {
+          "es": "Adaptación ilustrada de Cathetovar · CC BY-SA 4.0",
+          "en": "Illustrated adaptation of Cathetovar · CC BY-SA 4.0",
+          "pt-BR": "Adaptação ilustrada de Cathetovar · CC BY-SA 4.0"
+        },
+        "image_creator": "Cathetovar / Explorando Lugares (adaptación)",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Explanada_peatonal_sobre_el_Bulevar_del_Río_Puente_Ortiz.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    {
+      "slug": "zoologico-cali",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4481076,
+      "longitude": -76.5568372,
+      "translations": {
+        "es": {
+          "name": "Zoológico de Cali",
+          "description": "Un espacio dedicado a la biodiversidad y la educación ambiental, con un recorrido entre vegetación y hábitats de fauna. Consulta las condiciones de visita vigentes antes de ir.",
+          "map_url": "https://www.google.com/maps?cid=3172202417941265075",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Cali Zoo",
+          "description": "A place devoted to biodiversity and environmental education, with a route through vegetation and wildlife habitats. Check current visiting arrangements before travelling.",
+          "map_url": "https://www.google.com/maps?cid=3172202417941265075",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Zoológico de Cali",
+          "description": "Um espaço dedicado à biodiversidade e à educação ambiental, com um percurso entre vegetação e habitats de fauna. Consulte as condições atuais de visita antes de ir.",
+          "map_url": "https://www.google.com/maps?cid=3172202417941265075",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/cali-zoologico-cali-v1.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Acceso del Zoológico de Cali con muro azul y banderas amarillas",
+          "en": "Cali Zoo entrance with blue wall and yellow flags",
+          "pt-BR": "Acesso do Zoológico de Cali com muro azul e bandeiras amarelas"
+        },
+        "caption": {
+          "es": "Adaptación ilustrada de Petruss · CC BY-SA 4.0",
+          "en": "Illustrated adaptation of Petruss · CC BY-SA 4.0",
+          "pt-BR": "Adaptação ilustrada de Petruss · CC BY-SA 4.0"
+        },
+        "image_creator": "Petruss / Explorando Lugares (adaptación)",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Entrada_Zoologico_de_Cali.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    {
+      "slug": "cristo-rey",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4360243,
+      "longitude": -76.5647906,
+      "translations": {
+        "es": {
+          "name": "Cristo Rey",
+          "description": "El monumento de brazos abiertos domina la ladera occidental de Cali y ofrece una perspectiva de la ciudad. El ecoparque tiene accesos y tramos diferenciados: confirma cuáles están habilitados antes de subir.",
+          "map_url": "https://www.google.com/maps?cid=12726769678870394303",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Cristo Rey",
+          "description": "The open-armed monument overlooks Cali from its western hills. The ecopark has separate access routes and sections: check which are available before heading up.",
+          "map_url": "https://www.google.com/maps?cid=12726769678870394303",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Cristo Rey",
+          "description": "O monumento de braços abertos se destaca na encosta oeste de Cali e oferece uma perspectiva da cidade. O ecoparque tem acessos e trechos distintos: confirme quais estão disponíveis antes de subir.",
+          "map_url": "https://www.google.com/maps?cid=12726769678870394303",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/cali-cristo-rey-v1.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Monumento Cristo Rey y su terraza en Cali",
+          "en": "Cristo Rey monument and its terrace in Cali",
+          "pt-BR": "Monumento Cristo Rey e seu terraço em Cali"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_creator": "Juanes016 / Explorando Lugares (adaptación)",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Cristo_rey,_Cali,_Colombia.jpg",
+        "image_license": "CC0 1.0",
+        "image_license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+    },
+    {
+      "slug": "museo-tertulia",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4502809,
+      "longitude": -76.5453033,
+      "translations": {
+        "es": {
+          "name": "Museo La Tertulia",
+          "description": "Un referente de las artes visuales de Cali junto al río. Sus edificios y espacios exteriores acompañan una programación de exposiciones y cine que cambia a lo largo del año.",
+          "map_url": "https://www.google.com/maps?cid=8812593101924022379",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "La Tertulia Museum",
+          "description": "A landmark for Cali’s visual arts beside the river. Its buildings and outdoor spaces host a programme of exhibitions and cinema that changes throughout the year.",
+          "map_url": "https://www.google.com/maps?cid=8812593101924022379",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Museu La Tertulia",
+          "description": "Uma referência das artes visuais de Cali junto ao rio. Seus edifícios e espaços externos recebem uma programação de exposições e cinema que muda ao longo do ano.",
+          "map_url": "https://www.google.com/maps?cid=8812593101924022379",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/cali-museo-tertulia-v1.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Edificio del Museo La Tertulia y fuentes entre árboles",
+          "en": "La Tertulia Museum building and fountains among trees",
+          "pt-BR": "Edifício do Museu La Tertulia e fontes entre árvores"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_creator": "C arango / Explorando Lugares (adaptación)",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Museo_la_tertulia.JPG",
+        "image_license": "Public domain PD-self",
+        "image_license_url": ""
+      }
+    },
+    {
+      "slug": "plaza-cayzedo",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4518194,
+      "longitude": -76.5325303,
+      "translations": {
+        "es": {
+          "name": "Plaza de Cayzedo",
+          "description": "La plaza central reúne palmeras y memoria urbana, rodeada por la Catedral de San Pedro, el Palacio Nacional y otros edificios del centro histórico.",
+          "map_url": "https://www.google.com/maps?cid=11898042663095340097",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "Plaza de Cayzedo",
+          "description": "The central square brings together palms and urban history, surrounded by San Pedro Cathedral, the National Palace and other historic-centre buildings.",
+          "map_url": "https://www.google.com/maps?cid=11898042663095340097",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Plaza de Cayzedo",
+          "description": "A praça central reúne palmeiras e memória urbana, cercada pela Catedral de San Pedro, pelo Palacio Nacional e por outros edifícios do centro histórico.",
+          "map_url": "https://www.google.com/maps?cid=11898042663095340097",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/cali-plaza-cayzedo-v1.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Monumento a Joaquín de Cayzedo y Cuero entre palmeras de la plaza",
+          "en": "Joaquín de Cayzedo y Cuero monument among the square’s palms",
+          "pt-BR": "Monumento a Joaquín de Cayzedo y Cuero entre palmeiras da praça"
+        },
+        "caption": {
+          "es": "Adaptación ilustrada de Hurluberlue · CC BY-SA 4.0",
+          "en": "Illustrated adaptation of Hurluberlue · CC BY-SA 4.0",
+          "pt-BR": "Adaptação ilustrada de Hurluberlue · CC BY-SA 4.0"
+        },
+        "image_creator": "Hurluberlue / Explorando Lugares (adaptación)",
+        "image_source_url": "https://commons.wikimedia.org/wiki/File:Monumento_a_Joaquín_de_Cayzedo_y_Cuero,_Plaza_de_Cayzedo,_Cali.jpg",
+        "image_license": "CC BY-SA 4.0",
+        "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
     }
   ],
   "local_research": {
@@ -317,9 +602,10 @@
     "acquisition_strategies": [],
     "sources": [],
     "notes": [
-      "Candidato para revisión local. Imágenes pendientes de aprobación humana por hash. No publicado.",
-      "Se incluyen tres atractivos físicos documentados. No se inventan experiencias para llenar la sección.",
-      "Directorio separado: siete negocios georreferenciados, hospedaje 3, alimentación 2 y cultura 2. Coordenadas en sidecar porque BusinessPackage no las admite."
+      "Candidato completo para revisión local aislada: ocho atractivos físicos y 36 fichas en diez categorías.",
+      "Todas las imágenes siguen pendientes de aprobación humana de su hash exacto. Tres adaptaciones requieren atribución y licencia CC BY-SA4 antes de promoción pública.",
+      "No se incorporan experiencias nuevas en esta entrega. La oferta de salsa documentada permanece en investigación interna.",
+      "Cristo Rey: boletín municipal21agosto2026 anunció reapertura parcial. No se prometen horarios, reserva ni accesibilidad integral."
     ]
   },
   "hero_image": {

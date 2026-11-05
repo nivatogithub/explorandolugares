@@ -1,0 +1,380 @@
+[
+  {
+    "schema_version": "1.0",
+    "asset_id": "cali-portada-v1",
+    "destination_id": "cali",
+    "attraction_id": "portada",
+    "file": "content/paquetes/cali/images/cali-portada-v1.webp",
+    "media_type": "ai_generated_illustration",
+    "language": "es",
+    "purpose": "destination_hero",
+    "sha256": "1deb889f98d520b2cd937a621410ff114aa47c41d5f77f3f7e36a7ed4ddd17a8",
+    "generation": {
+      "provider": "OpenAI image_gen",
+      "model": "not exposed by integrated tool",
+      "generated_at": "2026-11-05",
+      "prompt": "Create a landscape 3:2 editorial travel illustration of the view over central Cali FROM San Antonio, preserving this public-domain Carlos A Arango panoramic photo's camera direction, geometry and spatial relationships. Use visible ink outlines and gouache paint, realistic simplified forms, warm terracotta roofs and natural green trees, linen highlights and gentle pale-blue cloudy sky. Keep the low colonial red-tiled roof district in the foreground, mature trees at bottom/left, the dense modern downtown towers behind, and the distant broad flat valley horizon; do NOT invent mountains, skyscrapers, ocean, monument or churches not in this view. The tall slim Torre de Cali is in the middle-right skyline in the reference; preserve its relative position and existing tower shapes. Adapt panorama to 3:2 using a coherent central crop, not by rearranging buildings or stretching them. Image must feel distinctly illustrated with hand-painted texture, not a photo with filters. No lettering, branding, border, title or watermark. This image is a historical-view-inspired draft for editorial review, not proof of current skyline.",
+      "human_operator": "destinos_lote_a"
+    },
+    "visual_references": [
+      {
+        "creator": "Carlos A Arango",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Panoramic-1.jpg",
+        "license": "Public-domain dedication by copyright holder (PD-self)",
+        "permission_status": "license_allows_adaptation; publication_conditions_preserved",
+        "used_as_image_input": true,
+        "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/panorama-reference.jpg",
+        "sha256": "3f2626e70162253982dfe444767aa72ca96edecbed09d51e2a21476de2e6cf99"
+      }
+    ],
+    "review": {
+      "status": "draft_for_isolated_dev1",
+      "identity_check": "reference_compared_pending_human",
+      "crop_check_desktop": "pending_runtime",
+      "crop_check_mobile": "pending_runtime",
+      "rights_check": "source_license_recorded; exact_public_attribution_required_for_CC_BY_SA_derivatives",
+      "notes": "Historical reference panorama; skyline arrangement/crop compared, no claim of current skyline or Street View verification."
+    },
+    "publication": {
+      "approved_by": "",
+      "approved_at": "",
+      "published_at": ""
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "asset_id": "cali-la-ermita-v1",
+    "destination_id": "cali",
+    "attraction_id": "la-ermita",
+    "file": "content/paquetes/cali/images/cali-la-ermita-v1.webp",
+    "media_type": "ai_generated_illustration",
+    "language": "es",
+    "purpose": "destination_card",
+    "sha256": "397a67957dec6851cdc44f866e700b5aed21871256560d3563999cf79d73cc96",
+    "generation": {
+      "provider": "OpenAI image_gen",
+      "model": "not exposed by integrated tool",
+      "generated_at": "2026-11-05",
+      "prompt": "Transform this public-domain reference photo of Iglesia La Ermita in Cali, Colombia (author C arango, public-domain release at https://commons.wikimedia.org/wiki/File:Ermita_cali.jpg) into an editorial travel illustration in realistic caricature style with visible thin ink outlines and gouache painting, warm linen highlights, restrained natural colors, clearly illustrated, not a retouched photograph. Preserve EXACT architectural geometry and camera orientation: one very tall slender central square bell tower and latticework steeple with cross; pale gray-blue walls and white Gothic tracery; frontal rose window above the central pointed entrance; two narrow pointed facade windows; several short pinnacles; long lower side nave extends to the RIGHT; the existing blocky office building is on the LEFT. Do not change the silhouette, number of towers, relative heights, windows or door positions. Whole church including steeple and ground must fit in a landscape 3:2 card composition: use a slightly wider framing, with architecture occupying central-left approximately 65 percent and natural sky around the spire. Keep the paved urban plaza and low landscaping, reduce distracting street fixtures and tiny anonymous pedestrian clutter without adding new monuments or imagined buildings. No words, lettering, logos, watermark or invented readable signs. This is a draft illustration for human approval, not evidence of present-day building condition. Return one landscape 3:2 image.",
+      "human_operator": "destinos_lote_a"
+    },
+    "visual_references": [
+      {
+        "creator": "C arango",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ermita_cali.jpg",
+        "license": "Public-domain dedication by copyright holder (PD-self)",
+        "permission_status": "license_allows_adaptation; publication_conditions_preserved",
+        "used_as_image_input": true,
+        "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/ermita-factual-reference.jpg",
+        "sha256": "3beb1edba1c49bb533e5436967015ca80e879d50181cc0e8f4cb9b766ec8fd87"
+      }
+    ],
+    "review": {
+      "status": "draft_for_isolated_dev1",
+      "identity_check": "reference_compared_pending_human",
+      "crop_check_desktop": "pending_runtime",
+      "crop_check_mobile": "pending_runtime",
+      "rights_check": "source_license_recorded; exact_public_attribution_required_for_CC_BY_SA_derivatives",
+      "notes": "Central architecture and right-facing nave preserved. Background simplification introduces right-side vegetation and omits a distant office; requires explicit human visual review, not certified exact reconstruction."
+    },
+    "publication": {
+      "approved_by": "",
+      "approved_at": "",
+      "published_at": ""
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "asset_id": "cali-san-antonio-v1",
+    "destination_id": "cali",
+    "attraction_id": "san-antonio",
+    "file": "content/paquetes/cali/images/cali-san-antonio-v1.webp",
+    "media_type": "ai_generated_illustration",
+    "language": "es",
+    "purpose": "destination_card",
+    "sha256": "018b527d75033201548ee329e994ff8fc9a1e48e1c9a4d1cde62fa6de46e2ab7",
+    "generation": {
+      "provider": "OpenAI image_gen",
+      "model": "not exposed by integrated tool",
+      "generated_at": "2026-11-05",
+      "prompt": "Convert this public-domain C arango photo of Capilla de San Antonio in Cali into a landscape 3:2 realistic editorial illustration with visible thin ink lines and gouache paint, natural greens, white plaster and terracotta/brick colors. Preserve the actual scene composition and exact chapel silhouette: small white plaster single-nave chapel to the RIGHT half, reddish exposed-brick asymmetrical bell-gable slightly left of the main facade, two vertical bell openings, small triangular brick top and cross, the white triangular nave gable behind/right, central brown wooden door framed by a round brick arch, small round ornament higher on the white gable, tiled terracotta roof, low white side extension far right, stone steps and sloping grass foreground, big mature tree occupies LEFT half and overlaps the chapel side. Keep proportions and the hill/plaza relationship. Do not turn it into a grand church, do not add towers or move the bell-gable. Remove readable banners and license-plate text, retain urban plaza context; people may be very small anonymous silhouettes. No text, logos, watermarks. Clearly hand-illustrated, no photographic filters.",
+      "human_operator": "destinos_lote_a"
+    },
+    "visual_references": [
+      {
+        "creator": "C arango",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Capilla_de_San_Antonio_Cali.JPG",
+        "license": "Public-domain dedication by copyright holder (PD-self)",
+        "permission_status": "license_allows_adaptation; publication_conditions_preserved",
+        "used_as_image_input": true,
+        "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/san-antonio-reference.jpg",
+        "sha256": "841807ecd3140040b1867bdec829284186abd4ee4c3590dcd9c7865ea5bdd437"
+      }
+    ],
+    "review": {
+      "status": "draft_for_isolated_dev1",
+      "identity_check": "reference_compared_pending_human",
+      "crop_check_desktop": "pending_runtime",
+      "crop_check_mobile": "pending_runtime",
+      "rights_check": "source_license_recorded; exact_public_attribution_required_for_CC_BY_SA_derivatives",
+      "notes": "White chapel, asymmetrical brick bell gable, door and left tree placement compared; no current access guarantee."
+    },
+    "publication": {
+      "approved_by": "",
+      "approved_at": "",
+      "published_at": ""
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "asset_id": "cali-gato-del-rio-v1",
+    "destination_id": "cali",
+    "attraction_id": "gato-del-rio",
+    "file": "content/paquetes/cali/images/cali-gato-del-rio-v1.webp",
+    "media_type": "ai_generated_illustration",
+    "language": "es",
+    "purpose": "destination_card",
+    "sha256": "57efc0e549a3159a86bd9bcbf798ed0b322ba61b5f3d2b33b08bfe6e54a37552",
+    "generation": {
+      "provider": "OpenAI image_gen",
+      "model": "not exposed by integrated tool",
+      "generated_at": "2026-11-05",
+      "prompt": "Transform this public-domain C arango photo of El Gato del Río by Hernando Tejada in Cali into a realistic editorial illustration with visible fine ink outlines and gouache painting. Landscape 3:2. Preserve the real sculpture and exact composition: large dark reddish-bronze seated stylized cat, triangular ears, two large round pale-golden eyes, triangular projecting nose, subtle smile, upright front legs on LEFT, rounded seated body center, very tall thick spiral tail rises on RIGHT with tiny bird perched on its top. Preserve dimensions, silhouette, proportions, same pale rectangular stone pedestal and stepped base. Leafy riverside park behind, tree trunks at far left and right, narrow curving roadway only on far right. Do not convert it into a live cat, do not invent extra cats, do not change tail shape or eye arrangement. Remove seasonal hanging star/pink decorations and any readable plaque/advertising text, but retain the genuine trees/pedestal/camera spatial relationships. No titles, logos, watermark or text. Restrained natural colors, unmistakably hand illustrated, not retouched photography.",
+      "human_operator": "destinos_lote_a"
+    },
+    "visual_references": [
+      {
+        "creator": "C arango (Commons attribution assumed based on uploader)",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Tejada_cat.JPG",
+        "license": "Public-domain dedication by copyright holder (PD-self)",
+        "permission_status": "license_allows_adaptation; publication_conditions_preserved",
+        "used_as_image_input": true,
+        "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/gato-reference.jpg",
+        "sha256": "50df665e8d474278814ddf43d7a639953a7cd16aa959ee6b67b3f7fa5e83f6b7"
+      }
+    ],
+    "review": {
+      "status": "draft_for_isolated_dev1",
+      "identity_check": "reference_compared_pending_human",
+      "crop_check_desktop": "pending_runtime",
+      "crop_check_mobile": "pending_runtime",
+      "rights_check": "source_license_recorded; exact_public_attribution_required_for_CC_BY_SA_derivatives",
+      "notes": "Bronze cat silhouette, round eyes, front legs and raised spiral tail compared; seasonal decorations removed."
+    },
+    "publication": {
+      "approved_by": "",
+      "approved_at": "",
+      "published_at": ""
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "asset_id": "cali-cristo-rey-v1",
+    "destination_id": "cali",
+    "attraction_id": "cristo-rey",
+    "file": "content/paquetes/cali/images/cali-cristo-rey-v1.webp",
+    "media_type": "ai_generated_illustration",
+    "language": "es",
+    "purpose": "destination_card",
+    "sha256": "24c899cfe04f7a37e18898d773780389f9215bf906e944d99bd385abdfc4f325",
+    "generation": {
+      "provider": "OpenAI image_gen",
+      "model": "not exposed by integrated tool",
+      "generated_at": "2026-11-05",
+      "prompt": "Create a landscape 3:2 editorial travel illustration in visible fine ink outlines and gouache, realistic simplified forms, not a retouched photograph. Use this CC0 Juanes016 February2025 photo of Cristo Rey, Cali as exact geometry reference. Preserve the gray open-armed concrete statue facing slightlyLEFT, its asymmetrical perspective with RIGHTarm rising diagonally and LEFTarm foreshortened, draped tunic, long narrow rectangular pedestal, low circular terrace with black railing and grassy stone base. Include whole statue and terrace. Retain surrounding hill vegetation and pale cloudy sky; do NOT invent city skyline behind statue or mountains/architecture. Simplify floodlights and anonymous tiny visitors, remove identifiable foreground people, timestamp, writing and logos. Maintain precise silhouette, arm positions and proportions. Warm natural colors, linen highlights, editorial handpainting texture. No text.",
+      "human_operator": "destinos_lote_a"
+    },
+    "visual_references": [
+      {
+        "creator": "Juanes016",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cristo_rey,_Cali,_Colombia.jpg",
+        "license": "CC0 1.0",
+        "permission_status": "license_allows_adaptation; publication_conditions_preserved",
+        "used_as_image_input": true,
+        "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/cristo-rey-reference.jpg",
+        "sha256": "6754eb868bc3fbc16519d01b6227a86a99f81064331d9f3c852c52a504e64d13"
+      }
+    ],
+    "review": {
+      "status": "draft_for_isolated_dev1",
+      "identity_check": "reference_compared_pending_human",
+      "crop_check_desktop": "pending_runtime",
+      "crop_check_mobile": "pending_runtime",
+      "rights_check": "source_license_recorded; exact_public_attribution_required_for_CC_BY_SA_derivatives",
+      "notes": "Perspective and main silhouette compared; not proof of present-day access or operations."
+    },
+    "publication": {
+      "approved_by": "",
+      "approved_at": "",
+      "published_at": ""
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "asset_id": "cali-museo-tertulia-v1",
+    "destination_id": "cali",
+    "attraction_id": "museo-tertulia",
+    "file": "content/paquetes/cali/images/cali-museo-tertulia-v1.webp",
+    "media_type": "ai_generated_illustration",
+    "language": "es",
+    "purpose": "destination_card",
+    "sha256": "694faf4a77234c3a61109884428752c9a7428d0344b83f0dcec524c34fedbd85",
+    "generation": {
+      "provider": "OpenAI image_gen",
+      "model": "not exposed by integrated tool",
+      "generated_at": "2026-11-05",
+      "prompt": "Create landscape3:2 fine ink-and-gouache editorial travel illustration, visibly hand illustrated, using this public-domain C arango photograph of Museo La Tertulia in Cali. Preserve EXACT modernist single-storey cream rectangular building, flat roof, repeated tall narrow inverted-chamfer arch openings and vertical pillars around two visible sides. Same corner perspective recedesRIGHT. Large spreading tree trunk onLEFT with diagonal branch acrossupperframe, leafy woodedhill behind, lawn and foreground rectangular reflecting pools with simplefountainjets and smallsquareupperbasin. Preserve these spatial relationships, roof proportions and window rhythm; do not add towers, floors, domes, statues or new architecture. Remove maintenanceworkers/tools/distraction while retaining fountainlayout, treecanopy and shadows. Naturalcream/greens, visiblethininkoutlines, gouachepaintingtexture, no words/logos/watermark.",
+      "human_operator": "destinos_lote_a"
+    },
+    "visual_references": [
+      {
+        "creator": "C arango",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Museo_la_tertulia.JPG",
+        "license": "Public domain PD-self",
+        "permission_status": "license_allows_adaptation; publication_conditions_preserved",
+        "used_as_image_input": true,
+        "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/tertulia-reference.jpg",
+        "sha256": "072054eb6f24d698370e5022567c6e27fd8f6a158a8babb2a3e72a3ebb96dc98"
+      }
+    ],
+    "review": {
+      "status": "draft_for_isolated_dev1",
+      "identity_check": "reference_compared_pending_human",
+      "crop_check_desktop": "pending_runtime",
+      "crop_check_mobile": "pending_runtime",
+      "rights_check": "source_license_recorded; exact_public_attribution_required_for_CC_BY_SA_derivatives",
+      "notes": "Perspective and main silhouette compared; not proof of present-day access or operations."
+    },
+    "publication": {
+      "approved_by": "",
+      "approved_at": "",
+      "published_at": ""
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "asset_id": "cali-bulevar-rio-v1",
+    "destination_id": "cali",
+    "attraction_id": "bulevar-rio",
+    "file": "content/paquetes/cali/images/cali-bulevar-rio-v1.webp",
+    "media_type": "ai_generated_illustration",
+    "language": "es",
+    "purpose": "destination_card",
+    "sha256": "2da494c10eebf30cc57390bf856d2449cfb8fff4efd29c51e06b5ecf9530578d",
+    "generation": {
+      "provider": "OpenAI image_gen",
+      "model": "not exposed by integrated tool",
+      "generated_at": "2026-11-05",
+      "prompt": "Transform the approved Cathetovar 4 October2026 CC BY-SA4 photograph of the pedestrian esplanade at Puente Ortiz, Bulevar del Río, Cali into a LANDSCAPE3:2 editorial travel illustration, realistic caricature with fine visible ink outlines and gouache brush texture, natural restrained colors. Preserve this single camera direction and spatial arrangement: broad patterned reddish/gray stone pedestrian paving in foreground, curving low white balustrade with dark inset panels onLEFT; sequence of white decorative open pergola frames with scrollwork fromLEFT foreground toCENTRE distance; long low pitchedGLASS skylight on red base occupiesRIGHT foreground; broad dense green trees beyond river in background; existing pale yellow rectangular highrise atUPPERLEFT. Keep skyline building shapes/relative heights and spacing, do not replace them with churches or add landmarks. Retain street furniture/bridge relationship, crop or extend only neutral sky/paving to fit3:2 without rearranging objects. Tiny anonymous adult pedestrians only, no identifiable portraits or new activities. Remove readable signs, logos and text; do not invent lettering. Clearly illustrated ink/gouache, not photographic filter, faithful place geometry.",
+      "human_operator": "destinos_lote_a"
+    },
+    "visual_references": [
+      {
+        "creator": "Cathetovar",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Explanada_peatonal_sobre_el_Bulevar_del_Río_Puente_Ortiz.jpg",
+        "license": "CC BY-SA 4.0",
+        "permission_status": "license_allows_adaptation; publication_conditions_preserved",
+        "used_as_image_input": true,
+        "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/bulevar-walkway-approved-reference.jpg",
+        "sha256": "2e4636a410cf016fb8f26fd323e2c1b30707ed74220fb6b0931c0ca5a7f89fed"
+      }
+    ],
+    "review": {
+      "status": "draft_for_isolated_dev1",
+      "identity_check": "reference_compared_pending_human",
+      "crop_check_desktop": "pending_runtime",
+      "crop_check_mobile": "pending_runtime",
+      "rights_check": "source_license_recorded; exact_public_attribution_required_for_CC_BY_SA_derivatives",
+      "notes": "Preserves pergolas, balustrade left, glass skylight right and background highrise. Framing widened, small details simplified."
+    },
+    "publication": {
+      "approved_by": "",
+      "approved_at": "",
+      "published_at": ""
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "asset_id": "cali-zoologico-cali-v1",
+    "destination_id": "cali",
+    "attraction_id": "zoologico-cali",
+    "file": "content/paquetes/cali/images/cali-zoologico-cali-v1.webp",
+    "media_type": "ai_generated_illustration",
+    "language": "es",
+    "purpose": "destination_card",
+    "sha256": "825eaac05be71e2b4710a0e9e988dc3b8d928cebe49054f6e396065e8281115d",
+    "generation": {
+      "provider": "OpenAI image_gen",
+      "model": "not exposed by integrated tool",
+      "generated_at": "2026-11-05",
+      "prompt": "Create a landscape3:2 realistic editorial travel illustration from approved Petruss12February2013 CC BY-SA4 photo of the entrance to Zoológico de Cali. Thin visible ink outlines, gouache painting, restrained natural blues/greens/cream, clearly hand-illustrated. Preserve the actual entrance structure and same viewpoint: long darkblue solid wall occupiesRIGHT two-thirds, topped by row of slim YELLOW flagpoles/flags and low WHITE horizontallypaneled rearwall; low flat dark blue/black canopy and cream/white ticketbuilding onLEFT; narrow black entrancegate betweenbuilding andwall; one tall palmtrunk rises justLEFT ofcentre with palmcanopy upperLEFT; trees behindwall and LOWgreenhill atfarLEFT, gentlycurved pavedsidewalk andcurb foreground. Retain wall proportions, roof heights, flag rhythm, gateposition and perspective; do not invent arches, animalstatues, towers, ticketoffices or animals outside. Existing wallmark may be abstract neutral non-readable shape; avoid invented lettering/logos or promotional copy. Remove foreground identifiable people/temporary banners, but keep the actual access relationship. No readable text, watermark or added buildings. This is a stylized reference-based draft, not a claim of current entrance condition.",
+      "human_operator": "destinos_lote_a"
+    },
+    "visual_references": [
+      {
+        "creator": "Petruss",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Entrada_Zoologico_de_Cali.jpg",
+        "license": "CC BY-SA 4.0",
+        "permission_status": "license_allows_adaptation; publication_conditions_preserved",
+        "used_as_image_input": true,
+        "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/zoo-entrance-approved-reference.jpg",
+        "sha256": "c0299e27a428d073d4013aec1a9ebbfaf88344d08eb8e9b65e4dc3c365101a72"
+      }
+    ],
+    "review": {
+      "status": "draft_for_isolated_dev1",
+      "identity_check": "reference_compared_pending_human",
+      "crop_check_desktop": "pending_runtime",
+      "crop_check_mobile": "pending_runtime",
+      "rights_check": "source_license_recorded; exact_public_attribution_required_for_CC_BY_SA_derivatives",
+      "notes": "Preserves blue wall, gate left, low ticket building, palm and yellow flags. Readable entrance lettering omitted.2013 reference not proof of current branding."
+    },
+    "publication": {
+      "approved_by": "",
+      "approved_at": "",
+      "published_at": ""
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "asset_id": "cali-plaza-cayzedo-v1",
+    "destination_id": "cali",
+    "attraction_id": "plaza-cayzedo",
+    "file": "content/paquetes/cali/images/cali-plaza-cayzedo-v1.webp",
+    "media_type": "ai_generated_illustration",
+    "language": "es",
+    "purpose": "destination_card",
+    "sha256": "381fe51e9d7a139f915fdd9689473d23a23d69a48b809b92863b7c3581edd64e",
+    "generation": {
+      "provider": "OpenAI image_gen",
+      "model": "not exposed by integrated tool",
+      "generated_at": "2026-11-05",
+      "prompt": "Transform the approved Hurluberlue27January2026 CC BY-SA4 photograph of the Joaquín de Cayzedo y Cuero monument in Plaza de Cayzedo, Cali into a LANDSCAPE3:2 realistic editorial travel illustration with thin visible ink outlines and gouache painting. Preserve the single frontal low-angle camera and monument's exact silhouette: darkbronze standing historical man centered, bentRIGHTleg forward, cape sweepsLEFT, longdiagonalflagstaff crossesfigure, tall pale pink-beige taperedstonepedestal underneath with carvedlaurelwreath, draperygarlands and scrollwork, broad steppedrectangularbase. Keep relative statue/pedestalheight and sculpturepose, DO NOTturn intohorse/rider/Christ/genericstatue or changefigure. Show wholemonument and base. The scene behind is tallpalms, lawn, blacklampposts, red/gray patternedbrickwalkways, mustardyellow midriseblockLEFT, creamwindowedmidriseRIGHT and tallerplainwhitebuilding atupperLEFT: preserve building placement, heights and spatialrelationships. Fit3:2 by slightlywider framing of verifiedparkcontext, not by compressing pedestal or inventingarchitecture. Remove allreadable plaque/building text, logos and identifiable people; retain smallanonymousdistantpedestrians only. Naturalrestrainedcolors, creamyhighlights, clearly handillustrated, not photofilter. No lettering, watermark or extra monuments.",
+      "human_operator": "destinos_lote_a"
+    },
+    "visual_references": [
+      {
+        "creator": "Hurluberlue",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Monumento_a_Joaquín_de_Cayzedo_y_Cuero,_Plaza_de_Cayzedo,_Cali.jpg",
+        "license": "CC BY-SA 4.0",
+        "permission_status": "license_allows_adaptation; publication_conditions_preserved",
+        "used_as_image_input": true,
+        "file": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/plaza-2026-approved-reference.jpg",
+        "sha256": "6045dbbc5f538205c20c920048bce1089ec60e8526e8ce1d3b50b62519acffbc"
+      }
+    ],
+    "review": {
+      "status": "draft_for_isolated_dev1",
+      "identity_check": "reference_compared_pending_human",
+      "crop_check_desktop": "pending_runtime",
+      "crop_check_mobile": "pending_runtime",
+      "rights_check": "source_license_recorded; exact_public_attribution_required_for_CC_BY_SA_derivatives",
+      "notes": "Preserves standing bronze figure and decorated tapered pedestal, palms and surrounding building placement. Wider framing, plaque lettering omitted."
+    },
+    "publication": {
+      "approved_by": "",
+      "approved_at": "",
+      "published_at": ""
+    }
+  }
+]

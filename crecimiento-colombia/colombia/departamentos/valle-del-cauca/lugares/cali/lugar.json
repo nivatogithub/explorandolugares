@@ -9,10 +9,9 @@
   "pr_url": null,
   "base_commit": "c4c5c431fa201c5fd6a3f91be3f80852f29bcfb8",
   "blockers": [
-    "Aprobación humana de cuatro imágenes pendiente; se permite únicamente revisión local aislada.",
-    "Pruebas de importación/HTTP/SEO y revisión visual del dev pendientes de montaje coordinado por worker principal."
+    "Candidato completo8/36/9 pendiente revisión visual local y aprobación humana de versiones exactas."
   ],
-  "next_action": "Montar candidato en dev1 con el coordinador; verificar importación y render ES/EN/PT-BR.",
+  "next_action": "Coordinador monta paquete completo en dev1; no promover a preprod/producción.",
   "gates": {
     "identidad": {
       "passed": false,
@@ -89,6 +88,16 @@
         "content/place-drafts/cali/paquete-negocios-cali.zip",
         "content/place-drafts/cali/business-geolocation.json",
         "content/place-drafts/cali/assets.json"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "status": "complete_local_review_candidate_8_attractions_36_businesses_9_images",
+      "files": [
+        "content/paquetes/cali/paquete-destino-cali.zip",
+        "content/place-drafts/cali/paquete-negocios-cali.zip",
+        "content/place-drafts/cali/assets.json",
+        "content/place-drafts/cali/checks.json"
       ]
     }
   ]

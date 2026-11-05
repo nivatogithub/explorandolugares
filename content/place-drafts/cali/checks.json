@@ -1,20 +1,27 @@
 {
   "checked_at": "2026-11-05",
-  "scope": "Static package and official PHP package contract; no live browser claims",
+  "scope": "Static candidate and native PHP package reader; dev1 runtime QA delegated to coordinator",
+  "counts": {
+    "attractions": 8,
+    "images": 9,
+    "businesses": 36
+  },
   "checks": {
-    "locales_complete": true,
-    "physical_pois_have_coordinates": true,
-    "maps_named_cid_all_locales": true,
-    "no_external_operator_links": true,
+    "three_locales_complete": true,
+    "physical_pois_coordinates": true,
+    "named_maps_all_languages": true,
+    "no_operator_ad_links": true,
     "image_hashes_match": true,
-    "place_package_php_readZip": "passed: 3 POIs, 4 images",
-    "business_package_php_validateManifest": "passed: 7 businesses"
+    "PlacePackage_readZip": "PASS8/9",
+    "BusinessPackage_validateManifest": "PASS36",
+    "editorial_criteria": "PASS8attractions/0experiences",
+    "central_map_registered": "https://www.google.com/maps?cid=11898042663095340097"
   },
   "not_tested": [
-    "local database import and unique matching sidecar application",
-    "render HTTP, canonical and hreflang",
-    "desktop/mobile browser visual interaction",
-    "human image/content approval"
+    "database import and runtime render",
+    "canonical/hreflang/sitemap in final build",
+    "desktop/mobile visual QA",
+    "human approval of exact illustration hashes"
   ],
   "production_modified": false
 }

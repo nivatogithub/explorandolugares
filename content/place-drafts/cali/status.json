@@ -19,24 +19,22 @@
     "point_type": "historic central square, not municipal geometric centroid"
   },
   "blockers": [
-    "Owner requested preview and approval of all five new reference photographs before additional illustrations. Two had already completed before instruction, three not started.",
-    "Plaza reference selection/licensing unresolved; eight-place ZIP is not yet complete.",
-    "Human approval and final local QA pending."
+    "Exact illustration approval and dev1 visual/HTTP/SEO QA pending; references approved does not mean final illustrations approved."
   ],
   "progress": {
     "institutional_sources_identified": 5,
     "draft_attractions": 8,
     "coordinate_points_identified": 4,
     "maps_verified": 8,
-    "images_generated": 6,
+    "images_generated": 9,
     "images_human_approved": 0,
     "imported": false,
     "published": false,
     "businesses_geolocated": 36
   },
   "next_actions": [
-    "Montar candidato en dev1 con el coordinador; verificar importación y render ES/EN/PT-BR.",
-    "Revisión visual y aprobación humana de contenido e imágenes antes de promoción."
+    "Coordinator imports complete candidate only in isolated dev1.",
+    "Review nine exact image versions and final ES/EN/PT-BR presentation."
   ],
-  "ready_for_local_import": false
+  "ready_for_local_import": true
 }
