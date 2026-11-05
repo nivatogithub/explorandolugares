@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "slug": "uribia",
+  "name": "Uribia · Alta Guajira",
+  "country_code": "CO",
+  "department_code": "44",
+  "municipality_code": "44847",
+  "municipality_name": "Uribia",
+  "type": "municipality",
+  "status": "editorial_consolidation_not_published",
+  "public": false,
+  "branch": "contenido/lugar-uribia-20261104",
+  "geolocation": null,
+  "intro_draft_es": "Uribia reúne paisajes de costa y desierto, dunas junto al mar y los bosques de la serranía de Macuira. Esta guía organiza la visita en tres zonas: Cabo de la Vela, Punta Gallinas y Nazareth–Macuira. Son sectores separados que requieren planear traslados y coordinar recorridos con anfitriones locales.",
+  "why_visit_es": [
+    "Conocer los paisajes del Cabo de la Vela y Punta Gallinas sin confundir sus playas y faros.",
+    "Descubrir el contraste entre el desierto y los bosques de Macuira.",
+    "Organizar recorridos por territorio wayuu con servicios y acompañamiento local."
+  ],
+  "attractions": [
+    {
+      "slug": "pilon-de-azucar",
+      "name": "Pilón de Azúcar",
+      "description_es": "El cerro rocoso ofrece una vista del encuentro entre el desierto y el Caribe. La playa cercana complementa la visita, pero la cima y la playa son puntos distintos.",
+      "source_url": "https://colombia.travel/es/riohacha/sube-al-pilon-de-azucar",
+      "geolocation": {
+        "latitude": 12.23819,
+        "longitude": -72.14272,
+        "source_url": "https://mapcarta.com/es/19690150",
+        "point_kind": "summit_not_trailhead",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-01",
+      "image_status": "reference_pending",
+      "approval": null,
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "slug": "playa-el-cabo",
+      "name": "Playa El Cabo",
+      "description_es": "La franja costera junto al poblado reúne el paisaje de la bahía y la vida local. Es también el entorno donde operan escuelas de kitesurf; las actividades dependen del viento y de las condiciones del agua.",
+      "source_url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela",
+      "geolocation": {
+        "latitude": 12.20195,
+        "longitude": -72.14927,
+        "source_url": "https://mapcarta.com/N10778675666",
+        "point_kind": "named_beach_reference",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-02",
+      "image_status": "reference_pending",
+      "approval": null,
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "slug": "faro-cabo-de-la-vela",
+      "name": "Faro del Cabo de la Vela",
+      "description_es": "El faro y su entorno elevado son un punto para contemplar la costa y el atardecer. No debe confundirse con el faro de Punta Gallinas, que pertenece a otro sector de la Alta Guajira.",
+      "source_url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela",
+      "geolocation": {
+        "latitude": 12.20964,
+        "longitude": -72.17923,
+        "source_url": "https://mapcarta.com/es/N1182867427",
+        "point_kind": "named_lighthouse_site",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-03",
+      "image_status": "reference_pending",
+      "approval": null,
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "slug": "ojo-de-agua",
+      "name": "Playa Ojo de Agua",
+      "description_es": "Un sector de playa entre bordes rocosos, cercano al faro y al mirador de la Tortuga. Su interés incluye el paisaje costero; la ficha no garantiza condiciones de baño.",
+      "source_url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela",
+      "geolocation": {
+        "latitude": 12.21383,
+        "longitude": -72.1776,
+        "source_url": "https://mapcarta.com/es/W102436604",
+        "point_kind": "named_beach_reference",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-04",
+      "image_status": "reference_pending",
+      "approval": null,
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "slug": "piedra-tortuga",
+      "name": "Mirador de la Tortuga",
+      "description_es": "La formación conocida también como Piedra Tortuga permite observar el entorno de Ojo de Agua desde la costa rocosa. Es un sitio diferente del Pilón de Azúcar.",
+      "source_url": "https://expedicioneswalekett.arteyviaje.com/tour/expedicion-origen/",
+      "geolocation": {
+        "latitude": 12.21651,
+        "longitude": -72.1782,
+        "source_url": "https://mapcarta.com/es/N4972732321",
+        "point_kind": "named_viewpoint_reference",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-05",
+      "image_status": "reference_pending",
+      "approval": null,
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "slug": "playa-arcoiris",
+      "name": "Playa Arcoíris",
+      "description_es": "Un tramo de costa donde el oleaje golpea las rocas y levanta salpicaduras. Se propone como visita de paisaje, sin presentar sus aguas como un lugar apto para nadar.",
+      "source_url": "https://colombia.travel/zh/node/4338",
+      "geolocation": {
+        "latitude": 12.23854,
+        "longitude": -72.13372,
+        "source_url": "https://mapcarta.com/es/N10778675619",
+        "point_kind": "named_beach_reference",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-06",
+      "image_status": "reference_pending",
+      "approval": null,
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "slug": "dunas-de-taroa",
+      "name": "Dunas de Taroa",
+      "zone": "punta-gallinas",
+      "description_es": "Las dunas se encuentran con el mar en este sector de Punta Gallinas. La visita permite apreciar el contraste entre arena y costa.",
+      "source_url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf",
+      "geolocation": {
+        "latitude": 12.43674,
+        "longitude": -71.60952,
+        "source_url": "https://mapcarta.com/es/N6509943685",
+        "point_kind": "attraction_not_vehicle_access",
+        "public_map_url": null,
+        "checked_at": "2026-11-04"
+      },
+      "image_status": "reference_pending",
+      "approval": null
+    },
+    {
+      "slug": "faro-punta-gallinas",
+      "name": "Faro de Punta Gallinas",
+      "zone": "punta-gallinas",
+      "description_es": "El faro señala un extremo de la costa de Punta Gallinas; es distinto al faro del Cabo de la Vela.",
+      "source_url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf",
+      "geolocation": {
+        "latitude": 12.4575,
+        "longitude": -71.668,
+        "source_url": "https://cioh.dimar.mil.co/cartas_nauticas/getcartas/images/Notice/147_2025.pdf",
+        "point_kind": "lighthouse_structure",
+        "public_map_url": null,
+        "checked_at": "2026-11-04"
+      },
+      "image_status": "reference_pending",
+      "approval": null
+    },
+    {
+      "slug": "bahia-hondita",
+      "name": "Bahía Hondita",
+      "zone": "punta-gallinas",
+      "description_es": "Un paisaje de bahía que puede conocerse mediante recorridos locales. El punto cartográfico identifica el área, no un embarcadero.",
+      "source_url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf",
+      "geolocation": {
+        "latitude": 12.39969,
+        "longitude": -71.69925,
+        "source_url": "https://mapcarta.com/es/19707310",
+        "point_kind": "bay_center_in_water_not_access",
+        "public_map_url": null,
+        "checked_at": "2026-11-04"
+      },
+      "image_status": "reference_pending",
+      "approval": null
+    },
+    {
+      "slug": "mirador-casares",
+      "name": "Mirador de Casares",
+      "zone": "punta-gallinas",
+      "description_es": "Un mirador incluido en recorridos por Punta Gallinas para observar el paisaje de la zona.",
+      "source_url": "https://www.solguajirotours.com/product-page/tour-punta-gallinas-cabo-de-la-vela-2-dias-y-una-noche",
+      "geolocation": {
+        "latitude": 12.43532,
+        "longitude": -71.64181,
+        "source_url": "https://mapcarta.com/es/N5283489998",
+        "point_kind": "named_viewpoint",
+        "public_map_url": null,
+        "checked_at": "2026-11-04"
+      },
+      "image_status": "reference_pending",
+      "approval": null
+    },
+    {
+      "slug": "punta-aguja",
+      "name": "Punta Aguja",
+      "zone": "punta-gallinas",
+      "description_es": "Sector costero de Punta Gallinas. El acceso preciso a la playa debe confirmarse antes de ofrecer navegación.",
+      "source_url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf",
+      "geolocation": {
+        "latitude": 12.41031,
+        "longitude": -71.73331,
+        "source_url": "https://mapcarta.com/es/19726278",
+        "point_kind": "cape_reference_not_beach_access",
+        "public_map_url": null,
+        "checked_at": "2026-11-04"
+      },
+      "image_status": "reference_pending",
+      "approval": null
+    },
+    {
+      "slug": "playa-la-boquita",
+      "name": "Playa La Boquita",
+      "zone": "punta-gallinas",
+      "description_es": "Playa identificada por la Alcaldía de Uribia; pendiente de precisar su ubicación y acceso.",
+      "source_url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf",
+      "geolocation": null,
+      "image_status": "reference_pending",
+      "approval": null
+    },
+    {
+      "slug": "parque-nacional-natural-macuira",
+      "name": "Parque Nacional Natural Macuira",
+      "zone": "nazareth-macuira",
+      "description_es": "La serranía conserva bosques en el paisaje árido de la Alta Guajira. La visita se organiza por recorridos autorizados con acompañamiento local; no supone acceso libre a todo el parque.",
+      "source_url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-macuira/",
+      "geolocation": null,
+      "image_status": "reference_pending",
+      "approval": null
+    }
+  ],
+  "experiences": [
+    {
+      "slug": "clase-kitesurf",
+      "name": "Clase de kitesurf",
+      "description_es": "Aprender el manejo de la cometa y la tabla con acompañamiento de una escuela. El nivel, la duración y la salida se acuerdan según la experiencia del visitante y las condiciones del viento.",
+      "operator_internal": "Cabo Kite Center",
+      "offer_url": "https://www.cabokitecenter.com/kite",
+      "public_operator_promotion": false,
+      "geolocation": null,
+      "location_exception": "Punto de encuentro a confirmar con el operador.",
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "slug": "clase-wingfoil",
+      "name": "Clase de wingfoil",
+      "description_es": "Una aproximación a la navegación con ala y tabla bajo instrucción. La escuela determina los requisitos y las condiciones de la actividad.",
+      "operator_internal": "TAWI Kite Center",
+      "offer_url": "https://tawikitecabo.com/",
+      "offer_status": "parent_site_explicitly_links_wing_classes",
+      "public_operator_promotion": false,
+      "geolocation": null,
+      "location_exception": "Punto de encuentro a confirmar con el operador.",
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "slug": "recorrido-alta-guajira",
+      "name": "Recorrido acompañado por la Alta Guajira",
+      "zone": "punta-gallinas",
+      "description_es": "Recorrido organizado por sectores de Cabo de la Vela y Punta Gallinas, con traslados coordinados y paradas definidas por el itinerario contratado.",
+      "offer_url": "https://www.solguajirotours.com/product-page/tour-punta-gallinas-cabo-de-la-vela-2-dias-y-una-noche",
+      "public_operator_promotion": false,
+      "geolocation": null,
+      "location_exception": "Salida a confirmar; no atribuir al operador una sede en Punta Gallinas."
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Cabo Kite Center",
+      "category": "experiencias",
+      "source_url": "https://www.cabokitecenter.com/kite",
+      "geolocation": {
+        "latitude": 12.20434,
+        "longitude": -72.1507,
+        "source_url": "https://mapcarta.com/es/N7173168603",
+        "point_kind": "mapped_named_business_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "checked_at": "2026-11-04",
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "name": "TAWI Kite Center and Hostel",
+      "category": "hospedaje",
+      "source_url": "https://tawikitecabo.com/",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "checked_at": "2026-11-04",
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "name": "Paradise Kite School",
+      "category": "experiencias",
+      "source_url": "https://paradisekitecabo.com/",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "checked_at": "2026-11-04",
+      "zone": "cabo-de-la-vela"
+    },
+    {
+      "name": "Hospedaje y Restaurante Luzmila",
+      "zone": "punta-gallinas",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://linktr.ee/HyRLuzMila",
+      "geolocation": {
+        "latitude": 12.44289,
+        "longitude": -71.6879,
+        "source_url": "https://mapcarta.com/es/N2764170117",
+        "point_kind": "mapped_business_not_verified_entrance",
+        "public_map_url": null,
+        "checked_at": "2026-11-04"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed"
+    }
+  ],
+  "editorial_rules": [
+    "Una página de Uribia; las tres zonas no generan nuevos lugares ni municipios.",
+    "Inventario de investigación, no selección final de tarjetas: conservar todos los candidatos y aplicar el límite editorial vigente al construir la página.",
+    "Distinguir sitios físicos de actividades contratables; no duplicar un atractivo como experiencia sin oferta comprobada.",
+    "No inventar distancias, tiempos, accesos ni disponibilidad. No sugerir visitar todo en un día.",
+    "No trasladar negocios de Riohacha a Uribia por ofrecer excursiones.",
+    "Palomino permanece separado en Dibulla."
+  ],
+  "sources": [
+    {
+      "url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://colombia.travel/es/riohacha/sube-al-pilon-de-azucar",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://colombia.travel/zh/node/4338",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://expedicioneswalekett.arteyviaje.com/tour/expedicion-origen/",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://uribia-laguajira.gov.co/MiMunicipio/Paginas/Sitios-de-Interes-.aspx",
+      "checked_at": "2026-11-04"
+    }
+  ],
+  "publication_blockers": [
+    "Imágenes y aprobación de versiones exactas",
+    "Enlaces nombrados de Maps y validación de puntos de acceso",
+    "Completar revisión de directorio",
+    "Validación de paquete e importación en dev1",
+    "Punto de referencia del núcleo de Uribia",
+    "Coordenadas y accesos de Macuira y La Boquita",
+    "Textos completos ES/EN/PT-BR y selección editorial final"
+  ],
+  "zones": [
+    {
+      "id": "cabo-de-la-vela",
+      "name": "Cabo de la Vela"
+    },
+    {
+      "id": "punta-gallinas",
+      "name": "Punta Gallinas"
+    },
+    {
+      "id": "nazareth-macuira",
+      "name": "Nazareth–Macuira"
+    }
+  ],
+  "coverage": {
+    "place_count": 1,
+    "municipality_code": "44847",
+    "municipality_count": 1,
+    "separate_place_pages": false,
+    "excluded": {
+      "palomino": "Dibulla",
+      "manaure": "Municipio diferente"
+    }
+  }
+}

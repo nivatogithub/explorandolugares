@@ -1,0 +1,82 @@
+{
+  "status": "pending_review",
+  "hero": {
+    "subject": "Uribia y Alta Guajira; paisaje real identificado, no collage geográfico inventado",
+    "approval": null
+  },
+  "attractions": [
+    {
+      "slug": "pilon-de-azucar",
+      "zone": "cabo-de-la-vela",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "playa-el-cabo",
+      "zone": "cabo-de-la-vela",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "faro-cabo-de-la-vela",
+      "zone": "cabo-de-la-vela",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "ojo-de-agua",
+      "zone": "cabo-de-la-vela",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "piedra-tortuga",
+      "zone": "cabo-de-la-vela",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "playa-arcoiris",
+      "zone": "cabo-de-la-vela",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "dunas-de-taroa",
+      "zone": "punta-gallinas",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "faro-punta-gallinas",
+      "zone": "punta-gallinas",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "bahia-hondita",
+      "zone": "punta-gallinas",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "mirador-casares",
+      "zone": "punta-gallinas",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "punta-aguja",
+      "zone": "punta-gallinas",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "playa-la-boquita",
+      "zone": "punta-gallinas",
+      "status": "reference_pending"
+    },
+    {
+      "slug": "parque-nacional-natural-macuira",
+      "zone": "nazareth-macuira",
+      "status": "reference_pending"
+    }
+  ],
+  "reuse_candidates": [
+    {
+      "slug": "dunas-de-taroa",
+      "path": "crecimiento-colombia/entregas/riohacha/visual/riohacha-alta-guajira-taroa-v1.webp",
+      "sha256": "7728c278926a64dbecb8f5ec4081b640e38915c2513d27deba005219c7fbd8bd",
+      "status": "existing_asset_new_context_review_pending"
+    }
+  ]
+}

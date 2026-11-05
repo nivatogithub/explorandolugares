@@ -5,13 +5,19 @@
   "state": "planned",
   "owner": null,
   "reviewer": null,
-  "branch": "lugar/CO/la-guajira/uribia",
+  "branch": "contenido/lugar-uribia-20261104",
   "pr_url": null,
   "base_commit": null,
   "blockers": [
-    "Asignar responsable y auditar fuentes, permisos y estado real"
+    "Imágenes y aprobación de versiones exactas",
+    "Enlaces nombrados de Maps y validación de puntos de acceso",
+    "Completar revisión de directorio",
+    "Validación de paquete e importación en dev1",
+    "Punto de referencia del núcleo de Uribia",
+    "Coordenadas y accesos de Macuira y La Boquita",
+    "Textos completos ES/EN/PT-BR y selección editorial final"
   ],
-  "next_action": "Completar PROCESO.md y evidencia específica del lugar",
+  "next_action": "Completar imágenes, accesos, idiomas y selección editorial del expediente consolidado",
   "gates": {
     "identidad": {
       "passed": false,
