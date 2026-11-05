@@ -8,67 +8,87 @@
     {
       "slug": "pilon-de-azucar",
       "zone": "cabo-de-la-vela",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": true
     },
     {
       "slug": "playa-el-cabo",
       "zone": "cabo-de-la-vela",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": true
     },
     {
       "slug": "faro-cabo-de-la-vela",
       "zone": "cabo-de-la-vela",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": true
     },
     {
       "slug": "ojo-de-agua",
       "zone": "cabo-de-la-vela",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": true
     },
     {
       "slug": "piedra-tortuga",
       "zone": "cabo-de-la-vela",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": false
     },
     {
       "slug": "playa-arcoiris",
       "zone": "cabo-de-la-vela",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": false
     },
     {
       "slug": "dunas-de-taroa",
       "zone": "punta-gallinas",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": true
     },
     {
       "slug": "faro-punta-gallinas",
       "zone": "punta-gallinas",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": true
     },
     {
       "slug": "bahia-hondita",
       "zone": "punta-gallinas",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": true
     },
     {
       "slug": "mirador-casares",
       "zone": "punta-gallinas",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": false
     },
     {
       "slug": "punta-aguja",
       "zone": "punta-gallinas",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": false
     },
     {
       "slug": "playa-la-boquita",
       "zone": "punta-gallinas",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": false
     },
     {
       "slug": "parque-nacional-natural-macuira",
       "zone": "nazareth-macuira",
-      "status": "reference_pending"
+      "status": "reference_pending",
+      "selected": true
+    },
+    {
+      "slug": "jepirachi",
+      "zone": "cabo-de-la-vela",
+      "selected": true,
+      "status": "pending_parent_generation",
+      "note": "No representar generación actual ni inventar estado presente; referencia histórica identificada."
     }
   ],
   "reuse_candidates": [
@@ -78,5 +98,6 @@
       "sha256": "7728c278926a64dbecb8f5ec4081b640e38915c2513d27deba005219c7fbd8bd",
       "status": "existing_asset_new_context_review_pending"
     }
-  ]
+  ],
+  "selection_note": "Nueve atractivos y portada por instrucción expresa del propietario."
 }

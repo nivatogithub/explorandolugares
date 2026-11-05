@@ -10,7 +10,14 @@
   "status": "editorial_consolidation_not_published",
   "public": false,
   "branch": "contenido/lugar-uribia-20261104",
-  "geolocation": null,
+  "geolocation": {
+    "latitude": 11.7149,
+    "longitude": -72.2658,
+    "source_url": "https://mapcarta.com/es/19678502",
+    "point_kind": "urban_settlement_reference_not_municipality_centroid",
+    "checked_at": "2026-11-04",
+    "public_map_url": null
+  },
   "intro_draft_es": "Uribia reúne paisajes de costa y desierto, dunas junto al mar y los bosques de la serranía de Macuira. Esta guía organiza la visita en tres zonas: Cabo de la Vela, Punta Gallinas y Nazareth–Macuira. Son sectores separados que requieren planear traslados y coordinar recorridos con anfitriones locales.",
   "why_visit_es": [
     "Conocer los paisajes del Cabo de la Vela y Punta Gallinas sin confundir sus playas y faros.",
@@ -34,7 +41,8 @@
       "image_key": "attraction-01",
       "image_status": "reference_pending",
       "approval": null,
-      "zone": "cabo-de-la-vela"
+      "zone": "cabo-de-la-vela",
+      "selected": true
     },
     {
       "slug": "playa-el-cabo",
@@ -52,7 +60,8 @@
       "image_key": "attraction-02",
       "image_status": "reference_pending",
       "approval": null,
-      "zone": "cabo-de-la-vela"
+      "zone": "cabo-de-la-vela",
+      "selected": true
     },
     {
       "slug": "faro-cabo-de-la-vela",
@@ -70,7 +79,8 @@
       "image_key": "attraction-03",
       "image_status": "reference_pending",
       "approval": null,
-      "zone": "cabo-de-la-vela"
+      "zone": "cabo-de-la-vela",
+      "selected": true
     },
     {
       "slug": "ojo-de-agua",
@@ -88,7 +98,8 @@
       "image_key": "attraction-04",
       "image_status": "reference_pending",
       "approval": null,
-      "zone": "cabo-de-la-vela"
+      "zone": "cabo-de-la-vela",
+      "selected": true
     },
     {
       "slug": "piedra-tortuga",
@@ -106,7 +117,8 @@
       "image_key": "attraction-05",
       "image_status": "reference_pending",
       "approval": null,
-      "zone": "cabo-de-la-vela"
+      "zone": "cabo-de-la-vela",
+      "selected": false
     },
     {
       "slug": "playa-arcoiris",
@@ -124,7 +136,8 @@
       "image_key": "attraction-06",
       "image_status": "reference_pending",
       "approval": null,
-      "zone": "cabo-de-la-vela"
+      "zone": "cabo-de-la-vela",
+      "selected": false
     },
     {
       "slug": "dunas-de-taroa",
@@ -141,7 +154,8 @@
         "checked_at": "2026-11-04"
       },
       "image_status": "reference_pending",
-      "approval": null
+      "approval": null,
+      "selected": true
     },
     {
       "slug": "faro-punta-gallinas",
@@ -158,7 +172,8 @@
         "checked_at": "2026-11-04"
       },
       "image_status": "reference_pending",
-      "approval": null
+      "approval": null,
+      "selected": true
     },
     {
       "slug": "bahia-hondita",
@@ -175,7 +190,8 @@
         "checked_at": "2026-11-04"
       },
       "image_status": "reference_pending",
-      "approval": null
+      "approval": null,
+      "selected": true
     },
     {
       "slug": "mirador-casares",
@@ -192,7 +208,8 @@
         "checked_at": "2026-11-04"
       },
       "image_status": "reference_pending",
-      "approval": null
+      "approval": null,
+      "selected": false
     },
     {
       "slug": "punta-aguja",
@@ -209,7 +226,8 @@
         "checked_at": "2026-11-04"
       },
       "image_status": "reference_pending",
-      "approval": null
+      "approval": null,
+      "selected": false
     },
     {
       "slug": "playa-la-boquita",
@@ -219,7 +237,8 @@
       "source_url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf",
       "geolocation": null,
       "image_status": "reference_pending",
-      "approval": null
+      "approval": null,
+      "selected": false
     },
     {
       "slug": "parque-nacional-natural-macuira",
@@ -227,9 +246,46 @@
       "zone": "nazareth-macuira",
       "description_es": "La serranía conserva bosques en el paisaje árido de la Alta Guajira. La visita se organiza por recorridos autorizados con acompañamiento local; no supone acceso libre a todo el parque.",
       "source_url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-macuira/",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 12.12889,
+        "longitude": -71.34056,
+        "source_url": "https://mapcarta.com/es/19697116",
+        "point_kind": "mountain_range_reference_not_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
       "image_status": "reference_pending",
-      "approval": null
+      "approval": null,
+      "selected": true,
+      "access_reference_candidate": {
+        "latitude": 12.17622,
+        "longitude": -71.28105,
+        "source_url": "https://mapcarta.com/N6110200485",
+        "point_kind": "mapped_park_office_not_verified_meeting_point",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      }
+    },
+    {
+      "slug": "jepirachi",
+      "name": "Parque eólico Jepírachi",
+      "zone": "cabo-de-la-vela",
+      "selected": true,
+      "description_es": "Un referente de la historia de la energía eólica en Colombia, en el paisaje de la Alta Guajira. Dejó de generar en octubre de 2023 y EPM documenta su proceso de desmontaje. No se ofrece acceso al interior; confirma las condiciones del sector antes de incluirlo en tu recorrido.",
+      "source_url": "https://www.epm.com.co/institucional/proyectos/proyecto-de-desmontaje-del-parque-eolico-jepirachi/",
+      "geolocation": {
+        "latitude": 12.22654,
+        "longitude": -72.03602,
+        "source_url": "https://mapcarta.com/es/N10778675612",
+        "point_kind": "mapped_historical_site_not_verified_access",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_status": "pending_parent_generation",
+      "approval": null,
+      "operation_status": "generation_ended_2023-10-09",
+      "access_status": "interior_access_not_confirmed",
+      "coordinate_note": "Nodo de atractivo, distinto de subestación; otra referencia homónima aparece a 5km. No usar como navegación sin validar acceso."
     }
   ],
   "experiences": [
@@ -264,7 +320,8 @@
       "offer_url": "https://www.solguajirotours.com/product-page/tour-punta-gallinas-cabo-de-la-vela-2-dias-y-una-noche",
       "public_operator_promotion": false,
       "geolocation": null,
-      "location_exception": "Salida a confirmar; no atribuir al operador una sede en Punta Gallinas."
+      "location_exception": "Salida a confirmar; no atribuir al operador una sede en Punta Gallinas.",
+      "operator_internal": "Sol Guajiro Tours"
     }
   ],
   "businesses": [
@@ -285,19 +342,38 @@
       "public": false,
       "status": "documented_unclaimed",
       "checked_at": "2026-11-04",
-      "zone": "cabo-de-la-vela"
+      "zone": "cabo-de-la-vela",
+      "evidence_level": "own_channel",
+      "current_operation_confirmed": false,
+      "slug": "cabo-kite-center",
+      "categories": [
+        "experiencias"
+      ]
     },
     {
       "name": "TAWI Kite Center and Hostel",
       "category": "hospedaje",
       "source_url": "https://tawikitecabo.com/",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 12.20664,
+        "longitude": -72.15704,
+        "source_url": "https://mapcarta.com/N4704584989",
+        "point_kind": "mapped_named_business_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
       "claimed": false,
       "verified_business": false,
       "public": false,
       "status": "documented_unclaimed",
       "checked_at": "2026-11-04",
-      "zone": "cabo-de-la-vela"
+      "zone": "cabo-de-la-vela",
+      "evidence_level": "own_channel",
+      "current_operation_confirmed": false,
+      "slug": "tawi-kite-center-and-hostel",
+      "categories": [
+        "hospedaje"
+      ]
     },
     {
       "name": "Paradise Kite School",
@@ -309,7 +385,13 @@
       "public": false,
       "status": "documented_unclaimed",
       "checked_at": "2026-11-04",
-      "zone": "cabo-de-la-vela"
+      "zone": "cabo-de-la-vela",
+      "evidence_level": "own_channel",
+      "current_operation_confirmed": false,
+      "slug": "paradise-kite-school",
+      "categories": [
+        "experiencias"
+      ]
     },
     {
       "name": "Hospedaje y Restaurante Luzmila",
@@ -330,7 +412,619 @@
       "claimed": false,
       "verified_business": false,
       "public": false,
-      "status": "documented_unclaimed"
+      "status": "documented_unclaimed",
+      "evidence_level": "own_channel",
+      "current_operation_confirmed": false,
+      "slug": "hospedaje-y-restaurante-luzmila"
+    },
+    {
+      "name": "Analauli",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": {
+        "latitude": 12.20498,
+        "longitude": -72.15072,
+        "source_url": "https://mapcarta.com/N10778675660",
+        "point_kind": "mapped_named_business_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "analauli"
+    },
+    {
+      "name": "Villa Shaymar",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "villa-shaymar"
+    },
+    {
+      "name": "Ka’i Kashii",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "kai-kashii"
+    },
+    {
+      "name": "Salaima",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "salaima"
+    },
+    {
+      "name": "Arantxa",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "arantxa"
+    },
+    {
+      "name": "Amistad",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "amistad"
+    },
+    {
+      "name": "Kayuusipaa",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "kayuusipaa",
+      "coordinate_candidate": {
+        "latitude": 12.201279444444443,
+        "longitude": -72.1671738888889,
+        "source_url": "https://repositorio.unbosque.edu.co/server/api/core/bitstreams/abe893a9-b782-4432-a9a8-7d784c25a089/content",
+        "point_kind": "research_site_rancheria_not_verified_lodging_entrance",
+        "note": "Investigación de campo identifica ranchería; nodo OSM4725042005 está cerca de SauIpa. Contrastar punto específico antes de asignarlo al negocio."
+      }
+    },
+    {
+      "name": "Sumaiwajat",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "sumaiwajat"
+    },
+    {
+      "name": "Shipi’ia Girnu",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "shipiia-girnu"
+    },
+    {
+      "name": "Sau Ipa",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": {
+        "latitude": 12.20677,
+        "longitude": -72.16999,
+        "source_url": "https://mapcarta.com/es/N10778675633",
+        "point_kind": "mapped_named_business_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "sau-ipa"
+    },
+    {
+      "name": "Reflejos del Sol",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "reflejos-del-sol"
+    },
+    {
+      "name": "Ranchería Utta",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://rancheriautta.com/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "own_channel",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "rancheria-utta"
+    },
+    {
+      "name": "Apalanchii",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://www.apalanchiihospedajeyrestaurant.com/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "own_channel",
+      "geolocation": {
+        "latitude": 12.20295,
+        "longitude": -72.1494,
+        "source_url": "https://mapcarta.com/N2764838747",
+        "point_kind": "mapped_named_business_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "apalanchii",
+      "named_navigation_candidate": "https://www.waze.com/live-map/directions/colombia/la-guajira/cabo-de-la-vela/apalanchii-hospedaje-y-restaurante?to=place.ChIJm70aJKwyjI4R5L7aTHVL5yY",
+      "navigation_candidate_status": "indexed_named_result_fetch_failed_not_public"
+    },
+    {
+      "name": "Playa Bonita",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "playa-bonita"
+    },
+    {
+      "name": "Refugio Pantu",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/",
+        "https://www.google.co.ve/travel/hotels/entity/ChoIyLuL3fvS9vPhARoNL2cvMTFyczJfZGZrZxAB",
+        "https://www.booking.com/hotel/co/refugio-pantu.es.html"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": {
+        "latitude": 12.205813,
+        "longitude": -72.172354,
+        "source_url": "https://www.travelmyth.com/cabo-de-la-vela/Hotels/refugio-pantu_tmid7073170",
+        "point_kind": "mapped_named_business_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "publication_hold_operation_conflict",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "refugio-pantu",
+      "operation_warning": "Google Travel y RestaurantGuru muestran cierre temporal; Booking mantiene oferta. Confirmar antes de publicar."
+    },
+    {
+      "name": "Mar y Sol",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "mar-y-sol"
+    },
+    {
+      "name": "Mar Abierto",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "mar-abierto"
+    },
+    {
+      "name": "La Ballena Azul",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "la-ballena-azul"
+    },
+    {
+      "name": "Su’útpa Kashii",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "suutpa-kashii"
+    },
+    {
+      "name": "Jarrinapi",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://restauranteyhosped.wixsite.com/jarrinapi",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "own_channel",
+      "geolocation": {
+        "latitude": 12.19739,
+        "longitude": -72.14733,
+        "source_url": "https://mapcarta.com/N4753279222",
+        "point_kind": "mapped_named_business_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "jarrinapi",
+      "coordinate_note": "Punto del restaurante; otro nodo Jarrinapi_2 a 12.19826,-72.1474. No asumir entrada única de hospedaje."
+    },
+    {
+      "name": "Rancho el Coral",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "rancho-el-coral"
+    },
+    {
+      "name": "Doña Mery",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "dona-mery"
+    },
+    {
+      "name": "Damikeisi",
+      "zone": "cabo-de-la-vela",
+      "categories": [
+        "hospedaje",
+        "restaurante"
+      ],
+      "source_url": "https://cabodelavela.org/hospedajes/",
+      "corroborating_urls": [
+        "https://cabodelavela.org/hospedajes/"
+      ],
+      "evidence_level": "local_association_directory",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "damikeisi"
+    },
+    {
+      "name": "Posada Urraichipa",
+      "zone": "nazareth-macuira",
+      "categories": [
+        "hospedaje"
+      ],
+      "source_url": "https://posadasrurales.co/inicio/517-posada-urraichipa-nazareth-alta-guajira-guajira.html",
+      "evidence_level": "accommodation_listing",
+      "geolocation": {
+        "latitude": 12.1753856328,
+        "longitude": -71.282229768,
+        "source_url": "https://posadasrurales.co/inicio/517-posada-urraichipa-nazareth-alta-guajira-guajira.html",
+        "point_kind": "property_listing_point_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "corroborating_urls": [
+        "https://camaraguajira.org/publicaciones/noticia-mercantil/2024/Boletin_creado_2024_04.pdf"
+      ],
+      "slug": "posada-urraichipa"
+    },
+    {
+      "name": "Hotel Villa María",
+      "zone": "uribia-urbana",
+      "categories": [
+        "hospedaje"
+      ],
+      "source_url": "https://es.hoteles.com/ho692536352/hotel-villa-maria-uribia-colombia/",
+      "evidence_level": "accommodation_listing_and_commercial_bulletin",
+      "geolocation": {
+        "latitude": 11.716744,
+        "longitude": -72.265636,
+        "source_url": "https://www.ehotelsreviews.com/hotel-villa-maria-uribia-1664807-fi",
+        "point_kind": "mapped_named_business_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_unclaimed",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "corroborating_urls": [
+        "https://camaraguajira.org/publicaciones/noticia-mercantil/2025/Boletin_creado_2025_03.pdf"
+      ],
+      "slug": "hotel-villa-maria"
+    },
+    {
+      "name": "Yonna Bar",
+      "zone": "nazareth-macuira",
+      "categories": [
+        "bar"
+      ],
+      "source_url": "https://mapcarta.com/N6110200585",
+      "evidence_level": "map_only_candidate",
+      "geolocation": {
+        "latitude": 12.17602,
+        "longitude": -71.28116,
+        "source_url": "https://mapcarta.com/N6110200585",
+        "point_kind": "mapped_named_business_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "candidate_needs_channel_confirmation",
+      "current_operation_confirmed": false,
+      "checked_at": "2026-11-04",
+      "slug": "yonna-bar"
     }
   ],
   "editorial_rules": [
@@ -364,13 +1058,10 @@
     }
   ],
   "publication_blockers": [
-    "Imágenes y aprobación de versiones exactas",
-    "Enlaces nombrados de Maps y validación de puntos de acceso",
-    "Completar revisión de directorio",
-    "Validación de paquete e importación en dev1",
-    "Punto de referencia del núcleo de Uribia",
-    "Coordenadas y accesos de Macuira y La Boquita",
-    "Textos completos ES/EN/PT-BR y selección editorial final"
+    "Imágenes finales y aprobación de versiones exactas para Uribia",
+    "Confirmación de puntos de acceso y enlaces públicos nombrados de Maps",
+    "Revisión final de directorio: 29 documentados y un candidato solo cartográfico; no confundir existencia con operación o verificación legal",
+    "Conversión al contrato de paquete vigente y validación de importación; no desplegado por esta tarea"
   ],
   "zones": [
     {
@@ -395,5 +1086,30 @@
       "palomino": "Dibulla",
       "manaure": "Municipio diferente"
     }
-  }
+  },
+  "selected_attraction_slugs": [
+    "playa-el-cabo",
+    "pilon-de-azucar",
+    "faro-cabo-de-la-vela",
+    "ojo-de-agua",
+    "dunas-de-taroa",
+    "faro-punta-gallinas",
+    "bahia-hondita",
+    "parque-nacional-natural-macuira",
+    "jepirachi"
+  ],
+  "context_candidates": [
+    {
+      "slug": "bahia-portete-kaurrele",
+      "name": "Parque Nacional Natural Bahía Portete–Kaurrele",
+      "selected": false,
+      "status": "not_for_tourist_itinerary",
+      "source_urls": [
+        "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-bahia-portete/"
+      ],
+      "checked_at": "2026-11-04",
+      "note": "La ficha oficial indica Cerrado y Sin Ecoturismo; contexto de conservación, no atractivo visitable."
+    }
+  ],
+  "selection_exception": "Nueve atractivos por instrucción expresa del propietario: incluir Jepírachi, sin prometer funcionamiento ni acceso interior."
 }

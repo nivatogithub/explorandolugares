@@ -1,0 +1,51 @@
+{
+  "selected_attractions": [
+    "playa-el-cabo",
+    "pilon-de-azucar",
+    "faro-cabo-de-la-vela",
+    "ojo-de-agua",
+    "dunas-de-taroa",
+    "faro-punta-gallinas",
+    "bahia-hondita",
+    "parque-nacional-natural-macuira",
+    "jepirachi"
+  ],
+  "secondary_attractions": [
+    "piedra-tortuga",
+    "playa-arcoiris",
+    "mirador-casares",
+    "punta-aguja",
+    "playa-la-boquita"
+  ],
+  "secondary_reason": "Conservar inventario; ocho tarjetas principales cubren tres zonas sin repetir todos los miradores y playas. La Boquita requiere ubicación.",
+  "public_map_links_verified": 0,
+  "coordinate_warning": "Puntos de referencia no son rutas ni accesos. Bahía Hondita está en el agua y Macuira identifica la serranía; nunca usarlos como navegación.",
+  "source_cautions": [
+    "PNN Macuira presenta cifras de superficie y horarios inconsistentes; se omiten.",
+    "La asociación documenta negocios, no confirma operación actual, registro legal ni representación.",
+    "No se incluyen operadores de Riohacha como establecimientos de Uribia."
+  ],
+  "excluded_business_candidates": {
+    "Gimaura": "Riohacha",
+    "Hotel Waya": "Albania",
+    "Wayira": "Manaure",
+    "Hotel Taroa": "Riohacha",
+    "Macuira Tours": "Oficina en Riohacha",
+    "Faymag": "Posible alias de Doña Mery; teléfono coincidente, no duplicar",
+    "Jarripini": "Posible variante de Jarrinapi; no duplicar"
+  },
+  "experience_policy": "Operador y oferta conservados internamente; textos públicos neutrales. Puntos de encuentro no confirmados.",
+  "sources": [
+    {
+      "url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-macuira/",
+      "checked_at": "2026-11-04",
+      "supports": "Macuira, reservas, guía e ingreso, restricciones de pernocta"
+    },
+    {
+      "url": "https://cabodelavela.org/hospedajes/",
+      "checked_at": "2026-11-04",
+      "supports": "23 integrantes de directorio local, nombres y categorías"
+    }
+  ],
+  "selection_exception": "Nueve atractivos por instrucción expresa del propietario: incluir Jepírachi, sin prometer funcionamiento ni acceso interior."
+}
