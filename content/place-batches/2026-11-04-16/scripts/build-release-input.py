@@ -19,7 +19,7 @@ def image(folder,key,names):
  assert h==o['sha256'] and m['approval']['status']=='approved' and h==m['approval']['image_sha256'],str(f)
  ref=m['reference'];author=html.unescape(re.sub('<[^>]+>','',ref.get('author_html',''))).strip();origin='ai_generated' if m['kind']=='ai_editorial_illustration' else 'external'
  credit=' · '.join(x for x in [author,ref.get('license','')] if x)
- return {'file':str(f.relative_to(ROOT)),'sha256':h,'image_origin':origin,'image_creator':('Ilustración editorial IA; referencia: ' if origin=='ai_generated' else '')+author,'image_source_url':ref.get('source_url',''),'image_license':ref.get('license',''),'image_license_url':ref.get('license_url',''),'alt':dict(zip(LOCALES,names)),'caption':{l:credit for l in LOCALES}}
+ return {'file':str(f.relative_to(ROOT)),'sha256':h,'image_origin':origin,'image_creator':('Ilustración editorial IA; referencia: ' if origin=='ai_generated' else '')+author,'image_source_url':ref.get('source_url',''),'image_license':ref.get('license',''),'image_license_url':ref.get('license_url','').replace('http://creativecommons.org/','https://creativecommons.org/'),'alt':dict(zip(LOCALES,names)),'caption':{l:credit for l in LOCALES}}
 copy=load(ROOT/'editorial/localized-copy.json');payload=[];missing=[]
 for folder in sorted((ROOT/'places').iterdir()):
  if not (folder/'research.json').exists():continue
