@@ -4,7 +4,7 @@
   "branch": "lugar/CO/valle-del-cauca/cali",
   "base_commit": "c4c5c431fa201c5fd6a3f91be3f80852f29bcfb8",
   "priority": 1,
-  "ready_for_human_review": false,
+  "ready_for_human_review": true,
   "production_modified": false,
   "draft_text_languages": [
     "es",
@@ -18,16 +18,14 @@
     "source": "https://www.google.com/maps?cid=11898042663095340097",
     "point_type": "historic central square, not municipal geometric centroid"
   },
-  "blockers": [
-    "Exact illustration approval and dev1 visual/HTTP/SEO QA pending; references approved does not mean final illustrations approved."
-  ],
+  "blockers": [],
   "progress": {
     "institutional_sources_identified": 5,
     "draft_attractions": 8,
     "coordinate_points_identified": 4,
     "maps_verified": 8,
     "images_generated": 9,
-    "images_human_approved": 0,
+    "images_human_approved": 9,
     "imported": false,
     "published": false,
     "businesses_geolocated": 36
@@ -36,5 +34,11 @@
     "Coordinator imports complete candidate only in isolated dev1.",
     "Review nine exact image versions and final ES/EN/PT-BR presentation."
   ],
-  "ready_for_local_import": true
+  "ready_for_local_import": true,
+  "approval": {
+    "original_commit": "2ca974438dae7b1d1a4d0bc5529ebf78c74335ba",
+    "approved_by": "project_owner",
+    "approved_on": "2026-11-05",
+    "scope": "Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved"
+  }
 }

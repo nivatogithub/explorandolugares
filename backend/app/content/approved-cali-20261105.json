@@ -1,0 +1,2607 @@
+{
+  "schema_version": 1,
+  "scope": [
+    "cali"
+  ],
+  "public_places": [
+    "cali"
+  ],
+  "approval": {
+    "original_commit": "2ca974438dae7b1d1a4d0bc5529ebf78c74335ba",
+    "approved_by": "project_owner",
+    "approved_on": "2026-11-05",
+    "scope": "Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved"
+  },
+  "editorial": {
+    "cali": {
+      "slug": "cali",
+      "country_code": "CO",
+      "destination_type": "city",
+      "department": "Valle del Cauca",
+      "subregion": "",
+      "latitude": 3.4518194,
+      "longitude": -76.5325303,
+      "translations": {
+        "es": {
+          "display_name": "Cali",
+          "eyebrow": "Valle del Cauca · Colombia",
+          "headline": "Río, patrimonio y ritmo caleño",
+          "intro": "Conoce el centro histórico, recorre el Bulevar del Río y sube a San Antonio. Cali reúne espacios culturales, arte urbano y una tradición salsera que forma parte de su vida cotidiana.",
+          "meta_description": "Descubre Cali entre patrimonio, arte y naturaleza: San Antonio, La Ermita, Cristo Rey, el Bulevar del Río, museos y espacios para conocer la ciudad.",
+          "destination_id": 10012,
+          "locale": "es"
+        },
+        "en": {
+          "display_name": "Cali",
+          "eyebrow": "Valle del Cauca · Colombia",
+          "headline": "Riverside walks, heritage and local rhythm",
+          "intro": "Explore the historic centre, walk along the Bulevar del Río and head up to San Antonio. Cali brings together cultural spaces, public art and a salsa tradition woven into everyday life.",
+          "meta_description": "Discover Cali through heritage, art and nature: San Antonio, La Ermita, Cristo Rey, riverside walks, museums and places to explore the city.",
+          "destination_id": 10012,
+          "locale": "en"
+        },
+        "pt-BR": {
+          "display_name": "Cali",
+          "eyebrow": "Valle del Cauca · Colômbia",
+          "headline": "Rio, patrimônio e ritmo caleño",
+          "intro": "Conheça o centro histórico, caminhe pelo Bulevar del Río e suba até San Antonio. Cali reúne espaços culturais, arte urbana e uma tradição de salsa presente na vida cotidiana.",
+          "meta_description": "Descubra Cali entre patrimônio, arte e natureza: San Antonio, La Ermita, Cristo Rey, Bulevar del Río, museus e espaços para conhecer a cidade.",
+          "destination_id": 10012,
+          "locale": "pt-BR"
+        }
+      },
+      "history": {
+        "es": [
+          "La Plaza de Cayzedo permite reconocer el núcleo histórico de Santiago de Cali, rodeado por edificios como la Catedral de San Pedro y el Palacio Nacional. La arquitectura y los espacios públicos muestran distintas etapas de la vida de la ciudad.",
+          "El paseo junto al río y la colina de San Antonio conectan esa memoria urbana con la vida cultural. La salsa, los museos y las artes forman parte de una ciudad que también se descubre caminando entre barrios."
+        ],
+        "en": [
+          "Plaza de Cayzedo marks the historic heart of Santiago de Cali, surrounded by buildings such as San Pedro Cathedral and the National Palace. Its architecture and public spaces reflect different stages in the city’s development.",
+          "The riverside promenade and San Antonio hill connect this urban heritage with cultural life. Salsa, museums and the arts are part of a city that can also be explored on foot through its neighbourhoods."
+        ],
+        "pt-BR": [
+          "A Plaza de Cayzedo permite reconhecer o núcleo histórico de Santiago de Cali, cercado por edifícios como a Catedral de San Pedro e o Palacio Nacional. A arquitetura e os espaços públicos mostram diferentes etapas da vida da cidade.",
+          "O passeio junto ao rio e a colina de San Antonio conectam essa memória urbana à vida cultural. A salsa, os museus e as artes fazem parte de uma cidade que também se descobre caminhando pelos bairros."
+        ]
+      },
+      "reasons": {
+        "es": [
+          "Patrimonio del centro histórico y arquitectura de La Ermita.",
+          "Paseos junto al río Cali y vistas desde San Antonio.",
+          "Arte público, museos y una tradición salsera viva."
+        ],
+        "en": [
+          "Historic-centre heritage and La Ermita’s architecture.",
+          "Walks by the Cali River and views from San Antonio.",
+          "Public art, museums and a living salsa tradition."
+        ],
+        "pt-BR": [
+          "Patrimônio do centro histórico e arquitetura de La Ermita.",
+          "Passeios junto ao rio Cali e vistas de San Antonio.",
+          "Arte público, museus e uma tradição viva de salsa."
+        ]
+      },
+      "sources": {
+        "es": [
+          {
+            "section_key": "places",
+            "source_label": "Secretaría de Turismo de Cali: sitios para visitar",
+            "source_url": "https://www.cali.gov.co/turismo/publicaciones/131931/sitios-para-visitar-en-santiago-de-cali/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "ProColombia: iglesia de La Ermita",
+            "source_url": "https://colombia.travel/es/cali/conoce-la-iglesia-de-la-ermita"
+          },
+          {
+            "section_key": "history",
+            "source_label": "Patrimonio municipal: iglesia La Ermita",
+            "source_url": "https://idesc.cali.gov.co/download/bibliotecas/hitos/iglesia_la_ermita.pdf"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Patrimonio municipal: Capilla de San Antonio",
+            "source_url": "https://idesc.cali.gov.co/download/turismo/recursos_zonas/RT-80-C03p.pdf"
+          },
+          {
+            "section_key": "destination",
+            "source_label": "Banco de la República: Plaza de Cayzedo",
+            "source_url": "https://babel.banrepcultural.org/digital/collection/hernan-diaz/id/595/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Alcaldía de Cali: El Gato del Río",
+            "source_url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Alcaldía de Cali: reapertura parcial de Cristo Rey,21agosto2026",
+            "source_url": "https://www.cali.gov.co/boletines/publicaciones/193827/anuncian-apertura-de-cristo-rey-tras-las-inspecciones-realizadas-luego-del-sismo/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Zoológico de Cali: planea tu visita",
+            "source_url": "https://www.zoologicodecali.com.co/visita"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Museo La Tertulia",
+            "source_url": "https://museolatertulia.com/"
+          }
+        ],
+        "en": [
+          {
+            "section_key": "places",
+            "source_label": "Secretaría de Turismo de Cali: sitios para visitar",
+            "source_url": "https://www.cali.gov.co/turismo/publicaciones/131931/sitios-para-visitar-en-santiago-de-cali/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "ProColombia: iglesia de La Ermita",
+            "source_url": "https://colombia.travel/es/cali/conoce-la-iglesia-de-la-ermita"
+          },
+          {
+            "section_key": "history",
+            "source_label": "Patrimonio municipal: iglesia La Ermita",
+            "source_url": "https://idesc.cali.gov.co/download/bibliotecas/hitos/iglesia_la_ermita.pdf"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Patrimonio municipal: Capilla de San Antonio",
+            "source_url": "https://idesc.cali.gov.co/download/turismo/recursos_zonas/RT-80-C03p.pdf"
+          },
+          {
+            "section_key": "destination",
+            "source_label": "Banco de la República: Plaza de Cayzedo",
+            "source_url": "https://babel.banrepcultural.org/digital/collection/hernan-diaz/id/595/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Alcaldía de Cali: El Gato del Río",
+            "source_url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Alcaldía de Cali: reapertura parcial de Cristo Rey,21agosto2026",
+            "source_url": "https://www.cali.gov.co/boletines/publicaciones/193827/anuncian-apertura-de-cristo-rey-tras-las-inspecciones-realizadas-luego-del-sismo/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Zoológico de Cali: planea tu visita",
+            "source_url": "https://www.zoologicodecali.com.co/visita"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Museo La Tertulia",
+            "source_url": "https://museolatertulia.com/"
+          }
+        ],
+        "pt-BR": [
+          {
+            "section_key": "places",
+            "source_label": "Secretaría de Turismo de Cali: sitios para visitar",
+            "source_url": "https://www.cali.gov.co/turismo/publicaciones/131931/sitios-para-visitar-en-santiago-de-cali/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "ProColombia: iglesia de La Ermita",
+            "source_url": "https://colombia.travel/es/cali/conoce-la-iglesia-de-la-ermita"
+          },
+          {
+            "section_key": "history",
+            "source_label": "Patrimonio municipal: iglesia La Ermita",
+            "source_url": "https://idesc.cali.gov.co/download/bibliotecas/hitos/iglesia_la_ermita.pdf"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Patrimonio municipal: Capilla de San Antonio",
+            "source_url": "https://idesc.cali.gov.co/download/turismo/recursos_zonas/RT-80-C03p.pdf"
+          },
+          {
+            "section_key": "destination",
+            "source_label": "Banco de la República: Plaza de Cayzedo",
+            "source_url": "https://babel.banrepcultural.org/digital/collection/hernan-diaz/id/595/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Alcaldía de Cali: El Gato del Río",
+            "source_url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Alcaldía de Cali: reapertura parcial de Cristo Rey,21agosto2026",
+            "source_url": "https://www.cali.gov.co/boletines/publicaciones/193827/anuncian-apertura-de-cristo-rey-tras-las-inspecciones-realizadas-luego-del-sismo/"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Zoológico de Cali: planea tu visita",
+            "source_url": "https://www.zoologicodecali.com.co/visita"
+          },
+          {
+            "section_key": "places",
+            "source_label": "Museo La Tertulia",
+            "source_url": "https://museolatertulia.com/"
+          }
+        ]
+      },
+      "id": 10012,
+      "publication_status": "published",
+      "display_order": 105,
+      "internal_research_json": "{\"schema_version\": 1, \"researched_at\": \"2026-11-05\", \"positioning\": \"Cultura urbana, centro histórico, río y salsa; no limitar Cali únicamente a una temática.\", \"competitors\": [], \"potential_allies\": [], \"business_prospects\": [], \"acquisition_strategies\": [], \"sources\": [], \"notes\": [\"Candidato completo para revisión local aislada: ocho atractivos físicos y 36 fichas en diez categorías.\", \"Todas las imágenes siguen pendientes de aprobación humana de su hash exacto. Tres adaptaciones requieren atribución y licencia CC BY-SA4 antes de promoción pública.\", \"No se incorporan experiencias nuevas en esta entrega. La oferta de salsa documentada permanece en investigación interna.\", \"Cristo Rey: boletín municipal21agosto2026 anunció reapertura parcial. No se prometen horarios, reserva ni accesibilidad integral.\"]}",
+      "destination_media": {
+        "hero": {
+          "media_asset_id": 508,
+          "asset_path": "assets/media/1d/1deb889f98d520b2cd937a621410ff114aa47c41d5f77f3f7e36a7ed4ddd17a8.webp"
+        }
+      },
+      "places": [
+        {
+          "slug": "la-ermita",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 3.4540056,
+          "longitude": -76.5319868,
+          "translations": {
+            "es": {
+              "name": "Iglesia La Ermita",
+              "description": "Su silueta neogótica destaca junto al río Cali y el Parque de los Poetas. Un punto reconocible para comenzar a explorar el centro.",
+              "map_url": "https://www.google.com/maps?cid=1701009278817753200",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "La Ermita Church",
+              "description": "Its neo-Gothic silhouette stands beside the Cali River and Parque de los Poetas, a distinctive starting point for exploring the centre.",
+              "map_url": "https://www.google.com/maps?cid=1701009278817753200",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Igreja La Ermita",
+              "description": "Sua silhueta neogótica se destaca junto ao rio Cali e ao Parque de los Poetas, um ponto marcante para explorar o centro.",
+              "map_url": "https://www.google.com/maps?cid=1701009278817753200",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000464,
+          "media_asset_id": 509
+        },
+        {
+          "slug": "san-antonio",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 3.447553,
+          "longitude": -76.5417705,
+          "translations": {
+            "es": {
+              "name": "Capilla y colina de San Antonio",
+              "description": "La capilla y el entorno de la colina conservan parte del patrimonio tradicional de Cali, entre calles de barrio y vistas urbanas.",
+              "map_url": "https://www.google.com/maps?cid=14521516844301738406",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "San Antonio Chapel and Hill",
+              "description": "The chapel and its hilltop surroundings preserve part of Cali’s traditional heritage, with neighbourhood streets and city views.",
+              "map_url": "https://www.google.com/maps?cid=14521516844301738406",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Capela e colina de San Antonio",
+              "description": "A capela e o entorno da colina preservam parte do patrimônio tradicional de Cali, entre ruas de bairro e vistas urbanas.",
+              "map_url": "https://www.google.com/maps?cid=14521516844301738406",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000465,
+          "media_asset_id": 510
+        },
+        {
+          "slug": "gato-del-rio",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 3.4513887,
+          "longitude": -76.5430164,
+          "translations": {
+            "es": {
+              "name": "El Gato del Río",
+              "description": "La escultura de bronce de Hernando Tejada se ha convertido en un símbolo de Cali. Su figura de grandes ojos acompaña el paseo junto al río.",
+              "map_url": "https://www.google.com/maps?cid=7835761905139033954",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "El Gato del Río",
+              "description": "Hernando Tejada’s bronze sculpture has become a symbol of Cali. Its wide-eyed figure stands beside the riverside walk.",
+              "map_url": "https://www.google.com/maps?cid=7835761905139033954",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "El Gato del Río",
+              "description": "A escultura de bronze de Hernando Tejada se tornou um símbolo de Cali. Sua figura de olhos grandes acompanha o passeio junto ao rio.",
+              "map_url": "https://www.google.com/maps?cid=7835761905139033954",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000466,
+          "media_asset_id": 511
+        },
+        {
+          "slug": "bulevar-rio",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 3.4526661,
+          "longitude": -76.5347844,
+          "translations": {
+            "es": {
+              "name": "Bulevar del Río",
+              "description": "El paseo peatonal junto al río Cali une espacios del centro entre árboles, puentes y arquitectura urbana. La Ermita y el Puente Ortiz ayudan a orientarse en el recorrido.",
+              "map_url": "https://www.google.com/maps?cid=5477684040922625391",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Bulevar del Río",
+              "description": "This pedestrian promenade follows the Cali River through the centre, among trees, bridges and urban architecture. La Ermita and Puente Ortiz are useful landmarks along the way.",
+              "map_url": "https://www.google.com/maps?cid=5477684040922625391",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Bulevar del Río",
+              "description": "O passeio de pedestres acompanha o rio Cali pelo centro, entre árvores, pontes e arquitetura urbana. La Ermita e a Ponte Ortiz ajudam a orientar o percurso.",
+              "map_url": "https://www.google.com/maps?cid=5477684040922625391",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000467,
+          "media_asset_id": 514
+        },
+        {
+          "slug": "zoologico-cali",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 3.4481076,
+          "longitude": -76.5568372,
+          "translations": {
+            "es": {
+              "name": "Zoológico de Cali",
+              "description": "Un espacio dedicado a la biodiversidad y la educación ambiental, con un recorrido entre vegetación y hábitats de fauna. Consulta las condiciones de visita vigentes antes de ir.",
+              "map_url": "https://www.google.com/maps?cid=3172202417941265075",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Cali Zoo",
+              "description": "A place devoted to biodiversity and environmental education, with a route through vegetation and wildlife habitats. Check current visiting arrangements before travelling.",
+              "map_url": "https://www.google.com/maps?cid=3172202417941265075",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Zoológico de Cali",
+              "description": "Um espaço dedicado à biodiversidade e à educação ambiental, com um percurso entre vegetação e habitats de fauna. Consulte as condições atuais de visita antes de ir.",
+              "map_url": "https://www.google.com/maps?cid=3172202417941265075",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000468,
+          "media_asset_id": 515
+        },
+        {
+          "slug": "cristo-rey",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 3.4360243,
+          "longitude": -76.5647906,
+          "translations": {
+            "es": {
+              "name": "Cristo Rey",
+              "description": "El monumento de brazos abiertos domina la ladera occidental de Cali y ofrece una perspectiva de la ciudad. El ecoparque tiene accesos y tramos diferenciados: confirma cuáles están habilitados antes de subir.",
+              "map_url": "https://www.google.com/maps?cid=12726769678870394303",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Cristo Rey",
+              "description": "The open-armed monument overlooks Cali from its western hills. The ecopark has separate access routes and sections: check which are available before heading up.",
+              "map_url": "https://www.google.com/maps?cid=12726769678870394303",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Cristo Rey",
+              "description": "O monumento de braços abertos se destaca na encosta oeste de Cali e oferece uma perspectiva da cidade. O ecoparque tem acessos e trechos distintos: confirme quais estão disponíveis antes de subir.",
+              "map_url": "https://www.google.com/maps?cid=12726769678870394303",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000469,
+          "media_asset_id": 512
+        },
+        {
+          "slug": "museo-tertulia",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 3.4502809,
+          "longitude": -76.5453033,
+          "translations": {
+            "es": {
+              "name": "Museo La Tertulia",
+              "description": "Un referente de las artes visuales de Cali junto al río. Sus edificios y espacios exteriores acompañan una programación de exposiciones y cine que cambia a lo largo del año.",
+              "map_url": "https://www.google.com/maps?cid=8812593101924022379",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "La Tertulia Museum",
+              "description": "A landmark for Cali’s visual arts beside the river. Its buildings and outdoor spaces host a programme of exhibitions and cinema that changes throughout the year.",
+              "map_url": "https://www.google.com/maps?cid=8812593101924022379",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Museu La Tertulia",
+              "description": "Uma referência das artes visuais de Cali junto ao rio. Seus edifícios e espaços externos recebem uma programação de exposições e cinema que muda ao longo do ano.",
+              "map_url": "https://www.google.com/maps?cid=8812593101924022379",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000470,
+          "media_asset_id": 513
+        },
+        {
+          "slug": "plaza-cayzedo",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 3.4518194,
+          "longitude": -76.5325303,
+          "translations": {
+            "es": {
+              "name": "Plaza de Cayzedo",
+              "description": "La plaza central reúne palmeras y memoria urbana, rodeada por la Catedral de San Pedro, el Palacio Nacional y otros edificios del centro histórico.",
+              "map_url": "https://www.google.com/maps?cid=11898042663095340097",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Plaza de Cayzedo",
+              "description": "The central square brings together palms and urban history, surrounded by San Pedro Cathedral, the National Palace and other historic-centre buildings.",
+              "map_url": "https://www.google.com/maps?cid=11898042663095340097",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Plaza de Cayzedo",
+              "description": "A praça central reúne palmeiras e memória urbana, cercada pela Catedral de San Pedro, pelo Palacio Nacional e por outros edifícios do centro histórico.",
+              "map_url": "https://www.google.com/maps?cid=11898042663095340097",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000471,
+          "media_asset_id": 516
+        }
+      ]
+    }
+  },
+  "tables": {
+    "media_assets": [
+      {
+        "id": 508,
+        "asset_path": "assets/media/1d/1deb889f98d520b2cd937a621410ff114aa47c41d5f77f3f7e36a7ed4ddd17a8.webp",
+        "origin": "ai_generated",
+        "creator": "Carlos A Arango · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Panoramic-1.jpg",
+        "license_name": "Dominio público (PD-self)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Panoramic-1.jpg",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"1deb889f98d520b2cd937a621410ff114aa47c41d5f77f3f7e36a7ed4ddd17a8\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"2ca974438dae7b1d1a4d0bc5529ebf78c74335ba\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved\"}, \"source_asset\": {\"asset_id\": \"cali-portada-v1\", \"place\": \"cali\", \"file\": \"content/paquetes/cali/images/cali-portada-v1.webp\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/masters/cali-portada-v1.png\", \"reference\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/panorama-reference.jpg\", \"reference_url\": \"https://commons.wikimedia.org/wiki/File:Panoramic-1.jpg\", \"reference_author\": \"Carlos A Arango\", \"reference_license\": \"Public-domain dedication by copyright holder (PD-self)\", \"reference_capture_or_upload_date\": \"2006-11-15 (upload; capture date unconfirmed)\", \"reference_sha256\": \"3f2626e70162253982dfe444767aa72ca96edecbed09d51e2a21476de2e6cf99\", \"master_sha256\": \"bb448c03a3065ed00e0f79de024870e1c46d095d05e42fe1b2bc1c40e9e1142f\", \"web_sha256\": \"1deb889f98d520b2cd937a621410ff114aa47c41d5f77f3f7e36a7ed4ddd17a8\", \"web_bytes\": 256862, \"web_dimensions\": [1200, 800], \"generated_at\": \"2026-11-05\", \"provider\": \"OpenAI image_gen\", \"model\": \"not exposed by tool\", \"status\": \"candidate_pending_human_approval\", \"compared_against_reference\": true, \"street_view_points_inspected\": 0, \"street_view_limitation\": \"CUA native browser access denied; no claim of Street View inspection.\", \"publication_approved\": false, \"generation_prompt\": \"Create a landscape 3:2 editorial travel illustration of the view over central Cali FROM San Antonio, preserving this public-domain Carlos A Arango panoramic photo's camera direction, geometry and spatial relationships. Use visible ink outlines and gouache paint, realistic simplified forms, warm terracotta roofs and natural green trees, linen highlights and gentle pale-blue cloudy sky. Keep the low colonial red-tiled roof district in the foreground, mature trees at bottom/left, the dense modern downtown towers behind, and the distant broad flat valley horizon; do NOT invent mountains, skyscrapers, ocean, monument or churches not in this view. The tall slim Torre de Cali is in the middle-right skyline in the reference; preserve its relative position and existing tower shapes. Adapt panorama to 3:2 using a coherent central crop, not by rearranging buildings or stretching them. Image must feel distinctly illustrated with hand-painted texture, not a photo with filters. No lettering, branding, border, title or watermark. This image is a historical-view-inspired draft for editorial review, not proof of current skyline.\", \"comparison_notes\": \"Historical reference panorama; skyline arrangement/crop compared, no claim of current skyline or Street View verification.\", \"approval_hash\": \"1deb889f98d520b2cd937a621410ff114aa47c41d5f77f3f7e36a7ed4ddd17a8\", \"current_contrast_research\": {\"checked_at\": \"2026-11-05\", \"sources\": [\"https://colombia.travel/es/cali/recorre-el-barrio-y-capilla-de-san-antonio\", \"https://colombia.co/turismo/descubre-el-barrio-san-antonio-un-destino-imperdible-en-cali\"], \"result\": \"Fuentes oficiales vigentes confirman barrio, capilla y panorámica; no se encontró en esta pasada foto actual fechada con el mismo encuadre para certificar skyline de 2026. Se mantiene limitación histórica y aprobación visual pendiente.\"}}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 509,
+        "asset_path": "assets/media/39/397a67957dec6851cdc44f866e700b5aed21871256560d3563999cf79d73cc96.webp",
+        "origin": "ai_generated",
+        "creator": "C arango · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ermita_cali.jpg",
+        "license_name": "Dominio público (PD-self)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Ermita_cali.jpg",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"397a67957dec6851cdc44f866e700b5aed21871256560d3563999cf79d73cc96\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"2ca974438dae7b1d1a4d0bc5529ebf78c74335ba\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved\"}, \"source_asset\": {\"asset_id\": \"cali-la-ermita-v1\", \"place\": \"cali\", \"file\": \"content/paquetes/cali/images/cali-la-ermita-v1.webp\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/masters/cali-la-ermita-v1.png\", \"reference\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/ermita-factual-reference.jpg\", \"reference_url\": \"https://commons.wikimedia.org/wiki/File:Ermita_cali.jpg\", \"reference_author\": \"C arango\", \"reference_license\": \"Public-domain dedication by copyright holder (PD-self)\", \"reference_capture_or_upload_date\": \"unknown; uploaded 2008, rotated 2012\", \"reference_sha256\": \"3beb1edba1c49bb533e5436967015ca80e879d50181cc0e8f4cb9b766ec8fd87\", \"master_sha256\": \"c4dd4a44d7befed099773cc5d4521b71903d020c426433c6e3740eb4692fba1d\", \"web_sha256\": \"397a67957dec6851cdc44f866e700b5aed21871256560d3563999cf79d73cc96\", \"web_bytes\": 196416, \"web_dimensions\": [1200, 800], \"generated_at\": \"2026-11-05\", \"provider\": \"OpenAI image_gen\", \"model\": \"not exposed by tool\", \"status\": \"candidate_pending_human_approval\", \"compared_against_reference\": true, \"street_view_points_inspected\": 0, \"street_view_limitation\": \"CUA native browser access denied; no claim of Street View inspection.\", \"publication_approved\": false, \"generation_prompt\": \"Transform this public-domain reference photo of Iglesia La Ermita in Cali, Colombia (author C arango, public-domain release at https://commons.wikimedia.org/wiki/File:Ermita_cali.jpg) into an editorial travel illustration in realistic caricature style with visible thin ink outlines and gouache painting, warm linen highlights, restrained natural colors, clearly illustrated, not a retouched photograph. Preserve EXACT architectural geometry and camera orientation: one very tall slender central square bell tower and latticework steeple with cross; pale gray-blue walls and white Gothic tracery; frontal rose window above the central pointed entrance; two narrow pointed facade windows; several short pinnacles; long lower side nave extends to the RIGHT; the existing blocky office building is on the LEFT. Do not change the silhouette, number of towers, relative heights, windows or door positions. Whole church including steeple and ground must fit in a landscape 3:2 card composition: use a slightly wider framing, with architecture occupying central-left approximately 65 percent and natural sky around the spire. Keep the paved urban plaza and low landscaping, reduce distracting street fixtures and tiny anonymous pedestrian clutter without adding new monuments or imagined buildings. No words, lettering, logos, watermark or invented readable signs. This is a draft illustration for human approval, not evidence of present-day building condition. Return one landscape 3:2 image.\", \"comparison_notes\": \"Central architecture and right-facing nave preserved. Background simplification introduces right-side vegetation and omits a distant office; requires explicit human visual review, not certified exact reconstruction.\", \"approval_hash\": \"397a67957dec6851cdc44f866e700b5aed21871256560d3563999cf79d73cc96\"}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 510,
+        "asset_path": "assets/media/01/018b527d75033201548ee329e994ff8fc9a1e48e1c9a4d1cde62fa6de46e2ab7.webp",
+        "origin": "ai_generated",
+        "creator": "C arango · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Capilla_de_San_Antonio_Cali.JPG",
+        "license_name": "Dominio público (PD-self)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Capilla_de_San_Antonio_Cali.JPG",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"018b527d75033201548ee329e994ff8fc9a1e48e1c9a4d1cde62fa6de46e2ab7\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"2ca974438dae7b1d1a4d0bc5529ebf78c74335ba\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved\"}, \"source_asset\": {\"asset_id\": \"cali-san-antonio-v1\", \"place\": \"cali\", \"file\": \"content/paquetes/cali/images/cali-san-antonio-v1.webp\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/masters/cali-san-antonio-v1.png\", \"reference\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/san-antonio-reference.jpg\", \"reference_url\": \"https://commons.wikimedia.org/wiki/File:Capilla_de_San_Antonio_Cali.JPG\", \"reference_author\": \"C arango\", \"reference_license\": \"Public-domain dedication by copyright holder (PD-self)\", \"reference_capture_or_upload_date\": \"unknown; uploaded 2008\", \"reference_sha256\": \"841807ecd3140040b1867bdec829284186abd4ee4c3590dcd9c7865ea5bdd437\", \"master_sha256\": \"df76ecff8b34c5816e580c829603e2a1322c621f4cfdb5e3c686fdc1b2384207\", \"web_sha256\": \"018b527d75033201548ee329e994ff8fc9a1e48e1c9a4d1cde62fa6de46e2ab7\", \"web_bytes\": 263802, \"web_dimensions\": [1200, 800], \"generated_at\": \"2026-11-05\", \"provider\": \"OpenAI image_gen\", \"model\": \"not exposed by tool\", \"status\": \"candidate_pending_human_approval\", \"compared_against_reference\": true, \"street_view_points_inspected\": 0, \"street_view_limitation\": \"CUA native browser access denied; no claim of Street View inspection.\", \"publication_approved\": false, \"generation_prompt\": \"Convert this public-domain C arango photo of Capilla de San Antonio in Cali into a landscape 3:2 realistic editorial illustration with visible thin ink lines and gouache paint, natural greens, white plaster and terracotta/brick colors. Preserve the actual scene composition and exact chapel silhouette: small white plaster single-nave chapel to the RIGHT half, reddish exposed-brick asymmetrical bell-gable slightly left of the main facade, two vertical bell openings, small triangular brick top and cross, the white triangular nave gable behind/right, central brown wooden door framed by a round brick arch, small round ornament higher on the white gable, tiled terracotta roof, low white side extension far right, stone steps and sloping grass foreground, big mature tree occupies LEFT half and overlaps the chapel side. Keep proportions and the hill/plaza relationship. Do not turn it into a grand church, do not add towers or move the bell-gable. Remove readable banners and license-plate text, retain urban plaza context; people may be very small anonymous silhouettes. No text, logos, watermarks. Clearly hand-illustrated, no photographic filters.\", \"comparison_notes\": \"White chapel, asymmetrical brick bell gable, door and left tree placement compared; no current access guarantee.\", \"approval_hash\": \"018b527d75033201548ee329e994ff8fc9a1e48e1c9a4d1cde62fa6de46e2ab7\"}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 511,
+        "asset_path": "assets/media/57/57efc0e549a3159a86bd9bcbf798ed0b322ba61b5f3d2b33b08bfe6e54a37552.webp",
+        "origin": "ai_generated",
+        "creator": "C arango (Commons attribution assumed based on uploader) · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Tejada_cat.JPG",
+        "license_name": "Dominio público (PD-self)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Tejada_cat.JPG",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"57efc0e549a3159a86bd9bcbf798ed0b322ba61b5f3d2b33b08bfe6e54a37552\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"2ca974438dae7b1d1a4d0bc5529ebf78c74335ba\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved\"}, \"source_asset\": {\"asset_id\": \"cali-gato-del-rio-v1\", \"place\": \"cali\", \"file\": \"content/paquetes/cali/images/cali-gato-del-rio-v1.webp\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/masters/cali-gato-del-rio-v1.png\", \"reference\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/gato-reference.jpg\", \"reference_url\": \"https://commons.wikimedia.org/wiki/File:Tejada_cat.JPG\", \"reference_author\": \"C arango (Commons attribution assumed based on uploader)\", \"reference_license\": \"Public-domain dedication by copyright holder (PD-self)\", \"reference_capture_or_upload_date\": \"2004-12-26 (EXIF)\", \"reference_sha256\": \"50df665e8d474278814ddf43d7a639953a7cd16aa959ee6b67b3f7fa5e83f6b7\", \"master_sha256\": \"7a07543e24bf8c98511456f5fb2322be3894142e041178aace14aed1a60e34ee\", \"web_sha256\": \"57efc0e549a3159a86bd9bcbf798ed0b322ba61b5f3d2b33b08bfe6e54a37552\", \"web_bytes\": 256144, \"web_dimensions\": [1200, 800], \"generated_at\": \"2026-11-05\", \"provider\": \"OpenAI image_gen\", \"model\": \"not exposed by tool\", \"status\": \"candidate_pending_human_approval\", \"compared_against_reference\": true, \"street_view_points_inspected\": 0, \"street_view_limitation\": \"CUA native browser access denied; no claim of Street View inspection.\", \"publication_approved\": false, \"generation_prompt\": \"Transform this public-domain C arango photo of El Gato del Río by Hernando Tejada in Cali into a realistic editorial illustration with visible fine ink outlines and gouache painting. Landscape 3:2. Preserve the real sculpture and exact composition: large dark reddish-bronze seated stylized cat, triangular ears, two large round pale-golden eyes, triangular projecting nose, subtle smile, upright front legs on LEFT, rounded seated body center, very tall thick spiral tail rises on RIGHT with tiny bird perched on its top. Preserve dimensions, silhouette, proportions, same pale rectangular stone pedestal and stepped base. Leafy riverside park behind, tree trunks at far left and right, narrow curving roadway only on far right. Do not convert it into a live cat, do not invent extra cats, do not change tail shape or eye arrangement. Remove seasonal hanging star/pink decorations and any readable plaque/advertising text, but retain the genuine trees/pedestal/camera spatial relationships. No titles, logos, watermark or text. Restrained natural colors, unmistakably hand illustrated, not retouched photography.\", \"comparison_notes\": \"Bronze cat silhouette, round eyes, front legs and raised spiral tail compared; seasonal decorations removed.\", \"approval_hash\": \"57efc0e549a3159a86bd9bcbf798ed0b322ba61b5f3d2b33b08bfe6e54a37552\"}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 512,
+        "asset_path": "assets/media/24/24c899cfe04f7a37e18898d773780389f9215bf906e944d99bd385abdfc4f325.webp",
+        "origin": "ai_generated",
+        "creator": "Juanes016 · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cristo_rey,_Cali,_Colombia.jpg",
+        "license_name": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"24c899cfe04f7a37e18898d773780389f9215bf906e944d99bd385abdfc4f325\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"2ca974438dae7b1d1a4d0bc5529ebf78c74335ba\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved\"}, \"source_asset\": {\"slug\": \"cristo-rey\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/masters/cali-cristo-rey-v1.png\", \"master_sha256\": \"1c15e90acd3b0ac0ebeb0274ea4e71bcf29ce5d949796a74156ad1c29dc6c4fb\", \"reference\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/cristo-rey-reference.jpg\", \"reference_sha256\": \"6754eb868bc3fbc16519d01b6227a86a99f81064331d9f3c852c52a504e64d13\", \"file\": \"content/paquetes/cali/images/cali-cristo-rey-v1.webp\", \"web_sha256\": \"24c899cfe04f7a37e18898d773780389f9215bf906e944d99bd385abdfc4f325\", \"status\": \"generated_before_reference_preview_request_pending_human_review\", \"publication_approved\": false, \"compared_against_reference\": true, \"notes\": \"Perspective and main silhouette compared; not proof of present-day access or operations.\", \"reference_author\": \"Juanes016\", \"reference_url\": \"https://commons.wikimedia.org/wiki/File:Cristo_rey,_Cali,_Colombia.jpg\", \"reference_license\": \"CC0 1.0\", \"reference_license_url\": \"https://creativecommons.org/publicdomain/zero/1.0/\", \"reference_capture_or_upload_date\": \"2025-02-08\", \"generation_prompt\": \"Create a landscape 3:2 editorial travel illustration in visible fine ink outlines and gouache, realistic simplified forms, not a retouched photograph. Use this CC0 Juanes016 February2025 photo of Cristo Rey, Cali as exact geometry reference. Preserve the gray open-armed concrete statue facing slightlyLEFT, its asymmetrical perspective with RIGHTarm rising diagonally and LEFTarm foreshortened, draped tunic, long narrow rectangular pedestal, low circular terrace with black railing and grassy stone base. Include whole statue and terrace. Retain surrounding hill vegetation and pale cloudy sky; do NOT invent city skyline behind statue or mountains/architecture. Simplify floodlights and anonymous tiny visitors, remove identifiable foreground people, timestamp, writing and logos. Maintain precise silhouette, arm positions and proportions. Warm natural colors, linen highlights, editorial handpainting texture. No text.\", \"asset_id\": \"cali-cristo-rey-v1\", \"web_dimensions\": [1200, 800], \"web_bytes\": 109088}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 513,
+        "asset_path": "assets/media/69/694faf4a77234c3a61109884428752c9a7428d0344b83f0dcec524c34fedbd85.webp",
+        "origin": "ai_generated",
+        "creator": "C arango · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Museo_la_tertulia.JPG",
+        "license_name": "Dominio público (PD-self)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Museo_la_tertulia.JPG",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"694faf4a77234c3a61109884428752c9a7428d0344b83f0dcec524c34fedbd85\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"2ca974438dae7b1d1a4d0bc5529ebf78c74335ba\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved\"}, \"source_asset\": {\"slug\": \"museo-tertulia\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/masters/cali-museo-tertulia-v1.png\", \"master_sha256\": \"3b85a621fec3a5b4660a3e54c150ec3b73ffd671001cf9fe19764b22a93d5d42\", \"reference\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/tertulia-reference.jpg\", \"reference_sha256\": \"072054eb6f24d698370e5022567c6e27fd8f6a158a8babb2a3e72a3ebb96dc98\", \"file\": \"content/paquetes/cali/images/cali-museo-tertulia-v1.webp\", \"web_sha256\": \"694faf4a77234c3a61109884428752c9a7428d0344b83f0dcec524c34fedbd85\", \"status\": \"generated_before_reference_preview_request_pending_human_review\", \"publication_approved\": false, \"compared_against_reference\": true, \"notes\": \"Perspective and main silhouette compared; not proof of present-day access or operations.\", \"reference_author\": \"C arango\", \"reference_url\": \"https://commons.wikimedia.org/wiki/File:Museo_la_tertulia.JPG\", \"reference_license\": \"Public domain PD-self\", \"reference_capture_or_upload_date\": \"2008 upload; capture unknown\", \"generation_prompt\": \"Create landscape3:2 fine ink-and-gouache editorial travel illustration, visibly hand illustrated, using this public-domain C arango photograph of Museo La Tertulia in Cali. Preserve EXACT modernist single-storey cream rectangular building, flat roof, repeated tall narrow inverted-chamfer arch openings and vertical pillars around two visible sides. Same corner perspective recedesRIGHT. Large spreading tree trunk onLEFT with diagonal branch acrossupperframe, leafy woodedhill behind, lawn and foreground rectangular reflecting pools with simplefountainjets and smallsquareupperbasin. Preserve these spatial relationships, roof proportions and window rhythm; do not add towers, floors, domes, statues or new architecture. Remove maintenanceworkers/tools/distraction while retaining fountainlayout, treecanopy and shadows. Naturalcream/greens, visiblethininkoutlines, gouachepaintingtexture, no words/logos/watermark.\", \"asset_id\": \"cali-museo-tertulia-v1\", \"web_dimensions\": [1200, 800], \"web_bytes\": 347672}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 514,
+        "asset_path": "assets/media/2d/2da494c10eebf30cc57390bf856d2449cfb8fff4efd29c51e06b5ecf9530578d.webp",
+        "origin": "ai_generated",
+        "creator": "Cathetovar · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Explanada_peatonal_sobre_el_Bulevar_del_Río_Puente_Ortiz.jpg",
+        "license_name": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"2da494c10eebf30cc57390bf856d2449cfb8fff4efd29c51e06b5ecf9530578d\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"2ca974438dae7b1d1a4d0bc5529ebf78c74335ba\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved\"}, \"source_asset\": {\"slug\": \"bulevar-rio\", \"asset_id\": \"cali-bulevar-rio-v1\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/masters/cali-bulevar-rio-v1.png\", \"master_sha256\": \"73d6858a019e9092528c34c25a450a72915fc2c6a17f7e11f56fbfe8cef36170\", \"reference\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/bulevar-walkway-approved-reference.jpg\", \"reference_sha256\": \"2e4636a410cf016fb8f26fd323e2c1b30707ed74220fb6b0931c0ca5a7f89fed\", \"reference_url\": \"https://commons.wikimedia.org/wiki/File:Explanada_peatonal_sobre_el_Bulevar_del_Río_Puente_Ortiz.jpg\", \"reference_author\": \"Cathetovar\", \"reference_capture_or_upload_date\": \"2026-10-04\", \"reference_license\": \"CC BY-SA 4.0\", \"reference_license_url\": \"https://creativecommons.org/licenses/by-sa/4.0/\", \"adaptation_license\": \"CC BY-SA 4.0\", \"attribution_required\": true, \"reference_human_approved\": true, \"generation_prompt\": \"Transform the approved Cathetovar 4 October2026 CC BY-SA4 photograph of the pedestrian esplanade at Puente Ortiz, Bulevar del Río, Cali into a LANDSCAPE3:2 editorial travel illustration, realistic caricature with fine visible ink outlines and gouache brush texture, natural restrained colors. Preserve this single camera direction and spatial arrangement: broad patterned reddish/gray stone pedestrian paving in foreground, curving low white balustrade with dark inset panels onLEFT; sequence of white decorative open pergola frames with scrollwork fromLEFT foreground toCENTRE distance; long low pitchedGLASS skylight on red base occupiesRIGHT foreground; broad dense green trees beyond river in background; existing pale yellow rectangular highrise atUPPERLEFT. Keep skyline building shapes/relative heights and spacing, do not replace them with churches or add landmarks. Retain street furniture/bridge relationship, crop or extend only neutral sky/paving to fit3:2 without rearranging objects. Tiny anonymous adult pedestrians only, no identifiable portraits or new activities. Remove readable signs, logos and text; do not invent lettering. Clearly illustrated ink/gouache, not photographic filter, faithful place geometry.\", \"file\": \"content/paquetes/cali/images/cali-bulevar-rio-v1.webp\", \"web_sha256\": \"2da494c10eebf30cc57390bf856d2449cfb8fff4efd29c51e06b5ecf9530578d\", \"web_bytes\": 283570, \"web_dimensions\": [1200, 800], \"status\": \"candidate_pending_exact_human_approval\", \"publication_approved\": false, \"compared_against_reference\": true, \"comparison_notes\": \"Preserves pergolas, balustrade left, glass skylight right and background highrise. Framing widened, small details simplified.\"}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 515,
+        "asset_path": "assets/media/82/825eaac05be71e2b4710a0e9e988dc3b8d928cebe49054f6e396065e8281115d.webp",
+        "origin": "ai_generated",
+        "creator": "Petruss · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Entrada_Zoologico_de_Cali.jpg",
+        "license_name": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"825eaac05be71e2b4710a0e9e988dc3b8d928cebe49054f6e396065e8281115d\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"2ca974438dae7b1d1a4d0bc5529ebf78c74335ba\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved\"}, \"source_asset\": {\"slug\": \"zoologico-cali\", \"asset_id\": \"cali-zoologico-cali-v1\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/masters/cali-zoologico-cali-v1.png\", \"master_sha256\": \"a8875abf0f1835cbf35d5ae3fbc5692dfe3d5f12b6e06dc10b218255e9955434\", \"reference\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/zoo-entrance-approved-reference.jpg\", \"reference_sha256\": \"c0299e27a428d073d4013aec1a9ebbfaf88344d08eb8e9b65e4dc3c365101a72\", \"reference_url\": \"https://commons.wikimedia.org/wiki/File:Entrada_Zoologico_de_Cali.jpg\", \"reference_author\": \"Petruss\", \"reference_capture_or_upload_date\": \"2013-02-12\", \"reference_license\": \"CC BY-SA 4.0\", \"reference_license_url\": \"https://creativecommons.org/licenses/by-sa/4.0/\", \"adaptation_license\": \"CC BY-SA 4.0\", \"attribution_required\": true, \"reference_human_approved\": true, \"generation_prompt\": \"Create a landscape3:2 realistic editorial travel illustration from approved Petruss12February2013 CC BY-SA4 photo of the entrance to Zoológico de Cali. Thin visible ink outlines, gouache painting, restrained natural blues/greens/cream, clearly hand-illustrated. Preserve the actual entrance structure and same viewpoint: long darkblue solid wall occupiesRIGHT two-thirds, topped by row of slim YELLOW flagpoles/flags and low WHITE horizontallypaneled rearwall; low flat dark blue/black canopy and cream/white ticketbuilding onLEFT; narrow black entrancegate betweenbuilding andwall; one tall palmtrunk rises justLEFT ofcentre with palmcanopy upperLEFT; trees behindwall and LOWgreenhill atfarLEFT, gentlycurved pavedsidewalk andcurb foreground. Retain wall proportions, roof heights, flag rhythm, gateposition and perspective; do not invent arches, animalstatues, towers, ticketoffices or animals outside. Existing wallmark may be abstract neutral non-readable shape; avoid invented lettering/logos or promotional copy. Remove foreground identifiable people/temporary banners, but keep the actual access relationship. No readable text, watermark or added buildings. This is a stylized reference-based draft, not a claim of current entrance condition.\", \"file\": \"content/paquetes/cali/images/cali-zoologico-cali-v1.webp\", \"web_sha256\": \"825eaac05be71e2b4710a0e9e988dc3b8d928cebe49054f6e396065e8281115d\", \"web_bytes\": 203420, \"web_dimensions\": [1200, 800], \"status\": \"candidate_pending_exact_human_approval\", \"publication_approved\": false, \"compared_against_reference\": true, \"comparison_notes\": \"Preserves blue wall, gate left, low ticket building, palm and yellow flags. Readable entrance lettering omitted.2013 reference not proof of current branding.\"}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 516,
+        "asset_path": "assets/media/38/381fe51e9d7a139f915fdd9689473d23a23d69a48b809b92863b7c3581edd64e.webp",
+        "origin": "ai_generated",
+        "creator": "Hurluberlue · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Monumento_a_Joaquín_de_Cayzedo_y_Cuero,_Plaza_de_Cayzedo,_Cali.jpg",
+        "license_name": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"381fe51e9d7a139f915fdd9689473d23a23d69a48b809b92863b7c3581edd64e\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"2ca974438dae7b1d1a4d0bc5529ebf78c74335ba\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Cali: eight attractions, thirty-six public directory entries and nine exact illustrated assets; preprod and production explicitly approved\"}, \"source_asset\": {\"slug\": \"plaza-cayzedo\", \"asset_id\": \"cali-plaza-cayzedo-v1\", \"master\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/masters/cali-plaza-cayzedo-v1.png\", \"master_sha256\": \"a70ec9e64fadec982d7107771f647183cac8e6efb516635f40612c269fec458a\", \"reference\": \"/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/entregables/cali-20261105/references/plaza-2026-approved-reference.jpg\", \"reference_sha256\": \"6045dbbc5f538205c20c920048bce1089ec60e8526e8ce1d3b50b62519acffbc\", \"reference_url\": \"https://commons.wikimedia.org/wiki/File:Monumento_a_Joaquín_de_Cayzedo_y_Cuero,_Plaza_de_Cayzedo,_Cali.jpg\", \"reference_author\": \"Hurluberlue\", \"reference_capture_or_upload_date\": \"2026-01-27\", \"reference_license\": \"CC BY-SA 4.0\", \"reference_license_url\": \"https://creativecommons.org/licenses/by-sa/4.0/\", \"adaptation_license\": \"CC BY-SA 4.0\", \"attribution_required\": true, \"reference_human_approved\": true, \"generation_prompt\": \"Transform the approved Hurluberlue27January2026 CC BY-SA4 photograph of the Joaquín de Cayzedo y Cuero monument in Plaza de Cayzedo, Cali into a LANDSCAPE3:2 realistic editorial travel illustration with thin visible ink outlines and gouache painting. Preserve the single frontal low-angle camera and monument's exact silhouette: darkbronze standing historical man centered, bentRIGHTleg forward, cape sweepsLEFT, longdiagonalflagstaff crossesfigure, tall pale pink-beige taperedstonepedestal underneath with carvedlaurelwreath, draperygarlands and scrollwork, broad steppedrectangularbase. Keep relative statue/pedestalheight and sculpturepose, DO NOTturn intohorse/rider/Christ/genericstatue or changefigure. Show wholemonument and base. The scene behind is tallpalms, lawn, blacklampposts, red/gray patternedbrickwalkways, mustardyellow midriseblockLEFT, creamwindowedmidriseRIGHT and tallerplainwhitebuilding atupperLEFT: preserve building placement, heights and spatialrelationships. Fit3:2 by slightlywider framing of verifiedparkcontext, not by compressing pedestal or inventingarchitecture. Remove allreadable plaque/building text, logos and identifiable people; retain smallanonymousdistantpedestrians only. Naturalrestrainedcolors, creamyhighlights, clearly handillustrated, not photofilter. No lettering, watermark or extra monuments.\", \"file\": \"content/paquetes/cali/images/cali-plaza-cayzedo-v1.webp\", \"web_sha256\": \"381fe51e9d7a139f915fdd9689473d23a23d69a48b809b92863b7c3581edd64e\", \"web_bytes\": 295862, \"web_dimensions\": [1200, 800], \"status\": \"candidate_pending_exact_human_approval\", \"publication_approved\": false, \"compared_against_reference\": true, \"comparison_notes\": \"Preserves standing bronze figure and decorated tapered pedestal, palms and surrounding building placement. Wider framing, plaque lettering omitted.\"}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": 508,
+        "locale": "es",
+        "alt_text": "Panorama urbano de Cali desde San Antonio",
+        "caption": "Ilustración adaptada de la fotografía de Carlos A Arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 508,
+        "locale": "en",
+        "alt_text": "Cali cityscape seen from San Antonio",
+        "caption": "Illustration adapted from the photograph by Carlos A Arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 508,
+        "locale": "pt-BR",
+        "alt_text": "Panorama urbano de Cali visto de San Antonio",
+        "caption": "Ilustração adaptada da fotografia de Carlos A Arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 509,
+        "locale": "es",
+        "alt_text": "Fachada neogótica de la iglesia La Ermita",
+        "caption": "Ilustración adaptada de la fotografía de C arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 509,
+        "locale": "en",
+        "alt_text": "Neo-Gothic facade of La Ermita Church",
+        "caption": "Illustration adapted from the photograph by C arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 509,
+        "locale": "pt-BR",
+        "alt_text": "Fachada neogótica da igreja La Ermita",
+        "caption": "Ilustração adaptada da fotografia de C arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 510,
+        "locale": "es",
+        "alt_text": "Capilla de San Antonio entre árboles y su plazoleta",
+        "caption": "Ilustración adaptada de la fotografía de C arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 510,
+        "locale": "en",
+        "alt_text": "San Antonio Chapel beside trees and its square",
+        "caption": "Illustration adapted from the photograph by C arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 510,
+        "locale": "pt-BR",
+        "alt_text": "Capela de San Antonio entre árvores e sua praça",
+        "caption": "Ilustração adaptada da fotografia de C arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 511,
+        "locale": "es",
+        "alt_text": "Escultura El Gato del Río sobre su pedestal",
+        "caption": "Ilustración adaptada de la fotografía de C arango (Commons attribution assumed based on uploader) · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 511,
+        "locale": "en",
+        "alt_text": "El Gato del Río sculpture on its pedestal",
+        "caption": "Illustration adapted from the photograph by C arango (Commons attribution assumed based on uploader) · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 511,
+        "locale": "pt-BR",
+        "alt_text": "Escultura El Gato del Río sobre seu pedestal",
+        "caption": "Ilustração adaptada da fotografia de C arango (Commons attribution assumed based on uploader) · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 512,
+        "locale": "es",
+        "alt_text": "Monumento Cristo Rey y su terraza en Cali",
+        "caption": "Ilustración adaptada de la fotografía de Juanes016 · CC0 1.0."
+      },
+      {
+        "media_asset_id": 512,
+        "locale": "en",
+        "alt_text": "Cristo Rey monument and its terrace in Cali",
+        "caption": "Illustration adapted from the photograph by Juanes016 · CC0 1.0."
+      },
+      {
+        "media_asset_id": 512,
+        "locale": "pt-BR",
+        "alt_text": "Monumento Cristo Rey e seu terraço em Cali",
+        "caption": "Ilustração adaptada da fotografia de Juanes016 · CC0 1.0."
+      },
+      {
+        "media_asset_id": 513,
+        "locale": "es",
+        "alt_text": "Edificio del Museo La Tertulia y fuentes entre árboles",
+        "caption": "Ilustración adaptada de la fotografía de C arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 513,
+        "locale": "en",
+        "alt_text": "La Tertulia Museum building and fountains among trees",
+        "caption": "Illustration adapted from the photograph by C arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 513,
+        "locale": "pt-BR",
+        "alt_text": "Edifício do Museu La Tertulia e fontes entre árvores",
+        "caption": "Ilustração adaptada da fotografia de C arango · Dominio público (PD-self)."
+      },
+      {
+        "media_asset_id": 514,
+        "locale": "es",
+        "alt_text": "Explanada peatonal del Bulevar del Río junto al Puente Ortiz",
+        "caption": "Ilustración adaptada de la fotografía de Cathetovar · CC BY-SA 4.0."
+      },
+      {
+        "media_asset_id": 514,
+        "locale": "en",
+        "alt_text": "Pedestrian esplanade on Bulevar del Río beside Puente Ortiz",
+        "caption": "Illustration adapted from the photograph by Cathetovar · CC BY-SA 4.0."
+      },
+      {
+        "media_asset_id": 514,
+        "locale": "pt-BR",
+        "alt_text": "Esplanada de pedestres do Bulevar del Río junto à Ponte Ortiz",
+        "caption": "Ilustração adaptada da fotografia de Cathetovar · CC BY-SA 4.0."
+      },
+      {
+        "media_asset_id": 515,
+        "locale": "es",
+        "alt_text": "Acceso del Zoológico de Cali con muro azul y banderas amarillas",
+        "caption": "Ilustración adaptada de la fotografía de Petruss · CC BY-SA 4.0."
+      },
+      {
+        "media_asset_id": 515,
+        "locale": "en",
+        "alt_text": "Cali Zoo entrance with blue wall and yellow flags",
+        "caption": "Illustration adapted from the photograph by Petruss · CC BY-SA 4.0."
+      },
+      {
+        "media_asset_id": 515,
+        "locale": "pt-BR",
+        "alt_text": "Acesso do Zoológico de Cali com muro azul e bandeiras amarelas",
+        "caption": "Ilustração adaptada da fotografia de Petruss · CC BY-SA 4.0."
+      },
+      {
+        "media_asset_id": 516,
+        "locale": "es",
+        "alt_text": "Monumento a Joaquín de Cayzedo y Cuero entre palmeras de la plaza",
+        "caption": "Ilustración adaptada de la fotografía de Hurluberlue · CC BY-SA 4.0."
+      },
+      {
+        "media_asset_id": 516,
+        "locale": "en",
+        "alt_text": "Joaquín de Cayzedo y Cuero monument among the square’s palms",
+        "caption": "Illustration adapted from the photograph by Hurluberlue · CC BY-SA 4.0."
+      },
+      {
+        "media_asset_id": 516,
+        "locale": "pt-BR",
+        "alt_text": "Monumento a Joaquín de Cayzedo y Cuero entre palmeiras da praça",
+        "caption": "Ilustração adaptada da fotografia de Hurluberlue · CC BY-SA 4.0."
+      }
+    ],
+    "businesses": [
+      {
+        "id": 500000243,
+        "public_id": "1087fdda-a93f-5272-b678-f5ed32757dba",
+        "destination_id": 10012,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "intercontinental-cali",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0,
+        "latitude": 3.4500876,
+        "longitude": -76.539202,
+        "address_text": "Avenida Colombia #2-72",
+        "location_reference": "Punto de ficha nombrada en respuesta pública de Google Maps; no se certifica entrada peatonal.",
+        "location_map_url": "https://www.google.com/maps?cid=10703999512782489816"
+      },
+      {
+        "id": 500000244,
+        "public_id": "964a2b61-d2b8-52fa-95ca-36b57ac9147a",
+        "destination_id": 10012,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "cali-marriott-hotel",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1,
+        "latitude": 3.4557740999999997,
+        "longitude": -76.5359282,
+        "address_text": "Avenida 8 Norte #10-18",
+        "location_reference": "Punto de ficha nombrada en respuesta pública de Google Maps; no se certifica entrada peatonal.",
+        "location_map_url": "https://www.google.com/maps?cid=1493158670078697610"
+      },
+      {
+        "id": 500000245,
+        "public_id": "4dadb40b-0a43-5be1-a9da-0a557a3b225f",
+        "destination_id": 10012,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "movich-casa-del-alf-rez",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2,
+        "latitude": 3.4557849,
+        "longitude": -76.53703709999999,
+        "address_text": "Avenida 9 Norte #9-24",
+        "location_reference": "Punto de ficha nombrada en respuesta pública de Google Maps; no se certifica entrada peatonal.",
+        "location_map_url": "https://www.google.com/maps?cid=12180330219301741572"
+      },
+      {
+        "id": 500000246,
+        "public_id": "ac39aa4a-3145-56b2-8812-5b39f19eba91",
+        "destination_id": 10012,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "platillos-voladores",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3,
+        "latitude": 3.4536479,
+        "longitude": -76.5372494,
+        "address_text": "Avenida 3 Norte #7-19",
+        "location_reference": "Punto de ficha nombrada en respuesta pública de Google Maps; no se certifica entrada peatonal.",
+        "location_map_url": "https://www.google.com/maps?cid=92667925470459480"
+      },
+      {
+        "id": 500000247,
+        "public_id": "5669b382-ac03-599f-9f4b-fc849f099344",
+        "destination_id": 10012,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "tortelli-el-pe-n",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4,
+        "latitude": 3.4498495,
+        "longitude": -76.5425819,
+        "address_text": "Calle 3 Oeste #3-15",
+        "location_reference": "Punto de ficha nombrada en respuesta pública de Google Maps; no se certifica entrada peatonal.",
+        "location_map_url": "https://www.google.com/maps?cid=1190849256195599372"
+      },
+      {
+        "id": 500000248,
+        "public_id": "abc3eefe-2f7b-5147-ad65-6b4aac3c2260",
+        "destination_id": 10012,
+        "category_code": "cultura",
+        "record_origin": "public_import",
+        "slug": "museo-la-tertulia",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5,
+        "latitude": 3.4502808999999997,
+        "longitude": -76.5453033,
+        "address_text": "Avenida Colombia #5-105 Oeste",
+        "location_reference": "Punto de ficha nombrada en respuesta pública de Google Maps; no se certifica entrada peatonal.",
+        "location_map_url": "https://www.google.com/maps?cid=8812593101924022379"
+      },
+      {
+        "id": 500000249,
+        "public_id": "940f4398-67e7-567e-b37c-4a31d889df1d",
+        "destination_id": 10012,
+        "category_code": "cultura",
+        "record_origin": "public_import",
+        "slug": "museo-arqueol-gico-la-merced",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 6,
+        "latitude": 3.4506012999999998,
+        "longitude": -76.53661939999999,
+        "address_text": "Carrera 4 #6-59",
+        "location_reference": "Punto de ficha nombrada en respuesta pública de Google Maps; no se certifica entrada peatonal.",
+        "location_map_url": "https://www.google.com/maps?cid=2022612410539850783"
+      },
+      {
+        "id": 500000250,
+        "public_id": "de8934f5-da9a-5ad1-ad44-4fab344d0b86",
+        "destination_id": 10012,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hoteles-dann-carlton-cali",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 7,
+        "latitude": 3.4500389,
+        "longitude": -76.54052779999999,
+        "address_text": "Hoteles Dann Carlton Cali, Cra. 2 #1-60, COMUNA 3, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=2734137882222344002"
+      },
+      {
+        "id": 500000251,
+        "public_id": "513a3bd1-8a10-59af-8aa1-3f2c23586952",
+        "destination_id": 10012,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-spiwak-chipichape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 8,
+        "latitude": 3.4758866999999998,
+        "longitude": -76.5293828,
+        "address_text": "Hotel Spiwak Chipichape, Chipichape Shopping Mall, Av. 6D Nte. #36N-18, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=4337453720171477848"
+      },
+      {
+        "id": 500000252,
+        "public_id": "29f9b010-034f-59b1-ad6b-64fe0259192d",
+        "destination_id": 10012,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-nh-cali-royal",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 9,
+        "latitude": 3.371202,
+        "longitude": -76.539087,
+        "address_text": "Hotel NH Cali Royal, Cra. 100b #11A-99, Ciudad Jardín, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=6050033783267771271"
+      },
+      {
+        "id": 500000253,
+        "public_id": "47051969-e8bc-53df-8943-2eea215c86ac",
+        "destination_id": 10012,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hampton-by-hilton-cali-colombia",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 10,
+        "latitude": 3.4529771,
+        "longitude": -76.546815,
+        "address_text": "Hampton by Hilton Cali Colombia, Avenida Colombia 1A Oeste - 35, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=6826902278815052231"
+      },
+      {
+        "id": 500000254,
+        "public_id": "44de6309-eb87-5057-ae12-48c4d5730718",
+        "destination_id": 10012,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "antigua-contempor-nea",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 11,
+        "latitude": 3.4466174,
+        "longitude": -76.5400619,
+        "address_text": "Antigua Contemporánea, Cra. 10 #1-39, COMUNA 3, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=15323198847462207380"
+      },
+      {
+        "id": 500000255,
+        "public_id": "70cd0cd4-4efe-5eae-981f-cdd83969e908",
+        "destination_id": 10012,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "la-comitiva",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 12,
+        "latitude": 3.4346178999999997,
+        "longitude": -76.5449933,
+        "address_text": "La Comitiva, Cl. 4 #3432, El Sindicato, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=3159895410294061494"
+      },
+      {
+        "id": 500000256,
+        "public_id": "335ea0d9-3545-5dd6-98da-3b1a69b52885",
+        "destination_id": 10012,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "restaurante-hacienda-del-bosque",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 13,
+        "latitude": 3.4478342,
+        "longitude": -76.5601551,
+        "address_text": "Restaurante Hacienda Del Bosque, Cra. 2 Oe. #14-250, Arboledas Santa Teresita, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=9953877942225533489"
+      },
+      {
+        "id": 500000257,
+        "public_id": "92f996a6-2ac7-54a4-adbb-451ce2e95be6",
+        "destination_id": 10012,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "vegano-el-buen-alimento",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 14,
+        "latitude": 3.4476839,
+        "longitude": -76.540319,
+        "address_text": "Vegano El Buen Alimento, Cra. 5 #1-63, COMUNA 3, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=6363328202176532959"
+      },
+      {
+        "id": 500000258,
+        "public_id": "90ec6010-6cc2-5585-8d03-57beb4cf8114",
+        "destination_id": 10012,
+        "category_code": "cultura",
+        "record_origin": "public_import",
+        "slug": "museo-de-la-salsa",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 15,
+        "latitude": 3.4484491,
+        "longitude": -76.5185782,
+        "address_text": "Museo De La Salsa, Cra. 11b #24 - 44, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=15496547225579589851"
+      },
+      {
+        "id": 500000259,
+        "public_id": "a5bf24d6-9b75-5150-be95-0bfe1523c199",
+        "destination_id": 10012,
+        "category_code": "cultura",
+        "record_origin": "public_import",
+        "slug": "museo-jairo-varela",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 16,
+        "latitude": 3.4550492,
+        "longitude": -76.5352982,
+        "address_text": "Museo Jairo Varela, Av. 2 Nte. #60 a 2, Granada, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=9142261159064233602"
+      },
+      {
+        "id": 500000260,
+        "public_id": "795f786f-0a38-54aa-9b84-2b88565cbfed",
+        "destination_id": 10012,
+        "category_code": "cultura",
+        "record_origin": "public_import",
+        "slug": "centro-cultural-de-cali",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 17,
+        "latitude": 3.4498200999999997,
+        "longitude": -76.5361556,
+        "address_text": "Centro Cultural de Cali, Cra. 5 #6-05, San Pedro, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=1789265839313766527"
+      },
+      {
+        "id": 500000261,
+        "public_id": "dcf24c58-e685-5e6b-85a9-d34b1924ebbb",
+        "destination_id": 10012,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "centro-comercial-chipichape",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 18,
+        "latitude": 3.4759488999999997,
+        "longitude": -76.52764239999999,
+        "address_text": "Centro Comercial Chipichape, Cl. 38 Nte., Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=5867165097089229241"
+      },
+      {
+        "id": 500000262,
+        "public_id": "21b3aa91-0a3b-5a84-a344-b3d1f28c4fcf",
+        "destination_id": 10012,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "unicentro-cali",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 19,
+        "latitude": 3.3753892999999997,
+        "longitude": -76.5383252,
+        "address_text": "Unicentro Cali, Cra. 100 #5 - 169, Las Vegas, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=14977220128560132313"
+      },
+      {
+        "id": 500000263,
+        "public_id": "8dbb9a21-7fbd-5300-a082-cd3bcef50e30",
+        "destination_id": 10012,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "centro-comercial-jard-n-plaza",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 20,
+        "latitude": 3.3689323,
+        "longitude": -76.52834,
+        "address_text": "Centro Comercial Jardín Plaza, Cra. 98 #16-200, Comuna 17, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=17324297570439957108"
+      },
+      {
+        "id": 500000264,
+        "public_id": "394c5832-02d3-5473-9da1-2a5212984bf4",
+        "destination_id": 10012,
+        "category_code": "salud",
+        "record_origin": "public_import",
+        "slug": "cl-nica-imbanaco-sede-principal",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 21,
+        "latitude": 3.4263339,
+        "longitude": -76.5452804,
+        "address_text": "Clínica Imbanaco | Sede Principal, Cra. 38 Bis #5B2-04, Santa Isabel, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=7621415309414222221"
+      },
+      {
+        "id": 500000265,
+        "public_id": "01e1c8a5-d9a4-5c79-98cf-97f1959bb262",
+        "destination_id": 10012,
+        "category_code": "salud",
+        "record_origin": "public_import",
+        "slug": "fundaci-n-valle-del-lili",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 22,
+        "latitude": 3.3727365,
+        "longitude": -76.5256296,
+        "address_text": "Fundación Valle del Lili, first floor, Av. Simón Bolívar, Cra. 98 #18-49, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=10296333486552386279"
+      },
+      {
+        "id": 500000266,
+        "public_id": "4bdc9b60-5169-57d9-b701-f6e6a027e0f2",
+        "destination_id": 10012,
+        "category_code": "salud",
+        "record_origin": "public_import",
+        "slug": "cl-nica-de-occidente",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 23,
+        "latitude": 3.4603295,
+        "longitude": -76.5304268,
+        "address_text": "Clínica de Occidente, Cl. 18 Nte. #5 - 34, San Vicente, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=3352065381271979314"
+      },
+      {
+        "id": 500000267,
+        "public_id": "0d176c48-53a2-5125-bb36-5b2cdc701376",
+        "destination_id": 10012,
+        "category_code": "transporte",
+        "record_origin": "public_import",
+        "slug": "expreso-palmira-cali",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 24,
+        "latitude": 3.465614,
+        "longitude": -76.521619,
+        "address_text": "EXPRESO PALMIRA CALI, Cl. 30 Nte. #2A-29, Bueno Madrid, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=4316861022873069098"
+      },
+      {
+        "id": 500000268,
+        "public_id": "e61b18db-f73b-53a9-a316-1ace1d33cfc3",
+        "destination_id": 10012,
+        "category_code": "vida-nocturna",
+        "record_origin": "public_import",
+        "slug": "la-topa-tolondra",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 25,
+        "latitude": 3.4442852999999998,
+        "longitude": -76.5365133,
+        "address_text": "La Topa Tolondra, Cl. 5 #13-27, COMUNA 3, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=14606169632406307770"
+      },
+      {
+        "id": 500000269,
+        "public_id": "ba94af28-e881-5a44-863a-c2e7a3fb4b37",
+        "destination_id": 10012,
+        "category_code": "vida-nocturna",
+        "record_origin": "public_import",
+        "slug": "tintindeo",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 26,
+        "latitude": 3.4274617999999997,
+        "longitude": -76.54526109999999,
+        "address_text": "Tintindeo, Cl. 5 #3871, San Fernando, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=13908353221180513739"
+      },
+      {
+        "id": 500000270,
+        "public_id": "bf28d624-33a7-565f-8932-1ad6181e3e52",
+        "destination_id": 10012,
+        "category_code": "vida-nocturna",
+        "record_origin": "public_import",
+        "slug": "zaperoco-bar",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 27,
+        "latitude": 3.4590574999999997,
+        "longitude": -76.53132699999999,
+        "address_text": "Zaperoco Bar, Av. 5 Nte. #16-46, San Vicente, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=8582859352578275156"
+      },
+      {
+        "id": 500000271,
+        "public_id": "c53f0acd-1c9e-514a-b383-0aeaae8498d5",
+        "destination_id": 10012,
+        "category_code": "licores",
+        "record_origin": "public_import",
+        "slug": "licores-el-oeste",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 28,
+        "latitude": 3.4539084,
+        "longitude": -76.55168139999999,
+        "address_text": "Licores el oeste, Av. 4 Oe. #7 Oeste, COMUNA 1, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=7555406761281044016"
+      },
+      {
+        "id": 500000272,
+        "public_id": "5cfb62a1-148f-5916-9510-6caa7c510193",
+        "destination_id": 10012,
+        "category_code": "licores",
+        "record_origin": "public_import",
+        "slug": "licores-los-gordos-store",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 29,
+        "latitude": 3.4600383999999997,
+        "longitude": -76.5328036,
+        "address_text": "LICORES LOS GORDOS STORE, Av. 8 Nte. #16N - 25B, Santa Monica Residential, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=2726894697685602440"
+      },
+      {
+        "id": 500000273,
+        "public_id": "d34f0214-c405-5238-bbf6-3e2275050972",
+        "destination_id": 10012,
+        "category_code": "servicios",
+        "record_origin": "public_import",
+        "slug": "servientrega-pasarela",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 30,
+        "latitude": 3.4662574,
+        "longitude": -76.5265359,
+        "address_text": "Servientrega Pasarela, Av. 5 Nte., San Vicente, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=7397133312786800751"
+      },
+      {
+        "id": 500000274,
+        "public_id": "e71cbcbe-0427-57ad-8f28-33dce96c4c29",
+        "destination_id": 10012,
+        "category_code": "servicios",
+        "record_origin": "public_import",
+        "slug": "efecty-centro-carrera-cuarta",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 31,
+        "latitude": 3.4511969999999996,
+        "longitude": -76.5349214,
+        "address_text": "EFECTY CENTRO CARRERA CUARTA, Cra. 4 #8-49, San Pedro, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=6093029748179845755"
+      },
+      {
+        "id": 500000275,
+        "public_id": "3ecaaaac-2580-5a5a-bd13-63ad4c8a5954",
+        "destination_id": 10012,
+        "category_code": "cultura",
+        "record_origin": "public_import",
+        "slug": "biblioteca-departamental-jorge-garc-s-borrero",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 32,
+        "latitude": 3.4362766,
+        "longitude": -76.53925559999999,
+        "address_text": "Biblioteca Departamental Jorge Garcés Borrer, Cl. 5 #24A-91, 3 de Julio, Cali, Valle del Cauca",
+        "location_reference": "Punto de la ficha identificada en Google Maps; no implica entrada certificada o titularidad verificada.",
+        "location_map_url": "https://www.google.com/maps?cid=1605127606809757732"
+      },
+      {
+        "id": 500000276,
+        "public_id": "b25eeaeb-0f61-560b-a4a9-bdaacfa6921d",
+        "destination_id": 10012,
+        "category_code": "transporte",
+        "record_origin": "public_import",
+        "slug": "terminal-de-transporte-cali",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 33,
+        "latitude": 3.4647257,
+        "longitude": -76.5212596,
+        "address_text": "Terminal de Transporte Cali, Cl. 30 Nte. #2AN-29 Piso 2 of 312, Bueno Madrid, Cali, Valle del Cauca",
+        "location_reference": "Punto de ficha Maps nombrada; no certifica entrada precisa ni titularidad.",
+        "location_map_url": "https://www.google.com/maps?cid=11175968586416472311"
+      },
+      {
+        "id": 500000277,
+        "public_id": "2c49f9b3-817c-5acd-b0c6-1aebbb04606c",
+        "destination_id": 10012,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "escuela-de-baile-swing-latino",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 34,
+        "latitude": 3.4290976,
+        "longitude": -76.5379267,
+        "address_text": "ESCUELA DE BAILE Swing Latino FUNDACION, Cra. 31 #7-25, La Alameda, Cali, Valle del Cauca",
+        "location_reference": "Punto de ficha Maps nombrada; no certifica entrada precisa ni titularidad.",
+        "location_map_url": "https://www.google.com/maps?cid=9772928851487232722"
+      },
+      {
+        "id": 500000278,
+        "public_id": "cb122e85-02e1-5496-a450-e86964eba30a",
+        "destination_id": 10012,
+        "category_code": "experiencias",
+        "record_origin": "public_import",
+        "slug": "salsapura-baile-sin-fronteras",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 35,
+        "latitude": 3.4473621999999997,
+        "longitude": -76.53778989999999,
+        "address_text": "SalsaPura - Baile sin fronteras, Cl. 4 #6-61, COMUNA 3, Cali, Valle del Cauca",
+        "location_reference": "Punto de ficha Maps nombrada; no certifica entrada precisa ni titularidad.",
+        "location_map_url": "https://www.google.com/maps?cid=16724118250149569823"
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 500000243,
+        "locale": "es",
+        "display_name": "InterContinental Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000243,
+        "locale": "en",
+        "display_name": "InterContinental Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000243,
+        "locale": "pt-BR",
+        "display_name": "InterContinental Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000244,
+        "locale": "es",
+        "display_name": "Cali Marriott Hotel",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000244,
+        "locale": "en",
+        "display_name": "Cali Marriott Hotel",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000244,
+        "locale": "pt-BR",
+        "display_name": "Cali Marriott Hotel",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000245,
+        "locale": "es",
+        "display_name": "Movich Casa del Alférez",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000245,
+        "locale": "en",
+        "display_name": "Movich Casa del Alférez",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000245,
+        "locale": "pt-BR",
+        "display_name": "Movich Casa del Alférez",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000246,
+        "locale": "es",
+        "display_name": "Platillos Voladores",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000246,
+        "locale": "en",
+        "display_name": "Platillos Voladores",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000246,
+        "locale": "pt-BR",
+        "display_name": "Platillos Voladores",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000247,
+        "locale": "es",
+        "display_name": "Tortelli El Peñón",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000247,
+        "locale": "en",
+        "display_name": "Tortelli El Peñón",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000247,
+        "locale": "pt-BR",
+        "display_name": "Tortelli El Peñón",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000248,
+        "locale": "es",
+        "display_name": "Museo La Tertulia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000248,
+        "locale": "en",
+        "display_name": "Museo La Tertulia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000248,
+        "locale": "pt-BR",
+        "display_name": "Museo La Tertulia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000249,
+        "locale": "es",
+        "display_name": "Museo Arqueológico La Merced",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000249,
+        "locale": "en",
+        "display_name": "Museo Arqueológico La Merced",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000249,
+        "locale": "pt-BR",
+        "display_name": "Museo Arqueológico La Merced",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000250,
+        "locale": "es",
+        "display_name": "Hoteles Dann Carlton Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000250,
+        "locale": "en",
+        "display_name": "Hoteles Dann Carlton Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000250,
+        "locale": "pt-BR",
+        "display_name": "Hoteles Dann Carlton Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000251,
+        "locale": "es",
+        "display_name": "Hotel Spiwak Chipichape",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000251,
+        "locale": "en",
+        "display_name": "Hotel Spiwak Chipichape",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000251,
+        "locale": "pt-BR",
+        "display_name": "Hotel Spiwak Chipichape",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000252,
+        "locale": "es",
+        "display_name": "Hotel NH Cali Royal",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000252,
+        "locale": "en",
+        "display_name": "Hotel NH Cali Royal",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000252,
+        "locale": "pt-BR",
+        "display_name": "Hotel NH Cali Royal",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000253,
+        "locale": "es",
+        "display_name": "Hampton by Hilton Cali Colombia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000253,
+        "locale": "en",
+        "display_name": "Hampton by Hilton Cali Colombia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000253,
+        "locale": "pt-BR",
+        "display_name": "Hampton by Hilton Cali Colombia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000254,
+        "locale": "es",
+        "display_name": "Antigua Contemporánea",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000254,
+        "locale": "en",
+        "display_name": "Antigua Contemporánea",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000254,
+        "locale": "pt-BR",
+        "display_name": "Antigua Contemporánea",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000255,
+        "locale": "es",
+        "display_name": "La Comitiva",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000255,
+        "locale": "en",
+        "display_name": "La Comitiva",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000255,
+        "locale": "pt-BR",
+        "display_name": "La Comitiva",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000256,
+        "locale": "es",
+        "display_name": "Restaurante Hacienda Del Bosque",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000256,
+        "locale": "en",
+        "display_name": "Restaurante Hacienda Del Bosque",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000256,
+        "locale": "pt-BR",
+        "display_name": "Restaurante Hacienda Del Bosque",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000257,
+        "locale": "es",
+        "display_name": "Vegano El Buen Alimento",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000257,
+        "locale": "en",
+        "display_name": "Vegano El Buen Alimento",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000257,
+        "locale": "pt-BR",
+        "display_name": "Vegano El Buen Alimento",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000258,
+        "locale": "es",
+        "display_name": "Museo De La Salsa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000258,
+        "locale": "en",
+        "display_name": "Museo De La Salsa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000258,
+        "locale": "pt-BR",
+        "display_name": "Museo De La Salsa",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000259,
+        "locale": "es",
+        "display_name": "Museo Jairo Varela",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000259,
+        "locale": "en",
+        "display_name": "Museo Jairo Varela",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000259,
+        "locale": "pt-BR",
+        "display_name": "Museo Jairo Varela",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000260,
+        "locale": "es",
+        "display_name": "Centro Cultural de Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000260,
+        "locale": "en",
+        "display_name": "Centro Cultural de Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000260,
+        "locale": "pt-BR",
+        "display_name": "Centro Cultural de Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000261,
+        "locale": "es",
+        "display_name": "Centro Comercial Chipichape",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000261,
+        "locale": "en",
+        "display_name": "Centro Comercial Chipichape",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000261,
+        "locale": "pt-BR",
+        "display_name": "Centro Comercial Chipichape",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000262,
+        "locale": "es",
+        "display_name": "Unicentro Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000262,
+        "locale": "en",
+        "display_name": "Unicentro Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000262,
+        "locale": "pt-BR",
+        "display_name": "Unicentro Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000263,
+        "locale": "es",
+        "display_name": "Centro Comercial Jardín Plaza",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000263,
+        "locale": "en",
+        "display_name": "Centro Comercial Jardín Plaza",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000263,
+        "locale": "pt-BR",
+        "display_name": "Centro Comercial Jardín Plaza",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000264,
+        "locale": "es",
+        "display_name": "Clínica Imbanaco · Sede Principal",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000264,
+        "locale": "en",
+        "display_name": "Clínica Imbanaco · Sede Principal",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000264,
+        "locale": "pt-BR",
+        "display_name": "Clínica Imbanaco · Sede Principal",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000265,
+        "locale": "es",
+        "display_name": "Fundación Valle del Lili",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000265,
+        "locale": "en",
+        "display_name": "Fundación Valle del Lili",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000265,
+        "locale": "pt-BR",
+        "display_name": "Fundación Valle del Lili",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000266,
+        "locale": "es",
+        "display_name": "Clínica de Occidente",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000266,
+        "locale": "en",
+        "display_name": "Clínica de Occidente",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000266,
+        "locale": "pt-BR",
+        "display_name": "Clínica de Occidente",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000267,
+        "locale": "es",
+        "display_name": "Expreso Palmira Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000267,
+        "locale": "en",
+        "display_name": "Expreso Palmira Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000267,
+        "locale": "pt-BR",
+        "display_name": "Expreso Palmira Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000268,
+        "locale": "es",
+        "display_name": "La Topa Tolondra",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000268,
+        "locale": "en",
+        "display_name": "La Topa Tolondra",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000268,
+        "locale": "pt-BR",
+        "display_name": "La Topa Tolondra",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000269,
+        "locale": "es",
+        "display_name": "Tintindeo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000269,
+        "locale": "en",
+        "display_name": "Tintindeo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000269,
+        "locale": "pt-BR",
+        "display_name": "Tintindeo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000270,
+        "locale": "es",
+        "display_name": "Zaperoco Bar",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000270,
+        "locale": "en",
+        "display_name": "Zaperoco Bar",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000270,
+        "locale": "pt-BR",
+        "display_name": "Zaperoco Bar",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000271,
+        "locale": "es",
+        "display_name": "Licores el oeste",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000271,
+        "locale": "en",
+        "display_name": "Licores el oeste",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000271,
+        "locale": "pt-BR",
+        "display_name": "Licores el oeste",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000272,
+        "locale": "es",
+        "display_name": "Licores Los Gordos Store",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000272,
+        "locale": "en",
+        "display_name": "Licores Los Gordos Store",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000272,
+        "locale": "pt-BR",
+        "display_name": "Licores Los Gordos Store",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000273,
+        "locale": "es",
+        "display_name": "Servientrega Pasarela",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000273,
+        "locale": "en",
+        "display_name": "Servientrega Pasarela",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000273,
+        "locale": "pt-BR",
+        "display_name": "Servientrega Pasarela",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000274,
+        "locale": "es",
+        "display_name": "Efecty Centro Carrera Cuarta",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000274,
+        "locale": "en",
+        "display_name": "Efecty Centro Carrera Cuarta",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000274,
+        "locale": "pt-BR",
+        "display_name": "Efecty Centro Carrera Cuarta",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000275,
+        "locale": "es",
+        "display_name": "Biblioteca Departamental Jorge Garcés Borrero",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000275,
+        "locale": "en",
+        "display_name": "Biblioteca Departamental Jorge Garcés Borrero",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000275,
+        "locale": "pt-BR",
+        "display_name": "Biblioteca Departamental Jorge Garcés Borrero",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000276,
+        "locale": "es",
+        "display_name": "Terminal De Transporte Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000276,
+        "locale": "en",
+        "display_name": "Terminal De Transporte Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000276,
+        "locale": "pt-BR",
+        "display_name": "Terminal De Transporte Cali",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000277,
+        "locale": "es",
+        "display_name": "Escuela De Baile Swing Latino",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000277,
+        "locale": "en",
+        "display_name": "Escuela De Baile Swing Latino",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000277,
+        "locale": "pt-BR",
+        "display_name": "Escuela De Baile Swing Latino",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000278,
+        "locale": "es",
+        "display_name": "SalsaPura · Baile Sin Fronteras",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000278,
+        "locale": "en",
+        "display_name": "SalsaPura · Baile Sin Fronteras",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000278,
+        "locale": "pt-BR",
+        "display_name": "SalsaPura · Baile Sin Fronteras",
+        "summary": "",
+        "description": ""
+      }
+    ],
+    "business_categories": [
+      {
+        "business_id": 500000243,
+        "category_code": "hospedaje"
+      },
+      {
+        "business_id": 500000244,
+        "category_code": "hospedaje"
+      },
+      {
+        "business_id": 500000245,
+        "category_code": "hospedaje"
+      },
+      {
+        "business_id": 500000246,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000247,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000248,
+        "category_code": "cultura"
+      },
+      {
+        "business_id": 500000249,
+        "category_code": "cultura"
+      },
+      {
+        "business_id": 500000250,
+        "category_code": "hospedaje"
+      },
+      {
+        "business_id": 500000251,
+        "category_code": "hospedaje"
+      },
+      {
+        "business_id": 500000252,
+        "category_code": "hospedaje"
+      },
+      {
+        "business_id": 500000253,
+        "category_code": "hospedaje"
+      },
+      {
+        "business_id": 500000254,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000255,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000256,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000257,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000258,
+        "category_code": "cultura"
+      },
+      {
+        "business_id": 500000259,
+        "category_code": "cultura"
+      },
+      {
+        "business_id": 500000260,
+        "category_code": "cultura"
+      },
+      {
+        "business_id": 500000261,
+        "category_code": "comercio"
+      },
+      {
+        "business_id": 500000262,
+        "category_code": "comercio"
+      },
+      {
+        "business_id": 500000263,
+        "category_code": "comercio"
+      },
+      {
+        "business_id": 500000264,
+        "category_code": "salud"
+      },
+      {
+        "business_id": 500000265,
+        "category_code": "salud"
+      },
+      {
+        "business_id": 500000266,
+        "category_code": "salud"
+      },
+      {
+        "business_id": 500000267,
+        "category_code": "transporte"
+      },
+      {
+        "business_id": 500000268,
+        "category_code": "vida-nocturna"
+      },
+      {
+        "business_id": 500000269,
+        "category_code": "vida-nocturna"
+      },
+      {
+        "business_id": 500000270,
+        "category_code": "vida-nocturna"
+      },
+      {
+        "business_id": 500000271,
+        "category_code": "licores"
+      },
+      {
+        "business_id": 500000272,
+        "category_code": "licores"
+      },
+      {
+        "business_id": 500000273,
+        "category_code": "servicios"
+      },
+      {
+        "business_id": 500000274,
+        "category_code": "servicios"
+      },
+      {
+        "business_id": 500000275,
+        "category_code": "cultura"
+      },
+      {
+        "business_id": 500000276,
+        "category_code": "transporte"
+      },
+      {
+        "business_id": 500000277,
+        "category_code": "experiencias"
+      },
+      {
+        "business_id": 500000278,
+        "category_code": "experiencias"
+      }
+    ],
+    "business_sources": [
+      {
+        "business_id": 500000243,
+        "source_url": "https://www.ihg.com/intercontinental/hotels/us/es/cali/cloha/hoteldetail/directions",
+        "checked_at": "2026-11-05",
+        "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza."
+      },
+      {
+        "business_id": 500000243,
+        "source_url": "https://www.openstreetmap.org/way/311853405",
+        "checked_at": "2026-11-05",
+        "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto."
+      },
+      {
+        "business_id": 500000244,
+        "source_url": "https://www.marriott.com/es/hotels/clomc-cali-marriott-hotel/overview/",
+        "checked_at": "2026-11-05",
+        "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza."
+      },
+      {
+        "business_id": 500000244,
+        "source_url": "https://www.openstreetmap.org/way/395856927",
+        "checked_at": "2026-11-05",
+        "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto."
+      },
+      {
+        "business_id": 500000245,
+        "source_url": "https://hotels.movichhotels.com/docs/brochure-spa-all.pdf",
+        "checked_at": "2026-11-05",
+        "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza."
+      },
+      {
+        "business_id": 500000245,
+        "source_url": "https://www.openstreetmap.org/way/1173967973",
+        "checked_at": "2026-11-05",
+        "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto."
+      },
+      {
+        "business_id": 500000246,
+        "source_url": "https://platillosvoladores.com/pages/cali",
+        "checked_at": "2026-11-05",
+        "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza."
+      },
+      {
+        "business_id": 500000246,
+        "source_url": "https://www.openstreetmap.org/node/5043725621",
+        "checked_at": "2026-11-05",
+        "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto."
+      },
+      {
+        "business_id": 500000247,
+        "source_url": "https://www.waze.com/live-map/directions/co/valle-del-cauca/cali/tortelli-el-penon?to=place.ChIJ7atf13umMI4RDKyT0Ba_hhA",
+        "checked_at": "2026-11-05",
+        "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza."
+      },
+      {
+        "business_id": 500000247,
+        "source_url": "https://www.openstreetmap.org/node/1514340098",
+        "checked_at": "2026-11-05",
+        "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto."
+      },
+      {
+        "business_id": 500000248,
+        "source_url": "https://museolatertulia.com/",
+        "checked_at": "2026-11-05",
+        "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza."
+      },
+      {
+        "business_id": 500000248,
+        "source_url": "https://www.openstreetmap.org/relation/10749061",
+        "checked_at": "2026-11-05",
+        "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto."
+      },
+      {
+        "business_id": 500000249,
+        "source_url": "https://web1.cali.gov.co/publicaciones/museos_cali_valle_pub",
+        "checked_at": "2026-11-05",
+        "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza."
+      },
+      {
+        "business_id": 500000249,
+        "source_url": "https://www.openstreetmap.org/node/2536488341",
+        "checked_at": "2026-11-05",
+        "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto."
+      },
+      {
+        "business_id": 500000250,
+        "source_url": "https://www.google.com/maps?cid=2734137882222344002",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000251,
+        "source_url": "https://www.google.com/maps?cid=4337453720171477848",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000252,
+        "source_url": "https://www.google.com/maps?cid=6050033783267771271",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000253,
+        "source_url": "https://www.google.com/maps?cid=6826902278815052231",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000254,
+        "source_url": "https://www.google.com/maps?cid=15323198847462207380",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000255,
+        "source_url": "https://www.google.com/maps?cid=3159895410294061494",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000256,
+        "source_url": "https://www.google.com/maps?cid=9953877942225533489",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000257,
+        "source_url": "https://www.google.com/maps?cid=6363328202176532959",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000258,
+        "source_url": "https://www.google.com/maps?cid=15496547225579589851",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000259,
+        "source_url": "https://www.google.com/maps?cid=9142261159064233602",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000260,
+        "source_url": "https://www.google.com/maps?cid=1789265839313766527",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000261,
+        "source_url": "https://www.google.com/maps?cid=5867165097089229241",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000262,
+        "source_url": "https://www.google.com/maps?cid=14977220128560132313",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000263,
+        "source_url": "https://www.google.com/maps?cid=17324297570439957108",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000264,
+        "source_url": "https://www.google.com/maps?cid=7621415309414222221",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000265,
+        "source_url": "https://www.google.com/maps?cid=10296333486552386279",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000266,
+        "source_url": "https://www.google.com/maps?cid=3352065381271979314",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000267,
+        "source_url": "https://www.google.com/maps?cid=4316861022873069098",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000268,
+        "source_url": "https://www.google.com/maps?cid=14606169632406307770",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000269,
+        "source_url": "https://www.google.com/maps?cid=13908353221180513739",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000270,
+        "source_url": "https://www.google.com/maps?cid=8582859352578275156",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000271,
+        "source_url": "https://www.google.com/maps?cid=7555406761281044016",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000272,
+        "source_url": "https://www.google.com/maps?cid=2726894697685602440",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000273,
+        "source_url": "https://www.google.com/maps?cid=7397133312786800751",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000274,
+        "source_url": "https://www.google.com/maps?cid=6093029748179845755",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000275,
+        "source_url": "https://www.google.com/maps?cid=1605127606809757732",
+        "checked_at": "2026-11-05",
+        "note": "Ficha nombrada con dirección y punto contrastados dentro de Cali. Dato público para directorio gratuito; no acredita representación, alianza, pago ni verificación de vigencia."
+      },
+      {
+        "business_id": 500000275,
+        "source_url": "https://sigesi.valledelcauca.gov.co/hgpd/organizacion/show/1161",
+        "checked_at": "2026-11-05",
+        "note": "Nombre institucional completo contrastado; ficha Maps presenta apellido truncado."
+      },
+      {
+        "business_id": 500000276,
+        "source_url": "https://www.google.com/maps?cid=11175968586416472311",
+        "checked_at": "2026-11-05",
+        "note": "Ficha pública nombrada: identidad, dirección en Cali y punto contrastados. No acredita representación, alianza, pago ni vigencia comercial."
+      },
+      {
+        "business_id": 500000276,
+        "source_url": "https://terminalcali.com/",
+        "checked_at": "2026-11-05",
+        "note": "Fuente institucional/oficial para contrastar identidad y dirección."
+      },
+      {
+        "business_id": 500000277,
+        "source_url": "https://www.google.com/maps?cid=9772928851487232722",
+        "checked_at": "2026-11-05",
+        "note": "Ficha pública nombrada: identidad, dirección en Cali y punto contrastados. No acredita representación, alianza, pago ni vigencia comercial."
+      },
+      {
+        "business_id": 500000277,
+        "source_url": "https://swinglatino.com.co/contacto/",
+        "checked_at": "2026-11-05",
+        "note": "Fuente institucional/oficial para contrastar identidad y dirección."
+      },
+      {
+        "business_id": 500000278,
+        "source_url": "https://www.google.com/maps?cid=16724118250149569823",
+        "checked_at": "2026-11-05",
+        "note": "Ficha pública nombrada: identidad, dirección en Cali y punto contrastados. No acredita representación, alianza, pago ni vigencia comercial."
+      }
+    ],
+    "business_contacts": [],
+    "business_media": []
+  }
+}
