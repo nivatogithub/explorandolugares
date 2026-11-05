@@ -39,11 +39,27 @@ class FullReleaseCoverageTests(unittest.TestCase):
             for source in (ROOT/'backend/integration-analytics/public/api').rglob('*.php'):
                 relative='public/api/'+source.relative_to(ROOT/'backend/integration-analytics/public/api').as_posix()
                 self.assertEqual((Path(folder)/relative).read_bytes(),source.read_bytes(),relative)
-            coverage=(Path(folder)/'public/cobertura/colombia/index.html').read_text()
-            self.assertEqual(coverage.count('<header'),1)
-            self.assertIn('coverage-meta.js',coverage)
-            self.assertIn('id="panel-cobertura"',coverage)
-            self.assertIn('id="panel-visitantes"',coverage)
+            for prefix, script in [('', 'coverage-meta.js'),
+                                   ('en/', 'cobertura-meta-en.js'),
+                                   ('pt-br/', 'cobertura-meta-pt-br.js')]:
+                with self.subTest(locale=prefix or 'es'):
+                    route=prefix+'cobertura/colombia/'
+                    entry=Path(folder)/'public'/route/'index.php'
+                    self.assertTrue(entry.is_file(), route)
+                    self.assertFalse(entry.with_suffix('.html').exists(),
+                                     'Retired static coverage must not shadow PHP')
+                    code=('$_SERVER["REQUEST_METHOD"]="GET";'
+                          '$_SERVER["REQUEST_URI"]='+json.dumps('/'+route)+';'
+                          'require '+json.dumps(str(entry))+';')
+                    rendered=subprocess.run(['php','-d','display_errors=stderr','-r',code],
+                                            capture_output=True,text=True,check=True)
+                    self.assertEqual(rendered.stderr.strip(), '', route)
+                    coverage=rendered.stdout
+                    self.assertEqual(coverage.count('<header'),1)
+                    self.assertEqual(coverage.count('<footer'),1)
+                    self.assertIn(script,coverage)
+                    self.assertIn('id="panel-cobertura"',coverage)
+                    self.assertIn('id="panel-visitantes"',coverage)
             self.assertNotIn('public/__preprod-account.php', packaged)
             self.assertIn('public/business/recover.php', packaged)
             self.assertNotIn('public/admin/buzon-local.php', packaged)

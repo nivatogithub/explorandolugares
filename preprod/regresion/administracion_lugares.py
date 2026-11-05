@@ -31,7 +31,10 @@ def run(env):
  def nav_integrity():
   page=cache.get('businesses.php','');check(page,'Falta respuesta del panel de negocios')
   sidebar=re.search(r'<aside\b.*?</aside>',page,re.S);check(sidebar,'No existe navegación administrativa');parser=Links();parser.feed(sidebar[0]);actual={x['href'] for x in parser.items}
-  for route,label in expected:check(route in actual,'Enlace perdido del menú: '+label)
+  actual={urllib.parse.urlsplit(urllib.parse.urljoin(BASE+'/admin/businesses.php',href)).path+('?' +urllib.parse.urlsplit(href).query if urllib.parse.urlsplit(href).query else '') for href in actual}
+  # The current sidebar groups workflows; individual tools remain covered by AD/AP.
+  for route in ['business-support.php','index.php?tab=solicitudes','accounts.php','subscriptions.php','email-templates.php','campaigns.php','places.php','reports.php','investors.php','costs.php','cancellations.php','payment-settings.php','settings.php','campaigns.php?tab=conexion','index.php?tab=sistema','incidents.php','database.php']:
+   check('/admin/'+route in actual,'Flujo perdido del menú: '+route)
   for item in parser.items:
    href=item['href']
    if not href or href.startswith(('#','http','mailto:')):continue
@@ -49,16 +52,14 @@ def run(env):
  case('AD-16','Acceso a importación, traslado de negocios y medición',extra_pages)
  if any('Próximamente' in p and 'Reportes' in p for p in cache.values()):pending('AD-17','Reportes administrativos funcionales','El menú todavía anuncia Próximamente. No se contabiliza como módulo disponible.')
  def isolated_operations():
-  import subprocess,sys
-  command=[sys.executable,str(ROOT/'backend/tests/admin-pages.integration.py')]
-  process=subprocess.run(command,cwd=ROOT,capture_output=True,text=True,timeout=60)
-  log=ROOT/'.local/preprod/regresion/admin-operaciones.log';log.parent.mkdir(parents=True,exist_ok=True);log.write_text(process.stdout+process.stderr)
-  check(process.returncode==0,'Regresión HTTP administrativa aislada falló; ver admin-operaciones.log')
- case('AD-18','Operaciones administrativas y documentos privados en base aislada',isolated_operations)
+  from admin_operations import run as operations
+  operations(env,admin)
+ case('AD-18','Operaciones administrativas HTTP/MariaDB con registros sintéticos propios y limpieza',isolated_operations)
  def adminlogout():
   state=admin.state();admin.request('/negocios/salir/',{'csrf':state['csrf']});check(not admin.state()['authenticated'],'No cerró sesión administradora');code,page,url=admin.get('/admin/accounts.php');check(code in (401,403) or ('/negocios/acceso/' in url and 'admin-sidebar' not in page),'Cerrar sesión no revoca acceso administrativo')
  case('AD-19','Salida del administrador revoca acceso al panel',adminlogout)
- published=query('SELECT slug FROM destinations WHERE publication_status="published" ORDER BY slug');check(published,'No hay lugares publicados para recorrer')
+ published=query('SELECT d.slug,SUM(CASE WHEN p.poi_type="experience" AND p.publication_status="published" THEN 1 ELSE 0 END) AS experience_count FROM destinations d LEFT JOIN points_of_interest p ON p.destination_id=d.id WHERE d.publication_status="published" GROUP BY d.id,d.slug ORDER BY d.slug');check(published,'No hay lugares publicados para recorrer')
+ experience_inventory=[]
  def listing():
   paths=set();seen=set();queue=['/lugares/']
   while queue:
@@ -85,13 +86,17 @@ def run(env):
    body=page();m=re.search(r'<section\b[^>]*id="descubre"[^>]*>(.*?)</section>',body,re.S);check(m,'Falta sección de historia');text=html.unescape(re.sub('<[^>]+>',' ',m[1]));check(len(text.strip())>100,'Historia ausente o insuficiente')
   def directory(page=page):
    body=page();check(all(x in body for x in ['id="lugares"','id="catalogo-local"','id="directory-panel"']),'Falta directorio de comercios');check('href="#lugares"' in body,'Directorio sin enlace interno');check('directory-tab-todos' in body,'Falta filtro de todos los comercios')
-  def experiences(page=page,slug=slug):
+  def experiences(page=page,slug=slug,expected=int(row['experience_count'] or 0)):
    body=page()
+   shown=len(re.findall(r'<article\b[^>]*class="destination-experience-card"',body))
+   check(shown==expected,'Experiencias publicadas distintas de BD: '+slug+'; esperadas '+str(expected)+', mostradas '+str(shown))
+   experience_inventory.append({'slug':slug,'published_experiences':expected,'rendered_experiences':shown})
    if slug=='jerico':
     check('id="experiencias-locales"' in body,'No aparecen experiencias de Jericó');check(body.index('id="atractivos-destino"')<body.index('id="experiencias-locales"')<body.index('id="lugares"'),'Experiencias fuera de su posición después de atractivos');check(body.count('destination-experience-card')>=3,'Faltan experiencias habilitadas de Jericó')
    else:
-    if 'id="experiencias-locales"' not in body:raise env['Blocked']('Lugar sin sección de experiencias: revisar inventario editorial; no inventar contenido para aprobar.')
+    check(('id="experiencias-locales"' in body)==(expected>0),'Sección de experiencias vacía o contenido publicado oculto: '+slug)
+    if expected:check(body.index('id="atractivos-destino"')<body.index('id="experiencias-locales"')<body.index('id="lugares"'),'Experiencias fuera de orden: '+slug)
   case('LU-'+slug+'-01','Historia visible: '+slug,history)
   case('LU-'+slug+'-02','Directorio y filtros presentes: '+slug,directory)
   case('LU-'+slug+'-03','Experiencias dentro del lugar después de atractivos: '+slug,experiences)
- pending('LU-UI','Interacción visual del directorio y experiencias','Comprobar filtros, tarjetas y enlaces en navegador: el HTML presente no demuestra ejecución de JavaScript. Mantener pendiente hasta automatizar ese recorrido.')
+ inventory=ROOT/'.local/preprod/regresion/experience-inventory.json';inventory.write_text(json.dumps(experience_inventory,ensure_ascii=False,indent=2)+'\n')

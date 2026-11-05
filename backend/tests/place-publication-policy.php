@@ -27,7 +27,7 @@ foreach($locales as $locale){
 }
 $attractions=[['status'=>'published'],['status'=>'draft'],['status'=>'archived']];
 policy_accepts(static fn()=>PlacePublicationPolicy::assertInitialState(0,'draft'));
-foreach(['published','archived'] as $status)policy_rejects(static fn()=>PlacePublicationPolicy::assertInitialState(0,$status),'Los destinos nuevos siempre se crean como borrador. Guárdalo primero, revísalo y luego podrás publicarlo.');
+foreach(['published','archived'] as $status)policy_rejects(static fn()=>PlacePublicationPolicy::assertInitialState(0,$status),'Los lugares nuevos siempre se crean como borrador. Guárdalo primero, revísalo y luego podrás publicarlo.');
 foreach(['draft','published','archived'] as $status)policy_accepts(static fn()=>PlacePublicationPolicy::assertInitialState(1,$status));
 
 foreach(['borrador local','local draft','rascunho local','imágenes definitivas pendientes','final images pending','imagens finais pendentes'] as $marker){

@@ -56,7 +56,10 @@ def check(value,message):
 def php(code):
  source='''<?php $c=require '/srv/state/private/config.php';if(empty($c['local_test'])||!is_dir('/srv/state'))exit(80);$p=new PDO($c['dsn'],$c['db_user'],$c['db_password'],[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);'''+code
  proc=subprocess.run(['podman','exec','-i','explorando-preprod','php'],input=source.encode(),capture_output=True,timeout=30)
- if proc.returncode:raise RuntimeError('No se pudo ejecutar la comprobación local de base de datos')
+ if proc.returncode:
+  diagnostic=proc.stderr.decode(errors='replace')
+  match=re.search(r'SQLSTATE\[([^]]+)\](?:[^\n]*?:\s*(\d+))?',diagnostic)
+  raise RuntimeError('Comprobación local falló'+(' SQLSTATE '+match[1]+(' / '+match[2] if match[2] else '') if match else ' (salida '+str(proc.returncode)+')'))
  return proc.stdout.decode()
 def query(sql,params=[]):
  payload=base64.b64encode(json.dumps([sql,params]).encode()).decode();return json.loads(php('$v=json_decode(base64_decode("'+payload+'"),true);$q=$p->prepare($v[0]);$q->execute($v[1]);echo json_encode($q->fetchAll(PDO::FETCH_ASSOC));'))
@@ -79,7 +82,7 @@ def case(id,title,fn):
   if unmet:raise Blocked('Dependencias no aprobadas: '+', '.join(unmet)+'. No se ejecutó este proceso ni se atribuye un fallo nuevo.')
   fn();status='APROBADA';detail='Comprobación ejecutada correctamente.'
  except Blocked as e:status='BLOQUEADA';detail=str(e)
- except Exception as e:status='FALLIDA';detail=str(e) if isinstance(e,AssertionError) else type(e).__name__+': error al ejecutar; revisar entorno.'
+ except Exception as e:status='FALLIDA';detail=str(e) if isinstance(e,(AssertionError,RuntimeError)) else type(e).__name__+': error al ejecutar; revisar entorno.'
  results.append({'id':id,'title':title,'status':status,'detail':detail});print(id,status,title,flush=True)
 def pending(id,title,detail):results.append({'id':id,'title':title,'status':'PENDIENTE','detail':detail});print(id,'PENDIENTE',title,flush=True)
 def account():
@@ -87,11 +90,18 @@ def account():
 def login(client,password=PASSWORD):
  code,page,_=client.get('/negocios/acceso/');check(code==200,'No abre acceso');code,page,url=client.request('/negocios/acceso/',{'csrf':csrf(page),'email':EMAIL,'password':password});check(code==200 and client.state().get('authenticated'),'No se autenticó la cuenta');check('/cuenta/espacio/' not in url,'El acceso todavía obliga a elegir un rol');return page
 anon=Client();person=Client();fixtures=[]
-try:
- runtime=json.loads(anon.get('/__preprod-runtime.php')[1]);check(runtime['database']['driver']=='mysql','Se requiere MariaDB/MySQL, no SQLite')
- php('echo "LOCAL";')
-except Exception:
- print('Entorno no comprobado: iniciar preprod local. No se ejecutó ninguna escritura.');sys.exit(2)
+from data_guard import capture as capture_persistent,verify as verify_persistent
+persistent_guard=None
+for attempt in range(3):
+ try:
+  runtime=json.loads(anon.get('/__preprod-runtime.php')[1]);check(runtime['database']['driver']=='mysql','Se requiere MariaDB/MySQL, no SQLite')
+  php('echo "LOCAL";')
+  persistent_guard=capture_persistent(query)
+  break
+ except Exception as error:
+  if attempt<2:time.sleep(2);continue  # Read-only probes; no fixtures exist yet.
+  detail=str(error) if isinstance(error,RuntimeError) else type(error).__name__
+  print('Entorno no comprobado: '+detail+'. No se ejecutó ninguna escritura.');sys.exit(2)
 try:
  if '--solo-panel-lugares' not in sys.argv:
   def signup():
@@ -284,12 +294,30 @@ try:
    from contacto_operacion import run as run_contact_operation
    run_contact_operation(globals())
  from suscripciones_visuales import run as run_subscription_visuals
- run_subscription_visuals(case,check,anon.get,pending)
+ run_subscription_visuals(case,check,anon.get)
  if not PUBLIC_ONLY:
   from administracion_lugares import run as run_extended
   run_extended(globals())
- pending('UI-01','Navegador: modal de acceso, nombre junto a idiomas, Personal/Mis negocios y cerrar sesión','Suite HTTP no ejecuta JavaScript. Requiere prueba de navegador en escritorio/móvil de la versión final; sin evidencia se bloquea el pase.')
- pending('UI-02','Navegador: mapa visible, selección, búsqueda, errores y compartir','La respuesta HTML/API no demuestra funcionamiento visual. Falta recorrido de navegador con evidencia para cada versión candidata.')
+ browser_report=None
+ def browser_checks():
+  global browser_report
+  if '--solo-panel-lugares' in sys.argv:
+   profile=json.loads((ROOT/'.local/preprod/test-accounts.json').read_text())['profiles']['negocio'];email,password=profile['email'],profile['password']
+  else:
+   check(any(r['id']=='NG-00' and r['status']=='APROBADA' for r in results),'Sin cuenta técnica válida para prueba de navegador');email,password=EMAIL,NEW
+  report_path=ROOT/'.local/preprod/regresion/browser/results.json'
+  if report_path.exists():report_path.unlink()  # Never approve from a previous run's evidence.
+  process=subprocess.run(['node',str(ROOT/'preprod/regresion/browser-checks.cjs')],cwd=ROOT,input=json.dumps({'base':BASE,'email':email,'password':password}),text=True,capture_output=True,timeout=240)
+  (ROOT/'.local/preprod/regresion/browser-run.log').write_text(process.stdout+process.stderr)
+  check(report_path.is_file(),'No se generó evidencia del navegador')
+  browser_report=json.loads(report_path.read_text());check(browser_report['base']==BASE,'Evidencia de otro ambiente')
+ case('BROWSER','Ejecutar navegador local en escritorio y móvil, sin mensajes ni compras',browser_checks)
+ for criterion,title in [('UI-01','Modal, sesión, cuenta, menú y cierre en escritorio/móvil'),('UI-02','Mapa, selección, audiencia, compartir y errores en escritorio/móvil'),('LU-UI','Directorio, filtros, tarjetas y experiencias en tres idiomas'),('SV-operador','Complemento opcional separado y tarifas por período en escritorio/móvil')]:
+  def browser_criterion(criterion=criterion):
+   check(browser_report is not None,'No hay evidencia actual de navegador');items=[r for r in browser_report['results'] if r['id']==criterion]
+   check(len(items)==2 and all(r['passed'] for r in items),'; '.join(r.get('error','Sin evidencia completa') for r in items if not r['passed']) or 'Falta escritorio o móvil')
+   check(not browser_report['script_errors'],'Errores JavaScript durante el recorrido')
+  case(criterion,title,browser_criterion)
 except Exception as e:
  results.append({'id':'ENTORNO','title':'Ejecución completa','status':'FALLIDA','detail':type(e).__name__+': la suite fue interrumpida'})
 finally:
@@ -343,12 +371,16 @@ finally:
   results.append({'id':'LIMPIEZA','title':'Retirar y verificar ausencia de datos sintéticos de esta ejecución','status':'APROBADA','detail':detail})
  except Exception:results.append({'id':'LIMPIEZA','title':'Limpieza de datos sintéticos','status':'FALLIDA','detail':'No se completó la limpieza. Identificador: '+RUN})
  REPORT.mkdir(parents=True,exist_ok=True)
+ def preservation():
+  check(persistent_guard is not None,'No hay referencia previa de datos persistentes')
+  evidence=verify_persistent(persistent_guard,query);(REPORT/'persistent-data-preservation.json').write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+'\n')
+ case('DATOS','Conservar negocios, cuentas, credenciales, suscripciones, fotos y visitas locales anteriores',preservation)
  revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip();dirty=bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True))
  fingerprint=hashlib.sha256()
  for f in sorted((ROOT/'.local/preprod/release/public').rglob('*')):
   if f.is_file() and f.suffix in {'.php','.html','.js','.css'}:fingerprint.update(str(f.relative_to(ROOT/'.local/preprod/release')).encode());fingerprint.update(f.read_bytes())
  blocked=any(r['status']!='APROBADA' for r in results) or '--solo-panel-lugares' in sys.argv
- report={'executed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'base_url':BASE,'revision':revision,'working_tree_dirty':dirty,'public_package_sha256':fingerprint.hexdigest(),'ready':not blocked,'decision':'NO LISTO' if blocked else 'LISTO PARA REVISIÓN HUMANA','selection':'flujos-publicos' if PUBLIC_ONLY else ('panel-lugares' if '--solo-panel-lugares' in sys.argv else 'completa'),'scope':'HTTP real y persistencia MariaDB local. No incluye ejecución JavaScript ni entrega real de correo; esos criterios quedan pendientes y bloquean. No despliega ni hace pagos.','results':results}
+ report={'executed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'base_url':BASE,'revision':revision,'working_tree_dirty':dirty,'public_package_sha256':fingerprint.hexdigest(),'ready':not blocked,'decision':'NO LISTO' if blocked else 'LISTO PARA REVISIÓN HUMANA','selection':'flujos-publicos' if PUBLIC_ONLY else ('panel-lugares' if '--solo-panel-lugares' in sys.argv else 'completa'),'scope':'HTTP y navegador real en escritorio/móvil, MariaDB local y conservación de datos persistentes. Correo sintético local; no certifica entregabilidad externa. No accede a producción, despliega ni realiza pagos reales.','results':results}
  (REPORT/'resultado.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  table=''.join('<tr><td>'+html.escape(r['id'])+'</td><td>'+html.escape(r['title'])+'</td><td>'+r['status']+'</td><td>'+html.escape(r['detail'])+'</td></tr>' for r in results)
  (REPORT/'resultado.html').write_text('<!doctype html><html lang="es"><meta charset="utf-8"><title>Regresión preprod</title><style>body{font:16px/1.5 system-ui;margin:32px;background:#fffaf4;color:#302d29}td,th{padding:12px;border:1px solid #ccc;text-align:left}table{border-collapse:collapse}h1{color:#9c3e2f}</style><h1>'+report['decision']+'</h1><p>'+html.escape(report['scope'])+'</p><p>Commit: '+revision+'; cambios locales: '+str(dirty)+'. Informe de una ejecución, no autorización de despliegue.</p><table><tr><th>ID</th><th>Criterio</th><th>Resultado</th><th>Detalle</th></tr>'+table+'</table></html>')
