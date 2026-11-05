@@ -75,15 +75,44 @@
     const host=$('dashboard-traffic-chart');host.replaceChildren();
     if(basic?.status!=='enabled'){host.append(el('p','El conteo sin cookies todavía no está disponible.'));return;}
     const rows=basic.trend||[];if(!rows.length){host.append(el('p','Todavía no hay consultas registradas en este período.'));return;}
-    const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 -25 640 205');svg.setAttribute('role','img');svg.setAttribute('class','dashboard-trend-svg');svg.setAttribute('aria-label','Páginas consultadas por día, sin cookies.');
-    const max=Math.max(50,Math.ceil(Math.max(...rows.map(r=>r.views))/50)*50);
-    for(let value=0;value<=max;value+=50){const grid=document.createElementNS(ns,'line'),y=150-value*125/max;grid.setAttribute('x1','30');grid.setAttribute('x2','610');grid.setAttribute('y1',y);grid.setAttribute('y2',y);grid.setAttribute('class','trend-grid');svg.append(grid);}
-    const path=document.createElementNS(ns,'path');path.setAttribute('d',rows.map((r,i)=>(i?'L':'M')+(30+i*580/Math.max(1,rows.length-1))+' '+(150-r.views*125/max)).join(' '));path.setAttribute('class','trend-line');svg.append(path);
-    rows.forEach((row,i)=>{if(Number(row.views)<=0)return;const point=document.createElementNS(ns,'circle'),title=document.createElementNS(ns,'title');point.setAttribute('cx',30+i*580/Math.max(1,rows.length-1));point.setAttribute('cy',150-row.views*125/max);point.setAttribute('r','5');point.setAttribute('class','trend-point');point.setAttribute('tabindex','0');point.setAttribute('role','img');const description=row.day+': '+number(row.views)+' páginas consultadas';point.setAttribute('aria-label',description);title.textContent=description;point.append(title);svg.append(point);
-      const tooltip=document.createElementNS(ns,'g'),box=document.createElementNS(ns,'rect'),label=document.createElementNS(ns,'text');const cx=30+i*580/Math.max(1,rows.length-1),cy=150-row.views*125/max,tx=Math.max(4,Math.min(556,cx-40)),ty=cy-46;tooltip.setAttribute('class','trend-tooltip');tooltip.setAttribute('visibility','hidden');tooltip.setAttribute('pointer-events','none');box.setAttribute('x',tx);box.setAttribute('y',ty);box.setAttribute('width','80');box.setAttribute('height','26');box.setAttribute('rx','5');label.setAttribute('x',tx+40);label.setAttribute('y',ty+17);label.setAttribute('text-anchor','middle');label.textContent=number(row.views);tooltip.append(box,label);const show=()=>{svg.append(tooltip);tooltip.setAttribute('visibility','visible');};const hide=()=>tooltip.setAttribute('visibility','hidden');point.addEventListener('pointerenter',show);point.addEventListener('pointerleave',hide);point.addEventListener('focus',show);point.addEventListener('blur',hide);point.setAttribute('r','8');svg.append(tooltip);});
-
-    for(let value=50;value<=max;value+=50){const label=document.createElementNS(ns,'text');label.setAttribute('x','25');label.setAttribute('y',154-value*125/max);label.setAttribute('text-anchor','end');label.textContent=number(value);svg.append(label);}
-    [[30,rows[0].day],[480,rows[rows.length-1].day]].forEach(([x,text])=>{const label=document.createElementNS(ns,'text');label.setAttribute('x',x);label.setAttribute('y','176');label.textContent=text;svg.append(label);});host.append(svg);
+    const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');
+    const width=Math.max(320,host.clientWidth||640,rows.length*10),left=62,right=width-24,top=50,bottom=290;
+    svg.setAttribute('viewBox',`0 0 ${width} 330`);svg.setAttribute('role','group');svg.setAttribute('class','dashboard-trend-svg');svg.setAttribute('aria-label','Páginas consultadas por día, sin cookies.');
+    svg.style.minWidth=width+'px';
+    // Four readable intervals, including 25/50/75/100 and 250/500/750/1000.
+    const peak=Math.max(1,...rows.map(r=>Number(r.views)||0)),raw=peak/4,power=10**Math.floor(Math.log10(raw));
+    const step=Math.max(1,([1,2,2.5,5,10].find(v=>v*power>=raw)||10)*power),max=Math.ceil(peak/step)*step;
+    const x=i=>left+i*(right-left)/Math.max(1,rows.length-1),y=v=>bottom-v*(bottom-top)/max;
+    const node=(tag,attrs,text)=>{const n=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,v));if(text!==undefined)n.textContent=text;return n;};
+    for(let value=0;value<=max;value+=step)svg.append(node('text',{x:left-12,y:y(value)+4,'text-anchor':'end',class:'trend-scale'},number(value)));
+    const spacing=(right-left)/Math.max(1,rows.length-1),dateStride=Math.max(1,Math.ceil(rows.length/6));
+    rows.forEach((row,i)=>{
+      svg.append(node('line',{x1:x(i),x2:x(i),y1:top,y2:bottom,class:'trend-grid'}));
+      if(i%dateStride===0||i===rows.length-1)svg.append(node('text',{x:x(i),y:316,'text-anchor':i===0?'start':i===rows.length-1?'end':'middle'},row.day.slice(8)+'/'+row.day.slice(5,7)));
+    });
+    svg.append(node('path',{d:rows.map((r,i)=>(i?'L':'M')+x(i)+' '+y(r.views)).join(' '),class:'trend-line','pointer-events':'none'}));
+    const selection=node('line',{y1:top,y2:bottom,class:'trend-selection',visibility:'hidden','pointer-events':'none'});
+    const tooltip=node('g',{class:'trend-tooltip',visibility:'hidden','pointer-events':'none'});
+    const box=node('rect',{y:5,width:260,height:30,rx:6}),label=node('text',{y:25,'text-anchor':'middle'});tooltip.append(box,label);
+    const readout=el('p','Selecciona una fecha para ver las páginas consultadas.','trend-readout');readout.setAttribute('aria-live','polite');
+    const targets=[];
+    const select=i=>{
+      const row=rows[i],text=row.day+': '+number(row.views)+' páginas consultadas',tx=Math.max(0,Math.min(width-260,x(i)-130));
+      selection.setAttribute('x1',x(i));selection.setAttribute('x2',x(i));selection.setAttribute('visibility','visible');
+      box.setAttribute('x',tx);label.setAttribute('x',tx+130);label.textContent=text;tooltip.setAttribute('visibility','visible');readout.textContent=text;
+      targets.forEach((target,j)=>{target.setAttribute('tabindex',j===i?'0':'-1');target.setAttribute('aria-pressed',String(j===i));});
+    };
+    rows.forEach((row,i)=>{
+      const target=node('rect',{x:x(i)-spacing/2,y:top,width:spacing,height:bottom-top,class:'trend-date-target',role:'button',tabindex:i===0?'0':'-1','aria-pressed':'false','aria-label':row.day+': '+number(row.views)+' páginas consultadas'});
+      target.addEventListener('click',()=>select(i));target.addEventListener('focus',()=>select(i));
+      target.addEventListener('keydown',event=>{
+        if(['Enter',' '].includes(event.key)){event.preventDefault();select(i);return;}
+        const next=event.key==='ArrowRight'?Math.min(rows.length-1,i+1):event.key==='ArrowLeft'?Math.max(0,i-1):event.key==='Home'?0:event.key==='End'?rows.length-1:null;
+        if(next!==null){event.preventDefault();targets[next].focus();}
+      });targets.push(target);svg.append(target);
+    });
+    svg.append(selection,tooltip);
+    const scroll=el('div',undefined,'trend-scroll');scroll.append(svg);host.append(scroll,readout);
     host.append(el('p',basic.period_mode==='all'?'Acumulado desde '+basic.period_start+'. No se compara con un período anterior.':basic.comparison_available?`Días completos: ${number(basic.comparison_current_views)} consultas frente a ${number(basic.previous_views)} en el período anterior. `+(basic.growth_percent===null?'No calculamos porcentajes sobre cero.':`${basic.growth_percent>0?'+':''}${basic.growth_percent} % de cambio.`):'Todavía no hay historial suficiente para comparar dos períodos completos.'));
     const details=el('details');details.append(el('summary','Ver valores por día'));rows.forEach(row=>details.append(el('p',row.day+': '+number(row.views))));host.append(details);
   }

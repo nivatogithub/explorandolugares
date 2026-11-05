@@ -263,7 +263,7 @@
 #contenido .dashboard-bar-value{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
 #contenido .dashboard-bars-note,#contenido .dashboard-caption{font-size:12px;line-height:1.5;color:var(--el-muted);margin:14px 0}
 #contenido .dashboard-empty{padding:22px 16px;border:1px dashed var(--el-border);border-radius:12px;background:var(--el-panel);font-size:14px;line-height:1.6;color:var(--el-muted)}
-#contenido .dashboard-trend-svg{display:block;width:100%;height:auto;max-height:230px;overflow:visible}
+#contenido .dashboard-trend-svg{display:block;width:100%;height:330px;max-height:none;overflow:hidden}
 #contenido .dashboard-trend-svg .trend-area{fill:var(--el-panel)}
 #contenido .dashboard-trend-svg .trend-line{stroke:var(--el-action);stroke-width:3;fill:none;stroke-linejoin:round;stroke-linecap:round}
 #contenido .dashboard-trend-svg .trend-axis{stroke:var(--el-border);stroke-width:1}
@@ -430,3 +430,9 @@
 
 #contenido .dashboard-trend-svg .trend-tooltip rect{fill:#fff;stroke:var(--el-border);stroke-width:1}
 #contenido .dashboard-trend-svg .trend-tooltip text{fill:#000;font-size:12px;font-weight:600}
+
+#contenido .trend-scroll{overflow-x:auto;max-width:100%;padding-bottom:6px}
+#contenido .dashboard-trend-svg .trend-date-target{fill:transparent;cursor:pointer;outline:none}
+#contenido .dashboard-trend-svg .trend-date-target:focus-visible{stroke:var(--el-action);stroke-width:2}
+#contenido .dashboard-trend-svg .trend-selection{stroke:var(--el-action);stroke-width:2}
+#contenido .trend-readout{min-height:1.5em;font-weight:600}
