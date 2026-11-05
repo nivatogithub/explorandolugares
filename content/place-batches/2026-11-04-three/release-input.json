@@ -1,0 +1,2937 @@
+{
+  "schema_version": "dev1-place-content-v1",
+  "environment": "dev1",
+  "places": [
+    {
+      "destination": {
+        "slug": "san-andres",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "San Andrés, Providencia y Santa Catalina",
+        "subregion": "",
+        "latitude": 12.583,
+        "longitude": -81.6976,
+        "translations": {
+          "es": {
+            "display_name": "San Andrés",
+            "eyebrow": "San Andrés, Providencia y Santa Catalina",
+            "headline": "Playas, cayos y cultura raizal",
+            "intro": "San Andrés reúne playas, cayos, manglares y cultura raizal en una isla del Caribe colombiano. Además del paisaje marino, La Loma y San Luis permiten acercarse a la vida local. Es un destino independiente de Providencia y Santa Catalina: sus atractivos y servicios se organizan aquí por separado.",
+            "meta_description": "Descubre San Andrés: Johnny Cay, Rocky Cay, La Loma, Old Point y El Acuario. Consulta atractivos, experiencias y negocios de la isla."
+          },
+          "en": {
+            "display_name": "San Andrés",
+            "eyebrow": "San Andrés, Providencia y Santa Catalina",
+            "headline": "Beaches, cays and Raizal culture",
+            "intro": "San Andrés brings together beaches, cays, mangroves and Raizal culture on a Colombian Caribbean island. Beyond the coast, La Loma and San Luis offer a connection with local life. This is a separate destination from Providencia and Santa Catalina.",
+            "meta_description": "Discover San Andrés: Johnny Cay, Rocky Cay, La Loma, Old Point and El Acuario. Explore island attractions, experiences and local businesses."
+          },
+          "pt-BR": {
+            "display_name": "San Andrés",
+            "eyebrow": "San Andrés, Providencia y Santa Catalina",
+            "headline": "Praias, ilhotas e cultura raizal",
+            "intro": "San Andrés reúne praias, ilhotas, manguezais e cultura raizal em uma ilha do Caribe colombiano. Além da paisagem marinha, La Loma e San Luis aproximam o visitante da vida local. É um destino independente de Providencia e Santa Catalina.",
+            "meta_description": "Conheça San Andrés: Johnny Cay, Rocky Cay, La Loma, Old Point e El Acuario. Explore atrações, experiências e negócios da ilha."
+          }
+        },
+        "history": {
+          "es": [
+            "La cultura raizal tiene una presencia histórica en La Loma y San Luis. La Primera Iglesia Bautista de La Loma forma parte del patrimonio religioso de la isla."
+          ],
+          "en": [
+            "Raizal culture has historical roots in La Loma and San Luis. The First Baptist Church in La Loma is part of the island’s religious heritage."
+          ],
+          "pt-BR": [
+            "A cultura raizal tem raízes históricas em La Loma e San Luis. A Primeira Igreja Batista de La Loma faz parte do patrimônio religioso da ilha."
+          ]
+        },
+        "reasons": {
+          "es": [
+            "Combinar playas y cayos con el paisaje de manglar de Old Point.",
+            "Conocer la arquitectura de La Loma y la cultura raizal de la isla.",
+            "Encontrar opciones locales para organizar recorridos y actividades marinas."
+          ],
+          "en": [
+            "Combine beaches and cays with the mangrove landscape of Old Point.",
+            "Discover the architecture of La Loma and the island’s Raizal culture.",
+            "Find local options for outings and marine activities."
+          ],
+          "pt-BR": [
+            "Combinar praias e ilhotas com a paisagem de manguezais de Old Point.",
+            "Conhecer a arquitetura de La Loma e a cultura raizal da ilha.",
+            "Encontrar opções locais para passeios e atividades no mar."
+          ]
+        },
+        "sources": {
+          "es": [
+            {
+              "section": "places",
+              "label": "Johnny Cay",
+              "url": "https://colombia.travel/es/san-andres-isla/parque-regional-johnny-cay"
+            },
+            {
+              "section": "places",
+              "label": "Rocky Cay",
+              "url": "https://colombia.travel/es/san-andres-isla/san-andres-sol-y-playa"
+            },
+            {
+              "section": "places",
+              "label": "Primera Iglesia Bautista de La Loma",
+              "url": "https://colombia.travel/es/san-andres-island/la-iglesia-bautista"
+            },
+            {
+              "section": "places",
+              "label": "Parque Regional de Mangle Old Point",
+              "url": "https://colombia.travel/es/san-andres-isla/parque-regional-de-mangle-old-point?page=1"
+            },
+            {
+              "section": "places",
+              "label": "El Acuario y Haynes Cay",
+              "url": "https://colombia.travel/es/san-andres-isla"
+            },
+            {
+              "section": "places",
+              "label": "Playa Spratt Bight",
+              "url": "https://empresario.colombia.travel/regiones-colombianas/gran-caribe-colombiano/san-andres-y-providencia"
+            },
+            {
+              "section": "places",
+              "label": "Hoyo Soplador",
+              "url": "https://empresario.colombia.travel/regiones-colombianas/gran-caribe-colombiano/san-andres-y-providencia"
+            }
+          ],
+          "en": [
+            {
+              "section": "places",
+              "label": "Johnny Cay",
+              "url": "https://colombia.travel/es/san-andres-isla/parque-regional-johnny-cay"
+            },
+            {
+              "section": "places",
+              "label": "Rocky Cay",
+              "url": "https://colombia.travel/es/san-andres-isla/san-andres-sol-y-playa"
+            },
+            {
+              "section": "places",
+              "label": "Primera Iglesia Bautista de La Loma",
+              "url": "https://colombia.travel/es/san-andres-island/la-iglesia-bautista"
+            },
+            {
+              "section": "places",
+              "label": "Parque Regional de Mangle Old Point",
+              "url": "https://colombia.travel/es/san-andres-isla/parque-regional-de-mangle-old-point?page=1"
+            },
+            {
+              "section": "places",
+              "label": "El Acuario y Haynes Cay",
+              "url": "https://colombia.travel/es/san-andres-isla"
+            },
+            {
+              "section": "places",
+              "label": "Playa Spratt Bight",
+              "url": "https://empresario.colombia.travel/regiones-colombianas/gran-caribe-colombiano/san-andres-y-providencia"
+            },
+            {
+              "section": "places",
+              "label": "Hoyo Soplador",
+              "url": "https://empresario.colombia.travel/regiones-colombianas/gran-caribe-colombiano/san-andres-y-providencia"
+            }
+          ],
+          "pt-BR": [
+            {
+              "section": "places",
+              "label": "Johnny Cay",
+              "url": "https://colombia.travel/es/san-andres-isla/parque-regional-johnny-cay"
+            },
+            {
+              "section": "places",
+              "label": "Rocky Cay",
+              "url": "https://colombia.travel/es/san-andres-isla/san-andres-sol-y-playa"
+            },
+            {
+              "section": "places",
+              "label": "Primera Iglesia Bautista de La Loma",
+              "url": "https://colombia.travel/es/san-andres-island/la-iglesia-bautista"
+            },
+            {
+              "section": "places",
+              "label": "Parque Regional de Mangle Old Point",
+              "url": "https://colombia.travel/es/san-andres-isla/parque-regional-de-mangle-old-point?page=1"
+            },
+            {
+              "section": "places",
+              "label": "El Acuario y Haynes Cay",
+              "url": "https://colombia.travel/es/san-andres-isla"
+            },
+            {
+              "section": "places",
+              "label": "Playa Spratt Bight",
+              "url": "https://empresario.colombia.travel/regiones-colombianas/gran-caribe-colombiano/san-andres-y-providencia"
+            },
+            {
+              "section": "places",
+              "label": "Hoyo Soplador",
+              "url": "https://empresario.colombia.travel/regiones-colombianas/gran-caribe-colombiano/san-andres-y-providencia"
+            }
+          ]
+        }
+      },
+      "hero_image": {
+        "file": "media/san-andres/san-andres-01.webp",
+        "sha256": "3159f67a79c4d06404e5670fca9d825d43c0aa8a2dabc4d78e343935ab0c1f78",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares",
+        "image_source_url": "",
+        "image_license": "Ilustración editorial para revisión en dev1",
+        "image_license_url": "",
+        "alt": {
+          "es": "San Andrés",
+          "en": "San Andrés",
+          "pt-BR": "San Andrés"
+        },
+        "caption": {
+          "es": "Ilustración editorial",
+          "en": "Editorial illustration",
+          "pt-BR": "Ilustração editorial"
+        }
+      },
+      "places": [
+        {
+          "slug": "johnny-cay",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.59945,
+          "longitude": -81.69034,
+          "translations": {
+            "es": {
+              "name": "Johnny Cay",
+              "description": "Un islote frente a la costa norte de San Andrés, con palmeras, playa y paisaje marino. Es un parque regional: el desembarque depende de las condiciones del mar y de las disposiciones de la autoridad ambiental.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Johnny Cay",
+              "description": "A small island off the northern coast of San Andrés, with palm trees, a beach and marine scenery. It is a regional park; landings depend on sea conditions and environmental authority decisions.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Johnny Cay",
+              "description": "Uma pequena ilha diante da costa norte de San Andrés, com palmeiras, praia e paisagem marinha. É um parque regional: o desembarque depende das condições do mar e das decisões da autoridade ambiental.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/san-andres/san-andres-02.webp",
+            "sha256": "187e8bd0f7f5eb81c952cbee3acea32c4cb3705b93dbdd94a6d64fa9a51c01f5",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Johnny Cay",
+              "en": "Johnny Cay",
+              "pt-BR": "Johnny Cay"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "rocky-cay",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.54157,
+          "longitude": -81.70185,
+          "translations": {
+            "es": {
+              "name": "Rocky Cay",
+              "description": "El pequeño cayo rocoso frente al sector de San Luis permite reconocer otro paisaje de la isla. La playa y el cayo no son el mismo punto; cualquier aproximación al cayo debe considerar las condiciones del mar.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Rocky Cay",
+              "description": "The small rocky cay off San Luis offers a different island landscape. The beach and the cay are separate locations; any approach to the cay must account for sea conditions.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Rocky Cay",
+              "description": "A pequena ilhota rochosa diante do setor de San Luis revela outra paisagem da ilha. A praia e a ilhota são pontos distintos; a aproximação deve considerar as condições do mar.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/san-andres/san-andres-03.webp",
+            "sha256": "009ae181d5dc39bfc03859a36674d8d9bc50e23d5d513d397cfb7d1c81de2392",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Rocky Cay",
+              "en": "Rocky Cay",
+              "pt-BR": "Rocky Cay"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "primera-iglesia-bautista-de-la-loma",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.56191,
+          "longitude": -81.71696,
+          "translations": {
+            "es": {
+              "name": "Primera Iglesia Bautista de La Loma",
+              "description": "El templo de madera y su entorno en La Loma acercan al visitante a la tradición religiosa de la comunidad raizal. Su arquitectura y posición elevada ofrecen una visita distinta de las playas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Primera Iglesia Bautista de La Loma",
+              "description": "The wooden church and its surroundings in La Loma introduce visitors to the religious traditions of the Raizal community. Its architecture and hillside setting offer a different outing from the beaches.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Primera Iglesia Bautista de La Loma",
+              "description": "A igreja de madeira e seu entorno em La Loma apresentam a tradição religiosa da comunidade raizal. A arquitetura e a posição elevada oferecem uma visita diferente das praias.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/san-andres/san-andres-04.webp",
+            "sha256": "d722b2e686ea357054e44ae39863bae4258d23ed244483b66f2a6f0601f08d48",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Primera Iglesia Bautista de La Loma",
+              "en": "Primera Iglesia Bautista de La Loma",
+              "pt-BR": "Primera Iglesia Bautista de La Loma"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "parque-regional-de-mangle-old-point",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.566867,
+          "longitude": -81.705358,
+          "translations": {
+            "es": {
+              "name": "Parque Regional de Mangle Old Point",
+              "description": "Un entorno de manglares en el costado oriental de la isla, en las bahías Hooker y Haynes. Es un lugar para conocer la vegetación costera y observar el paisaje sin alterar sus ecosistemas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Parque Regional de Mangle Old Point",
+              "description": "A mangrove environment on the eastern side of the island, in Hooker and Haynes bays. A place to discover coastal vegetation and observe the landscape without disturbing its ecosystems.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Parque Regional de Mangle Old Point",
+              "description": "Uma área de manguezais no lado oriental da ilha, nas baías Hooker e Haynes. Um lugar para conhecer a vegetação costeira e observar a paisagem sem alterar seus ecossistemas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/san-andres/san-andres-05.webp",
+            "sha256": "e2557d3f67e9de0443bc75afb4c5fe1dbccf6fed68f8da8aab8e12a54ecab32d",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Parque Regional de Mangle Old Point",
+              "en": "Parque Regional de Mangle Old Point",
+              "pt-BR": "Parque Regional de Mangle Old Point"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "el-acuario-y-haynes-cay",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.55266,
+          "longitude": -81.68871,
+          "translations": {
+            "es": {
+              "name": "El Acuario y Haynes Cay",
+              "description": "Rose Cay y Haynes Cay forman un paisaje de cayos y aguas someras conocido por las excursiones marinas. Las zonas de arena y las condiciones de acceso varían: no se presenta como un cruce peatonal garantizado.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "El Acuario y Haynes Cay",
+              "description": "Rose Cay and Haynes Cay form a landscape of cays and shallow waters visited on marine excursions. Sand areas and access conditions vary; a walkable crossing is not guaranteed.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "El Acuario y Haynes Cay",
+              "description": "Rose Cay e Haynes Cay formam uma paisagem de ilhotas e águas rasas visitada em passeios de barco. As áreas de areia e as condições de acesso variam; não há garantia de travessia a pé.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/san-andres/san-andres-06.webp",
+            "sha256": "39ad938e6a085b722ed6d7a86f37b780c7553dfd49403c22c7c27da2e5bed48b",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "El Acuario y Haynes Cay",
+              "en": "El Acuario y Haynes Cay",
+              "pt-BR": "El Acuario y Haynes Cay"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "playa-spratt-bight",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.58706,
+          "longitude": -81.69522,
+          "translations": {
+            "es": {
+              "name": "Playa Spratt Bight",
+              "description": "La playa del centro de San Andrés se extiende junto al paseo peatonal de la avenida Colombia. Es una opción para disfrutar del mar y caminar por la costa sin salir del sector urbano.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Playa Spratt Bight",
+              "description": "The beach in central San Andrés runs beside the pedestrian promenade on Avenida Colombia. It offers seaside walks and time by the water within the urban area.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Playa Spratt Bight",
+              "description": "A praia do centro de San Andrés acompanha o calçadão da Avenida Colombia. É uma opção para aproveitar o mar e caminhar pela costa sem sair da área urbana.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/san-andres/san-andres-08.webp",
+            "sha256": "34eafa9b28f9e4387742b18662e965b1c2ede9f51095f36df6563d10ae3d43fa",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Playa Spratt Bight",
+              "en": "Playa Spratt Bight",
+              "pt-BR": "Playa Spratt Bight"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "hoyo-soplador",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.48136,
+          "longitude": -81.73111,
+          "translations": {
+            "es": {
+              "name": "Hoyo Soplador",
+              "description": "Una abertura en la costa rocosa del sur de la isla por la que el oleaje puede impulsar aire y agua. El efecto depende de las condiciones del mar y no se presenta de forma constante.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Hoyo Soplador",
+              "description": "An opening in the rocky southern coast through which waves can force air and water. The effect depends on sea conditions and is not continuous.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Hoyo Soplador",
+              "description": "Uma abertura na costa rochosa do sul da ilha pela qual as ondas podem impulsionar ar e água. O efeito depende das condições do mar e não é constante.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/san-andres/san-andres-07.webp",
+            "sha256": "39cf6696eb92b38373e3f23ccb678de95b897efa27dc67b80416f9576bdab08f",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Hoyo Soplador",
+              "en": "Hoyo Soplador",
+              "pt-BR": "Hoyo Soplador"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "buceo-de-iniciacion",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Buceo de iniciación",
+              "description": "Una primera aproximación al buceo con instrucción y acompañamiento profesional. El centro determina los requisitos y las condiciones de la actividad.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Introductory scuba diving",
+              "description": "An introduction to scuba diving with professional instruction and supervision. The dive centre determines the requirements and conditions.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Mergulho de iniciação",
+              "description": "Uma introdução ao mergulho com instrução e acompanhamento profissional. O centro define os requisitos e as condições da atividade.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "slug": "excursion-a-johnny-cay",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Excursión a Johnny Cay",
+              "description": "Salida en embarcación para conocer el parque regional. El operador confirma el itinerario y la salida, sujetos al estado del mar y a la apertura del parque.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Boat trip to Johnny Cay",
+              "description": "A boat outing to the regional park. The operator confirms the itinerary and departure, subject to sea conditions and park opening.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Passeio de barco a Johnny Cay",
+              "description": "Passeio de barco para conhecer o parque regional. O operador confirma o itinerário e a saída, conforme as condições do mar e a abertura do parque.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "slug": "vuelta-a-la-isla-en-buggy-o-carrito",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Vuelta a la isla en buggy o carrito",
+              "description": "Recorre la isla por carretera con paradas para conocer diferentes sectores costeros. Hay opciones de alquiler de vehículos abiertos; las condiciones, el vehículo disponible y los requisitos los confirma el prestador.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Island drive in a buggy or golf cart",
+              "description": "Explore the island by road, stopping at different coastal areas. Open vehicles are available for hire; the provider confirms the vehicle, requirements and rental terms.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Volta à ilha de buggy ou carrinho",
+              "description": "Explore a ilha por estrada, com paradas em diferentes setores costeiros. Há veículos abertos para alugar; o prestador confirma o veículo, os requisitos e as condições.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "slug": "kayak-por-los-manglares",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Kayak por los manglares",
+              "description": "Recorrido guiado en kayak para observar el paisaje de manglares de Old Point desde el agua. El prestador confirma recorrido, condiciones y punto de encuentro.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Kayaking through the mangroves",
+              "description": "A guided kayak outing to observe the Old Point mangrove landscape from the water. The provider confirms the route, conditions and meeting point.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Caiaque pelos manguezais",
+              "description": "Passeio guiado de caiaque para observar a paisagem de manguezais de Old Point a partir da água. O prestador confirma percurso, condições e ponto de encontro.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "slug": "parasail-sobre-el-mar",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Parasail sobre el mar",
+              "description": "Una actividad de vuelo con paracaídas remolcado por una embarcación para contemplar la costa desde el aire. Su realización depende del tiempo y de las condiciones operativas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Parasailing above the sea",
+              "description": "A parachute flight towed by a boat offers an aerial view of the coastline. Operation depends on weather and operating conditions.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Parasail sobre o mar",
+              "description": "Voo de paraquedas rebocado por uma embarcação para contemplar a costa do alto. A realização depende do tempo e das condições operacionais.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        }
+      ],
+      "business_package": {
+        "schema_version": "business-import-v1",
+        "destination_slug": "san-andres",
+        "businesses": [
+          {
+            "name": "Hotel Casablanca",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "La Regatta",
+            "category_code": "alimentacion",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://restaurantelaregatta.com/contact/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Blue Life",
+            "category_code": "experiencias",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://bluelifedive.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Sea Watch Caffé",
+            "category_code": "alimentacion",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Restaurante Mahi-Mahi",
+            "category_code": "alimentacion",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Restaurante La Barcarola",
+            "category_code": "alimentacion",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Restaurante Tropical",
+            "category_code": "alimentacion",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.hotelcasablancasanandres.com/es/restaurantes/restaurante-tropical",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Restaurante Bar Casablanca",
+            "category_code": "alimentacion",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Decameron Isleño",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Decameron Los Delfines",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Decameron Marazul",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Decameron Maryland",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Decameron San Luis",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "San Luis Beach House",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.hotelsanluis.com.co/es/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Samawi Hotel",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.samawihotel.com/servicios",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Hotel Bahía Sardina",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.bahiasardina.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Sea Avenue Hotel",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.seaavenuehotel.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Nattivo Collection Hotel",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.nattivocollectionhotel.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Aquamare Hotel",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.hotelaquamare.com/hotel",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Sol Caribe Campo",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.solarhoteles.com/es/hoteles/sol-caribe-campo-en-isla-san-andres/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Hotel Cocoplum Beach",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.cocoplumhotel.com/es/index.html",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Sol Caribe San Andrés",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.solarhoteles.com/es/hoteles/sol-caribe-san-andres-en-isla-san-andres/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Calypso Beach Hotel",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://hotelcalypso.com.co/hotel/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Centro Comercial New Point Plaza",
+            "category_code": "comercio",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.sanandres.gov.co/gobernacion-inaugura-la-feria-empresarial-big-up-san-andres-2025/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Kids Republic · New Point",
+            "category_code": "comercio",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://kidsrepublic.com.co/pages/donde-encontrarnos",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "La Riviera · San Andrés",
+            "category_code": "comercio",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.lariviera.co/copia-de-contacto",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Donde Francesca",
+            "category_code": "alimentacion",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.visitsanandres.co/news/restaurante-donde-francesca",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Capitán Mandy",
+            "category_code": "alimentacion",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.sanandresislas.com.co/restaurante-capitan-mandy-san-andres/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Sharky Dive Shop",
+            "category_code": "experiencias",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.sharkydive.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Sol Caribe Seaflower",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.solarhoteles.com/es/hoteles/sol-caribe-seaflower-en-isla-san-andres/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          }
+        ]
+      },
+      "research_file": "sources/san-andres.json",
+      "research_sha256": "cfebf80ede1910f56c9629428f79efc715824c4d336c29f0c872ff9bea160e04",
+      "local_research": {
+        "municipality_code": "88001",
+        "department_code": "88",
+        "source_commit": "ac1c91e1"
+      }
+    },
+    {
+      "destination": {
+        "slug": "palomino",
+        "destination_type": "other",
+        "country_code": "CO",
+        "department": "La Guajira",
+        "subregion": "",
+        "latitude": 11.24417,
+        "longitude": -73.5625,
+        "translations": {
+          "es": {
+            "display_name": "Palomino",
+            "eyebrow": "La Guajira",
+            "headline": "Palomino: playa y ríos al pie de la Sierra Nevada",
+            "intro": "Palomino es un corregimiento de Dibulla, en La Guajira, entre la costa del Caribe y las estribaciones de la Sierra Nevada de Santa Marta. Su entorno combina playa, ríos y servicios para organizar una estancia de naturaleza. La guía diferencia los sitios para conocer de las actividades que requieren un prestador.",
+            "meta_description": "Palomino es un corregimiento de Dibulla, en La Guajira, entre la costa del Caribe y las estribaciones de la Sierra Nevada de Santa Marta. Su entorno combina playa, ríos y servicios para organizar una estancia de naturaleza. La guía diferenc"
+          },
+          "en": {
+            "display_name": "Palomino",
+            "eyebrow": "La Guajira",
+            "headline": "Palomino: Caribbean coast and rivers below the Sierra Nevada",
+            "intro": "Palomino is a settlement in Dibulla, La Guajira, between the Caribbean coast and the foothills of the Sierra Nevada de Santa Marta. Beaches, rivers and local services provide a base for a nature-focused stay. This guide separates places to visit from activities that require a provider.",
+            "meta_description": "Palomino is a settlement in Dibulla, La Guajira, between the Caribbean coast and the foothills of the Sierra Nevada de Santa Marta. Beaches, rivers and local services provide a base for a nature-focused stay. This guide separates places to "
+          },
+          "pt-BR": {
+            "display_name": "Palomino",
+            "eyebrow": "La Guajira",
+            "headline": "Palomino: praia e rios aos pés da Sierra Nevada",
+            "intro": "Palomino é um povoado do município de Dibulla, em La Guajira, entre a costa do Caribe e o sopé da Sierra Nevada de Santa Marta. Praias, rios e serviços locais permitem organizar uma estadia em contato com a natureza. Este guia diferencia os lugares para conhecer das atividades que exigem um prestador.",
+            "meta_description": "Palomino é um povoado do município de Dibulla, em La Guajira, entre a costa do Caribe e o sopé da Sierra Nevada de Santa Marta. Praias, rios e serviços locais permitem organizar uma estadia em contato com a natureza. Este guia diferencia os"
+          }
+        },
+        "history": {
+          "es": [
+            "El río Palomino marca el límite entre La Guajira y Magdalena. El poblado pertenece a Dibulla y su paisaje costero está ligado a los ríos que descienden de la Sierra Nevada de Santa Marta."
+          ],
+          "en": [
+            "The Palomino River marks the boundary between La Guajira and Magdalena. The settlement belongs to Dibulla, and its coast is shaped by rivers flowing down from the Sierra Nevada de Santa Marta."
+          ],
+          "pt-BR": [
+            "O rio Palomino marca a divisa entre La Guajira e Magdalena. O povoado pertence a Dibulla e sua paisagem costeira é marcada pelos rios que descem da Sierra Nevada de Santa Marta."
+          ]
+        },
+        "reasons": {
+          "es": [
+            "Recorrer la costa y reconocer las desembocaduras de los ríos Palomino y San Salvador.",
+            "Organizar actividades como tubing, surf y observación de aves con oferta local documentada.",
+            "Encontrar alojamientos y restaurantes para una estancia junto al Caribe, sin confundir Palomino con otros sectores de Dibulla."
+          ],
+          "en": [
+            "Explore the coast and the mouths of the Palomino and San Salvador rivers.",
+            "Arrange tubing, surfing or birdwatching with documented local providers.",
+            "Find accommodation and restaurants for a Caribbean stay without confusing Palomino with other parts of Dibulla."
+          ],
+          "pt-BR": [
+            "Percorrer a costa e conhecer as desembocaduras dos rios Palomino e San Salvador.",
+            "Organizar atividades como boia-cross, surfe e observação de aves com oferta local documentada.",
+            "Encontrar hospedagens e restaurantes para uma estadia no Caribe, sem confundir Palomino com outros setores de Dibulla."
+          ]
+        },
+        "sources": {
+          "es": [
+            {
+              "section": "places",
+              "label": "Playa Palomino",
+              "url": "https://mapcarta.com/es/W271537481"
+            },
+            {
+              "section": "places",
+              "label": "Desembocadura del río Palomino",
+              "url": "https://manglar.uninorte.edu.co/bitstream/handle/10584/10947/1118839494.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Desembocadura del río San Salvador",
+              "url": "https://www.alohapalomino.com/es/post/playas-de-palomino-gu%C3%ADa-local-de-mar-r%C3%ADos-y-planes-gratis-2026"
+            }
+          ],
+          "en": [
+            {
+              "section": "places",
+              "label": "Playa Palomino",
+              "url": "https://mapcarta.com/es/W271537481"
+            },
+            {
+              "section": "places",
+              "label": "Desembocadura del río Palomino",
+              "url": "https://manglar.uninorte.edu.co/bitstream/handle/10584/10947/1118839494.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Desembocadura del río San Salvador",
+              "url": "https://www.alohapalomino.com/es/post/playas-de-palomino-gu%C3%ADa-local-de-mar-r%C3%ADos-y-planes-gratis-2026"
+            }
+          ],
+          "pt-BR": [
+            {
+              "section": "places",
+              "label": "Playa Palomino",
+              "url": "https://mapcarta.com/es/W271537481"
+            },
+            {
+              "section": "places",
+              "label": "Desembocadura del río Palomino",
+              "url": "https://manglar.uninorte.edu.co/bitstream/handle/10584/10947/1118839494.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Desembocadura del río San Salvador",
+              "url": "https://www.alohapalomino.com/es/post/playas-de-palomino-gu%C3%ADa-local-de-mar-r%C3%ADos-y-planes-gratis-2026"
+            }
+          ]
+        }
+      },
+      "hero_image": {
+        "file": "media/palomino/palomino-01.webp",
+        "sha256": "2a85067d35351c1f134dbfa901a55bf05bf5fa812fd7abd87f437f0f537ff9e1",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares",
+        "image_source_url": "",
+        "image_license": "Ilustración editorial para revisión en dev1",
+        "image_license_url": "",
+        "alt": {
+          "es": "Palomino",
+          "en": "Palomino",
+          "pt-BR": "Palomino"
+        },
+        "caption": {
+          "es": "Ilustración editorial",
+          "en": "Editorial illustration",
+          "pt-BR": "Ilustração editorial"
+        }
+      },
+      "places": [
+        {
+          "slug": "playa-palomino",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 11.25576,
+          "longitude": -73.55609,
+          "translations": {
+            "es": {
+              "name": "Playa Palomino",
+              "description": "La playa reúne la costa abierta del Caribe y la vegetación del borde costero. Es un lugar para caminar y contemplar el paisaje; la anchura de la arena y las condiciones del mar cambian.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Palomino Beach",
+              "description": "The beach combines open Caribbean coastline with coastal vegetation. It is a place to walk and enjoy the landscape; the width of the sand and sea conditions vary.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Praia de Palomino",
+              "description": "A praia reúne a costa aberta do Caribe e a vegetação do litoral. É um lugar para caminhar e apreciar a paisagem; a largura da faixa de areia e as condições do mar variam.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/palomino/palomino-02.webp",
+            "sha256": "366aaa9718e9f4d6bd77a2747939c9442ce54cb868c13b1f47ce6b26514c1fee",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Playa Palomino",
+              "en": "Palomino Beach",
+              "pt-BR": "Praia de Palomino"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "desembocadura-rio-palomino",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 11.259405,
+          "longitude": -73.571217,
+          "translations": {
+            "es": {
+              "name": "Desembocadura del río Palomino",
+              "description": "Al oeste del poblado, el río llega al Caribe y forma un paisaje distinto al de la playa central. La visita se plantea desde la orilla, sin prometer condiciones de baño ni cruces del río.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Mouth of the Palomino River",
+              "description": "West of the settlement, the river meets the Caribbean, creating a landscape distinct from the central beach. This visit focuses on the riverbank, without promising swimming conditions or river crossings.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Foz do rio Palomino",
+              "description": "A oeste do povoado, o rio chega ao Caribe e forma uma paisagem diferente da praia central. A visita é proposta a partir da margem, sem prometer condições de banho nem travessias do rio.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/palomino/palomino-03.webp",
+            "sha256": "7359ac4cd7b75754cd18b5884536e6661efed2a99aefb4c079dcb28128c597d0",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Desembocadura del río Palomino",
+              "en": "Mouth of the Palomino River",
+              "pt-BR": "Foz do rio Palomino"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "desembocadura-rio-san-salvador",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 11.259336,
+          "longitude": -73.495936,
+          "translations": {
+            "es": {
+              "name": "Desembocadura del río San Salvador",
+              "description": "Hacia el este de Palomino, este encuentro entre río y mar permite conocer otro tramo del paisaje costero. El acceso y el estado del recorrido deben confirmarse localmente; no se propone cruzar el río.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Mouth of the San Salvador River",
+              "description": "East of Palomino, this meeting of river and sea reveals another stretch of the coastal landscape. Check access and route conditions locally; crossing the river is not proposed.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Foz do rio San Salvador",
+              "description": "A leste de Palomino, este encontro entre rio e mar permite conhecer outro trecho da paisagem costeira. O acesso e as condições do percurso devem ser confirmados localmente; não se propõe atravessar o rio.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "slug": "tubing",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Tubing en el río",
+              "description": "Un descenso acompañado en flotador permite recorrer parte del entorno fluvial. Confirma el tramo, el equipo, las condiciones del agua y el punto de encuentro con el prestador.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "River tubing",
+              "description": "A guided float trip explores part of the river environment. Confirm the route, equipment, water conditions and meeting point with the provider.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Boia-cross no rio",
+              "description": "Uma descida acompanhada em boia permite percorrer parte do ambiente fluvial. Confirme o trecho, os equipamentos, as condições da água e o ponto de encontro com o prestador.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "slug": "surf",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Clases de surf",
+              "description": "Una clase permite acercarse al surf con acompañamiento y equipo acordados con una escuela. La actividad depende del oleaje y de las condiciones del día.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Surf lessons",
+              "description": "A lesson introduces surfing with guidance and equipment agreed with a school. The activity depends on the waves and conditions on the day.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Aulas de surfe",
+              "description": "Uma aula permite conhecer o surfe com acompanhamento e equipamentos combinados com uma escola. A atividade depende das ondas e das condições do dia.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "slug": "observacion-de-aves",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Observación de aves",
+              "description": "Una caminata guiada invita a observar las aves del entorno de Palomino. El recorrido y la duración dependen de la oferta contratada; no se garantiza avistar especies concretas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Birdwatching",
+              "description": "A guided walk offers a chance to observe birds around Palomino. The route and duration depend on the booked activity; sightings of particular species are not guaranteed.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Observação de aves",
+              "description": "Uma caminhada guiada convida a observar as aves dos arredores de Palomino. O percurso e a duração dependem da atividade contratada; não há garantia de avistar espécies específicas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        }
+      ],
+      "business_package": {
+        "schema_version": "business-import-v1",
+        "destination_slug": "palomino",
+        "businesses": [
+          {
+            "name": "Palomino Sunrise",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://palominosunrise.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Üüttaaka Eco-Hotel",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://uuttaaka.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Naio Hotel & Villas",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.naiohotels.com/es/gastronomia/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "The Tiki Hut",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://tikihutpalomino.co/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "El Zoo Hostel Palomino",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://elzoohostelpalomino.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Finca Escondida",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://fincaescondida.com/hotel/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Aité Eco Resort",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.aite.com.co/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Prima Luna",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://primalunapalomino.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "La Casa del Pavo Real",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://es.casadelpavoreal.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Dreamer Palomino",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.thedreamer.com/palomino",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Casa Aloha Palomino",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.alohapalomino.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Coconuco Beach Resort",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.coconucobeach.co/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "One Santuario Natural",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.santuario.one/en/home",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Casa Colibrí Palomino",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.casacolibri.com.co/?lang=pt",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Chiniü Hotel",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://hotelchiniu.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Holss",
+            "category_code": "alimentacion",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://holsspalomino.wixsite.com/my-site",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          }
+        ]
+      },
+      "research_file": "sources/palomino.json",
+      "research_sha256": "02bf3d9daf639ca87bd9a174a31e1f5700918963ad4b24a355eb3a2210c002c2",
+      "local_research": {
+        "municipality_code": "44090",
+        "department_code": "44",
+        "source_commit": "05121bd6"
+      }
+    },
+    {
+      "destination": {
+        "slug": "uribia",
+        "destination_type": "municipality",
+        "country_code": "CO",
+        "department": "La Guajira",
+        "subregion": "",
+        "latitude": 11.7149,
+        "longitude": -72.2658,
+        "translations": {
+          "es": {
+            "display_name": "Uribia · Alta Guajira",
+            "eyebrow": "La Guajira",
+            "headline": "Uribia: Cabo de la Vela, Punta Gallinas y Macuira",
+            "intro": "Uribia reúne paisajes de costa y desierto, dunas junto al mar y los bosques de la serranía de Macuira. Esta guía organiza la visita en tres zonas: Cabo de la Vela, Punta Gallinas y Nazareth–Macuira. Son sectores separados que requieren planear traslados y coordinar recorridos con anfitriones locales.",
+            "meta_description": "Descubre Uribia por zonas: playas del Cabo de la Vela, dunas de Taroa, Punta Gallinas y Macuira. Ideas para conocer y organizar tu recorrido."
+          },
+          "en": {
+            "display_name": "Uribia · Alta Guajira",
+            "eyebrow": "La Guajira",
+            "headline": "Uribia: Cabo de la Vela, Punta Gallinas and Macuira",
+            "intro": "Uribia brings together desert coastlines, dunes beside the sea and the forests of the Macuira range. This guide follows three areas: Cabo de la Vela, Punta Gallinas and Nazareth–Macuira. They are separate areas, so plan transfers and arrange your journey with local hosts.",
+            "meta_description": "Discover Uribia by area: Cabo de la Vela beaches, Taroa dunes, Punta Gallinas and Macuira. Find places to explore and plan your journey."
+          },
+          "pt-BR": {
+            "display_name": "Uribia · Alta Guajira",
+            "eyebrow": "La Guajira",
+            "headline": "Uribia: Cabo de la Vela, Punta Gallinas e Macuira",
+            "intro": "Uribia reúne paisagens de litoral e deserto, dunas à beira-mar e as florestas da serra de Macuira. Este guia organiza a visita em três regiões: Cabo de la Vela, Punta Gallinas e Nazareth–Macuira. São áreas separadas que exigem planejamento dos deslocamentos e contato com anfitriões locais.",
+            "meta_description": "Conheça Uribia por regiões: praias do Cabo de la Vela, dunas de Taroa, Punta Gallinas e Macuira. Ideias para explorar e organizar sua viagem."
+          }
+        },
+        "history": {
+          "es": [
+            "Uribia es un territorio de cultura wayuu. Sus paisajes y poblaciones forman parte de una vida comunitaria que continúa más allá de las rutas turísticas. Acércate a sus historias con anfitriones locales y pide permiso antes de fotografiar personas o espacios comunitarios."
+          ],
+          "en": [
+            "Uribia is a territory of Wayuu culture. Its landscapes and settlements are part of a community life that extends beyond tourist routes. Learn about local stories with your hosts and ask permission before photographing people or community spaces."
+          ],
+          "pt-BR": [
+            "Uribia é um território de cultura wayuu. Suas paisagens e povoações fazem parte de uma vida comunitária que vai além dos roteiros turísticos. Conheça as histórias com anfitriões locais e peça autorização antes de fotografar pessoas ou espaços comunitários."
+          ]
+        },
+        "reasons": {
+          "es": [
+            "Conocer los paisajes del Cabo de la Vela y Punta Gallinas sin confundir sus playas y faros.",
+            "Descubrir el contraste entre el desierto y los bosques de Macuira.",
+            "Organizar recorridos por territorio wayuu con servicios y acompañamiento local."
+          ],
+          "en": [
+            "Explore the distinct beaches and lighthouses of Cabo de la Vela and Punta Gallinas.",
+            "Discover the contrast between the desert and the forests of Macuira.",
+            "Arrange journeys through Wayuu territory with local services and guidance."
+          ],
+          "pt-BR": [
+            "Conhecer as diferentes praias e os faróis do Cabo de la Vela e de Punta Gallinas.",
+            "Descobrir o contraste entre o deserto e as florestas de Macuira.",
+            "Organizar passeios pelo território wayuu com serviços e acompanhamento local."
+          ]
+        },
+        "sources": {
+          "es": [
+            {
+              "section": "places",
+              "label": "Pilón de Azúcar",
+              "url": "https://colombia.travel/es/riohacha/sube-al-pilon-de-azucar"
+            },
+            {
+              "section": "places",
+              "label": "Playa El Cabo",
+              "url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela"
+            },
+            {
+              "section": "places",
+              "label": "Faro del Cabo de la Vela",
+              "url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela"
+            },
+            {
+              "section": "places",
+              "label": "Playa Ojo de Agua",
+              "url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela"
+            },
+            {
+              "section": "places",
+              "label": "Mirador de la Tortuga",
+              "url": "https://expedicioneswalekett.arteyviaje.com/tour/expedicion-origen/"
+            },
+            {
+              "section": "places",
+              "label": "Playa Arcoíris",
+              "url": "https://colombia.travel/zh/node/4338"
+            },
+            {
+              "section": "places",
+              "label": "Dunas de Taroa",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Faro de Punta Gallinas",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Bahía Hondita",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Mirador de Casares",
+              "url": "https://www.solguajirotours.com/product-page/tour-punta-gallinas-cabo-de-la-vela-2-dias-y-una-noche"
+            },
+            {
+              "section": "places",
+              "label": "Punta Aguja",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Playa La Boquita",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Parque Nacional Natural Macuira",
+              "url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-macuira/"
+            },
+            {
+              "section": "places",
+              "label": "Parque eólico Jepírachi",
+              "url": "https://www.epm.com.co/institucional/proyectos/proyecto-de-desmontaje-del-parque-eolico-jepirachi/"
+            }
+          ],
+          "en": [
+            {
+              "section": "places",
+              "label": "Pilón de Azúcar",
+              "url": "https://colombia.travel/es/riohacha/sube-al-pilon-de-azucar"
+            },
+            {
+              "section": "places",
+              "label": "Playa El Cabo",
+              "url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela"
+            },
+            {
+              "section": "places",
+              "label": "Faro del Cabo de la Vela",
+              "url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela"
+            },
+            {
+              "section": "places",
+              "label": "Playa Ojo de Agua",
+              "url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela"
+            },
+            {
+              "section": "places",
+              "label": "Mirador de la Tortuga",
+              "url": "https://expedicioneswalekett.arteyviaje.com/tour/expedicion-origen/"
+            },
+            {
+              "section": "places",
+              "label": "Playa Arcoíris",
+              "url": "https://colombia.travel/zh/node/4338"
+            },
+            {
+              "section": "places",
+              "label": "Dunas de Taroa",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Faro de Punta Gallinas",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Bahía Hondita",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Mirador de Casares",
+              "url": "https://www.solguajirotours.com/product-page/tour-punta-gallinas-cabo-de-la-vela-2-dias-y-una-noche"
+            },
+            {
+              "section": "places",
+              "label": "Punta Aguja",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Playa La Boquita",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Parque Nacional Natural Macuira",
+              "url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-macuira/"
+            },
+            {
+              "section": "places",
+              "label": "Parque eólico Jepírachi",
+              "url": "https://www.epm.com.co/institucional/proyectos/proyecto-de-desmontaje-del-parque-eolico-jepirachi/"
+            }
+          ],
+          "pt-BR": [
+            {
+              "section": "places",
+              "label": "Pilón de Azúcar",
+              "url": "https://colombia.travel/es/riohacha/sube-al-pilon-de-azucar"
+            },
+            {
+              "section": "places",
+              "label": "Playa El Cabo",
+              "url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela"
+            },
+            {
+              "section": "places",
+              "label": "Faro del Cabo de la Vela",
+              "url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela"
+            },
+            {
+              "section": "places",
+              "label": "Playa Ojo de Agua",
+              "url": "https://colombia.travel/es/riohacha/conoce-el-cabo-de-la-vela"
+            },
+            {
+              "section": "places",
+              "label": "Mirador de la Tortuga",
+              "url": "https://expedicioneswalekett.arteyviaje.com/tour/expedicion-origen/"
+            },
+            {
+              "section": "places",
+              "label": "Playa Arcoíris",
+              "url": "https://colombia.travel/zh/node/4338"
+            },
+            {
+              "section": "places",
+              "label": "Dunas de Taroa",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Faro de Punta Gallinas",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Bahía Hondita",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Mirador de Casares",
+              "url": "https://www.solguajirotours.com/product-page/tour-punta-gallinas-cabo-de-la-vela-2-dias-y-una-noche"
+            },
+            {
+              "section": "places",
+              "label": "Punta Aguja",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Playa La Boquita",
+              "url": "https://www.uribia-laguajira.gov.co/Conectividad/RendiciondeCuentas/informe%20de%20gesti%C3%B3n%20-%20Rendici%C3%B3n%20de%20Cuentas%202018.pdf"
+            },
+            {
+              "section": "places",
+              "label": "Parque Nacional Natural Macuira",
+              "url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-macuira/"
+            },
+            {
+              "section": "places",
+              "label": "Parque eólico Jepírachi",
+              "url": "https://www.epm.com.co/institucional/proyectos/proyecto-de-desmontaje-del-parque-eolico-jepirachi/"
+            }
+          ]
+        }
+      },
+      "hero_image": {
+        "file": "media/uribia/10-1200.webp",
+        "sha256": "d8776702c2bd9ed5df560ede5ed09981caa43ef918530c1c288bec12f15009c6",
+        "image_origin": "ai_generated",
+        "image_creator": "Explorando Lugares",
+        "image_source_url": "https://comisionfilmicacolombia.com/locacion/plaza-principal-uribia/",
+        "image_license": "Ilustración editorial para revisión en dev1",
+        "image_license_url": "",
+        "alt": {
+          "es": "Uribia · Alta Guajira",
+          "en": "Uribia · Alta Guajira",
+          "pt-BR": "Uribia · Alta Guajira"
+        },
+        "caption": {
+          "es": "Ilustración editorial",
+          "en": "Editorial illustration",
+          "pt-BR": "Ilustração editorial"
+        }
+      },
+      "places": [
+        {
+          "slug": "pilon-de-azucar",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.23819,
+          "longitude": -72.14272,
+          "translations": {
+            "es": {
+              "name": "Pilón de Azúcar",
+              "description": "El cerro rocoso ofrece una vista del encuentro entre el desierto y el Caribe. La playa cercana complementa la visita, pero la cima y la playa son puntos distintos.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Pilón de Azúcar",
+              "description": "This rocky hill offers views of the desert meeting the Caribbean. The nearby beach complements the visit, but the summit and beach are separate points.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Pilón de Azúcar",
+              "description": "Este morro rochoso oferece uma vista do encontro entre o deserto e o Caribe. A praia próxima complementa a visita, mas o cume e a praia são pontos diferentes.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/uribia/04-1200.webp",
+            "sha256": "a3d12f9533f19954236edfd399e04b2f97d1dad5c1973becf1c25b7d3a1e5b5b",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "https://guajiracabodelavelanr.blogspot.com/",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Pilón de Azúcar",
+              "en": "Pilón de Azúcar",
+              "pt-BR": "Pilón de Azúcar"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "playa-el-cabo",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.20195,
+          "longitude": -72.14927,
+          "translations": {
+            "es": {
+              "name": "Playa El Cabo",
+              "description": "La franja costera junto al poblado reúne el paisaje de la bahía y la vida local. Es también el entorno donde operan escuelas de kitesurf; las actividades dependen del viento y de las condiciones del agua.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "El Cabo Beach",
+              "description": "The coast beside the village brings together bay views and local life. Kite schools operate nearby; activities depend on wind and water conditions.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Praia El Cabo",
+              "description": "A faixa costeira junto ao povoado reúne a paisagem da baía e a vida local. Há escolas de kitesurf nas proximidades; as atividades dependem do vento e das condições da água.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "slug": "faro-cabo-de-la-vela",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.20964,
+          "longitude": -72.17923,
+          "translations": {
+            "es": {
+              "name": "Faro del Cabo de la Vela",
+              "description": "El faro y su entorno elevado son un punto para contemplar la costa y el atardecer. No debe confundirse con el faro de Punta Gallinas, que pertenece a otro sector de la Alta Guajira.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Cabo de la Vela Lighthouse",
+              "description": "The lighthouse and its elevated surroundings offer coastal and sunset views. It is a different site from the lighthouse at Punta Gallinas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Farol do Cabo de la Vela",
+              "description": "O farol e seu entorno elevado permitem contemplar o litoral e o pôr do sol. É um lugar diferente do farol de Punta Gallinas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/uribia/02-1200.webp",
+            "sha256": "95df8ecdc8626602cdbc8c8afa42c4a5f41992b9929aafe3cdd6ec0451cd206d",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "https://www.minube.com/rincon/el-faro-del-cabo-de-la-vela-a528351",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Faro del Cabo de la Vela",
+              "en": "Cabo de la Vela Lighthouse",
+              "pt-BR": "Farol do Cabo de la Vela"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "ojo-de-agua",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.21383,
+          "longitude": -72.1776,
+          "translations": {
+            "es": {
+              "name": "Playa Ojo de Agua",
+              "description": "Un sector de playa entre bordes rocosos, cercano al faro y al mirador de la Tortuga. Su interés incluye el paisaje costero; la ficha no garantiza condiciones de baño.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Ojo de Agua Beach",
+              "description": "A beach framed by rocky shores near the lighthouse and Tortuga viewpoint. Come for the coastal scenery; check local conditions before considering a swim.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Praia Ojo de Agua",
+              "description": "Uma praia entre bordas rochosas, perto do farol e do mirante da Tortuga. O destaque é a paisagem costeira; consulte as condições locais antes de entrar na água.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/uribia/03-1200.webp",
+            "sha256": "d80a3c497dd1d22da7c0b6ce97c8f33c621b06852ff463f864ec12b56402fb57",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "https://www.civitatis.com/es/riohacha/excursion-playas-cabo-vela/",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Playa Ojo de Agua",
+              "en": "Ojo de Agua Beach",
+              "pt-BR": "Praia Ojo de Agua"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "dunas-de-taroa",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.43674,
+          "longitude": -71.60952,
+          "translations": {
+            "es": {
+              "name": "Dunas de Taroa",
+              "description": "Las dunas se encuentran con el mar en este sector de Punta Gallinas. La visita permite apreciar el contraste entre arena y costa.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Taroa Dunes",
+              "description": "Dunes meet the sea in this part of Punta Gallinas. The visit reveals the contrast between sand and coastline.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Dunas de Taroa",
+              "description": "As dunas encontram o mar neste setor de Punta Gallinas. A visita revela o contraste entre a areia e o litoral.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/uribia/09-1200.webp",
+            "sha256": "4f232f0e7c46781f214fcf309d43673cfa655b68a63fa5336d78fddb1fe74f66",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "https://www.radionacional.co/cultura/turismo/turismo-en-la-guajira-planes-y-lugares-por-visitar",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Dunas de Taroa",
+              "en": "Taroa Dunes",
+              "pt-BR": "Dunas de Taroa"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "faro-punta-gallinas",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.4575,
+          "longitude": -71.668,
+          "translations": {
+            "es": {
+              "name": "Faro de Punta Gallinas",
+              "description": "El faro señala un extremo de la costa de Punta Gallinas; es distinto al faro del Cabo de la Vela.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Punta Gallinas Lighthouse",
+              "description": "The lighthouse marks an outer point of the Punta Gallinas coast. It is separate from the Cabo de la Vela lighthouse.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Farol de Punta Gallinas",
+              "description": "O farol marca uma extremidade da costa de Punta Gallinas. É diferente do farol do Cabo de la Vela.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/uribia/01-1200.webp",
+            "sha256": "d69ad9b3eddd262607f020d02c3a81ad6498f2d78d866dc66906009ce6b85af3",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "https://qualla.com/punta-gallinas/",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Faro de Punta Gallinas",
+              "en": "Punta Gallinas Lighthouse",
+              "pt-BR": "Farol de Punta Gallinas"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "bahia-hondita",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.39969,
+          "longitude": -71.69925,
+          "translations": {
+            "es": {
+              "name": "Bahía Hondita",
+              "description": "Un paisaje de bahía que puede conocerse mediante recorridos locales. El punto cartográfico identifica el área, no un embarcadero.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Bahía Hondita",
+              "description": "A bay landscape explored on locally arranged outings. Plan your access with local hosts rather than treating the mapped bay center as a landing point.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Bahía Hondita",
+              "description": "Uma paisagem de baía que pode ser conhecida em passeios organizados localmente. Combine o acesso com anfitriões locais; o centro da baía no mapa não é um ponto de desembarque.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/uribia/06-1200.webp",
+            "sha256": "89dab6000bc7e85bdfe60b2ce9c9cfa15f33dac01e718cf257adaef7d8f72aae",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "https://www.unchartedcolombia.com/es/adventures/la-guajira-where-the-desert-meets-the-sea/",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Bahía Hondita",
+              "en": "Bahía Hondita",
+              "pt-BR": "Bahía Hondita"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "parque-nacional-natural-macuira",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.12889,
+          "longitude": -71.34056,
+          "translations": {
+            "es": {
+              "name": "Parque Nacional Natural Macuira",
+              "description": "La serranía conserva bosques en el paisaje árido de la Alta Guajira. La visita se organiza por recorridos autorizados con acompañamiento local; no supone acceso libre a todo el parque.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Macuira National Natural Park",
+              "description": "The mountain range shelters forests within the arid landscape of Alta Guajira. Visits follow authorized routes with local guidance; the whole park is not open to unrestricted access.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Parque Nacional Natural Macuira",
+              "description": "A serra conserva florestas na paisagem árida da Alta Guajira. As visitas seguem percursos autorizados com acompanhamento local; o parque não oferece acesso livre a todas as áreas.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/uribia/05-1200.webp",
+            "sha256": "6709299fe8d672775e5df0b685f4168435448bc17b41c3c8dc2b8416e88537b2",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "https://diariolaguajira.com.co/es/galleries/la-guajira",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Parque Nacional Natural Macuira",
+              "en": "Macuira National Natural Park",
+              "pt-BR": "Parque Nacional Natural Macuira"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "jepirachi",
+          "type": "place",
+          "publication_status": "published",
+          "latitude": 12.22654,
+          "longitude": -72.03602,
+          "translations": {
+            "es": {
+              "name": "Parque eólico Jepírachi",
+              "description": "Un referente de la historia de la energía eólica en Colombia, en el paisaje de la Alta Guajira. Dejó de generar en octubre de 2023 y EPM documenta su proceso de desmontaje. No se ofrece acceso al interior; confirma las condiciones del sector antes de incluirlo en tu recorrido.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Jepírachi Wind Farm",
+              "description": "A landmark in the history of wind power in Colombia, set in the Alta Guajira landscape. Generation ended in October 2023, and EPM documents its dismantling process. Interior access is not offered; check conditions in the area before including it in your journey.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Parque eólico Jepírachi",
+              "description": "Um marco da história da energia eólica na Colômbia, na paisagem da Alta Guajira. A geração terminou em outubro de 2023, e a EPM documenta seu processo de desmontagem. Não é oferecido acesso ao interior; confirme as condições da região antes de incluí-lo no roteiro.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/uribia/07-1200.webp",
+            "sha256": "dd2bba5736383eaa7236cd9e283128019b18265f8313dfc465f9264c2c6de963",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "https://resourcegovernance.org/articles/colombia-inclusion-and-upgraded-governance-are-keys-petros-energy-transition-ambition",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Parque eólico Jepírachi",
+              "en": "Jepírachi Wind Farm",
+              "pt-BR": "Parque eólico Jepírachi"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
+          }
+        },
+        {
+          "slug": "clase-kitesurf",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Clase de kitesurf",
+              "description": "Aprender el manejo de la cometa y la tabla con acompañamiento de una escuela. El nivel, la duración y la salida se acuerdan según la experiencia del visitante y las condiciones del viento.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Kitesurfing lesson",
+              "description": "Learn to handle a kite and board with an instructor. The school agrees the level, duration and session according to your experience and wind conditions.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Aula de kitesurf",
+              "description": "Aprenda a manejar a pipa e a prancha com acompanhamento de uma escola. O nível, a duração e a saída são combinados conforme sua experiência e as condições do vento.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "slug": "clase-wingfoil",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Clase de wingfoil",
+              "description": "Una aproximación a la navegación con ala y tabla bajo instrucción. La escuela determina los requisitos y las condiciones de la actividad.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Wingfoil lesson",
+              "description": "An introduction to riding with a wing and board under instruction. The school determines the requirements and suitable activity conditions.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Aula de wingfoil",
+              "description": "Uma introdução à navegação com asa e prancha sob orientação. A escola define os requisitos e as condições adequadas para a atividade.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        },
+        {
+          "slug": "recorrido-alta-guajira",
+          "type": "experience",
+          "publication_status": "published",
+          "latitude": null,
+          "longitude": null,
+          "translations": {
+            "es": {
+              "name": "Recorrido acompañado por la Alta Guajira",
+              "description": "Recorrido organizado por sectores de Cabo de la Vela y Punta Gallinas, con traslados coordinados y paradas definidas por el itinerario contratado.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Guided Alta Guajira journey",
+              "description": "An organized journey through Cabo de la Vela and Punta Gallinas, with coordinated transfers and stops defined by the booked itinerary.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Passeio acompanhado pela Alta Guajira",
+              "description": "Um roteiro organizado por Cabo de la Vela e Punta Gallinas, com deslocamentos coordenados e paradas definidas pelo itinerário contratado.",
+              "map_url": "",
+              "external_url": "",
+              "external_label": ""
+            }
+          }
+        }
+      ],
+      "business_package": {
+        "schema_version": "business-import-v1",
+        "destination_slug": "uribia",
+        "businesses": [
+          {
+            "name": "Cabo Kite Center",
+            "category_code": "experiencias",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.cabokitecenter.com/kite",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "TAWI Kite Center and Hostel",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://tawikitecabo.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Paradise Kite School",
+            "category_code": "experiencias",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://paradisekitecabo.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Hospedaje y Restaurante Luzmila",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://linktr.ee/HyRLuzMila",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Analauli",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Villa Shaymar",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Ka’i Kashii",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Salaima",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Arantxa",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Amistad",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Kayuusipaa",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Sumaiwajat",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Shipi’ia Girnu",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Sau Ipa",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Reflejos del Sol",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Ranchería Utta",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://rancheriautta.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Apalanchii",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://www.apalanchiihospedajeyrestaurant.com/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Playa Bonita",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Mar y Sol",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Mar Abierto",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "La Ballena Azul",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Su’útpa Kashii",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Jarrinapi",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://restauranteyhosped.wixsite.com/jarrinapi",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Rancho el Coral",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Doña Mery",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Damikeisi",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://cabodelavela.org/hospedajes/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Posada Urraichipa",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://posadasrurales.co/inicio/517-posada-urraichipa-nazareth-alta-guajira-guajira.html",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          },
+          {
+            "name": "Hotel Villa María",
+            "category_code": "hospedaje",
+            "information_status": "PUBLICO",
+            "summary": "",
+            "description": "",
+            "sources": [
+              {
+                "url": "https://es.hoteles.com/ho692536352/hotel-villa-maria-uribia-colombia/",
+                "checked_at": "2026-11-04",
+                "note": "Fuente de la ficha pública."
+              }
+            ]
+          }
+        ]
+      },
+      "research_file": "sources/uribia.json",
+      "research_sha256": "944cf1fb1b7a4b675de95b0f49529dd094631fc92f8161d8b33fa8c6f5eed2b1",
+      "local_research": {
+        "municipality_code": "44847",
+        "department_code": "44",
+        "source_commit": "dc99b041"
+      }
+    }
+  ]
+}

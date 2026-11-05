@@ -1,0 +1,845 @@
+{
+  "schema_version": 1,
+  "slug": "palomino",
+  "name": "Palomino",
+  "country_code": "CO",
+  "department_code": "44",
+  "department_name": "La Guajira",
+  "municipality_code": "44090",
+  "municipality_name": "Dibulla",
+  "type": "corregimiento",
+  "status": "editorial_prepared_not_published",
+  "public": false,
+  "geolocation": {
+    "latitude": 11.24417,
+    "longitude": -73.5625,
+    "source_url": "https://en.wikipedia.org/wiki/Palomino,_Colombia",
+    "point_kind": "populated_place_reference_not_entry",
+    "checked_at": "2026-11-04",
+    "public_map_url": null
+  },
+  "intro_draft_es": "Palomino es un corregimiento de Dibulla, en La Guajira, entre la costa del Caribe y las estribaciones de la Sierra Nevada de Santa Marta. Su entorno combina playa, ríos y servicios para organizar una estancia de naturaleza. La guía diferencia los sitios para conocer de las actividades que requieren un prestador.",
+  "why_visit_es": [
+    "Recorrer la costa y reconocer las desembocaduras de los ríos Palomino y San Salvador.",
+    "Organizar actividades como tubing, surf y observación de aves con oferta local documentada.",
+    "Encontrar alojamientos y restaurantes para una estancia junto al Caribe, sin confundir Palomino con otros sectores de Dibulla."
+  ],
+  "attractions": [
+    {
+      "slug": "playa-palomino",
+      "name": "Playa Palomino",
+      "description_es": "La playa reúne la costa abierta del Caribe y la vegetación del borde costero. Es un lugar para caminar y contemplar el paisaje; la anchura de la arena y las condiciones del mar cambian.",
+      "source_url": "https://mapcarta.com/es/W271537481",
+      "geolocation": {
+        "latitude": 11.25576,
+        "longitude": -73.55609,
+        "source_url": "https://mapcarta.com/es/W271537481",
+        "point_kind": "named_beach_area_not_access",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-01",
+      "image_status": "reference_pending",
+      "approval": null
+    },
+    {
+      "slug": "desembocadura-rio-palomino",
+      "name": "Desembocadura del río Palomino",
+      "description_es": "Al oeste del poblado, el río llega al Caribe y forma un paisaje distinto al de la playa central. La visita se plantea desde la orilla, sin prometer condiciones de baño ni cruces del río.",
+      "source_url": "https://manglar.uninorte.edu.co/bitstream/handle/10584/10947/1118839494.pdf",
+      "geolocation": {
+        "latitude": 11.259405,
+        "longitude": -73.571217,
+        "source_url": "https://diposit.ub.edu/server/api/core/bitstreams/355634f8-e5cb-4f8b-b153-aa8b83c93d24/content",
+        "point_kind": "documented_river_mouth_reference_section_4_1_1",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-02",
+      "image_status": "reference_pending",
+      "approval": null
+    },
+    {
+      "slug": "desembocadura-rio-san-salvador",
+      "name": "Desembocadura del río San Salvador",
+      "description_es": "Hacia el este de Palomino, este encuentro entre río y mar permite conocer otro tramo del paisaje costero. El acceso y el estado del recorrido deben confirmarse localmente; no se propone cruzar el río.",
+      "source_url": "https://www.alohapalomino.com/es/post/playas-de-palomino-gu%C3%ADa-local-de-mar-r%C3%ADos-y-planes-gratis-2026",
+      "geolocation": {
+        "latitude": 11.259336,
+        "longitude": -73.495936,
+        "source_url": "https://diposit.ub.edu/server/api/core/bitstreams/355634f8-e5cb-4f8b-b153-aa8b83c93d24/content",
+        "point_kind": "documented_river_mouth_reference_section_4_1_1",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-03",
+      "image_status": "reference_pending",
+      "approval": null
+    }
+  ],
+  "experiences": [
+    {
+      "slug": "tubing",
+      "name": "Tubing en el río",
+      "description_es": "Un descenso acompañado en flotador permite recorrer parte del entorno fluvial. Confirma el tramo, el equipo, las condiciones del agua y el punto de encuentro con el prestador.",
+      "provider_evidence": [
+        {
+          "provider": "Aité Eco Resort",
+          "offer_url": "https://www.aite.com.co/aventura",
+          "checked_at": "2026-11-04"
+        }
+      ],
+      "geolocation": null,
+      "location_note": "Punto de encuentro y recorrido variables: confirmar con el prestador.",
+      "publication_status": "editorial_review",
+      "public_provider_promotion": false
+    },
+    {
+      "slug": "surf",
+      "name": "Clases de surf",
+      "description_es": "Una clase permite acercarse al surf con acompañamiento y equipo acordados con una escuela. La actividad depende del oleaje y de las condiciones del día.",
+      "provider_evidence": [
+        {
+          "provider": "Aité Eco Resort",
+          "offer_url": "https://www.aite.com.co/aventura",
+          "checked_at": "2026-11-04"
+        }
+      ],
+      "geolocation": null,
+      "location_note": "Punto de encuentro y recorrido variables: confirmar con el prestador.",
+      "publication_status": "editorial_review",
+      "public_provider_promotion": false
+    },
+    {
+      "slug": "observacion-de-aves",
+      "name": "Observación de aves",
+      "description_es": "Una caminata guiada invita a observar las aves del entorno de Palomino. El recorrido y la duración dependen de la oferta contratada; no se garantiza avistar especies concretas.",
+      "provider_evidence": [
+        {
+          "provider": "Aité Eco Resort",
+          "offer_url": "https://www.aite.com.co/aventura",
+          "checked_at": "2026-11-04"
+        }
+      ],
+      "geolocation": null,
+      "location_note": "Punto de encuentro y recorrido variables: confirmar con el prestador.",
+      "publication_status": "editorial_review",
+      "public_provider_promotion": false
+    }
+  ],
+  "territorial_exclusions": [
+    "Parque Tayrona y Quebrada Valencia no se registran como atractivos de Palomino.",
+    "Ciudad Perdida no es un atractivo dentro de Palomino.",
+    "No presentar poblados o espacios indígenas sagrados como visitas de acceso libre.",
+    "No incorporar atractivos de Dibulla cabecera o Mingueo por compartir municipio."
+  ],
+  "businesses": [
+    {
+      "slug": "palomino-sunrise",
+      "name": "Palomino Sunrise",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://palominosunrise.com/",
+      "source_url": "https://palominosunrise.com/",
+      "evidence_type": "own_website",
+      "address": "Carrera 3 #3-534",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Palomino Sunrise",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Palomino Sunrise",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Palomino Sunrise",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "uuttaaka-eco-hotel",
+      "name": "Üüttaaka Eco-Hotel",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://uuttaaka.com/",
+      "source_url": "https://uuttaaka.com/",
+      "evidence_type": "own_website",
+      "address": "Km 5+300 vía Palomino–Dibulla",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Üüttaaka Eco-Hotel",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Üüttaaka Eco-Hotel",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Üüttaaka Eco-Hotel",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "naio-hotel-villas",
+      "name": "Naio Hotel & Villas",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://www.naiohotels.com/es/gastronomia/",
+      "source_url": "https://www.naiohotels.com/es/gastronomia/",
+      "evidence_type": "own_website",
+      "address": null,
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Naio Hotel & Villas",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Naio Hotel & Villas",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Naio Hotel & Villas",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "the-tiki-hut",
+      "name": "The Tiki Hut",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://tikihutpalomino.co/",
+      "source_url": "https://tikihutpalomino.co/",
+      "evidence_type": "own_website",
+      "address": null,
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "The Tiki Hut",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "The Tiki Hut",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "The Tiki Hut",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "el-zoo-hostel-palomino",
+      "name": "El Zoo Hostel Palomino",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://elzoohostelpalomino.com/",
+      "source_url": "https://elzoohostelpalomino.com/",
+      "evidence_type": "own_website",
+      "address": "Carrera 5 #4-42",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "El Zoo Hostel Palomino",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "El Zoo Hostel Palomino",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "El Zoo Hostel Palomino",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "finca-escondida",
+      "name": "Finca Escondida",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://fincaescondida.com/hotel/",
+      "source_url": "https://fincaescondida.com/hotel/",
+      "evidence_type": "own_website",
+      "address": "Carrera 10 #4-58",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Finca Escondida",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Finca Escondida",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Finca Escondida",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "aite-eco-resort",
+      "name": "Aité Eco Resort",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://www.aite.com.co/",
+      "source_url": "https://www.aite.com.co/",
+      "evidence_type": "own_website",
+      "address": null,
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Aité Eco Resort",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Aité Eco Resort",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Aité Eco Resort",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "prima-luna",
+      "name": "Prima Luna",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://primalunapalomino.com/",
+      "source_url": "https://primalunapalomino.com/",
+      "evidence_type": "own_website",
+      "address": "Calle 6",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Prima Luna",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Prima Luna",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Prima Luna",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "la-casa-del-pavo-real",
+      "name": "La Casa del Pavo Real",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://es.casadelpavoreal.com/",
+      "source_url": "https://es.casadelpavoreal.com/",
+      "evidence_type": "own_website",
+      "address": "Calle 10, km 72",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "La Casa del Pavo Real",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "La Casa del Pavo Real",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "La Casa del Pavo Real",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "dreamer-palomino",
+      "name": "Dreamer Palomino",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://www.thedreamer.com/palomino",
+      "source_url": "https://www.thedreamer.com/palomino",
+      "evidence_type": "own_website",
+      "address": "Carrera 6, Playa Don Aire",
+      "geolocation": {
+        "latitude": 11.25436878,
+        "longitude": -73.55723572,
+        "source_url": "https://dreamer.cloudbeds.com/reservas/1YtXKZ?association_direct=1&referral_id=213988",
+        "point_kind": "provider_structured_lodging_location_not_entry",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Dreamer Palomino",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Dreamer Palomino",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Dreamer Palomino",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "casa-aloha-palomino",
+      "name": "Casa Aloha Palomino",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://www.alohapalomino.com/",
+      "source_url": "https://www.alohapalomino.com/",
+      "evidence_type": "own_website",
+      "address": null,
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Casa Aloha Palomino",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Casa Aloha Palomino",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Casa Aloha Palomino",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "coconuco-beach-resort",
+      "name": "Coconuco Beach Resort",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://www.coconucobeach.co/",
+      "source_url": "https://www.coconucobeach.co/",
+      "evidence_type": "own_website",
+      "address": "Km 1 vía Palomino–Dibulla",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Coconuco Beach Resort",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Coconuco Beach Resort",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Coconuco Beach Resort",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "one-santuario-natural",
+      "name": "One Santuario Natural",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://www.santuario.one/en/home",
+      "source_url": "https://www.santuario.one/en/home",
+      "evidence_type": "own_website",
+      "address": null,
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "One Santuario Natural",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "One Santuario Natural",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "One Santuario Natural",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "casa-colibri-palomino",
+      "name": "Casa Colibrí Palomino",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://www.casacolibri.com.co/?lang=pt",
+      "source_url": "https://www.casacolibri.com.co/?lang=pt",
+      "evidence_type": "own_website",
+      "address": "Carrera 6, calle 2A-9; numeración pendiente de contraste",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Casa Colibrí Palomino",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Casa Colibrí Palomino",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Casa Colibrí Palomino",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "chiniu-hotel",
+      "name": "Chiniü Hotel",
+      "category": "accommodation",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://hotelchiniu.com/",
+      "source_url": "https://hotelchiniu.com/",
+      "evidence_type": "own_website",
+      "address": "Km 2 vía Riohacha, Palomino",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Chiniü Hotel",
+          "description": "Alojamiento en Palomino."
+        },
+        "en": {
+          "name": "Chiniü Hotel",
+          "description": "Accommodation in Palomino."
+        },
+        "pt-br": {
+          "name": "Chiniü Hotel",
+          "description": "Hospedagem em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "holss",
+      "name": "Holss",
+      "category": "restaurant",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": "https://holsspalomino.wixsite.com/my-site",
+      "source_url": "https://holsspalomino.wixsite.com/my-site",
+      "evidence_type": "own_website",
+      "address": "Calle 6",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_unclaimed",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Holss",
+          "description": "Restaurante en Palomino."
+        },
+        "en": {
+          "name": "Holss",
+          "description": "Restaurant in Palomino."
+        },
+        "pt-br": {
+          "name": "Holss",
+          "description": "Restaurante em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "sua-cocina-con-ciencia",
+      "name": "SUÁ Cocina Con-Ciencia",
+      "category": "restaurant",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": null,
+      "source_url": "https://www.dibulla-laguajira.gov.co/NuestraAlcaldia/PublishingImages/Paginas/Directorio-de-Agremiaciones/NEGOCIOS%20VERDES.xlsx.pdf",
+      "evidence_type": "municipal_directory",
+      "address": null,
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "candidate_needs_direct_reconfirmation",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "SUÁ Cocina Con-Ciencia",
+          "description": "Restaurante en Palomino."
+        },
+        "en": {
+          "name": "SUÁ Cocina Con-Ciencia",
+          "description": "Restaurant in Palomino."
+        },
+        "pt-br": {
+          "name": "SUÁ Cocina Con-Ciencia",
+          "description": "Restaurante em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "juntos-palomino-restaurant-bar",
+      "name": "JUntos Palomino Restaurant Bar",
+      "category": "restaurant",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": null,
+      "source_url": "https://restaurantguru.com/JUntos-Palomino-Restaurant-Bar-Palomino-2",
+      "evidence_type": "secondary_directory",
+      "address": "Carrera 6 #4-10",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "candidate_needs_direct_reconfirmation",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "JUntos Palomino Restaurant Bar",
+          "description": "Restaurante en Palomino."
+        },
+        "en": {
+          "name": "JUntos Palomino Restaurant Bar",
+          "description": "Restaurant in Palomino."
+        },
+        "pt-br": {
+          "name": "JUntos Palomino Restaurant Bar",
+          "description": "Restaurante em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "la-frontera-restaurante-pizzeria-y-bar",
+      "name": "La Frontera Restaurante Pizzería y Bar",
+      "category": "restaurant",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": null,
+      "source_url": "https://es.restaurantguru.com/La-Frontera-Palomino",
+      "evidence_type": "secondary_directory",
+      "address": null,
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "candidate_needs_direct_reconfirmation",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "La Frontera Restaurante Pizzería y Bar",
+          "description": "Restaurante en Palomino."
+        },
+        "en": {
+          "name": "La Frontera Restaurante Pizzería y Bar",
+          "description": "Restaurant in Palomino."
+        },
+        "pt-br": {
+          "name": "La Frontera Restaurante Pizzería y Bar",
+          "description": "Restaurante em Palomino."
+        }
+      }
+    },
+    {
+      "slug": "maleiwa-tour-palomino",
+      "name": "Maleiwa Tour Palomino",
+      "category": "tour_operator",
+      "place_slug": "palomino",
+      "municipality_code": "44090",
+      "website_url": null,
+      "source_url": "https://es.casadelpavoreal.com/_files/ugd/9bc7a4_a85cce477541456fae6fcaff2e3fa15b.pdf",
+      "evidence_type": "partner_offer",
+      "address": null,
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "candidate_needs_direct_reconfirmation",
+      "identity_verified": false,
+      "representation_verified": false,
+      "legal_registration_verified": false,
+      "partner": false,
+      "paid": false,
+      "checked_at": "2026-11-04",
+      "publication_status": "pending_location_or_explicit_exception",
+      "translations": {
+        "es": {
+          "name": "Maleiwa Tour Palomino",
+          "description": "Prestador de recorridos en Palomino."
+        },
+        "en": {
+          "name": "Maleiwa Tour Palomino",
+          "description": "Tour provider in Palomino."
+        },
+        "pt-br": {
+          "name": "Maleiwa Tour Palomino",
+          "description": "Prestador de passeios em Palomino."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1378 @@
+{
+  "slug": "san-andres",
+  "name": "San Andrés",
+  "country_code": "CO",
+  "department_code": "88",
+  "municipality_code": "88001",
+  "type": "municipality",
+  "status": "editorial_in_progress",
+  "public": false,
+  "branch": "contenido/lugar-san-andres-20261104",
+  "source_checked_at": "2026-11-04",
+  "intro_draft_es": "San Andrés reúne playas, cayos, manglares y cultura raizal en una isla del Caribe colombiano. Además del paisaje marino, La Loma y San Luis permiten acercarse a la vida local. Es un destino independiente de Providencia y Santa Catalina: sus atractivos y servicios se organizan aquí por separado.",
+  "why_visit_es": [
+    "Combinar playas y cayos con el paisaje de manglar de Old Point.",
+    "Conocer la arquitectura de La Loma y la cultura raizal de la isla.",
+    "Encontrar opciones locales para organizar recorridos y actividades marinas."
+  ],
+  "geolocation": {
+    "latitude": 12.583,
+    "longitude": -81.6976,
+    "source_url": "https://mapcarta.com/es/19686114",
+    "point_kind": "urban_reference_not_island_centroid",
+    "checked_at": "2026-11-04"
+  },
+  "attractions": [
+    {
+      "name": "Johnny Cay",
+      "description_es": "Un islote frente a la costa norte de San Andrés, con palmeras, playa y paisaje marino. Es un parque regional: el desembarque depende de las condiciones del mar y de las disposiciones de la autoridad ambiental.",
+      "source_url": "https://colombia.travel/es/san-andres-isla/parque-regional-johnny-cay",
+      "geolocation": {
+        "latitude": 12.59945,
+        "longitude": -81.69034,
+        "source_url": "https://mapcarta.com/es/W169845001",
+        "point_kind": "mapped_beach_reference_not_landing_pier",
+        "checked_at": "2026-11-04"
+      },
+      "image_key": "attraction-01",
+      "status": "research_confirmed_geographic_reference_documented"
+    },
+    {
+      "name": "Rocky Cay",
+      "description_es": "El pequeño cayo rocoso frente al sector de San Luis permite reconocer otro paisaje de la isla. La playa y el cayo no son el mismo punto; cualquier aproximación al cayo debe considerar las condiciones del mar.",
+      "source_url": "https://colombia.travel/es/san-andres-isla/san-andres-sol-y-playa",
+      "geolocation": {
+        "latitude": 12.54157,
+        "longitude": -81.70185,
+        "source_url": "https://mapcarta.com/es/N3348033728",
+        "point_kind": "islet_reference_not_shore_access",
+        "checked_at": "2026-11-04"
+      },
+      "image_key": "attraction-02",
+      "status": "research_confirmed_geographic_reference_documented"
+    },
+    {
+      "name": "Primera Iglesia Bautista de La Loma",
+      "description_es": "El templo de madera y su entorno en La Loma acercan al visitante a la tradición religiosa de la comunidad raizal. Su arquitectura y posición elevada ofrecen una visita distinta de las playas.",
+      "source_url": "https://colombia.travel/es/san-andres-island/la-iglesia-bautista",
+      "geolocation": {
+        "latitude": 12.56191,
+        "longitude": -81.71696,
+        "source_url": "https://mapcarta.com/es/W169875625",
+        "point_kind": "mapped_building_not_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "image_key": "attraction-03",
+      "status": "research_confirmed_geographic_reference_documented"
+    },
+    {
+      "name": "Parque Regional de Mangle Old Point",
+      "description_es": "Un entorno de manglares en el costado oriental de la isla, en las bahías Hooker y Haynes. Es un lugar para conocer la vegetación costera y observar el paisaje sin alterar sus ecosistemas.",
+      "source_url": "https://colombia.travel/es/san-andres-isla/parque-regional-de-mangle-old-point?page=1",
+      "geolocation": {
+        "latitude": 12.566867,
+        "longitude": -81.705358,
+        "source_url": "https://ipt.biodiversidad.co/permisos/resource?r=255_rhizophorasai_20180116&v=1.1",
+        "point_kind": "research_area_reference_not_visitor_access",
+        "checked_at": "2026-11-04"
+      },
+      "image_key": "attraction-04",
+      "status": "research_confirmed_geographic_reference_documented"
+    },
+    {
+      "name": "El Acuario y Haynes Cay",
+      "description_es": "Rose Cay y Haynes Cay forman un paisaje de cayos y aguas someras conocido por las excursiones marinas. Las zonas de arena y las condiciones de acceso varían: no se presenta como un cruce peatonal garantizado.",
+      "source_url": "https://colombia.travel/es/san-andres-isla",
+      "geolocation": {
+        "latitude": 12.55266,
+        "longitude": -81.68871,
+        "source_url": "https://mapcarta.com/es/W245133418",
+        "point_kind": "mapped_islet_not_landing_point",
+        "checked_at": "2026-11-04"
+      },
+      "image_key": "attraction-05",
+      "status": "research_confirmed_geographic_reference_documented"
+    },
+    {
+      "name": "Playa Spratt Bight",
+      "description_es": "La playa del centro de San Andrés se extiende junto al paseo peatonal de la avenida Colombia. Es una opción para disfrutar del mar y caminar por la costa sin salir del sector urbano.",
+      "source_url": "https://empresario.colombia.travel/regiones-colombianas/gran-caribe-colombiano/san-andres-y-providencia",
+      "geolocation": {
+        "latitude": 12.58706,
+        "longitude": -81.69522,
+        "source_url": "https://mapcarta.com/es/W28185601",
+        "point_kind": "named_beach_area",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-06",
+      "status": "documented_pending_coordinates_image_and_review"
+    },
+    {
+      "name": "Hoyo Soplador",
+      "description_es": "Una abertura en la costa rocosa del sur de la isla por la que el oleaje puede impulsar aire y agua. El efecto depende de las condiciones del mar y no se presenta de forma constante.",
+      "source_url": "https://empresario.colombia.travel/regiones-colombianas/gran-caribe-colombiano/san-andres-y-providencia",
+      "geolocation": {
+        "latitude": 12.48136,
+        "longitude": -81.73111,
+        "source_url": "https://mapcarta.com/es/19681306",
+        "point_kind": "mapped_attraction",
+        "checked_at": "2026-11-04",
+        "public_map_url": null
+      },
+      "image_key": "attraction-07",
+      "status": "documented_pending_coordinates_image_and_review"
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Buceo de iniciación",
+      "description_es": "Una primera aproximación al buceo con instrucción y acompañamiento profesional. El centro determina los requisitos y las condiciones de la actividad.",
+      "operator": "Blue Life",
+      "offer_url": "https://bluelifedive.com/",
+      "geolocation": null,
+      "status": "offer_documented_meeting_point_pending"
+    },
+    {
+      "name": "Excursión a Johnny Cay",
+      "description_es": "Salida en embarcación para conocer el parque regional. El operador confirma el itinerario y la salida, sujetos al estado del mar y a la apertura del parque.",
+      "operator": "Visit San Andrés",
+      "offer_url": "https://www.visitsanandres.co/public/tour/johnnycay",
+      "geolocation": null,
+      "status": "offer_documented_meeting_point_pending"
+    },
+    {
+      "name": "Vuelta a la isla en buggy o carrito",
+      "description_es": "Recorre la isla por carretera con paradas para conocer diferentes sectores costeros. Hay opciones de alquiler de vehículos abiertos; las condiciones, el vehículo disponible y los requisitos los confirma el prestador.",
+      "operator": "Rentcarx",
+      "offer_url": "https://rentcarx.com/",
+      "geolocation": null,
+      "status": "offer_documented_meeting_point_pending"
+    },
+    {
+      "name": "Kayak por los manglares",
+      "description_es": "Recorrido guiado en kayak para observar el paisaje de manglares de Old Point desde el agua. El prestador confirma recorrido, condiciones y punto de encuentro.",
+      "operator": "Visit San Andrés",
+      "offer_url": "https://www.visitsanandres.co/public/tour/kayaktransparente",
+      "geolocation": null,
+      "status": "offer_documented_meeting_point_pending"
+    },
+    {
+      "name": "Parasail sobre el mar",
+      "description_es": "Una actividad de vuelo con paracaídas remolcado por una embarcación para contemplar la costa desde el aire. Su realización depende del tiempo y de las condiciones operativas.",
+      "operator": "Marine Parasail",
+      "offer_url": "https://parasailcolombia.com/",
+      "geolocation": null,
+      "status": "offer_documented_meeting_point_pending"
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Hotel Casablanca",
+      "category": "hospedaje",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+      "address_source_text": "Avenida Colombia, peatonal de Spratt Bight",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "public_map_url": null,
+      "localized": {
+        "es": {
+          "name": "Hotel Casablanca",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Hotel Casablanca",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Hotel Casablanca",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "La Regatta",
+      "category": "alimentacion",
+      "source_url": "https://restaurantelaregatta.com/contact/",
+      "address_source_text": "Avenida Newball, junto al Club Náutico",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.5805203,
+        "longitude": -81.6915755,
+        "source_url": "https://restaurantelaregatta.com/contact/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "public_map_url": "https://maps.app.goo.gl/6D6RvbRxFPPLF9oAA",
+      "public_map_validation": {
+        "status": "named_owner_link_resolved",
+        "checked_at": "2026-11-04",
+        "evidence_file": "named-map-source-audit.json"
+      },
+      "localized": {
+        "es": {
+          "name": "La Regatta",
+          "description": "Establecimiento de alimentos y bebidas en San Andrés."
+        },
+        "en": {
+          "name": "La Regatta",
+          "description": "Food and drink venue in San Andrés."
+        },
+        "pt-BR": {
+          "name": "La Regatta",
+          "description": "Estabelecimento de alimentação em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Blue Life",
+      "category": "experiencias",
+      "source_url": "https://bluelifedive.com/",
+      "address_source_text": "Hotel Sunrise Beach, locales 112-113",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.5809001,
+        "longitude": -81.6939773,
+        "source_url": "https://bluelifedive.com/contacto/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "public_map_url": "https://goo.gl/maps/mBCDCmx3mfbT5zt7A",
+      "public_map_validation": {
+        "status": "named_owner_link_resolved",
+        "checked_at": "2026-11-04",
+        "evidence_file": "named-map-source-audit.json"
+      },
+      "localized": {
+        "es": {
+          "name": "Blue Life",
+          "description": "Centro de buceo en San Andrés."
+        },
+        "en": {
+          "name": "Blue Life",
+          "description": "Dive centre in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Blue Life",
+          "description": "Centro de mergulho em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Sea Watch Caffé",
+      "category": "alimentacion",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+      "address_source_text": "Avenida Colombia, peatonal de Spratt Bight",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "parent_hotel_complex_reference_not_individual_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Hotel Casablanca"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "public_map_url": null,
+      "localized": {
+        "es": {
+          "name": "Sea Watch Caffé",
+          "description": "Establecimiento de alimentos y bebidas en San Andrés."
+        },
+        "en": {
+          "name": "Sea Watch Caffé",
+          "description": "Food and drink venue in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Sea Watch Caffé",
+          "description": "Estabelecimento de alimentação em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Restaurante Mahi-Mahi",
+      "category": "alimentacion",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+      "address_source_text": "Avenida Colombia, peatonal de Spratt Bight",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "parent_hotel_complex_reference_not_individual_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Hotel Casablanca"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "public_map_url": null,
+      "localized": {
+        "es": {
+          "name": "Restaurante Mahi-Mahi",
+          "description": "Establecimiento de alimentos y bebidas en San Andrés."
+        },
+        "en": {
+          "name": "Restaurante Mahi-Mahi",
+          "description": "Food and drink venue in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Restaurante Mahi-Mahi",
+          "description": "Estabelecimento de alimentação em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Restaurante La Barcarola",
+      "category": "alimentacion",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+      "address_source_text": "Avenida Colombia, peatonal de Spratt Bight",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "parent_hotel_complex_reference_not_individual_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Hotel Casablanca"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "public_map_url": null,
+      "localized": {
+        "es": {
+          "name": "Restaurante La Barcarola",
+          "description": "Establecimiento de alimentos y bebidas en San Andrés."
+        },
+        "en": {
+          "name": "Restaurante La Barcarola",
+          "description": "Food and drink venue in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Restaurante La Barcarola",
+          "description": "Estabelecimento de alimentação em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Restaurante Tropical",
+      "category": "alimentacion",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes/restaurante-tropical",
+      "address_source_text": "Hotel Casablanca",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "parent_hotel_complex_reference_not_individual_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Hotel Casablanca"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "public_map_url": null,
+      "localized": {
+        "es": {
+          "name": "Restaurante Tropical",
+          "description": "Establecimiento de alimentos y bebidas en San Andrés."
+        },
+        "en": {
+          "name": "Restaurante Tropical",
+          "description": "Food and drink venue in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Restaurante Tropical",
+          "description": "Estabelecimento de alimentação em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Restaurante Bar Casablanca",
+      "category": "alimentacion",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+      "address_source_text": "Hotel Casablanca",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "parent_hotel_complex_reference_not_individual_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Hotel Casablanca"
+      },
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "public_map_url": null,
+      "localized": {
+        "es": {
+          "name": "Restaurante Bar Casablanca",
+          "description": "Establecimiento de alimentos y bebidas en San Andrés."
+        },
+        "en": {
+          "name": "Restaurante Bar Casablanca",
+          "description": "Food and drink venue in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Restaurante Bar Casablanca",
+          "description": "Estabelecimento de alimentação em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Decameron Isleño",
+      "slug": "decameron-isleno",
+      "category": "hospedaje",
+      "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+      "source_type": "primary",
+      "address_source_text": "Spratt Bight",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.5861241541253,
+        "longitude": -81.69850267144403,
+        "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Decameron Isleño",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Decameron Isleño",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Decameron Isleño",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Decameron Los Delfines",
+      "slug": "decameron-los-delfines",
+      "category": "hospedaje",
+      "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+      "source_type": "primary",
+      "address_source_text": "Avenida Colombia",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.583197681673694,
+        "longitude": -81.68958472162105,
+        "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Decameron Los Delfines",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Decameron Los Delfines",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Decameron Los Delfines",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Decameron Marazul",
+      "slug": "decameron-marazul",
+      "category": "hospedaje",
+      "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+      "source_type": "primary",
+      "address_source_text": "Orange Hill",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.558210897746331,
+        "longitude": -81.70503100542493,
+        "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Decameron Marazul",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Decameron Marazul",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Decameron Marazul",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Decameron Maryland",
+      "slug": "decameron-maryland",
+      "category": "hospedaje",
+      "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+      "source_type": "primary",
+      "address_source_text": "Zona hotelera",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.591233108252325,
+        "longitude": -81.70073679094008,
+        "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Decameron Maryland",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Decameron Maryland",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Decameron Maryland",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Decameron San Luis",
+      "slug": "decameron-san-luis",
+      "category": "hospedaje",
+      "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+      "source_type": "primary",
+      "address_source_text": "San Luis",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.51517778989873,
+        "longitude": -81.71471503270433,
+        "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación",
+        "Contrastar estado operativo: catálogo comercial vigente y antecedente sanitario de marzo 2026; no afirmar cierre ni reapertura sin resolución actual"
+      ],
+      "operation_review_source": "https://mesagil.invima.gov.co/biblioteca/preview/145570",
+      "operation_review_required": true,
+      "operation_note": "An earlier official sanitary closure lead remains unresolved against the active commercial listing. Coordinates do not confirm current operation.",
+      "localized": {
+        "es": {
+          "name": "Decameron San Luis",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Decameron San Luis",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Decameron San Luis",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "San Luis Beach House",
+      "slug": "san-luis-beach-house",
+      "category": "hospedaje",
+      "source_url": "https://www.hotelsanluis.com.co/es/",
+      "source_type": "primary",
+      "address_source_text": "San Luis · Sound Bay #71-27",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.5194076821,
+        "longitude": -81.7140436946,
+        "source_url": "https://www.hotelsanluis.com.co/es/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "San Luis Beach House",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "San Luis Beach House",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "San Luis Beach House",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Samawi Hotel",
+      "slug": "samawi-hotel",
+      "category": "hospedaje",
+      "source_url": "https://www.samawihotel.com/servicios",
+      "source_type": "primary",
+      "address_source_text": null,
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.580335,
+        "longitude": -81.689218,
+        "source_url": "https://www.samawihotel.com/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Samawi Hotel",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Samawi Hotel",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Samawi Hotel",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Hotel Bahía Sardina",
+      "slug": "hotel-bahia-sardina",
+      "category": "hospedaje",
+      "source_url": "https://www.bahiasardina.com/",
+      "source_type": "primary",
+      "address_source_text": "Spratt Bight",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.58568,
+        "longitude": -81.69597,
+        "source_url": "https://www.bahiasardina.com/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Hotel Bahía Sardina",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Hotel Bahía Sardina",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Hotel Bahía Sardina",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Sea Avenue Hotel",
+      "slug": "sea-avenue-hotel",
+      "category": "hospedaje",
+      "source_url": "https://www.seaavenuehotel.com/",
+      "source_type": "primary",
+      "address_source_text": "Av. 20 de Julio #2A-27, New Town",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.58452,
+        "longitude": -81.69522,
+        "source_url": "https://www.seaavenuehotel.com/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Sea Avenue Hotel",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Sea Avenue Hotel",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Sea Avenue Hotel",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Nattivo Collection Hotel",
+      "slug": "nattivo-collection-hotel",
+      "category": "hospedaje",
+      "source_url": "https://www.nattivocollectionhotel.com/",
+      "source_type": "primary",
+      "address_source_text": "Calle 1A BIS #2-19",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.58262,
+        "longitude": -81.691605,
+        "source_url": "https://www.nattivocollectionhotel.com/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": "https://maps.app.goo.gl/HF8btnKBg73c5zKv5",
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "public_map_validation": {
+        "status": "named_owner_link_resolved",
+        "checked_at": "2026-11-04",
+        "evidence_file": "named-map-source-audit.json"
+      },
+      "localized": {
+        "es": {
+          "name": "Nattivo Collection Hotel",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Nattivo Collection Hotel",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Nattivo Collection Hotel",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Aquamare Hotel",
+      "slug": "aquamare-hotel",
+      "category": "hospedaje",
+      "source_url": "https://www.hotelaquamare.com/hotel",
+      "source_type": "primary",
+      "address_source_text": null,
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "geolocation_discrepancy_review_required",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "coordinate_candidates": [
+        {
+          "latitude": 12.58297,
+          "longitude": -81.69108,
+          "source_url": "https://www.hotelaquamare.com/",
+          "point_kind": "official_schema_point",
+          "checked_at": "2026-11-04"
+        },
+        {
+          "latitude": 12.5819507,
+          "longitude": -81.6914021,
+          "source_url": "https://www.hotelaquamare.com/",
+          "point_kind": "official_linked_maps_destination",
+          "checked_at": "2026-11-04"
+        }
+      ],
+      "geolocation_note": "Official metadata and official directions differ by approximately 119 m. No precise public point selected.",
+      "localized": {
+        "es": {
+          "name": "Aquamare Hotel",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Aquamare Hotel",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Aquamare Hotel",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Sol Caribe Campo",
+      "slug": "sol-caribe-campo",
+      "category": "hospedaje",
+      "source_url": "https://www.solarhoteles.com/es/hoteles/sol-caribe-campo-en-isla-san-andres/",
+      "source_type": "primary",
+      "address_source_text": "San Luis · Harmony Hill #5-86",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.53833,
+        "longitude": -81.71107,
+        "source_url": "https://mapcarta.com/es/N313845501",
+        "point_kind": "mapped_business_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "identity_documented_mapped_reference_available",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Sol Caribe Campo",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Sol Caribe Campo",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Sol Caribe Campo",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Hotel Cocoplum Beach",
+      "slug": "hotel-cocoplum-beach",
+      "category": "hospedaje",
+      "source_url": "https://www.cocoplumhotel.com/es/index.html",
+      "source_type": "primary",
+      "address_source_text": "San Luis · Carretera San Luis 43-39",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.54314521,
+        "longitude": -81.70565583,
+        "source_url": "https://www.cocoplumhotel.com/es/index.html",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Hotel Cocoplum Beach",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Hotel Cocoplum Beach",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Hotel Cocoplum Beach",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Sol Caribe San Andrés",
+      "slug": "sol-caribe-san-andres",
+      "category": "hospedaje",
+      "source_url": "https://www.solarhoteles.com/es/hoteles/sol-caribe-san-andres-en-isla-san-andres/",
+      "source_type": "primary",
+      "address_source_text": "Avenida Colón #2-77",
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_not_publication_ready",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Sol Caribe San Andrés",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Sol Caribe San Andrés",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Sol Caribe San Andrés",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Calypso Beach Hotel",
+      "slug": "calypso-beach-hotel",
+      "category": "hospedaje",
+      "source_url": "https://hotelcalypso.com.co/hotel/",
+      "source_type": "primary",
+      "address_source_text": null,
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_not_publication_ready",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Calypso Beach Hotel",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Calypso Beach Hotel",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Calypso Beach Hotel",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Centro Comercial New Point Plaza",
+      "slug": "centro-comercial-new-point-plaza",
+      "category": "compras",
+      "source_url": "https://www.sanandres.gov.co/gobernacion-inaugura-la-feria-empresarial-big-up-san-andres-2025/",
+      "source_type": "institutional_identity",
+      "address_source_text": "Avenida Providencia #1-35",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.58255,
+        "longitude": -81.6908,
+        "source_url": "https://mapcarta.com/es/W374898224",
+        "point_kind": "mapped_business_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "identity_documented_mapped_reference_available",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Centro Comercial New Point Plaza",
+          "description": "Comercio en San Andrés."
+        },
+        "en": {
+          "name": "Centro Comercial New Point Plaza",
+          "description": "Shopping in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Centro Comercial New Point Plaza",
+          "description": "Comércio em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Kids Republic · New Point",
+      "slug": "kids-republic-new-point",
+      "category": "compras",
+      "source_url": "https://kidsrepublic.com.co/pages/donde-encontrarnos",
+      "source_type": "primary",
+      "address_source_text": "Centro Comercial New Point, local 131",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.58255,
+        "longitude": -81.6908,
+        "source_url": "https://mapcarta.com/es/W374898224",
+        "point_kind": "shopping_centre_reference_not_shop_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Centro Comercial New Point Plaza"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Kids Republic · New Point",
+          "description": "Comercio en San Andrés."
+        },
+        "en": {
+          "name": "Kids Republic · New Point",
+          "description": "Shopping in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Kids Republic · New Point",
+          "description": "Comércio em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "La Riviera · San Andrés",
+      "slug": "la-riviera-san-andres",
+      "category": "compras",
+      "source_url": "https://www.lariviera.co/copia-de-contacto",
+      "source_type": "primary_chain_location_pending",
+      "address_source_text": null,
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_not_publication_ready",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación",
+        "Identificar sucursal concreta; no importar como varias tiendas ni usar atención nacional"
+      ],
+      "localized": {
+        "es": {
+          "name": "La Riviera · San Andrés",
+          "description": "Comercio en San Andrés."
+        },
+        "en": {
+          "name": "La Riviera · San Andrés",
+          "description": "Shopping in San Andrés."
+        },
+        "pt-BR": {
+          "name": "La Riviera · San Andrés",
+          "description": "Comércio em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Donde Francesca",
+      "slug": "donde-francesca",
+      "category": "alimentacion",
+      "source_url": "https://www.visitsanandres.co/news/restaurante-donde-francesca",
+      "source_type": "secondary",
+      "address_source_text": "San Luis · Sound Bay",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.51985,
+        "longitude": -81.71391,
+        "source_url": "https://mapcarta.com/es/N3168649268",
+        "point_kind": "mapped_business_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_not_publication_ready",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación",
+        "Corroborar canal propio vigente"
+      ],
+      "localized": {
+        "es": {
+          "name": "Donde Francesca",
+          "description": "Establecimiento de alimentos y bebidas en San Andrés."
+        },
+        "en": {
+          "name": "Donde Francesca",
+          "description": "Food and drink venue in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Donde Francesca",
+          "description": "Estabelecimento de alimentação em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Capitán Mandy",
+      "slug": "capitan-mandy",
+      "category": "alimentacion",
+      "source_url": "https://www.sanandresislas.com.co/restaurante-capitan-mandy-san-andres/",
+      "source_type": "secondary",
+      "address_source_text": "Avenida Rock Hole",
+      "source_checked_at": "2026-11-04",
+      "geolocation": {
+        "latitude": 12.58095,
+        "longitude": -81.69856,
+        "source_url": "https://mapcarta.com/es/N3230550452",
+        "point_kind": "mapped_business_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "identity_documented_mapped_reference_available",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación",
+        "Corroborar canal propio vigente"
+      ],
+      "localized": {
+        "es": {
+          "name": "Capitán Mandy",
+          "description": "Establecimiento de alimentos y bebidas en San Andrés."
+        },
+        "en": {
+          "name": "Capitán Mandy",
+          "description": "Food and drink venue in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Capitán Mandy",
+          "description": "Estabelecimento de alimentação em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Sharky Dive Shop",
+      "slug": "sharky-dive-shop",
+      "category": "experiencias",
+      "source_url": "https://www.sharkydive.com/",
+      "source_type": "primary",
+      "address_source_text": "Carretera Circunvalar km 13, Hotel Sun Set",
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "geolocation_discrepancy_review_required",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "address_source_url": "https://www.padi.com/es/centro-buceo/colombia/sharky-dive-shop-2/",
+      "coordinate_candidates": [
+        {
+          "latitude": 12.5822881,
+          "longitude": -81.690027,
+          "source_url": "https://www.sharkydive.com/",
+          "point_kind": "official_site_metadata_candidate",
+          "checked_at": "2026-11-04"
+        }
+      ],
+      "geolocation_note": "Official website metadata is in the north; PADI directory identifies Carretera Circunvalar km 13, Hotel Sunset, in the south. Branch/current premises require confirmation.",
+      "location_contrast_url": "https://www.padi.com/es/centro-buceo/colombia/sharky-dive-shop-2/",
+      "localized": {
+        "es": {
+          "name": "Sharky Dive Shop",
+          "description": "Centro de buceo en San Andrés."
+        },
+        "en": {
+          "name": "Sharky Dive Shop",
+          "description": "Dive centre in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Sharky Dive Shop",
+          "description": "Centro de mergulho em San Andrés."
+        }
+      }
+    },
+    {
+      "name": "Sol Caribe Seaflower",
+      "slug": "sol-caribe-seaflower",
+      "category": "hospedaje",
+      "source_url": "https://www.solarhoteles.com/es/hoteles/sol-caribe-seaflower-en-isla-san-andres/",
+      "source_type": "primary",
+      "address_source_text": null,
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "public_map_url": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "documented_not_publication_ready",
+      "publication_blockers": [
+        "Validar punto y ficha nombrada de ubicación",
+        "Revisar identidad y condiciones operativas antes de publicación"
+      ],
+      "localized": {
+        "es": {
+          "name": "Sol Caribe Seaflower",
+          "description": "Alojamiento en San Andrés."
+        },
+        "en": {
+          "name": "Sol Caribe Seaflower",
+          "description": "Accommodation in San Andrés."
+        },
+        "pt-BR": {
+          "name": "Sol Caribe Seaflower",
+          "description": "Hospedagem em San Andrés."
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://colombia.travel/es/san-andres-isla",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://colombia.travel/es/san-andres-isla/parque-regional-johnny-cay",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://colombia.travel/es/san-andres-island/la-iglesia-bautista",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://colombia.travel/es/san-andres-isla/parque-regional-de-mangle-old-point?page=1",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://colombia.travel/es/san-andres-isla/san-andres-sol-y-playa",
+      "checked_at": "2026-11-04"
+    }
+  ],
+  "media": {
+    "hero": {
+      "image_key": "hero",
+      "status": "reference_selection",
+      "approval": null
+    }
+  },
+  "boundary_notes": [
+    "No es Providencia ni Santa Catalina.",
+    "No trasladar comercios de Providencia a San Andrés por compartir departamento.",
+    "No confundir la historia de la congregación bautista con la fecha del edificio actual."
+  ],
+  "publication_blockers": [
+    "Old Point: falta referencia visual fiel utilizable y generación; cinco imágenes existentes pendientes de aprobación humana",
+    "Resolver discrepancias de ubicación de Aquamare y Sharky; seis negocios sin coordenadas se mantienen sin pin",
+    "Confirmar situación operativa de Decameron San Luis antes de publicar esa ficha",
+    "Los puntos de encuentro de las dos experiencias no están confirmados; no sustituirlos por coordenadas de oficinas",
+    "Validar el paquete final y su integración; no se ha desplegado este expediente",
+    "Ampliación solicitada por propietario: Spratt Bight y Hoyo Soplador pendientes de coordenadas contrastadas, imágenes y revisión; nuevas experiencias sin punto de encuentro confirmado."
+  ],
+  "administrative_note": "Código territorial 88001; no confundir la isla/cabecera con un municipio continental homónimo. Verificar clasificación administrativa en catálogo antes de importar.",
+  "review_ready_summary": {
+    "attractions": 7,
+    "experiences": 5,
+    "businesses": 30,
+    "publication_ready": false
+  },
+  "mobility_services": {
+    "motorcycle_rental": {
+      "classification": "transport_rental_not_attraction",
+      "source_urls": [
+        "https://rentcarx.com/",
+        "https://motocarsanandres.com/"
+      ],
+      "descriptions": {
+        "es": "Alquiler de motos para desplazarse por la isla. El prestador confirma requisitos de conducción, condiciones y disponibilidad.",
+        "en": "Motorcycle rental for travel around the island. The provider confirms driving requirements, terms and availability.",
+        "pt-BR": "Aluguel de motos para circular pela ilha. O prestador confirma requisitos de condução, condições e disponibilidade."
+      },
+      "business_intake_status": "source_documented_not_yet_added_to_verified_business_inventory"
+    }
+  }
+}
