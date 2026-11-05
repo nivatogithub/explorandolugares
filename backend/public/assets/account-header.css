@@ -1,3 +1,2 @@
 @import url("/assets/cobertura/portal-tokens.css");
-@import url('/assets/account-entry.css?v=3');
-.admin-page:has(.admin-sidebar){padding-top:80px!important}.admin-page>.portal-account-fallback{position:fixed;top:0;left:0;z-index:120}.admin-sidebar.admin-sidebar-with-system{top:72px!important;bottom:16px!important;max-height:calc(100dvh - 88px)}@media(max-width:850px){.admin-sidebar.admin-sidebar-with-system{position:static;max-height:none}}
+@import url('/assets/account-entry.css?v=3');.admin-page:has(.admin-sidebar){padding-top:80px!important}.admin-sidebar.admin-sidebar-with-system{top:72px!important;bottom:16px!important;max-height:calc(100dvh - 88px)}@media(max-width:850px){.admin-sidebar.admin-sidebar-with-system{position:static;max-height:none}}

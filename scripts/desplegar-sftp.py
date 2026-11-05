@@ -148,7 +148,7 @@ def build(output, config=None):
                 raise ValueError('Archivo no permitido: ' + str(source))
             files.append({'relative': source.relative_to(output).as_posix(), 'local': str(source),
                           'bytes': source.stat().st_size, 'sha256': hashlib.sha256(source.read_bytes()).hexdigest()})
-    if not (output / 'public/index.html').is_file() or not (output / 'app/bootstrap.php').is_file():
+    if not ((output / 'public/index.php').is_file() or (output / 'public/index.html').is_file()) or not (output / 'app/bootstrap.php').is_file():
         raise ValueError('Entrega incompleta.')
     return files
 

@@ -39,7 +39,7 @@ final class PlaceImageStorage
         $relative='assets/destinos/'.$placeId;
         $folder=rtrim($this->publicRoot,'/').'/'.$relative;
         if (!is_dir($folder) && !mkdir($folder,0755,true) && !is_dir($folder)) {
-            throw new RuntimeException('No se pudo crear la carpeta de imágenes del destino.');
+            throw new RuntimeException('No se pudo crear la carpeta de imágenes del lugar.');
         }
         $name='imagen-'.bin2hex(random_bytes(8)).'.'.$image['extension'];
         $full=$folder.'/'.$name;

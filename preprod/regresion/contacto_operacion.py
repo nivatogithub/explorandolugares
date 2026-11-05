@@ -55,10 +55,10 @@ def run(env):
 
     def csrf_denied():
         form()
-        code, _, _ = post('/contact.php', {
+        code, _, url = post('/contact.php', {
             'csrf': 'token-invalido', 'request_type': 'suggestion', 'name': run_id,
             'email': emails['suggestion'], 'message': 'No debe persistir sin CSRF válido.', 'consent': '1'})
-        check(code in (400, 403), 'Acepta formulario sin CSRF válido')
+        check(code in (400, 403) or '/negocios/acceso/' in url, 'Acepta formulario sin CSRF válido')
         check(not query('SELECT id FROM public_requests WHERE email=?', [emails['suggestion']]),
               'CSRF inválido persistió datos')
 
@@ -101,15 +101,15 @@ def run(env):
         login(ordinary, 'viajero')
         check(not ordinary.state().get('administrator'), 'Fixture viajero tiene permisos administrativos')
         for target, label in ((Client(), 'anónimo'), (ordinary, 'viajero')):
-            code, body, _ = target.get('/admin/public-requests.php')
-            check(code == 403, 'Expone solicitudes privadas a '+label)
+            code, body, url = target.get('/admin/public-requests.php')
+            check(code in (401,403) or ('/negocios/acceso/' in url and 'admin-sidebar' not in body), 'Expone solicitudes privadas a '+label)
             for row in references.values():
                 check(row['email'] not in body and row['message'] not in body, 'Filtración a '+label)
             before = query('SELECT status,response_note FROM public_requests WHERE email=?', [emails['petition']])
-            code, _, _ = target.request('/admin/public-requests.php', {
+            code, _, url = target.request('/admin/public-requests.php', {
                 'csrf': target.state().get('csrf', ''), 'id': references['petition']['id'],
                 'status': 'resolved', 'response_note': 'Cambio no autorizado'})
-            check(code == 403, 'Acepta revisión de '+label)
+            check(code in (401,403) or '/negocios/acceso/' in url, 'Acepta revisión de '+label)
             check(query('SELECT status,response_note FROM public_requests WHERE email=?', [emails['petition']]) == before,
                   'Usuario sin permiso alteró solicitud')
 

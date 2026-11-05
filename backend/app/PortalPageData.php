@@ -34,16 +34,15 @@ final class PortalPageData
         }catch(Throwable $error){error_log('portal-public-fragment: unavailable');}
         return ['table'=>$table,'operator'=>$operator];
     }
-    public static function attractions(string $file,string $locale,string $publicRoot):?string
+    public static function attractions(string $file,string $locale,string $publicRoot):array
     {
-        $content=null;
+        $items=[];
         if(is_file($file))try{
             $config=self::configuration($file);
             $pdo=new PDO($config['dsn'],$config['db_user']??null,$config['db_password']??null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
             DatabaseClock::configure($pdo);
             $items=HomeAttractions::items($pdo,$locale,$publicRoot);
-            if($items)$content=HomeAttractions::render($items,$locale);
         }catch(Throwable $error){error_log('portal-public-fragment: unavailable');}
-        return $content;
+        return $items;
     }
 }

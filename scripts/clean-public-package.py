@@ -37,33 +37,19 @@ def remove_credit_pages(public: Path) -> list[str]:
     return removed
 
 
-def remove_credit_links(public: Path) -> int:
-    count=0
+def check_credit_links(public: Path) -> None:
     patterns=(
         r'\s*·\s*<a\s+href="[^"]*creditos-fotograficos/index\.html"[^>]*>.*?</a>',
         r'<a\s+href="[^"]*creditos-fotograficos/index\.html"[^>]*>.*?</a>\s*·\s*',
     )
     for page in list(public.rglob('*.html'))+list(public.rglob('*.php')):
         source=page.read_text(errors='strict')
-        for pattern in patterns:
-            source,n=re.subn(pattern,'',source,flags=re.S|re.I)
-            count+=n
-        page.write_text(source)
-    return count
+        if any(re.search(pattern,source,flags=re.S|re.I) for pattern in patterns):
+            raise ValueError('La página referencia créditos retirados: '+str(page.relative_to(public)))
 
 
-def remove_credit_sitemap_entries(public: Path) -> int:
-    sitemap=public/'sitemap.xml'
-    if not sitemap.is_file(): return 0
-    source=sitemap.read_text()
-    source,count=re.subn(r'\s*<url>\s*<loc>[^<]*creditos-fotograficos/</loc>\s*</url>', '', source, flags=re.I)
-    sitemap.write_text(source)
-    return count
-
-
-def replace_legacy_jerico_card(public: Path) -> int:
-    """Use Jericó's selected illustration in public cards instead of the old photo."""
-    count=0
+def check_legacy_jerico_card(public: Path) -> None:
+    """Reject retired Jericó card references without changing page content."""
     pattern=re.compile(r'(?P<prefix>(?:\.\./)*)assets/jerico\.webp')
     replacements={
         'Parque principal de Jericó al atardecer':'Ilustración editorial del parque principal de Jericó',
@@ -73,11 +59,8 @@ def replace_legacy_jerico_card(public: Path) -> int:
     for page in public.rglob('*'):
         if not page.is_file() or page.suffix.lower() not in {'.html','.php','.css','.js','.json','.xml','.txt'}: continue
         source=page.read_text(errors='ignore')
-        source,n=pattern.subn(lambda match:match.group('prefix')+'assets/destinos/1/parque-principal-ilustrado.webp',source)
-        count+=n
-        for old,new in replacements.items(): source=source.replace(old,new)
-        page.write_text(source)
-    return count
+        if pattern.search(source) or any(old in source for old in replacements):
+            raise ValueError('Referencia antigua de imagen de Jericó: '+str(page.relative_to(public)))
 
 
 def prune_unreferenced_destination_images(public: Path, catalog: Path) -> list[str]:
@@ -148,14 +131,11 @@ def clean(public: Path, catalog: Path, app: Path|None=None) -> dict:
         raise ValueError('Se requieren la raíz pública y el catálogo dinámico del paquete.')
     removed_pages=remove_redundant_pages(public,catalog)
     removed_credits=remove_credit_pages(public)
-    links=remove_credit_links(public)
-    sitemap_entries=remove_credit_sitemap_entries(public)
-    card_images=replace_legacy_jerico_card(public)
+    check_credit_links(public)
+    check_legacy_jerico_card(public)
     removed_photos=prune_unreferenced_destination_images(public,catalog)
     removed_unreferenced=prune_unreferenced_assets(public,catalog,app)
     return {'removed_destination_pages':removed_pages,'removed_credit_pages':removed_credits,
-            'removed_credit_links':links,'removed_credit_sitemap_entries':sitemap_entries,
-            'updated_jerico_card_images':card_images,
             'removed_legacy_jerico_photos':removed_photos,
             'removed_unreferenced_assets':removed_unreferenced}
 

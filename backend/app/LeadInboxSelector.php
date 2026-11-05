@@ -5,6 +5,11 @@ declare(strict_types=1);
 final class LeadInboxSelector
 {
     public function __construct(private PDO $pdo) {}
+    public function replyBody(string $operationId,int $leadId):string|false
+    {
+        $query=$this->pdo->prepare('SELECT html_body FROM lead_reply_operations WHERE id=? AND lead_id=?');
+        $query->execute([$operationId,$leadId]);return $query->fetchColumn();
+    }
     public function page(string $status,string $search,int $page):array
     {
         $conditions=[];$params=[];

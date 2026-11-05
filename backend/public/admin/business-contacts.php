@@ -4,6 +4,7 @@ require dirname(__DIR__,2).'/app/bootstrap.php';
 require_once dirname(__DIR__,2).'/app/ContactPhone.php';
 require dirname(__DIR__,2).'/app/BusinessChannelImporter.php';
 require dirname(__DIR__,2).'/app/BusinessCrmRepository.php';
+require_once dirname(__DIR__,2).'/app/BusinessContactsSelector.php';
 if(isset($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)>1800)unset($_SESSION['admin']);
 if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión desde el panel de administración.');}
 $_SESSION['last_seen']=time();$error='';$result=null;$ready=false;$rows=[];$total=0;
@@ -11,7 +12,7 @@ $crm=null;$overview=['rows'=>[],'total'=>0,'with_contact'=>0,'without_contact'=>
 $accountService=null;$accountProfileReady=false;$responsibleAccounts=[];$accountResult='';$recipientReady=false;
 try{$accountService=new AccountProfileService(db());$accountProfileReady=$accountService->ready();}
 catch(Throwable $exception){if(class_exists('PortalIncidents',false))PortalIncidents::technical($exception,'contactos_negocios');$error='No se pudo consultar la cuenta responsable. Revisa Base de datos.';}
-try{db()->query('SELECT id FROM business_research_contacts LIMIT 1');$ready=true;$recipientReady=BusinessResearchContactImporter::recipientReady(db());}
+try{(new BusinessContactsSelector(db()))->assertResearchAvailable();$ready=true;$recipientReady=BusinessResearchContactImporter::recipientReady(db());}
 catch(PDOException $exception){$error='Falta habilitar la carga de canales privados (026). Puedes revisarla en Base de datos.';}
 if($_SERVER['REQUEST_METHOD']==='POST'){
     try{
@@ -40,20 +41,17 @@ $accountScope=(string)($_GET['account']??'without');if(!in_array($accountScope,[
 $crmFilters=['account'=>$accountScope,'query'=>$query,'destination'=>(string)($_GET['destination']??''),'subscription'=>(string)($_GET['subscription']??'free'),'contact'=>(string)($_GET['contact']??'')];
 try{
     $crm=new BusinessCrmRepository(db());$overview=$crm->overview($crmFilters,max(1,(int)($_GET['crm_page']??1)));
-    $destinations=db()->query('SELECT d.slug,COALESCE(t.display_name,d.slug) AS display_name FROM destinations d LEFT JOIN destination_translations t ON t.destination_id=d.id AND t.locale="es" ORDER BY display_name')->fetchAll(PDO::FETCH_ASSOC);
+    $contactsSelector=new BusinessContactsSelector(db());$destinations=$contactsSelector->places();
     if($businessId){
-        $selectedBusiness=$crm->find($businessId);$q=db()->prepare('SELECT channel,contact_value,is_public FROM business_contacts WHERE business_id=? ORDER BY display_order,id');$q->execute([$businessId]);$profileContacts=$q->fetchAll(PDO::FETCH_ASSOC);
+        $selectedBusiness=$crm->find($businessId);$profileContacts=$contactsSelector->profileContacts($businessId);
         if($selectedBusiness&&$accountProfileReady){$responsibleAccounts=$accountService->forBusiness($businessId);}
     }
 }catch(Throwable $exception){if(class_exists('PortalIncidents',false))PortalIncidents::technical($exception,'contactos_negocios');$error=$exception instanceof PDOException?'No se pudo consultar el CRM. Revisa la estructura de negocios en Base de datos.':$exception->getMessage();}
 if($ready&&$businessId){
-    $where=' WHERE 1=1';$params=[];
-    if($businessId){$where.=' AND b.id=?';$params[]=$businessId;}
-    $from=' FROM business_research_contacts r JOIN businesses b ON b.id=r.business_id JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destinations d ON d.id=b.destination_id';
-    $q=db()->prepare('SELECT COUNT(*)'.$from.$where);$q->execute($params);$total=(int)$q->fetchColumn();$pageCount=max(1,(int)ceil($total/$pageSize));$page=min($page,$pageCount);
-    $q=db()->prepare('SELECT r.*,b.public_id,t.display_name,d.slug AS destination_slug'.$from.$where.' ORDER BY t.display_name,r.channel,r.id LIMIT '.$pageSize.' OFFSET '.(($page-1)*$pageSize));$q->execute($params);$rows=$q->fetchAll(PDO::FETCH_ASSOC);
+    $researchPage=(new BusinessContactsSelector(db()))->researchPage($businessId,$page,$pageSize);
+    $rows=$researchPage['rows'];$total=$researchPage['total'];$page=$researchPage['page'];$pageCount=$researchPage['page_count'];
 }
-$emailPermissions=[];try{foreach(db()->query('SELECT email,decision FROM business_email_permissions')->fetchAll(PDO::FETCH_ASSOC) as $permission)$emailPermissions[$permission['email']]=$permission['decision'];}catch(PDOException){}
+$emailPermissions=[];try{$emailPermissions=(new BusinessContactsSelector(db()))->emailPermissions();}catch(PDOException){}
 $labels=['email'=>'Correo','phone'=>'Celular / teléfono','phone_fixed'=>'Teléfono fijo','whatsapp'=>'WhatsApp','instagram'=>'Instagram','facebook'=>'Facebook','website'=>'Sitio web','linkedin'=>'LinkedIn'];
 $evidenceLabels=['DECLARADO_RNT_SIN_CORROBORACION_CLIENTES'=>'Declarado en RNT; atención a clientes pendiente de corroborar','NUMERO_INCOMPLETO_O_FORMATO_ANTIGUO'=>'Número incompleto o de formato antiguo; revisar','PUBLICADO_PARA_CLIENTES'=>'Anunciado públicamente para atención a clientes'];
 $planLabels=['free'=>'Gratis','basic'=>'Básico','featured'=>'Tarjeta Ampliada','page'=>'Página Comercial','page_premium'=>'Premium'];
@@ -86,7 +84,7 @@ $adminLayout=admin_layout_context();
 <?php if($result):?><div class="crm-feedback crm-feedback-success" role="status"><strong>Canales guardados para <?=esc($result['businesses'])?> negocios</strong><p><?=esc($result['inserted'])?> registros de canal y fuente añadidos · <?=esc($result['existing'])?> ya estaban guardados.</p><p>Se conservaron las fichas existentes y su publicación.</p><a href="business-contacts.php">Consultar los canales guardados →</a></div><?php endif ?>
 <?php if($tab==='cargar'):?>
 <section class="crm-panel crm-upload-panel" aria-labelledby="crm-upload-title">
-<div class="crm-section-heading"><div><p class="crm-eyebrow">Completar información</p><h2 id="crm-upload-title">Añadir canales a negocios registrados</h2><p>Usa el archivo de canales para completar las fichas que ya importaste. La asociación se hace por nombre y destino; no necesitas exportar IDs.</p></div></div>
+<div class="crm-section-heading"><div><p class="crm-eyebrow">Completar información</p><h2 id="crm-upload-title">Añadir canales a negocios registrados</h2><p>Usa el archivo de canales para completar las fichas que ya importaste. La asociación se hace por nombre y lugar; no necesitas exportar IDs.</p></div></div>
 <ol class="crm-upload-steps"><li><span>1</span><div><strong>Negocios ya registrados</strong><p>Las fichas deben existir antes de cargar sus canales.</p></div></li><li><span>2</span><div><strong>Selecciona el archivo de canales</strong><p>Elige el JSON complementario de la investigación.</p></div></li><li><span>3</span><div><strong>Guarda y consulta</strong><p>Los canales quedan disponibles aquí, para administración.</p></div></li></ol>
 <form method="post" enctype="multipart/form-data" class="crm-upload-form" data-contact-upload>
 <input type="hidden" name="csrf" value="<?=esc($_SESSION['csrf'])?>"><input type="hidden" name="action" value="import_business_channels">
@@ -105,7 +103,7 @@ $adminLayout=admin_layout_context();
 <div class="crm-section-heading"><div><h2 id="crm-search-title"><?=esc($accountScope==='without'?'Prospectos sin cuenta asociada':'Negocios con cuenta asociada')?></h2><p>Busca por nombre, correo o teléfono. También puedes ver cuáles siguen sin canales generales.</p></div><a class="crm-secondary-action" href="business-contacts.php?tab=cargar">Añadir canales desde un archivo</a></div>
 <form method="get" class="crm-filter-bar">
 <label class="crm-search-field">Negocio, persona, correo o teléfono<input type="search" name="q" value="<?=esc($query)?>" maxlength="200" placeholder="Ej.: nombre del hotel, persona o correo"></label>
-<label>Grupo de contactos<select name="account"><option value="without" <?=$accountScope==='without'?'selected':''?>>Prospectos sin cuenta asociada</option><option value="with" <?=$accountScope==='with'?'selected':''?>>Negocios con cuenta asociada</option></select></label><label>Destino<select name="destination"><option value="">Todos los destinos</option><?php foreach($destinations as $destination):?><option value="<?=esc($destination['slug'])?>" <?=$crmFilters['destination']===$destination['slug']?'selected':''?>><?=esc($destination['display_name'])?></option><?php endforeach ?></select></label>
+<label>Grupo de contactos<select name="account"><option value="without" <?=$accountScope==='without'?'selected':''?>>Prospectos sin cuenta asociada</option><option value="with" <?=$accountScope==='with'?'selected':''?>>Negocios con cuenta asociada</option></select></label><label>Lugar<select name="destination"><option value="">Todos los lugares</option><?php foreach($destinations as $destination):?><option value="<?=esc($destination['slug'])?>" <?=$crmFilters['destination']===$destination['slug']?'selected':''?>><?=esc($destination['display_name'])?></option><?php endforeach ?></select></label>
 <label>Suscripción<select name="subscription"><?php foreach(['free'=>'Gratuita','paid'=>'Paga vigente','all'=>'Todas'] as $value=>$label):?><option value="<?=$value?>" <?=$crmFilters['subscription']===$value?'selected':''?>><?=$label?></option><?php endforeach ?></select></label>
 <label>Canales generales<select name="contact"><?php foreach([''=>'Con y sin canales','with'=>'Con canales','without'=>'Sin canales'] as $value=>$label):?><option value="<?=$value?>" <?=$crmFilters['contact']===$value?'selected':''?>><?=$label?></option><?php endforeach ?></select></label>
 <div class="crm-filter-actions"><button class="pill compact" type="submit">Buscar negocios</button><a href="business-contacts.php?subscription=all&amp;account=<?=esc($accountScope)?>">Limpiar filtros</a></div>

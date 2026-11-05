@@ -25,4 +25,10 @@ final class OperatingCostSelector
         foreach($query as $file)$result[$file['cost_id']][]=$file;
         return $result;
     }
+
+    public function evidenceFile(int $id):array|false
+    {
+        $query=$this->pdo->prepare('SELECT storage_name,mime_type,file_size,sha256 FROM operating_cost_evidence WHERE id=?');
+        $query->execute([$id]);return $query->fetch(PDO::FETCH_ASSOC);
+    }
 }

@@ -93,7 +93,7 @@ final class BusinessBulkEditService
             self::keys($record,['id','public_id','version','fields','category_codes','translations','contacts','sources','research_contacts','_context']);
             $publicId=self::text($record['public_id']??'',64);
             if(isset($seen[$publicId]))throw new RuntimeException('El mismo ID aparece dos veces en el archivo.');$seen[$publicId]=true;
-            if(!isset($available[$publicId]))throw new RuntimeException('ID inexistente en el destino: '.$publicId.'. No se crearán negocios nuevos.');
+            if(!isset($available[$publicId]))throw new RuntimeException('ID inexistente en el lugar: '.$publicId.'. No se crearán negocios nuevos.');
             $id=(int)$available[$publicId]['id'];
             if(isset($record['id'])&&(string)$record['id']!==(string)$id)throw new RuntimeException('El ID interno no corresponde al ID público del negocio.');
             $before=$this->snapshot($id,$lock);

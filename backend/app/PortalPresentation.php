@@ -17,7 +17,7 @@ final class PortalPresentation
         return is_file($path)?json_decode(file_get_contents($path),true,64,JSON_THROW_ON_ERROR):[];
     }
     /** The public home and account-dialog background share this definitive component. */
-    public static function homeMain(string $locale):string
+    public static function homeMain(string $locale,array $attractions=[]):string
     {
         $locale=strtolower($locale);if(!in_array($locale,['es','en','pt-br'],true))$locale='es';
         $copy=json_decode(file_get_contents(__DIR__.'/presentation/home.json'),true,32,JSON_THROW_ON_ERROR)[$locale];

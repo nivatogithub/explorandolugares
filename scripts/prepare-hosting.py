@@ -8,26 +8,46 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import importlib.util
+
+storage_spec = importlib.util.spec_from_file_location('build_storage', Path(__file__).with_name('build_storage.py'))
+storage = importlib.util.module_from_spec(storage_spec)
+storage_spec.loader.exec_module(storage)
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUTS = ('scripts', 'backend', 'content', 'design', 'ensayos', 'preprod')
 
 
-def build(output: Path) -> None:
+def build(output: Path, *, retained=True) -> None:
     output = output.resolve()
     if output == ROOT or ROOT in output.parents and '.local' not in output.relative_to(ROOT).parts:
         raise ValueError('La salida debe estar fuera de las fuentes o dentro de .local/.')
     if output.exists() and any(output.iterdir()):
         raise ValueError('La construcción exige una carpeta de salida nueva/vacía; no se mezclan entregas.')
-    output.mkdir(parents=True, exist_ok=True)
+    with storage.reserve_build(ROOT, output, INPUTS, retained=retained):
+        output.parent.mkdir(parents=True, exist_ok=True)
+        # A failure leaves no half-built package and never touches an active release.
+        with tempfile.TemporaryDirectory(prefix='package-build-', dir=output.parent) as folder:
+            staged = Path(folder) / 'package'
+            _build_into(staged)
+            if output.exists():
+                output.rmdir()  # Only the previously validated empty destination.
+            staged.rename(output)
+
+
+def _build_into(output: Path) -> None:
+    output.mkdir(parents=True)
     with tempfile.TemporaryDirectory(prefix='el-build-') as temporary:
         snapshot = Path(temporary) / 'source'
         snapshot.mkdir()
         for name in INPUTS:
             shutil.copytree(ROOT / name, snapshot / name,
                             ignore=shutil.ignore_patterns('.local', '__pycache__', 'node_modules', '.DS_Store'))
-        subprocess.run([sys.executable, str(snapshot / 'scripts/_build-hosting.py'),
-                        '--output', str(output)], check=True)
+        command = [sys.executable, str(snapshot / 'scripts/_build-hosting.py'),
+                   '--output', str(output)]
+        returncode = storage.run_owned_command(command)
+        if returncode:
+            raise subprocess.CalledProcessError(returncode, command)
     files = {}
     for path in sorted(output.rglob('*')):
         if path.is_file():

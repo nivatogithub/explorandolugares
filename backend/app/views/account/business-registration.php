@@ -63,7 +63,7 @@
 </label>
 </div>
 <div id="registration-results" class="business-registration-results" aria-live="polite">
-<p>Selecciona destino y categoría para iniciar la búsqueda.</p>
+<p>Selecciona lugar y categoría para iniciar la búsqueda.</p>
 </div>
 <button type="button" class="pill light" id="registration-not-found" disabled>No lo encuentro · Crear negocio</button>
 <input type="hidden" name="application_type" id="registration-application-type" value="">

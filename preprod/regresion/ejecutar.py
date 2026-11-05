@@ -2,7 +2,7 @@
 """Regresión HTTP/BD exclusivamente local. Código 0 listo, 1 bloqueado, 2 entorno inseguro."""
 from pathlib import Path
 from html.parser import HTMLParser
-import base64,datetime,fcntl,hashlib,html,http.cookiejar,json,re,secrets,subprocess,sys,urllib.error,urllib.parse,urllib.request
+import base64,datetime,fcntl,hashlib,html,http.cookiejar,json,os,re,secrets,struct,subprocess,sys,time,urllib.error,urllib.parse,urllib.request,zlib
 ROOT=Path(__file__).resolve().parents[2]; BASE='http://127.0.0.1:8088'; RUN='regresion-'+secrets.token_hex(8); EMAIL=RUN+'@pruebas.invalid';PASSWORD=secrets.token_urlsafe(24)+'A9';NEW=secrets.token_urlsafe(24)+'B8';REPORT=ROOT/'.local/preprod/regresion';results=[]
 PUBLIC_ONLY='--solo-publico' in sys.argv
 if PUBLIC_ONLY:REPORT=REPORT/'flujos-publicos'
@@ -17,7 +17,10 @@ class Client:
    boundary='----'+secrets.token_hex(16);parts=[]
    for k,v in data.items():parts.append(f'--{boundary}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode())
    for name in files:
-    png=base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=')
+    if name=='reference_images[]':
+     def chunk(tag,data):return struct.pack('!I',len(data))+tag+data+struct.pack('!I',zlib.crc32(tag+data)&0xffffffff)
+     png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('!IIBBBBB',320,200,8,2,0,0,0))+chunk(b'IDAT',zlib.compress((b'\0'+b'\x82\xab\xc2'*320)*200))+chunk(b'IEND',b'')
+    else:png=base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=')
     parts.append(f'--{boundary}\r\nContent-Disposition: form-data; name="{name}"; filename="evidencia-ficticia.png"\r\nContent-Type: image/png\r\n\r\n'.encode()+png+b'\r\n')
    body=b''.join(parts)+f'--{boundary}--\r\n'.encode();headers['Content-Type']='multipart/form-data; boundary='+boundary
   elif data is not None:body=urllib.parse.urlencode(data).encode()
@@ -31,6 +34,23 @@ class Client:
  def state(self):return json.loads(self.get('/api/account-session.php')[1])
 def csrf(body):
  m=re.search(r'name="csrf"\s+value="([^"]+)"',body);assert m,'Falta token CSRF en formulario';return m[1]
+def mailpit_link(email,kind,expected=None):
+ """Obtiene exclusivamente el mensaje sintético de esta ejecución desde Mailpit local."""
+ subject={'verification':'Verifica tu cuenta de Explorando Lugares','recovery':'Recupera tu acceso a Explorando Lugares'}[kind]
+ for _ in range(30):
+  try:
+   with urllib.request.urlopen('http://127.0.0.1:8025/api/v1/messages',timeout=3) as r:messages=json.load(r).get('messages',[])
+   for message in messages:
+    if message.get('Subject')!=subject or not any(a.get('Address','').lower()==email.lower() for a in message.get('To',[])):continue
+    ident=message['ID'];check(re.fullmatch(r'[A-Za-z0-9_-]+',ident),'Identificador Mailpit inválido')
+    with urllib.request.urlopen('http://127.0.0.1:8025/api/v1/message/'+ident,timeout=3) as r:body=json.load(r)
+    match=re.search(r'http://127\.0\.0\.1:8088/(?:cuenta/verificar-correo|negocios/cambiar-clave)/\?token=[a-f0-9]{64}',body.get('Text',''))
+    check(match and match.group(0) in html.unescape(body.get('HTML','')),'Correo incompleto o enlace ausente en HTML y texto')
+    if expected and match.group(0)!=expected:continue
+    return match.group(0)
+  except (OSError,ValueError):pass
+  time.sleep(.25)
+ raise Blocked('Mailpit no recibió el mensaje local de esta ejecución.')
 def check(value,message):
  if not value:raise AssertionError(message)
 def php(code):
@@ -41,6 +61,7 @@ def php(code):
 def query(sql,params=[]):
  payload=base64.b64encode(json.dumps([sql,params]).encode()).decode();return json.loads(php('$v=json_decode(base64_decode("'+payload+'"),true);$q=$p->prepare($v[0]);$q->execute($v[1]);echo json_encode($q->fetchAll(PDO::FETCH_ASSOC));'))
 DEPENDENCIES={**{key:['NG-00'] for key in ['NG-06','PG-01','PG-03','PG-04','PG-05','PG-06','AZ-04']},
+ **{key:['NG-06'] for key in ['PG-03','PG-04','PG-05']},
  'CU-02':['CU-01'],'CU-03':['CU-01'],'CU-04':['CU-02','CU-03'],'CU-05':['CU-01'],
  'AU-01':['CU-04'],'AU-02':['CU-04'],'AU-03':['AU-01'],'AU-04':['AU-03'],
  'AZ-01':['AU-03'],'AZ-02':['AU-03'],'RC-01':['CU-04'],'RC-02':['CU-01'],
@@ -85,9 +106,15 @@ try:
   def activation_guard():
    fresh=Client();_,page,_=fresh.get('/negocios/acceso/');fresh.request('/negocios/acceso/',{'csrf':csrf(page),'email':EMAIL,'password':PASSWORD});check(not fresh.state().get('authenticated'),'El sistema permite iniciar sesión sin haber verificado el correo')
   case('CU-03','Impedir uso de cuenta sin validar el correo',activation_guard)
+  def resend_activation():
+   c=Client();code,page,_=c.get('/cuenta/verificar-correo/');check(code==200,'No abre solicitud de reenvío')
+   mailbox=ROOT/'.local/preprod/private/mailbox.json';before=json.loads(mailbox.read_text());count=sum(m.get('to')==EMAIL and m.get('kind')=='verification' for m in before)
+   code,page,_=c.request('/cuenta/verificar-correo/',{'csrf':csrf(page),'email':EMAIL});check(code==200,'No acepta solicitud de reenvío')
+   after=json.loads(mailbox.read_text());check(sum(m.get('to')==EMAIL and m.get('kind')=='verification' for m in after)==count+1,'No se generó un nuevo mensaje de activación')
+  case('CU-06','Reenviar activación a cuenta pendiente',resend_activation)
   def activate():
    messages=json.loads((ROOT/'.local/preprod/private/mailbox.json').read_text());message=next((m for m in reversed(messages) if m.get('to')==EMAIL and '/cuenta/verificar-correo/' in m.get('url','')),None);check(message,'Falta correo de activación')
-   link=urllib.parse.urlsplit(message['url']);check(link.scheme=='http' and link.netloc=='127.0.0.1:8088','Enlace de activación fuera de preprod');token=urllib.parse.parse_qs(link.query).get('token',[''])[0];check(re.fullmatch(r'[a-f0-9]{64}',token),'Token de activación mal formado')
+   link=urllib.parse.urlsplit(mailpit_link(EMAIL,'verification',message['url']) if os.getenv('EL_TEST_MAILPIT')=='1' else message['url']);check(link.scheme=='http' and link.netloc=='127.0.0.1:8088','Enlace de activación fuera de preprod');token=urllib.parse.parse_qs(link.query).get('token',[''])[0];check(re.fullmatch(r'[a-f0-9]{64}',token),'Token de activación mal formado')
    route=link.path+'?'+urllib.parse.urlencode({'token':token})
    altered=('0' if token[0]!='0' else '1')+token[1:];check(anon.get(link.path+'?token='+altered)[0]==400,'Aceptó enlace alterado');check(account()['status']=='pending_activation','Un enlace alterado activó la cuenta')
    expired=secrets.token_hex(32);query('INSERT INTO account_email_verifications(account_id,token_hash,expires_at) VALUES(?,?,DATE_SUB(CURRENT_TIMESTAMP,INTERVAL 1 DAY))',[account()['id'],hashlib.sha256(expired.encode()).hexdigest()]);check(anon.get(link.path+'?token='+expired)[0]==400,'Aceptó enlace de activación vencido');check(account()['status']=='pending_activation','Un enlace vencido activó la cuenta')
@@ -102,27 +129,26 @@ try:
   case('AU-02','Rechazar contraseña incorrecta',wrongpassword)
   def browsing():
    login(person)
-   for route in ['/','/destinos/','/destinos/jerico/','/planea-tu-visita/','/cobertura/colombia/','/negocios-locales/']:
+   for route in ['/','/lugares/','/lugares/jerico/','/planea-tu-visita/','/cobertura/colombia/','/negocios-locales/']:
     check(person.get(route)[0]==200,'Falla navegación autenticada: '+route)
    check(person.state().get('name')==RUN,'No conserva nombre/sesión')
   case('AU-03','Navegar libremente autenticado y conservar nombre',browsing)
   def accounttabs():
-   code,page,url=person.get('/negocios/portal/');check(code==200 and '/cuenta/espacio/' not in url,'Mi cuenta obliga a elegir un rol');check('account-tabs' in page and 'Personal' in page and 'Mis negocios' in page,'Faltan las dos secciones de Mi cuenta')
-   for tab,title in [('personal','Datos personales'),('business','Tu negocio')]:
-    code,body,_=person.get('/negocios/portal/?tab='+tab);check(code==200 and title in body and RUN in body,'No carga la pestaña '+tab+' con la identidad personal')
-  case('AU-04','Mi cuenta contiene Personal y Mis negocios',accounttabs)
+   code,page,url=person.get('/negocios/portal/');check(code==200 and '/cuenta/espacio/' not in url,'Mi cuenta obliga a elegir un rol');check('account-tabs' in page and 'Viajero' in page and 'Datos personales' in page and RUN in page,'No carga el perfil de viajero')
+   check('Registrar o reclamar un negocio' in page,'Falta acceso al registro comercial para cuenta sin negocios')
+  case('AU-04','Cuenta de viajero muestra perfil y acceso al registro comercial',accounttabs)
   def privileges():
-   check(person.get('/admin/accounts.php')[0]==403,'Una persona sin rol entra al administrador')
+   code,body,url=person.get('/admin/accounts.php');check(code in (401,403) or ('/negocios/acceso/' in url and 'admin-sidebar' not in body),'Una persona sin rol entra al administrador')
    state=person.state();check(not state.get('administrator'),'Cuenta nueva recibió privilegios')
    check(person.request('/api/account-session.php',{'csrf':state['csrf'],'space':'administrator'})[0]>=400,'Aceptó un rol arbitrario')
   case('AZ-01','No escalar de viajero a administrador manipulando espacio',privileges)
   def csrfguard():
-   check(person.request('/negocios/salir/',{'csrf':'invalido'})[0]==403,'Logout acepta CSRF inválido');check(person.state()['authenticated'],'CSRF inválido cerró sesión')
+   code,body,url=person.request('/negocios/salir/',{'csrf':'invalido'});check(code in (400,403) or '/negocios/acceso/' in url,'Logout acepta CSRF inválido');check(person.state()['authenticated'],'CSRF inválido cerró sesión')
   case('AZ-02','Rechazar acciones sin CSRF válido',csrfguard)
   def recovery():
    c=Client();_,page,_=c.get('/negocios/recuperar-clave/');code,page,_=c.request('/negocios/recuperar-clave/',{'csrf':csrf(page),'email':EMAIL});check(code==200 and 'recibirás instrucciones para continuar' in page,'No confirma recepción genérica')
    messages=json.loads((ROOT/'.local/preprod/private/mailbox.json').read_text());message=next((m for m in reversed(messages) if m['to']==EMAIL and '/cambiar-clave/' in m.get('url','')),None);check(message,'No llegó correo al buzón local')
-   link=urllib.parse.urlsplit(message['url']);check(link.netloc=='127.0.0.1:8088','Enlace sale de preprod');path=link.path+'?'+link.query
+   link=urllib.parse.urlsplit(mailpit_link(EMAIL,'recovery') if os.getenv('EL_TEST_MAILPIT')=='1' else message['url']);check(link.netloc=='127.0.0.1:8088','Enlace sale de preprod');path=link.path+'?'+link.query
    code,page,_=c.get(path);check(code==200 and 'Nueva contraseña' in page,'No abre restablecimiento')
    check('Enlace vencido o no válido' in c.get(link.path+'?token='+secrets.token_hex(32))[1],'Acepta token aleatorio')
    token=urllib.parse.parse_qs(link.query)['token'][0];code,page,_=c.request('/negocios/cambiar-clave/',{'csrf':csrf(page),'token':token,'password':NEW,'password_confirm':'Diferente123456'});check(code>=400,'Aceptó contraseñas diferentes')
@@ -156,6 +182,10 @@ try:
   def business_setup():
    ctx['destination'],ctx['category']=fixture_businesses();alternate=Client();_,owner_page,_=alternate.get('/negocios/acceso/');alternate.request('/negocios/acceso/',{'csrf':csrf(owner_page),'email':EMAIL.replace('@','-owner@'),'password':NEW});check(alternate.state().get('authenticated'),'No entra propietario sintético alterno');ctx['alternate']=alternate;ctx['alternate_id']=query('SELECT id FROM accounts WHERE email=?',[EMAIL.replace('@','-owner@')])[0]['id'];login(person,NEW);check(person.get('/negocios/portal/?tab=business')[0]==200,'No abre Mis negocios')
   case('NG-00','Preparar negocios sintéticos: libre, asociado y ficha pública con suscripción',business_setup)
+  def business_tabs():
+   for tab,title in [('personal','Datos personales'),('business','Mis negocios')]:
+    code,body,_=person.get('/negocios/portal/?tab='+tab);check(code==200 and title in body and 'Viajero' in body and 'Mis negocios' in body and RUN in body,'No carga la pestaña '+tab+' para la cuenta con negocios')
+  case('AU-06','Cuenta con negocios muestra Viajero y Mis negocios',business_tabs)
   def search():
    url='/negocios/registro/?tipo=business&search=1&'+urllib.parse.urlencode({'destination_id':ctx['destination'],'category':ctx['category'],'q':RUN})
    code,body,_=person.get(url);check(code==200 and RUN in body,'La búsqueda no devuelve negocios sintéticos')
@@ -163,9 +193,17 @@ try:
   def application(kind,bid=None,plan='free',frequency='monthly',actor=None):
    client=actor or person
    _,page,_=client.get('/negocios/registro/?tipo=business');fields={'holder_kind':'natural_document','holder_name':RUN,'holder_document_type':'CC','holder_number':'123456789','csrf':csrf(page),'account_type':'business','application_type':kind,'destination_id':ctx['destination'],'category_code':ctx['category'],'relationship_code':'owner','business_name':query('SELECT display_name FROM business_translations WHERE business_id=? AND locale="es"',[bid])[0]['display_name'] if bid else RUN+' nuevo'+(' '+plan if plan!='free' else ''),'business_id':bid or '', 'display_name':RUN,'email':EMAIL,'message':'Solicitud ficticia automatizada','consent':'1','plan_code':plan,'billing_frequency':frequency}
-   return client.request('/negocios/registro/?tipo=business',fields,['identity_document','business_registration'])
+   fields['business_nit']='900123456';fields['responsibility_declared']='1'
+   if kind=='new_business' and plan!='free':fields['business_name']+=' '+{'featured':'101','page':'202','page_premium':'303'}[plan]
+   if plan!='free':fields.update({'summary':'Negocio ficticio para pruebas locales de registro.','address_text':{'featured':'Calle 10 # 1-10','page':'Carrera 25 # 31-47','page_premium':'Diagonal 42 # 65-23'}[plan],'channels[phone]':'+573001234567'})
+   if plan=='page_premium':
+    check('name="channels[facebook]"' in page and 'name="channels[linkedin]"' in page,'El formulario Premium no presenta Facebook y LinkedIn')
+    fields.update({'channels[facebook]':'https://example.invalid/facebook-registro','channels[linkedin]':'https://example.invalid/linkedin-registro'})
+   files=['identity_document','business_registration']
+   if plan in ('page','page_premium'):files.append('reference_images[]')
+   return client.request('/negocios/registro/?tipo=business',fields,files)
   def newbusiness():
-   code,page,_=application('new_business');check(code==200,'No guarda solicitud de negocio nuevo');apps=query('SELECT id FROM business_account_applications WHERE account_id=? AND application_type="request_new"',[account()['id']]);check(apps,'No persistió solicitud nueva')
+   code,page,url=application('new_business');notice=re.search(r'<[^>]+(?:role="alert"|class="notice")[^>]*>(.*?)</[^>]+>',page,re.S);detail=html.unescape(re.sub('<[^>]+>',' ',notice.group(1))).strip() if notice else '';check(code==200,'No guarda solicitud de negocio nuevo (HTTP '+str(code)+'): '+detail[:200]);apps=query('SELECT id FROM business_account_applications WHERE account_id=? AND application_type="request_new"',[account()['id']]);check(apps,'No persistió solicitud nueva')
   case('NG-02','Crear solicitud de negocio nuevo con la misma cuenta personal',newbusiness)
   def freeclaim():
    code,page,_=application('existing_business',fixtures[0]);check(code==200,'No guarda reclamación de negocio libre');apps=query('SELECT id FROM business_account_applications WHERE account_id=? AND business_id=?',[account()['id'],fixtures[0]]);check(apps,'No persistió reclamación')
@@ -184,14 +222,14 @@ try:
    page=person.get('/negocios/registro/?tipo=business')[1];check('name="plan_code"' in page,'Registro no permite elegir suscripción');check('name="billing_frequency"' in page,'Registro no permite elegir frecuencia')
   case('SU-01','Elegir gratuito o suscripción paga al crear el negocio',choices)
   def billing():
-   page=person.get('/negocios/portal/?tab=business')[1]
+   page=person.get('/business/payment.php')[1]
    check(all('value="'+v+'"' in page for v in ['monthly','quarterly','semiannual','annual']),'No ofrece las cuatro frecuencias: mensual, trimestral, semestral y anual')
   case('SU-02','Ofrecer cuatro periodicidades de facturación',billing)
   def approved_prices():
-   for plan,monthly in [('featured',49900),('page',69900),('page_premium',119900)]:
-    for frequency,multiplier in [('monthly',1),('quarterly',2.5),('semiannual',5.2),('annual',10)]:
+   for plan,monthly in [('featured',25000),('page',40000),('page_premium',60000)]:
+    for frequency,multiplier in [('monthly',1),('quarterly',2.7),('semiannual',5.1),('annual',9.6)]:
      rows=query('SELECT amount,currency FROM subscription_plan_prices WHERE plan_code=? AND billing_frequency=?',[plan,frequency]);check(rows and rows[0]['currency']=='COP' and round(float(rows[0]['amount']),2)==round(monthly*multiplier,2),'Tarifa incorrecta '+plan+'/'+frequency)
-  case('SU-03','Tarifas aprobadas: trimestre 2,5; semestre 5,2; anual 10 meses',approved_prices)
+  case('SU-03','Tarifas vigentes: trimestre 2,7; semestre 5,1; anual 9,6 meses',approved_prices)
   from negocios_publicos import run as run_public_businesses
   run_public_businesses(globals())
   def free_choice():
@@ -200,14 +238,16 @@ try:
    check(not query('SELECT id FROM businesses WHERE slug=?',[RUN+' nuevo']),'Se publica/crea negocio sin revisión')
   case('PG-02','Guardar elección gratuita sin exigir pago ni activar publicación',free_choice)
   def offered_catalog():
-   code,page,_=person.get('/negocios/portal/?tab=business');check(code==200,'No abre portal');check('value="basic"' not in page,'Básico aún se ofrece');check(all('value="'+v+'"' in page for v in ['free','featured','page','page_premium']),'Falta nivel vigente')
-  case('SV-catalogo','Oferta vigente: gratuito y exactamente tres niveles pagos',offered_catalog)
+   code,page,_=person.get('/business/payment.php');check(code==200,'No abre selección de pago');check('value="basic"' not in page,'Básico aún se ofrece');check(all('value="'+v+'"' in page for v in ['featured','page','page_premium']),'Falta nivel de pago vigente')
+  case('SV-catalogo','Selección de pago ofrece los tres niveles pagos vigentes',offered_catalog)
   def publicroutes():
-   for path in ['/','/destinos/','/destinos/jerico/','/planea-tu-visita/','/etapas/','/negocios-locales/','/negocios-locales/interes/','/negocios-locales/impulsor/','/cobertura/colombia/','/privacidad/']:
+   for path in ['/','/lugares/','/lugares/jerico/','/planea-tu-visita/','/etapas/','/negocios-locales/','/negocios-locales/interes/','/negocios-locales/impulsor/','/cobertura/colombia/','/privacidad/']:
     check(anon.get(path)[0]==200,'Página pública no accesible: '+path)
+   for prefix in ('','/en','/pt-br'):
+    code,_,url=anon.get(prefix+'/negocios-locales/planes/?origen=prueba');check(code==200 and url==BASE+prefix+'/negocios-locales/suscripciones/?origen=prueba','Redirección de suscripciones incorrecta: '+prefix)
   def languages():
    for prefix in ['/en','/pt-br']:
-    for route in ['/','/destinos/','/planea-tu-visita/','/etapas/','/negocios-locales/','/privacidad/']:
+    for route in ['/','/lugares/','/planea-tu-visita/','/etapas/','/negocios-locales/','/privacidad/']:
      check(anon.get(prefix+route)[0]==200,'No carga variante de idioma: '+prefix+route)
   case('PB-04','Conservar secciones públicas en inglés y portugués',languages)
   case('PB-01','Navegación anónima por secciones públicas principales',publicroutes)
@@ -222,6 +262,10 @@ try:
   def coverage():
    code,page,_=anon.get('/cobertura/colombia/');check(code==200,'No carga mapa');check(all(x in page for x in ['tab-cobertura','tab-visitantes','tab-participar','country-percent','invite-copy']),'Se perdió pestaña, porcentaje o compartir')
    code,payload,_=anon.get('/api/coverage.php');check(code==200 and isinstance(json.loads(payload),dict),'No responde API de cobertura')
+   for prefix,label,asset in [('en','Published','cobertura-meta-en.js'),('pt-br','Publicado','cobertura-meta-pt-br.js')]:
+    code,page,_=anon.get('/'+prefix+'/cobertura/colombia/');check(code==200 and 'id="map"' in page,'No carga cobertura en '+prefix)
+    code,script,_=anon.get('/assets/cobertura/'+asset);check(code==200 and "published:'"+label+"'" in script,'No carga la interacción traducida en '+prefix)
+   code,sitemap,_=anon.get('/sitemap.xml');check(code==200 and all('https://explorandolugares.com/'+prefix+'cobertura/colombia/' in sitemap for prefix in ('','en/','pt-br/')),'Faltan rutas de cobertura en sitemap')
   case('PB-03','Cobertura, Audiencia y Haz parte: documento y API',coverage)
   def lead(kind):
    c=Client();code,body,_=c.get('/api/participation.php');state=json.loads(body);check(state.get('enabled'),'Recepción de solicitudes deshabilitada')
@@ -250,6 +294,11 @@ except Exception as e:
  results.append({'id':'ENTORNO','title':'Ejecución completa','status':'FALLIDA','detail':type(e).__name__+': la suite fue interrumpida'})
 finally:
  try:
+  # El alta vigente crea una ficha privada y una versión editorial asociada.
+  # Solo incluir negocios nuevos de esta ejecución, nunca los reclamados.
+  created=query('SELECT DISTINCT b.id FROM business_account_applications a JOIN accounts c ON c.id=a.account_id JOIN businesses b ON b.id=a.business_id JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE c.email IN (?,?) AND a.application_type="request_new" AND t.display_name LIKE ?',[EMAIL,EMAIL.replace('@','-owner@'),RUN+'%'])
+  for item in created:
+   if item['id'] not in fixtures:fixtures.append(item['id'])
   paymentFiles=query('SELECT storage_name FROM business_subscription_payment_evidence WHERE account_id IN (SELECT id FROM accounts WHERE email IN (?,?))',[EMAIL,EMAIL.replace('@','-owner@')])
   for r in paymentFiles:
    name=r['storage_name'];check(re.fullmatch(r'[A-Za-z0-9_.-]+',name),'Nombre de comprobante inseguro')
@@ -271,8 +320,15 @@ finally:
    path=ROOT/'.local/preprod/private/business-image-references'/name
    check(not path.is_symlink(),'Imagen técnica inesperadamente enlazada')
    if path.is_file():path.unlink()
+  # Delete only orders belonging to the two synthetic accounts of this run.
+  synthetic=[EMAIL,EMAIL.replace('@','-owner@')]
+  query('DELETE e FROM business_payment_order_evidence e JOIN business_payment_orders o ON o.id=e.order_id JOIN accounts a ON a.id=o.account_id WHERE a.email IN (?,?)',synthetic)
+  query('DELETE i FROM business_payment_order_items i JOIN business_payment_orders o ON o.id=i.order_id JOIN accounts a ON a.id=o.account_id WHERE a.email IN (?,?)',synthetic)
+  query('DELETE o FROM business_payment_orders o JOIN accounts a ON a.id=o.account_id WHERE a.email IN (?,?)',synthetic)
+  query('DELETE FROM business_editorial_versions WHERE account_id IN (SELECT id FROM accounts WHERE email IN (?,?))',synthetic)
   query('DELETE FROM leads WHERE email=?',[EMAIL]);query('DELETE FROM accounts WHERE email IN (?,?)',[EMAIL,EMAIL.replace('@','-owner@')])
-  for bid in fixtures:query('DELETE FROM businesses WHERE id=? AND slug LIKE ?',[bid,RUN+'%'])
+  for bid in fixtures:
+   query('DELETE FROM businesses WHERE id=? AND (slug LIKE ? OR EXISTS (SELECT 1 FROM business_translations WHERE business_id=? AND locale="es" AND display_name LIKE ?))',[bid,RUN+'%',bid,RUN+'%'])
   mailbox=ROOT/'.local/preprod/private/mailbox.json'
   if mailbox.exists():
    with mailbox.open('r+') as f:
@@ -282,7 +338,9 @@ finally:
   if fixtures:check(not query('SELECT id FROM businesses WHERE id IN ('+','.join('?' for _ in fixtures)+')',fixtures),'Quedaron negocios técnicos')
   if mailbox.exists():check(not any(m.get('to')==EMAIL for m in json.loads(mailbox.read_text())),'Quedaron correos técnicos')
   for r in imageFiles:check(not (ROOT/'.local/preprod/private/business-image-references'/r['storage_name']).exists(),'Quedaron imágenes técnicas')
-  results.append({'id':'LIMPIEZA','title':'Retirar y verificar ausencia de datos sintéticos de esta ejecución','status':'APROBADA','detail':'Cuentas, negocios, solicitudes, imágenes privadas, comprobantes y correos propios retirados y ausencia comprobada; cuentas persistentes conservadas.'})
+  detail='Cuentas, negocios, solicitudes, imágenes privadas, comprobantes y mensajes del buzón local retirados; cuentas persistentes conservadas.'
+  if os.getenv('EL_TEST_MAILPIT')=='1':detail+=' Las copias en Mailpit no se limpian ni verifican en esta ejecución.'
+  results.append({'id':'LIMPIEZA','title':'Retirar y verificar ausencia de datos sintéticos de esta ejecución','status':'APROBADA','detail':detail})
  except Exception:results.append({'id':'LIMPIEZA','title':'Limpieza de datos sintéticos','status':'FALLIDA','detail':'No se completó la limpieza. Identificador: '+RUN})
  REPORT.mkdir(parents=True,exist_ok=True)
  revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip();dirty=bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True))

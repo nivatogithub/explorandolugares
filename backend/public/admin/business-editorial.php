@@ -6,9 +6,8 @@ require_once dirname(__DIR__,2).'/app/BusinessEditorialPackage.php';
 if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){unset($_SESSION['admin'],$_SESSION['last_seen']);header('Location: /admin/index.php',true,303);exit;}
 $_SESSION['last_seen']=time();$service=new BusinessEditorialService(db(),private_storage_path('business-image-references'));$ready=$service->ready();$rows=[];
 if($ready){
-    $rows=db()->query('SELECT v.id,v.business_id,v.status,v.plan_code,v.updated_at,v.note,t.display_name FROM business_editorial_versions v JOIN business_translations t ON t.business_id=v.business_id AND t.locale="es" WHERE v.id=(SELECT MAX(v2.id) FROM business_editorial_versions v2 WHERE v2.business_id=v.business_id) ORDER BY v.updated_at DESC,v.id DESC')->fetchAll(PDO::FETCH_ASSOC);
     $packages=new BusinessEditorialPackage(db(),private_storage_path('business-image-references'));
-    $rows=array_values(array_filter($rows,static fn(array $row):bool=>$packages->readiness((int)$row['business_id'])['ready']));
+    $rows=$packages->readyEditorialVersions();
 }
 $adminLayout=admin_layout_context();
 ?><!doctype html>

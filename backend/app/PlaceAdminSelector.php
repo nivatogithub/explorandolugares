@@ -6,6 +6,15 @@ final class PlaceAdminSelector
 {
     public function __construct(private PDO $pdo) {}
 
+    public function promotionPlaces():array
+    {
+        return $this->pdo->query('SELECT d.id,d.publication_status,COALESCE(t.display_name,d.slug) AS name,d.department FROM destinations d LEFT JOIN destination_translations t ON t.destination_id=d.id AND t.locale="es" ORDER BY name')->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function campaignPlaces():array
+    {
+        return $this->pdo->query('SELECT d.slug,COALESCE(t.display_name,d.slug) AS name FROM destinations d LEFT JOIN destination_translations t ON t.destination_id=d.id AND t.locale="es" ORDER BY name')->fetchAll();
+    }
+
     private function rows(string $sql,array $parameters=[]):array
     {
         $query=$this->pdo->prepare($sql);$query->execute($parameters);return $query->fetchAll(PDO::FETCH_ASSOC);

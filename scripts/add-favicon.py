@@ -4,12 +4,15 @@ from pathlib import Path
 import os
 import re
 import hashlib
+from direct_static_pages import is_direct_static_page
 
 ROOT=Path(__file__).resolve().parents[1]
 SITE=ROOT/'ensayos/v1'
 STYLE_VERSION=hashlib.sha256((SITE/'assets/style.css').read_bytes()).hexdigest()[:12]
 
 for page in SITE.rglob('*.html'):
+    if is_direct_static_page(page.relative_to(SITE).as_posix()):
+        continue
     source=page.read_text()
     has_head='</head>' in source
     href=Path(os.path.relpath(SITE/'assets/brand/explorando-lugares-logo-v2-transparent.png',page.parent)).as_posix()

@@ -6,7 +6,7 @@
  function addRow(){const index=rows().length;const holder=document.createElement('div');holder.innerHTML=template.innerHTML.replace(/places\[0\]/g,`places[${index}]`).replace(/place_uploads\[0\]/g,`place_uploads[${index}]`);const row=holder.firstElementChild;row.querySelector('summary').textContent=`Atractivo ${index+1}`;row.querySelectorAll('input:not([type=hidden]),textarea').forEach(el=>{if(el.type!=='file')el.value='';});row.querySelectorAll('input[type=hidden]').forEach(el=>el.value='');container.insertBefore(row,add);return row;}
  add.addEventListener('click',()=>{if(rows().length>=40){status.textContent='Un destino admite hasta 40 atractivos.';return;}addRow().open=true;});
  const publication=form.elements.namedItem('publication_status'),saveButton=form.querySelector('button[type="submit"]');
- if(publication&&saveButton){const updateSaveLabel=()=>saveButton.textContent=publication.value==='published'?'Guardar y publicar':(publication.value==='archived'?'Guardar y retirar del sitio':'Guardar como borrador');publication.addEventListener('change',updateSaveLabel);updateSaveLabel();form.addEventListener('submit',event=>{if(publication.value==='published'&&!confirm('Esto publicará el destino y sus atractivos aprobados para los visitantes. ¿Continuar?'))event.preventDefault();});const publishButton=form.querySelector('#publish-destination');if(publishButton)publishButton.addEventListener('click',()=>{publication.value='published';updateSaveLabel();form.requestSubmit(saveButton);});}
+ if(publication&&saveButton){const updateSaveLabel=()=>saveButton.textContent=publication.value==='published'?'Guardar y publicar':(publication.value==='archived'?'Guardar y retirar del sitio':'Guardar como borrador');publication.addEventListener('change',updateSaveLabel);updateSaveLabel();form.addEventListener('submit',event=>{if(publication.value==='published'&&!confirm('Esto publicará el lugar y sus atractivos aprobados para los visitantes. ¿Continuar?'))event.preventDefault();});const publishButton=form.querySelector('#publish-destination');if(publishButton)publishButton.addEventListener('click',()=>{publication.value='published';updateSaveLabel();form.requestSubmit(saveButton);});}
  const legacyFile=document.getElementById('destination-legacy-json-file');
  const tokenInput=form.elements.namedItem('package_import_token');
  const preview=document.getElementById('destination-package-preview');
@@ -26,7 +26,7 @@
   const selected=file.files&&file.files[0];if(!selected)return;
   if(form.elements.namedItem('id').value){status.textContent='El ZIP se usa para crear un destino nuevo. Abre «Crear destino» antes de importarlo.';file.value='';return;}
   if(selected.size>64*1024*1024){status.textContent='El ZIP debe pesar 64 MB o menos.';file.value='';return;}
-  if(!confirm('Se reemplazará el contenido actual del formulario con el paquete. Los cambios aún no se guardarán y el destino quedará como borrador. ¿Continuar?')){file.value='';status.textContent='Importación cancelada.';return;}
+  if(!confirm('Se reemplazará el contenido actual del formulario con el paquete. Los cambios aún no se guardarán y el lugar quedará como borrador. ¿Continuar?')){file.value='';status.textContent='Importación cancelada.';return;}
   status.textContent='Validando textos e imágenes del ZIP…';
   try{
    const body=new FormData();body.append('csrf',form.elements.namedItem('csrf').value);body.append('package_zip',selected);

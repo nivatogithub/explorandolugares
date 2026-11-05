@@ -1,3 +1,4 @@
+DirectoryIndex index.php index.html
 RewriteEngine On
 
 # Canonical production host only; leave localhost/preprod unchanged.
@@ -11,6 +12,7 @@ RewriteRule ^ https://explorandolugares.com%{REQUEST_URI} [R=301,L,NE]
 RewriteRule ^sitemap\.xml$ sitemap-live.php [L]
 
 # Pages formerly under aliados were moved to negocios-locales.
+RewriteRule ^((?:en/|pt-br/)?)negocios-locales/planes(?:/index\.html|/)?$ /$1negocios-locales/suscripciones/ [R=301,L,NE]
 RewriteRule ^((?:en/|pt-br/)?)aliados/planes(?:/index\.html|/)?$ /$1negocios-locales/suscripciones/ [R=301,L,NE]
 RewriteRule ^((?:en/|pt-br/)?)aliados/(interes|proceso|por-que-participar|impulsa-tu-destino|impulsor)(?:/index\.html|/)?$ /$1negocios-locales/$2/ [R=301,L,NE]
 RewriteRule ^((?:en/|pt-br/)?)aliados(?:/index\.html|/)?$ /$1negocios-locales/ [R=301,L,NE]

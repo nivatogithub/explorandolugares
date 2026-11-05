@@ -134,7 +134,8 @@ def mark_navigation(source,relative_file):
 from runpy import run_path
 run_path(str(ROOT/'scripts/generate-stage-notice.py'), run_name='__main__')
 
-files=[p for p in SITE.rglob('*.html') if not ({'en','pt-br'} & set(p.relative_to(SITE).parts)) and 'creditos-fotograficos' not in p.relative_to(SITE).parts]
+from direct_static_pages import is_direct_static_page
+files=[p for p in SITE.rglob('*.html') if not ({'en','pt-br'} & set(p.relative_to(SITE).parts)) and 'creditos-fotograficos' not in p.relative_to(SITE).parts and not is_direct_static_page(p.relative_to(SITE).as_posix())]
 for p in files:
  rel=p.relative_to(SITE);source=p.read_text()
  source=re.sub(r'<span class="language-switch".*?</span>','',source,flags=re.S)

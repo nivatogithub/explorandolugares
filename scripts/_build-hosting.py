@@ -41,30 +41,14 @@ parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--output',type=Path,default=root/'.local/hosting')
 args=parser.parse_args()
 subprocess.run([sys.executable,str(root/'scripts/generate-contact-options.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/generate-stage-notice.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/generate-english.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/generate-credits.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/generate-portuguese.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/add-floating-select.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/normalize-link-arrows.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/add-favicon.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/generate-seo.py')],check=True)
-subprocess.run([sys.executable,str(root/'scripts/add-contact-footer.py')],check=True)
 release=args.output.resolve()
 public=release/'public'
 public.mkdir(parents=True,exist_ok=True)
 from public_inputs import collect
 collect(root,public)
 subprocess.run([sys.executable,str(root/'scripts/localize-coverage.py'),'--public',str(public)],check=True)
-# El hosting conserva CSS durante varios días. Versionar la URL en cada entrega
-# evita que una página HTML nueva use una hoja de estilos anterior desde caché.
 style=public/'assets/style.css'
 if not style.is_file(): raise RuntimeError('Falta assets/style.css en la entrega pública.')
-style_version=hashlib.sha256(style.read_bytes()).hexdigest()[:12]
-for page in public.rglob('*.html'):
-    content=page.read_text()
-    content=content.replace('style.css"',f'style.css?v={style_version}"')
-    page.write_text(content)
 # Keep previous endpoint URLs without duplicating controller implementations.
 aliases=json.loads((root/'backend/app/public-route-aliases.json').read_text())['aliases']
 alias_rules=[]
@@ -110,13 +94,9 @@ subprocess.run([
 ],check=True)
 for obsolete in ['logo.svg','logo-completo.svg','favicon.svg']:
     (public/'assets'/obsolete).unlink(missing_ok=True)
-subprocess.run([sys.executable,str(root/'scripts/apply-portal-identity.py'),'--public',str(public)],check=True)
-subprocess.run(['php',str(root/'scripts/apply-place-terminology.php'),str(release)],check=True)
-subprocess.run([sys.executable,str(root/'scripts/adjust-public-audit.py'),'--public',str(public)],check=True)
 # Stamp all generated pages after the integration overlay, including general pages.
 subprocess.run([sys.executable,str(root/'scripts/version-analytics.py'),'--public',str(public)],check=True)
-subprocess.run([sys.executable,str(root/'scripts/normalize-subscription-route.py'),'--public',str(public)],check=True)
-subprocess.run([sys.executable,str(root/'scripts/generate-release-sitemap.py'),'--public',str(public)],check=True)
+subprocess.run([sys.executable,str(root/'scripts/generate-release-sitemap.py'),'--public',str(public),'--catalog',str(private_content/'release-places-businesses.json')],check=True)
 # Approved destination media are data-bound: copy them AFTER legacy pruning/overlays.
 # A successful build must reproduce the exact reviewed bytes, never an old alias.
 approved_media=json.loads((root/'backend/app/content/release-media-manifest.json').read_text())
@@ -131,19 +111,14 @@ for item in approved_media['media']:
     if not target.is_file() or hashlib.sha256(target.read_bytes()).hexdigest()!=item['sha256']:
         raise RuntimeError('El paquete alteró un medio aprobado: '+str(relative))
 subprocess.run([sys.executable,str(root/'scripts/apply-place-routes.py'),'--release',str(release)],check=True)
-subprocess.run([sys.executable,str(root/'scripts/add-social-metadata.py'),'--public',str(public)],check=True)
-subprocess.run([sys.executable,str(root/'scripts/compose-published-index.py'),'--release',str(release)],check=True)
+subprocess.run([sys.executable,str(root/'scripts/check-social-metadata.py'),'--public',str(public)],check=True)
+subprocess.run([sys.executable,str(root/'scripts/check-shell-ownership.py'),'--public',str(public)],check=True)
 # Retired controller stays inventoried for a separate, explicit cleanup; no template loads it.
 # Explicit retirement is verified after composition; no legacy controller is restored.
-subprocess.run([sys.executable,str(root/'scripts/consolidate-shell-css.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/compose-presentation.py'),'--public',str(public)],check=True)
-subprocess.run([sys.executable,str(root/'scripts/generate-context-pages.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/version-presentation.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/retire-presentation-resources.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/version-resources.py'),'--public',str(public)],check=True)
-subprocess.run([sys.executable,str(root/'scripts/prepare-privacy-shell.py'),'--release',str(release)],check=True)
-subprocess.run([sys.executable,str(root/'scripts/prepare-commercial-shell.py'),'--release',str(release)],check=True)
-subprocess.run([sys.executable,str(root/'scripts/prepare-home-shell.py'),'--release',str(release)],check=True)
 print(f'Entrega de revisión: {release}\nRaíz pública: {public}\nConfigurar private/config.php fuera de public/. No hay publicación automática.')
 
 # Fail the package if retired identity assets or palette reappear.

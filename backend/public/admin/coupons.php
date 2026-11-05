@@ -3,6 +3,7 @@ declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
 require_admin_session();
 require_once dirname(__DIR__,2).'/app/BusinessPromotions.php';
+require_once dirname(__DIR__,2).'/app/PlaceAdminSelector.php';
 $service=new BusinessPromotions(db());$error='';$editing=null;
 header('Cache-Control: private, no-store');header('X-Robots-Tag: noindex, nofollow');
 try{
@@ -13,7 +14,7 @@ try{
         header('Location: coupons.php?edit='.rawurlencode($code).'&guardado=1',true,303);exit;
     }
     $codes=$service->listing();$uses=$service->redemptions();
-    $places=db()->query('SELECT d.id,d.publication_status,COALESCE(t.display_name,d.slug) AS name,d.department FROM destinations d LEFT JOIN destination_translations t ON t.destination_id=d.id AND t.locale="es" ORDER BY name')->fetchAll(PDO::FETCH_ASSOC);
+    $places=(new PlaceAdminSelector(db()))->promotionPlaces();
     foreach($codes as $item)if($item['code']===($_GET['edit']??''))$editing=$item;
 }catch(Throwable $e){$error=$e instanceof PDOException?'No se pudo gestionar el cupón. Revisa las actualizaciones 056 y 057 de la base de datos.':$e->getMessage();http_response_code(400);$codes??=[];$uses??=[];$places??=[];}
 $values=$_SERVER['REQUEST_METHOD']==='POST'?$_POST:($editing?['code'=>$editing['code'],'percentage'=>$editing['percentage'],'plans'=>json_decode($editing['plans_json'],true),'periods'=>json_decode($editing['periods_json'],true),'enabled'=>$editing['enabled'],'max_uses'=>$editing['max_uses'],'expires_on'=>$editing['expires_at']?(new DateTimeImmutable($editing['expires_at'],new DateTimeZone('UTC')))->setTimezone(new DateTimeZone('America/Bogota'))->format('Y-m-d'):'']:['enabled'=>1,'percentage'=>100,'plans'=>['page'],'periods'=>['monthly']]);

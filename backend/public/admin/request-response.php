@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
+require_once dirname(__DIR__,2).'/app/AdminRequestDetailSelector.php';
 require_once dirname(__DIR__,2).'/app/LeadReplyService.php';
 require_once dirname(__DIR__,2).'/app/BrevoSettings.php';
 header('Cache-Control: private, no-store');header('X-Robots-Tag: noindex, nofollow');
@@ -8,7 +9,7 @@ if(isset($_SESSION['admin'])&&time()-(int)($_SESSION['last_seen']??0)>1800)unset
 if(empty($_SESSION['admin'])){http_response_code(403);exit('Inicia sesión desde el portal.');}
 $_SESSION['last_seen']=time();
 $lead=filter_var($_GET['lead']??null,FILTER_VALIDATE_INT);if(!$lead||$lead<1){http_response_code(404);exit('Solicitud no encontrada.');}
-$q=db()->prepare('SELECT * FROM leads WHERE id=?');$q->execute([$lead]);$request=$q->fetch(PDO::FETCH_ASSOC);if(!$request){http_response_code(404);exit('Solicitud no encontrada.');}
+$request=(new AdminRequestDetailSelector(db()))->request('lead',(int)$lead);if(!$request){http_response_code(404);exit('Solicitud no encontrada.');}
 $service=new LeadReplyService(db());$error='';$notice='';$row=null;$history=[];$settings=[];$simulated=!empty($config['local_test']);
 try{
     $settings=$simulated?['enabled'=>true,'api_key'=>'synthetic-transport-only','sender_email'=>'respuestas@example.invalid','sender_name'=>'Explorando Lugares · Pruebas','reply_to'=>'ayuda@example.invalid']:BrevoSettings::load(private_storage_path('brevo'),(string)$config['app_key']);

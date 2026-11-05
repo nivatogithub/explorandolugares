@@ -117,7 +117,7 @@ final class BusinessSubscriptionAdminService
             $q=$this->pdo->prepare('SELECT * FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1');$q->execute([$businessId]);$sub=$q->fetch(PDO::FETCH_ASSOC);
             if(!$sub)throw new RuntimeException('Registra la suscripción antes de publicar el negocio.');
             $operatorService=new ExperienceOperatorAddon($this->pdo);$operator=$operatorService->forSubscription((int)$sub['id']);if($operator){$operatorService->requireEligible($businessId);$destinationQuery=$this->pdo->prepare('SELECT destination_id FROM businesses WHERE id=?');$destinationQuery->execute([$businessId]);$operatorService->quote($sub['plan_code'],(string)$sub['billing_frequency'],(int)$destinationQuery->fetchColumn(),(int)$operator['experience_id']);}
-            if($sub['plan_code']!=='free'&&(trim((string)$business['location_map_url'])===''||!(bool)$business['location_confirmed']))throw new RuntimeException('Confirma en el mapa que la dirección y el punto corresponden al destino antes de publicar.');
+            if($sub['plan_code']!=='free'&&(trim((string)$business['location_map_url'])===''||!(bool)$business['location_confirmed']))throw new RuntimeException('Confirma en el mapa que la dirección y el punto corresponden al lugar antes de publicar.');
             if(trim((string)$business['address_text'])===''&&($business['latitude']===null||$business['longitude']===null)&&$sub['plan_code']!=='free')throw new RuntimeException('Completa una dirección o un punto de ubicación antes de publicar.');
             if($sub['plan_code']!=='free'){$q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel IN ("phone","phone_fixed","whatsapp") AND contact_value<>""');$q->execute([$businessId]);if((int)$q->fetchColumn()<1)throw new RuntimeException('Registra un teléfono fijo, celular o WhatsApp de contacto antes de publicar.');}
             if($sub['publish_not_before']!==null&&$localPublishDate<$sub['publish_not_before'])throw new RuntimeException('La fecha elegida todavía no permite publicar este negocio.');
@@ -142,7 +142,17 @@ final class BusinessSubscriptionAdminService
             // Legacy publication cannot bypass an editorial version already in progress.
             try{$q=$this->pdo->prepare('SELECT id,status FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1');$q->execute([$businessId]);$editorial=$q->fetch(PDO::FETCH_ASSOC);}
             catch(PDOException $error){if(str_contains($error->getMessage(),'no such table')||($error->errorInfo[1]??0)===1146)$editorial=false;else throw $error;}
-            if($editorial&&((int)$editorial['id']!==$editorialVersion||$editorial['status']!=='owner_approved'))throw new RuntimeException('Este negocio tiene una versión editorial: publícala desde su revisión final, después de la aprobación del comerciante.');
+            if($editorial&&((int)$editorial['id']!==$editorialVersion||$editorial['status']!=='owner_approved')){
+                // An add-on for the already published plan does not change the
+                // approved editorial version. All other changes still need review.
+                $addonOnly=false;
+                if($editorialVersion===null&&$editorial['status']==='published'){
+                    $q=$this->pdo->prepare('SELECT s.plan_code,old.plan_code AS previous_plan FROM business_subscriptions s JOIN subscription_changes c ON c.subscription_id=s.id AND c.change_kind="upgrade" JOIN business_subscriptions old ON old.id=c.source_subscription_id JOIN business_experience_subscriptions x ON x.subscription_id=s.id WHERE s.business_id=? AND s.status="paid_pending_publication" AND s.id=(SELECT MAX(last_sub.id) FROM business_subscriptions last_sub WHERE last_sub.business_id=s.business_id)');
+                    $q->execute([$businessId]);$change=$q->fetch(PDO::FETCH_ASSOC);
+                    $addonOnly=$change&&$change['plan_code']===$change['previous_plan'];
+                }
+                if(!$addonOnly)throw new RuntimeException('Este negocio tiene una versión editorial: publícala desde su revisión final, después de la aprobación del comerciante.');
+            }
 
             $q=$this->pdo->prepare('SELECT id,address_text,latitude,longitude,location_map_url,location_confirmed,information_status,operation_status,record_origin FROM businesses WHERE id=?');$q->execute([$businessId]);$business=$q->fetch(PDO::FETCH_ASSOC);
             $sub=$this->requirePublicationReady($business,$businessId,$localPublishDate);

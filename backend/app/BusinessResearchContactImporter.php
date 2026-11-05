@@ -12,14 +12,14 @@ final class BusinessResearchContactImporter
         $businesses=$package['businesses']??null;
         if(!is_array($businesses)||!array_is_list($businesses)||count($businesses)<1||count($businesses)>500)throw new RuntimeException('El paquete debe incluir entre 1 y 500 negocios existentes.');
         $q=$pdo->prepare('SELECT id FROM destinations WHERE slug=?');$q->execute([self::text($package['destination_slug']??'',100)]);$destinationId=(int)$q->fetchColumn();
-        if(!$destinationId)throw new RuntimeException('No existe el destino del paquete.');
+        if(!$destinationId)throw new RuntimeException('No existe el lugar del paquete.');
         $q=$pdo->prepare('SELECT b.id,t.display_name FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE b.destination_id=?');$q->execute([$destinationId]);$names=[];
         foreach($q->fetchAll(PDO::FETCH_ASSOC) as $row)$names[self::normalize((string)$row['display_name'])][]=(int)$row['id'];
         $prepared=[];$matched=[];$recipientReady=self::recipientReady($pdo);
         foreach($businesses as $business){
             if(!is_array($business)||array_diff(array_keys($business),['name',$collection]))throw new RuntimeException('Registro de negocio no válido.');
             $name=self::text($business['name']??'',180);$ids=$names[self::normalize($name)]??[];
-            if(count($ids)!==1)throw new RuntimeException('El negocio «'.$name.'» no tiene una coincidencia única en este destino. No se creó ni modificó ningún negocio.');
+            if(count($ids)!==1)throw new RuntimeException('El negocio «'.$name.'» no tiene una coincidencia única en este lugar. No se creó ni modificó ningún negocio.');
             $id=$ids[0];$contacts=$business[$collection]??null;
             if(!is_array($contacts)||!array_is_list($contacts)||count($contacts)<1||count($contacts)>100)throw new RuntimeException('Revisa los canales de «'.$name.'».');
             $matched[$id]=true;

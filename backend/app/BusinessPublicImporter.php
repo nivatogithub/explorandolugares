@@ -11,7 +11,7 @@ final class BusinessPublicImporter
         if(class_exists(BusinessPackage::class))BusinessPackage::validateManifest($package);
         $destinationSlug=trim((string)($package['destination_slug']??''));
         $q=$pdo->prepare('SELECT id FROM destinations WHERE slug=?');$q->execute([$destinationSlug]);$destinationId=(int)$q->fetchColumn();
-        if(!$destinationId)throw new RuntimeException('El destino indicado no existe.');
+        if(!$destinationId)throw new RuntimeException('El lugar indicado no existe.');
         $businesses=$package['businesses']??null;if(!is_array($businesses)||count($businesses)<1||count($businesses)>500)throw new RuntimeException('El paquete debe incluir entre 1 y 500 negocios.');
         if($images&&(!$privateStorage||(!is_dir($privateStorage)&&!mkdir($privateStorage,0700,true))||!is_writable($privateStorage)))throw new RuntimeException('No se pudo preparar el almacenamiento privado de imágenes.');
         $storedFiles=[];$pdo->beginTransaction();
@@ -28,7 +28,7 @@ final class BusinessPublicImporter
                 if(preg_match('/^REEMPLAZAR\b/iu',$name))throw new RuntimeException('Completa los datos de ejemplo antes de importar el paquete.');
                 if(!in_array($informationStatus,['PUBLICO','VERIFICADO'],true))throw new RuntimeException('La verificación del registro '.($index+1).' debe ser PUBLICO o VERIFICADO.');
                 $q=$pdo->prepare('SELECT 1 FROM service_categories WHERE code=? AND is_active=1');$q->execute([$category]);if(!$q->fetchColumn())throw new RuntimeException('Categoría no válida en el registro '.($index+1).'.');
-                $duplicate=$pdo->prepare('SELECT 1 FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE b.destination_id=? AND LOWER(TRIM(t.display_name))=LOWER(TRIM(?))');$duplicate->execute([$destinationId,$name]);if($duplicate->fetchColumn())throw new RuntimeException('Ya existe un negocio con ese nombre en el destino: '.$name);
+                $duplicate=$pdo->prepare('SELECT 1 FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" WHERE b.destination_id=? AND LOWER(TRIM(t.display_name))=LOWER(TRIM(?))');$duplicate->execute([$destinationId,$name]);if($duplicate->fetchColumn())throw new RuntimeException('Ya existe un negocio con ese nombre en el lugar: '.$name);
                 $categoryCodes=BusinessCategories::validate($pdo,$business['category_codes']??[],$category);
                 $slug=self::uniqueSlug($pdo,$destinationId,$name);$insert->execute([self::uuid(),$destinationId,$category,$slug,$informationStatus]);$id=(int)$pdo->lastInsertId();BusinessCategories::replace($pdo,$id,$category,$categoryCodes);foreach(['es','en','pt-BR'] as $locale)$translation->execute([$id,$locale,$name,$locale==='es'?$summary:'',$locale==='es'?$description:'']);$freeSubscription->execute([$id]);
                 $sources=$business['sources']??[];if(!is_array($sources)||count($sources)<1)throw new RuntimeException('Agrega al menos una fuente comprobable para '.$name.'.');

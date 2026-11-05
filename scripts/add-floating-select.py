@@ -3,11 +3,14 @@
 from pathlib import Path
 import os
 import re
+from direct_static_pages import is_direct_static_page
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'ensayos/v1'
 
 for page in SITE.rglob('*.html'):
+    if is_direct_static_page(page.relative_to(SITE).as_posix()):
+        continue
     source = page.read_text()
     if '</body>' not in source:
         continue

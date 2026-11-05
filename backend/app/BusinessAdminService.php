@@ -92,7 +92,7 @@ final class BusinessAdminService
     public function save(array $input): int
     {
         $id=max(0,(int)($input['id']??0));$destinationId=filter_var($input['destination_id']??null,FILTER_VALIDATE_INT);
-        if(!$destinationId)throw new RuntimeException('Selecciona un destino.');
+        if(!$destinationId)throw new RuntimeException('Selecciona un lugar.');
         $category=(string)($input['category_code']??'');$valid=$this->pdo->prepare('SELECT 1 FROM service_categories WHERE code=? AND is_active=1');$valid->execute([$category]);
         if(!$valid->fetchColumn())throw new RuntimeException('Selecciona una categoría válida.');
         $existing=$id?$this->find($id):null;if($id&&!$existing)throw new RuntimeException('El negocio ya no existe.');
@@ -176,12 +176,12 @@ final class BusinessAdminService
         if(strlen($address)>300||strlen($reference)>500)throw new RuntimeException('La dirección o referencia es demasiado larga.');
         $hasMapField=$requiresLocation&&!empty($input['map_workflow']);$mapUrl=trim((string)($input['location_map_url']??($existing['location_map_url']??'')));$mapUrl=$this->mapUrl($mapUrl);$coords=$this->coordinatesFromMap($mapUrl);
         $confirmed=array_key_exists('location_confirmed',$input)?(!empty($input['location_confirmed'])?1:0):((int)($existing['location_confirmed']??0));
-        if($hasMapField&&!$confirmed)throw new RuntimeException('Selecciona el punto exacto en el mapa y confirma que dirección y destino coinciden.');
+        if($hasMapField&&!$confirmed)throw new RuntimeException('Selecciona el punto exacto en el mapa y confirma que dirección y lugar coinciden.');
         // Legacy latitude/longitude are accepted only for older internal callers; the form no longer exposes independent coordinates.
         $latText=trim((string)($input['latitude']??''));$lonText=trim((string)($input['longitude']??''));$lat=$latText===''?null:filter_var($latText,FILTER_VALIDATE_FLOAT);$lon=$lonText===''?null:filter_var($lonText,FILTER_VALIDATE_FLOAT);
         if($coords){[$lat,$lon]=$coords;}
         elseif($mapUrl!==''&&$latText===''&&$lonText===''&&empty($input['location_map_changed'])){$lat=$existing['latitude']??null;$lon=$existing['longitude']??null;}
-        if($hasMapField&&($lat===null||$lon===null))throw new RuntimeException('Selecciona el punto exacto en el mapa y confirma que dirección y destino coinciden.');
+        if($hasMapField&&($lat===null||$lon===null))throw new RuntimeException('Selecciona el punto exacto en el mapa y confirma que dirección y lugar coinciden.');
         if(($latText!==''&&$lat===false)||($lonText!==''&&$lon===false))throw new RuntimeException('La latitud y longitud deben ser números válidos.');
         if(($lat===null)!==($lon===null))throw new RuntimeException('Ingresa latitud y longitud juntas.');
         if($lat!==null&&($lat < -90||$lat>90||$lon < -180||$lon>180))throw new RuntimeException('Las coordenadas están fuera de rango.');

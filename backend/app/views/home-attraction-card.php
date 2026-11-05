@@ -1,0 +1,5 @@
+<?php
+declare(strict_types=1);
+$credit=$item['creator']==='Explorando Lugares'?$item['creator']:implode(' · ',array_filter([$item['creator'],$item['license_name']]));
+?>
+<article class="home-attraction"><a href="<?=$e($item['url'])?>"><img draggable="false" src="<?=$e($item['image'])?>" alt="<?=$e($item['alt_text']?:$item['name'])?>" loading="lazy" width="640" height="420"><h3><?=$e($item['name'])?></h3><p><?=$e($item['destination'])?></p></a><?php if($credit!=='' || preg_match('~^https?://~i',$item['source_url']??'') || preg_match('~^https?://~i',$item['license_url']??'')):?><small><?=$e($credit)?><?php foreach([['source_url',$locale==='en'?'Source':($locale==='pt-br'?'Fonte':'Fuente')],['license_url',$locale==='en'?'License':($locale==='pt-br'?'Licença':'Licencia')]] as [$key,$label]):?><?php if(preg_match('~^https?://~i',$item[$key]??'')):?> · <a href="<?=$e($item[$key])?>" target="_blank" rel="noopener noreferrer"><?=$e($label)?></a><?php endif ?><?php endforeach ?></small><?php endif ?></article>

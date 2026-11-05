@@ -17,7 +17,7 @@ import urllib.request
 ROOT = Path(__file__).resolve().parents[2]
 ORIGINS = {'preprod': 'http://127.0.0.1:8088', 'produccion': 'https://explorandolugares.com'}
 PLACES = ['jerico', 'cartagena', 'bogota', 'medellin', 'santa-marta']
-ROUTES = ['/', '/destinos/', '/planea-tu-visita/', '/negocios-locales/',
+ROUTES = ['/', '/lugares/', '/planea-tu-visita/', '/negocios-locales/',
           '/negocios-locales/planes/', '/negocios-locales/proceso/', '/cobertura/colombia/',
           '/contact.php', '/privacidad/', '/negocios/acceso/', '/negocios/registro/',
           '/negocios/recuperar-clave/']
@@ -130,7 +130,7 @@ def main():
         assert a.businesses == b.businesses, f'Directorio diferente: {route} ({len(a.businesses)}/{len(b.businesses)})'
         return {'route': route, 'title': b.title.strip(), 'businesses': len(b.businesses)}
 
-    routes = ROUTES + ['/' + lang + 'destinos/' + slug + '/' for slug in PLACES for lang in ('', 'en/', 'pt-br/')]
+    routes = ROUTES + ['/' + lang + 'lugares/' + slug + '/' for slug in PLACES for lang in ('', 'en/', 'pt-br/')]
     with ThreadPoolExecutor(max_workers=4) as pool:
         comparisons = [(route, pool.submit(compare, route)) for route in routes]
         for i, (route, future) in enumerate(comparisons, 1):

@@ -511,7 +511,7 @@ final class DatabaseMaintenance
     {
         $this->requireMysql();
         $report = $this->inspect();
-        if (!$report['catalog_empty']) throw new RuntimeException('El catálogo ya contiene registros. La importación inicial no sobrescribe, duplica ni modifica destinos existentes.');
+        if (!$report['catalog_empty']) throw new RuntimeException('El catálogo ya contiene registros. La importación inicial no sobrescribe, duplica ni modifica lugares existentes.');
         foreach ($report['migrations'] as $id => $state) {
             if ($state !== 'applied') throw new RuntimeException('Falta completar '.$id.' antes de importar el catálogo.');
         }

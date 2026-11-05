@@ -33,7 +33,7 @@ final class PlaceAdminService
         $expected=mb_strtolower(trim($data['translations']['es']['display_name']),'UTF-8');
         foreach($this->all() as $row){
             if($row['slug']!==$data['slug']&&mb_strtolower(trim((string)$row['display_name']),'UTF-8')!==$expected)continue;
-            if($row['country_code']!==$data['country_code']||$row['department']!==$data['department'])throw new RuntimeException('Existe un destino con ese nombre o dirección web en otra ubicación. Revísalo antes de crear otro.');
+            if($row['country_code']!==$data['country_code']||$row['department']!==$data['department'])throw new RuntimeException('Existe un lugar con ese nombre o dirección web en otra ubicación. Revísalo antes de crear otro.');
             return (int)$row['id'];
         }
         return null;
@@ -42,7 +42,7 @@ final class PlaceAdminService
     public function createStarterDraft(string $slug,string $publicRoot):int
     {
         $data=$this->starters()[$slug]??null;
-        if(!is_array($data))throw new RuntimeException('El destino preparado no existe.');
+        if(!is_array($data))throw new RuntimeException('El lugar preparado no existe.');
         if($id=$this->starterMatch($data))return $id;
         unset($data['municipality']);$data['publication_status']='draft';
         try{return $this->save($data,[],[],$publicRoot);}
@@ -101,7 +101,7 @@ final class PlaceAdminService
         $images=new PlaceImageStorage($publicRoot);
         $this->pdo->beginTransaction();
         try {
-            if ($id>0 && !$this->placeReads->placeExists($id)) throw new RuntimeException('El destino seleccionado ya no existe.');
+            if ($id>0 && !$this->placeReads->placeExists($id)) throw new RuntimeException('El lugar seleccionado ya no existe.');
             $id=$this->writes->saveRecord($id,$data);
             if (array_key_exists('labels',$in)) $this->writes->syncLabels($id,PlaceLabels::normalize($in['labels']));
             $this->writes->syncTranslations($id,$data,self::LOCALES);
@@ -140,7 +140,7 @@ final class PlaceAdminService
 
     public function delete(int $id): void
     {
-        if ($this->placeReads->businessCount($id)>0) throw new RuntimeException('No se puede borrar: hay negocios relacionados. Archiva el destino para conservar las relaciones.');
+        if ($this->placeReads->businessCount($id)>0) throw new RuntimeException('No se puede borrar: hay negocios relacionados. Archiva el lugar para conservar las relaciones.');
         $this->writes->delete($id);
     }
 
@@ -149,8 +149,8 @@ final class PlaceAdminService
         $tr=$in['translations']??[];
         $slug=trim((string)($in['slug']??''));
         if ($slug==='') $slug=$this->slugify((string)($tr['es']['display_name']??''));
-        if (!preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/D',$slug)) throw new RuntimeException('Escribe el nombre del destino en español para crear su dirección web automáticamente.');
-        $type=(string)($in['destination_type']??'municipality');if (!in_array($type,['municipality','city','other'],true)) throw new RuntimeException('Tipo de destino inválido.');
+        if (!preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/D',$slug)) throw new RuntimeException('Escribe el nombre del lugar en español para crear su dirección web automáticamente.');
+        $type=(string)($in['destination_type']??'municipality');if (!in_array($type,['municipality','city','other'],true)) throw new RuntimeException('Tipo de lugar inválido.');
         $country=strtoupper(trim((string)($in['country_code']??'CO')));if (!preg_match('/^[A-Z]{2}$/D',$country)) throw new RuntimeException('El país debe ser un código de dos letras.');
         $status=(string)($in['publication_status']??'draft');if (!in_array($status,['draft','published','archived'],true)) throw new RuntimeException('Estado de publicación inválido.');
         PlacePublicationPolicy::assertInitialState((int)($in['id']??0),$status);
@@ -166,7 +166,7 @@ final class PlaceAdminService
         }
         if (!is_array($places)) throw new RuntimeException('Revisa los lugares de interés enviados.');
         $filledPlaces=array_filter($places,static fn($place)=>is_array($place)&&trim((string)($place['slug']??''))!=='');
-        if (count($filledPlaces)>40) throw new RuntimeException('Un destino admite hasta 40 lugares de interés.');
+        if (count($filledPlaces)>40) throw new RuntimeException('Un lugar admite hasta 40 lugares de interés.');
         $cleanPlaces=[];
         foreach ($places as $formIndex=>$place) {
             if (!is_array($place)) throw new RuntimeException('Hay una fila de lugar de interés inválida.');
@@ -195,7 +195,7 @@ final class PlaceAdminService
                 $cleanPlaces[]=$clean;
         }
         if ($status==='published') {
-            GeolocationPolicy::requirePoint($num('latitude',-90,90),$num('longitude',-180,180),'el destino');
+            GeolocationPolicy::requirePoint($num('latitude',-90,90),$num('longitude',-180,180),'el lugar');
             foreach($cleanPlaces as $p)if($p['status']==='published'&&!GeolocationPolicy::placeExempt($slug,$p['slug'],$p['type']))GeolocationPolicy::requirePoint($p['lat'],$p['lng'],'el atractivo '.$p['translations']['es']['name']);
             PlacePublicationPolicy::assertReadyToPublish($tr,$history,$reasons,$cleanPlaces,self::LOCALES);
         }
@@ -258,7 +258,7 @@ final class PlaceAdminService
     {
         $existing=$this->placeReads->attractionIds($id);$retained=[];$placeIds=[];
         foreach($places as $i=>$p){
-            if($p['id']>0&&!in_array($p['id'],$existing,true))throw new RuntimeException('El ID de un lugar no pertenece a este destino.');
+            if($p['id']>0&&!in_array($p['id'],$existing,true))throw new RuntimeException('El ID de un lugar no pertenece a este lugar.');
             $poiId=$this->writes->saveAttraction($id,$p,$i+1);$retained[]=$poiId;$placeIds[$i]=$poiId;
             $this->writes->syncAttractionTranslations($poiId,$p['translations'],self::LOCALES);
             $this->writes->clearAttractionMedia($poiId);
@@ -278,7 +278,7 @@ final class PlaceAdminService
         $origin=(string)($metadata['image_origin']??'external');if(!in_array($origin,['external','own','ai_generated'],true))throw new RuntimeException('Selecciona un origen de imagen válido.');
         $creator=trim((string)($metadata['image_creator']??''));$source=trim((string)($metadata['image_source_url']??''));$license=trim((string)($metadata['image_license']??''));$licenseUrl=trim((string)($metadata['image_license_url']??''));
         if($origin==='external'&&($creator===''||$source===''||$license===''||$licenseUrl===''))throw new RuntimeException('Para una imagen externa indica autor, página de origen, licencia y enlace de la licencia.');
-        if($origin==='own'){$creator=$creator?:'Imagen propia o cedida para el destino';$license=$license?:'Uso autorizado por su titular';}
+        if($origin==='own'){$creator=$creator?:'Imagen propia o cedida para el lugar';$license=$license?:'Uso autorizado por su titular';}
         if($origin==='ai_generated'){$creator=$creator?:'Imagen generada con IA para Explorando Lugares';$license=$license?:'Generada con IA; verificar las condiciones de la herramienta utilizada';}
         $source=$this->httpsOrBlank($source);$licenseUrl=$this->httpsOrBlank($licenseUrl);
         $path=$images->store($id,$image);

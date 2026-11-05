@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__.'/BusinessRegistrationPlan.php';
 require_once __DIR__.'/BusinessPromotions.php';
+require_once __DIR__.'/BusinessEditorialSelector.php';
 
 /**
  * Builds the private source package used by the editorial team.  It is
@@ -11,6 +12,12 @@ require_once __DIR__.'/BusinessPromotions.php';
 final class BusinessEditorialPackage
 {
     public function __construct(private PDO $pdo,private string $referenceStorage) {}
+
+    public function readyEditorialVersions():array
+    {
+        $rows=(new BusinessEditorialSelector($this->pdo))->latestVersions();
+        return array_values(array_filter($rows,fn(array $row):bool=>$this->readiness((int)$row['business_id'])['ready']));
+    }
 
     /**
      * Private administrative checkpoint before editorial material can leave the

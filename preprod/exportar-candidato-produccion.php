@@ -10,7 +10,8 @@ $slugs=['jerico','cartagena','bogota','medellin','santa-marta','cauca-viejo'];$q
 function rows(PDO $db,string $table,string $field,array $ids):array{if(!$ids)return [];$q=$db->prepare('SELECT * FROM `'.$table.'` WHERE `'.$field.'` IN ('.implode(',',array_fill(0,count($ids),'?')).')');$q->execute($ids);return $q->fetchAll();}
 $out=['schema_version'=>1,'scope'=>$slugs,'public_places'=>array_values(array_diff($slugs,['cauca-viejo'])),'editorial'=>[],'tables'=>[]];$service=new PlaceAdminService($db);
 foreach($dest as $d){$v=$service->find((int)$d['id']);unset($v['media_options']);$out['editorial'][$d['slug']]=$v;}
-$businesses=rows($db,'businesses','destination_id',$ids);$businesses=array_values(array_filter($businesses,static fn($b)=>!preg_match('/^f00d0000-0000-4000-8000-00000000001[0-4]$/D',$b['public_id'])));$bids=array_column($businesses,'id');$out['tables']['businesses']=$businesses;
+$testIds=['d24ab013-7f8a-4c13-a4a3-456032bb57bd','c0cd1478-6a85-40a1-a6e9-f3ce97d154af'];
+$businesses=rows($db,'businesses','destination_id',$ids);$businesses=array_values(array_filter($businesses,static fn($b)=>!preg_match('/^f00d0000-0000-4000-8000-00000000001[0-4]$/D',$b['public_id'])&&!in_array($b['public_id'],$testIds,true)));$bids=array_column($businesses,'id');$out['tables']['businesses']=$businesses;
 foreach(['business_translations','business_categories','business_sources','business_contacts','business_research_contacts','business_media'] as $table)if(in_array($table,$tables))$out['tables'][$table]=rows($db,$table,'business_id',$bids);
 $media=[];
 foreach($out['editorial'] as $d){foreach($d['destination_media'] as $m)$media[]=$m['media_asset_id'];foreach($d['places'] as $p)if($p['media_asset_id'])$media[]=$p['media_asset_id'];}

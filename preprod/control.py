@@ -53,7 +53,7 @@ def prepare_managed_release(release,log):
  # Build into a fresh directory, preserving the currently served code on failure.
  if release.is_symlink():raise ValueError('La entrega local no puede ser un enlace simbólico.')
  if release.exists() and any(release.iterdir()):
-  if not (release/'public/index.html').is_file() or not (release/'app/bootstrap.php').is_file():raise ValueError('No se reconoce la entrega local anterior; no se sustituye.')
+  if not ((release/'public/index.php').is_file() or (release/'public/index.html').is_file()) or not (release/'app/bootstrap.php').is_file():raise ValueError('No se reconoce la entrega local anterior; no se sustituye.')
   private=release/'private'
   if private.exists() and any(private.iterdir()):raise ValueError('Hay datos privados dentro de la entrega; conservarlos en STATE/private antes de reconstruir.')
  with tempfile.TemporaryDirectory(prefix='prepare-',dir=STATE) as temporary:
@@ -112,6 +112,8 @@ def main():
  bootstrap.write_text(source.replace(anchor,anchor+"\n    require '/usr/local/lib/preprod-admin-access.php';"))
  (STATE/'private').mkdir(exist_ok=True);(STATE/'media').mkdir(exist_ok=True)
  media=STATE/'media/destinos';media.mkdir(exist_ok=True)
+ business_media=STATE/'media/negocios';business_media.mkdir(exist_ok=True)
+ (release/'public/assets/negocios').mkdir(parents=True,exist_ok=True)
  for source in (release/'public/assets/destinos').rglob('*'):
   if source.is_file():
    target=media/source.relative_to(release/'public/assets/destinos');target.parent.mkdir(parents=True,exist_ok=True)
@@ -130,13 +132,13 @@ def main():
   layout=subprocess.check_output(['podman','inspect','--format','{{index .Config.Labels "el-preprod-layout"}}',NAME],text=True).strip()
   environment=json.loads(subprocess.check_output(['podman','inspect',NAME],text=True))[0]['Config']['Env']
   configured_open='EL_PREPROD_ADMIN_OPEN='+('1' if admin_open else '0') in environment
-  if old_image!=new_image or layout!='3' or not configured_open:
+  if old_image!=new_image or layout!='4' or not configured_open:
    podman('stop',NAME);podman('rm',NAME);existing=False
  if existing:
   # Container stays defined so stop/start does not erase its MariaDB volume.
   podman('restart',NAME)
  else:
-  podman('run','--platform','linux/amd64','-d','--name',NAME,'--label','el-preprod-layout=3','--network',network,'--env-file',str(envfile),'-p','127.0.0.1:8088:80','--mount','type=volume,source=explorando-preprod-mariadb-10-11,target=/var/lib/mysql','-v',str(release)+':/srv/portal:ro','-v',str(STATE)+':/srv/state:rw','-v',str(STATE/'private')+':/srv/portal/private:rw','-v',str(media)+':/srv/portal/public/assets/destinos:rw',IMAGE)
+  podman('run','--platform','linux/amd64','-d','--name',NAME,'--label','el-preprod-layout=4','--network',network,'--env-file',str(envfile),'-p','127.0.0.1:8088:80','--mount','type=volume,source=explorando-preprod-mariadb-10-11,target=/var/lib/mysql','-v',str(release)+':/srv/portal:ro','-v',str(STATE)+':/srv/state:rw','-v',str(STATE/'private')+':/srv/portal/private:rw','-v',str(media)+':/srv/portal/public/assets/destinos:rw','-v',str(business_media)+':/srv/portal/public/assets/negocios:rw',IMAGE)
  configure_test_mail_network()
  wait_ready()
  run(sys.executable,'preprod/cuentas-prueba.py')

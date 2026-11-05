@@ -4,6 +4,7 @@ from pathlib import Path, PurePosixPath
 from xml.sax.saxutils import escape
 import json
 import re
+from direct_static_pages import is_direct_static_page
 
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC=ROOT/'ensayos/v1'
@@ -67,6 +68,10 @@ pages=[]
 for path in sorted(PUBLIC.rglob('*.html')):
     relative=PurePosixPath(path.relative_to(PUBLIC).as_posix())
     enabled=approved(relative)
+    if is_direct_static_page(relative):
+        if enabled or '<meta name="robots" content="noindex,nofollow">' not in path.read_text():
+            raise ValueError(f'La página directa debe declarar noindex: {relative}')
+        continue
     set_directive(path,enabled)
     canonical_url=url_for(relative)
     set_canonical(path,canonical_url,enabled)

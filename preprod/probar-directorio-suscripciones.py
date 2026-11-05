@@ -5,7 +5,7 @@ from regresion.suscripciones_visuales import run
 BASE='http://127.0.0.1:8088';failed=[]
 def get(path):
  try:
-  with urllib.request.urlopen(BASE+path,timeout=20) as r:return r.status,r.read().decode()
+  with urllib.request.urlopen(BASE+path,timeout=20) as r:return r.status,r.read().decode(errors='replace')
  except urllib.error.HTTPError as e:return e.code,e.read().decode()
 def check(ok,message):
  if not ok:raise AssertionError(message)

@@ -1,6 +1,7 @@
 """One and only one producer for every public path."""
 from pathlib import Path
 import hashlib,json,shutil
+from public_page_routes import legacy_html_paths
 STATIC_EXTENSIONS={'.html','.css','.js','.json','.svg','.webp','.png','.txt','.xml','.php'}
 
 
@@ -11,12 +12,17 @@ def is_retired_static_destination_page(name):
 
 def collect(root,public):
  root=Path(root);public=Path(public);candidates={}
+ retired_html=legacy_html_paths()
  layers=[('generated-static',root/'ensayos/v1'),('backend',root/'backend/public'),('integration',root/'backend/integration-analytics/public')]
  for label,base in layers:
   for source in sorted(base.rglob('*')):
    if not source.is_file():continue
    if label=='generated-static' and source.suffix not in STATIC_EXTENSIONS and source.name!='.htaccess':continue
    name=source.relative_to(base).as_posix()
+   if name=='__composiciones-inicio/index.html':
+    continue
+   if name in retired_html:
+    continue
    # Never stage a retired static implementation only to delete it later.
    # The dynamic PHP route owns every destination detail URL.
    if label=='generated-static' and is_retired_static_destination_page(name):

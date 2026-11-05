@@ -31,6 +31,18 @@ try{
     $mail=(new BusinessEditorialMail($p,['public_origin'=>'http://127.0.0.1'],null,true))->send($second,'fixture-admin');
     $service->transition($second,'approve',1,'','',$v['payload_hash']);$service->publishByOwner($second,1,$v['payload_hash']);
     if($service->latest(1)['status']!=='published')throw new RuntimeException('Owner publication failed.');
+    if(!$promotionTest){
+        $published=BusinessShowcase::published($p,1);
+        foreach(['es','en','pt-BR'] as $locale){
+            $rendered=BusinessShowcase::renderData($p,1,$published,$locale)['products'];
+            if(count($rendered)!==5)throw new RuntimeException('Published product count changed in '.$locale);
+            foreach($rendered as $index=>$product){
+                if(($product['name']??'')!=='Producto '.$index||($product['description']??'')!=='Breve '.$locale)throw new RuntimeException('Published product title or description changed in '.$locale.' at '.$index);
+                $file=realpath($root.'/'.($product['asset_path']??''));$base=realpath($root);
+                if(!$file||!str_starts_with($file,$base.'/')||!is_file($file)||!getimagesize($file))throw new RuntimeException('Published product image missing at '.$index);
+            }
+        }
+    }
     if($promotionTest){
         $sub=$p->query('SELECT * FROM business_subscriptions WHERE id=1')->fetch();
         if($sub['quoted_amount']!=0||$sub['status']!=='active'||!$promotions->covered(1)||(int)$p->query('SELECT COUNT(*) FROM business_subscription_payment_evidence')->fetchColumn()!==0)throw new RuntimeException('Promotion publication invented a receipt or lost coverage.');

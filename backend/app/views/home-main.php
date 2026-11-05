@@ -89,8 +89,9 @@ declare(strict_types=1);
 </p>
 </div>
 <div class="home-attractions" data-home-attractions>
-<p><?=$e($copy['places_fallback'])?>
-</p>
+<?php if($attractions): foreach($attractions as $item): require __DIR__.'/home-attraction-card.php'; endforeach; else: ?>
+<p><?=$e($copy['places_fallback'])?></p>
+<?php endif ?>
 </div>
 <p>
 <a class="text-link" href="<?=$e($prefix.'/lugares/')?>"><?=$e($copy['all_places'])?>

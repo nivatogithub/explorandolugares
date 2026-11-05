@@ -7,7 +7,7 @@ final class PlacePublicationPolicy
     public static function assertInitialState(int $id, string $status): void
     {
         if ($id === 0 && $status !== 'draft') {
-            throw new RuntimeException('Los destinos nuevos siempre se crean como borrador. Guárdalo primero, revísalo y luego podrás publicarlo.');
+            throw new RuntimeException('Los lugares nuevos siempre se crean como borrador. Guárdalo primero, revísalo y luego podrás publicarlo.');
         }
     }
 

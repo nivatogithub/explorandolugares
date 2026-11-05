@@ -20,6 +20,11 @@ final class AdminRequestDetailSelector
     {
         $query=$this->pdo->prepare('SELECT id,display_name AS name,email,status FROM accounts WHERE id=?');$query->execute([$id]);return $query->fetch(PDO::FETCH_ASSOC);
     }
+    public function ownershipApplication(int $id):array|false
+    {
+        $query=$this->pdo->prepare('SELECT a.id,a.business_id,a.business_name,a.status,t.display_name AS destination_name FROM business_account_applications a JOIN destination_translations t ON t.destination_id=a.destination_id AND t.locale="es" WHERE a.id=?');
+        $query->execute([$id]);return $query->fetch(PDO::FETCH_ASSOC);
+    }
     public function evidence(int $id):array
     {
         $query=$this->pdo->prepare('SELECT id,original_name,verified_at FROM business_account_application_evidence WHERE application_id=? ORDER BY id');$query->execute([$id]);return $query->fetchAll(PDO::FETCH_ASSOC);
@@ -27,6 +32,18 @@ final class AdminRequestDetailSelector
     public function photos(int $id):array
     {
         $query=$this->pdo->prepare('SELECT id,original_name FROM business_application_images WHERE application_id=?');$query->execute([$id]);return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function photosByApplication(array $ids):array
+    {
+        $ids=array_values(array_unique(array_filter(array_map('intval',$ids),static fn(int $id):bool=>$id>0)));
+        if(!$ids)return [];
+        $out=[];
+        foreach(array_chunk($ids,500) as $chunk){
+            $query=$this->pdo->prepare('SELECT application_id,id,original_name FROM business_application_images WHERE application_id IN ('.implode(',',array_fill(0,count($chunk),'?')).') ORDER BY application_id,id');
+            $query->execute($chunk);
+            foreach($query->fetchAll(PDO::FETCH_ASSOC) as $row)$out[(int)$row['application_id']][]=$row;
+        }
+        return $out;
     }
     public function memberships(int $businessId,int $accountId):array
     {

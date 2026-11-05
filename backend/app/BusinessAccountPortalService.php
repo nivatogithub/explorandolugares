@@ -62,14 +62,14 @@ final class BusinessAccountPortalService
         $businessId=(int)($application['business_id']??0);$businessName=trim((string)($application['business_name']??''));
         $relationship=(string)($application['relationship_code']??'');$phone=trim((string)($application['phone']??''));$message=trim((string)($application['message']??''));
         if(!in_array($type,['existing_business','new_business'],true))throw new RuntimeException('Indica si encontraste el negocio o si necesitas solicitar su inclusión.');
-        if($destinationId<1||$category==='')throw new RuntimeException('Selecciona el destino y la categoría del negocio.');
+        if($destinationId<1||$category==='')throw new RuntimeException('Selecciona el lugar y la categoría del negocio.');
         if(!in_array($relationship,['owner','legal_representative','authorized_administrator','authorized_representative'],true))throw new RuntimeException('Indica si eres propietario, representante legal o administrador autorizado.');
         if($phone!==''&&!preg_match('/^\\+?[0-9() .-]{7,24}$/D',$phone))throw new RuntimeException('Revisa el número de teléfono.');
         if(strlen($message)>1000)throw new RuntimeException('El mensaje supera los 1.000 caracteres.');
         if(($application['consent']??'')!=='1')throw new RuntimeException('Autoriza el uso de tus datos para revisar esta solicitud.');
         if($type==='new_business'&&(strlen($businessName)<2||strlen($businessName)>180))throw new RuntimeException('Escribe el nombre del negocio que no encontraste.');
         $categoryQuery=$this->pdo->prepare('SELECT COUNT(*) FROM service_categories c WHERE c.code=? AND c.is_active=1 AND EXISTS(SELECT 1 FROM destinations d WHERE d.id=? AND d.publication_status="published")');
-        $categoryQuery->execute([$category,$destinationId]);if(!(int)$categoryQuery->fetchColumn())throw new RuntimeException('La categoría no está disponible para este destino.');
+        $categoryQuery->execute([$category,$destinationId]);if(!(int)$categoryQuery->fetchColumn())throw new RuntimeException('La categoría no está disponible para este lugar.');
 
         $selfOnboarding=($application['self_onboarding_policy']??'')===BusinessSelfOnboarding::POLICY;
         $temporary=(array)($application['temporary_uploads']??[]);$draft=(string)($application['onboarding_draft']??'');$temporaryEvidence=(string)($temporary['evidence']['business_registration']??'');$temporaryImages=array_filter((array)($temporary['editorial']??[]),static fn($id)=>is_string($id)&&preg_match('/^[a-f0-9]{48}$/D',$id));

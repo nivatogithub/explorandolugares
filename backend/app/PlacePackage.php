@@ -84,7 +84,7 @@ final class PlacePackage
     public static function validateManifest(mixed $manifest): void
     {
         if (!is_array($manifest) || ($manifest['schema_version'] ?? null) !== 2 || !is_array($manifest['destination'] ?? null) || !is_array($manifest['places'] ?? null)) {
-            throw new RuntimeException('Usa el formato de paquete de destino v2 indicado en la guía.');
+            throw new RuntimeException('Usa el formato de paquete de lugar v2 indicado en la guía.');
         }
         $allowedTopLevel=['schema_version','destination','hero_image','places','local_research'];
         if (array_diff(array_keys($manifest),$allowedTopLevel)) throw new RuntimeException('El manifiesto incluye campos que la administración no reconoce.');
@@ -92,7 +92,7 @@ final class PlacePackage
         $destination=$manifest['destination'];
         if (array_key_exists('labels',$destination)) PlaceLabels::normalize($destination['labels']);
         $type=(string)($destination['destination_type']??'municipality');
-        if(!in_array($type,['municipality','city','other'],true)) throw new RuntimeException('El tipo de destino debe ser municipality, city u other.');
+        if(!in_array($type,['municipality','city','other'],true)) throw new RuntimeException('El tipo de lugar debe ser municipality, city u other.');
         $country=strtoupper((string)($destination['country_code']??''));
         if(!preg_match('/^[A-Z]{2}$/D',$country)) throw new RuntimeException('Incluye el código de país de dos letras en destination.country_code.');
         if (!is_array($manifest['hero_image'] ?? null) || !is_string($manifest['hero_image']['file'] ?? null)) throw new RuntimeException('El manifiesto debe indicar el archivo de portada en hero_image.file.');

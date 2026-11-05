@@ -56,23 +56,33 @@ def run(env):
   check(process.returncode==0,'Regresión HTTP administrativa aislada falló; ver admin-operaciones.log')
  case('AD-18','Operaciones administrativas y documentos privados en base aislada',isolated_operations)
  def adminlogout():
-  state=admin.state();admin.request('/negocios/salir/',{'csrf':state['csrf']});check(not admin.state()['authenticated'],'No cerró sesión administradora');code,page,_=admin.get('/admin/accounts.php');check(code==403,'Cerrar sesión no revoca acceso administrativo')
+  state=admin.state();admin.request('/negocios/salir/',{'csrf':state['csrf']});check(not admin.state()['authenticated'],'No cerró sesión administradora');code,page,url=admin.get('/admin/accounts.php');check(code in (401,403) or ('/negocios/acceso/' in url and 'admin-sidebar' not in page),'Cerrar sesión no revoca acceso administrativo')
  case('AD-19','Salida del administrador revoca acceso al panel',adminlogout)
  published=query('SELECT slug FROM destinations WHERE publication_status="published" ORDER BY slug');check(published,'No hay lugares publicados para recorrer')
  def listing():
-  code,page,_=anon.get('/destinos/');check(code==200,'No abre listado de lugares')
-  parser=Links();parser.feed(page)
-  paths={urllib.parse.urlsplit(urllib.parse.urljoin(BASE+'/destinos/',item['href'])).path for item in parser.items}
-  for row in published:check(any(path in paths for path in ['/destinos/'+row['slug']+'/', '/destinos/'+row['slug']+'/index.html']),'Lugar publicado sin entrada en listado: '+row['slug'])
+  paths=set();seen=set();queue=['/lugares/']
+  while queue:
+   route=queue.pop(0)
+   if route in seen:continue
+   seen.add(route);check(len(seen)<=100,'Paginación inesperada o circular')
+   code,page,_=anon.get(route);check(code==200,'No abre listado de lugares: '+route)
+   parser=Links();parser.feed(page)
+   for item in parser.items:
+    url=urllib.parse.urlsplit(urllib.parse.urljoin(BASE+route,item['href']))
+    if url.netloc!='127.0.0.1:8088':continue
+    paths.add(url.path)
+    params=urllib.parse.parse_qs(url.query)
+    if url.path=='/lugares/' and set(params)=={'pagina'} and params['pagina'][0].isdigit():queue.append(url.path+'?'+url.query)
+  for row in published:check('/lugares/'+row['slug']+'/' in paths,'Lugar publicado sin entrada en listado: '+row['slug'])
  case('LU-01','Listado público permite encontrar todos los lugares publicados',listing)
  for row in published:
   slug=row['slug'];page_cache={}
   def page(slug=slug,page_cache=page_cache):
    if not page_cache:
-    code,body,_=anon.get('/destinos/'+slug+'/');check(code==200,'Lugar publicado devuelve HTTP '+str(code));page_cache['html']=body
+    code,body,_=anon.get('/lugares/'+slug+'/');check(code==200,'Lugar publicado devuelve HTTP '+str(code));page_cache['html']=body
    return page_cache['html']
   def history(page=page):
-   body=page();m=re.search(r'<section\b[^>]*id="descubre"[^>]*>(.*?)</section>',body,re.S);check(m,'Falta sección de historia');text=html.unescape(re.sub('<[^>]+>',' ',m[1]));check(len(text.strip())>100,'Historia ausente o insuficiente');check('href="#descubre"' in body,'No hay acceso interno a historia')
+   body=page();m=re.search(r'<section\b[^>]*id="descubre"[^>]*>(.*?)</section>',body,re.S);check(m,'Falta sección de historia');text=html.unescape(re.sub('<[^>]+>',' ',m[1]));check(len(text.strip())>100,'Historia ausente o insuficiente')
   def directory(page=page):
    body=page();check(all(x in body for x in ['id="lugares"','id="catalogo-local"','id="directory-panel"']),'Falta directorio de comercios');check('href="#lugares"' in body,'Directorio sin enlace interno');check('directory-tab-todos' in body,'Falta filtro de todos los comercios')
   def experiences(page=page,slug=slug):
@@ -81,7 +91,7 @@ def run(env):
     check('id="experiencias-locales"' in body,'No aparecen experiencias de Jericó');check(body.index('id="atractivos-destino"')<body.index('id="experiencias-locales"')<body.index('id="lugares"'),'Experiencias fuera de su posición después de atractivos');check(body.count('destination-experience-card')>=3,'Faltan experiencias habilitadas de Jericó')
    else:
     if 'id="experiencias-locales"' not in body:raise env['Blocked']('Lugar sin sección de experiencias: revisar inventario editorial; no inventar contenido para aprobar.')
-  case('LU-'+slug+'-01','Historia y acceso interno: '+slug,history)
+  case('LU-'+slug+'-01','Historia visible: '+slug,history)
   case('LU-'+slug+'-02','Directorio y filtros presentes: '+slug,directory)
   case('LU-'+slug+'-03','Experiencias dentro del lugar después de atractivos: '+slug,experiences)
  pending('LU-UI','Interacción visual del directorio y experiencias','Comprobar filtros, tarjetas y enlaces en navegador: el HTML presente no demuestra ejecución de JavaScript. Mantener pendiente hasta automatizar ese recorrido.')

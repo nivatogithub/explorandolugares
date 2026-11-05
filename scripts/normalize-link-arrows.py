@@ -4,6 +4,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from html import escape
 from urllib.parse import urlsplit
+from direct_static_pages import is_direct_static_page
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'ensayos/v1'
@@ -44,5 +45,7 @@ class Normalizador(HTMLParser):
     def handle_comment(self, data): (self.anchor_parts if self.anchor_href is not None else self.output).append('<!--'+data+'-->')
 
 for page in SITE.rglob('*.html'):
+    if is_direct_static_page(page.relative_to(SITE).as_posix()):
+        continue
     parser=Normalizador(); parser.feed(page.read_text()); parser.close()
     page.write_text(''.join(parser.output))

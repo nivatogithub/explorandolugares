@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
 require_once dirname(__DIR__,2).'/app/BusinessAccountPortalService.php';
+require_once dirname(__DIR__,2).'/app/AdminRequestDetailSelector.php';
 if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){unset($_SESSION['admin'],$_SESSION['last_seen']);header('Location: /admin/index.php',true,303);exit;}
 $_SESSION['last_seen']=time();$id=filter_var($_REQUEST['application']??null,FILTER_VALIDATE_INT);if(!$id){http_response_code(404);exit('Solicitud no encontrada.');}
 $service=new BusinessAccountPortalService(db());$error='';
@@ -10,7 +11,7 @@ try{
         csrf();$service->verifyApprovedBusinessRegistration((int)$id,(array)($_POST['verified_evidence']??[]),(string)($_POST['admin_note']??''),(string)($_SESSION['admin_user']??'admin'));
         header('Location: editorial-package.php?business='.(int)($_POST['business']??0),true,303);exit;
     }
-    $query=db()->prepare('SELECT a.id,a.business_id,a.business_name,a.status,t.display_name AS destination_name FROM business_account_applications a JOIN destination_translations t ON t.destination_id=a.destination_id AND t.locale="es" WHERE a.id=?');$query->execute([$id]);$application=$query->fetch(PDO::FETCH_ASSOC);if(!$application||$application['status']!=='approved'||(int)$application['business_id']<1)throw new RuntimeException('La solicitud no está disponible para esta validación.');
+    $application=(new AdminRequestDetailSelector(db()))->ownershipApplication((int)$id);if(!$application||$application['status']!=='approved'||(int)$application['business_id']<1)throw new RuntimeException('La solicitud no está disponible para esta validación.');
     $documents=array_values(array_filter($service->applicationEvidence((int)$id),static fn(array $document):bool=>$document['evidence_type']==='business_registration'));
     if(!$documents)throw new RuntimeException('No hay documento de registro del negocio para revisar.');
 }catch(Throwable $exception){$error=$exception->getMessage();}

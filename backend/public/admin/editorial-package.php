@@ -3,6 +3,8 @@ declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
 require_once dirname(__DIR__,2).'/app/BusinessEditorialPackage.php';
 require_once dirname(__DIR__,2).'/app/BusinessPaymentEvidenceService.php';
+require_once dirname(__DIR__,2).'/app/AdminEvidenceSelector.php';
+require_once dirname(__DIR__,2).'/app/BusinessEditorialSelector.php';
 if(empty($_SESSION['admin'])||time()-(int)($_SESSION['last_seen']??0)>1800){unset($_SESSION['admin'],$_SESSION['last_seen']);header('Location: /admin/index.php',true,303);exit;}
 $_SESSION['last_seen']=time();$business=filter_var($_REQUEST['business']??null,FILTER_VALIDATE_INT);$error='';$notice='';$readiness=null;$businessOptions=[];$editorialVersion=null;
 try{
@@ -10,7 +12,7 @@ try{
     if($_SERVER['REQUEST_METHOD']==='POST'){
         csrf();if(!$business)throw new RuntimeException('Selecciona el negocio.');$action=(string)($_POST['action']??'');
         if($action==='review_payment'){
-            $evidenceId=(int)($_POST['evidence_id']??0);$check=db()->prepare('SELECT e.id FROM business_subscription_payment_evidence e JOIN business_subscriptions s ON s.id=e.subscription_id WHERE e.id=? AND s.business_id=?');$check->execute([$evidenceId,$business]);if(!$check->fetchColumn())throw new RuntimeException('El comprobante no corresponde a este negocio.');
+            $evidenceId=(int)($_POST['evidence_id']??0);if(!(new AdminEvidenceSelector(db()))->paymentBelongsToBusiness($evidenceId,(int)$business))throw new RuntimeException('El comprobante no corresponde a este negocio.');
             (new BusinessPaymentEvidenceService(db(),private_storage_path('business-payment-evidence')))->review($evidenceId,(string)($_POST['decision']??''),(string)($_POST['admin_note']??''),(string)$_SESSION['admin'],(string)($_POST['customer_message']??''));
             $notice='Se actualizó la revisión del comprobante. El negocio sigue privado hasta la prepublicación y aprobación final.';
         }elseif($action==='import_editorial'){
@@ -26,8 +28,8 @@ try{
         readfile($file);@unlink($file);exit;
     }
     if($business)$readiness=$packages->readiness((int)$business);
-    $businessOptions=db()->query('SELECT b.id,t.display_name,d.display_name AS destination_name FROM businesses b JOIN business_translations t ON t.business_id=b.id AND t.locale="es" JOIN destination_translations d ON d.destination_id=b.destination_id AND d.locale="es" ORDER BY t.display_name,b.id')->fetchAll(PDO::FETCH_ASSOC);
-    if($business){$versionQuery=db()->prepare('SELECT id,status FROM business_editorial_versions WHERE business_id=? ORDER BY id DESC LIMIT 1');$versionQuery->execute([$business]);$editorialVersion=$versionQuery->fetch(PDO::FETCH_ASSOC)?:null;}
+    $selector=new BusinessEditorialSelector(db());$businessOptions=$selector->businessOptions();
+    if($business)$editorialVersion=$selector->latestStatus((int)$business)?:null;
 }catch(Throwable $exception){$error=$exception->getMessage();}
 $adminLayout=admin_layout_context();
 ?><!doctype html>

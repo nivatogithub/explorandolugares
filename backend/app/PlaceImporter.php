@@ -49,7 +49,7 @@ final class PlaceImporter
             foreach ($catalog['destinations'] as $destination) {
                 self::requireKeys($destination, ['slug','destination_type','country_code','department','subregion','publication_status','display_order','translations']);
                 self::slug((string)$destination['slug']);
-                if($destination['publication_status']==='published')GeolocationPolicy::requirePoint($destination['latitude']??null,$destination['longitude']??null,'el destino importado');
+                if($destination['publication_status']==='published')GeolocationPolicy::requirePoint($destination['latitude']??null,$destination['longitude']??null,'el lugar importado');
                 $destinationInsert->execute([$destination['slug'],$destination['destination_type'],$destination['country_code'],
                     $destination['department'],$destination['subregion'],$destination['publication_status'],$destination['display_order'],'{"schema_version":1}',$destination['latitude']??null,$destination['longitude']??null]);
                 $destinationId = (int)$pdo->lastInsertId();

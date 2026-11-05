@@ -17,6 +17,10 @@ Para registro, editorial, pagos, publicación y suscripciones de negocios, consu
 
 Las rutas locales y públicas deben coincidir desde `/`: no introducir prefijos de carpetas internas. Probar el paquete construido según [entorno local](docs/ENTORNO_LOCAL.md). No modificar configuración privada ni divulgar secretos/datos personales.
 
+## Almacenamiento de pruebas — 4 de noviembre de 2026
+
+Cumplir [la política de paquetes de prueba](docs/TEST_PACKAGE_STORAGE.md): usar `scripts/run-test-package.py -- COMANDO` para construcciones desechables; conservar informes pequeños fuera del paquete. No acumular una carpeta completa por cada prueba ni crear respaldos completos de ambientes por rutina. Los candidatos de revisión usan el constructor público y su cupo; nunca eludirlo invocando el constructor interno. No limpiar paquetes ajenos ni imágenes originales/aprobadas automáticamente. Conservar los controles de espacio, concurrencia y limpieza de salidas parciales al integrar ramas.
+
 
 ## Regla de enlaces y sincronización de nuevos lugares — 22/10/2026
 

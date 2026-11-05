@@ -2,8 +2,9 @@
 declare(strict_types=1);
 require_once dirname(__DIR__).'/PremiumBusinessProfile.php';
 require_once dirname(__DIR__).'/PlaceSelector.php';
+require_once dirname(__DIR__).'/DatabaseClock.php';
 final class PublicSitemap {
-    public function __construct(private PDO $db) {}
+    public function __construct(private PDO $db) { DatabaseClock::configure($db); }
     public function xml(string $base,string $staticXml): string {
         $base=rtrim($base,'/');$parts=parse_url($base);
         if(!filter_var($base,FILTER_VALIDATE_URL)||($parts['scheme']??'')!=='https'||isset($parts['user'])||isset($parts['pass'])||isset($parts['query'])||isset($parts['fragment']))throw new InvalidArgumentException('Origen público inválido.');

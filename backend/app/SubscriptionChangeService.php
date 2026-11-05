@@ -50,6 +50,12 @@ final class SubscriptionChangeService
             $quote['kind']='renewal';$quote['effective_at']=$current['ends_at'];return $quote;
         }
         if($frequency!==$current['billing_frequency'])throw new RuntimeException('Para subir ahora conserva la frecuencia contratada. Puedes cambiarla en la próxima renovación.');
+        // Adding an experience to the current plan must not reprice the existing
+        // term. Its historical price can be higher than today's plan price.
+        if($plan===$current['plan_code']&&!$oldAddon&&$addon){
+            $full=$source+self::cents($addon['amount']);
+            $quote['target_full_cents']=$full;
+        }
         if($full<=$source)throw new RuntimeException('El cambio no tiene una diferencia positiva. Revisa las tarifas antes de continuar.');
         $from=(new DateTimeImmutable($start,new DateTimeZone('UTC')))->getTimestamp();$end=(new DateTimeImmutable($current['ends_at'],new DateTimeZone('UTC')))->getTimestamp();$remaining=$end-$at->getTimestamp();$duration=$end-$from;
         if($duration<=0||$remaining<=0||$remaining>$duration)throw new RuntimeException('La vigencia actual no permite calcular un saldo válido.');
