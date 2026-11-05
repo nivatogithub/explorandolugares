@@ -4,12 +4,13 @@ declare(strict_types=1);
 /** Public place directory reads; pagination happens in SQL, before loading images. */
 final class PlaceDirectorySelector
 {
-    public function __construct(private PDO $pdo) {}
+    private string $publicRoot;
+    private ?array $sectorCatalog=null;
+    public function __construct(private PDO $pdo,?string $publicRoot=null) {$this->publicRoot=$publicRoot??dirname(__DIR__).'/public';}
 
-    public static function sectors(): array
+    public function sectors(): array
     {
-        static $catalog;
-        return $catalog ??= json_decode(file_get_contents(__DIR__.'/../public/assets/cobertura/sectors.json'), true, 32, JSON_THROW_ON_ERROR);
+        return $this->sectorCatalog ??= json_decode(file_get_contents($this->publicRoot.'/assets/cobertura/sectors.json'), true, 32, JSON_THROW_ON_ERROR);
     }
 
     private function scope(string $locale,array $filters):array
@@ -54,7 +55,7 @@ final class PlaceDirectorySelector
             array_push($values, ...$guideValues, ...$detailValues);
         }
         if (!empty($filters['sector'])) {
-            $members = array_values(self::sectors()[$filters['sector']]);
+            $members = array_values($this->sectors()[$filters['sector']]);
             $sql .= " AND d.country_code='CO' AND d.department IN (".implode(',', array_fill(0,count($members),'?')).')';
             array_push($values,...$members);
         }

@@ -13,7 +13,7 @@ final class PlaceDirectoryService
         if(!in_array($locale,['es','en','pt-BR'],true))$locale='es';
         $text=static fn(string $key):string=>is_string($input[$key]??null)?mb_substr(trim($input[$key]),0,120,'UTF-8'):'';
         $filters=['q'=>$text('q'),'department'=>$text('department'),'region'=>$text('region'),'heritage'=>($input['heritage']??'')==='1'];
-        $sectors=PlaceDirectorySelector::sectors();
+        $sectors=$this->places->sectors();
         $filters['sector']=array_key_exists($text('sector'),$sectors)?$text('sector'):'';
         $members=$sectors[$filters['sector']]??[];
         $requested=$input['pagina']??'1';
