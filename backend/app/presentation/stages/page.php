@@ -128,7 +128,7 @@ $format = static fn($value) => number_format((int)$value, 0, '.', $locale === 'e
 <p>
 <?=$escape($copy['hostBody'])?>
 </p>
-<a class="pill" href="<?=$prefix?>/negocios-locales/">
+<a class="pill" href="/negocios/registro/?tipo=business&amp;lang=<?=$escape(strtolower($locale))?>">
 <?=$escape($copy['participate'])?>
 </a>
 </div>
