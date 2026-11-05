@@ -1,0 +1,218 @@
+{
+  "slug": "san-andres",
+  "name": "San Andrés",
+  "country_code": "CO",
+  "department_code": "88",
+  "municipality_code": "88001",
+  "type": "municipality",
+  "status": "editorial_in_progress",
+  "public": false,
+  "branch": "contenido/lugar-san-andres-20261104",
+  "source_checked_at": "2026-11-04",
+  "intro_draft_es": "San Andrés reúne playas, cayos, manglares y cultura raizal en una isla del Caribe colombiano. Además del paisaje marino, La Loma y San Luis permiten acercarse a la vida local. Es un destino independiente de Providencia y Santa Catalina: sus atractivos y servicios se organizan aquí por separado.",
+  "why_visit_es": [
+    "Combinar playas y cayos con el paisaje de manglar de Old Point.",
+    "Conocer la arquitectura de La Loma y la cultura raizal de la isla.",
+    "Encontrar opciones locales para organizar recorridos y actividades marinas."
+  ],
+  "geolocation": null,
+  "attractions": [
+    {
+      "name": "Johnny Cay",
+      "description_es": "Un islote frente a la costa norte de San Andrés, con palmeras, playa y paisaje marino. Es un parque regional: el desembarque depende de las condiciones del mar y de las disposiciones de la autoridad ambiental.",
+      "source_url": "https://colombia.travel/es/san-andres-isla/parque-regional-johnny-cay",
+      "geolocation": null,
+      "image_key": "attraction-01",
+      "status": "research_confirmed_coordinates_pending"
+    },
+    {
+      "name": "Rocky Cay",
+      "description_es": "El pequeño cayo rocoso frente al sector de San Luis permite reconocer otro paisaje de la isla. La playa y el cayo no son el mismo punto; cualquier aproximación al cayo debe considerar las condiciones del mar.",
+      "source_url": "https://colombia.travel/es/san-andres-isla/san-andres-sol-y-playa",
+      "geolocation": null,
+      "image_key": "attraction-02",
+      "status": "research_confirmed_coordinates_pending"
+    },
+    {
+      "name": "Primera Iglesia Bautista de La Loma",
+      "description_es": "El templo de madera y su entorno en La Loma acercan al visitante a la tradición religiosa de la comunidad raizal. Su arquitectura y posición elevada ofrecen una visita distinta de las playas.",
+      "source_url": "https://colombia.travel/es/san-andres-island/la-iglesia-bautista",
+      "geolocation": null,
+      "image_key": "attraction-03",
+      "status": "research_confirmed_coordinates_pending"
+    },
+    {
+      "name": "Parque Regional de Mangle Old Point",
+      "description_es": "Un entorno de manglares en el costado oriental de la isla, en las bahías Hooker y Haynes. Es un lugar para conocer la vegetación costera y observar el paisaje sin alterar sus ecosistemas.",
+      "source_url": "https://colombia.travel/es/san-andres-isla/parque-regional-de-mangle-old-point?page=1",
+      "geolocation": null,
+      "image_key": "attraction-04",
+      "status": "research_confirmed_coordinates_pending"
+    },
+    {
+      "name": "El Acuario y Haynes Cay",
+      "description_es": "Rose Cay y Haynes Cay forman un paisaje de cayos y aguas someras conocido por las excursiones marinas. Las zonas de arena y las condiciones de acceso varían: no se presenta como un cruce peatonal garantizado.",
+      "source_url": "https://colombia.travel/es/san-andres-isla",
+      "geolocation": null,
+      "image_key": "attraction-05",
+      "status": "research_confirmed_coordinates_pending"
+    }
+  ],
+  "experiences": [
+    {
+      "name": "Buceo de iniciación",
+      "description_es": "Una primera aproximación al buceo con instrucción y acompañamiento profesional. El centro determina los requisitos y las condiciones de la actividad.",
+      "operator": "Blue Life",
+      "offer_url": "https://bluelifedive.com/",
+      "geolocation": null,
+      "status": "offer_documented_meeting_point_pending"
+    },
+    {
+      "name": "Excursión a Johnny Cay",
+      "description_es": "Salida en embarcación para conocer el parque regional. El operador confirma el itinerario y la salida, sujetos al estado del mar y a la apertura del parque.",
+      "operator": "Visit San Andrés",
+      "offer_url": "https://www.visitsanandres.co/public/tour/johnnycay",
+      "geolocation": null,
+      "status": "offer_documented_meeting_point_pending"
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Hotel Casablanca",
+      "category": "hospedaje",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+      "address_source_text": "Avenida Colombia, peatonal de Spratt Bight",
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_confirmed_geolocation_pending"
+    },
+    {
+      "name": "La Regatta",
+      "category": "alimentacion",
+      "source_url": "https://restaurantelaregatta.com/contact/",
+      "address_source_text": "Avenida Newball, junto al Club Náutico",
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_confirmed_geolocation_pending"
+    },
+    {
+      "name": "Blue Life",
+      "category": "experiencias",
+      "source_url": "https://bluelifedive.com/",
+      "address_source_text": "Hotel Sunrise Beach, locales 112-113",
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_confirmed_geolocation_pending"
+    },
+    {
+      "name": "Sea Watch Caffé",
+      "category": "alimentacion",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+      "address_source_text": "Avenida Colombia, peatonal de Spratt Bight",
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_confirmed_geolocation_pending"
+    },
+    {
+      "name": "Restaurante Mahi-Mahi",
+      "category": "alimentacion",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+      "address_source_text": "Avenida Colombia, peatonal de Spratt Bight",
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_confirmed_geolocation_pending"
+    },
+    {
+      "name": "Restaurante La Barcarola",
+      "category": "alimentacion",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+      "address_source_text": "Avenida Colombia, peatonal de Spratt Bight",
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_confirmed_geolocation_pending"
+    },
+    {
+      "name": "Restaurante Tropical",
+      "category": "alimentacion",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes/restaurante-tropical",
+      "address_source_text": "Hotel Casablanca",
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_confirmed_geolocation_pending"
+    },
+    {
+      "name": "Restaurante Bar Casablanca",
+      "category": "alimentacion",
+      "source_url": "https://www.hotelcasablancasanandres.com/es/restaurantes",
+      "address_source_text": "Hotel Casablanca",
+      "source_checked_at": "2026-11-04",
+      "geolocation": null,
+      "claimed": false,
+      "verified_business": false,
+      "public": false,
+      "status": "primary_source_identity_confirmed_geolocation_pending"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://colombia.travel/es/san-andres-isla",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://colombia.travel/es/san-andres-isla/parque-regional-johnny-cay",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://colombia.travel/es/san-andres-island/la-iglesia-bautista",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://colombia.travel/es/san-andres-isla/parque-regional-de-mangle-old-point?page=1",
+      "checked_at": "2026-11-04"
+    },
+    {
+      "url": "https://colombia.travel/es/san-andres-isla/san-andres-sol-y-playa",
+      "checked_at": "2026-11-04"
+    }
+  ],
+  "media": {
+    "hero": {
+      "image_key": "hero",
+      "status": "reference_selection",
+      "approval": null
+    }
+  },
+  "boundary_notes": [
+    "No es Providencia ni Santa Catalina.",
+    "No trasladar comercios de Providencia a San Andrés por compartir departamento.",
+    "No confundir la historia de la congregación bautista con la fecha del edificio actual."
+  ],
+  "publication_blockers": [
+    "Completar coordenadas y enlaces de sitios físicos",
+    "Generar y revisar imágenes contra referencias",
+    "Aprobación humana de las imágenes",
+    "Completar negocios y experiencias con evidencia",
+    "Completar traducciones y validación de paquete"
+  ]
+}

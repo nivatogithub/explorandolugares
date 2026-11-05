@@ -1,0 +1,50 @@
+[
+  {
+    "key": "hero",
+    "name": "Portada",
+    "reference": "references/hero.json",
+    "file": "images/hero-1200.webp",
+    "master": "masters/hero-v1.png",
+    "status": "pending_human_review",
+    "approval": null,
+    "illustration_not_photo": true,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sanandresbeach.jpg",
+    "license": "Public domain",
+    "author_html": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Dsvargas&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Dsvargas (page does not exist)\">Dsvargas</a>",
+    "sha256": "f2b76e8a6f49a99d6b6fb75211914e6d5ddaca6352bfdf2f9841486469893632",
+    "tool": "built-in image_gen",
+    "prompt_summary": "Faithful 3:2 editorial ink/gouache illustration preserving reference geography and architecture; no invented landmarks."
+  },
+  {
+    "key": "attraction-01",
+    "name": "Johnny Cay",
+    "reference": "references/attraction-01.json",
+    "file": "images/attraction-01-1200.webp",
+    "master": "masters/attraction-01-v1.png",
+    "status": "pending_human_review",
+    "approval": null,
+    "illustration_not_photo": true,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Johny_Cay.jpg",
+    "license": "CC BY 3.0",
+    "author_html": "<a href=\"//commons.wikimedia.org/wiki/User:Astromario\" title=\"User:Astromario\">Mario Carvajal</a>",
+    "sha256": "5a201af99882bd763e02abd29feb21d8de2c7fdbee74f15ab9ae629782871e8e",
+    "tool": "built-in image_gen",
+    "prompt_summary": "Faithful 3:2 editorial ink/gouache illustration preserving reference geography and architecture; no invented landmarks."
+  },
+  {
+    "key": "attraction-03",
+    "name": "Primera Iglesia Bautista",
+    "reference": "references/church-exterior.json",
+    "file": "images/attraction-03-1200.webp",
+    "master": "masters/attraction-03-v1.png",
+    "status": "pending_human_review",
+    "approval": null,
+    "illustration_not_photo": true,
+    "source_url": "https://commons.wikimedia.org/wiki/File:First_Baptist_church_on_The_Hill,_La_Loma.jpg",
+    "license": "CC BY 2.0",
+    "author_html": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/68777082@N00\">...some guy</a>",
+    "sha256": "65d406e840a588c136b6caef3f1d49cc525495b24a45db70407671e194b693d8",
+    "tool": "built-in image_gen",
+    "prompt_summary": "Faithful 3:2 editorial ink/gouache illustration preserving reference geography and architecture; no invented landmarks."
+  }
+]
