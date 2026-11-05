@@ -44,7 +44,17 @@ final class PublicSeo
         $place=['@type'=>'TouristDestination','@id'=>$canonical.'#place','name'=>$destination['display_name'],'url'=>$canonical];
         if($image)$place['image']=$image;
         $page=['@type'=>'WebPage','@id'=>$canonical.'#webpage','url'=>$canonical,'name'=>self::placeTitle($destination['display_name'],$locale,(string)($destination['department']??'')),'inLanguage'=>$locale,'about'=>['@id'=>$place['@id']]];
-        return [$place,$page,self::breadcrumbs($origin,$locale,$destination['display_name'],$canonical)];
+        $graph=[$place,$page,self::breadcrumbs($origin,$locale,$destination['display_name'],$canonical)];
+        $media=[];if(!empty($destination['hero']))$media[]=$destination['hero'];
+        foreach($destination['places']??[] as $point)foreach($point['media']??[] as $item)$media[]=$item;
+        $seen=[];foreach($media as $item){
+            $path=(string)($item['path']??'');if($path===''||isset($seen[$path]))continue;$seen[$path]=true;
+            if(empty($item['source_url'])||empty($item['license_url']))continue;
+            $url=$origin.'/'.ltrim($path,'/');
+            $graph[]=['@type'=>'ImageObject','@id'=>$url.'#image','contentUrl'=>$url,'caption'=>(string)($item['alt']??''),
+                'creditText'=>(string)($item['creator']??''),'isBasedOn'=>(string)$item['source_url'],'license'=>(string)$item['license_url']];
+        }
+        return $graph;
     }
 
     public static function websiteGraph(string $origin,string $locale): array
