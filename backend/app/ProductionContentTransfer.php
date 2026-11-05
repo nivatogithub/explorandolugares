@@ -2,7 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__.'/PlaceAdminService.php';
 /** Private release tool: scoped editorial upserts; never imports accounts or payments. */
-final class ProductionContentTransfer
+class ProductionContentTransfer
 {
  private array $columnCache=[];
  public function __construct(private PDO $db){}
@@ -33,6 +33,7 @@ final class ProductionContentTransfer
   foreach($pack['editorial'] as $slug=>$source){
    $q=$this->db->prepare('SELECT id FROM destinations WHERE slug=?');$q->execute([$slug]);$id=(int)$q->fetchColumn();$existing=$id?$service->find($id):null;$in=$source;$in['id']=$id;
    foreach(['hero','history'] as $role)$in[$role.'_asset_id']=$media[(int)($source['destination_media'][$role]['media_asset_id']??0)]??0;
+   if ($existing && !isset($source['internal_research_json'])) $in['internal_research_json']=$existing['internal_research_json'];
    $existingPoi=$existing?array_column($existing['places'],null,'slug'):[];
    foreach($in['places'] as &$poi){$poi['id']=(int)($existingPoi[$poi['slug']]['id']??0);$poi['media_asset_id']=$media[(int)($poi['media_asset_id']??0)]??0;}unset($poi);
    foreach(['es','en','pt-BR'] as $lang){$in['history'][$lang]=implode("\n",$source['history'][$lang]);$in['reasons'][$lang]=implode("\n",$source['reasons'][$lang]);$in['sources'][$lang]=implode("\n",array_map(static fn($s)=>$s['section_key'].'|'.$s['source_label'].'|'.$s['source_url'],$source['sources'][$lang]));}
