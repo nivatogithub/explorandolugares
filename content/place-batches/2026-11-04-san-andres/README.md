@@ -2,11 +2,19 @@
 
 Rama: `contenido/lugar-san-andres-20261104`.
 
-Expediente en preparación. No publicado ni desplegado. Las fuentes, textos, imágenes y entradas de importación se conservarán en este directorio de Git. El lote de 16 lugares anterior no se modifica.
+## Contenido guardado en Git
 
-## Estado verificable
+- Introducción, motivos para visitar, cinco atractivos y dos experiencias en español, inglés y portugués brasileño.
+- Ocho establecimientos documentados mediante sitios propios; no se afirman reclamados, aliados ni verificados legalmente.
+- Cinco ilustraciones pendientes de aprobación: portada, Johnny Cay, Rocky Cay, Primera Iglesia Bautista y El Acuario.
+- Originales, procedencia, licencias, maestros y diez WebP (1200×800 y 640×427).
+- Comparativo `revision.html` con aprobación/comentarios y descarga de JSON.
 
-- Cinco atractivos documentados en `places/san-andres/research.json`.
-- Portada: referencia en descarga y revisión.
-- Coordenadas, traducciones, negocios, experiencias e imágenes finales pendientes; no se presentan como completados.
-- Providencia y Santa Catalina conservan su ficha independiente.
+## Pendiente antes de importar/publicar
+
+- Referencia adecuada e ilustración de Old Point. La candidata homónima encontrada se rechazó porque no corresponde a San Andrés.
+- Completar/verificar coordenadas y enlaces públicos de acceso, incluidos negocios y puntos de encuentro de experiencias.
+- Aprobación humana exacta de las imágenes y revisión editorial.
+- Construir entrada reproducible, importar mediante servicios y validar dev1.
+
+No publicado ni desplegado. Main, preprod y producción no se modifican. Los cinco atractivos no son cinco nuevos destinos: pertenecen a San Andrés. Providencia y Santa Catalina conservan su ficha independiente.

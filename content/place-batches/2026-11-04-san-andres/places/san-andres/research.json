@@ -15,13 +15,25 @@
     "Conocer la arquitectura de La Loma y la cultura raizal de la isla.",
     "Encontrar opciones locales para organizar recorridos y actividades marinas."
   ],
-  "geolocation": null,
+  "geolocation": {
+    "latitude": 12.583,
+    "longitude": -81.6976,
+    "source_url": "https://mapcarta.com/es/19686114",
+    "point_kind": "urban_reference_not_island_centroid",
+    "checked_at": "2026-11-04"
+  },
   "attractions": [
     {
       "name": "Johnny Cay",
       "description_es": "Un islote frente a la costa norte de San Andrés, con palmeras, playa y paisaje marino. Es un parque regional: el desembarque depende de las condiciones del mar y de las disposiciones de la autoridad ambiental.",
       "source_url": "https://colombia.travel/es/san-andres-isla/parque-regional-johnny-cay",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 12.59945,
+        "longitude": -81.69034,
+        "source_url": "https://mapcarta.com/es/W169845001",
+        "point_kind": "mapped_beach_reference_not_landing_pier",
+        "checked_at": "2026-11-04"
+      },
       "image_key": "attraction-01",
       "status": "research_confirmed_coordinates_pending"
     },
@@ -37,7 +49,13 @@
       "name": "Primera Iglesia Bautista de La Loma",
       "description_es": "El templo de madera y su entorno en La Loma acercan al visitante a la tradición religiosa de la comunidad raizal. Su arquitectura y posición elevada ofrecen una visita distinta de las playas.",
       "source_url": "https://colombia.travel/es/san-andres-island/la-iglesia-bautista",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 12.56191,
+        "longitude": -81.71696,
+        "source_url": "https://mapcarta.com/es/W169875625",
+        "point_kind": "mapped_building_not_entrance",
+        "checked_at": "2026-11-04"
+      },
       "image_key": "attraction-03",
       "status": "research_confirmed_coordinates_pending"
     },
@@ -53,7 +71,13 @@
       "name": "El Acuario y Haynes Cay",
       "description_es": "Rose Cay y Haynes Cay forman un paisaje de cayos y aguas someras conocido por las excursiones marinas. Las zonas de arena y las condiciones de acceso varían: no se presenta como un cruce peatonal garantizado.",
       "source_url": "https://colombia.travel/es/san-andres-isla",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 12.55266,
+        "longitude": -81.68871,
+        "source_url": "https://mapcarta.com/es/W245133418",
+        "point_kind": "mapped_islet_not_landing_point",
+        "checked_at": "2026-11-04"
+      },
       "image_key": "attraction-05",
       "status": "research_confirmed_coordinates_pending"
     }
@@ -214,5 +238,19 @@
     "Aprobación humana de las imágenes",
     "Completar negocios y experiencias con evidencia",
     "Completar traducciones y validación de paquete"
-  ]
+  ],
+  "administrative_note": "Código territorial 88001; no confundir la isla/cabecera con un municipio continental homónimo. Verificar clasificación administrativa en catálogo antes de importar.",
+  "review_ready_summary": {
+    "images_generated": 5,
+    "images_expected": 6,
+    "businesses_documented": 8,
+    "businesses_with_verified_coordinates": 0,
+    "experiences_documented": 2,
+    "locales_written": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "published": false
+  }
 }

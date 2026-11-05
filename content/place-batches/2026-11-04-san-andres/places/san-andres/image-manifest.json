@@ -46,5 +46,39 @@
     "sha256": "65d406e840a588c136b6caef3f1d49cc525495b24a45db70407671e194b693d8",
     "tool": "built-in image_gen",
     "prompt_summary": "Faithful 3:2 editorial ink/gouache illustration preserving reference geography and architecture; no invented landmarks."
+  },
+  {
+    "key": "attraction-02",
+    "name": "Rocky Cay",
+    "reference": "references/rocky-close.json",
+    "file": "images/attraction-02-1200.webp",
+    "master": "masters/attraction-02-v1.png",
+    "status": "pending_human_review",
+    "approval": null,
+    "illustration_not_photo": true,
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rocky_cay_(view_from_north).JPG",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "author_html": "<a href=\"//commons.wikimedia.org/wiki/User:Milenioscuro\" title=\"User:Milenioscuro\">Milenioscuro</a>",
+    "sha256": "17c928b21abb5f84efc75a41bb7fa12c64d1a1bae239976140db9a2e9400f9a5",
+    "tool": "built-in image_gen",
+    "prompt_summary": "Faithful 3:2 ink/gouache illustration from exact reference; no invented landmarks."
+  },
+  {
+    "key": "attraction-05",
+    "name": "El Acuario y Haynes Cay",
+    "reference": "references/attraction-05.json",
+    "file": "images/attraction-05-1200.webp",
+    "master": "masters/attraction-05-v1.png",
+    "status": "pending_human_review",
+    "approval": null,
+    "illustration_not_photo": true,
+    "source_url": "https://commons.wikimedia.org/wiki/File:El_acuario_San_Andr%C3%A9s.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "author_html": "<a href=\"//commons.wikimedia.org/wiki/User:Xemenendura\" title=\"User:Xemenendura\">Xemenendura</a>",
+    "sha256": "d957196efe5cb37f378965cd844c84ee8247af9feeca690886843464297a6ca8",
+    "tool": "built-in image_gen",
+    "prompt_summary": "Faithful 3:2 ink/gouache illustration from exact reference; no invented landmarks."
   }
 ]
