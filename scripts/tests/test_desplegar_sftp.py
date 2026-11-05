@@ -12,6 +12,12 @@ spec.loader.exec_module(deploy)
 
 
 class DeploymentTests(unittest.TestCase):
+    def test_retained_legacy_inventory_is_explicit_and_excludes_reintroduced_paths(self):
+        previous={'files':[{'relative':'public/old.php','sha256':'a'*64}], 'retained_legacy_files':[{'relative':'public/older.php','sha256':'b'*64}]}
+        current=[{'relative':'public/new.php','sha256':'c'*64}]
+        self.assertEqual([r['relative'] for r in deploy.retained_legacy_files(previous,current)],['public/old.php','public/older.php'])
+        self.assertEqual(deploy.retained_legacy_files(previous,current+previous['files']+previous['retained_legacy_files']),[])
+
     def setUp(self):
         self.config = {
             'site': 'explorandolugares', 'host': 'sftp.example.invalid', 'port': 22,

@@ -209,6 +209,12 @@ def obsolete_files(previous, current):
     return [item for item in (previous or {}).get('files', []) if item['relative'] not in current_names]
 
 
+def retained_legacy_files(previous,current):
+    names={item['relative'] for item in current}
+    old={item['relative']:item for item in (previous or {}).get('retained_legacy_files',[])+obsolete_files(previous,current)}
+    return [old[name] for name in sorted(old) if name not in names]
+
+
 def validate_removals(removed, allowed):
     """A missing source must never silently delete a live feature."""
     unauthorized = set(removed) - set(allowed)
@@ -321,6 +327,8 @@ def main(argv=None):
     parser.add_argument('--validation-report',type=Path,help='Informe funcional de la versión exacta publicada.')
     parser.add_argument('--recover',type=Path,help='Recupera solo los archivos de una entrega interrumpida; nunca restaura datos.')
     parser.add_argument('--deploy', action='store_true', help='Sube directamente solo archivos nuevos o modificados.')
+    parser.add_argument('--managed-preprod',action='store_true',help='Validate using the existing local Apache/MariaDB acceptance environment.')
+    parser.add_argument('--retain-legacy-files',action='store_true',help='Preserve absent previously managed files and record them separately; never delete them during deployment.')
     parser.add_argument('--only', action='append', default=[], metavar='RUTA',
                         help='Limita una entrega por ruta exacta del paquete (se puede repetir).')
     parser.add_argument('--force-file', action='append', default=[], metavar='RUTA',
@@ -339,7 +347,7 @@ def main(argv=None):
         from deployment_recovery import recover
         recover(sys.modules[__name__],SFTP(config),config,args.recover,ROOT/'.local/deployment-manifest.json')
         print('Archivos recuperados. Base de datos y estadísticas intactas.');return 0
-    subprocess.run([sys.executable, str(ROOT / 'scripts/verificar-antes-de-desplegar.py')], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, str(ROOT / 'scripts/verificar-antes-de-desplegar.py'),*(['--managed-preprod'] if args.managed_preprod else [])], cwd=ROOT, check=True)
     with tempfile.TemporaryDirectory(prefix='explorando-deploy-') as temporary:
         output = Path(temporary) / 'build'
         files = build(output, config)
@@ -363,10 +371,11 @@ def main(argv=None):
         selected = [item for item in scoped if item['relative'] in changed_paths]
         if args.deploy:
             require_main_ancestor(ROOT)
-            if previous: require_no_missing_files(files, previous)
+            if previous: require_no_missing_files(files+(obsolete_files(previous,files) if args.retain_legacy_files else []), previous)
             require_complete_delta(changed, selected)
         byte_count = sum(item['bytes'] for item in selected)
-        obsolete = [] if args.only or args.preserve_places else obsolete_files(previous, files)
+        retained=obsolete_files(previous,files) if args.retain_legacy_files else []
+        obsolete = [] if args.only or args.preserve_places or args.retain_legacy_files else obsolete_files(previous, files)
         removed = sorted(item['relative'] for item in obsolete)
         if args.deploy:
             validate_removals(removed, args.allow_remove)
@@ -387,6 +396,10 @@ def main(argv=None):
             print('El contenido ya coincide; no se subieron archivos del sitio.')
         manifest = (create_partial_manifest(config, files, previous, selected, git_commit())
                     if args.only or args.preserve_places else create_manifest(config, files, previous, git_commit()))
+        legacy=retained_legacy_files(previous,files)
+        if legacy:
+            manifest['retained_legacy_files']=legacy
+            print(f'Archivos anteriores conservados sin borrar: {len(legacy)}; inventario explícito para limpieza posterior.')
         manifest_text = json.dumps(manifest, indent=2, ensure_ascii=False) + '\n'
         local_manifest = ROOT / '.local/deployment-manifest.json'
         local_manifest.parent.mkdir(parents=True, exist_ok=True)

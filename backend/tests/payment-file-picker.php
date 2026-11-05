@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-$payment=file_get_contents(__DIR__.'/../public/business/payment.php');
+$payment=file_get_contents(__DIR__.'/../public/business/payment.php').file_get_contents(__DIR__.'/../app/views/account/business-payment.php');
 foreach(['account-files.css','account-files.js','name="payment_proof"','accept="application/pdf,image/jpeg,image/png,image/webp" required'] as $required){
  if(!str_contains($payment,$required))throw new RuntimeException('Payment attachment lost shared control or validation: '.$required);
 }

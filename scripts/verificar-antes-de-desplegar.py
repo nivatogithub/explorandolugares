@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -17,6 +18,9 @@ def run(label, command, **options):
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--managed-preprod',action='store_true',help='Use the existing isolated Apache/MariaDB acceptance runner instead of legacy temporary HTTP servers.')
+    args=parser.parse_args()
     php_files = sorted((ROOT / 'backend').rglob('*.php'))
     if not php_files:
         raise RuntimeError('No se encontraron archivos PHP para validar.')
@@ -45,16 +49,24 @@ def main():
     with tempfile.TemporaryDirectory(prefix='el-release-gate-', dir=ROOT/'.local') as folder:
         package = Path(folder)/'package'
         run('Paquete completo de pruebas', [sys.executable, 'scripts/prepare-hosting.py', '--output', str(package)])
+        seo_package=Path(folder)/'seo-package'
+        shutil.copytree(package,seo_package)
+        run('Fixture editorial desechable', [sys.executable, 'scripts/prepare-presentation-fixture.py', '--package', str(seo_package)])
         for path in sorted((ROOT / 'backend/tests').glob('*.php')):
             if path.name.endswith(('.mariadb.php', '.mysql.php', '.fixture.php')):
                 continue  # Database-specific tests and HTTP routers have dedicated runners below.
             arguments = [str(package)] if path.name == 'presentation-package.php' else []
+            if path.name in {'place-reader-contract.php','place-selectors.php'}:
+                arguments=[str(seo_package/'private/presentation.sqlite')]
             run(f'PHP {path.name}', ['php', str(path), *arguments])
         # Separate private fixtures; never replace registration's configuration.
-        seo_package=Path(folder)/'seo-package'
-        shutil.copytree(package,seo_package)
-        run('Fixture editorial desechable', [sys.executable, 'scripts/prepare-presentation-fixture.py', '--package', str(seo_package)])
         run('SEO sobre respuestas PHP finales', [sys.executable, 'scripts/check-package-seo.py', '--package', str(seo_package), '--output', str(seo_package/'seo-results.json')])
+        if args.managed_preprod:
+            run('Regresión completa en Apache/MariaDB local existente', [sys.executable,'preprod/regresion/ejecutar.py'])
+            for pattern in ['test_release_guard.py','test_desplegar_sftp.py','test_deployment_recovery.py','test_managed_release.py','test_full_release_coverage.py']:
+                run('Controles de entrega '+pattern,[sys.executable,'-m','unittest','discover','-s','scripts/tests','-p',pattern])
+            print('PRE-DESPLIEGUE APROBADO: PHP, SEO, regresión MariaDB administrada y recuperación. No se ejecutaron servidores HTTP heredados ni se verificó correo productivo.')
+            return 0
         run('Registro HTTP: cuatro planes, borradores, pago y cupones', [sys.executable, 'backend/tests/registration-flow.integration.py', '--package', str(package)])
         run('ZIP editorial y publicación Premium', [sys.executable, 'backend/tests/editorial-roundtrip.integration.py'])
         run('ZIP editorial con cupón del 100 %', [sys.executable, 'backend/tests/editorial-roundtrip.integration.py'], env={**os.environ, 'EL_EDITORIAL_PROMOTION':'1'})

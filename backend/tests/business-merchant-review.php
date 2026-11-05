@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-$source=file_get_contents(__DIR__.'/../public/business/editorial.php');
+$source=file_get_contents(__DIR__.'/../public/business/editorial.php').file_get_contents(__DIR__.'/../app/views/business/editorial.php');
 if(!preg_match('~<nav class="editorial-actions">(.*?)</nav>~s',$source,$matches))throw new RuntimeException('Missing editorial preview links.');
 if(str_contains($matches[1],'target="_blank"'))throw new RuntimeException('Merchant preview opens another tab.');
 if(str_contains($source,'Un pago o una aprobación del comerciante no publican automáticamente.'))throw new RuntimeException('Outdated publication instructions.');
