@@ -1,0 +1,42 @@
+{
+  "role": "attraction",
+  "kind": "ai_editorial_illustration",
+  "reference": {
+    "title": "Baño termal de Nuquí; Casa Balae",
+    "source_url": "https://casabalae.com/actividades/",
+    "original_url": "https://casabalae.com/wp-content/uploads/2022/09/Casa-Balae-Actividades-Home-Termales.jpg",
+    "license": "No confirmada; referencia de revisión privada",
+    "license_url": null,
+    "author_html": "Consultar fuente original",
+    "checked_at": "2026-11-04",
+    "sha256": "b366f7eb24fd88613e12fe2faa58d47053b6acbeabfae1b996cbda97c9ace588",
+    "approval": null,
+    "publication_rights_status": "unconfirmed",
+    "user_scope": "Explicit user override of confirmation prerequisite for draft generation; does not establish photographer permission"
+  },
+  "master_path": "/Users/nivato/.codex/generated_images/01a14472-a69a-7000-a166-018373a345ca/exec-6e2301c0-1688-479a-a89e-6117061f787c.png",
+  "master_sha256": "4b6e70a8b8883bd652546708357253f904ce1051eebafdae7d276767b4a922d4",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": null,
+  "review_status": "changes_requested",
+  "outputs": [
+    {
+      "file": "images/attraction-02-1200.webp",
+      "sha256": "f8f5da603adecea5c699e0cf8c674855c46094dc9c9eb166f509d1f30a083a84",
+      "bytes": 279110
+    },
+    {
+      "file": "images/attraction-02-640.webp",
+      "sha256": "5cfc83167e1a1bc28007fc1c1a35d910a4318446d4aae77c38c34a5c2087d2d2",
+      "bytes": 96422
+    }
+  ],
+  "human_review": {
+    "status": "changes_requested",
+    "at": "2026-11-04T20:37:49.706950+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "comment": "Agregar mujer adulta saliendo de la piscina; que sea otra persona no reconocible como la referencia, conservando complexión similar.",
+    "image_sha256": "f8f5da603adecea5c699e0cf8c674855c46094dc9c9eb166f509d1f30a083a84"
+  }
+}

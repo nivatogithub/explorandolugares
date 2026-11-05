@@ -31,7 +31,7 @@ for folder in sorted((ROOT/'places').iterdir()):
   for u in [a.get('source_url'),a.get('offer_url'),(a.get('geolocation') or {}).get('source_url')]:
    if u and u.startswith('https://'):urls.add(u)
  for i,l in enumerate(LOCALES):
-  dest['translations'][l]={'display_name':name,'eyebrow':dest['department'],'headline':name,'intro':intro[i],'meta_description':intro[i][:250]}
+  dest['translations'][l]={'display_name':name,'eyebrow':dest['department'],'headline':c['headlines'][i],'intro':intro[i],'meta_description':intro[i][:250]}
   dest['history'][l]=[c['history'][i]];dest['reasons'][l]=[reason[i]];dest['sources'][l]=[{'section':'destination','label':'Fuente documental' if l=='es' else 'Documentary source' if l=='en' else 'Fonte documental','url':u} for u in sorted(urls)]
  pois=[]
  for kind,key in [('place','attractions'),('experience','experiences')]:
