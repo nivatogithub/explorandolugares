@@ -16,7 +16,21 @@ final class PlaceDirectorySelector
             $slug=trim(preg_replace('/[^a-z0-9]+/','-',$slug),'-');
             $sql.=' AND (t.display_name LIKE ? ESCAPE \'!\'';$values[]=$escape($filters['q']);
             if($slug!==''){$sql.=' OR d.slug LIKE ? ESCAPE \'!\'';$values[]=$escape($slug);}
-            $sql.=')';
+            $term = $escape($filters['q']);
+            $sql .= " OR t.intro LIKE ? ESCAPE '!'
+                      OR t.headline LIKE ? ESCAPE '!'
+                      OR EXISTS (
+                          SELECT 1
+                          FROM points_of_interest poi
+                          JOIN point_of_interest_translations detail
+                            ON detail.point_of_interest_id = poi.id
+                          WHERE poi.destination_id = d.id
+                            AND poi.publication_status = 'published'
+                            AND detail.locale IN (t.locale, 'es')
+                            AND (detail.name LIKE ? ESCAPE '!'
+                                 OR detail.description LIKE ? ESCAPE '!')
+                      ))";
+            array_push($values, $term, $term, $term, $term);
         }
         if(($filters['department']??'')!==''){$sql.=' AND d.department=?';$values[]=$filters['department'];}
         if(($filters['region']??'')!==''){$sql.=' AND COALESCE(NULLIF(TRIM(d.subregion),\'\'),d.department)=?';$values[]=$filters['region'];}
