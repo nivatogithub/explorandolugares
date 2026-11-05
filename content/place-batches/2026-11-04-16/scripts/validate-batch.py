@@ -6,6 +6,10 @@ def point(x):return isinstance(x,dict) and isinstance(x.get('latitude'),(int,flo
 rows=[];errors=[]
 for p in sorted(ROOT.glob('places/*/research.json')):
  d=json.loads(p.read_text());assets=[('hero','Portada')]+[(a.get('image_key',f'attraction-{i+1:02}'),a['name']) for i,a in enumerate(d['attractions'])];missing=[];checks=0
+ used={key for key,name in assets}
+ for e in d.get('experiences',[]):
+  if e.get('image_key') and e['image_key'] not in used:
+   assets.append((e['image_key'],'Experiencia · '+e['name']));used.add(e['image_key'])
  for key,name in assets:
   m=p.parent/'images'/f'{key}.manifest.json'
   if not m.exists():missing.append(name);continue

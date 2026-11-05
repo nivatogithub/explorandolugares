@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-11-04",
+  "requests": [
+    {
+      "key": "cacao",
+      "url": "https://www.waze.com/live-map/directions/co/arauca/arauca/cacao?to=place.ChIJM9J176Prb44RMSilphJsqI4",
+      "bytes": 105130,
+      "geo": [
+        "chema.org\",\"@type\":\"Place\",\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":7.083942299999999,\"longitude\":-70.7576643,\"addressCountry\":\"CO\",\"address\":{\"@type\":\"PostalAddress\""
+      ]
+    },
+    {
+      "key": "gateaux",
+      "url": "https://restaurantguru.com/Gateaux-Cafe-Cake-Shop-Arauca",
+      "error": "HTTP Error 503: Service Temporarily Unavailable"
+    },
+    {
+      "key": "punta",
+      "url": "https://restaurantpuntarena.com/",
+      "bytes": 122776,
+      "geo": []
+    },
+    {
+      "key": "pinino",
+      "url": "https://carta.menu/restaurants/puerto-carreno/pinino-gourmet",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "tribu",
+      "url": "https://www.happycow.net/reviews/la-tribu-fit-inirida-298238",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "aventura",
+      "url": "https://www.cano-cristales.com/contacto/",
+      "bytes": 214769,
+      "geo": []
+    },
+    {
+      "key": "jungla",
+      "url": "https://www.junglaecotours.com/",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "key": "macarenia",
+      "url": "https://macareniatravel.wixsite.com/macareniatravel/sobre-macarenia-travel",
+      "bytes": 689161,
+      "geo": [
+        "usinessPostalCode\":\"505021\",\"businessLocationCoordinates\":{\"latitude\":2.1831929,\"longitude\":-73.7843783},\"currency\":\"COP\",\"experiments\":{\"seoJsonLdJsonEscapes\":\"B\",\"spe"
+      ]
+    },
+    {
+      "key": "viajeros",
+      "url": "https://viajerosdelorinoco.com/",
+      "bytes": 226962,
+      "geo": []
+    },
+    {
+      "key": "orinoquia",
+      "url": "https://orinoquiatoursyexpediciones.weebly.com/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "manacal",
+      "url": "https://manacalhotelboutique.com/",
+      "bytes": 221027,
+      "geo": []
+    },
+    {
+      "key": "cascada",
+      "url": "https://www.cybo.com/CO/puerto-carre%C3%B1o/restaurants/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "sarapata",
+      "url": "https://es.restaurantguru.com/RESTAURANTE-SARAPATA-Inirida",
+      "error": "HTTP Error 503: Service Temporarily Unavailable"
+    }
+  ],
+  "rejected_coordinates": [
+    {
+      "business": "Macarenia Travel",
+      "latitude": 2.1831929,
+      "longitude": -73.7843783,
+      "reason": "Wix specifies La Macarena, Meta, Colombia as the location, not the office address; rejected as a precise business point."
+    }
+  ]
+}

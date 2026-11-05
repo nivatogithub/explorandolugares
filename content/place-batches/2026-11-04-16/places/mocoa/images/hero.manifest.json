@@ -97,8 +97,13 @@
   "master_sha256": "434d6da0adb6719552e6c57cc88962dc43b3b4781ad20dd4e2cd58c3ceb8f095",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:37:49.706950+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "098ac4409b526488e1a15b9e0c3061d7ddd6496a6c952fb7a0fb2b2c67b38937"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/hero-640.webp",
@@ -122,5 +127,11 @@
       "Fine architectural details are stylized and need human approval."
     ]
   },
-  "source_sha256": "dd66fc2e8f5eaa9e4e7a82e02ab331121595c8d8cb54f979796d135c90bf65e0"
+  "source_sha256": "dd66fc2e8f5eaa9e4e7a82e02ab331121595c8d8cb54f979796d135c90bf65e0",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:37:49.706950+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "098ac4409b526488e1a15b9e0c3061d7ddd6496a6c952fb7a0fb2b2c67b38937"
+  }
 }

@@ -97,8 +97,13 @@
   "master_sha256": "b4db116678ea3613af4e938d64cc147a0ec702d5c0b03fd7c0316ddb1a4ed222",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "e0306cc84e8e02ac151b811c8dad4301781c6ab64398cb9c664335a59cdd08bb"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-02-1200.webp",
@@ -116,5 +121,11 @@
     "result": "candidate_ready_for_human_comparison",
     "notes": "Inspected generated image and identified reference; ink/gouache style. Retains broad camera/composition. Historic references do not verify current infrastructure. Human approval still required."
   },
-  "prompt_summary": "Faithful 3:2 ink/gouache editorial transformation from identified reference; retain camera, geographic shapes and architecture; no added sites, infrastructure or logos."
+  "prompt_summary": "Faithful 3:2 ink/gouache editorial transformation from identified reference; retain camera, geographic shapes and architecture; no added sites, infrastructure or logos.",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "e0306cc84e8e02ac151b811c8dad4301781c6ab64398cb9c664335a59cdd08bb"
+  }
 }

@@ -14,22 +14,35 @@
     "publication_rights_status": "unconfirmed",
     "user_scope": "Explicit user override of confirmation prerequisite for draft generation; does not establish photographer permission"
   },
-  "master_path": "/Users/nivato/.codex/generated_images/01a14472-a69a-7000-a166-018373a345ca/exec-6e2301c0-1688-479a-a89e-6117061f787c.png",
-  "master_sha256": "4b6e70a8b8883bd652546708357253f904ce1051eebafdae7d276767b4a922d4",
+  "master_path": "/Users/nivato/.codex/generated_images/01a14472-a69a-7000-a166-018373a345ca/exec-658d8bbd-8029-462b-b8a4-8ff78cd8dfdf.png",
+  "master_sha256": "39bf9d237dd6aa245a5c5f5bed0fd8a1cdf7b7c32ee47a4290183737d5d26532",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:57:15.444802+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "c2929390cdf37fc020c08b03c77e575c60456d50199e3303aae9e5c91cc5bc15"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-02-1200.webp",
-      "sha256": "f8f5da603adecea5c699e0cf8c674855c46094dc9c9eb166f509d1f30a083a84",
-      "bytes": 279110
+      "sha256": "c2929390cdf37fc020c08b03c77e575c60456d50199e3303aae9e5c91cc5bc15",
+      "bytes": 258584
     },
     {
       "file": "images/attraction-02-640.webp",
-      "sha256": "5cfc83167e1a1bc28007fc1c1a35d910a4318446d4aae77c38c34a5c2087d2d2",
-      "bytes": 96422
+      "sha256": "61ff1a2e7830a2333c4c4f2da6bef8b3fae112585c426896a39b7b90303a3490",
+      "bytes": 94966
     }
-  ]
+  ],
+  "edit_brief": "Adult fictional woman emerging from existing thermal pool, similar build to reference, different identity, preserve pool and surroundings.",
+  "publication_ready": false,
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:57:15.444802+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "c2929390cdf37fc020c08b03c77e575c60456d50199e3303aae9e5c91cc5bc15"
+  }
 }

@@ -138,208 +138,840 @@
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2557464,
+        "longitude": -70.23624699999999,
+        "source_url": "https://pasaymira.com/guia/martica-la-santandereana",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "address": {
+          "source_url": "https://pasaymira.com/guia/martica-la-santandereana",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cra. 14 #10- 139",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Restaurante y Cafetería Germes",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2569124,
+        "longitude": -70.2319878,
+        "source_url": "https://pasaymira.com/guia/restaurante-y-cafeteria-germes",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "address": {
+          "source_url": "https://pasaymira.com/guia/restaurante-y-cafeteria-germes",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cl. 14 #14 - 52",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Séptimo Cielo",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2580693,
+        "longitude": -70.23483089999999,
+        "source_url": "https://pasaymira.com/guia/septimo-cielo",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "telephone": {
+          "source_url": "https://pasaymira.com/guia/septimo-cielo",
+          "value": "+57 322 9218869",
+          "status": "secondary_listing"
+        },
+        "address": {
+          "source_url": "https://pasaymira.com/guia/septimo-cielo",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "a 12-273",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "El Laurel JR",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2567135,
+        "longitude": -70.2353663,
+        "source_url": "https://pasaymira.com/guia/el-laurel-jr-restaurante",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "telephone": {
+          "source_url": "https://pasaymira.com/guia/el-laurel-jr-restaurante",
+          "value": "+57 316 7563413",
+          "status": "secondary_listing"
+        },
+        "address": {
+          "source_url": "https://pasaymira.com/guia/el-laurel-jr-restaurante",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Barrio Villa Alix",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Ivan Pollo Al Carbon",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2575754,
+        "longitude": -70.2358479,
+        "source_url": "https://pasaymira.com/guia/ivan-pollo-al-carbon",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "address": {
+          "source_url": "https://pasaymira.com/guia/ivan-pollo-al-carbon",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cl. 13 #13-2 a 13-46",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Restaurante Tucán Macun",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2582927,
+        "longitude": -70.235481,
+        "source_url": "https://pasaymira.com/guia/restaurante-tucan-macun",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "telephone": {
+          "source_url": "https://pasaymira.com/guia/restaurante-tucan-macun",
+          "value": "+57 313 2827737",
+          "status": "secondary_listing"
+        },
+        "address": {
+          "source_url": "https://pasaymira.com/guia/restaurante-tucan-macun",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "a 12-274",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Restaurante Doña Yenny",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2560878,
+        "longitude": -70.2346596,
+        "source_url": "https://pasaymira.com/guia/restaurante-dona-yenny",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "address": {
+          "source_url": "https://pasaymira.com/guia/restaurante-dona-yenny",
+          "value": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "YOGO FELD",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2585532,
+        "longitude": -70.236069,
+        "source_url": "https://pasaymira.com/guia/yogo-feld",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "telephone": {
+          "source_url": "https://pasaymira.com/guia/yogo-feld",
+          "value": "+57 350 8040038",
+          "status": "secondary_listing"
+        },
+        "address": {
+          "source_url": "https://pasaymira.com/guia/yogo-feld",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cra. 13 #14-14 Centro A",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Steak house",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.25648,
+        "longitude": -70.2347339,
+        "source_url": "https://pasaymira.com/guia/steak-house",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "address": {
+          "source_url": "https://pasaymira.com/guia/steak-house",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cra. 13a",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Maloka San Victorino",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2583439,
+        "longitude": -70.23730549999999,
+        "source_url": "https://pasaymira.com/guia/maloka-san-victorino",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "address": {
+          "source_url": "https://pasaymira.com/guia/maloka-san-victorino",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Queramiki, Cl. 14 #13a-55",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Restaurante Sazón Costeño",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2570642,
+        "longitude": -70.2358497,
+        "source_url": "https://pasaymira.com/guia/restaurante-sazon-costeno",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "address": {
+          "source_url": "https://pasaymira.com/guia/restaurante-sazon-costeno",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "a 12-144",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "La Loma del sabor",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2535052,
+        "longitude": -70.231736,
+        "source_url": "https://pasaymira.com/guia/la-loma-del-sabor",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "address": {
+          "source_url": "https://pasaymira.com/guia/la-loma-del-sabor",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cra. 8 #9a-22",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Mi Ranchito Asadero Y Restaurante",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2569097,
+        "longitude": -70.235276,
+        "source_url": "https://pasaymira.com/guia/mi-ranchito-asadero-y-restaurante",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "telephone": {
+          "source_url": "https://pasaymira.com/guia/mi-ranchito-asadero-y-restaurante",
+          "value": "+57 321 2752745",
+          "status": "secondary_listing"
+        },
+        "address": {
+          "source_url": "https://pasaymira.com/guia/mi-ranchito-asadero-y-restaurante",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "a 13-128",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Beiju Fusión Amazónica",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2566912,
+        "longitude": -70.23642869999999,
+        "source_url": "https://pasaymira.com/guia/beiju-fusion-amazonica",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "telephone": {
+          "source_url": "https://pasaymira.com/guia/beiju-fusion-amazonica",
+          "value": "+57 350 6909225",
+          "status": "secondary_listing"
+        },
+        "address": {
+          "source_url": "https://pasaymira.com/guia/beiju-fusion-amazonica",
+          "value": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Sabor de la Selva",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.249201,
+        "longitude": -70.2358689,
+        "source_url": "https://pasaymira.com/guia/sabor-de-la-selva",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "phone": "+57 350 8274000",
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://es.restaurantguru.com/Sabor-de-la-Selva-Mitu",
+          "checked_at": "2026-11-04",
+          "status": "public_listing_not_owner_confirmed",
+          "observed_value": "+57 350 8274000"
+        },
+        "address": {
+          "source_url": "https://pasaymira.com/guia/sabor-de-la-selva",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Avenida 15 #6-206",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        },
+        "telephone": {
+          "source_url": "https://pasaymira.com/guia/sabor-de-la-selva",
+          "value": "+57 350 8274000",
+          "status": "secondary_listing"
+        }
+      },
+      "address": "Avenida 15 #6-206, Mitú",
+      "business_evidence": [
+        {
+          "source_url": "https://es.restaurantguru.com/Sabor-de-la-Selva-Mitu",
+          "checked_at": "2026-11-04",
+          "identity": "name_and_locality_present",
+          "current_operation": "not_independently_confirmed"
+        }
+      ]
     },
     {
       "name": "Cumbiana Restaurante",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2596498,
+        "longitude": -70.235922,
+        "source_url": "https://pasaymira.com/guia/cumbiana-restaurante",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "telephone": {
+          "source_url": "https://pasaymira.com/guia/cumbiana-restaurante",
+          "value": "+57 321 3063355",
+          "status": "secondary_listing"
+        },
+        "address": {
+          "source_url": "https://pasaymira.com/guia/cumbiana-restaurante",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cl. 15a #13a",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Restaurante Miriti",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2581914,
+        "longitude": -70.2364564,
+        "source_url": "https://pasaymira.com/guia/restaurante-miriti",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "address": {
+          "source_url": "https://pasaymira.com/guia/restaurante-miriti",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cra. 13a #13-2 a 13-112",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Restaurante Gourmet Los Paisas",
       "category": "restaurant",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
       "source_type": "secondary_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2591841,
+        "longitude": -70.2355577,
+        "source_url": "https://pasaymira.com/guia/restaurante-gourmet-los-paisas",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_identity_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "secondary_directory_requires_independent_confirmation"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "telephone": {
+          "source_url": "https://pasaymira.com/guia/restaurante-gourmet-los-paisas",
+          "value": "+57 317 7512036",
+          "status": "secondary_listing"
+        },
+        "address": {
+          "source_url": "https://pasaymira.com/guia/restaurante-gourmet-los-paisas",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cra. 13 #15-45",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Posada Turística Quenari Wii",
       "category": "accommodation",
       "source_url": "https://pasaymira.com/guia/ciudad/mitu-568",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 1.2492292,
+        "longitude": -70.2317157,
+        "source_url": "https://pasaymira.com/guia/posada-turistica-quenari-wii",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "candidate_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "field_evidence": {
+        "telephone": {
+          "source_url": "https://pasaymira.com/guia/posada-turistica-quenari-wii",
+          "value": "+57 315 8983123",
+          "status": "secondary_listing"
+        },
+        "address": {
+          "source_url": "https://pasaymira.com/guia/posada-turistica-quenari-wii",
+          "value": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cra. 8a #7a-290",
+            "addressLocality": "Mitú",
+            "addressRegion": "Vaupés",
+            "addressCountry": "CO"
+          },
+          "status": "secondary_listing"
+        }
+      }
     },
     {
       "name": "Hotel Mitú Real",
@@ -357,7 +989,19 @@
       "verified_business": false,
       "additional_sources": [
         "https://www.openstreetmap.org/node/11872769030"
-      ]
+      ],
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Mitú Real",
+        "live_source_version": "1",
+        "live_source_timestamp": "2024-05-01T21:55:10Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Brasilia Vaupés",
@@ -375,7 +1019,19 @@
       "verified_business": false,
       "additional_sources": [
         "https://www.openstreetmap.org/node/7494777904"
-      ]
+      ],
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Brasilia Vaupés",
+        "live_source_version": "3",
+        "live_source_timestamp": "2021-10-21T22:27:15Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Wazay",
@@ -400,6 +1056,18 @@
         "longitude": -70.2353125,
         "kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/4222650042"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Wazay",
+        "live_source_version": "4",
+        "live_source_timestamp": "2025-07-25T14:50:16Z",
+        "live_coordinate_validation": "live_named_point_matches"
       }
     },
     {
@@ -429,6 +1097,18 @@
         "longitude": -70.2357972,
         "kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9191812830"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Carayuru",
+        "live_source_version": "1",
+        "live_source_timestamp": "2021-10-21T22:27:15Z",
+        "live_coordinate_validation": "live_named_point_matches"
       }
     },
     {
@@ -454,6 +1134,18 @@
         "longitude": -70.2313947,
         "kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9191812831"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "All Grill",
+        "live_source_version": "1",
+        "live_source_timestamp": "2021-10-21T22:27:15Z",
+        "live_coordinate_validation": "live_named_point_matches"
       }
     },
     {
@@ -479,6 +1171,18 @@
         "longitude": -70.2354804,
         "kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/11872769032"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Los Paisas",
+        "live_source_version": "1",
+        "live_source_timestamp": "2024-05-01T21:55:10Z",
+        "live_coordinate_validation": "live_named_point_matches"
       }
     },
     {
@@ -507,6 +1211,18 @@
         "longitude": -70.2349272,
         "kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/12695988536"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Texas Burger",
+        "live_source_version": "2",
+        "live_source_timestamp": "2025-04-07T21:01:19Z",
+        "live_coordinate_validation": "live_named_point_matches"
       }
     },
     {
@@ -533,6 +1249,18 @@
         "longitude": -70.23646794999999,
         "kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/1089958011"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel La Voragine",
+        "live_source_version": "3",
+        "live_source_timestamp": "2026-06-22T18:46:25Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
       }
     },
     {
@@ -558,6 +1286,18 @@
         "longitude": -70.23600995000001,
         "kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/1278911741"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Holy",
+        "live_source_version": "1",
+        "live_source_timestamp": "2024-05-01T21:55:10Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
       }
     },
     {
@@ -584,6 +1324,18 @@
         "longitude": -70.2355654,
         "kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/1352390535"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Los Paisas",
+        "live_source_version": "1",
+        "live_source_timestamp": "2025-01-18T19:20:13Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
       }
     },
     {
@@ -610,6 +1362,18 @@
         "longitude": -70.23618875,
         "kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/1531484853"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel JM",
+        "live_source_version": "1",
+        "live_source_timestamp": "2026-06-22T18:46:25Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
       }
     }
   ],

@@ -1,0 +1,450 @@
+[
+  {
+    "name": "Ecolodge El Almejal",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.1128941,
+      "longitude": -77.435153,
+      "source_url": "https://www.almejal.com.co/",
+      "point_kind": "operator_named_maps_place",
+      "checked_at": "2026-11-04"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "operator_named_maps_place",
+    "issues": [
+      "operator_schema_coordinate_conflicts_use_named_hotel_map_link"
+    ],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_coordinate_validation": "named_listing_coordinate_documented"
+  },
+  {
+    "name": "Ecolodge Playa Alegre",
+    "category": "accommodation",
+    "geolocation": null,
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "needs_source_validation",
+    "issues": [
+      "coordinates_missing",
+      "secondary_coordinate_points_to_bahia_town_not_operator_el_valle_location"
+    ],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_coordinate_validation": "not_live_checked"
+  },
+  {
+    "name": "Hakuna Matata Ecolodge",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.11171,
+      "longitude": -77.43418,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://mapcarta.com/es/N9939762937"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "needs_source_validation",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_coordinate_validation": "live_named_point_matches_reviewed_alias",
+    "live_source_name": "Hakuna Matata Lodge",
+    "live_source_url": "https://www.openstreetmap.org/node/9939762937",
+    "coordinate_difference_degrees": 4.4000000087862645e-06,
+    "identity_basis": "Same Instagram handle hakuna.matata.choco.hostal on operator website and OSM"
+  },
+  {
+    "name": "Fundación MarAdentro",
+    "category": "tour_operator",
+    "geolocation": null,
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "needs_source_validation",
+    "issues": [
+      "coordinates_missing"
+    ],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_coordinate_validation": "not_live_checked"
+  },
+  {
+    "name": "Bahía Solano Me Llama",
+    "category": "tour_operator",
+    "geolocation": {
+      "latitude": 6.2271624,
+      "longitude": -77.4070635,
+      "source_url": "https://maps.app.goo.gl/zu62hCnN22PD5KqL7",
+      "point_kind": "operator_linked_named_place",
+      "checked_at": "2026-11-04"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "operator_linked_named_place",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_coordinate_validation": "named_listing_coordinate_documented"
+  },
+  {
+    "name": "Hotel Bahía Solano",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.2264656,
+      "longitude": -77.4066693,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3048058621"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Hotel Bahía Solano",
+    "live_source_version": "5",
+    "live_source_timestamp": "2026-09-21T10:27:15Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Rocas de Cabo Marzo",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.2269539,
+      "longitude": -77.4079498,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/3048123052"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Rocas de Cabo Marzo",
+    "live_source_version": "2",
+    "live_source_timestamp": "2020-07-17T20:34:20Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Posada El Acuario",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.2275959,
+      "longitude": -77.4078273,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/6202842486"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Posada El Acuario",
+    "live_source_version": "2",
+    "live_source_timestamp": "2021-12-22T22:29:10Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Hotel Yubarta",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.2269874,
+      "longitude": -77.4071092,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9906567906"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Hotel Yubarta",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-07-23T21:25:38Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Balboa Inn",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.2269486,
+      "longitude": -77.4066952,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9906590929"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Balboa Inn",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-07-23T21:27:30Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Hotel Bahía Yubarta",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.2269771,
+      "longitude": -77.4070967,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9950190317"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Hotel Bahía Yubarta",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-08-12T22:31:18Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Hotel Pacífico Azul",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.2250753,
+      "longitude": -77.4055063,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9951766617"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Hotel Pacífico Azul",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-08-13T23:50:39Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Centro de buceo Ankla Azul",
+    "category": "tour_operators",
+    "geolocation": {
+      "latitude": 6.226778,
+      "longitude": -77.4068166,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790317"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Centro de buceo Ankla Azul",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-08-15T21:57:27Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Hotel Costa Chocó",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.2269559,
+      "longitude": -77.4066824,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790318"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Hotel Costa Chocó",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-08-15T21:57:31Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Restaurante La Casa Negra",
+    "category": "restaurants",
+    "geolocation": {
+      "latitude": 6.2269125,
+      "longitude": -77.4072719,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790418"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Restaurante La Casa Negra",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-08-15T21:57:33Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Restaurante Bra y Vic",
+    "category": "restaurants",
+    "geolocation": {
+      "latitude": 6.2267398,
+      "longitude": -77.4058921,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790517"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Restaurante Bra y Vic",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-08-15T21:57:35Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Arepas y panzeroti \"Los Palitos\"",
+    "category": "restaurants",
+    "geolocation": {
+      "latitude": 6.2255702,
+      "longitude": -77.4055601,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/9955790518"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Arepas y panzeroti \"Los Palitos\"",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-08-15T21:57:39Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Posada Del Mar",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.2261463,
+      "longitude": -77.4073136,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10004287917"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Posada Del Mar",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-09-06T13:28:28Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Marea",
+    "category": "restaurants",
+    "geolocation": {
+      "latitude": 6.2279934,
+      "longitude": -77.409501,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/10004287918"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Marea",
+    "live_source_version": "1",
+    "live_source_timestamp": "2022-09-06T13:28:29Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Amongus Parrilla",
+    "category": "restaurants",
+    "geolocation": {
+      "latitude": 6.2263775,
+      "longitude": -77.4057921,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/11119170505"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Amongus Parrilla",
+    "live_source_version": "1",
+    "live_source_timestamp": "2023-08-16T14:46:58Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Madre Agua",
+    "category": "tour_operators",
+    "geolocation": {
+      "latitude": 6.2256618,
+      "longitude": -77.4062079,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://www.openstreetmap.org/node/13032329201"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "cached_named_map_feature_matched",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_source_name": "Madre Agua",
+    "live_source_version": "1",
+    "live_source_timestamp": "2025-07-28T20:57:25Z",
+    "live_coordinate_validation": "live_named_point_matches"
+  },
+  {
+    "name": "Posada Don Ai (Playa Alegra)",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.11249,
+      "longitude": -77.43414,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://mapcarta.com/es/N4417864892"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "needs_source_validation",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_coordinate_validation": "live_named_point_matches",
+    "live_source_name": "Posada Don Ai (Playa Alegra)",
+    "live_source_url": "https://www.openstreetmap.org/node/4417864892",
+    "coordinate_difference_degrees": 2.099999999671809e-06
+  },
+  {
+    "name": "William el paisa",
+    "category": "accommodation",
+    "geolocation": {
+      "latitude": 6.10791,
+      "longitude": -77.43244,
+      "point_kind": "mapped_site_node",
+      "source_url": "https://mapcarta.com/es/N6541506488"
+    },
+    "checked_at": "2026-11-04",
+    "coordinate_evidence": "needs_source_validation",
+    "issues": [],
+    "current_operation": "not_independently_confirmed",
+    "municipality_membership": "not_certified",
+    "publication_ready": false,
+    "live_coordinate_validation": "live_named_point_matches",
+    "live_source_name": "William el paisa",
+    "live_source_url": "https://www.openstreetmap.org/node/6541506488",
+    "coordinate_difference_degrees": 4.39999999457541e-06
+  }
+]

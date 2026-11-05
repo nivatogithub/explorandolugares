@@ -152,7 +152,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Empanadas Dónde Inés",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-15T21:57:40Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Jesusita",
@@ -174,7 +186,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Jesusita",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-09-01T13:38:54Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Canita",
@@ -196,7 +220,27 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Canita",
+        "live_source_version": "1",
+        "live_source_timestamp": "2026-06-04T12:32:55Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      },
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/13909571001",
+          "checked_at": "2026-11-04",
+          "observed_value": "+573216637244;+573186642266",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      }
     },
     {
       "name": "Ricuras de Panguí",
@@ -218,7 +262,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Ricuras de Panguí",
+        "live_source_version": "1",
+        "live_source_timestamp": "2026-06-04T12:42:24Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Escombros del Mar",
@@ -240,7 +296,34 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Escombros del Mar",
+        "live_source_version": "2",
+        "live_source_timestamp": "2026-09-21T10:27:21Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      },
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/13910816001",
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 321 2336818",
+          "status": "live_map_listing_not_owner_confirmed"
+        },
+        "email": {
+          "source_url": "https://www.openstreetmap.org/node/13910816001",
+          "checked_at": "2026-11-04",
+          "observed_value": "escombrosdelmarhostal@gmail.com",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "email": "escombrosdelmarhostal@gmail.com"
     },
     {
       "name": "La Azotea",
@@ -262,7 +345,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "La Azotea",
+        "live_source_version": "1",
+        "live_source_timestamp": "2026-06-08T18:39:00Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Obera Pacific",
@@ -284,7 +379,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Obera Pacific",
+        "live_source_version": "1",
+        "live_source_timestamp": "2026-06-08T18:39:02Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Nuquimar",
@@ -306,7 +413,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Nuquimar",
+        "live_source_version": "2",
+        "live_source_timestamp": "2019-03-15T16:31:49Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Arena Azul",
@@ -328,7 +447,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Arena Azul",
+        "live_source_version": "2",
+        "live_source_timestamp": "2019-03-15T16:31:49Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Puerta del Sol",
@@ -350,7 +481,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Puerta del Sol",
+        "live_source_version": "3",
+        "live_source_timestamp": "2019-03-15T16:31:12Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Pacífico Travel",
@@ -372,7 +515,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Pacífico Travel",
+        "live_source_version": "2",
+        "live_source_timestamp": "2019-03-15T15:49:50Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Delfín Real",
@@ -394,7 +549,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Delfín Real",
+        "live_source_version": "2",
+        "live_source_timestamp": "2019-03-15T16:31:12Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Pola",
@@ -416,7 +583,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Pola",
+        "live_source_version": "2",
+        "live_source_timestamp": "2019-03-15T16:31:12Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Iracas del Mar",
@@ -438,7 +617,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Iracas del Mar",
+        "live_source_version": "1",
+        "live_source_timestamp": "2025-12-22T20:48:53Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "La Joviseña",
@@ -460,7 +651,27 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "La Joviseña",
+        "live_source_version": "2",
+        "live_source_timestamp": "2024-07-10T15:02:34Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      },
+      "field_evidence": {
+        "website": {
+          "source_url": "https://www.openstreetmap.org/node/3951510936",
+          "checked_at": "2026-11-04",
+          "observed_value": "https://www.lajovisena.com/",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      }
     },
     {
       "name": "Hotel El Cantil Ecolodge",
@@ -482,7 +693,27 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel El Cantil Ecolodge",
+        "live_source_version": "1",
+        "live_source_timestamp": "2016-01-28T17:28:59Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      },
+      "field_evidence": {
+        "website": {
+          "source_url": "https://www.openstreetmap.org/node/3974236001",
+          "checked_at": "2026-11-04",
+          "observed_value": "http://www.elcantil.com",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      }
     },
     {
       "name": "Cabañas Playa Terco",
@@ -504,7 +735,27 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Cabañas Playa Terco",
+        "live_source_version": "4",
+        "live_source_timestamp": "2026-09-21T10:27:15Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      },
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/3974236002",
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 312 7682533",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      }
     },
     {
       "name": "Nautilos",
@@ -526,7 +777,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Nautilos",
+        "live_source_version": "1",
+        "live_source_timestamp": "2016-10-04T03:06:24Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Beto & Marta Cabañas",
@@ -548,7 +811,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Beto & Marta Cabañas",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-11-26T13:28:23Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Brisas del Mar",
@@ -570,7 +845,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Brisas del Mar",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-09-10T16:40:39Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Pura Vida",
@@ -592,7 +879,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Pura Vida",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-09-23T15:41:11Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Casa Maniki",
@@ -614,7 +913,34 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Casa Maniki",
+        "live_source_version": "2",
+        "live_source_timestamp": "2020-03-20T02:57:04Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      },
+      "field_evidence": {
+        "website": {
+          "source_url": "https://www.openstreetmap.org/node/7286841085",
+          "checked_at": "2026-11-04",
+          "observed_value": "https://casamaniki.com/",
+          "status": "live_map_listing_not_owner_confirmed"
+        },
+        "email": {
+          "source_url": "https://www.openstreetmap.org/node/7286841085",
+          "checked_at": "2026-11-04",
+          "observed_value": "casamaniki@gmail.com",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "email": "casamaniki@gmail.com"
     },
     {
       "name": "Restaurante Apapache",
@@ -636,7 +962,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Restaurante Apapache",
+        "live_source_version": "2",
+        "live_source_timestamp": "2022-08-22T02:58:42Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Posada Las Palmas",
@@ -658,7 +996,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Posada Las Palmas",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-17T02:52:22Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hospedaje Bahía Terco",
@@ -680,7 +1030,27 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hospedaje Bahía Terco",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-17T02:52:29Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      },
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/9958300819",
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 312 215 8139;+57 312 811 8153",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      }
     },
     {
       "name": "Hotel Mar y Río",
@@ -704,7 +1074,19 @@
       "public": false,
       "status": "documented_directory_candidate_for_review",
       "official_source_url": "https://maryrionuqui.com/",
-      "email": "Reservas@maryrionuqui.com"
+      "email": "Reservas@maryrionuqui.com",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Mar y Río",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-17T02:52:24Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Peñas de Guachalito",
@@ -726,7 +1108,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Peñas de Guachalito",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-17T02:52:27Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Restaurante Choibá",
@@ -748,7 +1142,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Restaurante Choibá",
+        "live_source_version": "1",
+        "live_source_timestamp": "2026-06-04T12:23:14Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel La Kuka",
@@ -770,7 +1176,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel La Kuka",
+        "live_source_version": "2",
+        "live_source_timestamp": "2025-12-28T23:25:20Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Casa Balae",
@@ -792,7 +1210,16 @@
       "claimed": false,
       "verified_business": false,
       "commercial_plan": "free",
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "operator_named_maps_link_matches"
+      }
     }
   ],
   "media": {

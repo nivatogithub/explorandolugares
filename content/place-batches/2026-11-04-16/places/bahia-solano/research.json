@@ -101,11 +101,28 @@
       "name": "Ecolodge El Almejal",
       "source_url": "https://www.almejal.com.co/",
       "category": "accommodation",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 6.1128941,
+        "longitude": -77.435153,
+        "source_url": "https://www.almejal.com.co/",
+        "point_kind": "operator_named_maps_place",
+        "checked_at": "2026-11-04"
+      },
       "status": "documented_unclaimed_geo_pending",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "operator_named_maps_place",
+        "issues": [
+          "operator_schema_coordinate_conflicts_use_named_hotel_map_link"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      }
     },
     {
       "name": "Ecolodge Playa Alegre",
@@ -115,7 +132,27 @@
       "status": "documented_unclaimed_geo_pending",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing",
+          "secondary_coordinate_points_to_bahia_town_not_operator_el_valle_location"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked"
+      },
+      "geolocation_candidates": [
+        {
+          "latitude": 6.2228,
+          "longitude": -77.4014,
+          "source_url": "https://glampings.co/ecolodge-playa-alegre",
+          "status": "rejected_for_use_conflicts_with_operator_el_valle_address"
+        }
+      ]
     },
     {
       "name": "Hakuna Matata Ecolodge",
@@ -137,7 +174,20 @@
         "osm_id": "node/9939762937"
       },
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "live_named_point_matches_reviewed_alias",
+        "live_source_name": "Hakuna Matata Lodge",
+        "live_source_url": "https://www.openstreetmap.org/node/9939762937",
+        "coordinate_difference_degrees": 4.4000000087862645e-06,
+        "identity_basis": "Same Instagram handle hakuna.matata.choco.hostal on operator website and OSM"
+      }
     },
     {
       "name": "Fundación MarAdentro",
@@ -147,17 +197,43 @@
       "status": "documented_unclaimed_geo_pending",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked"
+      }
     },
     {
       "name": "Bahía Solano Me Llama",
       "source_url": "https://www.bahiasolanomellama.com/",
       "category": "tour_operator",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 6.2271624,
+        "longitude": -77.4070635,
+        "source_url": "https://maps.app.goo.gl/zu62hCnN22PD5KqL7",
+        "point_kind": "operator_linked_named_place",
+        "checked_at": "2026-11-04"
+      },
       "status": "documented_unclaimed_geo_pending",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "operator_linked_named_place",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      }
     },
     {
       "name": "Hotel Bahía Solano",
@@ -186,7 +262,35 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/3048058621"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "phone": "+57 314 8217037",
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/3048058621",
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 314 8217037",
+          "status": "live_map_listing_not_owner_confirmed"
+        },
+        "website": {
+          "source_url": "https://www.openstreetmap.org/node/3048058621",
+          "checked_at": "2026-11-04",
+          "observed_value": "https://hotelbahiasolano.com/",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "website": "https://hotelbahiasolano.com/",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Bahía Solano",
+        "live_source_version": "5",
+        "live_source_timestamp": "2026-09-21T10:27:15Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Rocas de Cabo Marzo",
@@ -213,7 +317,28 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/3048123052"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "website": "http://posadarocasdecabomarzo.com/",
+      "field_evidence": {
+        "website": {
+          "source_url": "https://www.openstreetmap.org/node/3048123052",
+          "checked_at": "2026-11-04",
+          "observed_value": "http://posadarocasdecabomarzo.com/",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Rocas de Cabo Marzo",
+        "live_source_version": "2",
+        "live_source_timestamp": "2020-07-17T20:34:20Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Posada El Acuario",
@@ -243,7 +368,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6202842486"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Posada El Acuario",
+        "live_source_version": "2",
+        "live_source_timestamp": "2021-12-22T22:29:10Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Yubarta",
@@ -269,7 +406,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9906567906"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Yubarta",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-07-23T21:25:38Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Balboa Inn",
@@ -295,7 +444,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9906590929"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Balboa Inn",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-07-23T21:27:30Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Bahía Yubarta",
@@ -324,7 +485,28 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9950190317"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "phone": "+57 311 3891888",
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/9950190317",
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 311 3891888",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Bahía Yubarta",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-12T22:31:18Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Pacífico Azul",
@@ -351,7 +533,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9951766617"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Pacífico Azul",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-13T23:50:39Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Centro de buceo Ankla Azul",
@@ -379,7 +573,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9955790317"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Centro de buceo Ankla Azul",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-15T21:57:27Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Costa Chocó",
@@ -406,7 +612,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9955790318"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Costa Chocó",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-15T21:57:31Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Restaurante La Casa Negra",
@@ -433,7 +651,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9955790418"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Restaurante La Casa Negra",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-15T21:57:33Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Restaurante Bra y Vic",
@@ -460,7 +690,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9955790517"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Restaurante Bra y Vic",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-15T21:57:35Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Arepas y panzeroti \"Los Palitos\"",
@@ -487,7 +729,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9955790518"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Arepas y panzeroti \"Los Palitos\"",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-15T21:57:39Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Posada Del Mar",
@@ -513,7 +767,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/10004287917"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Posada Del Mar",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-09-06T13:28:28Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Marea",
@@ -539,7 +805,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/10004287918"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Marea",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-09-06T13:28:29Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Amongus Parrilla",
@@ -565,7 +843,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/11119170505"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Amongus Parrilla",
+        "live_source_version": "1",
+        "live_source_timestamp": "2023-08-16T14:46:58Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Madre Agua",
@@ -591,7 +881,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/13032329201"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Madre Agua",
+        "live_source_version": "1",
+        "live_source_timestamp": "2025-07-28T20:57:25Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Posada Don Ai (Playa Alegra)",
@@ -607,7 +909,19 @@
       "claimed": false,
       "verified_business": false,
       "public": false,
-      "deduplication_note": "No confundir automáticamente con Ecolodge Playa Alegre; verificar identidad/nombre histórico antes de contar como comercio independiente."
+      "deduplication_note": "No confundir automáticamente con Ecolodge Playa Alegre; verificar identidad/nombre histórico antes de contar como comercio independiente.",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "live_named_point_matches",
+        "live_source_name": "Posada Don Ai (Playa Alegra)",
+        "live_source_url": "https://www.openstreetmap.org/node/4417864892",
+        "coordinate_difference_degrees": 2.099999999671809e-06
+      }
     },
     {
       "name": "William el paisa",
@@ -622,7 +936,19 @@
       "status": "mapped_public_listing_current_operation_unconfirmed",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "live_named_point_matches",
+        "live_source_name": "William el paisa",
+        "live_source_url": "https://www.openstreetmap.org/node/6541506488",
+        "coordinate_difference_degrees": 4.39999999457541e-06
+      }
     }
   ],
   "media": {

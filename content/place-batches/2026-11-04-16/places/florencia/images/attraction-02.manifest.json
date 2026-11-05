@@ -97,8 +97,13 @@
   "master_sha256": "0f53956b34668ad9df416e7bf53393b1c9c0581751740939f453f52e0aa49437",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T21:03:53.612381+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "846378c01f1fdd661d4fc070d9ddad12e2526324c16ec4d5ee5c48aba8da629f"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-02-1200.webp",
@@ -122,5 +127,11 @@
       "Fine architectural details are stylized and need human approval."
     ]
   },
-  "source_sha256": "d40fbc386ed7da2c8bdbe7a828ff0d8fd7fcabcd3fe10adbc545103e3f103a07"
+  "source_sha256": "d40fbc386ed7da2c8bdbe7a828ff0d8fd7fcabcd3fe10adbc545103e3f103a07",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T21:03:53.612381+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "846378c01f1fdd661d4fc070d9ddad12e2526324c16ec4d5ee5c48aba8da629f"
+  }
 }

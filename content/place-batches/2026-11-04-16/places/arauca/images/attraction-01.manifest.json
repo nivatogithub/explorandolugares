@@ -93,28 +93,39 @@
     "checked_at": "2026-11-04",
     "sha256": "24405d53d9773ca9948b4f53c2c49a501533cfd09e56ece310c2fb5e9195615a"
   },
-  "master_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/unificacion-presentacion/content/place-batches/2026-11-04-16/places/arauca/masters/exec-316cfaf0-193b-47b4-8371-8f17880b2981.png",
-  "master_sha256": "d33bcc829732942dd761f16a47b69776e80ce92ea1625371462dcac113a44147",
+  "master_path": "/Users/nivato/.codex/generated_images/01a14472-a69a-7000-a166-018373a345ca/exec-feb36133-74c5-4fd8-a8d8-750e924985ed.png",
+  "master_sha256": "57451e422d2467b26ff641f91590e075d1d03576129cb55fc2d52f891a2e7cfc",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T22:05:36.538601+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "ee8d32dc94586a1c5f36767e736d02b26ee01a107421d4b1d26d798ce0913d8c"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-01-640.webp",
-      "sha256": "ae90e380d1c1983d997f8769c1f1ad2242b463b65376d5b049b4c1492c450b03",
-      "bytes": 36806
+      "sha256": "d031fa3a3553edb2820449a8a7460cea6ae03b1ce18ac2919ad7805ff0100c78",
+      "bytes": 54554
     },
     {
       "file": "images/attraction-01-1200.webp",
-      "sha256": "8f51cd06bc66e134f909bd9dfd429501260131ba1fe239045d591369a177c65f",
-      "bytes": 116676
+      "sha256": "ee8d32dc94586a1c5f36767e736d02b26ee01a107421d4b1d26d798ce0913d8c",
+      "bytes": 166440
     }
   ],
-  "technical_review": {
-    "checked_at": "2026-11-04",
-    "result": "candidate_ready_for_human_comparison",
-    "notes": "Inspected generated image and identified reference; ink/gouache style. Retains broad camera/composition. Historic references do not verify current infrastructure. Human approval still required."
+  "generation_brief": "Fachada completa desde puertas hasta cruz; conservar proporciones y rasgos de referencia.",
+  "publication_ready": false,
+  "visual_review": {
+    "status": "candidate_pending_human_approval",
+    "checked_against_reference": true
   },
-  "prompt_summary": "Faithful 3:2 ink/gouache editorial transformation from identified reference; retain camera, geographic shapes and architecture; no added sites, infrastructure or logos."
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T22:05:36.538601+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "ee8d32dc94586a1c5f36767e736d02b26ee01a107421d4b1d26d798ce0913d8c"
+  }
 }

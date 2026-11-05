@@ -94,8 +94,13 @@
     "sha256": "d3a03ffc9bd63f891a86df8ac85325e0579049e59b6c5c0cf2571c64111c9ec6"
   },
   "original_sha256": "d3a03ffc9bd63f891a86df8ac85325e0579049e59b6c5c0cf2571c64111c9ec6",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "1a176fc74efc10bdc81df999cd9e37af3ec14293bff054823823048399f7278c"
+  },
+  "review_status": "approved",
   "transformation": "Proportional crop and WebP compression only; no AI changes to ancient pictographs.",
   "outputs": [
     {
@@ -119,5 +124,11 @@
       "Historical reference photograph; does not certify current visitor conditions."
     ]
   },
-  "publication_ready": false
+  "publication_ready": false,
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "1a176fc74efc10bdc81df999cd9e37af3ec14293bff054823823048399f7278c"
+  }
 }

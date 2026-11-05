@@ -18,8 +18,13 @@
   "master_sha256": "d5cff3f64723844e99a3601df5e172d7a439d8e88b8a56f4a045a554f2bb9301",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "2a07f11a474d917d4cfd710bee2abec67ec946e2f28dad1149541a1b1e8be776"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-02-1200.webp",
@@ -47,5 +52,11 @@
   },
   "publication_ready": false,
   "generation_prompt": "Create a faithful editorial ink/gouache illustration from this identified reference of Laguna El Pañuelo in Reserva Bojonawi, broad grey-brown water with smooth dark granite shore foreground left and rocky outcrop opposite right backed by dense low forest. Preserve the camera, exact shapes of rocks, gaps, shoreline and relative distances. Landscape3:2 crop of existing view, do not extend or invent scenery. Clearly painted yet realistic, natural full colors, fine visible brushwork, no text, no logos, no added people, structures or animals. Reference has limited resolution; do not invent fine geographic details absent from it. Private review draft.",
-  "prompt_record": "exact"
+  "prompt_record": "exact",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "2a07f11a474d917d4cfd710bee2abec67ec946e2f28dad1149541a1b1e8be776"
+  }
 }

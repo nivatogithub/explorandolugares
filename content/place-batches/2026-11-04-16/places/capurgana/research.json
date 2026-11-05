@@ -101,11 +101,29 @@
       "name": "Melo Hostel Capurganá",
       "source_url": "https://capurgana.melohostel.com/tours/",
       "category": "accommodation",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 8.63133,
+        "longitude": -77.34715,
+        "source_url": "https://www.airpaz.com/en/hotel/melo-party-hostel-capurgana.6091628",
+        "point_kind": "named_accommodation_site_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "corroboration_url": "https://www.hostelworld.com/hostels/p/328236/melo-party-hostel-capurgana/"
+      },
       "status": "documented_unclaimed_geo_pending",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "named_accommodation_site_not_verified_entrance",
+        "issues": [
+          "operator_site_announces_closure_2026_11_16_verify_before_publication"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      }
     },
     {
       "name": "Restaurante Kairos",
@@ -121,7 +139,19 @@
       "status": "documented_mapped_unclaimed",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "live_named_point_matches",
+        "live_source_name": "Restaurante Kairos",
+        "live_source_url": "https://www.openstreetmap.org/node/14217461388",
+        "coordinate_difference_degrees": 5.29999999798747e-06
+      }
     },
     {
       "name": "Hospedaje Hector's House",
@@ -147,7 +177,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/4295495690"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hospedaje Hector's House",
+        "live_source_version": "1",
+        "live_source_timestamp": "2016-07-11T01:57:53Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "La Bohemia",
@@ -173,7 +215,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/4769513722"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "La Bohemia",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-04-01T14:45:53Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Cabaña Tucan Capurganá",
@@ -200,7 +254,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/5368228574"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Cabaña Tucan Capurganá",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-01-28T15:25:17Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hostel Capurgana",
@@ -226,7 +292,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/5688012924"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hostel Capurgana",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-06-13T13:51:33Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Katamaran",
@@ -253,7 +331,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/5689260521"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Katamaran",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-06-14T01:35:36Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Cavatappi",
@@ -282,7 +372,28 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/5695668821"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "phone": "+57 313 2953305",
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/5695668821",
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 313 2953305",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Cavatappi",
+        "live_source_version": "2",
+        "live_source_timestamp": "2026-09-21T10:27:15Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hernán Patacon",
@@ -309,7 +420,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/5986981287"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hernán Patacon",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-10-15T20:48:43Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Casa Costa",
@@ -335,7 +458,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6003693482"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Casa Costa",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-10-21T23:30:09Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hostal Los Delfines",
@@ -362,7 +497,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6003693483"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hostal Los Delfines",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-10-21T23:30:09Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Cabana Samatha",
@@ -389,7 +536,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6003693687"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Cabana Samatha",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-10-21T23:30:10Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hostal Patio Bonito",
@@ -416,7 +575,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6003693690"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hostal Patio Bonito",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-10-21T23:30:10Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Cabana Los Almendros",
@@ -442,7 +613,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6003693691"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Cabana Los Almendros",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-10-21T23:30:10Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Acuali Eco Hostal",
@@ -468,7 +651,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6043066786"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Acuali Eco Hostal",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-11-07T02:50:06Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "El arca de Noé",
@@ -494,7 +689,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6233730085"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "El arca de Noé",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-01-24T17:13:02Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Isla del Poe",
@@ -520,7 +727,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6233730685"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Isla del Poe",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-01-24T17:13:05Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hilltop Capurgana",
@@ -548,7 +767,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6309377785"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hilltop Capurgana",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-03-01T00:12:14Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Nautilos",
@@ -575,7 +806,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6405276885"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Nautilos",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-04-14T23:51:28Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Josephinas",
@@ -601,7 +844,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6405277385"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Josephinas",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-04-14T23:51:35Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Cabaña Kosta Azul Capurgana",
@@ -630,7 +885,28 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6424074621"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "phone": "+57 322 8379187",
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/6424074621",
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 322 8379187",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Cabaña Kosta Azul Capurgana",
+        "live_source_version": "3",
+        "live_source_timestamp": "2026-09-21T10:27:15Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hostal El Gecko",
@@ -656,7 +932,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6489035285"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hostal El Gecko",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-05-21T18:18:22Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hostal Corocora",
@@ -682,7 +970,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6788747687"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hostal Corocora",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-09-11T16:05:11Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Puerta Azul",
@@ -708,7 +1008,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9906858118"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Puerta Azul",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-07-24T02:42:50Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Finca El Regalo",
@@ -734,7 +1046,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/11198157537"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Finca El Regalo",
+        "live_source_version": "1",
+        "live_source_timestamp": "2023-09-17T18:04:01Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "La Pelu",
@@ -760,7 +1084,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/12770576501"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "La Pelu",
+        "live_source_version": "1",
+        "live_source_timestamp": "2025-04-20T16:00:33Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hospedaje Kairos",
@@ -786,7 +1122,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/14216525057"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hospedaje Kairos",
+        "live_source_version": "1",
+        "live_source_timestamp": "2026-09-26T00:34:28Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Los Kunas",
@@ -819,7 +1167,19 @@
         "point_kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/702583934"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Los Kunas",
+        "live_source_version": "2",
+        "live_source_timestamp": "2019-07-09T03:10:52Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     }
   ],
   "media": {

@@ -23,8 +23,13 @@
   "master_sha256": "c31139e8cc9044b40027fd41bb0d129f5f5ead45e8a3687de05e9d649d416a79",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "e79799c23bd7ab52439b799e17374487fbcf63aded270167593e1f24a7d4c2d1"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-02-1200.webp",
@@ -36,5 +41,11 @@
       "sha256": "73f4fa3c8abb047284441e7b5ddb49fe5713f1d8a92db5128fcf0f6cfb354d26",
       "bytes": 78340
     }
-  ]
+  ],
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "e79799c23bd7ab52439b799e17374487fbcf63aded270167593e1f24a7d4c2d1"
+  }
 }

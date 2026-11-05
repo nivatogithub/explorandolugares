@@ -101,21 +101,56 @@
       "name": "The Dive Shop Old Providence",
       "source_url": "https://www.thediveshopoldprovidence.com/es/",
       "category": "tour_operator",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 13.324338,
+        "longitude": -81.383109,
+        "source_url": "https://www.openstreetmap.org/node/5302399329",
+        "point_kind": "mapped_named_site_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "documented_unclaimed_geo_pending",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "live_named_point_matches",
+        "identity_corroboration": "https://www.padi.com/es/centro-buceo/colombia/the-dive-shop-old-providence/"
+      }
     },
     {
       "name": "Providencia Travel",
       "source_url": "https://providenciatravel.com/producto/actividades/mini-curso-buceo-providencia/",
       "category": "tour_operator",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 12.5820196,
+        "longitude": -81.6901002,
+        "source_url": "https://maps.app.goo.gl/cFrxpvTXVPSYzSYy7",
+        "point_kind": "external_operator_office_san_andres_not_providencia",
+        "checked_at": "2026-11-04"
+      },
       "status": "documented_unclaimed_geo_pending",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "external_operator_office_san_andres_not_providencia",
+        "issues": [
+          "operator_office_in_san_andres_not_providencia"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "service_area_note": "Offers Providencia services; published office Avenida Colombia, edificio Hansa Reef, local 2b, San Andrés",
+      "office_source_url": "https://providenciatravel.com/contacto/"
     },
     {
       "name": "Cafe & More",
@@ -141,7 +176,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6279519988"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Cafe & More",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-02-14T21:40:46Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Gourmet Pizza",
@@ -167,7 +214,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6279528185"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Gourmet Pizza",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-02-14T21:39:03Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Bizocheria",
@@ -193,7 +252,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6279529085"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Bizocheria",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-02-14T21:39:29Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Miss Francia's Home",
@@ -219,7 +290,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6284518986"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Miss Francia's Home",
+        "live_source_version": "2",
+        "live_source_timestamp": "2020-11-23T04:42:34Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "W&M Services",
@@ -245,7 +328,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6284518994"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "W&M Services",
+        "live_source_version": "2",
+        "live_source_timestamp": "2019-02-18T23:06:59Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Old Providencia",
@@ -271,7 +366,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6284518997"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Old Providencia",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-02-17T15:57:16Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Shell Sea B & B",
@@ -298,7 +405,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6284527785"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Shell Sea B & B",
+        "live_source_version": "2",
+        "live_source_timestamp": "2023-08-13T05:19:11Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Nativa Sunshine",
@@ -324,7 +443,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6284527786"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Nativa Sunshine",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-02-17T15:53:44Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Di Duk",
@@ -350,7 +481,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6284532487"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Di Duk",
+        "live_source_version": "2",
+        "live_source_timestamp": "2019-02-18T23:07:12Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Posada Lia",
@@ -376,7 +519,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/6287229288"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Posada Lia",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-02-18T23:08:47Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Los Olivos",
@@ -403,7 +558,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/7123727686"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Los Olivos",
+        "live_source_version": "1",
+        "live_source_timestamp": "2020-01-11T04:21:49Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Posada Aleeny",
@@ -429,7 +596,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9945498017"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Posada Aleeny",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-10T16:23:48Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Posada Jasmina",
@@ -455,7 +634,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9945498018"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Posada Jasmina",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-08-10T16:23:49Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Eneidy",
@@ -484,7 +675,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/11396921754"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Eneidy",
+        "live_source_version": "3",
+        "live_source_timestamp": "2026-07-09T00:50:01Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Chelo's Fussion Place",
@@ -510,7 +713,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/11399227341"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Chelo's Fussion Place",
+        "live_source_version": "1",
+        "live_source_timestamp": "2023-12-06T23:26:38Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Marlin's Ice Cream",
@@ -537,7 +752,19 @@
         "point_kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/640163734"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Marlin's Ice Cream",
+        "live_source_version": "2",
+        "live_source_timestamp": "2026-10-15T01:00:41Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Cafetería La Rikura",
@@ -569,7 +796,28 @@
         "point_kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/640163735"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "phone": "311 8926700",
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/way/640163735",
+          "checked_at": "2026-11-04",
+          "observed_value": "311 8926700",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Cafetería La Rikura",
+        "live_source_version": "2",
+        "live_source_timestamp": "2026-10-15T01:00:41Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Restaurante Miss Lucy",
@@ -596,7 +844,19 @@
         "point_kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/640163782"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Restaurante Miss Lucy",
+        "live_source_version": "2",
+        "live_source_timestamp": "2026-10-17T01:23:50Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Eneida",
@@ -623,7 +883,19 @@
         "point_kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/642715119"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Eneida",
+        "live_source_version": "2",
+        "live_source_timestamp": "2020-02-25T16:04:56Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "La Emperanza",
@@ -650,7 +922,19 @@
         "point_kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/642715121"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "La Emperanza",
+        "live_source_version": "2",
+        "live_source_timestamp": "2020-02-25T16:04:56Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Bully's Place B&B, Breakfast and Fast food",
@@ -678,7 +962,19 @@
         "point_kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/642717151"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Bully's Place B&B, Breakfast and Fast food",
+        "live_source_version": "2",
+        "live_source_timestamp": "2025-01-07T01:06:24Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     },
     {
       "name": "Coral Mint",
@@ -705,7 +1001,19 @@
         "point_kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/1568659973"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Coral Mint",
+        "live_source_version": "1",
+        "live_source_timestamp": "2026-10-16T01:02:10Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
     }
   ],
   "media": {

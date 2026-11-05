@@ -18,8 +18,13 @@
   "master_sha256": "6d4994f1d5cb3bf5881473c0a86e081bd4f4cffe12006152084f58466f39f1b6",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "3a7b2e24023d37fbbb8bc4670f96a78260209be995c696b579ee1a7e78ff478d"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-02-1200.webp",
@@ -46,5 +51,11 @@
   },
   "publication_ready": false,
   "generation_prompt": "Transform this identified photograph of Puerta de Orión, exact irregular sandstone arch and two apertures, tree in front and path beneath, two small hikers into a clearly illustrated semi-realistic editorial ink/gouache rendition. 3:2 landscape, use existing view only, crop without inventing new geography. Preserve camera position, relative distances, shoreline, exact rock shapes and existing elements. Natural full colors, legible details and subtle brush texture. No extra people, animals, dolphins, buildings, bridges, boats, mountains or text. Do not alter anatomy or boat geometry. No claims of current conditions, private review illustration.",
-  "prompt_record": "exact"
+  "prompt_record": "exact",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "3a7b2e24023d37fbbb8bc4670f96a78260209be995c696b579ee1a7e78ff478d"
+  }
 }

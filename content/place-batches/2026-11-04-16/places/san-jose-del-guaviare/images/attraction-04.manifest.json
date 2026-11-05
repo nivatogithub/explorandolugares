@@ -18,8 +18,13 @@
   "master_sha256": "e3c6159be96b91fac2516196504f573316d78df2c730b012e88ddf9f99960f4d",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "b068a3647752ca294e6a1f4d8bebe0ddb1d894277eb9a427d38fdf0ff546a6dc"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-04-1200.webp",
@@ -46,5 +51,11 @@
   },
   "publication_ready": false,
   "generation_prompt": "Create a faithful editorial ink/gouache illustration from this identified reference of Puentes Naturales near San José del Guaviare, view from beneath the enormous horizontally layered natural rock slabs and narrow gaps with vines and vegetation. Preserve the camera, exact shapes of rocks, gaps, shoreline and relative distances. Landscape3:2 crop of existing view, do not extend or invent scenery. Clearly painted yet realistic, natural full colors, fine visible brushwork, no text, no logos, no added people, structures or animals. Reference has limited resolution; do not invent fine geographic details absent from it. Private review draft.",
-  "prompt_record": "exact"
+  "prompt_record": "exact",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "b068a3647752ca294e6a1f4d8bebe0ddb1d894277eb9a427d38fdf0ff546a6dc"
+  }
 }

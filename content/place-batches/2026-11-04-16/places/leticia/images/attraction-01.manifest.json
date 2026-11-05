@@ -1,6 +1,6 @@
 {
   "role": "attraction",
-  "kind": "licensed_photograph",
+  "kind": "ai_editorial_illustration",
   "reference": {
     "title": "File:Muelle de Leticia e isla de La Fantasía.jpg",
     "source_url": "https://commons.wikimedia.org/wiki/File:Muelle_de_Leticia_e_isla_de_La_Fantas%C3%ADa.jpg",
@@ -113,29 +113,35 @@
     "checked_at": "2026-11-04",
     "sha256": "f8e827f5e96a50c0781f0c4071e1f23ac9da3bede31604026502033a48e43c9f"
   },
-  "master_path": "/Users/nivato/.codex/.chatgpt-projects/g-p-6acbf6c8af8c8191a085f33ce8cb637b/trabajo/unificacion-presentacion/content/place-batches/2026-11-04-16/places/leticia/references/attraction-01.jpg",
-  "master_sha256": "f8e827f5e96a50c0781f0c4071e1f23ac9da3bede31604026502033a48e43c9f",
-  "approval": null,
-  "review_status": "pending_human_review",
-  "replaced_generation": {
-    "master_path": "/Users/nivato/.codex/generated_images/01a1a7a5-6d1c-7593-89b0-bbc5c84e9bac/exec-766a035a-5850-4d5d-a4fe-e0165d0ddafb.png",
-    "reason": "Generated fine detail not adequately supported by low-resolution panoramic reference; replaced with licensed original without composition changes."
+  "master_path": "/Users/nivato/.codex/generated_images/01a14472-a69a-7000-a166-018373a345ca/exec-c19033b8-f293-4e76-a97f-7b5fa0e7b7ad.png",
+  "master_sha256": "8bebfea35ecad4f10bf216970161d7532a62f2d814842a6a9d7704f21aef6941",
+  "generated_at": "2026-11-04",
+  "tool": "image_gen",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T22:12:20.223849+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "comment": "",
+    "image_sha256": "f9e51ea56ccd946217e2292258c2396f26c2f0a1c77943a2b08eb1a0115dac5c"
   },
-  "layout": {
-    "preserve_original_aspect_ratio": true,
-    "object_fit": "contain",
-    "no_forced_3_2_stretch": true
-  },
+  "review_status": "approved",
   "outputs": [
     {
-      "file": "images/attraction-01-1200.webp",
-      "sha256": "cc58fb73f8e0b565f09ec535bec5c90037843afea37e54e69235c33618fc69ec",
-      "bytes": 67928
+      "file": "images/attraction-01-640.webp",
+      "sha256": "f9d67a657409a88c1ed9cbb60384450e0a0a83a4f20f865e2ae59a5e7ea0df07",
+      "bytes": 90192
     },
     {
-      "file": "images/attraction-01-640.webp",
-      "sha256": "4f2db5a53a0a1ed457868cf158d43bd786819f5bb95c95093dbe988f024e8307",
-      "bytes": 25426
+      "file": "images/attraction-01-1200.webp",
+      "sha256": "f9e51ea56ccd946217e2292258c2396f26c2f0a1c77943a2b08eb1a0115dac5c",
+      "bytes": 276548
     }
-  ]
+  ],
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T22:12:20.223849+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "comment": "",
+    "image_sha256": "f9e51ea56ccd946217e2292258c2396f26c2f0a1c77943a2b08eb1a0115dac5c"
+  }
 }

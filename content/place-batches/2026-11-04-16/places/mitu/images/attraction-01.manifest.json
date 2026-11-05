@@ -127,8 +127,13 @@
   "master_sha256": "0f4736a0670901aa25b5798720a3557acedf95a3e9a08eaf6e71cebd1ed9cb37",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:37:49.706950+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "02428fc57555ef46064efa10842de150bb2773e192adb9aa74507638030b2f4e"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-01-640.webp",
@@ -155,5 +160,11 @@
   },
   "publication_ready": false,
   "generation_prompt": "Transform this identified photograph of Parque Santander in Mitú, brick paths, modest playground, existing trees palms and poles and background low buildings into a clearly illustrated realistic editorial ink and gouache rendition. Preserve camera, composition, precise placement, geometry, spacing and appearance of all elements. Landscape3:2 crop, never extend unseen scenery. Natural full color, balanced saturation, visible fine brushwork. No invented objects, people, text, signs, monuments, foliage or architecture. Do not change colors or silhouettes that identify the place. Private review draft.",
-  "prompt_record": "exact"
+  "prompt_record": "exact",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:37:49.706950+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "02428fc57555ef46064efa10842de150bb2773e192adb9aa74507638030b2f4e"
+  }
 }

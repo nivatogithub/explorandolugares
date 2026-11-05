@@ -81,7 +81,20 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Metropol",
+        "live_source_version": "3",
+        "live_source_timestamp": "2014-08-17T22:49:55Z",
+        "live_coordinate_validation": "named_geonames_listing_matches",
+        "live_source_url": "https://mapcarta.com/28715204"
+      }
     },
     {
       "name": "Zaracay",
@@ -103,7 +116,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Zaracay",
+        "live_source_version": "2",
+        "live_source_timestamp": "2015-10-12T13:43:49Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Rumichaca",
@@ -125,7 +150,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Rumichaca",
+        "live_source_version": "1",
+        "live_source_timestamp": "2012-04-26T22:16:24Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Norman",
@@ -147,7 +184,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Norman",
+        "live_source_version": "2",
+        "live_source_timestamp": "2020-02-29T20:51:20Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Los Andes",
@@ -169,7 +218,33 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Los Andes",
+        "live_source_version": "2",
+        "live_source_timestamp": "2016-10-15T12:26:10Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      },
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/3225069899",
+          "checked_at": "2026-11-04",
+          "observed_value": "+31-55805475",
+          "status": "live_map_listing_not_owner_confirmed"
+        },
+        "website": {
+          "source_url": "https://www.openstreetmap.org/node/3225069899",
+          "checked_at": "2026-11-04",
+          "observed_value": "http://www.hotelosandes.com/",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      }
     },
     {
       "name": "Hotel Andino",
@@ -191,7 +266,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Andino",
+        "live_source_version": "1",
+        "live_source_timestamp": "2015-08-11T04:20:54Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Fontanar",
@@ -213,7 +300,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Fontanar",
+        "live_source_version": "3",
+        "live_source_timestamp": "2016-03-11T17:56:15Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Santa Ana",
@@ -235,7 +334,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Santa Ana",
+        "live_source_version": "3",
+        "live_source_timestamp": "2016-03-11T17:57:07Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel San José",
@@ -257,7 +368,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel San José",
+        "live_source_version": "3",
+        "live_source_timestamp": "2017-05-21T21:14:57Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Santa Isabel",
@@ -279,7 +402,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Santa Isabel",
+        "live_source_version": "2",
+        "live_source_timestamp": "2016-09-05T21:19:49Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Don Lucho",
@@ -301,7 +436,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Don Lucho",
+        "live_source_version": "1",
+        "live_source_timestamp": "2016-09-11T20:08:21Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Kapuchino",
@@ -323,7 +470,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Kapuchino",
+        "live_source_version": "1",
+        "live_source_timestamp": "2016-09-11T20:08:16Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Suiza Apart Suites",
@@ -345,7 +504,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Suiza Apart Suites",
+        "live_source_version": "1",
+        "live_source_timestamp": "2016-09-11T20:08:19Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Imperio Real",
@@ -367,7 +538,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Imperio Real",
+        "live_source_version": "1",
+        "live_source_timestamp": "2016-09-11T20:08:27Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Gran Hotel Ipiales",
@@ -389,7 +572,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Gran Hotel Ipiales",
+        "live_source_version": "2",
+        "live_source_timestamp": "2017-01-03T13:53:01Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Restaurante Pezcaldito",
@@ -411,7 +606,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Restaurante Pezcaldito",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-03-19T19:20:59Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Marques Plaza Hotel",
@@ -433,7 +640,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Marques Plaza Hotel",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-04-17T18:15:24Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Danny",
@@ -455,7 +674,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Danny",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-04-17T18:15:30Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Oro Verde",
@@ -477,7 +708,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Oro Verde",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-04-17T18:15:28Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Bellavista Ipiales",
@@ -499,7 +742,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Bellavista Ipiales",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-04-17T18:15:31Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Colonial",
@@ -521,7 +776,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Colonial",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-04-18T02:08:29Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel San Fernando",
@@ -543,7 +810,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel San Fernando",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-04-18T02:08:34Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Restaurante Cafeteria Kactus",
@@ -565,7 +844,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Restaurante Cafeteria Kactus",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-04-18T02:08:36Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "La Terraza",
@@ -587,7 +878,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "La Terraza",
+        "live_source_version": "2",
+        "live_source_timestamp": "2019-09-03T18:55:42Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "El Mundo del pollo",
@@ -609,7 +912,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "El Mundo del pollo",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-06-28T03:16:24Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "La bodega del pollo",
@@ -631,7 +946,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "La bodega del pollo",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-06-28T03:16:27Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Majos",
@@ -653,7 +980,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Majos",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-06-28T03:16:44Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Pimpy",
@@ -675,7 +1014,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Pimpy",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-06-28T03:17:23Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Panextra",
@@ -697,7 +1048,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Panextra",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-06-28T03:18:13Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Tollima",
@@ -719,7 +1082,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Tollima",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-06-28T03:18:24Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Casa Estrella",
@@ -741,7 +1116,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Casa Estrella",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-06-28T03:18:31Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Punto Riko",
@@ -763,7 +1150,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Punto Riko",
+        "live_source_version": "1",
+        "live_source_timestamp": "2017-06-28T03:21:21Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Mr. Pollo",
@@ -785,7 +1184,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Mr. Pollo",
+        "live_source_version": "2",
+        "live_source_timestamp": "2023-02-17T18:44:35Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "La Merced",
@@ -807,7 +1218,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "La Merced",
+        "live_source_version": "1",
+        "live_source_timestamp": "2018-02-14T20:17:20Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Panesa",
@@ -829,7 +1252,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Panesa",
+        "live_source_version": "1",
+        "live_source_timestamp": "2019-07-14T09:31:47Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Press Burguer",
@@ -851,7 +1286,34 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Press Burguer",
+        "live_source_version": "3",
+        "live_source_timestamp": "2026-09-15T10:40:17Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      },
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/6612783994",
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 607 7732831",
+          "status": "live_map_listing_not_owner_confirmed"
+        },
+        "email": {
+          "source_url": "https://www.openstreetmap.org/node/6612783994",
+          "checked_at": "2026-11-04",
+          "observed_value": "pressburguer99@hotmail.com",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "email": "pressburguer99@hotmail.com"
     },
     {
       "name": "Pan Fino",
@@ -873,7 +1335,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Pan Fino",
+        "live_source_version": "1",
+        "live_source_timestamp": "2022-09-28T16:06:04Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Juan Valdez",
@@ -895,7 +1369,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Juan Valdez",
+        "live_source_version": "1",
+        "live_source_timestamp": "2023-07-12T23:13:21Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "El Sabor del Pan",
@@ -917,7 +1403,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "El Sabor del Pan",
+        "live_source_version": "1",
+        "live_source_timestamp": "2023-12-22T19:26:06Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Buona",
@@ -939,7 +1437,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Buona",
+        "live_source_version": "1",
+        "live_source_timestamp": "2024-02-27T23:39:19Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Arepaisita",
@@ -961,7 +1471,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Arepaisita",
+        "live_source_version": "1",
+        "live_source_timestamp": "2024-02-29T00:10:14Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Mi Tolipaisa",
@@ -983,7 +1505,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Mi Tolipaisa",
+        "live_source_version": "1",
+        "live_source_timestamp": "2024-02-29T20:05:42Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Sultana del Sur",
@@ -1005,7 +1539,19 @@
       "verified_business": false,
       "commercial_plan": "free",
       "public": false,
-      "status": "documented_directory_candidate_for_review"
+      "status": "documented_directory_candidate_for_review",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Sultana del Sur",
+        "live_source_version": "1",
+        "live_source_timestamp": "2025-07-05T21:05:26Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     }
   ],
   "media": {

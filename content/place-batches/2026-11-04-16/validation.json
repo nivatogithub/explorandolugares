@@ -15,8 +15,8 @@
       "attraction_coordinate_pending": [],
       "experiences": 1,
       "experiences_with_reference_coordinate": 0,
-      "businesses": 13,
-      "businesses_with_coordinates": 11,
+      "businesses": 16,
+      "businesses_with_coordinates": 13,
       "business_target": 30,
       "approval": "pending_human_review"
     },
@@ -34,7 +34,7 @@
       "experiences": 2,
       "experiences_with_reference_coordinate": 0,
       "businesses": 23,
-      "businesses_with_coordinates": 19,
+      "businesses_with_coordinates": 21,
       "business_target": 30,
       "approval": "pending_human_review"
     },
@@ -52,17 +52,17 @@
       "experiences": 2,
       "experiences_with_reference_coordinate": 0,
       "businesses": 28,
-      "businesses_with_coordinates": 27,
+      "businesses_with_coordinates": 28,
       "business_target": 30,
       "approval": "pending_human_review"
     },
     {
       "slug": "florencia",
       "name": "Florencia",
-      "images_expected": 2,
-      "images_ready": 2,
+      "images_expected": 3,
+      "images_ready": 3,
       "missing_images": [],
-      "webp_hashes_checked": 4,
+      "webp_hashes_checked": 6,
       "destination_coordinate": true,
       "attractions": 1,
       "attractions_with_coordinates": 1,
@@ -89,8 +89,8 @@
       ],
       "experiences": 3,
       "experiences_with_reference_coordinate": 1,
-      "businesses": 37,
-      "businesses_with_coordinates": 5,
+      "businesses": 40,
+      "businesses_with_coordinates": 13,
       "business_target": 30,
       "approval": "pending_human_review"
     },
@@ -125,7 +125,7 @@
       "attraction_coordinate_pending": [],
       "experiences": 3,
       "experiences_with_reference_coordinate": 3,
-      "businesses": 14,
+      "businesses": 17,
       "businesses_with_coordinates": 14,
       "business_target": 30,
       "approval": "pending_human_review"
@@ -164,7 +164,7 @@
       "experiences": 2,
       "experiences_with_reference_coordinate": 0,
       "businesses": 30,
-      "businesses_with_coordinates": 11,
+      "businesses_with_coordinates": 30,
       "business_target": 30,
       "approval": "pending_human_review"
     },
@@ -236,7 +236,7 @@
       "experiences": 2,
       "experiences_with_reference_coordinate": 0,
       "businesses": 24,
-      "businesses_with_coordinates": 22,
+      "businesses_with_coordinates": 24,
       "business_target": 30,
       "approval": "pending_human_review"
     },
@@ -253,8 +253,8 @@
       "attraction_coordinate_pending": [],
       "experiences": 1,
       "experiences_with_reference_coordinate": 1,
-      "businesses": 12,
-      "businesses_with_coordinates": 2,
+      "businesses": 17,
+      "businesses_with_coordinates": 5,
       "business_target": 30,
       "approval": "pending_human_review"
     },
@@ -296,15 +296,15 @@
     }
   ],
   "totals": {
-    "images_expected": 58,
-    "images_ready": 58,
-    "webp_hashes_checked": 116,
+    "images_expected": 59,
+    "images_ready": 59,
+    "webp_hashes_checked": 118,
     "attractions": 42,
     "attractions_with_coordinates": 40,
     "experiences": 29,
     "experiences_with_reference_coordinate": 10,
-    "businesses": 434,
-    "businesses_with_coordinates": 364
+    "businesses": 448,
+    "businesses_with_coordinates": 401
   },
   "errors": [],
   "public": false,

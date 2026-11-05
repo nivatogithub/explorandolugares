@@ -174,62 +174,253 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Calle 18 N 9- 34",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3138049056",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Calle 18 N 9- 34",
+      "phone": "3138049056"
     },
     {
       "name": "Hotel Parature",
       "category": "accommodation",
       "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
       "source_type": "municipal_public_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 3.868232,
+        "longitude": -67.923146,
+        "source_url": "https://mx.trip.com/hotels/puerto-inirida-hotel-detail-15875232/hotel-parature/",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "directory_map_is_generic_search_not_verified_venue"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "email": "parature8@hotmail.com",
+      "field_evidence": {
+        "email": {
+          "source_url": "https://quepaseo.com/hoteles/hotel-parature/",
+          "checked_at": "2026-11-04",
+          "status": "public_listing_not_owner_confirmed",
+          "observed_value": "parature8@hotmail.com"
+        },
+        "municipal_address": {
+          "observed_value": "Calle 20 N 10- 21",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3112481744",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "business_evidence": [
+        {
+          "source_url": "https://quepaseo.com/hoteles/hotel-parature/",
+          "checked_at": "2026-11-04",
+          "identity": "name_and_locality_present",
+          "current_operation": "not_independently_confirmed"
+        }
+      ],
+      "phone_candidates": [
+        {
+          "value": "+57 315 6475332",
+          "source_url": "https://quepaseo.com/hoteles/hotel-parature/",
+          "status": "requires_confirmation"
+        },
+        {
+          "value": "+57 310 2590686",
+          "source_url": "https://quepaseo.com/hoteles/hotel-parature/",
+          "status": "requires_confirmation"
+        },
+        {
+          "value": "+57 311 2481744",
+          "source_url": "https://quepaseo.com/hoteles/hotel-parature/",
+          "status": "requires_confirmation"
+        }
+      ],
+      "address": "Calle 20 N 10- 21",
+      "phone": "3112481744"
     },
     {
       "name": "Hotel Toninas",
       "category": "accommodation",
       "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
       "source_type": "municipal_public_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 3.865910017,
+        "longitude": -67.928515641,
+        "source_url": "https://www.waze.com/live-map/directions/hotel-toninas-calle-16-inirida?to=place.w.191430695.1914110339.8544968",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Cll 16 N5-112",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3103035130",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Cll 16 N5-112",
+      "phone": "3103035130"
     },
     {
       "name": "Hotel Portal Real",
       "category": "accommodation",
       "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
       "source_type": "municipal_public_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 3.86470223,
+        "longitude": -67.92266846,
+        "source_url": "https://www.guestreservations.com/hotel-portal-real/booking",
+        "point_kind": "named_accommodation_site_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "corroboration_url": "https://cda.gov.co/apc-aa-files/36326632356436663031616534363564/cas-00008-18-resolucion.pdf"
+      },
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "named_accommodation_site_not_verified_entrance",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Calle 16N 11-72",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3108000758",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Calle 16N 11-72",
+      "phone": "3108000758",
+      "geolocation_candidates": [
+        {
+          "latitude": 3.86478,
+          "longitude": -67.9189,
+          "source_url": "https://www.kayak.com/Inirida-Hotels-Portal-Real-Hotel.3586574.ksp",
+          "status": "conflicts_with_named_property_and_historical_property_evidence"
+        }
+      ]
     },
     {
       "name": "Hotel de lujo Fuente del Guainía",
       "category": "accommodation",
       "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
       "source_type": "municipal_public_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 3.86241,
+        "longitude": -67.91626,
+        "source_url": "https://www.travelmyth.com/Inirida/Hotels/Fuente-del-Guania-Hotel-de-Lujo_tmid2132547",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Hotel Cabaña Guainiana",
       "category": "accommodation",
       "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
       "source_type": "municipal_public_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 3.863346,
+        "longitude": -67.918981,
+        "source_url": "https://www.travelmyth.ie/Inirida/Hotels/Hotel-Cabana-Guainiana_tmid2145373",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Hotel Yakapana",
@@ -240,18 +431,60 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Cra 8 N 14-35",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3185537876",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Cra 8 N 14-35",
+      "phone": "3185537876"
     },
     {
       "name": "Hospedaje Guainía",
       "category": "accommodation",
       "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
       "source_type": "municipal_public_directory",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 3.86874,
+        "longitude": -67.92099,
+        "source_url": "https://www.kayak.com.uy/Inirida-Hoteles-Hospedaje-Guainia.3510823.ksp",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Hotel Safari",
@@ -262,7 +495,33 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Cra 6 N 19-29",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3155164194",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Cra 6 N 19-29",
+      "phone": "3155164194"
     },
     {
       "name": "Hotel Las Vegas",
@@ -273,7 +532,33 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Calle 17 N 13-86",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3134677065",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Calle 17 N 13-86",
+      "phone": "3134677065"
     },
     {
       "name": "Hotel Gran Zulima",
@@ -284,7 +569,33 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Calle 16 N 5-54",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3168248970",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Calle 16 N 5-54",
+      "phone": "3168248970"
     },
     {
       "name": "Hotel Orinoco Real",
@@ -295,18 +606,111 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing",
+          "two_named_sources_disagree_about_56_metres"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Cra 6 N 17-03",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Cra 6 N 17-03",
+      "geolocation_candidates": [
+        {
+          "latitude": 3.867219,
+          "longitude": -67.92792,
+          "source_url": "https://www.travelmyth.com/Inirida/Hotels/Hotel-Orinoco-Real_tmid2132829"
+        },
+        {
+          "latitude": 3.86771,
+          "longitude": -67.9278,
+          "source_url": "https://www.kayak.com.uy/Inirida-Hoteles-Hotel-Orinoco-Real.2783586.ksp"
+        }
+      ]
     },
     {
-      "name": "Hotel Tucunaré",
+      "name": "Manacal Hotel Boutique",
       "category": "accommodation",
       "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
       "source_type": "municipal_public_directory",
-      "geolocation": null,
-      "status": "documented_candidate_pending_coordinates",
+      "geolocation": {
+        "latitude": 3.866268,
+        "longitude": -67.931764,
+        "source_url": "https://www.travelmyth.com/Inirida/Hotels/Hotel-Tucunare_tmid4164936",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "status": "documented_unclaimed",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [
+          "primary_website_contains_canadian_template_contacts_excluded",
+          "historical_coordinates_retained_exact_current_entrance_not_checked"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "previous_research_names": [
+        "Hotel Tucunaré"
+      ],
+      "address": "Calle 15 #2-06, Inírida",
+      "field_evidence": {
+        "address": {
+          "checked_at": "2026-11-04",
+          "observed_value": "Calle 15 #2-06, Inírida",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://es.planetofhotels.com/colombia/inirida/hotel-boutique-manacal",
+            "https://www.booking.com/hotel/co/tucunare.es.html",
+            "https://manacalhotelboutique.com/"
+          ]
+        },
+        "website": {
+          "checked_at": "2026-11-04",
+          "observed_value": "https://manacalhotelboutique.com/",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://es.planetofhotels.com/colombia/inirida/hotel-boutique-manacal",
+            "https://www.booking.com/hotel/co/tucunare.es.html",
+            "https://manacalhotelboutique.com/"
+          ]
+        }
+      },
+      "website": "https://manacalhotelboutique.com/",
+      "description_draft_es": "Alojamiento en Inírida documentado actualmente como Manacal, anteriormente Hotel Tucunaré.",
+      "documentary_confirmation": {
+        "checked_at": "2026-11-04",
+        "level": "renaming_corroborated_primary_and_booking",
+        "scope": "business_identity_and_local_offer_only",
+        "source_urls": [
+          "https://es.planetofhotels.com/colombia/inirida/hotel-boutique-manacal",
+          "https://www.booking.com/hotel/co/tucunare.es.html",
+          "https://manacalhotelboutique.com/"
+        ],
+        "owner_contacted": false,
+        "legal_registration_verified": false,
+        "notes": "La comprobación documental no acredita operación presencial hoy, afiliación ni titularidad."
+      }
     },
     {
       "name": "Hotel Tres Fronteras",
@@ -317,7 +721,33 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Cra 9 N 12-79",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3212801774",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Cra 9 N 12-79",
+      "phone": "3212801774"
     },
     {
       "name": "Hotel Flor de Inírida",
@@ -328,7 +758,19 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Hotel Guacamayos",
@@ -339,7 +781,33 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Calle 14-6-14",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3132591986",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Calle 14-6-14",
+      "phone": "3132591986"
     },
     {
       "name": "Hotel Brayan",
@@ -350,7 +818,33 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Calle 3 N 16- 29",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3173333222",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Calle 3 N 16- 29",
+      "phone": "3173333222"
     },
     {
       "name": "Hotel Casa Rosas",
@@ -361,7 +855,19 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Hotel Ribason",
@@ -372,7 +878,27 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "V\\u00eda Guamal ",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "V\\u00eda Guamal "
     },
     {
       "name": "Hotel Tamtra",
@@ -383,18 +909,107 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "V\\u00eda aeropuerto",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "V\\u00eda aeropuerto"
     },
     {
       "name": "Toninas Tours",
       "category": "tour_operator",
       "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
       "source_type": "municipal_public_directory",
-      "geolocation": null,
-      "status": "documented_candidate_pending_coordinates",
+      "geolocation": {
+        "latitude": 3.865910017,
+        "longitude": -67.928515641,
+        "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+        "point_kind": "shared_address_with_hotel_toninas_not_verified_entrance",
+        "checked_at": "2026-11-04",
+        "coordinate_source_url": "https://www.waze.com/live-map/directions/hotel-toninas-calle-16-inirida?to=place.w.191430695.1914110339.8544968",
+        "evidence": "Municipal directory lists tour operator and hotel at same Calle 16 N5-112 and same contact; coordinate from named hotel venue"
+      },
+      "status": "documented_unclaimed",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "shared_address_with_hotel_toninas_not_verified_entrance",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Calle 16 N5-112",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3103035130",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "phone": {
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 310 3035130",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-el-tuparro/",
+            "https://www.toninastravel.com/"
+          ]
+        },
+        "website": {
+          "checked_at": "2026-11-04",
+          "observed_value": "https://www.toninastravel.com/",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-el-tuparro/",
+            "https://www.toninastravel.com/"
+          ]
+        }
+      },
+      "address": "Calle 16 N5-112",
+      "phone": "+57 310 3035130",
+      "previous_field_values": {
+        "phone": [
+          "3103035130"
+        ]
+      },
+      "website": "https://www.toninastravel.com/",
+      "description_draft_es": "Operador de turismo de naturaleza con base en Inírida; figura en la información de operadores de El Tuparro.",
+      "documentary_confirmation": {
+        "checked_at": "2026-11-04",
+        "level": "official_operator_directory_and_primary",
+        "scope": "business_identity_and_local_offer_only",
+        "source_urls": [
+          "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-el-tuparro/",
+          "https://www.toninastravel.com/"
+        ],
+        "owner_contacted": false,
+        "legal_registration_verified": false,
+        "notes": "La comprobación documental no acredita operación presencial hoy, afiliación ni titularidad."
+      }
     },
     {
       "name": "Guainía Tours",
@@ -405,7 +1020,19 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Fundación Biológica Aroma Verde",
@@ -416,7 +1043,19 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Estrella Fluvial del Guainía",
@@ -427,7 +1066,19 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Fundación Antrópico",
@@ -438,7 +1089,19 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "North Amazon Travel HBC",
@@ -449,7 +1112,33 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Ca\\u00f1o Raya",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3143752868",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Ca\\u00f1o Raya",
+      "phone": "3143752868"
     },
     {
       "name": "Agencia Pesca Deportiva El Sam",
@@ -460,7 +1149,33 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Comunidad Barranco Tigre",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3102481518",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Comunidad Barranco Tigre",
+      "phone": "3102481518"
     },
     {
       "name": "Orinoco Nature Tours",
@@ -471,7 +1186,27 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_phone": {
+          "observed_value": "3503772929",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "phone": "3503772929"
     },
     {
       "name": "Monstruo Mancipe",
@@ -482,7 +1217,33 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Calle 18 N 9-35",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3105693841",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Calle 18 N 9-35",
+      "phone": "3105693841"
     },
     {
       "name": "Pesque y Suelte Jaipac",
@@ -493,7 +1254,33 @@
       "status": "documented_candidate_pending_coordinates",
       "claimed": false,
       "verified_business": false,
-      "public": false
+      "public": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "field_evidence": {
+        "municipal_address": {
+          "observed_value": "Cra 9 N 14-12",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        },
+        "municipal_phone": {
+          "observed_value": "3107693564",
+          "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+          "checked_at": "2026-11-04"
+        }
+      },
+      "address": "Cra 9 N 14-12",
+      "phone": "3107693564"
     },
     {
       "name": "Cabaña de Joaco",
@@ -511,7 +1298,20 @@
       "public": false,
       "additional_sources": [
         "https://www.openstreetmap.org/node/1117536658"
-      ]
+      ],
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Cabaña de Joaco",
+        "live_source_version": "1",
+        "live_source_timestamp": "2011-01-23T20:27:39Z",
+        "live_coordinate_validation": "live_named_point_matches",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Sal & Pimienta - Fusion Gourmet",
@@ -529,7 +1329,29 @@
       "public": false,
       "additional_sources": [
         "https://www.openstreetmap.org/node/12158967783"
-      ]
+      ],
+      "phone": "+57 322 8991909",
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/12158967783",
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 322 8991909",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Sal & Pimienta - Fusion Gourmet",
+        "live_source_version": "2",
+        "live_source_timestamp": "2026-07-18T21:59:11Z",
+        "live_coordinate_validation": "live_named_point_matches",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Residencias El Turista del Guainia",
@@ -562,7 +1384,43 @@
         "longitude": -67.9308167,
         "kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/4937557423"
-      }
+      },
+      "phone": "+57 316 8192783",
+      "field_evidence": {
+        "phone": {
+          "source_url": "https://www.openstreetmap.org/node/4937557423",
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 316 8192783",
+          "status": "live_map_listing_not_owner_confirmed"
+        },
+        "website": {
+          "source_url": "https://www.openstreetmap.org/node/4937557423",
+          "checked_at": "2026-11-04",
+          "observed_value": "http://viktorguarin.blogspot.com.co/",
+          "status": "live_map_listing_not_owner_confirmed"
+        },
+        "email": {
+          "source_url": "https://www.openstreetmap.org/node/4937557423",
+          "checked_at": "2026-11-04",
+          "observed_value": "residenciaselturistadelguainia@gmail.com",
+          "status": "live_map_listing_not_owner_confirmed"
+        }
+      },
+      "website": "http://viktorguarin.blogspot.com.co/",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Residencias El Turista del Guainia",
+        "live_source_version": "3",
+        "live_source_timestamp": "2026-09-21T10:27:15Z",
+        "live_coordinate_validation": "live_named_point_matches",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      },
+      "email": "residenciaselturistadelguainia@gmail.com"
     },
     {
       "name": "Turismo de Naturaleza por el Guainía",
@@ -587,6 +1445,19 @@
         "longitude": -67.9242893,
         "kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/9215404021"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Turismo de Naturaleza por el Guainía",
+        "live_source_version": "1",
+        "live_source_timestamp": "2021-11-01T04:19:33Z",
+        "live_coordinate_validation": "live_named_point_matches",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
       }
     },
     {
@@ -612,6 +1483,19 @@
         "longitude": -67.9246745,
         "kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/12158967784"
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Sandwich Express",
+        "live_source_version": "1",
+        "live_source_timestamp": "2024-09-06T02:19:34Z",
+        "live_coordinate_validation": "live_named_point_matches",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
       }
     },
     {
@@ -623,7 +1507,19 @@
       "status": "documented_candidate_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
     },
     {
       "name": "Atuma — Zulma Torcuato",
@@ -634,7 +1530,165 @@
       "status": "documented_candidate_current_operation_and_coordinates_pending",
       "public": false,
       "claimed": false,
-      "verified_business": false
+      "verified_business": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked",
+        "municipal_directory_check": "rows_found_in_embedded_public_data_2026-11-04"
+      }
+    },
+    {
+      "name": "La Tribu Fit — Tienda Café",
+      "category": "cafes",
+      "geolocation": null,
+      "public": false,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "phone": "+57 322 4135512",
+      "field_evidence": {
+        "phone": {
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 322 4135512",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://alimentosreborn.com/distribuidores/",
+            "https://www.happycow.net/reviews/la-tribu-fit-inirida-298238",
+            "https://es.restaurantguru.com/La-tribu-Fit-Tienda-Cafe-Inirida"
+          ]
+        },
+        "address": {
+          "checked_at": "2026-11-04",
+          "observed_value": "Vía Aeropuerto, Inírida",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://alimentosreborn.com/distribuidores/",
+            "https://www.happycow.net/reviews/la-tribu-fit-inirida-298238",
+            "https://es.restaurantguru.com/La-tribu-Fit-Tienda-Cafe-Inirida"
+          ]
+        }
+      },
+      "address": "Vía Aeropuerto, Inírida",
+      "source_url": "https://alimentosreborn.com/distribuidores/",
+      "description_draft_es": "Cafetería y tienda de alimentos en la vía al aeropuerto de Inírida.",
+      "documentary_confirmation": {
+        "checked_at": "2026-11-04",
+        "level": "supplier_and_independent_local_listing",
+        "scope": "business_identity_and_local_offer_only",
+        "source_urls": [
+          "https://alimentosreborn.com/distribuidores/",
+          "https://www.happycow.net/reviews/la-tribu-fit-inirida-298238",
+          "https://es.restaurantguru.com/La-tribu-Fit-Tienda-Cafe-Inirida"
+        ],
+        "owner_contacted": false,
+        "legal_registration_verified": false,
+        "notes": "La comprobación documental no acredita operación presencial hoy, afiliación ni titularidad."
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "publication_ready": false,
+        "current_operation": "not_independently_confirmed",
+        "issues": [
+          "street_number_and_exact_site_pending",
+          "coordinates_missing",
+          "historical_happycow_social_link_differs_from_supplier_handle_do_not_publish_unchecked"
+        ]
+      },
+      "status": "documented_identity_pending_coordinates"
+    },
+    {
+      "name": "Restaurante Bar El Rinconcito de Inírida",
+      "category": "restaurants",
+      "geolocation": null,
+      "public": false,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "address": "Calle 19 #10-02, Comuneros, Inírida",
+      "field_evidence": {
+        "address": {
+          "checked_at": "2026-11-04",
+          "observed_value": "Calle 19 #10-02, Comuneros, Inírida",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://mesagil.invima.gov.co/biblioteca/preview/145570"
+          ]
+        }
+      },
+      "source_url": "https://mesagil.invima.gov.co/biblioteca/preview/145570",
+      "description_draft_es": "Restaurante bar identificado en un registro sanitario público de febrero de 2026.",
+      "documentary_confirmation": {
+        "checked_at": "2026-11-04",
+        "level": "dated_official_establishment_record",
+        "scope": "business_identity_and_local_offer_only",
+        "source_urls": [
+          "https://mesagil.invima.gov.co/biblioteca/preview/145570"
+        ],
+        "owner_contacted": false,
+        "legal_registration_verified": false,
+        "notes": "La comprobación documental no acredita operación presencial hoy, afiliación ni titularidad."
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "publication_ready": false,
+        "current_operation": "not_independently_confirmed",
+        "issues": [
+          "official_record_dated_2026_02_25_not_live_operation_confirmation",
+          "coordinates_missing"
+        ]
+      },
+      "status": "documented_identity_pending_coordinates"
+    },
+    {
+      "name": "The Capuccino Work Shop",
+      "category": "cafes",
+      "geolocation": null,
+      "public": false,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "address": "Calle 16 #9-27, Inírida",
+      "field_evidence": {
+        "address": {
+          "checked_at": "2026-11-04",
+          "observed_value": "Calle 16 #9-27, Inírida",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://mesagil.invima.gov.co/biblioteca/download/145570"
+          ]
+        }
+      },
+      "source_url": "https://mesagil.invima.gov.co/biblioteca/download/145570",
+      "description_draft_es": "Establecimiento identificado en el registro público de la Secretaría de Salud de Guainía de febrero de 2026.",
+      "documentary_confirmation": {
+        "checked_at": "2026-11-04",
+        "level": "dated_official_establishment_record",
+        "scope": "business_identity_and_local_offer_only",
+        "source_urls": [
+          "https://mesagil.invima.gov.co/biblioteca/download/145570"
+        ],
+        "owner_contacted": false,
+        "legal_registration_verified": false,
+        "notes": "La comprobación documental no acredita operación presencial hoy, afiliación ni titularidad."
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "publication_ready": false,
+        "current_operation": "not_independently_confirmed",
+        "issues": [
+          "official_record_dated_2026_02_04_not_live_operation_confirmation",
+          "commercial_menu_and_contact_pending",
+          "coordinates_missing"
+        ]
+      },
+      "status": "documented_identity_pending_coordinates"
     }
   ],
   "media": {

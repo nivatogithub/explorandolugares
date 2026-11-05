@@ -97,8 +97,14 @@
   "master_sha256": "5871df9dcd13c96b37bce836bd1d6ec462f076cdf588e828bdcd410e2dbdd7d3",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "comment": null,
+    "at": "2026-11-04T20:32:13.164Z",
+    "image_sha256": "c88f4a14d3d52d144feb381994b74f4db9dc4c599d20129c9be2194e4116dcba",
+    "source": "reviews/user-export-00.json"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-02-1200.webp",
@@ -120,5 +126,12 @@
       "Historic 2013 photographic reference; not current-state evidence.",
       "Small ornamental details stylized."
     ]
+  },
+  "human_review": {
+    "status": "approved",
+    "comment": null,
+    "at": "2026-11-04T20:32:13.164Z",
+    "image_sha256": "c88f4a14d3d52d144feb381994b74f4db9dc4c599d20129c9be2194e4116dcba",
+    "source": "reviews/user-export-00.json"
   }
 }

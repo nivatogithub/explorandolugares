@@ -97,8 +97,13 @@
   "master_sha256": "2a957e7ce9d33a5e18fac9d1b3ae80252ba128f0dc030249f9ee5f643d0ed683",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:37:49.706950+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "6a760173820a329e747b67982d7d138e544ad289752fd696f02bc7e024b98e14"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-02-1200.webp",
@@ -126,5 +131,11 @@
   },
   "publication_ready": false,
   "generation_prompt": "Transform this identified photograph of flower of Inírida, exact pointed red and white inflorescences on tall thin stems, grassland with small thatched shelter in left distance into a clearly illustrated realistic editorial ink and gouache rendition. Preserve camera, composition, precise placement, geometry, spacing and appearance of all elements. Landscape3:2 crop, never extend unseen scenery. Natural full color, balanced saturation, visible fine brushwork. No invented objects, people, text, signs, monuments, foliage or architecture. Do not change colors or silhouettes that identify the place. Private review draft.",
-  "prompt_record": "exact"
+  "prompt_record": "exact",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:37:49.706950+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "6a760173820a329e747b67982d7d138e544ad289752fd696f02bc7e024b98e14"
+  }
 }

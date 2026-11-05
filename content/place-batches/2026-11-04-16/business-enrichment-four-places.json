@@ -1,0 +1,255 @@
+{
+  "checked_at": "2026-11-04",
+  "scope": "four_place_business_enrichment",
+  "definition": "Confirmación documental de identidad y oferta local; no certificación legal, titularidad ni operación presencial.",
+  "changes": [
+    {
+      "place": "arauca",
+      "name": "Hotel Sanbara",
+      "added": false,
+      "level": "primary_and_named_map",
+      "source_urls": [
+        "https://hotelsanbara.com.co/app/contacto.php",
+        "https://www.openstreetmap.org/node/13117131997"
+      ]
+    },
+    {
+      "place": "arauca",
+      "name": "Araucatur",
+      "added": false,
+      "level": "primary_and_independent_directory",
+      "source_urls": [
+        "https://araucatur.com/",
+        "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i25157/araucatur"
+      ]
+    },
+    {
+      "place": "arauca",
+      "name": "Gâteaux Café & Cake Shop — Arauca",
+      "added": true,
+      "level": "primary_and_independent_directory",
+      "source_urls": [
+        "https://linktr.ee/gateauxcakeshop",
+        "https://restaurantguru.com/Gateaux-Cafe-Cake-Shop-Arauca"
+      ]
+    },
+    {
+      "place": "arauca",
+      "name": "Punta Arena Restaurante",
+      "added": true,
+      "level": "primary_address_corroborated",
+      "source_urls": [
+        "https://restaurantpuntarena.com/",
+        "https://hotelpuntaarena.com/wp-content/uploads/2024/07/DOC-SST-08-Politica-de-Tratamiento-de-datos_F.pdf"
+      ]
+    },
+    {
+      "place": "arauca",
+      "name": "Cacao Café",
+      "added": true,
+      "level": "cross_source_named_listing",
+      "source_urls": [
+        "https://www.waze.com/live-map/directions/co/arauca/arauca/cacao?to=place.ChIJM9J176Prb44RMSilphJsqI4",
+        "https://es.restaurantguru.com/Cacao-Arauca-2"
+      ]
+    },
+    {
+      "place": "inirida",
+      "name": "Manacal Hotel Boutique",
+      "added": false,
+      "level": "renaming_corroborated_primary_and_booking",
+      "source_urls": [
+        "https://es.planetofhotels.com/colombia/inirida/hotel-boutique-manacal",
+        "https://www.booking.com/hotel/co/tucunare.es.html",
+        "https://manacalhotelboutique.com/"
+      ]
+    },
+    {
+      "place": "inirida",
+      "name": "Toninas Tours",
+      "added": false,
+      "level": "official_operator_directory_and_primary",
+      "source_urls": [
+        "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-el-tuparro/",
+        "https://www.toninastravel.com/"
+      ]
+    },
+    {
+      "place": "inirida",
+      "name": "La Tribu Fit — Tienda Café",
+      "added": true,
+      "level": "supplier_and_independent_local_listing",
+      "source_urls": [
+        "https://alimentosreborn.com/distribuidores/",
+        "https://www.happycow.net/reviews/la-tribu-fit-inirida-298238",
+        "https://es.restaurantguru.com/La-tribu-Fit-Tienda-Cafe-Inirida"
+      ]
+    },
+    {
+      "place": "inirida",
+      "name": "Restaurante Bar El Rinconcito de Inírida",
+      "added": true,
+      "level": "dated_official_establishment_record",
+      "source_urls": [
+        "https://mesagil.invima.gov.co/biblioteca/preview/145570"
+      ]
+    },
+    {
+      "place": "inirida",
+      "name": "The Capuccino Work Shop",
+      "added": true,
+      "level": "dated_official_establishment_record",
+      "source_urls": [
+        "https://mesagil.invima.gov.co/biblioteca/download/145570"
+      ]
+    },
+    {
+      "place": "la-macarena",
+      "name": "Aventura Tours — Caño Cristales",
+      "added": true,
+      "level": "primary_and_official_directory",
+      "source_urls": [
+        "https://www.cano-cristales.com/contacto/",
+        "https://www.parquesnacionales.gov.co/wp-content/uploads/2024/06/ABC-LA-MACARENA-2024.pdf",
+        "https://www.acotur.co/es/asociado/cristales-aventura-tours-29"
+      ]
+    },
+    {
+      "place": "la-macarena",
+      "name": "Macarenia Travel",
+      "added": true,
+      "level": "primary_and_official_directory",
+      "source_urls": [
+        "https://macareniatravel.wixsite.com/macareniatravel/sobre-macarenia-travel",
+        "https://www.parquesnacionales.gov.co/wp-content/uploads/2025/06/ABC-LA-MACARENA-2025-1.pdf"
+      ]
+    },
+    {
+      "place": "la-macarena",
+      "name": "Jungla Ecotours",
+      "added": true,
+      "level": "official_directory_and_indexed_primary",
+      "source_urls": [
+        "https://www.parquesnacionales.gov.co/wp-content/uploads/2025/06/ABC-LA-MACARENA-2025-1.pdf",
+        "https://www.junglaecotours.com/"
+      ]
+    },
+    {
+      "place": "la-macarena",
+      "name": "Lithos. El Café de los Cinco Colores",
+      "added": false,
+      "level": "cross_source_named_listing",
+      "source_urls": [
+        "https://www.tripadvisor.es/Restaurant_Review-g4455869-d15284644-Reviews-Cafe_de_lithos-La_Macarena_Meta_Department.html",
+        "https://es.restaurantguru.com/Cafe-de-lithos-La-Macarena"
+      ]
+    },
+    {
+      "place": "puerto-carreno",
+      "name": "Vichada Exótica",
+      "added": true,
+      "level": "official_operator_directory_corroborated",
+      "source_urls": [
+        "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-el-tuparro/",
+        "https://www.puertocarreno.com/tour-agencies"
+      ]
+    },
+    {
+      "place": "puerto-carreno",
+      "name": "Viajeros del Orinoco",
+      "added": true,
+      "level": "official_operator_directory_and_primary",
+      "source_urls": [
+        "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-el-tuparro/",
+        "https://viajerosdelorinoco.com/"
+      ]
+    },
+    {
+      "place": "puerto-carreno",
+      "name": "Orinoquia Tours & Expediciones",
+      "added": true,
+      "level": "primary_and_independent_directory",
+      "source_urls": [
+        "https://www.haciendalosamores.com/",
+        "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i37723/orinoquia-tours-expediciones"
+      ]
+    },
+    {
+      "place": "puerto-carreno",
+      "name": "Pinino Gourmet",
+      "added": true,
+      "level": "cross_source_named_listing",
+      "source_urls": [
+        "https://carta.menu/restaurants/puerto-carreno/pinino-gourmet",
+        "https://www.cybo.com/CO/puerto-carre%C3%B1o/restaurants/"
+      ]
+    },
+    {
+      "place": "puerto-carreno",
+      "name": "La Cascada",
+      "added": true,
+      "level": "local_listing_and_historical_public_record",
+      "source_urls": [
+        "https://www.cybo.com/CO/puerto-carre%C3%B1o/restaurants/",
+        "https://repositoriocdim.esap.edu.co/server/api/core/bitstreams/7cb43e35-bdf9-4070-af58-b63b614ff29f/content"
+      ]
+    }
+  ],
+  "counts": [
+    {
+      "slug": "arauca",
+      "before": 13,
+      "after": 16,
+      "added": 3,
+      "with_coordinates": 13,
+      "categories": {
+        "accommodation": 6,
+        "tour_operator": 1,
+        "restaurants": 6,
+        "cafes": 3
+      }
+    },
+    {
+      "slug": "inirida",
+      "before": 37,
+      "after": 40,
+      "added": 3,
+      "with_coordinates": 13,
+      "categories": {
+        "accommodation": 21,
+        "tour_operator": 10,
+        "restaurant": 2,
+        "tour_operators": 1,
+        "restaurants": 2,
+        "crafts": 2,
+        "cafes": 2
+      }
+    },
+    {
+      "slug": "la-macarena",
+      "before": 14,
+      "after": 17,
+      "added": 3,
+      "with_coordinates": 14,
+      "categories": {
+        "accommodation": 9,
+        "restaurants": 3,
+        "nightlife": 1,
+        "cafes": 1,
+        "tour_operator": 3
+      }
+    },
+    {
+      "slug": "puerto-carreno",
+      "before": 12,
+      "after": 17,
+      "added": 5,
+      "with_coordinates": 5,
+      "categories": {
+        "accommodation": 12,
+        "tour_operator": 3,
+        "restaurants": 2
+      }
+    }
+  ]
+}

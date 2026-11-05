@@ -97,8 +97,13 @@
   "master_sha256": "367b7e02c1d012f26dbfcf3b3e4a7e65a2878581560f54acb079a25ea6bf8efa",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T22:05:36.538601+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "156c5707d18bf669b2e6b2af0e7e7d91dc5d721d999fe963c4d510c04445601e"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/hero-640.webp",
@@ -116,5 +121,11 @@
     "result": "candidate_ready_for_human_comparison",
     "notes": "Inspected generated image and identified reference; ink/gouache style. Retains broad camera/composition. Historic references do not verify current infrastructure. Human approval still required."
   },
-  "prompt_summary": "Faithful 3:2 ink/gouache editorial transformation from identified reference; retain camera, geographic shapes and architecture; no added sites, infrastructure or logos."
+  "prompt_summary": "Faithful 3:2 ink/gouache editorial transformation from identified reference; retain camera, geographic shapes and architecture; no added sites, infrastructure or logos.",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T22:05:36.538601+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "156c5707d18bf669b2e6b2af0e7e7d91dc5d721d999fe963c4d510c04445601e"
+  }
 }

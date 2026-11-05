@@ -18,8 +18,14 @@
   "master_sha256": "d67e7c3644d6107caddf007fc83c92904ed7dc0b01817d93f590e6f30396278c",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "recorded_at": "2026-11-04",
+    "source": "explicit_user_chat_history_reconciled_for_dev1",
+    "evidence": "Aprobación del conjunto tras los cambios de Mitú y Nuquí («aprobadas»); los pedidos posteriores se limitaron a la portada de Nuquí.",
+    "image_sha256": "e39eb536665ed31a14d87c781c9626766134198e6de72d512711fe8e5d2234c1"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-03-1200.webp",

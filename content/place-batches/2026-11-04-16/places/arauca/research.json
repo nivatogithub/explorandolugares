@@ -75,9 +75,9 @@
       "name": "Hotel Sanbara",
       "category": "accommodation",
       "address": "Carrera 16 #24-61, Arauca",
-      "phone": "+573103310907",
+      "phone": "+57 310 3310907",
       "email": "reservas@hotelsanbara.com.co",
-      "website": "https://hotelsanbara.com.co",
+      "website": "https://hotelsanbara.com.co/",
       "source_url": "https://mapcarta.com/es/N13117131997",
       "geolocation": {
         "latitude": 7.089,
@@ -87,20 +87,124 @@
       "status": "documented_unclaimed",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "live_named_point_matches",
+        "live_source_name": "Hotel Sanbara",
+        "live_source_url": "https://www.openstreetmap.org/node/13117131997",
+        "coordinate_difference_degrees": 4.500000002849447e-06
+      },
+      "previous_field_values": {
+        "phone": [
+          "+573103310907"
+        ],
+        "website": [
+          "https://hotelsanbara.com.co"
+        ]
+      },
+      "field_evidence": {
+        "phone": {
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 310 3310907",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://hotelsanbara.com.co/app/contacto.php",
+            "https://www.openstreetmap.org/node/13117131997"
+          ]
+        },
+        "website": {
+          "checked_at": "2026-11-04",
+          "observed_value": "https://hotelsanbara.com.co/",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://hotelsanbara.com.co/app/contacto.php",
+            "https://www.openstreetmap.org/node/13117131997"
+          ]
+        }
+      },
+      "description_draft_es": "Hotel de Arauca con alojamiento y restaurante documentados en su sitio web.",
+      "documentary_confirmation": {
+        "checked_at": "2026-11-04",
+        "level": "primary_and_named_map",
+        "scope": "business_identity_and_local_offer_only",
+        "source_urls": [
+          "https://hotelsanbara.com.co/app/contacto.php",
+          "https://www.openstreetmap.org/node/13117131997"
+        ],
+        "owner_contacted": false,
+        "legal_registration_verified": false,
+        "notes": "La comprobación documental no acredita operación presencial hoy, afiliación ni titularidad."
+      }
     },
     {
       "name": "Araucatur",
       "category": "tour_operator",
-      "address": "Calle 22 N°19-49, Arauca",
+      "address": "Calle 22 #19-49, Arauca",
       "phone": "+573203842822",
       "email": "viajesarauca@hotmail.com",
       "source_url": "https://araucatur.com/",
       "geolocation": null,
-      "status": "documented_geolocation_pending",
+      "status": "documented_identity_pending_coordinates",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "needs_source_validation",
+        "issues": [
+          "coordinates_missing",
+          "street_number_49_primary_vs_53_business_directory_requires_check"
+        ],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "not_live_checked"
+      },
+      "previous_field_values": {
+        "address": [
+          "Calle 22 N°19-49, Arauca"
+        ]
+      },
+      "field_evidence": {
+        "address": {
+          "checked_at": "2026-11-04",
+          "observed_value": "Calle 22 #19-49, Arauca",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://araucatur.com/",
+            "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i25157/araucatur"
+          ]
+        },
+        "website": {
+          "checked_at": "2026-11-04",
+          "observed_value": "https://araucatur.com/",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://araucatur.com/",
+            "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i25157/araucatur"
+          ]
+        }
+      },
+      "website": "https://araucatur.com/",
+      "description_draft_es": "Operadora con base en Arauca y oferta de recorridos de naturaleza y cultura llanera.",
+      "documentary_confirmation": {
+        "checked_at": "2026-11-04",
+        "level": "primary_and_independent_directory",
+        "scope": "business_identity_and_local_offer_only",
+        "source_urls": [
+          "https://araucatur.com/",
+          "https://www.colombia.com/turismo/prestadores-de-servicios-turisticos/i25157/araucatur"
+        ],
+        "owner_contacted": false,
+        "legal_registration_verified": false,
+        "notes": "La comprobación documental no acredita operación presencial hoy, afiliación ni titularidad."
+      }
     },
     {
       "name": "Hotel Quinta del Sol",
@@ -108,11 +212,26 @@
       "address": "Carrera 16 #14-15, Arauca",
       "phone": "+573175997074",
       "source_url": "https://hotelquintadelsol.co/",
-      "geolocation": null,
+      "geolocation": {
+        "latitude": 7.080741,
+        "longitude": -70.753636,
+        "source_url": "https://www.ehotelsreviews.com/hotel-quinta-del-sol-3081680-es",
+        "point_kind": "secondary_named_listing_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
       "status": "documented_geolocation_pending",
       "verified_business": false,
       "public": false,
-      "claimed": false
+      "claimed": false,
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "secondary_named_listing_not_verified_entrance",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      }
     },
     {
       "name": "Hotel Santa Bárbara",
@@ -138,7 +257,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/1712152298"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Santa Bárbara",
+        "live_source_version": "2",
+        "live_source_timestamp": "2025-05-15T01:58:46Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Nova Park",
@@ -164,7 +295,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/1823561637"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Nova Park",
+        "live_source_version": "1",
+        "live_source_timestamp": "2012-07-13T01:42:14Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Las Acacias",
@@ -190,7 +333,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/2478242757"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Las Acacias",
+        "live_source_version": "1",
+        "live_source_timestamp": "2013-09-30T21:20:03Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Heladería y Frutería la Campiña",
@@ -217,7 +372,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/3296817176"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Heladería y Frutería la Campiña",
+        "live_source_version": "2",
+        "live_source_timestamp": "2020-03-17T06:48:07Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Capri",
@@ -244,7 +411,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/7148780376"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Capri",
+        "live_source_version": "1",
+        "live_source_timestamp": "2020-01-21T13:12:52Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Donde Carmen",
@@ -271,7 +450,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/7177319330"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Donde Carmen",
+        "live_source_version": "1",
+        "live_source_timestamp": "2020-02-01T14:37:36Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Pikarepa",
@@ -297,7 +488,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/7182923366"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Pikarepa",
+        "live_source_version": "1",
+        "live_source_timestamp": "2020-02-04T01:18:14Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Hotel Verano Plaza",
@@ -323,7 +526,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/7301315117"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Hotel Verano Plaza",
+        "live_source_version": "1",
+        "live_source_timestamp": "2020-03-17T06:33:20Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Sogueros Parrilla Bar",
@@ -349,7 +564,19 @@
         "point_kind": "mapped_site_node",
         "source_url": "https://www.openstreetmap.org/node/7301786012"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Sogueros Parrilla Bar",
+        "live_source_version": "1",
+        "live_source_timestamp": "2020-03-17T10:58:21Z",
+        "live_coordinate_validation": "live_named_point_matches"
+      }
     },
     {
       "name": "Juguitos Pablito",
@@ -377,7 +604,206 @@
         "point_kind": "mapped_building_or_site_reference_not_entrance",
         "source_url": "https://www.openstreetmap.org/way/1284460106"
       },
-      "source_license": "ODbL 1.0"
+      "source_license": "ODbL 1.0",
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "coordinate_evidence": "cached_named_map_feature_matched",
+        "issues": [],
+        "current_operation": "not_independently_confirmed",
+        "municipality_membership": "not_certified",
+        "publication_ready": false,
+        "live_source_name": "Juguitos Pablito",
+        "live_source_version": "3",
+        "live_source_timestamp": "2026-11-03T21:44:41Z",
+        "live_coordinate_validation": "live_named_area_geometry_requires_check"
+      }
+    },
+    {
+      "name": "Gâteaux Café & Cake Shop — Arauca",
+      "category": "cafes",
+      "geolocation": null,
+      "public": false,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "phone": "+57 318 2358584",
+      "field_evidence": {
+        "phone": {
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 318 2358584",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://linktr.ee/gateauxcakeshop",
+            "https://restaurantguru.com/Gateaux-Cafe-Cake-Shop-Arauca"
+          ]
+        },
+        "address": {
+          "checked_at": "2026-11-04",
+          "observed_value": "Carrera 22 #22-66, Arauca",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://linktr.ee/gateauxcakeshop",
+            "https://restaurantguru.com/Gateaux-Cafe-Cake-Shop-Arauca"
+          ]
+        },
+        "website": {
+          "checked_at": "2026-11-04",
+          "observed_value": "https://linktr.ee/gateauxcakeshop",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://linktr.ee/gateauxcakeshop",
+            "https://restaurantguru.com/Gateaux-Cafe-Cake-Shop-Arauca"
+          ]
+        }
+      },
+      "address": "Carrera 22 #22-66, Arauca",
+      "website": "https://linktr.ee/gateauxcakeshop",
+      "source_url": "https://linktr.ee/gateauxcakeshop",
+      "description_draft_es": "Cafetería y pastelería; esta ficha corresponde a la sede de Arauca, no a Saravena.",
+      "documentary_confirmation": {
+        "checked_at": "2026-11-04",
+        "level": "primary_and_independent_directory",
+        "scope": "business_identity_and_local_offer_only",
+        "source_urls": [
+          "https://linktr.ee/gateauxcakeshop",
+          "https://restaurantguru.com/Gateaux-Cafe-Cake-Shop-Arauca"
+        ],
+        "owner_contacted": false,
+        "legal_registration_verified": false,
+        "notes": "La comprobación documental no acredita operación presencial hoy, afiliación ni titularidad."
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "publication_ready": false,
+        "current_operation": "not_independently_confirmed",
+        "issues": [
+          "coordinates_missing"
+        ]
+      },
+      "status": "documented_identity_pending_coordinates"
+    },
+    {
+      "name": "Punta Arena Restaurante",
+      "category": "restaurants",
+      "geolocation": null,
+      "public": false,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "phone": "+57 314 6645833",
+      "field_evidence": {
+        "phone": {
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 314 6645833",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://restaurantpuntarena.com/",
+            "https://hotelpuntaarena.com/wp-content/uploads/2024/07/DOC-SST-08-Politica-de-Tratamiento-de-datos_F.pdf"
+          ]
+        },
+        "address": {
+          "checked_at": "2026-11-04",
+          "observed_value": "Calle 20 #23-70, Arauca",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://restaurantpuntarena.com/",
+            "https://hotelpuntaarena.com/wp-content/uploads/2024/07/DOC-SST-08-Politica-de-Tratamiento-de-datos_F.pdf"
+          ]
+        },
+        "website": {
+          "checked_at": "2026-11-04",
+          "observed_value": "https://restaurantpuntarena.com/",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://restaurantpuntarena.com/",
+            "https://hotelpuntaarena.com/wp-content/uploads/2024/07/DOC-SST-08-Politica-de-Tratamiento-de-datos_F.pdf"
+          ]
+        }
+      },
+      "address": "Calle 20 #23-70, Arauca",
+      "website": "https://restaurantpuntarena.com/",
+      "source_url": "https://restaurantpuntarena.com/",
+      "description_draft_es": "Restaurante del Hotel Punta Arena; ofrece desayunos y platos a la carta.",
+      "documentary_confirmation": {
+        "checked_at": "2026-11-04",
+        "level": "primary_address_corroborated",
+        "scope": "business_identity_and_local_offer_only",
+        "source_urls": [
+          "https://restaurantpuntarena.com/",
+          "https://hotelpuntaarena.com/wp-content/uploads/2024/07/DOC-SST-08-Politica-de-Tratamiento-de-datos_F.pdf"
+        ],
+        "owner_contacted": false,
+        "legal_registration_verified": false,
+        "notes": "La comprobación documental no acredita operación presencial hoy, afiliación ni titularidad."
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "publication_ready": false,
+        "current_operation": "not_independently_confirmed",
+        "issues": [
+          "coordinates_missing"
+        ]
+      },
+      "status": "documented_identity_pending_coordinates"
+    },
+    {
+      "name": "Cacao Café",
+      "category": "cafes",
+      "geolocation": {
+        "latitude": 7.083942299999999,
+        "longitude": -70.7576643,
+        "point_kind": "named_listing_site_not_verified_entrance",
+        "source_url": "https://www.waze.com/live-map/directions/co/arauca/arauca/cacao?to=place.ChIJM9J176Prb44RMSilphJsqI4",
+        "checked_at": "2026-11-04"
+      },
+      "public": false,
+      "claimed": false,
+      "verified_business": false,
+      "commercial_plan": "free",
+      "phone": "+57 315 6182841",
+      "field_evidence": {
+        "phone": {
+          "checked_at": "2026-11-04",
+          "observed_value": "+57 315 6182841",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://www.waze.com/live-map/directions/co/arauca/arauca/cacao?to=place.ChIJM9J176Prb44RMSilphJsqI4",
+            "https://es.restaurantguru.com/Cacao-Arauca-2"
+          ]
+        },
+        "address": {
+          "checked_at": "2026-11-04",
+          "observed_value": "Calle 19 #20-53, Arauca",
+          "status": "public_source_not_owner_contacted",
+          "source_urls": [
+            "https://www.waze.com/live-map/directions/co/arauca/arauca/cacao?to=place.ChIJM9J176Prb44RMSilphJsqI4",
+            "https://es.restaurantguru.com/Cacao-Arauca-2"
+          ]
+        }
+      },
+      "address": "Calle 19 #20-53, Arauca",
+      "source_url": "https://www.waze.com/live-map/directions/co/arauca/arauca/cacao?to=place.ChIJM9J176Prb44RMSilphJsqI4",
+      "description_draft_es": "Cafetería de Arauca identificada por nombre, dirección y teléfono coincidentes.",
+      "documentary_confirmation": {
+        "checked_at": "2026-11-04",
+        "level": "cross_source_named_listing",
+        "scope": "business_identity_and_local_offer_only",
+        "source_urls": [
+          "https://www.waze.com/live-map/directions/co/arauca/arauca/cacao?to=place.ChIJM9J176Prb44RMSilphJsqI4",
+          "https://es.restaurantguru.com/Cacao-Arauca-2"
+        ],
+        "owner_contacted": false,
+        "legal_registration_verified": false,
+        "notes": "La comprobación documental no acredita operación presencial hoy, afiliación ni titularidad."
+      },
+      "editorial_validation": {
+        "checked_at": "2026-11-04",
+        "publication_ready": false,
+        "current_operation": "not_independently_confirmed",
+        "issues": [],
+        "live_coordinate_validation": "named_listing_coordinate_documented"
+      },
+      "status": "documented_unclaimed"
     }
   ],
   "media": {

@@ -127,8 +127,13 @@
   "master_sha256": "89bfcd19f12a5db4098acee0b58662268cb33f524508c48c76765221daac1ed3",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "0b065609f9b744344048f0064f437d85d0b3b1bde01e0c7e097a3a9678491241"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/hero-640.webp",
@@ -155,5 +160,11 @@
   },
   "publication_ready": false,
   "prompt_record": "full_prompt_not_recovered_from_previous_context",
-  "generation_brief": "Editorial realistic ink/gouache illustration, color, preserve reference camera/geography and principal forms, no added architecture or text."
+  "generation_brief": "Editorial realistic ink/gouache illustration, color, preserve reference camera/geography and principal forms, no added architecture or text.",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "0b065609f9b744344048f0064f437d85d0b3b1bde01e0c7e097a3a9678491241"
+  }
 }

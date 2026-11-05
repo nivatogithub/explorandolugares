@@ -1,10 +1,10 @@
 # Revisión privada: 16 nuevos destinos
 
-Abrir `review.html`. Elegir destino y pestaña Imágenes, Contenido y ubicación o Negocios. Aprobar o comentar cada versión y exportar el JSON de revisión. Las decisiones se guardan en el navegador y dependen del hash de la imagen; exportarlas evita perderlas al cambiar de equipo.
+Abrir `review.html`. Cada destino tiene una página en `review-pages/`, con imágenes incorporadas directamente en HTML. La visualización no requiere JavaScript; únicamente el guardado/exportación de decisiones. `review.html` abre el primer destino. Elegir destino y pestaña Imágenes, Contenido y ubicación o Negocios. Aprobar o comentar cada versión y exportar el JSON de revisión. Las decisiones se guardan en el navegador y dependen del hash de la imagen; exportarlas evita perderlas al cambiar de equipo.
 
 ## Estado real
 
-- 16 destinos, 58 imágenes de portada/atractivos listas para revisión; 116 versiones WebP verificadas.
+- 16 destinos, 59 imágenes listas para revisión: 16 portadas, 42 atractivos y 1 experiencia; 118 versiones WebP verificadas.
 - 42 atractivos, 40 con coordenada documentada y tipo de punto.
 - 29 experiencias documentadas; los recorridos sin punto fijo no tienen salida inventada.
 - 434 fichas candidatas, 364 con coordenadas documentadas. No son negocios verificados, aliados ni anunciantes.
@@ -17,7 +17,7 @@ Abrir `review.html`. Elegir destino y pestaña Imágenes, Contenido y ubicación
 | Arauca | 3 | 2/2 | 1 | 11/13 |
 | Bahía Solano | 4 | 3/3 | 2 | 19/23 |
 | Capurganá | 4 | 3/3 | 2 | 27/28 |
-| Florencia | 2 | 1/1 | 1 | 24/24 |
+| Florencia | 3 | 1/1 | 1 | 24/24 |
 | Inírida | 5 | 3/4 | 3 | 5/37 |
 | Ipiales | 2 | 1/1 | 1 | 43/43 |
 | La Macarena | 4 | 3/3 | 3 | 14/14 |
@@ -51,7 +51,7 @@ Abrir `review.html`. Elegir destino y pestaña Imágenes, Contenido y ubicación
 - `validation.json`: recuento exacto y pruebas de archivos.
 - `scripts/build-review.py`: reconstruye la revisión sin servidor.
 - `scripts/validate-batch.py`: comprueba archivos, hashes y cobertura real de coordenadas.
-- `scripts/check-review.cjs`: comprueba 48 vistas y persistencia de aprobaciones/comentarios en simulación aislada del DOM. No equivale a inspección visual de navegador.
+- `scripts/check-review.cjs`: comprueba 16 páginas estáticas, 118 imágenes incorporadas, navegación y persistencia de aprobaciones/comentarios. No equivale a inspección visual de navegador.
 
 La herramienta de navegador no permite abrir `file://`; no se creó un servidor alternativo ni se ocupó dev1 para eludir esa restricción. La revisión se entrega como archivo HTML local.
 

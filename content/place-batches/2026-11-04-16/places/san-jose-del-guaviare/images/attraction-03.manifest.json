@@ -18,8 +18,13 @@
   "master_sha256": "0fd297b9d1737137b36bdfd9ba35c22526afb338388c841ef7aeb8274b4acef8",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "5f1cf86421a4c84090d37a067445826390592017513f12e94d1fb6dcae848ae4"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-03-1200.webp",
@@ -46,5 +51,11 @@
   },
   "publication_ready": false,
   "generation_prompt": "Transform this identified photograph of Laguna Damas del Nare: canoe with existing passengers wearing lifejackets, distant forest shoreline and open calm water into a clearly illustrated semi-realistic editorial ink/gouache rendition. 3:2 landscape, use existing view only, crop without inventing new geography. Preserve camera position, relative distances, shoreline, exact rock shapes and existing elements. Natural full colors, legible details and subtle brush texture. No extra people, animals, dolphins, buildings, bridges, boats, mountains or text. Do not alter anatomy or boat geometry. No claims of current conditions, private review illustration.",
-  "prompt_record": "exact"
+  "prompt_record": "exact",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:52:06.909734+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "5f1cf86421a4c84090d37a067445826390592017513f12e94d1fb6dcae848ae4"
+  }
 }

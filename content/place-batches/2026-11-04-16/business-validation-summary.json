@@ -1,0 +1,635 @@
+{
+  "checked_at": "2026-11-04",
+  "records": 448,
+  "with_coordinates": 401,
+  "coordinates_missing": 47,
+  "previous_audit": {
+    "records": 434,
+    "missing_coordinates_before": 70,
+    "coordinates_added": 36,
+    "missing_coordinates_after": 34
+  },
+  "validation_statuses": {
+    "live_named_point_matches": 326,
+    "not_live_checked": 34,
+    "named_listing_coordinate_documented": 35,
+    "live_named_area_geometry_requires_check": 31,
+    "not_checked": 13,
+    "live_named_point_matches_reviewed_alias": 3,
+    "named_geonames_listing_matches": 3,
+    "live_point_matches_commercial_status_unconfirmed": 1,
+    "operator_named_maps_link_matches": 1,
+    "operator_address_marker_documented": 1
+  },
+  "places": [
+    {
+      "place": "Arauca",
+      "records": 16,
+      "with_coordinates": 13,
+      "coordinates_missing": 3
+    },
+    {
+      "place": "Bahía Solano",
+      "records": 23,
+      "with_coordinates": 21,
+      "coordinates_missing": 2
+    },
+    {
+      "place": "Capurganá",
+      "records": 28,
+      "with_coordinates": 28,
+      "coordinates_missing": 0
+    },
+    {
+      "place": "Florencia",
+      "records": 24,
+      "with_coordinates": 24,
+      "coordinates_missing": 0
+    },
+    {
+      "place": "Inírida",
+      "records": 40,
+      "with_coordinates": 13,
+      "coordinates_missing": 27
+    },
+    {
+      "place": "Ipiales",
+      "records": 43,
+      "with_coordinates": 43,
+      "coordinates_missing": 0
+    },
+    {
+      "place": "La Macarena",
+      "records": 17,
+      "with_coordinates": 14,
+      "coordinates_missing": 3
+    },
+    {
+      "place": "Leticia",
+      "records": 30,
+      "with_coordinates": 30,
+      "coordinates_missing": 0
+    },
+    {
+      "place": "Mitú",
+      "records": 30,
+      "with_coordinates": 30,
+      "coordinates_missing": 0
+    },
+    {
+      "place": "Mocoa",
+      "records": 21,
+      "with_coordinates": 21,
+      "coordinates_missing": 0
+    },
+    {
+      "place": "Nuquí",
+      "records": 30,
+      "with_coordinates": 30,
+      "coordinates_missing": 0
+    },
+    {
+      "place": "Popayán",
+      "records": 30,
+      "with_coordinates": 30,
+      "coordinates_missing": 0
+    },
+    {
+      "place": "Providencia y Santa Catalina",
+      "records": 24,
+      "with_coordinates": 24,
+      "coordinates_missing": 0
+    },
+    {
+      "place": "Puerto Carreño",
+      "records": 17,
+      "with_coordinates": 5,
+      "coordinates_missing": 12
+    },
+    {
+      "place": "Salento",
+      "records": 41,
+      "with_coordinates": 41,
+      "coordinates_missing": 0
+    },
+    {
+      "place": "San José del Guaviare",
+      "records": 34,
+      "with_coordinates": 34,
+      "coordinates_missing": 0
+    }
+  ],
+  "pending": [
+    {
+      "place": "Arauca",
+      "name": "Araucatur",
+      "address": "Calle 22 #19-49, Arauca",
+      "source_url": "https://araucatur.com/",
+      "issues": [
+        "coordinates_missing",
+        "street_number_49_primary_vs_53_business_directory_requires_check"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Arauca",
+      "name": "Gâteaux Café & Cake Shop — Arauca",
+      "address": "Carrera 22 #22-66, Arauca",
+      "source_url": "https://linktr.ee/gateauxcakeshop",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Arauca",
+      "name": "Punta Arena Restaurante",
+      "address": "Calle 20 #23-70, Arauca",
+      "source_url": "https://restaurantpuntarena.com/",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Bahía Solano",
+      "name": "Ecolodge Playa Alegre",
+      "address": null,
+      "source_url": "https://playaalegre.com.co/en/plan-avistamiento-de-ballenas/",
+      "issues": [
+        "coordinates_missing",
+        "secondary_coordinate_points_to_bahia_town_not_operator_el_valle_location"
+      ],
+      "candidate_coordinates": [
+        {
+          "latitude": 6.2228,
+          "longitude": -77.4014,
+          "source_url": "https://glampings.co/ecolodge-playa-alegre",
+          "status": "rejected_for_use_conflicts_with_operator_el_valle_address"
+        }
+      ]
+    },
+    {
+      "place": "Bahía Solano",
+      "name": "Fundación MarAdentro",
+      "address": null,
+      "source_url": "https://www.fundacionmaradentro.com/ballenasjorobadas",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Mavicure",
+      "address": "Calle 18 N 9- 34",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Yakapana",
+      "address": "Cra 8 N 14-35",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Safari",
+      "address": "Cra 6 N 19-29",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Las Vegas",
+      "address": "Calle 17 N 13-86",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Gran Zulima",
+      "address": "Calle 16 N 5-54",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Orinoco Real",
+      "address": "Cra 6 N 17-03",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing",
+        "two_named_sources_disagree_about_56_metres"
+      ],
+      "candidate_coordinates": [
+        {
+          "latitude": 3.867219,
+          "longitude": -67.92792,
+          "source_url": "https://www.travelmyth.com/Inirida/Hotels/Hotel-Orinoco-Real_tmid2132829"
+        },
+        {
+          "latitude": 3.86771,
+          "longitude": -67.9278,
+          "source_url": "https://www.kayak.com.uy/Inirida-Hoteles-Hotel-Orinoco-Real.2783586.ksp"
+        }
+      ]
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Tres Fronteras",
+      "address": "Cra 9 N 12-79",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Flor de Inírida",
+      "address": null,
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Guacamayos",
+      "address": "Calle 14-6-14",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Brayan",
+      "address": "Calle 3 N 16- 29",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Casa Rosas",
+      "address": null,
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Ribason",
+      "address": "V\\u00eda Guamal ",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Hotel Tamtra",
+      "address": "V\\u00eda aeropuerto",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Guainía Tours",
+      "address": null,
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Fundación Biológica Aroma Verde",
+      "address": null,
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Estrella Fluvial del Guainía",
+      "address": null,
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Fundación Antrópico",
+      "address": null,
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "North Amazon Travel HBC",
+      "address": "Ca\\u00f1o Raya",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Agencia Pesca Deportiva El Sam",
+      "address": "Comunidad Barranco Tigre",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Orinoco Nature Tours",
+      "address": null,
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Monstruo Mancipe",
+      "address": "Calle 18 N 9-35",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Pesque y Suelte Jaipac",
+      "address": "Cra 9 N 14-12",
+      "source_url": "https://inirida-guainia.gov.co/MiMunicipio/Paginas/Directorio-Turistico.aspx",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Sipada — Nancy Torcuato",
+      "address": null,
+      "source_url": "https://colombiaartesanal.com.co/artesanos/nancy-torcuato/",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Atuma — Zulma Torcuato",
+      "address": null,
+      "source_url": "https://colombiaartesanal.com.co/artesanos/zulma-torcuato/",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "La Tribu Fit — Tienda Café",
+      "address": "Vía Aeropuerto, Inírida",
+      "source_url": "https://alimentosreborn.com/distribuidores/",
+      "issues": [
+        "street_number_and_exact_site_pending",
+        "coordinates_missing",
+        "historical_happycow_social_link_differs_from_supplier_handle_do_not_publish_unchecked"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "Restaurante Bar El Rinconcito de Inírida",
+      "address": "Calle 19 #10-02, Comuneros, Inírida",
+      "source_url": "https://mesagil.invima.gov.co/biblioteca/preview/145570",
+      "issues": [
+        "official_record_dated_2026_02_25_not_live_operation_confirmation",
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Inírida",
+      "name": "The Capuccino Work Shop",
+      "address": "Calle 16 #9-27, Inírida",
+      "source_url": "https://mesagil.invima.gov.co/biblioteca/download/145570",
+      "issues": [
+        "official_record_dated_2026_02_04_not_live_operation_confirmation",
+        "commercial_menu_and_contact_pending",
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "La Macarena",
+      "name": "Aventura Tours — Caño Cristales",
+      "address": "Calle 5 #7-35, La Macarena",
+      "source_url": "https://www.cano-cristales.com/contacto/",
+      "issues": [
+        "aventura_cristales_aventura_aliases_same_reported_rnt_22085_do_not_duplicate",
+        "mirador_del_llano_and_contact_office_not_assumed_same_point",
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "La Macarena",
+      "name": "Macarenia Travel",
+      "address": "Carrera 9 #4-80, La Macarena",
+      "source_url": "https://macareniatravel.wixsite.com/macareniatravel/sobre-macarenia-travel",
+      "issues": [
+        "wix_coordinate_is_city_location_not_accepted_as_office",
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "La Macarena",
+      "name": "Jungla Ecotours",
+      "address": null,
+      "source_url": "https://www.parquesnacionales.gov.co/wp-content/uploads/2025/06/ABC-LA-MACARENA-2025-1.pdf",
+      "issues": [
+        "primary_indexed_offer_live_fetch_unavailable",
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Hotel Orinoco",
+      "address": null,
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "issues": [
+        "coordinates_missing",
+        "secondary_directory_requires_independent_confirmation"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Hotel Cacique Samanare",
+      "address": null,
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "issues": [
+        "coordinates_missing",
+        "secondary_directory_requires_independent_confirmation"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Hotel El Morichal",
+      "address": null,
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "issues": [
+        "coordinates_missing",
+        "secondary_directory_requires_independent_confirmation"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Hotel Los Delfines",
+      "address": null,
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "issues": [
+        "coordinates_missing",
+        "secondary_directory_requires_independent_confirmation"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Hotel Mi Vichada",
+      "address": null,
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "issues": [
+        "coordinates_missing",
+        "secondary_directory_requires_independent_confirmation"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Casa Hotel Victoria",
+      "address": null,
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "issues": [
+        "coordinates_missing",
+        "secondary_directory_requires_independent_confirmation"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Hotel Martha Helena",
+      "address": null,
+      "source_url": "https://www.xn--puertocarreo-khb.com/alojamiento",
+      "issues": [
+        "coordinates_missing",
+        "secondary_directory_requires_independent_confirmation"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Vichada Exótica",
+      "address": null,
+      "source_url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-el-tuparro/",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Viajeros del Orinoco",
+      "address": null,
+      "source_url": "https://www.parquesnacionales.gov.co/nuestros-parques/pnn-el-tuparro/",
+      "issues": [
+        "historical_addresses_disagree_office_location_pending",
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Orinoquia Tours & Expediciones",
+      "address": null,
+      "source_url": "https://www.haciendalosamores.com/",
+      "issues": [
+        "shared_primary_contact_with_hacienda_los_amores_not_separate_office_pin",
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "Pinino Gourmet",
+      "address": "Calle 19, Puerto Carreño",
+      "source_url": "https://carta.menu/restaurants/puerto-carreno/pinino-gourmet",
+      "issues": [
+        "coordinates_missing"
+      ],
+      "candidate_coordinates": []
+    },
+    {
+      "place": "Puerto Carreño",
+      "name": "La Cascada",
+      "address": "Carrera 6 #18-46, Puerto Carreño",
+      "source_url": "https://www.cybo.com/CO/puerto-carre%C3%B1o/restaurants/",
+      "issues": [
+        "historical_municipal_record_not_evidence_of_current_trading",
+        "coordinates_missing",
+        "address_number_18_46_vs_18_49_in_restaurant_listings"
+      ],
+      "candidate_coordinates": []
+    }
+  ]
+}

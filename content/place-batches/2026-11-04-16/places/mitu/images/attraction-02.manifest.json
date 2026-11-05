@@ -127,8 +127,13 @@
   "master_sha256": "fc6c85079b399a01dbb0484db677ad0c75c768895d09ae3e132a82adb54e0118",
   "generated_at": "2026-11-04",
   "tool": "image_gen",
-  "approval": null,
-  "review_status": "pending_human_review",
+  "approval": {
+    "status": "approved",
+    "at": "2026-11-04T20:37:49.706950+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "52f00a3c60847c0b704e38a9ef4a1a234f8df2745cabd766ef7e8c95e75a17e1"
+  },
+  "review_status": "approved",
   "outputs": [
     {
       "file": "images/attraction-02-1200.webp",
@@ -155,5 +160,11 @@
   },
   "publication_ready": false,
   "prompt_record": "full_prompt_not_recovered_from_previous_context",
-  "generation_brief": "Editorial realistic ink/gouache illustration, color, preserve reference camera/geography and principal forms, no added architecture or text."
+  "generation_brief": "Editorial realistic ink/gouache illustration, color, preserve reference camera/geography and principal forms, no added architecture or text.",
+  "human_review": {
+    "status": "approved",
+    "at": "2026-11-04T20:37:49.706950+00:00",
+    "source": "explicit_user_chat_2026-11-04",
+    "image_sha256": "52f00a3c60847c0b704e38a9ef4a1a234f8df2745cabd766ef7e8c95e75a17e1"
+  }
 }
