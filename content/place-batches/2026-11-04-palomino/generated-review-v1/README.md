@@ -1,0 +1,1 @@
+Ilustraciones generadas con built-in image_gen. Originales y prompts conservados; estado pendiente de aprobación de la versión exacta. WebP 1200 × 800. Sin publicación. El HTML incorpora todas las imágenes.
