@@ -1,0 +1,1831 @@
+{
+  "schema_version": 1,
+  "scope": [
+    "jamundi"
+  ],
+  "public_places": [
+    "jamundi"
+  ],
+  "approval": {
+    "original_commit": "33c6047d51158e60713045b7bb0d5aa6f9bdd620",
+    "approved_by": "project_owner",
+    "approved_on": "2026-11-05",
+    "scope": "Jamundí: three mapped attractions, thirty businesses, four exact approved illustrations; Charco del Duende remains excluded",
+    "expected_counts": {
+      "attractions": 3,
+      "businesses": 30,
+      "images": 4
+    }
+  },
+  "editorial": {
+    "jamundi": {
+      "slug": "jamundi",
+      "department": "Valle del Cauca",
+      "country_code": "CO",
+      "latitude": 3.261766,
+      "longitude": -76.540813,
+      "destination_type": "municipality",
+      "subregion": "Sur del Valle del Cauca",
+      "translations": {
+        "es": {
+          "display_name": "Jamundí",
+          "eyebrow": "Valle del Cauca · Colombia",
+          "headline": "Entre cholados, memoria y montañas",
+          "intro": "Jamundí combina la tradición del cholado con paisajes de montaña y la herencia cultural de sus comunidades. Descubre las cascadas de San Antonio, los petroglifos de Faltriqueras y los referentes de San Vicente y Robles.",
+          "meta_description": "Descubre Jamundí: tradición del cholado, Las Gemelas, Morro de la Cruz y la iglesia de Robles. Consulta negocios locales.",
+          "destination_id": 10013,
+          "locale": "es"
+        },
+        "en": {
+          "display_name": "Jamundí",
+          "eyebrow": "Valle del Cauca · Colombia",
+          "headline": "Cholados, heritage and mountain landscapes",
+          "intro": "Jamundí combines the cholado tradition with mountain landscapes and the cultural heritage of its communities. Discover the waterfalls of San Antonio, the petroglyphs of Faltriqueras and the landmarks of San Vicente and Robles.",
+          "meta_description": "Explore Jamundí: the cholado tradition, Las Gemelas, Morro de la Cruz and Robles church. Browse local businesses.",
+          "destination_id": 10013,
+          "locale": "en"
+        },
+        "pt-BR": {
+          "display_name": "Jamundí",
+          "eyebrow": "Valle del Cauca · Colômbia",
+          "headline": "Entre cholados, memória e montanhas",
+          "intro": "Jamundí combina a tradição do cholado com paisagens de montanha e a herança cultural de suas comunidades. Descubra as cachoeiras de San Antonio, os petróglifos de Faltriqueras e os marcos de San Vicente e Robles.",
+          "meta_description": "Descubra Jamundí: tradição do cholado, Las Gemelas, Morro de la Cruz e a igreja de Robles. Consulte negócios locais.",
+          "destination_id": 10013,
+          "locale": "pt-BR"
+        }
+      },
+      "history": {
+        "es": [
+          "El cholado, preparado con hielo raspado y frutas, forma parte de la identidad de Jamundí y del trabajo de familias locales. El Parque del Cholado reúne esta tradición dentro del casco urbano.",
+          "El territorio municipal se extiende de la llanura del valle a las montañas. Las comunidades afrojamundeñas, el patrimonio religioso de Robles y las huellas rupestres de Faltriqueras forman parte de una diversidad que va más allá del centro urbano."
+        ],
+        "en": [
+          "Made with shaved ice and fruit, the cholado is part of Jamundí’s identity and the work of local families. Cholado Park brings this tradition together within the town.",
+          "The municipality stretches from the valley plain into the mountains. Afro-Jamundeño communities, the religious heritage of Robles and the rock carvings of Faltriqueras reflect a diversity that extends beyond the town centre."
+        ],
+        "pt-BR": [
+          "Preparado com gelo raspado e frutas, o cholado faz parte da identidade de Jamundí e do trabalho de famílias locais. O Parque do Cholado reúne essa tradição na área urbana.",
+          "O território municipal vai da planície do vale às montanhas. As comunidades afro-jamundeñas, o patrimônio religioso de Robles e as gravuras rupestres de Faltriqueras compõem uma diversidade que vai além do centro urbano."
+        ]
+      },
+      "reasons": {
+        "es": [
+          "Probar la tradición del cholado en su entorno local.",
+          "Descubrir paisajes de agua y montaña en distintos sectores del municipio.",
+          "Acercarse al patrimonio cultural y a la memoria de sus comunidades."
+        ],
+        "en": [
+          "Discover the cholado tradition in its local setting.",
+          "Explore water and mountain landscapes across the municipality.",
+          "Learn about cultural heritage and community memory."
+        ],
+        "pt-BR": [
+          "Conhecer a tradição do cholado em seu contexto local.",
+          "Descobrir paisagens de água e montanha em diferentes setores do município.",
+          "Aproximar-se do patrimônio cultural e da memória das comunidades."
+        ]
+      },
+      "sources": {
+        "es": [
+          {
+            "section_key": "destination",
+            "source_label": "Alcaldía de Jamundí",
+            "source_url": "https://www.jamundi.gov.co/MiMunicipio/Paginas/Sitios-de-Interes.aspx"
+          },
+          {
+            "section_key": "destination",
+            "source_label": "Secretaría de Turismo de Jamundí",
+            "source_url": "https://vivejamundi.com/lugares-por-descubrir/"
+          },
+          {
+            "section_key": "destination",
+            "source_label": "Secretaría de Turismo de Jamundí",
+            "source_url": "https://vivejamundi.com/rutas-turisticas/"
+          },
+          {
+            "section_key": "destination",
+            "source_label": "Alcaldía de Jamundí",
+            "source_url": "https://www.jamundi.gov.co/RENDICION%20DE%20CUENTAS%20MENU%20PARTICIPA/INFORME%20GESTI%C3%93N%20%20RDC%20PRIMER%20SEMESTRE%202025.pdf"
+          }
+        ],
+        "en": [],
+        "pt-BR": []
+      },
+      "id": 10013,
+      "publication_status": "published",
+      "display_order": 106,
+      "internal_research_json": "{\"schema_version\": 1, \"researched_at\": \"2026-11-05\", \"positioning\": \"Gastronomía urbana, naturaleza de montaña y patrimonio de comunidades rurales.\", \"notes\": [\"Cinco atractivos seleccionados, portada parque renovado y tarjetaCholado postre.\", \"Rosario excluida: daños/desmonte y visitabilidad no acreditada. No transferir texto antiguo que prometa templo íntegro o abierto.\", \"Petroglifos se conservan, solo cambia foto. Pailas no integra selección.\", \"Ilustraciones nuevas aproximadas; ninguna fotografía ajena como entrada. Aprobación de referencia no equivale aprobación del resultado.\", \"No fechas, precios ni horarios de operadores añadidos sin verificación.\", \"ParqueCholado como atractivo físico cuestionado: conservado expediente separado y gastronomía en texto, no activo hasta decisión.\", \"Portada v4 recortada aprobada para revisión dev; kioscos excluidos. Sin aprobación de publicación productiva inferida.\", \"CANDIDATO NO IMPORTABLE: coordenadas y ficha pendientes para petroglifos-charco-duende. Sin puntos aproximados.\", \"Dev review excludes Charco del Duende while its precise location remains unresolved; preserved separately, not deleted.\"]}",
+      "destination_media": {
+        "hero": {
+          "media_asset_id": 517,
+          "asset_path": "assets/media/23/23c810ad3610f3f43d911df2be29ef9883046c89e4a3b4e0169bef52af9e9a5e.webp"
+        }
+      },
+      "places": [
+        {
+          "slug": "cascada-las-gemelas",
+          "latitude": 3.2014161,
+          "longitude": -76.638155,
+          "type": "place",
+          "publication_status": "published",
+          "translations": {
+            "es": {
+              "name": "Cascada Las Gemelas",
+              "description": "Dos caídas paralelas entre roca y vegetación distinguen este paisaje de la vereda Cascarillal, en San Antonio. Prepara la visita con información local sobre acceso y condiciones del recorrido.",
+              "map_url": "https://www.google.com/maps?cid=15928244718024130694",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Las Gemelas Waterfall",
+              "description": "Two parallel falls amid rock and vegetation distinguish this landscape in Cascarillal, San Antonio. Plan your visit using local information about access and route conditions.",
+              "map_url": "https://www.google.com/maps?cid=15928244718024130694",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Cachoeira Las Gemelas",
+              "description": "Duas quedas paralelas entre rochas e vegetação marcam esta paisagem de Cascarillal, em San Antonio. Planeje a visita com informações locais sobre acesso e condições do percurso.",
+              "map_url": "https://www.google.com/maps?cid=15928244718024130694",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000472,
+          "media_asset_id": 518
+        },
+        {
+          "slug": "morro-de-la-cruz",
+          "latitude": 3.2591943999999997,
+          "longitude": -76.62830559999999,
+          "type": "place",
+          "publication_status": "published",
+          "translations": {
+            "es": {
+              "name": "Morro de la Cruz",
+              "description": "La cruz y las laderas de este mirador de San Vicente forman un referente del paisaje rural de Jamundí. Confirma el acceso y las condiciones del sendero antes de organizar el ascenso.",
+              "map_url": "https://www.google.com/maps?cid=532700942954915694",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Morro de la Cruz",
+              "description": "The cross and hillsides of this San Vicente viewpoint form a landmark in Jamundí’s rural landscape. Confirm access and trail conditions before planning the ascent.",
+              "map_url": "https://www.google.com/maps?cid=532700942954915694",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Morro de la Cruz",
+              "description": "A cruz e as encostas deste mirante de San Vicente formam uma referência na paisagem rural de Jamundí. Confirme o acesso e as condições da trilha antes de planejar a subida.",
+              "map_url": "https://www.google.com/maps?cid=532700942954915694",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000473,
+          "media_asset_id": 519
+        },
+        {
+          "slug": "iglesia-de-robles",
+          "latitude": 3.1291062999999997,
+          "longitude": -76.5937952,
+          "type": "place",
+          "publication_status": "published",
+          "translations": {
+            "es": {
+              "name": "Iglesia de Robles",
+              "description": "La parroquia Nuestra Señora del Perpetuo Socorro, con su fachada de ladrillo y espadaña, es un referente religioso del corregimiento de Robles y de las tradiciones afrojamundeñas.",
+              "map_url": "https://www.google.com/maps?cid=16438372790218285409",
+              "external_url": "",
+              "external_label": ""
+            },
+            "en": {
+              "name": "Robles Church",
+              "description": "Nuestra Señora del Perpetuo Socorro parish, with its brick façade and bell gable, is a religious landmark of the Robles settlement and Afro-Jamundeño traditions.",
+              "map_url": "https://www.google.com/maps?cid=16438372790218285409",
+              "external_url": "",
+              "external_label": ""
+            },
+            "pt-BR": {
+              "name": "Igreja de Robles",
+              "description": "A paróquia Nuestra Señora del Perpetuo Socorro, com fachada de tijolos e campanário de parede, é uma referência religiosa do distrito de Robles e das tradições afro-jamundeñas.",
+              "map_url": "https://www.google.com/maps?cid=16438372790218285409",
+              "external_url": "",
+              "external_label": ""
+            }
+          },
+          "id": 1000474,
+          "media_asset_id": 520
+        }
+      ]
+    }
+  },
+  "tables": {
+    "media_assets": [
+      {
+        "id": 517,
+        "asset_path": "assets/media/23/23c810ad3610f3f43d911df2be29ef9883046c89e4a3b4e0169bef52af9e9a5e.webp",
+        "origin": "ai_generated",
+        "creator": "OpenAI · propuesta editorial tinta y gouache · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración editorial generada; portada v4 recortada seleccionada por usuario para revisión dev. No licencia de fotografía ajena.",
+        "license_url": "",
+        "width": 1100,
+        "height": 650,
+        "provenance_json": "{\"sha256\": \"23c810ad3610f3f43d911df2be29ef9883046c89e4a3b4e0169bef52af9e9a5e\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"33c6047d51158e60713045b7bb0d5aa6f9bdd620\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Jamundí: three mapped attractions, thirty businesses, four exact approved illustrations; Charco del Duende remains excluded\", \"expected_counts\": {\"attractions\": 3, \"businesses\": 30, \"images\": 4}}, \"source_asset\": {\"file\": \"content/place-batches/2026-11-05-22/places/jamundi/images/jamundi-portada-parque-bajo-palace-v4-recorte.webp\", \"web_sha256\": \"23c810ad3610f3f43d911df2be29ef9883046c89e4a3b4e0169bef52af9e9a5e\", \"web_dimensions\": [1100, 650], \"reference_author\": \"OpenAI · propuesta editorial tinta y gouache\", \"reference_license\": \"Ilustración editorial generada; portada v4 recortada seleccionada por usuario para revisión dev. No licencia de fotografía ajena.\", \"reference_url\": \"\", \"license_url\": \"\"}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 518,
+        "asset_path": "assets/media/2a/2a0ed9cfa3206395e29e77e06805e6486d8c30caf4a3dadd945020ff10eb3a26.webp",
+        "origin": "ai_generated",
+        "creator": "OpenAI · propuesta editorial tinta y gouache · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.",
+        "license_url": "",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"2a0ed9cfa3206395e29e77e06805e6486d8c30caf4a3dadd945020ff10eb3a26\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"33c6047d51158e60713045b7bb0d5aa6f9bdd620\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Jamundí: three mapped attractions, thirty businesses, four exact approved illustrations; Charco del Duende remains excluded\", \"expected_counts\": {\"attractions\": 3, \"businesses\": 30, \"images\": 4}}, \"source_asset\": {\"file\": \"content/place-batches/2026-11-05-22/places/jamundi/images/jamundi-cascada-las-gemelas-v1.webp\", \"web_sha256\": \"2a0ed9cfa3206395e29e77e06805e6486d8c30caf4a3dadd945020ff10eb3a26\", \"web_dimensions\": [1200, 800], \"reference_author\": \"OpenAI · propuesta editorial tinta y gouache\", \"reference_license\": \"Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.\", \"reference_url\": \"\", \"license_url\": \"\"}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 519,
+        "asset_path": "assets/media/9e/9e1b6a993289f18b3a77dd94e1a6e2f7d753158f16f8507a358619bbcb4936a9.webp",
+        "origin": "ai_generated",
+        "creator": "OpenAI · propuesta editorial tinta y gouache · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.",
+        "license_url": "",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"9e1b6a993289f18b3a77dd94e1a6e2f7d753158f16f8507a358619bbcb4936a9\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"33c6047d51158e60713045b7bb0d5aa6f9bdd620\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Jamundí: three mapped attractions, thirty businesses, four exact approved illustrations; Charco del Duende remains excluded\", \"expected_counts\": {\"attractions\": 3, \"businesses\": 30, \"images\": 4}}, \"source_asset\": {\"file\": \"content/place-batches/2026-11-05-22/places/jamundi/images/jamundi-morro-de-la-cruz-v1.webp\", \"web_sha256\": \"9e1b6a993289f18b3a77dd94e1a6e2f7d753158f16f8507a358619bbcb4936a9\", \"web_dimensions\": [1200, 800], \"reference_author\": \"OpenAI · propuesta editorial tinta y gouache\", \"reference_license\": \"Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.\", \"reference_url\": \"\", \"license_url\": \"\"}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      },
+      {
+        "id": 520,
+        "asset_path": "assets/media/d5/d56400d8297eeedd7ecae37d63ad437d86647b95283d3e6fdb398bf532179a86.webp",
+        "origin": "ai_generated",
+        "creator": "OpenAI · propuesta editorial tinta y gouache · adaptación ilustrada con IA por Explorando Lugares",
+        "source_url": "",
+        "license_name": "Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.",
+        "license_url": "",
+        "width": 1200,
+        "height": 800,
+        "provenance_json": "{\"sha256\": \"d56400d8297eeedd7ecae37d63ad437d86647b95283d3e6fdb398bf532179a86\", \"approved_by_owner\": true, \"approval\": {\"original_commit\": \"33c6047d51158e60713045b7bb0d5aa6f9bdd620\", \"approved_by\": \"project_owner\", \"approved_on\": \"2026-11-05\", \"scope\": \"Jamundí: three mapped attractions, thirty businesses, four exact approved illustrations; Charco del Duende remains excluded\", \"expected_counts\": {\"attractions\": 3, \"businesses\": 30, \"images\": 4}}, \"source_asset\": {\"file\": \"content/place-batches/2026-11-05-22/places/jamundi/images/jamundi-iglesia-de-robles-v1.webp\", \"web_sha256\": \"d56400d8297eeedd7ecae37d63ad437d86647b95283d3e6fdb398bf532179a86\", \"web_dimensions\": [1200, 800], \"reference_author\": \"OpenAI · propuesta editorial tinta y gouache\", \"reference_license\": \"Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.\", \"reference_url\": \"\", \"license_url\": \"\"}, \"adaptation\": \"AI editorial illustration; composition and painted treatment; reference is not evidence of present-day appearance\"}"
+      }
+    ],
+    "media_asset_translations": [
+      {
+        "media_asset_id": 517,
+        "locale": "es",
+        "alt_text": "Vista ilustrada del Parque Bajo Palacé y su entorno en el centro de Jamundí.",
+        "caption": "Ilustración adaptada de la fotografía de OpenAI · propuesta editorial tinta y gouache · Ilustración editorial generada; portada v4 recortada seleccionada por usuario para revisión dev. No licencia de fotografía ajena.."
+      },
+      {
+        "media_asset_id": 517,
+        "locale": "en",
+        "alt_text": "Illustrated view of Bajo Palacé Park and its surroundings in central Jamundí.",
+        "caption": "Illustration adapted from the photograph by OpenAI · propuesta editorial tinta y gouache · Ilustración editorial generada; portada v4 recortada seleccionada por usuario para revisión dev. No licencia de fotografía ajena.."
+      },
+      {
+        "media_asset_id": 517,
+        "locale": "pt-BR",
+        "alt_text": "Vista ilustrada do Parque Bajo Palacé e seu entorno no centro de Jamundí.",
+        "caption": "Ilustração adaptada da fotografia de OpenAI · propuesta editorial tinta y gouache · Ilustración editorial generada; portada v4 recortada seleccionada por usuario para revisión dev. No licencia de fotografía ajena.."
+      },
+      {
+        "media_asset_id": 518,
+        "locale": "es",
+        "alt_text": "Cascada Las Gemelas · Ilustración editorial aproximada.",
+        "caption": "Ilustración adaptada de la fotografía de OpenAI · propuesta editorial tinta y gouache · Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.."
+      },
+      {
+        "media_asset_id": 518,
+        "locale": "en",
+        "alt_text": "Las Gemelas Waterfall · Approximate editorial illustration.",
+        "caption": "Illustration adapted from the photograph by OpenAI · propuesta editorial tinta y gouache · Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.."
+      },
+      {
+        "media_asset_id": 518,
+        "locale": "pt-BR",
+        "alt_text": "Cachoeira Las Gemelas · Ilustração editorial aproximada.",
+        "caption": "Ilustração adaptada da fotografia de OpenAI · propuesta editorial tinta y gouache · Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.."
+      },
+      {
+        "media_asset_id": 519,
+        "locale": "es",
+        "alt_text": "Morro de la Cruz · Ilustración editorial aproximada.",
+        "caption": "Ilustración adaptada de la fotografía de OpenAI · propuesta editorial tinta y gouache · Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.."
+      },
+      {
+        "media_asset_id": 519,
+        "locale": "en",
+        "alt_text": "Morro de la Cruz · Approximate editorial illustration.",
+        "caption": "Illustration adapted from the photograph by OpenAI · propuesta editorial tinta y gouache · Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.."
+      },
+      {
+        "media_asset_id": 519,
+        "locale": "pt-BR",
+        "alt_text": "Morro de la Cruz · Ilustração editorial aproximada.",
+        "caption": "Ilustração adaptada da fotografia de OpenAI · propuesta editorial tinta y gouache · Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.."
+      },
+      {
+        "media_asset_id": 520,
+        "locale": "es",
+        "alt_text": "Iglesia de Robles · Ilustración editorial aproximada.",
+        "caption": "Ilustración adaptada de la fotografía de OpenAI · propuesta editorial tinta y gouache · Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.."
+      },
+      {
+        "media_asset_id": 520,
+        "locale": "en",
+        "alt_text": "Robles Church · Approximate editorial illustration.",
+        "caption": "Illustration adapted from the photograph by OpenAI · propuesta editorial tinta y gouache · Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.."
+      },
+      {
+        "media_asset_id": 520,
+        "locale": "pt-BR",
+        "alt_text": "Igreja de Robles · Ilustração editorial aproximada.",
+        "caption": "Ilustração adaptada da fotografia de OpenAI · propuesta editorial tinta y gouache · Ilustración nueva sin fotografía de terceros como entrada; aprobación humana pendiente.."
+      }
+    ],
+    "businesses": [
+      {
+        "id": 500000279,
+        "public_id": "7290178a-df78-56cd-b496-7052875472d0",
+        "destination_id": 10013,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "hotel-emperador-jamund",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 0,
+        "latitude": 3.2606547,
+        "longitude": -76.5388461,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000280,
+        "public_id": "bf02fc64-f05d-57c5-a6a4-fe78fce5a4fd",
+        "destination_id": 10013,
+        "category_code": "hospedaje",
+        "record_origin": "public_import",
+        "slug": "el-mirador",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 1,
+        "latitude": 3.2639096,
+        "longitude": -76.5390525,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000281,
+        "public_id": "1e67957b-dd30-59dc-b4bc-54b5072dc34e",
+        "destination_id": 10013,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "pollo-kin-kin",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 2,
+        "latitude": 3.2653796,
+        "longitude": -76.5377662,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000282,
+        "public_id": "54989e1b-61a4-52f3-83eb-118e2666f6c3",
+        "destination_id": 10013,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "la-gondola-de-venecia",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 3,
+        "latitude": 3.2642847,
+        "longitude": -76.536484,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000283,
+        "public_id": "c82b97d1-6424-5a01-b1c2-6d54456e1aed",
+        "destination_id": 10013,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "santorini",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 4,
+        "latitude": 3.269047,
+        "longitude": -76.5367337,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000284,
+        "public_id": "01b6a829-cc71-5af6-9736-c37a8ef8a1a7",
+        "destination_id": 10013,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "panader-a-casa-blanca",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 5,
+        "latitude": 3.2570507,
+        "longitude": -76.5516819,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000285,
+        "public_id": "b1de2677-6588-559d-902a-03ad2451f972",
+        "destination_id": 10013,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "panader-a-riberas",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 6,
+        "latitude": 3.2557407,
+        "longitude": -76.5521425,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000286,
+        "public_id": "ecffe629-c88a-562d-8352-23ab5d9c63f3",
+        "destination_id": 10013,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "s-ndwich-qbano",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 7,
+        "latitude": 3.263382,
+        "longitude": -76.5384063,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000287,
+        "public_id": "4878ef55-49aa-5ff2-bc8c-de8fb6935617",
+        "destination_id": 10013,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "matambre-parrilla-argentina",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 8,
+        "latitude": 3.2692259,
+        "longitude": -76.5387274,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000288,
+        "public_id": "76391ff6-2078-589c-940a-9cc969bbdf9e",
+        "destination_id": 10013,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "la-arepa-roja",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 9,
+        "latitude": 3.2699975,
+        "longitude": -76.5392715,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000289,
+        "public_id": "2f9ea5f1-0b77-5be4-8409-ff6f71a57674",
+        "destination_id": 10013,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "origen-cocina-artesanal",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 10,
+        "latitude": 3.261018,
+        "longitude": -76.5537488,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000290,
+        "public_id": "e4f81e3b-dcf2-579c-b991-3a2a7dd8ef8c",
+        "destination_id": 10013,
+        "category_code": "alimentacion",
+        "record_origin": "public_import",
+        "slug": "megapan",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 11,
+        "latitude": 3.2624153,
+        "longitude": -76.5394753,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000291,
+        "public_id": "dcb18bb6-6015-5d32-80f2-dd9d57d26202",
+        "destination_id": 10013,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "ferreteria-el-sam-n",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 12,
+        "latitude": 3.2678971,
+        "longitude": -76.537251,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000292,
+        "public_id": "b7ceeb2c-59ed-51b5-9f6d-102bba6a00c3",
+        "destination_id": 10013,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "superinter-supermercado",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 13,
+        "latitude": 3.2668125,
+        "longitude": -76.5375918,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000293,
+        "public_id": "f864db31-4fe2-5a1b-83f3-80ff31da9557",
+        "destination_id": 10013,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "dollarcity",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 14,
+        "latitude": 3.2662214,
+        "longitude": -76.5370612,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000294,
+        "public_id": "b3604fb6-bf68-5491-a7f8-190f8191ea0f",
+        "destination_id": 10013,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "carrusel-tienda-infantil",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 15,
+        "latitude": 3.262646,
+        "longitude": -76.5406483,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000295,
+        "public_id": "156c1331-5e84-5c21-a5b1-55b5bc30f9ba",
+        "destination_id": 10013,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "akt-motos",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 16,
+        "latitude": 3.2631842,
+        "longitude": -76.5385273,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000296,
+        "public_id": "186512f4-f1a4-5e85-a930-eb12e793db71",
+        "destination_id": 10013,
+        "category_code": "comercio",
+        "record_origin": "public_import",
+        "slug": "yire-sports",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 17,
+        "latitude": 3.2632557,
+        "longitude": -76.5387355,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000297,
+        "public_id": "a2e2a41a-d756-520b-9c09-bced41b25e4f",
+        "destination_id": 10013,
+        "category_code": "licores",
+        "record_origin": "public_import",
+        "slug": "rancho-y-licores",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 18,
+        "latitude": 3.2681827,
+        "longitude": -76.5372107,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000298,
+        "public_id": "ee5eb92b-73d5-5d9c-8c4f-2576f484bd99",
+        "destination_id": 10013,
+        "category_code": "licores",
+        "record_origin": "public_import",
+        "slug": "licores-rk",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 19,
+        "latitude": 3.2615316,
+        "longitude": -76.5535544,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000299,
+        "public_id": "22275ae0-b296-5a59-a724-8c8f70b828aa",
+        "destination_id": 10013,
+        "category_code": "licores",
+        "record_origin": "public_import",
+        "slug": "el-corso",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 20,
+        "latitude": 3.2650277,
+        "longitude": -76.5369736,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000300,
+        "public_id": "1be536b3-d6f4-5b11-93d5-7dd8f6e347c9",
+        "destination_id": 10013,
+        "category_code": "salud",
+        "record_origin": "public_import",
+        "slug": "centro-de-fisioterapia-kinesis",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 21,
+        "latitude": 3.2682946,
+        "longitude": -76.5367268,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000301,
+        "public_id": "7370b2b2-819a-5a80-9eb2-d488bbd630d2",
+        "destination_id": 10013,
+        "category_code": "salud",
+        "record_origin": "public_import",
+        "slug": "odontolog-a-orthoplan",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 22,
+        "latitude": 3.2689704,
+        "longitude": -76.5369978,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000302,
+        "public_id": "8b73a7f2-44ec-585f-8a47-4a851d2e8b59",
+        "destination_id": 10013,
+        "category_code": "salud",
+        "record_origin": "public_import",
+        "slug": "droguerias-farmacenter",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 23,
+        "latitude": 3.2581997,
+        "longitude": -76.5444354,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000303,
+        "public_id": "14b84a86-76fe-587d-a6ee-25a157045f6b",
+        "destination_id": 10013,
+        "category_code": "salud",
+        "record_origin": "public_import",
+        "slug": "drogueria-sebasti-n",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 24,
+        "latitude": 3.2591314,
+        "longitude": -76.543425,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000304,
+        "public_id": "653ef259-2073-5e57-879f-73fec136b0ec",
+        "destination_id": 10013,
+        "category_code": "servicios",
+        "record_origin": "public_import",
+        "slug": "bancolombia",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 25,
+        "latitude": 3.2623339,
+        "longitude": -76.5397031,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000305,
+        "public_id": "0a32cbdf-0466-5024-a271-a44ba55087a4",
+        "destination_id": 10013,
+        "category_code": "servicios",
+        "record_origin": "public_import",
+        "slug": "banco-de-bogot",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 26,
+        "latitude": 3.2619303,
+        "longitude": -76.5399382,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000306,
+        "public_id": "17dc55be-f2c8-5eb0-941c-60abb973e1e9",
+        "destination_id": 10013,
+        "category_code": "servicios",
+        "record_origin": "public_import",
+        "slug": "centro-diagnostico-automotor-jamundi",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 27,
+        "latitude": 3.267254,
+        "longitude": -76.5320522,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000307,
+        "public_id": "34c43ca8-3a73-54e6-8cb7-a5fb2b2b54a8",
+        "destination_id": 10013,
+        "category_code": "servicios",
+        "record_origin": "public_import",
+        "slug": "estaci-n-de-servicio-cottolengo",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 28,
+        "latitude": 3.2610287,
+        "longitude": -76.5324984,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      },
+      {
+        "id": 500000308,
+        "public_id": "aae2b862-7683-5603-8912-595497da9c76",
+        "destination_id": 10013,
+        "category_code": "servicios",
+        "record_origin": "public_import",
+        "slug": "cerrajero-jamundi",
+        "information_status": "PUBLICO",
+        "claim_status": "NO_RECLAMADO",
+        "operation_status": "DESCONOCIDO",
+        "publication_status": "published",
+        "display_order": 29,
+        "latitude": 3.2593431,
+        "longitude": -76.5431666,
+        "address_text": "",
+        "location_reference": "punto de objeto nombrado; acceso no certificado",
+        "location_map_url": ""
+      }
+    ],
+    "business_translations": [
+      {
+        "business_id": 500000279,
+        "locale": "es",
+        "display_name": "Hotel Emperador Jamundí",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000279,
+        "locale": "en",
+        "display_name": "Hotel Emperador Jamundí",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000279,
+        "locale": "pt-BR",
+        "display_name": "Hotel Emperador Jamundí",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000280,
+        "locale": "es",
+        "display_name": "El mirador",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000280,
+        "locale": "en",
+        "display_name": "El mirador",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000280,
+        "locale": "pt-BR",
+        "display_name": "El mirador",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000281,
+        "locale": "es",
+        "display_name": "Pollo Kin Kin",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000281,
+        "locale": "en",
+        "display_name": "Pollo Kin Kin",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000281,
+        "locale": "pt-BR",
+        "display_name": "Pollo Kin Kin",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000282,
+        "locale": "es",
+        "display_name": "La Gondola de Venecia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000282,
+        "locale": "en",
+        "display_name": "La Gondola de Venecia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000282,
+        "locale": "pt-BR",
+        "display_name": "La Gondola de Venecia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000283,
+        "locale": "es",
+        "display_name": "Santorini",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000283,
+        "locale": "en",
+        "display_name": "Santorini",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000283,
+        "locale": "pt-BR",
+        "display_name": "Santorini",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000284,
+        "locale": "es",
+        "display_name": "Panadería Casa Blanca",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000284,
+        "locale": "en",
+        "display_name": "Panadería Casa Blanca",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000284,
+        "locale": "pt-BR",
+        "display_name": "Panadería Casa Blanca",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000285,
+        "locale": "es",
+        "display_name": "Panadería Riberas",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000285,
+        "locale": "en",
+        "display_name": "Panadería Riberas",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000285,
+        "locale": "pt-BR",
+        "display_name": "Panadería Riberas",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000286,
+        "locale": "es",
+        "display_name": "Sándwich Qbano",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000286,
+        "locale": "en",
+        "display_name": "Sándwich Qbano",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000286,
+        "locale": "pt-BR",
+        "display_name": "Sándwich Qbano",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000287,
+        "locale": "es",
+        "display_name": "Matambre parrilla argentina",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000287,
+        "locale": "en",
+        "display_name": "Matambre parrilla argentina",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000287,
+        "locale": "pt-BR",
+        "display_name": "Matambre parrilla argentina",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000288,
+        "locale": "es",
+        "display_name": "La arepa roja",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000288,
+        "locale": "en",
+        "display_name": "La arepa roja",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000288,
+        "locale": "pt-BR",
+        "display_name": "La arepa roja",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000289,
+        "locale": "es",
+        "display_name": "Origen cocina artesanal",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000289,
+        "locale": "en",
+        "display_name": "Origen cocina artesanal",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000289,
+        "locale": "pt-BR",
+        "display_name": "Origen cocina artesanal",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000290,
+        "locale": "es",
+        "display_name": "Megapan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000290,
+        "locale": "en",
+        "display_name": "Megapan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000290,
+        "locale": "pt-BR",
+        "display_name": "Megapan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000291,
+        "locale": "es",
+        "display_name": "Ferreteria el Samán",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000291,
+        "locale": "en",
+        "display_name": "Ferreteria el Samán",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000291,
+        "locale": "pt-BR",
+        "display_name": "Ferreteria el Samán",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000292,
+        "locale": "es",
+        "display_name": "SuperInter supermercado",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000292,
+        "locale": "en",
+        "display_name": "SuperInter supermercado",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000292,
+        "locale": "pt-BR",
+        "display_name": "SuperInter supermercado",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000293,
+        "locale": "es",
+        "display_name": "Dollarcity",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000293,
+        "locale": "en",
+        "display_name": "Dollarcity",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000293,
+        "locale": "pt-BR",
+        "display_name": "Dollarcity",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000294,
+        "locale": "es",
+        "display_name": "Carrusel Tienda Infantil",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000294,
+        "locale": "en",
+        "display_name": "Carrusel Tienda Infantil",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000294,
+        "locale": "pt-BR",
+        "display_name": "Carrusel Tienda Infantil",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000295,
+        "locale": "es",
+        "display_name": "AKT motos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000295,
+        "locale": "en",
+        "display_name": "AKT motos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000295,
+        "locale": "pt-BR",
+        "display_name": "AKT motos",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000296,
+        "locale": "es",
+        "display_name": "YIRE sports",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000296,
+        "locale": "en",
+        "display_name": "YIRE sports",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000296,
+        "locale": "pt-BR",
+        "display_name": "YIRE sports",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000297,
+        "locale": "es",
+        "display_name": "Rancho y Licores",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000297,
+        "locale": "en",
+        "display_name": "Rancho y Licores",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000297,
+        "locale": "pt-BR",
+        "display_name": "Rancho y Licores",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000298,
+        "locale": "es",
+        "display_name": "Licores RK",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000298,
+        "locale": "en",
+        "display_name": "Licores RK",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000298,
+        "locale": "pt-BR",
+        "display_name": "Licores RK",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000299,
+        "locale": "es",
+        "display_name": "El Corso",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000299,
+        "locale": "en",
+        "display_name": "El Corso",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000299,
+        "locale": "pt-BR",
+        "display_name": "El Corso",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000300,
+        "locale": "es",
+        "display_name": "Centro de Fisioterapia Kinesis",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000300,
+        "locale": "en",
+        "display_name": "Centro de Fisioterapia Kinesis",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000300,
+        "locale": "pt-BR",
+        "display_name": "Centro de Fisioterapia Kinesis",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000301,
+        "locale": "es",
+        "display_name": "Odontología Orthoplan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000301,
+        "locale": "en",
+        "display_name": "Odontología Orthoplan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000301,
+        "locale": "pt-BR",
+        "display_name": "Odontología Orthoplan",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000302,
+        "locale": "es",
+        "display_name": "Droguerias Farmacenter",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000302,
+        "locale": "en",
+        "display_name": "Droguerias Farmacenter",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000302,
+        "locale": "pt-BR",
+        "display_name": "Droguerias Farmacenter",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000303,
+        "locale": "es",
+        "display_name": "Drogueria Sebastián",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000303,
+        "locale": "en",
+        "display_name": "Drogueria Sebastián",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000303,
+        "locale": "pt-BR",
+        "display_name": "Drogueria Sebastián",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000304,
+        "locale": "es",
+        "display_name": "Bancolombia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000304,
+        "locale": "en",
+        "display_name": "Bancolombia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000304,
+        "locale": "pt-BR",
+        "display_name": "Bancolombia",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000305,
+        "locale": "es",
+        "display_name": "Banco de Bogotá",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000305,
+        "locale": "en",
+        "display_name": "Banco de Bogotá",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000305,
+        "locale": "pt-BR",
+        "display_name": "Banco de Bogotá",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000306,
+        "locale": "es",
+        "display_name": "Centro Diagnostico Automotor Jamundi",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000306,
+        "locale": "en",
+        "display_name": "Centro Diagnostico Automotor Jamundi",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000306,
+        "locale": "pt-BR",
+        "display_name": "Centro Diagnostico Automotor Jamundi",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000307,
+        "locale": "es",
+        "display_name": "Estación de Servicio Cottolengo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000307,
+        "locale": "en",
+        "display_name": "Estación de Servicio Cottolengo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000307,
+        "locale": "pt-BR",
+        "display_name": "Estación de Servicio Cottolengo",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000308,
+        "locale": "es",
+        "display_name": "Cerrajero Jamundi",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000308,
+        "locale": "en",
+        "display_name": "Cerrajero Jamundi",
+        "summary": "",
+        "description": ""
+      },
+      {
+        "business_id": 500000308,
+        "locale": "pt-BR",
+        "display_name": "Cerrajero Jamundi",
+        "summary": "",
+        "description": ""
+      }
+    ],
+    "business_categories": [
+      {
+        "business_id": 500000279,
+        "category_code": "hospedaje"
+      },
+      {
+        "business_id": 500000280,
+        "category_code": "hospedaje"
+      },
+      {
+        "business_id": 500000281,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000282,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000283,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000284,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000285,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000286,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000287,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000288,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000289,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000290,
+        "category_code": "alimentacion"
+      },
+      {
+        "business_id": 500000291,
+        "category_code": "comercio"
+      },
+      {
+        "business_id": 500000292,
+        "category_code": "comercio"
+      },
+      {
+        "business_id": 500000293,
+        "category_code": "comercio"
+      },
+      {
+        "business_id": 500000294,
+        "category_code": "comercio"
+      },
+      {
+        "business_id": 500000295,
+        "category_code": "comercio"
+      },
+      {
+        "business_id": 500000296,
+        "category_code": "comercio"
+      },
+      {
+        "business_id": 500000297,
+        "category_code": "licores"
+      },
+      {
+        "business_id": 500000298,
+        "category_code": "licores"
+      },
+      {
+        "business_id": 500000299,
+        "category_code": "licores"
+      },
+      {
+        "business_id": 500000300,
+        "category_code": "salud"
+      },
+      {
+        "business_id": 500000301,
+        "category_code": "salud"
+      },
+      {
+        "business_id": 500000302,
+        "category_code": "salud"
+      },
+      {
+        "business_id": 500000303,
+        "category_code": "salud"
+      },
+      {
+        "business_id": 500000304,
+        "category_code": "servicios"
+      },
+      {
+        "business_id": 500000305,
+        "category_code": "servicios"
+      },
+      {
+        "business_id": 500000306,
+        "category_code": "servicios"
+      },
+      {
+        "business_id": 500000307,
+        "category_code": "servicios"
+      },
+      {
+        "business_id": 500000308,
+        "category_code": "servicios"
+      }
+    ],
+    "business_sources": [
+      {
+        "business_id": 500000279,
+        "source_url": "https://www.openstreetmap.org/node/8917766117",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000280,
+        "source_url": "https://www.openstreetmap.org/node/12083151975",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000281,
+        "source_url": "https://www.openstreetmap.org/node/3331340524",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000282,
+        "source_url": "https://www.openstreetmap.org/node/3331340526",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000283,
+        "source_url": "https://www.openstreetmap.org/node/11501547515",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000284,
+        "source_url": "https://www.openstreetmap.org/node/4898731162",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000285,
+        "source_url": "https://www.openstreetmap.org/node/4898731163",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000286,
+        "source_url": "https://www.openstreetmap.org/node/12084033876",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000287,
+        "source_url": "https://www.openstreetmap.org/node/12084045981",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000288,
+        "source_url": "https://www.openstreetmap.org/node/12084045984",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000289,
+        "source_url": "https://www.openstreetmap.org/node/12084045985",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000290,
+        "source_url": "https://www.openstreetmap.org/node/12084075292",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000291,
+        "source_url": "https://www.openstreetmap.org/node/3331340436",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000292,
+        "source_url": "https://www.openstreetmap.org/node/3331340517",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000293,
+        "source_url": "https://www.openstreetmap.org/node/11903098746",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000294,
+        "source_url": "https://www.openstreetmap.org/node/9084523857",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000295,
+        "source_url": "https://www.openstreetmap.org/node/12084075298",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000296,
+        "source_url": "https://www.openstreetmap.org/node/12084075299",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000297,
+        "source_url": "https://www.openstreetmap.org/node/3331340440",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000298,
+        "source_url": "https://www.openstreetmap.org/node/12081574916",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000299,
+        "source_url": "https://www.openstreetmap.org/node/12084032764",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000300,
+        "source_url": "https://www.openstreetmap.org/node/3331340439",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000301,
+        "source_url": "https://www.openstreetmap.org/node/3331340441",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000302,
+        "source_url": "https://www.openstreetmap.org/node/4888641522",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000303,
+        "source_url": "https://www.openstreetmap.org/node/11920910198",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000304,
+        "source_url": "https://www.openstreetmap.org/node/2285735688",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000305,
+        "source_url": "https://www.openstreetmap.org/node/4872232243",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000306,
+        "source_url": "https://www.openstreetmap.org/node/11902380244",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000307,
+        "source_url": "https://www.openstreetmap.org/node/11902380248",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      },
+      {
+        "business_id": 500000308,
+        "source_url": "https://www.openstreetmap.org/node/12084033879",
+        "checked_at": "2026-11-05",
+        "note": "Nombre, categoría cartográfica y punto físico documentados en OpenStreetMap. Operación actual y titularidad sin verificar; sin contacto público añadido. Datos cartográficos © OpenStreetMap contributors, ODbL."
+      }
+    ],
+    "business_contacts": [],
+    "business_media": []
+  }
+}
