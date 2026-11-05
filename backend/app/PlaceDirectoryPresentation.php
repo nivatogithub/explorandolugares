@@ -13,7 +13,7 @@ final class PlaceDirectoryPresentation
         $locale=$data['locale'];$filters=$data['filters'];$path=PlaceDirectoryService::url($locale,[]);
         $languages=[];foreach(['es','en','pt-BR'] as $language)$languages[$language]=PlaceDirectoryService::url($language,$filters,$data['page']);
         $context=['locale'=>$locale,'path'=>$path,'languages'=>$languages];$canonical='https://explorandolugares.com'.PlaceDirectoryService::url($locale,$filters,$data['page']);
-        $filtered=$filters['q']!==''||$filters['department']!==''||$filters['region']!==''||$filters['heritage'];
+        $filtered=$filters['sector']!==''||$filters['q']!==''||$filters['department']!==''||$filters['region']!==''||$filters['heritage'];
         $title=$copy['title'].($data['page']>1?' · '.sprintf($copy['pageTitle'],$data['page']):'').' | Explorando Lugares';
         $rows=$data['rows'];foreach($rows as &$row){
             $row['labels']=PlaceLabelPresentation::labels($row,$locale);

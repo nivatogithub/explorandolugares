@@ -25,7 +25,7 @@
   }
   function featureState(code){const dep=data.departments.find(x=>x.code===code);if(!dep||!dep.municipality_total)return 'outside_scope';return dep.counts.published>0?'published':'pending';}
   let savedMapView=null,activeSector='';
-  const sectors={caribe:['08','13','20','23','44','47','70','88'],andina:['05','17','63','66','11','25','15','54','68','41','73'],pacifico:['27','76','19','52','86','18'],oriente:['81','85','50','99','94','95','97','91']};
+  let sectors={};
 
   async function renderMap(){
     const version=++mapVersion,d=current();if(!d&&activeSector)$('map-title').textContent=document.querySelector('[data-map-sector="'+activeSector+'"]').textContent;$('map').setAttribute('aria-busy','true');$('map').replaceChildren(el('p','Cargando mapa…'));
@@ -37,10 +37,6 @@
       const capital=geo.features.find(f=>f.properties.code==='11'),region=geo.features.find(f=>f.properties.code==='25');
       const polygons=f=>f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;
       if(capital&&region){region.geometry={type:'MultiPolygon',coordinates:[...polygons(region),...polygons(capital)]};geo.features=geo.features.filter(f=>f.properties.code!=='11');}
-      const navigation=$('selectable-departments');navigation.replaceChildren();
-      const available=data.departments.filter(dep=>dep.counts.published>0&&geo.features.some(feature=>feature.properties.code===dep.code));
-      navigation.append(el('p',available.length?'Consultar lugares publicados en:':'Este sector todavía no tiene lugares publicados para consultar.'));
-      available.forEach(dep=>{const button=el('button',dep.name);button.type='button';button.setAttribute('aria-pressed',String(dep.code===department));button.addEventListener('click',()=>setDepartment(dep.code));navigation.append(button);});
       const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('role','group');svg.setAttribute('aria-label','Meta turística de Colombia por municipio; navegación por departamento');
       const commands=f=>polygons(f).flatMap(p=>p.map(r=>r.map((v,i)=>(i?'L':'M')+v[0]+' '+(-v[1])).join(' ')+'Z')).join(' ');
       const points=[];function walk(c){if(typeof c[0]==='number')points.push(c);else c.forEach(walk);}geo.features.forEach(f=>walk(f.geometry.coordinates));
@@ -66,7 +62,7 @@
         islands.forEach(island=>{const archipelago=data.departments.find(dep=>dep.code==='88'),available=!!archipelago?.counts.published,card=el(available?'button':'div',undefined,'island-card'),mini=document.createElementNS(ns,'svg'),pp=[];const collect=c=>{if(typeof c[0]==='number')pp.push(c);else c.forEach(collect);};collect(island.geometry.coordinates);const xx=pp.map(v=>v[0]),yy=pp.map(v=>-v[1]),x=Math.min(...xx),y=Math.min(...yy),width=Math.max(...xx)-x,height=Math.max(...yy)-y,margin=Math.max(width,height)*.15;mini.setAttribute('viewBox',[x-margin,y-margin,width+margin*2,height+margin*2].join(' '));mini.setAttribute('role','img');mini.setAttribute('aria-label',displayName(island.properties.name));const path=document.createElementNS(ns,'path'),status=stateByCode.get(island.properties.code)||'outside_scope';path.setAttribute('d',commands(island));path.setAttribute('data-status',status);path.setAttribute('fill',status==='published'?'#2f7d50':status==='pending'?'#e99a42':'#E9EBEE');mini.append(path);if(available){card.type='button';card.setAttribute('aria-label','Seleccionar archipiélago desde '+displayName(island.properties.name));card.setAttribute('aria-pressed',String(department==='88'));card.addEventListener('click',()=>setDepartment('88'));}else card.setAttribute('aria-disabled','true');card.append(mini,el('strong',displayName(island.properties.name)),el('span',status==='published'?'Publicado':'Pendiente'));if(available){card.classList.add('island-available');if(department==='88')card.classList.add('island-selected');}inset.append(card);});
       }
       svg.querySelectorAll('.department-focus').forEach(group=>svg.append(group));$('map').classList.toggle('has-selection',!!department);$('map').replaceChildren(svg);
-    }catch(e){if(version===mapVersion)$('map').replaceChildren(el('p','El mapa no pudo cargarse. Puedes consultar la selección turística en la lista.','map-error'));}
+    }catch(e){if(version===mapVersion)$('map').replaceChildren(el('p','El mapa no pudo cargarse. Vuelve a intentarlo.','map-error'));}
     finally{if(version===mapVersion)$('map').setAttribute('aria-busy','false');}
   }
   let audienceVersion=0,audienceDestination='';
@@ -163,7 +159,9 @@
   }));
   async function init(){
     try{
-      data=await json(new URL('api/coverage.php',root));if(!Array.isArray(data.departments)||!data.country)throw Error('Respuesta inválida');
+      const [coverage, catalog] = await Promise.all([json(new URL('api/coverage.php',root)), geometry('sectors.json')]);
+      sectors=Object.fromEntries(Object.entries(catalog).map(([key, departments])=>[key,Object.keys(departments)]));
+      data=coverage;if(!Array.isArray(data.departments)||!data.country)throw Error('Respuesta inválida');
       data.departments.forEach(dep=>dep.places.forEach(place=>{place.name=displayName(place.name);}));
       // Public navigation groups the capital with Cundinamarca, preserving source geography.
       const capital=data.departments.find(d=>d.code==='11'),region=data.departments.find(d=>d.code==='25');

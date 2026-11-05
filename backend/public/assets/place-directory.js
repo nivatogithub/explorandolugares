@@ -37,7 +37,7 @@
   form.addEventListener('submit', event => { event.preventDefault(); navigate(); });
   form.addEventListener('change', event => {
     if (event.target === search) return;
-    if (event.target.name === 'region') department.value = '';
+    if (['region','sector'].includes(event.target.name)) department.value = '';
     navigate();
   });
   const schedule = () => { clearTimeout(timer); if (!composing) timer = setTimeout(navigate, 650); };

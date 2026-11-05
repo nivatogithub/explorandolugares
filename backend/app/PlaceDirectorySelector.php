@@ -6,6 +6,12 @@ final class PlaceDirectorySelector
 {
     public function __construct(private PDO $pdo) {}
 
+    public static function sectors(): array
+    {
+        static $catalog;
+        return $catalog ??= json_decode(file_get_contents(__DIR__.'/../public/assets/cobertura/sectors.json'), true, 32, JSON_THROW_ON_ERROR);
+    }
+
     private function scope(string $locale,array $filters):array
     {
         $sql='d.publication_status=\'published\' AND t.locale=?';$values=[$locale];
@@ -46,6 +52,11 @@ final class PlaceDirectorySelector
                 WHERE poi.destination_id = d.id AND poi.publication_status = 'published'
                   AND detail.locale IN (t.locale, 'es') AND (".implode(' OR ', $details).')))';
             array_push($values, ...$guideValues, ...$detailValues);
+        }
+        if (!empty($filters['sector'])) {
+            $members = array_values(self::sectors()[$filters['sector']]);
+            $sql .= " AND d.country_code='CO' AND d.department IN (".implode(',', array_fill(0,count($members),'?')).')';
+            array_push($values,...$members);
         }
         if(($filters['department']??'')!==''){$sql.=' AND d.department=?';$values[]=$filters['department'];}
         if(($filters['region']??'')!==''){$sql.=' AND COALESCE(NULLIF(TRIM(d.subregion),\'\'),d.department)=?';$values[]=$filters['region'];}

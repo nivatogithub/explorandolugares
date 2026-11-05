@@ -16,10 +16,10 @@
 <form class="place-directory-filters" method="get" action="<?=$e($path)?>" aria-label="<?=$e($copy['filters'])?>" data-place-filters data-updating="<?=$e($copy['updating'])?>">
 <div class="place-directory-fields">
 <div class="place-directory-search"><label for="place-search" class="visually-hidden"><?=$e($copy['search'])?></label><input id="place-search" type="search" name="q" maxlength="120" autocomplete="off" placeholder="<?=$e($copy['searchPlaceholder'])?>" value="<?=$e($filters['q'])?>"></div>
-<?php foreach(['region'=>['values'=>$data['regions'],'label'=>'region','all'=>'allRegions'],'department'=>['values'=>$data['departments'],'label'=>'department','all'=>'allDepartments']] as $key=>$field):?>
+<?php foreach(['sector'=>['values'=>$data['sectors'],'label'=>'sector','all'=>'allSectors'],'department'=>['values'=>$data['departments'],'label'=>'department','all'=>'allDepartments']] as $key=>$field):?>
 <label class="place-directory-field" for="place-filter-<?=$e($key)?>"><span><?=$e($copy[$field['label']])?></span><select id="place-filter-<?=$e($key)?>" name="<?=$e($key)?>"><option value=""><?=$e($copy[$field['all']])?></option>
 <?php if($filters[$key]!==''&&!in_array($filters[$key],$field['values'],true)):?><option selected value="<?=$e($filters[$key])?>"><?=$e($filters[$key])?></option><?php endif ?>
-<?php foreach($field['values'] as $value):?><option value="<?=$e($value)?>" <?=$filters[$key]===$value?'selected':''?>><?=$e($value)?></option><?php endforeach ?></select></label>
+<?php foreach($field['values'] as $value):?><option value="<?=$e($value)?>" <?=$filters[$key]===$value?'selected':''?>><?=$e($key==='sector'?$copy['sectorNames'][$value]:$value)?></option><?php endforeach ?></select></label>
 <?php endforeach ?>
 <div class="place-directory-actions"><label class="place-directory-heritage"><input type="checkbox" name="heritage" value="1" <?=$filters['heritage']?'checked':''?>><?=$e($copy['heritage'])?></label>
 <a class="place-directory-clear" href="<?=$e($path)?>" data-clear-filters><?=$e($copy['clear'])?></a>

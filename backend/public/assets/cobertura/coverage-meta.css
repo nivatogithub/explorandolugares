@@ -333,10 +333,6 @@
 #contenido .map-sectors button[aria-pressed="true"] { background:var(--el-action); color:var(--el-on-action); border-color:var(--el-action); }
 #contenido .map svg { overflow:visible; }
 
-#contenido .selectable-departments { margin:16px 0; padding:14px; background:var(--el-card); border:1px solid var(--el-control-border); border-radius:var(--el-radius-card); }
-#contenido .selectable-departments p { margin:0 0 8px; font-size:14px; font-weight:650; }
-#contenido .selectable-departments button { min-height:44px; margin:4px 6px 4px 0; padding:8px 14px; background:var(--el-card); border:1px solid var(--el-published); border-radius:var(--el-radius-pill); color:var(--el-published); cursor:pointer; }
-#contenido .selectable-departments button[aria-pressed="true"] { background:var(--el-published); color:var(--el-on-action); }
 #contenido .map g.department-available path.department-outline { stroke:var(--el-published); stroke-width:1.6; }
 #contenido .map g.department-focus path.department-outline { stroke:var(--el-accent); stroke-width:3; }
 
@@ -411,8 +407,6 @@
 #contenido .map-panel .map-controls summary { cursor:pointer; font-size:13px; font-weight:700; color:var(--el-text); }
 #contenido .map-panel .map-controls .map-sectors { margin-top:6px; gap:4px; display:grid; }
 #contenido .map-panel .map-controls button { width:100%; min-height:36px; margin:0; padding:6px 8px; font-size:12px; line-height:1.25; border-radius:7px; text-align:left; }
-#contenido .map-panel .map-controls .selectable-departments { margin:6px 0 0; padding:0; border:0; background:transparent; display:grid; gap:4px; }
-#contenido .map-panel .map-controls .selectable-departments p { font-size:11px; font-weight:400; margin:0 0 3px; }
 #contenido .map-stage > .map { box-sizing:border-box; padding-right:208px; }
 #contenido .map-documentation { margin:28px 0 16px; padding-top:16px; border-top:1px solid var(--el-border); }
 #contenido .map-documentation .map-hint { min-height:0; }
