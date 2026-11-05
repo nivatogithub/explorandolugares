@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-11-04",
+  "checks": {
+    "json_files_parse": true,
+    "business_unique_names": true,
+    "three_locales": true,
+    "locale_attraction_and_experience_parity": true,
+    "business_locale_parity": true,
+    "coordinates_in_island_bounds": true,
+    "no_claimed_or_legally_verified_business": true,
+    "unpublished": true
+  },
+  "all_checks_passed": true,
+  "counts": {
+    "images_generated": 5,
+    "images_expected": 6,
+    "businesses_documented": 30,
+    "businesses_with_verified_coordinates": 0,
+    "experiences_documented": 2,
+    "locales_written": [
+      "es",
+      "en",
+      "pt-BR"
+    ],
+    "published": false,
+    "businesses_with_mapped_reference": 24,
+    "businesses_with_documented_coordinate_reference": 24,
+    "businesses_with_verified_named_map_link": 3,
+    "attractions_with_geographic_reference": 5,
+    "businesses_without_coordinates": [
+      "Aquamare Hotel",
+      "Sol Caribe San Andrés",
+      "Calypso Beach Hotel",
+      "La Riviera · San Andrés",
+      "Sharky Dive Shop",
+      "Sol Caribe Seaflower"
+    ],
+    "coordinate_precision_note": "Documented references are not field-verified entrances. Six businesses use an explicitly labelled parent complex reference."
+  },
+  "not_checked": [
+    "final importer/package integration",
+    "human image approval",
+    "field verification of entrances",
+    "deployment"
+  ]
+}

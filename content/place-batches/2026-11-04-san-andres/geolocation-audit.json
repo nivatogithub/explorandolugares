@@ -1,0 +1,477 @@
+{
+  "checked_at": "2026-11-04",
+  "scope": "san-andres",
+  "attractions": [
+    {
+      "name": "Johnny Cay",
+      "geolocation": {
+        "latitude": 12.59945,
+        "longitude": -81.69034,
+        "source_url": "https://mapcarta.com/es/W169845001",
+        "point_kind": "mapped_beach_reference_not_landing_pier",
+        "checked_at": "2026-11-04"
+      }
+    },
+    {
+      "name": "Rocky Cay",
+      "geolocation": {
+        "latitude": 12.54157,
+        "longitude": -81.70185,
+        "source_url": "https://mapcarta.com/es/N3348033728",
+        "point_kind": "islet_reference_not_shore_access",
+        "checked_at": "2026-11-04"
+      }
+    },
+    {
+      "name": "Primera Iglesia Bautista de La Loma",
+      "geolocation": {
+        "latitude": 12.56191,
+        "longitude": -81.71696,
+        "source_url": "https://mapcarta.com/es/W169875625",
+        "point_kind": "mapped_building_not_entrance",
+        "checked_at": "2026-11-04"
+      }
+    },
+    {
+      "name": "Parque Regional de Mangle Old Point",
+      "geolocation": {
+        "latitude": 12.566867,
+        "longitude": -81.705358,
+        "source_url": "https://ipt.biodiversidad.co/permisos/resource?r=255_rhizophorasai_20180116&v=1.1",
+        "point_kind": "research_area_reference_not_visitor_access",
+        "checked_at": "2026-11-04"
+      }
+    },
+    {
+      "name": "El Acuario y Haynes Cay",
+      "geolocation": {
+        "latitude": 12.55266,
+        "longitude": -81.68871,
+        "source_url": "https://mapcarta.com/es/W245133418",
+        "point_kind": "mapped_islet_not_landing_point",
+        "checked_at": "2026-11-04"
+      }
+    }
+  ],
+  "businesses": [
+    {
+      "name": "Hotel Casablanca",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "La Regatta",
+      "geolocation": {
+        "latitude": 12.5805203,
+        "longitude": -81.6915755,
+        "source_url": "https://restaurantelaregatta.com/contact/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": "https://maps.app.goo.gl/6D6RvbRxFPPLF9oAA",
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Blue Life",
+      "geolocation": {
+        "latitude": 12.5809001,
+        "longitude": -81.6939773,
+        "source_url": "https://bluelifedive.com/contacto/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": "https://goo.gl/maps/mBCDCmx3mfbT5zt7A",
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Sea Watch Caffé",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "parent_hotel_complex_reference_not_individual_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Hotel Casablanca"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Restaurante Mahi-Mahi",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "parent_hotel_complex_reference_not_individual_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Hotel Casablanca"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Restaurante La Barcarola",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "parent_hotel_complex_reference_not_individual_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Hotel Casablanca"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Restaurante Tropical",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "parent_hotel_complex_reference_not_individual_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Hotel Casablanca"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Restaurante Bar Casablanca",
+      "geolocation": {
+        "latitude": 12.584224617477814,
+        "longitude": -81.6923376917839,
+        "source_url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+        "point_kind": "parent_hotel_complex_reference_not_individual_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Hotel Casablanca"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Decameron Isleño",
+      "geolocation": {
+        "latitude": 12.5861241541253,
+        "longitude": -81.69850267144403,
+        "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Decameron Los Delfines",
+      "geolocation": {
+        "latitude": 12.583197681673694,
+        "longitude": -81.68958472162105,
+        "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Decameron Marazul",
+      "geolocation": {
+        "latitude": 12.558210897746331,
+        "longitude": -81.70503100542493,
+        "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Decameron Maryland",
+      "geolocation": {
+        "latitude": 12.591233108252325,
+        "longitude": -81.70073679094008,
+        "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Decameron San Luis",
+      "geolocation": {
+        "latitude": 12.51517778989873,
+        "longitude": -81.71471503270433,
+        "source_url": "https://www.decameron.com/es/destino-hoteles-en-san-andres-islas/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "San Luis Beach House",
+      "geolocation": {
+        "latitude": 12.5194076821,
+        "longitude": -81.7140436946,
+        "source_url": "https://www.hotelsanluis.com.co/es/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Samawi Hotel",
+      "geolocation": {
+        "latitude": 12.580335,
+        "longitude": -81.689218,
+        "source_url": "https://www.samawihotel.com/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Hotel Bahía Sardina",
+      "geolocation": {
+        "latitude": 12.58568,
+        "longitude": -81.69597,
+        "source_url": "https://www.bahiasardina.com/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Sea Avenue Hotel",
+      "geolocation": {
+        "latitude": 12.58452,
+        "longitude": -81.69522,
+        "source_url": "https://www.seaavenuehotel.com/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Nattivo Collection Hotel",
+      "geolocation": {
+        "latitude": 12.58262,
+        "longitude": -81.691605,
+        "source_url": "https://www.nattivocollectionhotel.com/",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": "https://maps.app.goo.gl/HF8btnKBg73c5zKv5",
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Aquamare Hotel",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "geolocation_discrepancy_review_required",
+      "note": "Official metadata and official directions differ by approximately 119 m. No precise public point selected.",
+      "candidates": [
+        {
+          "latitude": 12.58297,
+          "longitude": -81.69108,
+          "source_url": "https://www.hotelaquamare.com/",
+          "point_kind": "official_schema_point",
+          "checked_at": "2026-11-04"
+        },
+        {
+          "latitude": 12.5819507,
+          "longitude": -81.6914021,
+          "source_url": "https://www.hotelaquamare.com/",
+          "point_kind": "official_linked_maps_destination",
+          "checked_at": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "name": "Sol Caribe Campo",
+      "geolocation": {
+        "latitude": 12.53833,
+        "longitude": -81.71107,
+        "source_url": "https://mapcarta.com/es/N313845501",
+        "point_kind": "mapped_business_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "identity_documented_mapped_reference_available",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Hotel Cocoplum Beach",
+      "geolocation": {
+        "latitude": 12.54314521,
+        "longitude": -81.70565583,
+        "source_url": "https://www.cocoplumhotel.com/es/index.html",
+        "point_kind": "official_property_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_and_property_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Sol Caribe San Andrés",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_not_publication_ready",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Calypso Beach Hotel",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_not_publication_ready",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Centro Comercial New Point Plaza",
+      "geolocation": {
+        "latitude": 12.58255,
+        "longitude": -81.6908,
+        "source_url": "https://mapcarta.com/es/W374898224",
+        "point_kind": "mapped_business_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "identity_documented_mapped_reference_available",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Kids Republic · New Point",
+      "geolocation": {
+        "latitude": 12.58255,
+        "longitude": -81.6908,
+        "source_url": "https://mapcarta.com/es/W374898224",
+        "point_kind": "shopping_centre_reference_not_shop_entrance",
+        "checked_at": "2026-11-04",
+        "parent_business": "Centro Comercial New Point Plaza"
+      },
+      "public_map_url": null,
+      "status": "primary_source_identity_parent_complex_reference_documented",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "La Riviera · San Andrés",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_not_publication_ready",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Donde Francesca",
+      "geolocation": {
+        "latitude": 12.51985,
+        "longitude": -81.71391,
+        "source_url": "https://mapcarta.com/es/N3168649268",
+        "point_kind": "mapped_business_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "documented_not_publication_ready",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Capitán Mandy",
+      "geolocation": {
+        "latitude": 12.58095,
+        "longitude": -81.69856,
+        "source_url": "https://mapcarta.com/es/N3230550452",
+        "point_kind": "mapped_business_reference_not_verified_entrance",
+        "checked_at": "2026-11-04"
+      },
+      "public_map_url": null,
+      "status": "identity_documented_mapped_reference_available",
+      "note": null,
+      "candidates": []
+    },
+    {
+      "name": "Sharky Dive Shop",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "geolocation_discrepancy_review_required",
+      "note": "Official website metadata is in the north; PADI directory identifies Carretera Circunvalar km 13, Hotel Sunset, in the south. Branch/current premises require confirmation.",
+      "candidates": [
+        {
+          "latitude": 12.5822881,
+          "longitude": -81.690027,
+          "source_url": "https://www.sharkydive.com/",
+          "point_kind": "official_site_metadata_candidate",
+          "checked_at": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "name": "Sol Caribe Seaflower",
+      "geolocation": null,
+      "public_map_url": null,
+      "status": "documented_not_publication_ready",
+      "note": null,
+      "candidates": []
+    }
+  ],
+  "casablanca_evidence": {
+    "url": "https://www.hotelcasablancasanandres.com/es/hotel-san-andres-colombia/contacto",
+    "method": "official HTML data-map markers[].position, not viewport-only inference",
+    "latitude": 12.584224617477814,
+    "longitude": -81.6923376917839
+  }
+}
