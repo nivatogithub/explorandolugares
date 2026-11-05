@@ -16,21 +16,42 @@ final class PlaceDirectorySelector
             $slug=trim(preg_replace('/[^a-z0-9]+/','-',$slug),'-');
             $sql.=' AND (t.display_name LIKE ? ESCAPE \'!\'';$values[]=$escape($filters['q']);
             if($slug!==''){$sql.=' OR d.slug LIKE ? ESCAPE \'!\'';$values[]=$escape($slug);}
-            $term = $escape($filters['q']);
-            $sql .= " OR t.intro LIKE ? ESCAPE '!'
-                      OR t.headline LIKE ? ESCAPE '!'
-                      OR EXISTS (
-                          SELECT 1
-                          FROM points_of_interest poi
-                          JOIN point_of_interest_translations detail
-                            ON detail.point_of_interest_id = poi.id
-                          WHERE poi.destination_id = d.id
-                            AND poi.publication_status = 'published'
-                            AND detail.locale IN (t.locale, 'es')
-                            AND (detail.name LIKE ? ESCAPE '!'
-                                 OR detail.description LIKE ? ESCAPE '!')
-                      ))";
-            array_push($values, $term, $term, $term, $term);
+            $catalog = json_decode(file_get_contents(__DIR__.'/content/place-search-terms.json'), true, 512, JSON_THROW_ON_ERROR);
+            $query = mb_strtolower(trim($filters['q']), 'UTF-8');
+            foreach ($catalog['localities'] as $locality) {
+                if (in_array($query, $locality['queries'], true)) {
+                    $sql .= " OR (d.country_code = 'CO' AND d.slug = ?)";
+                    $values[] = $locality['destination_slug'];
+                }
+            }
+            $terms = [$filters['q']];
+            foreach ($catalog['topics'] as $variants) {
+                if (in_array($query, $variants, true)) {
+                    $terms = $variants;
+                    break;
+                }
+            }
+            $guide = [];
+            $details = [];
+            $guideValues = [];
+            $detailValues = [];
+            foreach ($terms as $term) {
+                $pattern = $escape($term);
+                foreach (['t.display_name', 't.headline', 't.intro'] as $field) {
+                    $guide[] = "$field LIKE ? ESCAPE '!'";
+                    $guideValues[] = $pattern;
+                }
+                foreach (['detail.name', 'detail.description'] as $field) {
+                    $details[] = "$field LIKE ? ESCAPE '!'";
+                    $detailValues[] = $pattern;
+                }
+            }
+            $sql .= ' OR '.implode(' OR ', $guide)." OR EXISTS (
+                SELECT 1 FROM points_of_interest poi
+                JOIN point_of_interest_translations detail ON detail.point_of_interest_id = poi.id
+                WHERE poi.destination_id = d.id AND poi.publication_status = 'published'
+                  AND detail.locale IN (t.locale, 'es') AND (".implode(' OR ', $details).')))'; 
+            array_push($values, ...$guideValues, ...$detailValues);
         }
         if(($filters['department']??'')!==''){$sql.=' AND d.department=?';$values[]=$filters['department'];}
         if(($filters['region']??'')!==''){$sql.=' AND COALESCE(NULLIF(TRIM(d.subregion),\'\'),d.department)=?';$values[]=$filters['region'];}
