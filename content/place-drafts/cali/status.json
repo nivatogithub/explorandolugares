@@ -1,0 +1,43 @@
+{
+  "as_of": "2026-11-05",
+  "place": "cali",
+  "branch": "lugar/CO/valle-del-cauca/cali",
+  "base_commit": "c4c5c431fa201c5fd6a3f91be3f80852f29bcfb8",
+  "priority": 1,
+  "ready_for_human_review": false,
+  "production_modified": false,
+  "draft_text_languages": [
+    "es",
+    "en",
+    "pt-BR"
+  ],
+  "central_reference": {
+    "name": "Plaza de Cayzedo",
+    "latitude": 3.4518388888889,
+    "longitude": -76.532475,
+    "source": "https://www.wikidata.org/wiki/Q16620185",
+    "point_type": "historic central square, not municipal geometric centroid"
+  },
+  "blockers": [
+    "No browser available in CUA: listBrowsers returned [] on 2026-11-05; Maps named-place and visual reference checks pending.",
+    "Dev1 reserved tres-lugares-20261104; Dev2 reserved admin-negocios-b1-b2-20261025. Human-review reservation must be coordinated.",
+    "Images not generated or approved; no placeholders and no reusable third-party photo supplied to generator.",
+    "Business directory, package and HTTP/SEO visual tests pending."
+  ],
+  "progress": {
+    "institutional_sources_identified": 5,
+    "draft_attractions": 4,
+    "coordinate_points_identified": 3,
+    "maps_verified": 0,
+    "images_generated": 0,
+    "images_human_approved": 0,
+    "imported": false,
+    "published": false
+  },
+  "next_actions": [
+    "Verify named Google Maps entries and access/reference points.",
+    "Complete visual invariant sheets and original illustrations using portal skill, compare and request image approval.",
+    "Research and geolocate actual local businesses, prepare import packages and run validators.",
+    "Mount on released reserved dev and collect PHP ES/EN/PT-BR/SEO/mobile evidence."
+  ]
+}

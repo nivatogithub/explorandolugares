@@ -3,15 +3,18 @@
   "place_id": "CO-76-cali",
   "department_id": "CO-76",
   "state": "planned",
-  "owner": null,
+  "owner": "destinos_lote_a",
   "reviewer": null,
   "branch": "lugar/CO/valle-del-cauca/cali",
   "pr_url": null,
-  "base_commit": null,
+  "base_commit": "c4c5c431fa201c5fd6a3f91be3f80852f29bcfb8",
   "blockers": [
-    "Asignar responsable y auditar fuentes, permisos y estado real"
+    "No browser available in CUA: listBrowsers returned [] on 2026-11-05; Maps named-place and visual reference checks pending.",
+    "Dev1 reserved tres-lugares-20261104; Dev2 reserved admin-negocios-b1-b2-20261025. Human-review reservation must be coordinated.",
+    "Images not generated or approved; no placeholders and no reusable third-party photo supplied to generator.",
+    "Business directory, package and HTTP/SEO visual tests pending."
   ],
-  "next_action": "Completar PROCESO.md y evidencia específica del lugar",
+  "next_action": "Completar comprobaciones cartográficas y visuales, imágenes y directorio antes de declarar revisión lista",
   "gates": {
     "identidad": {
       "passed": false,
@@ -70,5 +73,15 @@
   },
   "approval": null,
   "publication": null,
-  "worker_deliveries": []
+  "worker_deliveries": [
+    {
+      "date": "2026-11-05",
+      "status": "research_and_text_draft",
+      "files": [
+        "content/place-drafts/cali/editorial-draft.json",
+        "content/place-drafts/cali/sources.json",
+        "content/place-drafts/cali/status.json"
+      ]
+    }
+  ]
 }
