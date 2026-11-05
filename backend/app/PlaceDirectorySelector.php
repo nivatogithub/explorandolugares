@@ -18,12 +18,6 @@ final class PlaceDirectorySelector
             if($slug!==''){$sql.=' OR d.slug LIKE ? ESCAPE \'!\'';$values[]=$escape($slug);}
             $catalog = json_decode(file_get_contents(__DIR__.'/content/place-search-terms.json'), true, 512, JSON_THROW_ON_ERROR);
             $query = mb_strtolower(trim($filters['q']), 'UTF-8');
-            foreach ($catalog['localities'] as $locality) {
-                if (in_array($query, $locality['queries'], true)) {
-                    $sql .= " OR (d.country_code = 'CO' AND d.slug = ?)";
-                    $values[] = $locality['destination_slug'];
-                }
-            }
             $terms = [$filters['q']];
             foreach ($catalog['topics'] as $variants) {
                 if (in_array($query, $variants, true)) {
