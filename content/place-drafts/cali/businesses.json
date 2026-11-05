@@ -1,0 +1,146 @@
+{
+  "schema_version": "business-import-v1",
+  "destination_slug": "cali",
+  "businesses": [
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "InterContinental Cali",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.ihg.com/intercontinental/hotels/us/es/cali/cloha/hoteldetail/directions",
+          "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza.",
+          "checked_at": "2026-11-05"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/311853405",
+          "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto.",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Cali Marriott Hotel",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/es/hotels/clomc-cali-marriott-hotel/overview/",
+          "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza.",
+          "checked_at": "2026-11-05"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/395856927",
+          "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto.",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "hospedaje",
+      "information_status": "PUBLICO",
+      "name": "Movich Casa del Alférez",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://hotels.movichhotels.com/docs/brochure-spa-all.pdf",
+          "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza.",
+          "checked_at": "2026-11-05"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1173967973",
+          "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto.",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Platillos Voladores",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://platillosvoladores.com/pages/cali",
+          "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza.",
+          "checked_at": "2026-11-05"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/5043725621",
+          "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto.",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "alimentacion",
+      "information_status": "PUBLICO",
+      "name": "Tortelli El Peñón",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://www.waze.com/live-map/directions/co/valle-del-cauca/cali/tortelli-el-penon?to=place.ChIJ7atf13umMI4RDKyT0Ba_hhA",
+          "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza.",
+          "checked_at": "2026-11-05"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/1514340098",
+          "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto.",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "name": "Museo La Tertulia",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://museolatertulia.com/",
+          "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza.",
+          "checked_at": "2026-11-05"
+        },
+        {
+          "url": "https://www.openstreetmap.org/relation/10749061",
+          "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto.",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "image_references": []
+    },
+    {
+      "category_code": "cultura",
+      "information_status": "PUBLICO",
+      "name": "Museo Arqueológico La Merced",
+      "summary": "",
+      "description": "",
+      "sources": [
+        {
+          "url": "https://web1.cali.gov.co/publicaciones/museos_cali_valle_pub",
+          "note": "Nombre y sede publicados. Solo ficha gratuita; no consta reclamación, representación verificada, suscripción ni alianza.",
+          "checked_at": "2026-11-05"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/2536488341",
+          "note": "Referencia cartográfica identificada en Cali; centro de inmueble/objeto, no se declara acceso exacto.",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "image_references": []
+    }
+  ]
+}

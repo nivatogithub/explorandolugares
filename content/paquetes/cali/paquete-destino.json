@@ -1,0 +1,343 @@
+{
+  "schema_version": 2,
+  "destination": {
+    "slug": "cali",
+    "country_code": "CO",
+    "destination_type": "city",
+    "department": "Valle del Cauca",
+    "subregion": "",
+    "latitude": 3.4518194,
+    "longitude": -76.5325303,
+    "translations": {
+      "es": {
+        "display_name": "Cali",
+        "eyebrow": "Valle del Cauca · Colombia",
+        "headline": "Río, patrimonio y ritmo caleño",
+        "intro": "Conoce el centro histórico, recorre el Bulevar del Río y sube a San Antonio. Cali reúne espacios culturales, arte urbano y una tradición salsera que forma parte de su vida cotidiana.",
+        "meta_description": "Qué conocer en Cali: La Ermita, San Antonio y El Gato del Río. Recorre su patrimonio urbano, sus espacios culturales y sus paseos junto al río."
+      },
+      "en": {
+        "display_name": "Cali",
+        "eyebrow": "Valle del Cauca · Colombia",
+        "headline": "Riverside walks, heritage and local rhythm",
+        "intro": "Explore the historic centre, walk along the Bulevar del Río and head up to San Antonio. Cali brings together cultural spaces, public art and a salsa tradition woven into everyday life.",
+        "meta_description": "Explore Cali: La Ermita, San Antonio and El Gato del Río. Discover urban heritage, cultural spaces and riverside walks."
+      },
+      "pt-BR": {
+        "display_name": "Cali",
+        "eyebrow": "Valle del Cauca · Colômbia",
+        "headline": "Rio, patrimônio e ritmo caleño",
+        "intro": "Conheça o centro histórico, caminhe pelo Bulevar del Río e suba até San Antonio. Cali reúne espaços culturais, arte urbana e uma tradição de salsa presente na vida cotidiana.",
+        "meta_description": "O que conhecer em Cali: La Ermita, San Antonio e El Gato del Río. Descubra seu patrimônio urbano, espaços culturais e passeios junto ao rio."
+      }
+    },
+    "history": {
+      "es": [
+        "La Plaza de Cayzedo permite reconocer el núcleo histórico de Santiago de Cali, rodeado por edificios como la Catedral de San Pedro y el Palacio Nacional. La arquitectura y los espacios públicos muestran distintas etapas de la vida de la ciudad.",
+        "El paseo junto al río y la colina de San Antonio conectan esa memoria urbana con la vida cultural. La salsa, los museos y las artes forman parte de una ciudad que también se descubre caminando entre barrios."
+      ],
+      "en": [
+        "Plaza de Cayzedo marks the historic heart of Santiago de Cali, surrounded by buildings such as San Pedro Cathedral and the National Palace. Its architecture and public spaces reflect different stages in the city’s development.",
+        "The riverside promenade and San Antonio hill connect this urban heritage with cultural life. Salsa, museums and the arts are part of a city that can also be explored on foot through its neighbourhoods."
+      ],
+      "pt-BR": [
+        "A Plaza de Cayzedo permite reconhecer o núcleo histórico de Santiago de Cali, cercado por edifícios como a Catedral de San Pedro e o Palacio Nacional. A arquitetura e os espaços públicos mostram diferentes etapas da vida da cidade.",
+        "O passeio junto ao rio e a colina de San Antonio conectam essa memória urbana à vida cultural. A salsa, os museus e as artes fazem parte de uma cidade que também se descobre caminhando pelos bairros."
+      ]
+    },
+    "reasons": {
+      "es": [
+        "Patrimonio del centro histórico y arquitectura de La Ermita.",
+        "Paseos junto al río Cali y vistas desde San Antonio.",
+        "Arte público, museos y una tradición salsera viva."
+      ],
+      "en": [
+        "Historic-centre heritage and La Ermita’s architecture.",
+        "Walks by the Cali River and views from San Antonio.",
+        "Public art, museums and a living salsa tradition."
+      ],
+      "pt-BR": [
+        "Patrimônio do centro histórico e arquitetura de La Ermita.",
+        "Passeios junto ao rio Cali e vistas de San Antonio.",
+        "Arte público, museus e uma tradição viva de salsa."
+      ]
+    },
+    "sources": {
+      "es": [
+        {
+          "section": "places",
+          "label": "Secretaría de Turismo de Cali: sitios para visitar",
+          "url": "https://www.cali.gov.co/turismo/publicaciones/131931/sitios-para-visitar-en-santiago-de-cali/"
+        },
+        {
+          "section": "places",
+          "label": "ProColombia: iglesia de La Ermita",
+          "url": "https://colombia.travel/es/cali/conoce-la-iglesia-de-la-ermita"
+        },
+        {
+          "section": "history",
+          "label": "Patrimonio municipal: iglesia La Ermita",
+          "url": "https://idesc.cali.gov.co/download/bibliotecas/hitos/iglesia_la_ermita.pdf"
+        },
+        {
+          "section": "places",
+          "label": "Patrimonio municipal: Capilla de San Antonio",
+          "url": "https://idesc.cali.gov.co/download/turismo/recursos_zonas/RT-80-C03p.pdf"
+        },
+        {
+          "section": "destination",
+          "label": "Banco de la República: Plaza de Cayzedo",
+          "url": "https://babel.banrepcultural.org/digital/collection/hernan-diaz/id/595/"
+        },
+        {
+          "section": "places",
+          "label": "Alcaldía de Cali: El Gato del Río",
+          "url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+        }
+      ],
+      "en": [
+        {
+          "section": "places",
+          "label": "Secretaría de Turismo de Cali: sitios para visitar",
+          "url": "https://www.cali.gov.co/turismo/publicaciones/131931/sitios-para-visitar-en-santiago-de-cali/"
+        },
+        {
+          "section": "places",
+          "label": "ProColombia: iglesia de La Ermita",
+          "url": "https://colombia.travel/es/cali/conoce-la-iglesia-de-la-ermita"
+        },
+        {
+          "section": "history",
+          "label": "Patrimonio municipal: iglesia La Ermita",
+          "url": "https://idesc.cali.gov.co/download/bibliotecas/hitos/iglesia_la_ermita.pdf"
+        },
+        {
+          "section": "places",
+          "label": "Patrimonio municipal: Capilla de San Antonio",
+          "url": "https://idesc.cali.gov.co/download/turismo/recursos_zonas/RT-80-C03p.pdf"
+        },
+        {
+          "section": "destination",
+          "label": "Banco de la República: Plaza de Cayzedo",
+          "url": "https://babel.banrepcultural.org/digital/collection/hernan-diaz/id/595/"
+        },
+        {
+          "section": "places",
+          "label": "Alcaldía de Cali: El Gato del Río",
+          "url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+        }
+      ],
+      "pt-BR": [
+        {
+          "section": "places",
+          "label": "Secretaría de Turismo de Cali: sitios para visitar",
+          "url": "https://www.cali.gov.co/turismo/publicaciones/131931/sitios-para-visitar-en-santiago-de-cali/"
+        },
+        {
+          "section": "places",
+          "label": "ProColombia: iglesia de La Ermita",
+          "url": "https://colombia.travel/es/cali/conoce-la-iglesia-de-la-ermita"
+        },
+        {
+          "section": "history",
+          "label": "Patrimonio municipal: iglesia La Ermita",
+          "url": "https://idesc.cali.gov.co/download/bibliotecas/hitos/iglesia_la_ermita.pdf"
+        },
+        {
+          "section": "places",
+          "label": "Patrimonio municipal: Capilla de San Antonio",
+          "url": "https://idesc.cali.gov.co/download/turismo/recursos_zonas/RT-80-C03p.pdf"
+        },
+        {
+          "section": "destination",
+          "label": "Banco de la República: Plaza de Cayzedo",
+          "url": "https://babel.banrepcultural.org/digital/collection/hernan-diaz/id/595/"
+        },
+        {
+          "section": "places",
+          "label": "Alcaldía de Cali: El Gato del Río",
+          "url": "https://www.cali.gov.co/turista/publicaciones/1392/el-gato-del-ro/"
+        }
+      ]
+    }
+  },
+  "places": [
+    {
+      "slug": "la-ermita",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4540056,
+      "longitude": -76.5319868,
+      "translations": {
+        "es": {
+          "name": "Iglesia La Ermita",
+          "description": "Su silueta neogótica destaca junto al río Cali y el Parque de los Poetas. Un punto reconocible para comenzar a explorar el centro.",
+          "map_url": "https://www.google.com/maps?cid=1701009278817753200",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "La Ermita Church",
+          "description": "Its neo-Gothic silhouette stands beside the Cali River and Parque de los Poetas, a distinctive starting point for exploring the centre.",
+          "map_url": "https://www.google.com/maps?cid=1701009278817753200",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Igreja La Ermita",
+          "description": "Sua silhueta neogótica se destaca junto ao rio Cali e ao Parque de los Poetas, um ponto marcante para explorar o centro.",
+          "map_url": "https://www.google.com/maps?cid=1701009278817753200",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/cali-la-ermita-v1.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Fachada neogótica de la iglesia La Ermita",
+          "en": "Neo-Gothic facade of La Ermita Church",
+          "pt-BR": "Fachada neogótica da igreja La Ermita"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_creator": "Explorando Lugares",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": ""
+      }
+    },
+    {
+      "slug": "san-antonio",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.447553,
+      "longitude": -76.5417705,
+      "translations": {
+        "es": {
+          "name": "Capilla y colina de San Antonio",
+          "description": "La capilla y el entorno de la colina conservan parte del patrimonio tradicional de Cali, entre calles de barrio y vistas urbanas.",
+          "map_url": "https://www.google.com/maps?cid=14521516844301738406",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "San Antonio Chapel and Hill",
+          "description": "The chapel and its hilltop surroundings preserve part of Cali’s traditional heritage, with neighbourhood streets and city views.",
+          "map_url": "https://www.google.com/maps?cid=14521516844301738406",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "Capela e colina de San Antonio",
+          "description": "A capela e o entorno da colina preservam parte do patrimônio tradicional de Cali, entre ruas de bairro e vistas urbanas.",
+          "map_url": "https://www.google.com/maps?cid=14521516844301738406",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/cali-san-antonio-v1.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Capilla de San Antonio entre árboles y su plazoleta",
+          "en": "San Antonio Chapel beside trees and its square",
+          "pt-BR": "Capela de San Antonio entre árvores e sua praça"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_creator": "Explorando Lugares",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": ""
+      }
+    },
+    {
+      "slug": "gato-del-rio",
+      "type": "place",
+      "publication_status": "draft",
+      "latitude": 3.4513887,
+      "longitude": -76.5430164,
+      "translations": {
+        "es": {
+          "name": "El Gato del Río",
+          "description": "La escultura de bronce de Hernando Tejada se ha convertido en un símbolo de Cali. Su figura de grandes ojos acompaña el paseo junto al río.",
+          "map_url": "https://www.google.com/maps?cid=7835761905139033954",
+          "external_url": "",
+          "external_label": ""
+        },
+        "en": {
+          "name": "El Gato del Río",
+          "description": "Hernando Tejada’s bronze sculpture has become a symbol of Cali. Its wide-eyed figure stands beside the riverside walk.",
+          "map_url": "https://www.google.com/maps?cid=7835761905139033954",
+          "external_url": "",
+          "external_label": ""
+        },
+        "pt-BR": {
+          "name": "El Gato del Río",
+          "description": "A escultura de bronze de Hernando Tejada se tornou um símbolo de Cali. Sua figura de olhos grandes acompanha o passeio junto ao rio.",
+          "map_url": "https://www.google.com/maps?cid=7835761905139033954",
+          "external_url": "",
+          "external_label": ""
+        }
+      },
+      "image": {
+        "file": "images/cali-gato-del-rio-v1.webp",
+        "image_origin": "ai_generated",
+        "alt": {
+          "es": "Escultura El Gato del Río sobre su pedestal",
+          "en": "El Gato del Río sculpture on its pedestal",
+          "pt-BR": "Escultura El Gato del Río sobre seu pedestal"
+        },
+        "caption": {
+          "es": "",
+          "en": "",
+          "pt-BR": ""
+        },
+        "image_creator": "Explorando Lugares",
+        "image_source_url": "",
+        "image_license": "",
+        "image_license_url": ""
+      }
+    }
+  ],
+  "local_research": {
+    "schema_version": 1,
+    "researched_at": "2026-11-05",
+    "positioning": "Cultura urbana, centro histórico, río y salsa; no limitar Cali únicamente a una temática.",
+    "competitors": [],
+    "potential_allies": [],
+    "business_prospects": [],
+    "acquisition_strategies": [],
+    "sources": [],
+    "notes": [
+      "Candidato para revisión local. Imágenes pendientes de aprobación humana por hash. No publicado.",
+      "Se incluyen tres atractivos físicos documentados. No se inventan experiencias para llenar la sección.",
+      "Directorio separado: siete negocios georreferenciados, hospedaje 3, alimentación 2 y cultura 2. Coordenadas en sidecar porque BusinessPackage no las admite."
+    ]
+  },
+  "hero_image": {
+    "file": "images/cali-portada-v1.webp",
+    "image_origin": "ai_generated",
+    "alt": {
+      "es": "Panorama urbano de Cali desde San Antonio",
+      "en": "Cali cityscape seen from San Antonio",
+      "pt-BR": "Panorama urbano de Cali visto de San Antonio"
+    },
+    "caption": {
+      "es": "",
+      "en": "",
+      "pt-BR": ""
+    },
+    "image_creator": "Explorando Lugares",
+    "image_source_url": "",
+    "image_license": "",
+    "image_license_url": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-05",
+  "scope": "Static package and official PHP package contract; no live browser claims",
+  "checks": {
+    "locales_complete": true,
+    "physical_pois_have_coordinates": true,
+    "maps_named_cid_all_locales": true,
+    "no_external_operator_links": true,
+    "image_hashes_match": true,
+    "place_package_php_readZip": "passed: 3 POIs, 4 images",
+    "business_package_php_validateManifest": "passed: 7 businesses"
+  },
+  "not_tested": [
+    "local database import and unique matching sidecar application",
+    "render HTTP, canonical and hreflang",
+    "desktop/mobile browser visual interaction",
+    "human image/content approval"
+  ],
+  "production_modified": false
+}

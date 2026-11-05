@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "researched_at": "2026-11-05",
+  "records": [
+    {
+      "destination_slug": "cali",
+      "business_name": "InterContinental Cali",
+      "category_code": "hospedaje",
+      "latitude": 3.4499823,
+      "longitude": -76.5391818,
+      "address_text": "Avenida Colombia #2-72",
+      "location_source": "OpenStreetMap way/311853405",
+      "location_reference": "Referencia cartográfica del inmueble identificado; no se certifica punto de acceso.",
+      "source_url": "https://www.openstreetmap.org/way/311853405",
+      "name_and_address_source": "https://www.ihg.com/intercontinental/hotels/us/es/cali/cloha/hoteldetail/directions",
+      "matching_rule": "Relacionar después de importar por destino+nombre normalizado; exigir coincidencia única y conservar ID/public_id existentes. No crear duplicados.",
+      "review_status": "documentary_cross_checked; live_named_map_ui_pending"
+    },
+    {
+      "destination_slug": "cali",
+      "business_name": "Cali Marriott Hotel",
+      "category_code": "hospedaje",
+      "latitude": 3.4558253,
+      "longitude": -76.5360002,
+      "address_text": "Avenida 8 Norte #10-18",
+      "location_source": "OpenStreetMap way/395856927",
+      "location_reference": "Referencia cartográfica del inmueble identificado; no se certifica punto de acceso.",
+      "source_url": "https://www.openstreetmap.org/way/395856927",
+      "name_and_address_source": "https://www.marriott.com/es/hotels/clomc-cali-marriott-hotel/overview/",
+      "matching_rule": "Relacionar después de importar por destino+nombre normalizado; exigir coincidencia única y conservar ID/public_id existentes. No crear duplicados.",
+      "review_status": "documentary_cross_checked; live_named_map_ui_pending"
+    },
+    {
+      "destination_slug": "cali",
+      "business_name": "Movich Casa del Alférez",
+      "category_code": "hospedaje",
+      "latitude": 3.4558941,
+      "longitude": -76.5368799,
+      "address_text": "Avenida 9 Norte #9-24",
+      "location_source": "OpenStreetMap way/1173967973",
+      "location_reference": "Referencia cartográfica del inmueble identificado; no se certifica punto de acceso.",
+      "source_url": "https://www.openstreetmap.org/way/1173967973",
+      "name_and_address_source": "https://hotels.movichhotels.com/docs/brochure-spa-all.pdf",
+      "matching_rule": "Relacionar después de importar por destino+nombre normalizado; exigir coincidencia única y conservar ID/public_id existentes. No crear duplicados.",
+      "review_status": "documentary_cross_checked; live_named_map_ui_pending"
+    },
+    {
+      "destination_slug": "cali",
+      "business_name": "Platillos Voladores",
+      "category_code": "alimentacion",
+      "latitude": 3.4535864,
+      "longitude": -76.5372908,
+      "address_text": "Avenida 3 Norte #7-19",
+      "location_source": "OpenStreetMap node/5043725621",
+      "location_reference": "Referencia cartográfica del inmueble identificado; no se certifica punto de acceso.",
+      "source_url": "https://www.openstreetmap.org/node/5043725621",
+      "name_and_address_source": "https://platillosvoladores.com/pages/cali",
+      "matching_rule": "Relacionar después de importar por destino+nombre normalizado; exigir coincidencia única y conservar ID/public_id existentes. No crear duplicados.",
+      "review_status": "documentary_cross_checked; live_named_map_ui_pending"
+    },
+    {
+      "destination_slug": "cali",
+      "business_name": "Tortelli El Peñón",
+      "category_code": "alimentacion",
+      "latitude": 3.4498911,
+      "longitude": -76.5425899,
+      "address_text": "Calle 3 Oeste #3-15",
+      "location_source": "OpenStreetMap node/1514340098",
+      "location_reference": "Referencia cartográfica del inmueble identificado; no se certifica punto de acceso.",
+      "source_url": "https://www.openstreetmap.org/node/1514340098",
+      "name_and_address_source": "https://www.waze.com/live-map/directions/co/valle-del-cauca/cali/tortelli-el-penon?to=place.ChIJ7atf13umMI4RDKyT0Ba_hhA",
+      "matching_rule": "Relacionar después de importar por destino+nombre normalizado; exigir coincidencia única y conservar ID/public_id existentes. No crear duplicados.",
+      "review_status": "documentary_cross_checked; live_named_map_ui_pending"
+    },
+    {
+      "destination_slug": "cali",
+      "business_name": "Museo La Tertulia",
+      "category_code": "cultura",
+      "latitude": 3.4501941,
+      "longitude": -76.5453782,
+      "address_text": "Avenida Colombia #5-105 Oeste",
+      "location_source": "OpenStreetMap relation/10749061",
+      "location_reference": "Referencia cartográfica del inmueble identificado; no se certifica punto de acceso.",
+      "source_url": "https://www.openstreetmap.org/relation/10749061",
+      "name_and_address_source": "https://museolatertulia.com/",
+      "matching_rule": "Relacionar después de importar por destino+nombre normalizado; exigir coincidencia única y conservar ID/public_id existentes. No crear duplicados.",
+      "review_status": "documentary_cross_checked; live_named_map_ui_pending"
+    },
+    {
+      "destination_slug": "cali",
+      "business_name": "Museo Arqueológico La Merced",
+      "category_code": "cultura",
+      "latitude": 3.4506586,
+      "longitude": -76.5366346,
+      "address_text": "Carrera 4 #6-59",
+      "location_source": "OpenStreetMap node/2536488341",
+      "location_reference": "Referencia cartográfica del inmueble identificado; no se certifica punto de acceso.",
+      "source_url": "https://www.openstreetmap.org/node/2536488341",
+      "name_and_address_source": "https://web1.cali.gov.co/publicaciones/museos_cali_valle_pub",
+      "matching_rule": "Relacionar después de importar por destino+nombre normalizado; exigir coincidencia única y conservar ID/public_id existentes. No crear duplicados.",
+      "review_status": "documentary_cross_checked; live_named_map_ui_pending"
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "name": "El Ringlete",
+      "reason": "Dirección histórica y noticia de traslado discrepan; no inferir nueva ubicación."
+    },
+    {
+      "name": "Zumaia",
+      "reason": "Sede oficial identificada; sin punto cartográfico identificable en consulta realizada."
+    },
+    {
+      "name": "Museo del Oro Calima",
+      "reason": "Entidad identificada; falta corroborar punto del edificio en esta pasada."
+    }
+  ]
+}

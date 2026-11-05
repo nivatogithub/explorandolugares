@@ -9,12 +9,10 @@
   "pr_url": null,
   "base_commit": "c4c5c431fa201c5fd6a3f91be3f80852f29bcfb8",
   "blockers": [
-    "No browser available in CUA: listBrowsers returned [] on 2026-11-05; Maps named-place and visual reference checks pending.",
-    "Dev1 reserved tres-lugares-20261104; Dev2 reserved admin-negocios-b1-b2-20261025. Human-review reservation must be coordinated.",
-    "Images not generated or approved; no placeholders and no reusable third-party photo supplied to generator.",
-    "Business directory, package and HTTP/SEO visual tests pending."
+    "Aprobación humana de cuatro imágenes pendiente; se permite únicamente revisión local aislada.",
+    "Pruebas de importación/HTTP/SEO y revisión visual del dev pendientes de montaje coordinado por worker principal."
   ],
-  "next_action": "Completar comprobaciones cartográficas y visuales, imágenes y directorio antes de declarar revisión lista",
+  "next_action": "Montar candidato en dev1 con el coordinador; verificar importación y render ES/EN/PT-BR.",
   "gates": {
     "identidad": {
       "passed": false,
@@ -81,6 +79,16 @@
         "content/place-drafts/cali/editorial-draft.json",
         "content/place-drafts/cali/sources.json",
         "content/place-drafts/cali/status.json"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "status": "local_import_candidate_pending_visual_review",
+      "files": [
+        "content/paquetes/cali/paquete-destino-cali.zip",
+        "content/place-drafts/cali/paquete-negocios-cali.zip",
+        "content/place-drafts/cali/business-geolocation.json",
+        "content/place-drafts/cali/assets.json"
       ]
     }
   ]
