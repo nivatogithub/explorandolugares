@@ -1384,6 +1384,25 @@
               "external_url": "",
               "external_label": ""
             }
+          },
+          "image": {
+            "file": "media/palomino/palomino-san-salvador-1200-v2.webp",
+            "sha256": "5b64f0749d139bef4e950fe6955d08b30b4765c24bf5a786fb80176889a40761",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "https://www.tripadvisor.co/LocationPhotoDirectLink-g3754359-d2386871-i120897671-Aite_Eco_Resort-Palomino_La_Guajira_Department.html",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Desembocadura del río San Salvador",
+              "en": "Mouth of the San Salvador River",
+              "pt-BR": "Foz do rio San Salvador"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
+            }
           }
         },
         {
@@ -1712,7 +1731,7 @@
       "local_research": {
         "municipality_code": "44090",
         "department_code": "44",
-        "source_commit": "05121bd6"
+        "source_commit": "ceb3f5c4875313d235fe7315bcc6382079fa1785"
       }
     },
     {
@@ -2090,6 +2109,25 @@
               "map_url": "",
               "external_url": "",
               "external_label": ""
+            }
+          },
+          "image": {
+            "file": "media/uribia/playa-el-cabo-1200.webp",
+            "sha256": "3d4bc12f5e16407012a9e2736cede5e5df6d822bed728fb64a9d0d4a7c1e844c",
+            "image_origin": "ai_generated",
+            "image_creator": "Explorando Lugares",
+            "image_source_url": "https://commons.wikimedia.org/wiki/File:Playa_Cabo_de_la_Vela.jpg",
+            "image_license": "Ilustración editorial para revisión en dev1",
+            "image_license_url": "",
+            "alt": {
+              "es": "Playa El Cabo",
+              "en": "El Cabo Beach",
+              "pt-BR": "Praia El Cabo"
+            },
+            "caption": {
+              "es": "Ilustración editorial",
+              "en": "Editorial illustration",
+              "pt-BR": "Ilustração editorial"
             }
           }
         },
@@ -2930,7 +2968,7 @@
       "local_research": {
         "municipality_code": "44847",
         "department_code": "44",
-        "source_commit": "dc99b041"
+        "source_commit": "ec6da471a055285904740ef2924fb54fb234cc08"
       }
     }
   ]

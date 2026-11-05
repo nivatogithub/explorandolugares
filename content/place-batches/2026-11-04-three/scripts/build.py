@@ -3,7 +3,7 @@ import hashlib,json,re,subprocess,unicodedata
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 locales=['es','en','pt-BR']
-pins={'san-andres':'ac1c91e1','palomino':'05121bd6','uribia':'dc99b041'}
+pins={'san-andres':'ac1c91e1','palomino':'ceb3f5c4875313d235fe7315bcc6382079fa1785','uribia':'ec6da471a055285904740ef2924fb54fb234cc08'}
 def digest(data): return hashlib.sha256(data).hexdigest()
 def slug(s): return re.sub('[^a-z0-9]+','-',unicodedata.normalize('NFKD',s).encode('ascii','ignore').decode().lower()).strip('-')
 def write(path,data):
@@ -42,6 +42,8 @@ for n,pin in pins.items():
    if group=='attractions':
     assert pt['latitude'] is not None
     num=({'pilon-de-azucar':4,'faro-cabo-de-la-vela':2,'ojo-de-agua':3,'dunas-de-taroa':9,'faro-punta-gallinas':1,'bahia-hondita':6,'parque-nacional-natural-macuira':5,'jepirachi':7}.get(ident) if n=='uribia' else ([2,3,4,5,6,8,7][i] if n=='san-andres' else ([2,3,None][i])))
+    approved = next((idx for idx, item in enumerate(manifest, 1) if item.get('attraction_slug') == ident and item.get('status') == 'owner_approved_for_dev1'), None)
+    num = approved or num
     if num:pt['image']=image(num,{l:tr[l]['name'] for l in locales})
    pois.append(pt)
  biz=[]
