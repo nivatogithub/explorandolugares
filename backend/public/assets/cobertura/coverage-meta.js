@@ -150,7 +150,7 @@
   // Invitations are composed locally. No contacts are collected and no message is sent automatically.
   const invitations={
     people:{title:'Invitación a familiares y conocidos',message:'¡Te invito a conocer Explorando Lugares! Estamos conectando viajeros, municipios y negocios locales de Colombia. Descubre la plataforma y compártela con familiares o conocidos que quieran explorar el país o aportar conocimiento sobre su municipio.\n\nhttps://explorandolugares.com/'},
-    business:{title:'Invitación a un comercio',message:'¡Pensé en tu negocio al conocer Explorando Lugares! Es una plataforma para descubrir destinos de Colombia y dar visibilidad a su economía local. Puedes consultar cómo participar con una ficha básica gratuita y conocer opciones adicionales de pauta para darte a conocer entre viajeros.\n\nConoce la plataforma: https://explorandolugares.com/\nConsulta cómo participar: https://explorandolugares.com/negocios-locales/interes/'}
+    business:{title:'Invitación a un comercio',message:'Pensé en tu negocio al ver la guía de Explorando Lugares. Con Página Comercial o Premium puedes tener tu propia página para mostrar tus servicios a quienes planean visitar tu municipio.\n\nRegistra tu negocio: https://explorandolugares.com/negocios/registro/?tipo=business&lang=es'}
   };
   let inviteTrigger=null;
   function refreshInvitation(){ $('invite-whatsapp').href='https://wa.me/?text='+encodeURIComponent($('invite-message').value); }
