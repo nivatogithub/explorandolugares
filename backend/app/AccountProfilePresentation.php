@@ -14,6 +14,7 @@ final class AccountProfilePresentation
 
     public static function render(array $context,array $data,string $publicRoot):void
     {
+        $data+=['savedPlaces'=>[],'saveCandidate'=>null];
         $locale=(string)$context['locale'];$column=$locale==='en'?0:1;
         $catalog=json_decode(file_get_contents(__DIR__.'/presentation/accounts.json'),true,64,JSON_THROW_ON_ERROR);$copy=[];
         foreach(self::TEXTS as $key=>$source)$copy[$key]=$locale==='es'?$source:($catalog[$source][$column]??$source);
