@@ -30,6 +30,7 @@ final class AccountAuthPresentation
         $locale=strtolower((string)$context['locale']);$column=$locale==='en'?0:1;
         $catalog=json_decode(file_get_contents(__DIR__.'/presentation/accounts.json'),true,64,JSON_THROW_ON_ERROR);$copy=[];
         foreach(self::TEXTS as $key=>$source)$copy[$key]=$locale==='es'?$source:($catalog[$source][$column]??$source);
+        $copy['saved_places_benefit']=match($locale){'en'=>'Saving places is available to registered users. Sign in or create your account; we will save this place for you.','pt-br'=>'Salvar lugares é uma função para usuários cadastrados. Entre ou crie sua conta; salvaremos este lugar para você.',default=>'Guardar lugares es una función para usuarios registrados. Inicia sesión o crea tu cuenta; guardaremos este lugar para ti.'};
         $floating=$page!=='business-account-gate';
         $hasFavicon=in_array($page,['login','password'],true);
         $hasAccessStyles=$page!=='personal-registration';

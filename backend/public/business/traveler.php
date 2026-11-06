@@ -4,8 +4,6 @@ header('Cache-Control: private, no-store');
 require_once dirname(__DIR__,2).'/app/AccountResidence.php';
 require_once dirname(__DIR__,2).'/app/SavedPlaces.php';
 $savedPlaces=new SavedPlaces(db());
-$saveSlug=is_string($_GET['guardar']??null)?$_GET['guardar']:'';
-$saveCandidate=$saveSlug!==''?$savedPlaces->find($saveSlug):null;
 $residenceError='';$residenceSaved=false;$residenceValues=AccountResidence::get(db(),(int)$account['id']);
 if($_SERVER['REQUEST_METHOD']==='POST'){
  try{csrf();if(in_array($_POST['action']??'',['save_place','remove_place'],true)){
@@ -27,8 +25,6 @@ AccountProfilePresentation::render($accountLayout,[
     'displayName'=>(string)$account['display_name'],'email'=>(string)$account['email'],
     'hasBusinesses'=>$portalHasBusinesses,'isAdministrator'=>!empty($isAdministrator),
     'residenceError'=>$residenceError,'residenceSaved'=>($_GET['ubicacion']??'')==='guardada',
-    'placesUpdated'=>($_GET['lugares']??'')==='actualizados',
-    'savedPlaces'=>$savedPlaces->list((int)$account['id']),'saveCandidate'=>$saveCandidate,
     'csrf'=>$accountLayout['csrf'],
     'residence'=>AccountResidencePresentation::context(AccountResidence::catalog(),$_POST,$residenceValues),
 ],dirname(__DIR__));

@@ -18,10 +18,14 @@ try{
   unset($_SESSION['business_registration_return']);
   unset($_SESSION['session_return']);
   $safeSessionReturn=is_string($sessionReturn)&&str_starts_with($sessionReturn,'/')&&!str_starts_with($sessionReturn,'//')&&!str_starts_with($sessionReturn,'/negocios/acceso')?$sessionReturn:null;
-  $target=is_array($return)&&(int)($return['business']??0)>0?'/business/editorial.php?business='.(int)$return['business'].'&version='.(int)($return['version']??0):($safeSessionReturn??($businessReturn==='/negocios/registro/?tipo=business'?$businessReturn:($paymentBusiness?'/negocios/portal/?tab=business&business='.$paymentBusiness.'&solicitud=guardada#pagos':'/negocios/portal/')));header('Location: '.site_path($target),true,303);exit;
+  require_once dirname(__DIR__,2).'/app/SavedPlaceIntent.php';
+  $savedReturn=null;
+  try{$savedReturn=SavedPlaceIntent::complete(db(),$_SESSION,(int)$account['id']);}
+  catch(Throwable $error){PortalIncidents::technical($error,'saved_place_after_login');$savedReturn=$safeSessionReturn?$safeSessionReturn.'?guardado=error':null;}
+  $target=$savedReturn??(is_array($return)&&(int)($return['business']??0)>0?'/business/editorial.php?business='.(int)$return['business'].'&version='.(int)($return['version']??0):($safeSessionReturn??($businessReturn==='/negocios/registro/?tipo=business'?$businessReturn:($paymentBusiness?'/negocios/portal/?tab=business&business='.$paymentBusiness.'&solicitud=guardada#pagos':'/negocios/portal/'))));header('Location: '.site_path($target),true,303);exit;
  }
 }catch(Throwable $e){PortalIncidents::technical($e,'account_login');$error=$e->getMessage();http_response_code(400);}
 require_once dirname(__DIR__).'/_portal-shell.php';
 require_once dirname(__DIR__,2).'/app/AccountAuthPresentation.php';
-$viewData=['csrf'=>(string)$_SESSION['csrf'],'email'=>(string)($_POST['email']??''),'closed'=>($_GET['cuenta']??'')==='cerrada','error'=>$error];
+$viewData=['csrf'=>(string)$_SESSION['csrf'],'email'=>(string)($_POST['email']??''),'closed'=>($_GET['cuenta']??'')==='cerrada','error'=>$error,'savedPlacesBenefit'=>!empty($_SESSION['saved_place_intent'])];
 AccountAuthPresentation::render('login',account_layout_context(),$viewData,dirname(__DIR__));

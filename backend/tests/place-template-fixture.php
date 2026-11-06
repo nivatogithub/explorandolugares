@@ -2,10 +2,12 @@
 declare(strict_types=1);
 require_once dirname(__DIR__).'/app/views/directory-helpers.php';
 require_once dirname(__DIR__).'/app/views/place-copy.php';
+require_once dirname(__DIR__).'/app/SavedPlaceAction.php';
 
 /** Synthetic view models exercise the actual template, without any HTML repair step. */
 function placeTemplateFixture(string $locale='es',string $slug='jerico',bool $paid=false):string
 {
+    $bookmark=SavedPlaceAction::context($slug,$locale,false,false);
     $repositoryPath=dirname(__DIR__).'/app/PlaceRepository.php';
     $localePrefix=match($locale){'en'=>'en/','pt-BR'=>'pt-br/',default=>''};
     $localizedRoot='/'.$localePrefix;$name='Lugar <real> & cercano';

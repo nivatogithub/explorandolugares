@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 header('Cache-Control: no-cache, max-age=0, must-revalidate');
-header('Vary: User-Agent');
+header('Vary: User-Agent, Cookie');
 
 $repositoryCandidates=[
     dirname(__DIR__,2).'/app/PlaceRepository.php',
@@ -101,6 +101,22 @@ $canonicalUrl=$publicOrigin.$canonicalPath;
 if(!$preview && preg_match('~/(?:place|destino)\.php$~',$requestPath)){
     header('Location: '.$canonicalPath,true,301);exit;
 }
+// Personalized bookmark state is rendered on the server; anonymous guides do not start a session.
+require_once dirname($repositoryPath).'/SavedPlaceAction.php';
+$bookmarkAuthenticated=false;$bookmarkSaved=false;$bookmarkCsrf='';
+if(session_status()===PHP_SESSION_ACTIVE||isset($_COOKIE['el_session'])){
+ require_once dirname($repositoryPath).'/bootstrap.php';
+ $bookmarkAccountId=(int)($_SESSION['business_account_id']??0);
+ $bookmarkAuthenticated=$bookmarkAccountId>0&&time()-(int)($_SESSION['business_last_seen']??0)<=1800;
+ if($bookmarkAuthenticated){
+  require_once dirname($repositoryPath).'/SavedPlaceSelector.php';
+  $bookmarkSaved=(new SavedPlaceSelector($pdo))->contains($bookmarkAccountId,$slug);
+  $bookmarkCsrf=(string)$_SESSION['csrf'];$_SESSION['business_last_seen']=time();
+  header('Cache-Control: private, no-store');
+ }
+}
+$bookmark=SavedPlaceAction::context($slug,$locale,$bookmarkAuthenticated,$bookmarkSaved,$bookmarkCsrf);
+$bookmark['error']=($_GET['guardado']??'')==='error';
 $historySources=array_values(array_filter($d['sources'],static fn($source)=>$source['section_key']==='history'));
 $placeSources=array_values(array_filter($d['sources'],static fn($source)=>$source['section_key']==='places'));
 require_once dirname($repositoryPath).'/PortalPresentation.php';
