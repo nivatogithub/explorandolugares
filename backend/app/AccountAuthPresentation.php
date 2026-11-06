@@ -32,6 +32,9 @@ final class AccountAuthPresentation
         foreach(self::TEXTS as $key=>$source)$copy[$key]=$locale==='es'?$source:($catalog[$source][$column]??$source);
         $copy['saved_places_heading']=match($locale){'en'=>'Keep your places to visit','pt-br'=>'Guarde seus lugares para conhecer',default=>'Guarda tus lugares por conocer'};
         $copy['saved_places_benefit']=match($locale){'en'=>'This feature is for registered users. Your account keeps your personal list so you can find it again whenever you sign in, even on another device. Create an account or sign in to continue.','pt-br'=>'Esta função é para usuários cadastrados. Sua conta conserva sua lista pessoal para você recuperá-la sempre que entrar, inclusive em outro dispositivo. Crie uma conta ou entre para continuar.',default=>'Esta función es para usuarios registrados. Tu cuenta conserva tu lista personal para que puedas recuperarla cuando vuelvas a iniciar sesión, incluso desde otro dispositivo. Crea una cuenta o inicia sesión para continuar.'};
+        $authQuery=$locale==='es'?[]:['lang'=>$locale];
+        if(!empty($data['savedPlacesBenefit']))$authQuery['beneficio']='lugares';
+        $authLinkSuffix=$authQuery?'?'.http_build_query($authQuery):'';
         $floating=$page!=='business-account-gate';
         $hasFavicon=in_array($page,['login','password'],true);
         $hasAccessStyles=$page!=='personal-registration';

@@ -18,8 +18,9 @@ foreach(['es','en','pt-BR'] as $locale)foreach([[false,false],[true,false],[true
 }
 echo "OK bookmark: server-rendered anonymous/unsaved/saved in 3 languages; pending intent does not write, authenticated completion single-use, expiration, ownership\n";
 
-if(!SavedPlaceAction::accessNoticeRequired([],['session_return'=>'/lugares/?guardados=1']))throw new Exception('Saved filter needs explanation');
-if(!SavedPlaceAction::accessNoticeRequired([],['session_return'=>'/en/lugares/?q=Jerico&guardados=1']))throw new Exception('Localized saved filter needs explanation');
-if(!SavedPlaceAction::accessNoticeRequired([],['saved_place_intent'=>['slug'=>'jerico']]))throw new Exception('Bookmark needs explanation');
-if(SavedPlaceAction::accessNoticeRequired([],['session_return'=>'/negocios/portal/'])||SavedPlaceAction::accessNoticeRequired([],['session_return'=>'/lugares/?q=Jerico']))throw new Exception('Unrelated access got saved-place explanation');
-echo "OK account-benefit explanation for save and private filters, unrelated access unchanged\n";
+if(!SavedPlaceAction::accessNoticeRequired(['beneficio'=>'lugares']))throw new Exception('Explicit benefit context missing');
+if(SavedPlaceAction::accessNoticeRequired([])||SavedPlaceAction::accessNoticeRequired(['beneficio'=>'other']))throw new Exception('Ordinary login got notice');
+$s=['saved_place_intent'=>['slug'=>'jerico','locale'=>'es'],'session_return'=>'/lugares/jerico/'];SavedPlaceIntent::cancel($s);if(isset($s['saved_place_intent'])||isset($s['session_return']))throw new Exception('Normal access retained bookmark intent');
+$s=['session_return'=>'/lugares/?guardados=1'];SavedPlaceIntent::cancel($s);if(isset($s['session_return']))throw new Exception('Normal access retained saved filter');
+$s=['session_return'=>'/business/payment.php?business=1'];SavedPlaceIntent::cancel($s);if(!isset($s['session_return']))throw new Exception('Unrelated account flow changed');
+echo "OK explicit conditional notice, canceled intent cleared, normal and unrelated account flows preserved\n";

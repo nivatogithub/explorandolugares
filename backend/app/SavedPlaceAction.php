@@ -3,13 +3,7 @@ declare(strict_types=1);
 /** Pure presentation data for the bookmark rendered in a place guide. */
 final class SavedPlaceAction
 {
- public static function accessNoticeRequired(array $query,array $session):bool{
-  if(($query['beneficio']??'')==='lugares'||!empty($session['saved_place_intent']))return true;
-  $return=$session['session_return']??'';
-  if(!is_string($return))return false;
-  $parts=parse_url($return);if(!$parts||!preg_match('~^/(?:en/|pt-br/)?lugares/$~',(string)($parts['path']??'')))return false;
-  parse_str((string)($parts['query']??''),$filters);return ($filters['guardados']??'')==='1';
- }
+ public static function accessNoticeRequired(array $query):bool{return ($query['beneficio']??'')==='lugares';}
  public static function guidePath(string $slug,string $locale):string{
   return match($locale){'en'=>'/en','pt-BR','pt-br'=>'/pt-br',default=>''}.'/lugares/'.rawurlencode($slug).'/';
  }

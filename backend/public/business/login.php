@@ -3,6 +3,8 @@ declare(strict_types=1);
 require dirname(__DIR__,2).'/app/bootstrap.php';
 require_business_portal_access();
 require dirname(__DIR__,2).'/app/BusinessAccountPortalService.php';
+require_once dirname(__DIR__,2).'/app/SavedPlaceIntent.php';
+if($_SERVER['REQUEST_METHOD']==='GET'&&!SavedPlaceAction::accessNoticeRequired($_GET))SavedPlaceIntent::cancel($_SESSION);
 $service=new BusinessAccountPortalService(db());$error='';
 try{
  if(!business_portal_available())throw new RuntimeException('El acceso de cuentas empresariales todavía no está habilitado.');
@@ -20,7 +22,7 @@ try{
   $safeSessionReturn=is_string($sessionReturn)&&str_starts_with($sessionReturn,'/')&&!str_starts_with($sessionReturn,'//')&&!str_starts_with($sessionReturn,'/negocios/acceso')?$sessionReturn:null;
   require_once dirname(__DIR__,2).'/app/SavedPlaceIntent.php';
   $savedReturn=null;
-  try{$savedReturn=SavedPlaceIntent::complete(db(),$_SESSION,(int)$account['id']);}
+  try{if(SavedPlaceAction::accessNoticeRequired($_GET))$savedReturn=SavedPlaceIntent::complete(db(),$_SESSION,(int)$account['id']);}
   catch(Throwable $error){PortalIncidents::technical($error,'saved_place_after_login');$savedReturn=$safeSessionReturn?$safeSessionReturn.'?guardado=error':null;}
   $target=$savedReturn??(is_array($return)&&(int)($return['business']??0)>0?'/business/editorial.php?business='.(int)$return['business'].'&version='.(int)($return['version']??0):($safeSessionReturn??($businessReturn==='/negocios/registro/?tipo=business'?$businessReturn:($paymentBusiness?'/negocios/portal/?tab=business&business='.$paymentBusiness.'&solicitud=guardada#pagos':'/negocios/portal/'))));header('Location: '.site_path($target),true,303);exit;
  }
@@ -28,5 +30,5 @@ try{
 require_once dirname(__DIR__).'/_portal-shell.php';
 require_once dirname(__DIR__,2).'/app/AccountAuthPresentation.php';
 require_once dirname(__DIR__,2).'/app/SavedPlaceAction.php';
-$viewData=['csrf'=>(string)$_SESSION['csrf'],'email'=>(string)($_POST['email']??''),'closed'=>($_GET['cuenta']??'')==='cerrada','error'=>$error,'savedPlacesBenefit'=>SavedPlaceAction::accessNoticeRequired($_GET,$_SESSION)];
+$viewData=['csrf'=>(string)$_SESSION['csrf'],'email'=>(string)($_POST['email']??''),'closed'=>($_GET['cuenta']??'')==='cerrada','error'=>$error,'savedPlacesBenefit'=>SavedPlaceAction::accessNoticeRequired($_GET)];
 AccountAuthPresentation::render('login',account_layout_context(),$viewData,dirname(__DIR__));

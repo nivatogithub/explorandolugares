@@ -101,7 +101,7 @@ function session_expired(?string $returnTo=null): never {
  * sign-in screen; fetch/XHR callers receive a predictable response instead
  * of an HTML page or a bare 403.
  */
-function require_business_session(bool $expectsJson=false,?string $returnTo=null): void {
+function require_business_session(bool $expectsJson=false,?string $returnTo=null,?string $benefit=null): void {
     $active=!empty($_SESSION['business_account_id']) && time()-(int)($_SESSION['business_last_seen']??0)<=1800;
     if($active){$_SESSION['business_last_seen']=time();return;}
     require_once __DIR__.'/AccountSessionSecurity.php';
@@ -109,8 +109,9 @@ function require_business_session(bool $expectsJson=false,?string $returnTo=null
     $uri=$returnTo??(string)($_SERVER['REQUEST_URI']??'');$parts=parse_url($uri);$path=(string)($parts['path']??'');$query=isset($parts['query'])?'?'.$parts['query']:'';
     if($path!==''&&str_starts_with($path,'/')&&!str_starts_with($path,'//')&&!str_starts_with($path,'/negocios/acceso'))$_SESSION['session_return']=$path.$query;
     $accept=(string)($_SERVER['HTTP_ACCEPT']??'');
-    if($expectsJson||str_contains($accept,'application/json'))json_response(['error'=>'authentication_required','login_url'=>site_path('/negocios/acceso/')],401);
-    header('Location: '.site_path('/negocios/acceso/?sesion=expirada'),true,303);
+    $benefitQuery=$benefit==='saved_places'?'beneficio=lugares':'';
+    if($expectsJson||str_contains($accept,'application/json'))json_response(['error'=>'authentication_required','login_url'=>site_path('/negocios/acceso/'.($benefitQuery?'?'.$benefitQuery:''))],401);
+    header('Location: '.site_path('/negocios/acceso/?sesion=expirada'.($benefitQuery?'&'.$benefitQuery:'')),true,303);
     exit;
 }
 /** Every private administration page uses this guard; it never renders a 403 login message. */

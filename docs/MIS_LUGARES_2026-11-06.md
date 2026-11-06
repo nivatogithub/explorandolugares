@@ -46,3 +46,9 @@ Producción no se ha modificado. Requiere aprobación visual y el circuito habit
 ## Explicación de registro
 
 Tanto el acceso desde un marcador como el filtro privado muestran el título «Guarda tus lugares por conocer» y explican, antes de los campos, que se necesita una cuenta para conservar la lista personal y recuperarla al volver a iniciar sesión o desde otro dispositivo. El mismo contexto se conserva al abrir Crear cuenta. Las pantallas de acceso ajenas a esta función no cambian. Texto renderizado en servidor en ES/EN/PT-BR. Verificado visualmente sin sesión desde `/lugares/?guardados=1` y al pasar a Crear cuenta.
+
+## Contexto de acceso explícito
+
+El aviso se muestra únicamente si la navegación de acceso o registro lleva `beneficio=lugares`, añadido al llegar desde el marcador o el filtro privado. No depende del rol de viajero/comercio, de si la cuenta existe ni de intenciones viejas en la sesión. Los enlaces entre acceso y registro conservan ese contexto dentro de ese recorrido; abrir acceso o registro normal lo cancela, evitando guardar por sorpresa una selección anterior. El resto de retornos de negocios se conserva. La verificación de correo mantiene la continuación pertinente sin convertir el aviso en global.
+
+Comprobación visual en la misma sesión: marcador → aviso; crear cuenta desde allí → aviso; iniciar sesión normal → cero avisos; filtro de guardados → aviso; registro normal → cero avisos. No se crearon cuentas ni se modificaron selecciones para esta revisión.

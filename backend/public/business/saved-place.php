@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD']==='GET'){
 }
 if($_SERVER['REQUEST_METHOD']!=='POST'){http_response_code(405);header('Allow: GET, POST');exit;}
 $expectsJson=str_contains((string)($_SERVER['HTTP_ACCEPT']??''),'application/json');
-require_business_session($expectsJson,$path);csrf($path);
+require_business_session($expectsJson,$path,'saved_places');csrf($path);
 $action=$_POST['action']??'';
 if(!in_array($action,['save_place','remove_place'],true)){if($expectsJson)json_response(['ok'=>false,'error'=>'invalid_action'],400);http_response_code(400);exit('Acción no válida.');}
 try{$places->change((int)$_SESSION['business_account_id'],$slug,$action==='save_place');}

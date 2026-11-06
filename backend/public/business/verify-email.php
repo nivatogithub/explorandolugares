@@ -13,8 +13,10 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 }
 require_once dirname(__DIR__).'/_portal-shell.php';
 require_once dirname(__DIR__,2).'/app/AccountAuthPresentation.php';
+require_once dirname(__DIR__,2).'/app/SavedPlaceAction.php';
 $accountLayout=account_layout_context();
 AccountAuthPresentation::render('verify-email',$accountLayout,[
     'error'=>$error,'verified'=>$verified,'sent'=>$sent,'continueToBusiness'=>$continueToBusiness,
+    'savedPlacesBenefit'=>SavedPlaceAction::accessNoticeRequired($_GET)||($verified&&!empty($_SESSION['saved_place_intent'])&&!$continueToBusiness),
     'csrf'=>$accountLayout['csrf'],
 ],dirname(__DIR__));

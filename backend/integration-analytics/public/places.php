@@ -10,7 +10,7 @@ if(!is_string($locale)||!in_array($locale,['es','en','pt-BR'],true))$locale='es'
 $savedAccountId=0;
 if(($_GET['guardados']??'')==='1'){
     require_once $app.'bootstrap.php';
-    require_business_portal_access();require_business_session();
+    require_business_portal_access();require_business_session(false,null,'saved_places');
     $savedAccountId=(int)$_SESSION['business_account_id'];
     header('Cache-Control: private, no-store');header('Vary: Cookie');
 }
