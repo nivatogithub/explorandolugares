@@ -18,9 +18,15 @@ if($_SERVER['REQUEST_METHOD']==='GET'){
  header('Location: '.$path,true,303);exit;
 }
 if($_SERVER['REQUEST_METHOD']!=='POST'){http_response_code(405);header('Allow: GET, POST');exit;}
-require_business_session(false,$path);csrf($path);
+$expectsJson=str_contains((string)($_SERVER['HTTP_ACCEPT']??''),'application/json');
+require_business_session($expectsJson,$path);csrf($path);
 $action=$_POST['action']??'';
-if(!in_array($action,['save_place','remove_place'],true)){http_response_code(400);exit('Acción no válida.');}
+if(!in_array($action,['save_place','remove_place'],true)){if($expectsJson)json_response(['ok'=>false,'error'=>'invalid_action'],400);http_response_code(400);exit('Acción no válida.');}
 try{$places->change((int)$_SESSION['business_account_id'],$slug,$action==='save_place');}
-catch(Throwable $error){PortalIncidents::technical($error,'saved_place');header('Location: '.$path.'?guardado=error',true,303);exit;}
+catch(Throwable $error){PortalIncidents::technical($error,'saved_place');if($expectsJson)json_response(['ok'=>false,'error'=>'save_failed'],503);header('Location: '.$path.'?guardado=error',true,303);exit;}
+if($expectsJson){
+ $saved=(new SavedPlaceSelector(db()))->contains((int)$_SESSION['business_account_id'],$slug);
+ $state=SavedPlaceAction::context($slug,$locale,true,$saved);
+ json_response(['ok'=>true,'saved'=>$saved,'label'=>$state['label']]);
+}
 header('Location: '.$path,true,303);exit;

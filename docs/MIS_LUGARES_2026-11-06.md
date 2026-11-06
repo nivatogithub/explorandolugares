@@ -4,7 +4,7 @@ Rama de revisión: `proposal/home-travelers-businesses`. Instalado únicamente e
 
 ## Comportamiento vigente
 
-- El marcador de cada guía permite guardar o quitar ese destino desde la misma página. Una bandera rellena y `aria-pressed=true` indican que está guardado. El estado se consulta y renderiza en PHP; no se sustituye la interfaz con JavaScript.
+- El marcador de cada guía permite guardar o quitar ese destino desde la misma página. Una bandera rellena y `aria-pressed=true` indican que está guardado. PHP renderiza el estado inicial. La interacción se mejora con `saved-place.js`: envía el POST, espera el estado confirmado por el servidor y actualiza únicamente ese marcador; guardar y quitar no navegan ni modifican el scroll. Sin JavaScript permanece el formulario tradicional.
 - Si no existe sesión activa, el marcador lleva al acceso e informa que guardar lugares es una función para usuarios registrados. El clic conserva una intención temporal en la sesión. La escritura se ejecuta después del POST de acceso protegido por CSRF y vuelve a la guía con el marcador relleno. La intención no escribe datos desde GET y expira a la hora.
 - «Lugares» tiene el filtro privado «Mis lugares por conocer», usando las tarjetas, búsqueda y paginación del catálogo. Solo muestra datos de la cuenta autenticada. Los parámetros enviados por un navegador no determinan la identidad.
 - El perfil no incluye un listado, bloque, enlace ni confirmación de lugares guardados.
@@ -24,7 +24,10 @@ Controladores HTTP, servicio, selector, escritor, contexto de presentación y vi
 - `php backend/tests/saved-place-actions.php`: SVG relleno/vacío, POST/CSRF, intención sin escritura, consumo autenticado una sola vez, caducidad y traducciones.
 - `php backend/tests/place-directory.php`: 96 comprobaciones. `place-directory-100.php`: paginación y búsqueda de 100 lugares, tres idiomas.
 - `php backend/tests/presentation.php`: plantilla nativa, header/footer y navegación por lugares.
+- `node backend/tests/saved-place-controls.dom.js`: guardar/quitar, fallo sin cambio visual falso, sesión caducada, bloqueo de envíos duplicados y conflicto entre el campo `action` y la propiedad del formulario. El endpoint se obtiene mediante `getAttribute('action')`; nunca desde la propiedad susceptible de ser ocultada por un campo.
 - Constructor público completo sin reparaciones HTML posteriores.
+- Comprobación visual real con cuenta aislada: guardar y quitar mantuvieron `scrollY=266.5`, la URL y el filtro Hospedaje seleccionado. No hubo navegación ni pérdida de estado; la cuenta automática terminó sin guardados e inactiva.
+- Los manejadores existentes de pestañas y de carga de atractivos se extrajeron sin alterar su comportamiento a `place-interactions.js`, recurso externo versionado, para conservar la ejecución bajo la política CSP de las páginas con sesión. No se relajó esa política.
 - HTTP real dev1, cuenta sintética separada: invitación desde marcador anónimo, acceso que guarda y vuelve a la guía, quitar/guardar directamente, persistencia tras recargar, perfil sin bloque y rechazo de token CSRF inválido. Al terminar, las cuentas automáticas quedaron inactivas. Las selecciones del propietario permanecieron intactas.
 - Comprobación visual por Cloudflare de Agustín Codazzi ya guardado: marcador relleno y `aria-pressed=true`, sin modificar su selección.
 

@@ -77,3 +77,5 @@
 
 /* Save guide action: bookmark control, shared by every published guide. */
 .saved-place-control{display:inline-flex;margin:0}.saved-place-action{cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;border:1px solid var(--el-border,#cfc5b7);border-radius:50%;color:var(--el-action,#c94720);background:var(--el-shell,#fff);text-decoration:none}.saved-place-action svg{display:block;flex:none}.saved-place-action:hover{background:var(--el-panel,#eae3d6)}.saved-place-action:focus-visible{outline:3px solid var(--el-action,#c94720);outline-offset:3px}
+
+.saved-place-feedback:empty{display:none}.saved-place-feedback{font-size:13px;max-width:28ch;color:var(--el-action,#c94720);margin-left:8px}.saved-place-action:disabled{cursor:progress;opacity:.65}
