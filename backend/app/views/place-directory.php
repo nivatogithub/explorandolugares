@@ -22,13 +22,14 @@
 <?php foreach($field['values'] as $value):?><option value="<?=$e($value)?>" <?=$filters[$key]===$value?'selected':''?>><?=$e($key==='sector'?$copy['sectorNames'][$value]:$value)?></option><?php endforeach ?></select></label>
 <?php endforeach ?>
 <div class="place-directory-actions"><label class="place-directory-heritage"><input type="checkbox" name="heritage" value="1" <?=$filters['heritage']?'checked':''?>><?=$e($copy['heritage'])?></label>
+<label class="place-directory-saved"><input type="checkbox" name="guardados" value="1" <?=!empty($filters['saved'])?'checked':''?>><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4V3Z"/></svg><?=$e($copy['saved'])?></label>
 <a class="place-directory-clear" href="<?=$e($path)?>" data-clear-filters><?=$e($copy['clear'])?></a>
 </div></div><noscript><button type="submit" class="place-directory-fallback"><?=$e($copy['apply'])?></button></noscript>
 </form>
-<p class="place-directory-results" role="status"><?=$e($data['total']?sprintf($copy['results'],$data['first'],$data['last'],$data['total']):$copy['empty'])?></p>
+<p class="place-directory-results" role="status"><?=$e($data['total']?sprintf($copy['results'],$data['first'],$data['last'],$data['total']):(!empty($filters['saved'])?$copy['savedEmpty']:$copy['empty']))?></p>
 <div class="destination-grid" id="place-directory-grid">
 <?php foreach($rows as $place):?><article class="destination-card <?=$place['heritageText']!==''?'has-heritage':''?>" data-place-slug="<?=$e($place['slug'])?>"><?php if($place['heritageText']!==''):?><span class="place-heritage-star" role="img" aria-label="<?=$e($place['heritageText'])?>" title="<?=$e($place['heritageText'])?>">★</span><?php endif ?><a class="destination-card-image" href="<?=$e($place['url'])?>"><?php if(!empty($place['asset_path'])):?><img src="/<?=$e(ltrim($place['asset_path'],'/'))?>" alt="<?=$e($place['alt_text']?:$place['display_name'])?>" loading="lazy"><?php endif ?></a><div class="copy">
-<?php $placeLabels=$place['labels'];require __DIR__.'/place-labels.php'; ?><h2><a href="<?=$e($place['url'])?>"><?=$e($place['display_name'])?></a></h2><p><?=$e($place['intro'])?></p><a class="text-link" href="<?=$e($place['url'])?>"><?=$e($copy['visit'])?></a></div></article><?php endforeach ?>
+<?php $placeLabels=$place['labels'];require __DIR__.'/place-labels.php'; ?><h2><a href="<?=$e($place['url'])?>"><?=$e($place['display_name'])?></a></h2><p><?=$e($place['intro'])?></p><a class="text-link" href="<?=$e($place['url'])?>"><?=$e($copy['visit'])?></a><?php if(!empty($filters['saved'])):?><form method="post" action="/negocios/portal/?tab=personal" class="place-saved-remove"><input type="hidden" name="csrf" value="<?=$e($data['csrf'])?>"><input type="hidden" name="action" value="remove_place"><input type="hidden" name="place_slug" value="<?=$e($place['slug'])?>"><button type="submit"><?=$e($copy['removeSaved'])?></button></form><?php endif ?></div></article><?php endforeach ?>
 </div>
 <?php if($data['pages']>1):?><nav class="place-directory-pagination" aria-label="<?=$e($copy['pagination'])?>">
 <?php if($previous):?><a rel="prev" href="<?=$e($previous)?>"><?=$e($copy['previous'])?></a><?php else:?><span aria-disabled="true"><?=$e($copy['previous'])?></span><?php endif ?>

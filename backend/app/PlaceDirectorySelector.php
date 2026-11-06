@@ -62,6 +62,10 @@ final class PlaceDirectorySelector
         if(($filters['department']??'')!==''){$sql.=' AND d.department=?';$values[]=$filters['department'];}
         if(($filters['region']??'')!==''){$sql.=' AND COALESCE(NULLIF(TRIM(d.subregion),\'\'),d.department)=?';$values[]=$filters['region'];}
         if(!empty($filters['heritage']))$sql.=' AND EXISTS(SELECT 1 FROM place_labels l WHERE l.place_id=d.id AND l.code=\'heritage_town\' AND l.enabled=1)';
+        if(!empty($filters['saved'])){
+            $sql.=' AND EXISTS(SELECT 1 FROM account_saved_places saved WHERE saved.place_id=d.id AND saved.account_id=?)';
+            $values[]=(int)($filters['savedAccountId']??0);
+        }
         return [$sql,$values];
     }
 

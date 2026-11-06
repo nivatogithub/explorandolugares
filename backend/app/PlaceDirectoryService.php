@@ -8,11 +8,14 @@ final class PlaceDirectoryService
     public const PAGE_SIZE=9;
     public function __construct(private PlaceDirectorySelector $places) {}
 
-    public function search(string $locale,array $input):array
+    public function search(string $locale,array $input,int $accountId=0):array
     {
         if(!in_array($locale,['es','en','pt-BR'],true))$locale='es';
         $text=static fn(string $key):string=>is_string($input[$key]??null)?mb_substr(trim($input[$key]),0,120,'UTF-8'):'';
         $filters=['q'=>$text('q'),'department'=>$text('department'),'region'=>$text('region'),'heritage'=>($input['heritage']??'')==='1'];
+        $filters['saved']=($input['guardados']??'')==='1';
+        if($filters['saved']&&$accountId<1)throw new RuntimeException('Authentication required for saved places.');
+        if($filters['saved'])$filters['savedAccountId']=$accountId;
         $sectors=$this->places->sectors();
         $filters['sector']=array_key_exists($text('sector'),$sectors)?$text('sector'):'';
         $members=$sectors[$filters['sector']]??[];
@@ -34,6 +37,7 @@ final class PlaceDirectoryService
     {
         $path=match($locale){'en'=>'/en/lugares/','pt-BR'=>'/pt-br/lugares/',default=>'/lugares/'};
         $query=[];foreach(['q','department','region','sector'] as $key)if(($filters[$key]??'')!=='')$query[$key]=$filters[$key];
+        if(!empty($filters['saved']))$query['guardados']='1';
         if(!empty($filters['heritage']))$query['heritage']='1';if($page>1)$query['pagina']=$page;
         return $path.($query?'?'.http_build_query($query,'','&',PHP_QUERY_RFC3986):'');
     }

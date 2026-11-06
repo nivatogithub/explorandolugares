@@ -10,7 +10,7 @@ $residenceError='';$residenceSaved=false;$residenceValues=AccountResidence::get(
 if($_SERVER['REQUEST_METHOD']==='POST'){
  try{csrf();if(in_array($_POST['action']??'',['save_place','remove_place'],true)){
  $savedPlaces->change((int)$account['id'],(string)($_POST['place_slug']??''),$_POST['action']==='save_place');
- header('Location: /negocios/portal/?tab=personal&lugares=actualizados#mis-lugares',true,303);exit;
+ header('Location: /lugares/?guardados=1',true,303);exit;
  }if(($_POST['action']??'')==='close_account'){
  require_once dirname(__DIR__,2).'/app/AccountClosureService.php';
  if(!throttle('account_close',5,900,(string)$account['id']))throw new RuntimeException('Demasiados intentos. Inténtalo más tarde.');
