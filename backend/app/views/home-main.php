@@ -2,7 +2,7 @@
 declare(strict_types=1);
 /** Shared home content. Receives copy, prefix, image URLs and escaping only. */
 ?>
-<main id="contenido" class="wrap">
+<main id="contenido" class="wrap home-intro-proposal">
 <section class="hero home-editorial-hero">
 <div class="home-editorial-copy">
 <p class="eyebrow"><?=$e($copy['hero_eyebrow'])?>
@@ -13,8 +13,9 @@ declare(strict_types=1);
 <p class="intro"><?=$e($copy['hero_intro'])?>
 </p>
 <div class="home-editorial-actions">
-<a class="pill" href="<?=$e($prefix.'/lugares/')?>"><?=$e($copy['find_place'])?>
+<a class="pill" href="#para-viajeros"><?=$e($copy['find_place'])?>
 </a>
+<a class="text-link" href="#para-negocios"><?=$e($copy['business_entry'])?></a>
 </div>
 </div>
 <figure class="home-editorial-gallery" aria-label="<?=$e($copy['gallery_label'])?>">
@@ -36,48 +37,9 @@ declare(strict_types=1);
 <p class="home-editorial-categories"><?=$e($copy['towns'])?> <span>·</span> <?=$e($copy['cities'])?> <span>·</span> <?=$e($copy['experiences'])?>
 </p>
 </section>
-<section id="formas-de-explorar" class="section">
-<div class="sectionhead">
-<div>
-<p class="eyebrow"><?=$e($copy['explore_eyebrow'])?>
-</p>
-<h2><?=$e($copy['explore_title'])?>
-<br><?=$e($copy['explore_subtitle'])?>
-</h2>
-</div>
-<p><?=$e($copy['explore_intro'])?>
-</p>
-</div>
-<div class="experience-editorial">
-<div class="experience-stories">
-<article>
-<span class="story-number"><?=$e($copy['discover_step'])?>
-</span>
-<h3><?=$e($copy['discover_title'])?>
-</h3>
-<p><?=$e($copy['discover_intro'])?>
-</p>
-</article>
-<article>
-<span class="story-number"><?=$e($copy['connect_step'])?>
-</span>
-<h3><?=$e($copy['connect_title'])?>
-</h3>
-<p><?=$e($copy['connect_intro'])?>
-</p>
-</article>
-<article>
-<span class="story-number"><?=$e($copy['experience_step'])?>
-</span>
-<h3><?=$e($copy['experience_title'])?>
-</h3>
-<p><?=$e($copy['experience_intro'])?>
-</p>
-</article>
-</div>
-</div>
-</section>
 <section id="destinos" class="section">
+<span id="formas-de-explorar" aria-hidden="true"></span>
+<div id="para-viajeros" class="home-traveller-entry">
 <div class="sectionhead">
 <div>
 <p class="eyebrow"><?=$e($copy['places_eyebrow'])?>
@@ -88,38 +50,24 @@ declare(strict_types=1);
 <p><?=$e($copy['places_intro'])?>
 </p>
 </div>
+<p class="home-traveller-action"><a class="pill" href="<?=$e($prefix.'/lugares/')?>"><?=$e($copy['all_places'])?></a></p>
+</div>
 <div class="home-attractions" data-home-attractions>
 <?php if($attractions): foreach($attractions as $item): require __DIR__.'/home-attraction-card.php'; endforeach; else: ?>
 <p><?=$e($copy['places_fallback'])?></p>
 <?php endif ?>
 </div>
-<p>
-<a class="text-link" href="<?=$e($prefix.'/lugares/')?>"><?=$e($copy['all_places'])?>
-</a>
-</p>
 </section>
-<section class="section">
-<div class="allies">
+<section id="para-negocios" class="section" aria-labelledby="home-business-title">
+<div class="allies home-business-entry">
 <div>
-<p class="eyebrow"><?=$e($copy['business_eyebrow'])?>
-</p>
-<h2><?=$e($copy['business_title'])?>
-<br><?=$e($copy['business_subtitle'])?>
-</h2>
-<p><?=$e($copy['business_intro'])?>
-</p>
-<a class="pill" href="<?=$e($prefix)?>/negocios-locales/"><?=$e($copy['local_businesses'])?>
-</a>
+<p class="eyebrow"><?=$e($copy['business_eyebrow'])?></p>
+<h2 id="home-business-title"><?=$e($copy['business_title'])?></h2>
+<p><?=$e($copy['business_intro'])?></p>
 </div>
-<div class="steps">
-<p><?=$e($copy['business_step_1'])?>
-</p>
-<p><?=$e($copy['business_step_2'])?>
-</p>
-<p><?=$e($copy['business_step_3'])?>
-</p>
-<p><?=$e($copy['business_step_4'])?>
-</p>
+<div class="home-business-actions">
+<a class="pill" href="/negocios/registro/?tipo=business<?=$locale==='es'?'':'&amp;lang='.$e($locale)?>"><?=$e($copy['register_business'])?></a>
+<a class="text-link" href="<?=$e($prefix.'/negocios-locales/')?>"><?=$e($copy['business_options'])?></a>
 </div>
 </div>
 </section>
