@@ -3,6 +3,10 @@ declare(strict_types=1);
 /** Pure presentation data for the bookmark rendered in a place guide. */
 final class SavedPlaceAction
 {
+ public static function render(array $bookmark):void{
+  require_once __DIR__.'/PortalPresentation.php';
+  $e=[PortalPresentation::class,'escape'];require __DIR__.'/views/saved-place-action.php';
+ }
  public static function accessNoticeRequired(array $query):bool{return ($query['beneficio']??'')==='lugares';}
  public static function guidePath(string $slug,string $locale):string{
   return match($locale){'en'=>'/en','pt-BR','pt-br'=>'/pt-br',default=>''}.'/lugares/'.rawurlencode($slug).'/';

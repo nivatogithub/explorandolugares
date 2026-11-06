@@ -1,12 +1,15 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__.'/support/place-directory.php';
+require_once __DIR__.'/../app/SavedPlaceSelector.php';
 $p=new PDO('sqlite::memory:',null,null,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);
 $p->exec(file_get_contents(__DIR__.'/../database/destinations.sqlite.sql'));
 check_place_directory($p);
 $p->exec('CREATE TABLE accounts(id INTEGER PRIMARY KEY); INSERT INTO accounts VALUES(1),(2)');
 $p->exec(file_get_contents(__DIR__.'/../database/migrations/063-account-saved-places.sqlite.sql'));
 $p->exec("INSERT INTO account_saved_places(account_id,place_id) SELECT 1,id FROM destinations WHERE slug='jerico'; INSERT INTO account_saved_places(account_id,place_id) SELECT 2,id FROM destinations WHERE slug='jardin'");
+$states=new SavedPlaceSelector($p);
+if($states->savedSlugs(1,['jerico','jardin'])!==['jerico']||$states->savedSlugs(2,['jerico'])!==[]||$states->savedSlugs(1,[])!==[])throw new RuntimeException('Card bookmark batch leaked or lost state');
 $s=new PlaceDirectoryService(new PlaceDirectorySelector($p));
 foreach(['es','en','pt-BR'] as $locale){
  $a=$s->search($locale,['guardados'=>'1','savedAccountId'=>2],1);

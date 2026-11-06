@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once __DIR__.'/PortalPresentation.php';
 require_once __DIR__.'/PlaceLabelPresentation.php';
 require_once __DIR__.'/PlaceDirectoryService.php';
+require_once __DIR__.'/SavedPlaceAction.php';
 
 final class PlaceDirectoryPresentation
 {
@@ -20,6 +21,7 @@ final class PlaceDirectoryPresentation
             $row['labels']=PlaceLabelPresentation::labels($row,$locale);
             $row['heritageText']=array_column($row['labels'],'text','code')['heritage_town']??'';
             $row['url']=rtrim($path,'/').'/'.rawurlencode($row['slug']).'/';
+            $row['bookmark']=SavedPlaceAction::context($row['slug'],$locale,!empty($data['bookmarkAuthenticated']),in_array($row['slug'],$data['savedSlugs']??[],true),(string)($data['csrf']??''));
         }unset($row);
         $pageLinks=[];$numbers=array_unique([1,...range(max(1,$data['page']-2),min($data['pages'],$data['page']+2)),$data['pages']]);sort($numbers);
         foreach($numbers as $number)$pageLinks[]=['number'=>$number,'url'=>PlaceDirectoryService::url($locale,$filters,$number)];
@@ -31,6 +33,7 @@ final class PlaceDirectoryPresentation
         foreach(['places.css','place-directory.css'] as $name){
             $resource='/assets/'.$name;$resources[]=$resource.'?v='.substr(hash_file('sha256',$publicRoot.$resource),0,12);
         }
+        $bookmarkScript='/assets/saved-place.js?v='.substr(hash_file('sha256',$publicRoot.'/assets/saved-place.js'),0,12);
         $script='/assets/place-directory.js';$script.='?v='.substr(hash_file('sha256',$publicRoot.$script),0,12);
         $e=[PortalPresentation::class,'escape'];require __DIR__.'/views/place-directory.php';
     }

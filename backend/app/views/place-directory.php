@@ -8,7 +8,7 @@
 <meta property="og:type" content="website"><meta property="og:site_name" content="Explorando Lugares"><meta property="og:title" content="<?=$e($title)?>"><meta property="og:description" content="<?=$e($copy['intro'])?>"><meta property="og:url" content="<?=$e($canonical)?>">
 <meta property="og:image" content="https://explorandolugares.com/assets/brand/explorando-lugares-logo-v2-transparent.png"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="<?=$e($title)?>"><meta name="twitter:description" content="<?=$e($copy['intro'])?>">
 <script type="application/ld+json"><?=$structured?></script>
-<script defer src="<?=$e($script)?>"></script>
+<script defer src="<?=$e($script)?>"></script><script defer src="<?=$e($bookmarkScript)?>"></script>
 <link rel="icon" href="/assets/brand/explorando-lugares-logo-v2-transparent.png" type="image/png"></head>
 <body><a class="skip" href="#contenido"><?=$e($copy['skip'])?></a><?=PortalPresentation::header($context)?>
 <main id="contenido" class="wrap"><section class="section destination-index place-directory">
@@ -29,7 +29,7 @@
 <p class="place-directory-results" role="status"><?=$e($data['total']?sprintf($copy['results'],$data['first'],$data['last'],$data['total']):(!empty($filters['saved'])?$copy['savedEmpty']:$copy['empty']))?></p>
 <div class="destination-grid" id="place-directory-grid">
 <?php foreach($rows as $place):?><article class="destination-card <?=$place['heritageText']!==''?'has-heritage':''?>" data-place-slug="<?=$e($place['slug'])?>"><?php if($place['heritageText']!==''):?><span class="place-heritage-star" role="img" aria-label="<?=$e($place['heritageText'])?>" title="<?=$e($place['heritageText'])?>">★</span><?php endif ?><a class="destination-card-image" href="<?=$e($place['url'])?>"><?php if(!empty($place['asset_path'])):?><img src="/<?=$e(ltrim($place['asset_path'],'/'))?>" alt="<?=$e($place['alt_text']?:$place['display_name'])?>" loading="lazy"><?php endif ?></a><div class="copy">
-<?php $placeLabels=$place['labels'];require __DIR__.'/place-labels.php'; ?><h2><a href="<?=$e($place['url'])?>"><?=$e($place['display_name'])?></a></h2><p><?=$e($place['intro'])?></p><a class="text-link" href="<?=$e($place['url'])?>"><?=$e($copy['visit'])?></a><?php if(!empty($filters['saved'])):?><form method="post" action="/negocios/portal/?tab=personal" class="place-saved-remove"><input type="hidden" name="csrf" value="<?=$e($data['csrf'])?>"><input type="hidden" name="action" value="remove_place"><input type="hidden" name="place_slug" value="<?=$e($place['slug'])?>"><button type="submit"><?=$e($copy['removeSaved'])?></button></form><?php endif ?></div></article><?php endforeach ?>
+<?php $placeLabels=$place['labels'];require __DIR__.'/place-labels.php'; ?><h2><a href="<?=$e($place['url'])?>"><?=$e($place['display_name'])?></a></h2><p><?=$e($place['intro'])?></p><div class="place-card-actions"><a class="text-link" href="<?=$e($place['url'])?>"><?=$e($copy['visit'])?></a><?php SavedPlaceAction::render($place['bookmark']); ?></div></div></article><?php endforeach ?>
 </div>
 <?php if($data['pages']>1):?><nav class="place-directory-pagination" aria-label="<?=$e($copy['pagination'])?>">
 <?php if($previous):?><a rel="prev" href="<?=$e($previous)?>"><?=$e($copy['previous'])?></a><?php else:?><span aria-disabled="true"><?=$e($copy['previous'])?></span><?php endif ?>

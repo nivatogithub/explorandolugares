@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "destination": "agustin-codazzi",
+  "attraction": "qc-40-2",
+  "name": "Monumento Las Guitarras",
+  "asset_path": "assets/media/09/09a29f6d636e6061a615f9764c670c41c67cbb56e4b1f019c75cb7c8f1f1356a.webp",
+  "sha256": "09a29f6d636e6061a615f9764c670c41c67cbb56e4b1f019c75cb7c8f1f1356a",
+  "width": 1200,
+  "height": 800,
+  "bytes": 198024,
+  "old_paths": [
+    "assets/editorial-38/QC-40-2.webp",
+    "assets/destinos/lote-87/80d7d54dbe5c6ce90653b893f206e51d80db64a9c4ce5a7b4bb51dd5a7d75a41.webp",
+    "assets/media/80/80d7d54dbe5c6ce90653b893f206e51d80db64a9c4ce5a7b4bb51dd5a7d75a41.webp"
+  ],
+  "reference_sha256": "80d7d54dbe5c6ce90653b893f206e51d80db64a9c4ce5a7b4bb51dd5a7d75a41",
+  "master_sha256": "cf40b10c2d1c3ec393cd5d8acde1ce3fb5c9572210cda36f62ea0f9c15f8c1c2",
+  "change": "Fill embedded white sidebars with matching illustrated background; preserve complete monument",
+  "tool": "image_gen edit",
+  "review": {
+    "status": "approved_for_dev_review",
+    "approved_by": "owner",
+    "approval": "aplica el cambio de las guitarras para probarlo",
+    "date": "2026-11-06"
+  },
+  "production_changed": false
+}

@@ -22,4 +22,5 @@
 @media(max-width:400px){#contenido .place-directory-fields{grid-template-columns:1fr}#contenido .place-directory-search{grid-column:auto}#contenido .place-heritage-star{width:32px;height:32px;right:8px;top:8px;font-size:20px}}
 
 /* Saved places reuse the public directory cards and filters. */
-.place-directory-saved{display:inline-flex;align-items:center;gap:7px;cursor:pointer;color:var(--el-text);font-weight:600}.place-directory-saved svg{color:var(--el-action,#c94720);flex:none}.place-saved-remove{margin-top:12px}.place-saved-remove button{font:inherit;font-size:14px;color:var(--el-action,#c94720);padding:8px 0;border:0;background:transparent;text-decoration:underline;cursor:pointer}.place-saved-remove button:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.place-directory-saved{display:inline-flex;align-items:center;gap:7px;cursor:pointer;color:var(--el-text);font-weight:600}.place-directory-saved svg{color:var(--el-action,#c94720);flex:none}
+.place-card-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}.place-card-actions .text-link{margin:0}.place-card-actions .saved-place-control{flex:none}

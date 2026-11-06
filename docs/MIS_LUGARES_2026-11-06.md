@@ -37,9 +37,9 @@ El error HTTPS estaba en el tramo local Cloudflare → dev1. Se resolvió única
 
 Si cambia el enlace: `python3 dev/enable-review-tunnel.py --host HOST.trycloudflare.com --container explorando-dev1`. El comando se limita a contenedores dev y exige configuración local.
 
-## Imagen pendiente independiente
+## Imagen de Las Guitarras corregida
 
-Monumento Las Guitarras, Agustín Codazzi: `assets/editorial-38/QC-40-2.webp` contiene bandas blancas laterales dentro del archivo. No se modificó ni regeneró la imagen aprobada; necesita revisión de encuadre independiente.
+Monumento Las Guitarras, Agustín Codazzi: se completaron los laterales blancos con fondo ilustrado coherente, conservando el monumento entero. El propietario aprobó aplicar la imagen exacta mostrada para probarla en dev1. Activo WebP de 1200×800, 198.024 bytes, hash `09a29f6d636e6061a615f9764c670c41c67cbb56e4b1f019c75cb7c8f1f1356a`. Procedencia y plan en `content/image-review/guitarras-20261106.json`. Migración 064 preparada y ensayada dos veces; dev1 conserva media ID 740 y sus traducciones. No se modificaron otros medios ni producción. Los maestros y la referencia original permanecen en entregables privados, sin sobrescribir el archivo anterior.
 
 Producción no se ha modificado. Requiere aprobación visual y el circuito habitual de integración, migración y despliegue.
 
@@ -60,3 +60,7 @@ El marcador anónimo y el filtro privado abren el diálogo de acceso reutilizado
 Cancelar devuelve el foco sin desplazar la página; en una entrada independiente heredada utiliza el retorno local validado o la navegación atrás cuando hay una página pública de origen. El catálogo conserva su búsqueda y filtros; cancelar no deja seleccionado un filtro privado que no pudo aplicarse. Las búsquedas posteriores continúan renderizadas por el servidor y recuperan la posición de navegación.
 
 Validación visual aislada: Barichara → marcador sin sesión → diálogo con guía intacta, URL de Barichara y ningún fondo de inicio; cerrar mantuvo `scrollY=266.5`; acceso y guardado mantuvieron exactamente esa URL y posición; acceso normal también quedó sobre la guía con el marcador habilitado. Catálogo `?q=Barichara` → filtro privado → diálogo sobre catálogo → acceso → mismo catálogo con `q=Barichara&guardados=1`. La cuenta automática terminó inactiva y sin guardados; no se tocaron las selecciones del propietario.
+
+## Marcadores en las tarjetas del catálogo
+
+Las tarjetas de `/lugares/` reutilizan exactamente el mismo renderizador PHP y manejador de interacción que las guías: marcador vacío/relleno, guardar/quitar sin entrar al lugar y acceso sobrepuesto para visitas anónimas. Se retiraron el botón textual «Quitar de mis lugares» y sus estilos exclusivos. El servidor obtiene los estados de los nueve lugares visibles en una consulta acotada y por cuenta, sin consultas por tarjeta ni exposición de guardados ajenos. La respuesta personalizada usa caché privada; no inicia una sesión nueva para un catálogo anónimo. Verificada la apertura del acceso desde una tarjeta manteniendo la URL de búsqueda y sin inicio como fondo.
