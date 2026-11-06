@@ -14,7 +14,7 @@ foreach(['es','en','pt-BR'] as $locale)foreach([[false,false],[true,false],[true
  if(str_contains($html,'<script')||str_contains($html,'Guardar Jericó'))throw new Exception('Unexpected script or confirmation');
  if($auth&&(!str_contains($html,'method="post"')||!str_contains($html,'test-token')||!str_contains($html,'aria-pressed="'.($saved?'true':'false').'"')))throw new Exception('Missing form or state');
  if($saved&&!str_contains($html,'fill="currentColor"'))throw new Exception('Saved bookmark unfilled');
- if(!$auth&&(!str_contains($html,'<a ')||!str_contains($html,'title="')))throw new Exception('Anonymous affordance missing');
+ if(!$auth&&(!str_contains($html,'data-authenticated="0"')||!str_contains($html,'data-auth-url="')))throw new Exception('Anonymous affordance missing');
 }
 echo "OK bookmark: server-rendered anonymous/unsaved/saved in 3 languages; pending intent does not write, authenticated completion single-use, expiration, ownership\n";
 

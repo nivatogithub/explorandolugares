@@ -17,11 +17,26 @@
   const modalCopy = {es: ['Correo electrónico','Contraseña','Entrar','Olvidé mi contraseña','¿No tienes cuenta?','Crear cuenta','Cerrar','Preparando acceso…','No se pudo iniciar sesión. Inténtalo de nuevo.'],en: ['Email','Password','Sign in','Forgot password?','No account yet?','Create account','Close','Preparing sign-in…','Unable to sign in. Please try again.'],'pt-br': ['E-mail','Senha','Entrar','Esqueceu sua senha?','Ainda não tem conta?','Cadastre-se','Fechar','Preparando acesso…','Não foi possível entrar. Tente novamente.']}[locale];
   const authPath = url => /^\/(?:negocios\/(?:acceso|registro|recuperar-clave|cambiar-clave)\/?|cuenta\/verificar-correo\/?)$/.test(url.pathname) && !(url.pathname.includes('registro') && url.searchParams.get('tipo')==='business');
   const parse = html => new DOMParser().parseFromString(html,'text/html');
-  let authSuccess=null, authTrigger=null;
-  async function showLogin(trigger,onSuccess,url='/negocios/acceso/') {
-    authSuccess=onSuccess;authTrigger=trigger;
+  let authSuccess=null, authTrigger=null, authCancel=null;
+  const closeAuth = dialog => {
+    const standalone = document.body.classList.contains('portal-account-page') && authPath(new URL(location.href));
+    const destination = new URL(dialog.dataset.authReturn || '/', location.origin);
+    dialog.close(); dialog.remove();
+    if (typeof authCancel === 'function') authCancel();
+    if (!standalone) { authTrigger?.focus({preventScroll:true}); return; }
+    let previous;
+    try { previous = new URL(document.referrer); } catch (_) {}
+    if (previous?.origin === location.origin && !authPath(previous) && history.length > 1) {
+      history.back(); // Browser restores the actual previous page, filters and scroll position.
+    } else {
+      location.assign(destination.origin === location.origin ? destination.href : '/');
+    }
+  };
+  async function showLogin(trigger,onSuccess,url='/negocios/acceso/',onCancel=null) {
+    const target=new URL(url,location.href);if(target.origin!==location.origin)return;
+    authSuccess=onSuccess;authTrigger=trigger;authCancel=onCancel;
     let dialog=document.querySelector('[data-account-auth-dialog]');
-    if(!dialog){dialog=document.createElement('dialog');dialog.className='account-login-dialog account-auth-dialog';dialog.dataset.accountAuthDialog='';dialog.setAttribute('aria-label',copy[3]);dialog.innerHTML='<button type="button" class="account-login-close" aria-label="Cerrar">×</button><div data-account-auth-content role="status">Cargando…</div>';document.body.append(dialog);}
+    if(!dialog){dialog=document.createElement('dialog');dialog.className='account-login-dialog account-auth-dialog';dialog.dataset.accountAuthDialog='';dialog.setAttribute('aria-label',copy[3]);dialog.innerHTML='<button type="button" class="account-login-close" aria-label="Cerrar">×</button><div data-account-auth-content role="status">Cargando…</div>';document.body.append(dialog);dialog.addEventListener('cancel',event=>{event.preventDefault();closeAuth(dialog);});}
     if(!dialog.open)dialog.showModal();
     try{const response=await fetch(url,{credentials:'same-origin',cache:'no-store'});await renderAuth(response,dialog);}
     catch{dialog.querySelector('[data-account-auth-content]').textContent=modalCopy[8];}
@@ -38,10 +53,10 @@
   }
   document.addEventListener('click',event=>{
     const close=event.target.closest('[data-account-auth-dialog] .account-login-close');
-    if(close){const dialog=close.closest('dialog');dialog.close();dialog.remove();if(document.body.classList.contains('portal-account-page')&&authPath(new URL(location.href)))location.assign('/');else authTrigger?.focus();return;}
+    if(close){event.preventDefault();closeAuth(close.closest('dialog'));return;}
     const link=event.target.closest('a[href]');if(!link||event.defaultPrevented||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||link.target==='_blank')return;
     const url=new URL(link.href,location.href);if(url.origin!==location.origin||!authPath(url)||url.searchParams.has('token'))return;
-    event.preventDefault();showLogin(link,null,url.href);
+    event.preventDefault();const nested=!!link.closest('[data-account-auth-dialog]');showLogin(nested?authTrigger:link,nested?authSuccess:null,url.href,nested?authCancel:null);
   });
   document.addEventListener('submit',async event=>{
     const form=event.target,dialog=form.closest('[data-account-auth-dialog]');if(!dialog)return;
@@ -52,15 +67,15 @@
       const response=await fetch(target,{method:'POST',credentials:'same-origin',body:new URLSearchParams(new FormData(form))});
       if(new URL(target,location.href).pathname.includes('/acceso/')&&response.ok){
         const stateResponse=await fetch('/api/account-session.php',{credentials:'same-origin',cache:'no-store'});const state=stateResponse.ok?await stateResponse.json():null;
-        if(state?.authenticated){await refreshAccount();dialog.close();dialog.remove();if(typeof authSuccess==='function')authSuccess();else if(document.body.classList.contains('portal-account-page')||new URL(response.url).pathname.includes('/suscripciones/'))location.assign(response.url);return;}
+        if(state?.authenticated){await refreshAccount();dialog.close();dialog.remove();if(typeof authSuccess==='function')await authSuccess(state);else {document.dispatchEvent(new CustomEvent('el:authenticated',{detail:state}));if(document.body.classList.contains('portal-account-page')||new URL(response.url).pathname.includes('/suscripciones/'))location.assign(response.url);}return;}
       }
       await renderAuth(response,dialog);
     }catch{let status=form.querySelector('[role=alert]');if(!status){status=document.createElement('p');status.setAttribute('role','alert');form.append(status);}status.textContent=modalCopy[8];}
     finally{delete form.dataset.busy;if(submit)submit.disabled=false;}
   });
   const initialDialog=document.querySelector('[data-account-auth-dialog]');
-  if(initialDialog){initialDialog.dataset.authUrl=location.href;initialDialog.removeAttribute('open');initialDialog.showModal();initialDialog.addEventListener('cancel',()=>location.assign('/'));}
-  document.addEventListener('el:request-login',event=>showLogin(event.detail?.trigger,event.detail?.onSuccess));
+  if(initialDialog){initialDialog.dataset.authUrl=location.href;initialDialog.removeAttribute('open');initialDialog.showModal();initialDialog.addEventListener('cancel',event=>{event.preventDefault();closeAuth(initialDialog);});}
+  document.addEventListener('el:request-login',event=>showLogin(event.detail?.trigger,event.detail?.onSuccess,event.detail?.url||'/negocios/acceso/',event.detail?.onCancel));
   const signIn = () => {
     const link = document.createElement('a');
     link.textContent = copy[0];

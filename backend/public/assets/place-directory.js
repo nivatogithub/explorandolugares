@@ -11,13 +11,14 @@
   try {
     const saved = JSON.parse(sessionStorage.getItem(key));
     sessionStorage.removeItem(key);
+    if(saved&&Number.isFinite(saved.scroll))window.addEventListener('load',()=>requestAnimationFrame(()=>scrollTo({top:saved.scroll,behavior:'instant'})),{once:true});
     const field = saved && form.elements.namedItem(saved.focus);
     if (field) {
       field.focus({preventScroll: true});
       if (field === search && Number.isInteger(saved.cursor)) field.setSelectionRange(saved.cursor, saved.cursor);
     }
   } catch (_) {}
-  const navigate = () => {
+  const navigate = async () => {
     clearTimeout(timer);
     if (composing) return;
     const url = new URL(form.action, location.href);
@@ -30,7 +31,19 @@
     const target = new URL(url);
     target.searchParams.sort();
     if (current.href === target.href) return;
-    try { sessionStorage.setItem(key, JSON.stringify({focus: document.activeElement?.name, cursor: search.selectionStart})); } catch (_) {}
+    if(url.searchParams.get('guardados')==='1'){
+      try{
+        const response=await fetch('/api/account-session.php',{credentials:'same-origin',cache:'no-store'});
+        const state=response.ok?await response.json():null;
+        if(!state?.authenticated){
+          document.dispatchEvent(new CustomEvent('el:request-login',{detail:{
+            trigger:form.elements.namedItem('guardados'),url:url.href,
+            onSuccess:()=>navigate(),onCancel:()=>{form.elements.namedItem('guardados').checked=false;},
+          }}));return;
+        }
+      }catch(_){form.elements.namedItem('guardados').checked=false;return;}
+    }
+    try { sessionStorage.setItem(key, JSON.stringify({focus: document.activeElement?.name, cursor: search.selectionStart,scroll:scrollY})); } catch (_) {}
     if (status) { status.setAttribute('aria-busy', 'true'); status.textContent = form.dataset.updating; }
     location.assign(url.href);
   };

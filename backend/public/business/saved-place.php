@@ -9,7 +9,14 @@ if(!is_string($locale)||!in_array($locale,['es','en','pt-BR'],true))$locale='es'
 $places=new SavedPlaces(db());
 if(!$places->find($slug)){http_response_code(404);exit('Lugar no encontrado.');}
 $path=SavedPlaceAction::guidePath($slug,$locale);
-if($_SERVER['REQUEST_METHOD']==='GET'){
+$expectsJson=str_contains((string)($_SERVER['HTTP_ACCEPT']??''),'application/json');
+if($_SERVER['REQUEST_METHOD']==='GET'&&($_GET['state']??'')==='1'){
+ require_business_session(true,$path,'saved_places');
+ $saved=(new SavedPlaceSelector(db()))->contains((int)$_SESSION['business_account_id'],$slug);
+ $state=SavedPlaceAction::context($slug,$locale,true,$saved);
+ json_response(['ok'=>true,'saved'=>$saved,'label'=>$state['label'],'csrf'=>(string)$_SESSION['csrf']]);
+}
+if($_SERVER['REQUEST_METHOD']==='GET'||($_SERVER['REQUEST_METHOD']==='POST'&&!$expectsJson&&(empty($_SESSION['business_account_id'])||time()-(int)($_SESSION['business_last_seen']??0)>1800))){
  if(empty($_SESSION['business_account_id'])||time()-(int)($_SESSION['business_last_seen']??0)>1800){
   SavedPlaceIntent::remember($_SESSION,$slug,$locale);
   $_SESSION['session_return']=$path;
@@ -18,7 +25,6 @@ if($_SERVER['REQUEST_METHOD']==='GET'){
  header('Location: '.$path,true,303);exit;
 }
 if($_SERVER['REQUEST_METHOD']!=='POST'){http_response_code(405);header('Allow: GET, POST');exit;}
-$expectsJson=str_contains((string)($_SERVER['HTTP_ACCEPT']??''),'application/json');
 require_business_session($expectsJson,$path,'saved_places');csrf($path);
 $action=$_POST['action']??'';
 if(!in_array($action,['save_place','remove_place'],true)){if($expectsJson)json_response(['ok'=>false,'error'=>'invalid_action'],400);http_response_code(400);exit('Acción no válida.');}

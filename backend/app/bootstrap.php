@@ -55,7 +55,9 @@ function account_layout_context():array
     $accountAdmin=!empty($_SESSION['admin'])
         && !empty($_SESSION['admin_account_id'])
         && (int)$_SESSION['admin_account_id']===(int)($_SESSION['business_account_id']??0);
-    return ['locale'=>$locale,'legacy_admin'=>$accountAdmin,'csrf'=>(string)($_SESSION['csrf']??'')];
+    require_once __DIR__.'/AccountAuthReturn.php';
+    $authReturn=AccountAuthReturn::path($_SESSION['session_return']??null,(string)($_SERVER['HTTP_REFERER']??''),(string)($_SERVER['HTTP_HOST']??''));
+    return ['locale'=>$locale,'legacy_admin'=>$accountAdmin,'csrf'=>(string)($_SESSION['csrf']??''),'auth_return'=>$authReturn];
 }
 function esc(mixed $value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 function english_request(): bool { return ($_GET['lang'] ?? $_POST['lang'] ?? '') === 'en'; }
