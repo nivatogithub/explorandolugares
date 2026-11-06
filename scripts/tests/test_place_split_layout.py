@@ -10,9 +10,10 @@ class SplitDirectoryLayout(unittest.TestCase):
         with tempfile.TemporaryDirectory(prefix='split-directory-',dir=ROOT/'.local') as folder:
             folder=Path(folder);private=folder/'private-site';public=folder/'document-root';public.mkdir();(private/'private').mkdir(parents=True)
             shutil.copytree(ROOT/'backend/app',private/'app')
-            for name in ['places.css','place-directory.css','place-directory.js','cobertura/sectors.json']:
+            for name in ['places.css','place-directory.css','place-directory.js','saved-place.js','cobertura/sectors.json']:
                 target=public/'assets'/name;target.parent.mkdir(parents=True,exist_ok=True);source=ROOT/('ensayos/v1/assets' if name=='places.css' else 'backend/public/assets')/name;shutil.copyfile(source,target)
             shutil.copyfile(ROOT/'backend/integration-analytics/public/places.php',public/'places.php')
+            (public/'home-config-check.php').write_text("<?php echo is_file(dirname(__DIR__).'/app/../private/config.php')?'resolved':'missing';")
             deploy.rewrite_private_app_includes(public,str(private))
             database=private/'private/test.sqlite';db=sqlite3.connect(database)
             db.executescript((ROOT/'backend/database/destinations.sqlite.sql').read_text())
@@ -21,6 +22,8 @@ class SplitDirectoryLayout(unittest.TestCase):
                 db.execute("INSERT INTO destination_translations(destination_id,locale,display_name,eyebrow,headline,intro,meta_description) VALUES(1,?,'Layout fixture','','','Synthetic content','Synthetic description')",[locale])
             db.commit();db.close()
             (private/'private/config.php').write_text('<?php return '+"['dsn'=>"+repr('sqlite:'+str(database))+",'db_user'=>null,'db_password'=>null];")
+            probe=subprocess.run(['php',str(public/'home-config-check.php')],capture_output=True,text=True)
+            self.assertEqual(probe.stdout,'resolved')
             environment={k:v for k,v in os.environ.items() if not k.startswith('EL_DESTINATIONS_')}
             for locale in ['es','en','pt-BR']:
                 for query in [{},{'q':'Layout'},{'sector':'Andina'}]:

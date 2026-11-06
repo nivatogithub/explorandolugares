@@ -8,7 +8,7 @@ $copy=json_decode(file_get_contents(dirname(__DIR__).'/app/presentation/home-met
 $languages=['es'=>'/','en'=>'/en/','pt-BR'=>'/pt-br/'];
 $context=['locale'=>$locale,'path'=>'/','languages'=>$languages];
 $origin=rtrim(getenv('EL_PUBLIC_BASE_URL')?:'https://explorandolugares.com','/');
-$attractions=PortalPageData::attractions(dirname(__DIR__).'/private/config.php',$locale,__DIR__);
+$attractions=PortalPageData::attractions(dirname(__DIR__).'/app/../private/config.php',$locale,__DIR__);
 $manifest=is_file(__DIR__.'/asset-manifest.json')?json_decode(file_get_contents(__DIR__.'/asset-manifest.json'),true):[];
 $css='/assets/home-attractions.css';$css.=isset($manifest[$css])?'?v='.$manifest[$css]:'';
 $logo='/assets/brand/logo-transparente-20261106-180.png';
