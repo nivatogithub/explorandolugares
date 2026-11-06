@@ -1,21 +1,17 @@
-.home-attractions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.home-attraction{min-width:0;border:1px solid var(--el-shell-border,#CFC5B7);border-radius:18px;overflow:hidden;background:var(--el-shell,#FFFFFF)}.home-attraction>a{display:block;color:inherit;text-decoration:none}.home-attraction img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block}.home-attraction h3{font-size:1.15rem;margin:16px 16px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.home-attraction p{margin:0 16px 16px}.home-attraction small{display:block;margin:0 16px 16px;font-size:.72rem;overflow-wrap:anywhere}.home-attraction a:focus-visible{outline:3px solid var(--el-action,#c94720);outline-offset:-3px}@media(max-width:700px){.home-attractions{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.home-attraction h3{font-size:1rem;margin:12px 10px 6px}.home-attraction p{margin:0 10px 12px}.home-attraction small{margin:0 10px 12px}}@media(max-width:380px){.home-attractions{grid-template-columns:minmax(0,1fr)}}
+.home-attractions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}.home-attraction{min-width:0;border:1px solid var(--el-shell-border,#CFC5B7);border-radius:18px;overflow:hidden;background:var(--el-shell,#FFFFFF)}.home-attraction>a{display:block;color:inherit;text-decoration:none}.home-attraction img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block}.home-attraction h3{font-size:1.15rem;margin:16px 16px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.home-attraction p{margin:0 16px 16px}.home-attraction a:focus-visible{outline:3px solid var(--el-action,#c94720);outline-offset:-3px}@media(max-width:1000px){.home-attractions{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.home-attraction h3{font-size:1rem;margin:12px 10px 6px}.home-attraction p{margin:0 10px 12px}}@media(max-width:380px){.home-attractions{grid-template-columns:minmax(0,1fr)}}
 /* Home presentation parameters consumed by the existing hero and commercial panel.
    Component layout/typography declarations remain in their original stylesheet. */
 .home-intro-proposal{
  --el-home-title-size:clamp(38px,4.3vw,58px);
  --el-home-title-mobile-size:clamp(38px,4.3vw,58px);
  --el-home-title-leading:1.06;
- --el-business-panel-columns:minmax(0,1fr) auto;
- --el-business-panel-align:center;
- --el-business-panel-padding:28px 32px;
- --el-business-panel-gap:24px;
- --el-business-panel-title-size:clamp(26px,3vw,36px);
- --el-business-panel-title-margin:8px 0 12px;
- --el-business-panel-mobile-padding:24px;
- --el-business-panel-mobile-gap:20px;
 }
 .home-business-description{max-width:65ch;margin-bottom:0}
 .home-business-actions{display:flex;flex-direction:column;align-items:center;gap:14px}
 .home-traveller-action{margin:0 0 24px}
 .home-intro-proposal :is(#para-viajeros,#para-negocios){scroll-margin-top:24px}
 @media(max-width:700px){.home-business-actions{align-items:flex-start}}
+
+.home-audience-explanations{display:grid;gap:12px;margin:0 0 22px}
+.home-audience-explanations p{margin:0;color:var(--el-text);line-height:1.5}
+.home-audience-explanations strong{font-weight:750}

@@ -56,3 +56,25 @@ def split(css):
    if no:keep.append(','.join(no)+'{'+body+'}')
    if yes:owned.append(','.join(yes)+'{'+body+'}')
  return ''.join(keep),'\n'.join(owned)
+
+def component_ownership_conflicts(css, filename):
+ """Check component boundaries without rewriting the cascade or CSS bytes."""
+ conflicts=[]
+ for prelude,body in items(css):
+  if body is None:continue
+  clean=re.sub(r'/\*.*?\*/','',prelude,flags=re.S).strip()
+  if clean.startswith(('@media','@supports','@layer','@container')):
+   conflicts.extend(component_ownership_conflicts(body,filename));continue
+  if clean.startswith('@'):continue
+  groups=[s.strip() for s in selectors(clean)]
+  properties=set(re.findall(r'(?:^|;)\s*([\w-]+)\s*:',body))
+  if filename!='portal-allies.css' and any(re.search(r'\.allies(?![\w-])',s) for s in groups):
+   conflicts.append('commercial panel outside portal-allies.css')
+  if filename=='portal-shell.css' and any('main.wrap' in s for s in groups):
+   conflicts.append('main content layout inside shell stylesheet')
+  if '.wrap' in groups and filename!='style.css':
+   conflicts.append('global container outside its owner')
+  if any('.el-measurement-preferences' in s for s in groups) and filename!='analytics.css':
+   allowed={'order','align-self'} if filename=='portal-shell.css' else set()
+   if properties-allowed:conflicts.append('measurement button styling outside analytics.css')
+ return conflicts

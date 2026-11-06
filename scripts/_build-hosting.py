@@ -113,6 +113,9 @@ for item in approved_media['media']:
 subprocess.run([sys.executable,str(root/'scripts/apply-place-routes.py'),'--release',str(release)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/check-social-metadata.py'),'--public',str(public)],check=True)
 subprocess.run([sys.executable,str(root/'scripts/check-shell-ownership.py'),'--public',str(public)],check=True)
+subprocess.run(['php',str(root/'scripts/tests/test_brand_logo.php'),str(release/'app')],check=True)
+subprocess.run([sys.executable,str(root/'scripts/check-public-media-presentation.py'),'--release',str(release)],check=True)
+subprocess.run(['php',str(root/'scripts/tests/test_public_media_contract.php'),str(release/'app')],check=True)
 # Retired controller stays inventoried for a separate, explicit cleanup; no template loads it.
 # Explicit retirement is verified after composition; no legacy controller is restored.
 subprocess.run([sys.executable,str(root/'scripts/compose-presentation.py'),'--public',str(public)],check=True)

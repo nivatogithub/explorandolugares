@@ -1,8 +1,8 @@
 /* Shared portal shell. Tokens → component → responsive states. No editorial mutations. */
 .portal-shell,.portal-shell-footer{background:var(--el-shell);color:var(--el-text);border-color:var(--el-shell-border)}
 .portal-shell{border-bottom:1px solid var(--el-shell-border)}
-.portal-shell>.wrap:first-child{position:relative;display:block;max-width:1280px;min-height:174px;margin:auto;padding:0 34px}
-.portal-shell .brand{position:absolute;top:-4px;left:-16px;z-index:5;display:block;width:180px;height:180px;margin:0;text-decoration:none;color:var(--el-text);font-weight:800;line-height:1;letter-spacing:-.055em}
+.portal-shell>.wrap:first-child{position:relative;display:block;max-width:1440px;min-height:174px;margin:auto;padding:0 34px}
+.portal-shell .brand{position:absolute;top:-4px;left:16px;z-index:5;display:block;width:180px;height:180px;margin:0;text-decoration:none;color:var(--el-text);font-weight:800;line-height:1;letter-spacing:-.055em}
 .portal-shell .brand-logo{display:block;width:180px;height:180px;object-fit:contain;flex-shrink:0}
 .portal-shell .brand>span{position:absolute;top:45px;left:198px;display:block;width:max-content;margin:0;font-size:48px;line-height:.98;letter-spacing:-.068em;white-space:nowrap}
 .portal-shell .brand b{display:inline;font-weight:900}
@@ -28,12 +28,12 @@
 .portal-shell a:focus-visible,.portal-shell button:focus-visible,.portal-shell summary:focus-visible,.portal-shell-footer a:focus-visible{outline:2px solid var(--el-focus);outline-offset:2px}
 .portal-shell-footer{margin-top:20px;padding:24px 0;border-top:1px solid var(--el-shell-border);font-size:12px;line-height:1.6}
 .portal-shell-footer>.wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px 20px}
-.portal-shell-footer .el-measurement-preferences{order:3;margin:0;padding:9px 14px;align-self:center;white-space:normal}
-@media(min-width:651px){.portal-shell~main.wrap,.portal-shell-footer>.wrap{max-width:1440px;padding-left:24px;padding-right:24px}.portal-shell>.wrap:first-child{max-width:1440px}}
+.portal-shell-footer .el-measurement-preferences{order:3;align-self:center}
+@media(min-width:651px){.portal-shell-footer>.wrap{--el-wrap-max:1440px;--el-wrap-gutter:24px}}
 .portal-shell-footer a{color:var(--el-text)}
 .portal-shell-footer a:hover{color:var(--el-action-hover)}
 .portal-shell-footer .footer-contact{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;order:2}
-.portal-shell-footer .footer-contact-link{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;background:transparent;text-decoration:none;transition:transform .18s ease}
+.portal-shell-footer .footer-contact-link{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:transparent;text-decoration:none;transition:transform .18s ease}
 .portal-shell-footer .footer-contact-icon{display:grid;place-items:center;flex:0 0 auto;width:42px;height:42px;border-radius:50%;color:#fff}
 .portal-shell-footer .footer-contact-icon svg{width:29px;height:29px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .portal-shell-footer .footer-contact-whatsapp .footer-contact-icon{background:#25d366}
@@ -41,7 +41,6 @@
 .portal-shell-footer .footer-contact-email .footer-contact-icon{background:#ea4335}
 .portal-shell-footer .footer-contact-youtube .footer-contact-icon{background:#ff0000}
 .portal-shell-footer .footer-help-link .footer-contact-icon{background:var(--el-action,#C94720)}
-.portal-shell-footer .footer-contact-link:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:50%}
 .portal-shell-footer .footer-contact-link:hover{transform:translateY(-2px)}
 @media(max-width:1190px){
  .portal-shell>.wrap:first-child{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;column-gap:20px;min-height:172px;padding:5px 24px}

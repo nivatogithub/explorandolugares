@@ -25,8 +25,8 @@ def remove_redundant_pages(public: Path, catalog: Path) -> list[str]:
 
 def remove_credit_pages(public: Path) -> list[str]:
     removed=[]
-    for locale in ('', 'en/', 'pt-br/'):
-        folder=public/f'{locale}creditos-fotograficos'
+    for locale,section in ((locale,section) for locale in ('', 'en/', 'pt-br/') for section in ('creditos-fotograficos','creditos-imagenes-caribe')):
+        folder=public/f'{locale}{section}'
         for page in folder.rglob('*') if folder.exists() else []:
             if page.is_file():
                 page.unlink();removed.append(page.relative_to(public).as_posix())

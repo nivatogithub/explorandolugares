@@ -392,3 +392,13 @@ Los rechazos conocidos del formulario de contacto usan razones estables y un cat
 Los mensajes de participación también se identifican mediante claves estables y se traducen en la presentación de la respuesta. Las reglas de validación y los datos almacenados no dependen del idioma; el alcance de las pruebas figura en `unificacion/ARCHITECTURE_STAGES.md`.
 
 La lectura administrativa de solicitudes públicas reside en `PublicRequestSelector`; la autorización y la gestión de la petición siguen en el controlador, y la revisión en `PublicRequestService`. La presentación y otras consultas administrativas pendientes se tratan en etapas independientes.
+
+## Portada, componentes compartidos y procedencia de imágenes — 6/11/2026
+
+La portada se presenta desde `views/home-main.php`, con textos ES/EN/PT-BR en `presentation/home.json`. Las entradas de viajeros y negocios, imágenes, enlaces y tarjetas existen en el HTML inicial. La selección editorial se declara por slugs estables en `content/home-featured-attractions.json`; `HomeAttractions` utiliza el selector de lugares publicados y entrega un modelo público sin procedencia interna. Un lugar/atractivo no publicado o sin medio/traducción no produce una tarjeta ni un enlace vacío. No se presenta esta selección como un ranking estadístico.
+
+La geometría de `.wrap` y del hero pertenece a `style.css`; encabezado/pie/menú a `portal-shell.css`; el panel comercial `.allies` exclusivamente a `portal-allies.css`; el estilo interno del control de privacidad a `cobertura/analytics.css`. Los contextos proporcionan parámetros CSS al componente propietario; no añaden capas para pisar sus declaraciones. El menú conserva su controlador de interacción: no reconstruye contenido ni introduce recursos o etiquetas editoriales.
+
+La procedencia de imágenes se conserva para revisión interna y no se imprime automáticamente en tarjetas, pies de imagen ni páginas públicas de créditos. Los datos de autor/fuente/licencia no son textos públicos de presentación. Las antiguas rutas de créditos están retiradas (410); no borrar por ello los registros privados ni cambiar los archivos de las imágenes. Esta regla no elimina las licencias de las bibliotecas de software ni cambia la atribución del proveedor cartográfico.
+
+El constructor ejecuta los controles de propiedad CSS, contrato PHP del shell y contrato de presentación pública de medios. Debe fallar ante un parche de estilos fuera de su componente, duplicación del shell, reaparición de créditos públicos o reconstrucción HTML desde el controlador del menú. Las pruebas usan modelos preparados o SQLite sintético; no requieren modificar producción ni reiniciar métricas. La deuda histórica fuera de estos componentes no se declara resuelta por esta entrega.

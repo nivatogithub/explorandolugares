@@ -12,6 +12,10 @@ declare(strict_types=1);
 </h1>
 <p class="intro"><?=$e($copy['hero_intro'])?>
 </p>
+<div class="home-audience-explanations">
+<p><strong><?=$e($copy['traveller_role_title'])?></strong> <?=$e($copy['traveller_role_intro'])?></p>
+<p><strong><?=$e($copy['business_role_title'])?></strong> <?=$e($copy['business_role_intro'])?></p>
+</div>
 <div class="home-editorial-actions">
 <a class="pill" href="#para-viajeros"><?=$e($copy['find_place'])?>
 </a>

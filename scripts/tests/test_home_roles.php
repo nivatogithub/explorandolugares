@@ -20,4 +20,7 @@ $styles=file_get_contents(__DIR__.'/../../backend/public/assets/home-attractions
 foreach(['.home-editorial-copy h1','.home-business-entry','!important'] as $patch){
  if(str_contains($styles,$patch))throw new RuntimeException('Home stylesheet must not patch existing component declarations: '.$patch);
 }
+$item['creator']='Internal creator';$item['license_name']='INTERNAL LICENSE';$item['source_url']='https://research.example.invalid/image';$item['license_url']='https://license.example.invalid/private';
+$html=PortalPresentation::homeMain('es',[$item]);
+foreach(['Internal creator','INTERNAL LICENSE','research.example.invalid','license.example.invalid'] as $private)if(str_contains($html,$private))throw new RuntimeException('Private image provenance leaked into home HTML');
 echo "OK: traveller/business routes, original gallery, attraction cards, anchors and translations\n";

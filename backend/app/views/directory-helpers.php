@@ -5,11 +5,9 @@ require_once dirname(__DIR__).'/BusinessLocationLink.php';
 function e(mixed $value): string { return htmlspecialchars((string)$value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 function u(string $path): string { return $path; }
 function mediaPath(?array $media): string { return $media ? u('/'.e($media['path'])) : ''; }
-function credit(?array $media): string {
-    if (!$media) return '';
-    if (in_array($media['origin']??'external',['own','ai_generated'],true)) return '';
-    return '<figcaption class="credit"><a href="'.e($media['source_url']).'">'.e($media['creator']).'</a> · <a href="'.e($media['license_url']).'">'.e($media['license_name']).'</a></figcaption>';
-}
+/** Media provenance stays in the private catalog, never in public captions. */
+function credit(?array $media): string { return ''; }
+
 function contactHref(array $contact): ?string {
     $value=trim((string)($contact['contact_value']??''));
     return match ((string)($contact['channel']??'')) {

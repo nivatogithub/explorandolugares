@@ -1,0 +1,25 @@
+/* Single owner of the shared commercial panel, including its home variant. */
+.allies{display:grid;grid-template-columns:var(--el-business-panel-columns,1.1fr 1fr);gap:var(--el-business-panel-gap,55px);align-items:var(--el-business-panel-align,stretch);padding:var(--el-business-panel-padding,50px);border:var(--el-business-panel-border,0);border-radius:14px;background:var(--el-business-panel-background,linear-gradient(125deg,#d94f28 0%,#ee7a32 100%));color:var(--el-business-panel-text,var(--el-page))}
+.allies h2{font-size:var(--el-business-panel-title-size,clamp(30px,4vw,45px));margin:var(--el-business-panel-title-margin,14px 0 22px);color:var(--el-business-panel-text,var(--el-card))}
+.allies p{color:var(--el-business-panel-text,#fff7ed)}
+.allies .eyebrow{color:var(--el-business-panel-eyebrow,#ffe199)}
+.allies .pill{background:var(--el-business-panel-button-background,var(--el-panel));border-color:var(--el-business-panel-button-background,var(--el-panel));color:var(--el-business-panel-button-text,#a83b22)}
+.allies .pill:hover{background:var(--el-business-panel-button-hover,#ffe0a0);border-color:var(--el-business-panel-button-hover,#ffe0a0)}
+.home-intro-proposal{
+ --el-business-panel-columns:minmax(0,1fr) auto;
+ --el-business-panel-align:center;
+ --el-business-panel-padding:28px 32px;
+ --el-business-panel-gap:24px;
+ --el-business-panel-title-size:clamp(26px,3vw,36px);
+ --el-business-panel-title-margin:8px 0 12px;
+ --el-business-panel-mobile-padding:24px;
+ --el-business-panel-mobile-gap:20px;
+ --el-business-panel-background:var(--el-shell);
+ --el-business-panel-text:var(--el-text);
+ --el-business-panel-border:1px solid var(--el-shell-border);
+ --el-business-panel-eyebrow:var(--el-action-hover);
+ --el-business-panel-button-background:var(--el-action);
+ --el-business-panel-button-text:var(--el-on-action);
+ --el-business-panel-button-hover:var(--el-action-hover);
+}
+@media(max-width:760px){.allies{grid-template-columns:1fr;padding:var(--el-business-panel-mobile-padding,28px);gap:var(--el-business-panel-mobile-gap,24px)}}

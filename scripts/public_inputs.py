@@ -21,7 +21,7 @@ def collect(root,public):
    name=source.relative_to(base).as_posix()
    if name=='__composiciones-inicio/index.html':
     continue
-   if name in retired_html:
+   if name in retired_html or __import__('re').match(r'^(?:(?:en|pt-br)/)?creditos-(?:fotograficos|imagenes-caribe)/',name):
     continue
    # Never stage a retired static implementation only to delete it later.
    # The dynamic PHP route owns every destination detail URL.
