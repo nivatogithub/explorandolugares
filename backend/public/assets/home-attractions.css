@@ -2,6 +2,10 @@
 /* Home presentation parameters consumed by the existing hero and commercial panel.
    Component layout/typography declarations remain in their original stylesheet. */
 .home-intro-proposal{
+ --el-home-columns:minmax(0,1fr) minmax(330px,1fr);
+ --el-home-column-gap:32px;
+ --el-home-copy-max:none;
+ --el-home-intro-max:100%;
  --el-home-title-size:clamp(38px,4.3vw,58px);
  --el-home-title-mobile-size:clamp(38px,4.3vw,58px);
  --el-home-title-leading:1.06;
