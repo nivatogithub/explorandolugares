@@ -59,11 +59,11 @@ declare(strict_types=1);
 </div>
 </section>
 <section id="para-negocios" class="section" aria-labelledby="home-business-title">
-<div class="allies home-business-entry">
+<div class="allies">
 <div>
 <p class="eyebrow"><?=$e($copy['business_eyebrow'])?></p>
 <h2 id="home-business-title"><?=$e($copy['business_title'])?></h2>
-<p><?=$e($copy['business_intro'])?></p>
+<p class="home-business-description"><?=$e($copy['business_intro'])?></p>
 </div>
 <div class="home-business-actions">
 <a class="pill" href="/negocios/registro/?tipo=business<?=$locale==='es'?'':'&amp;lang='.$e($locale)?>"><?=$e($copy['register_business'])?></a>
