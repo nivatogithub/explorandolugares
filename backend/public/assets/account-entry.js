@@ -38,7 +38,16 @@
     let dialog=document.querySelector('[data-account-auth-dialog]');
     if(!dialog){dialog=document.createElement('dialog');dialog.className='account-login-dialog account-auth-dialog';dialog.dataset.accountAuthDialog='';dialog.setAttribute('aria-label',copy[3]);dialog.innerHTML='<button type="button" class="account-login-close" aria-label="Cerrar">×</button><div data-account-auth-content role="status">Cargando…</div>';document.body.append(dialog);dialog.addEventListener('cancel',event=>{event.preventDefault();closeAuth(dialog);});}
     if(!dialog.open)dialog.showModal();
-    try{const response=await fetch(url,{credentials:'same-origin',cache:'no-store'});await renderAuth(response,dialog);}
+    try{
+      const response=await fetch(url,{credentials:'same-origin',cache:'no-store'});
+      // A session can become active in another tab while the dialog request is in flight.
+      if(!authPath(new URL(response.url))){
+        const check=await fetch('/api/account-session.php',{credentials:'same-origin',cache:'no-store'});
+        const state=check.ok?await check.json():null;
+        if(state?.authenticated){await refreshAccount();dialog.close();dialog.remove();if(typeof authSuccess==='function')await authSuccess(state);return;}
+      }
+      await renderAuth(response,dialog);
+    }
     catch{dialog.querySelector('[data-account-auth-content]').textContent=modalCopy[8];}
   }
   async function renderAuth(response,dialog){

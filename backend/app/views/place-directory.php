@@ -26,7 +26,7 @@
 <a class="place-directory-clear" href="<?=$e($path)?>" data-clear-filters><?=$e($copy['clear'])?></a>
 </div></div><noscript><button type="submit" class="place-directory-fallback"><?=$e($copy['apply'])?></button></noscript>
 </form>
-<p class="place-directory-results" role="status"><?=$e($data['total']?sprintf($copy['results'],$data['first'],$data['last'],$data['total']):(!empty($filters['saved'])?$copy['savedEmpty']:$copy['empty']))?></p>
+<p class="place-directory-results" role="status" data-removed-message="<?=$e($copy['savedRemoved'])?>"><?=$e($data['total']?sprintf($copy['results'],$data['first'],$data['last'],$data['total']):(!empty($filters['saved'])?$copy['savedEmpty']:$copy['empty']))?></p>
 <div class="destination-grid" id="place-directory-grid">
 <?php foreach($rows as $place):?><article class="destination-card <?=$place['heritageText']!==''?'has-heritage':''?>" data-place-slug="<?=$e($place['slug'])?>"><?php if($place['heritageText']!==''):?><span class="place-heritage-star" role="img" aria-label="<?=$e($place['heritageText'])?>" title="<?=$e($place['heritageText'])?>">★</span><?php endif ?><a class="destination-card-image" href="<?=$e($place['url'])?>"><?php if(!empty($place['asset_path'])):?><img src="/<?=$e(ltrim($place['asset_path'],'/'))?>" alt="<?=$e($place['alt_text']?:$place['display_name'])?>" loading="lazy"><?php endif ?></a><div class="copy">
 <?php $placeLabels=$place['labels'];require __DIR__.'/place-labels.php'; ?><h2><a href="<?=$e($place['url'])?>"><?=$e($place['display_name'])?></a></h2><p><?=$e($place['intro'])?></p><div class="place-card-actions"><a class="text-link" href="<?=$e($place['url'])?>"><?=$e($copy['visit'])?></a><?php SavedPlaceAction::render($place['bookmark']); ?></div></div></article><?php endforeach ?>

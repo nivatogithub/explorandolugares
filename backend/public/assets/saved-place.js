@@ -16,10 +16,21 @@
     if(response.ok&&result.ok&&typeof result.saved==='boolean')applyState(form,result);
     else form.querySelector('[data-saved-place-feedback]').textContent=form.dataset.saveError;
   };
-  const authenticate = form => document.dispatchEvent(new CustomEvent('el:request-login',{detail:{
-    trigger:form.querySelector('.saved-place-action'),url:form.dataset.authUrl,
-    onSuccess:()=>refreshState(form),
-  }}));
+  const authenticate = async form => {
+    try {
+      const response=await fetch('/api/account-session.php',{credentials:'same-origin',cache:'no-store'});
+      const account=response.ok?await response.json():null;
+      if(account?.authenticated){
+        await refreshState(form);
+        if(form.dataset.authenticated==='1'&&form.elements.namedItem('action').value==='save_place')form.requestSubmit();
+        return;
+      }
+    } catch (_) { /* The dialog owns connection feedback if the session check cannot complete. */ }
+    document.dispatchEvent(new CustomEvent('el:request-login',{detail:{
+      trigger:form.querySelector('.saved-place-action'),url:form.dataset.authUrl,
+      onSuccess:async()=>{await refreshState(form);if(form.dataset.authenticated==='1'&&form.elements.namedItem('action').value==='save_place')form.requestSubmit();},
+    }}));
+  };
   document.addEventListener('el:authenticated',()=>{
     for(const form of document.querySelectorAll('.saved-place-control'))refreshState(form).catch(()=>{});
   });
@@ -31,7 +42,7 @@
     const form = event.target;
     if (!(form instanceof HTMLFormElement) || !form.matches('.saved-place-control')) return;
     event.preventDefault();
-    if(form.dataset.authenticated==='0'){authenticate(form);return;}
+    if(form.dataset.authenticated==='0'){await authenticate(form);return;}
     const button = form.querySelector('.saved-place-action');
     const action = form.elements.namedItem('action');
     const feedback = form.querySelector('[data-saved-place-feedback]');
@@ -58,6 +69,7 @@
       }
       if (authLink) authLink.hidden = true;
       applyState(form,result);
+      document.dispatchEvent(new CustomEvent('el:saved-place-changed',{detail:{form,saved:result.saved}}));
     } catch (_) {
       if (feedback) feedback.textContent = form.dataset.saveError || 'No se pudo guardar. Inténtalo de nuevo.';
     } finally {

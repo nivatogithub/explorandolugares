@@ -53,6 +53,34 @@
     if (['region','sector'].includes(event.target.name)) department.value = '';
     navigate();
   });
+  let savedRefresh=0;
+  document.addEventListener('el:saved-place-changed',async event=>{
+    if(event.detail?.saved!==false||!form.elements.namedItem('guardados')?.checked)return;
+    const grid=document.querySelector('#place-directory-grid');
+    const card=event.detail.form.closest('.destination-card');
+    if(!grid||!card||!grid.contains(card))return;
+    const index=Array.from(grid.children).indexOf(card);card.remove();
+    const version=++savedRefresh;
+    try{
+      // The existing PHP catalogue owns cards, empty state, totals and pagination.
+      const response=await fetch(location.href,{credentials:'same-origin',cache:'no-store'});
+      if(!response.ok||new URL(response.url).origin!==location.origin)throw new Error('Catalogue unavailable');
+      const page=new DOMParser().parseFromString(await response.text(),'text/html');
+      const freshGrid=page.querySelector('#place-directory-grid');
+      const freshStatus=page.querySelector('.place-directory-results');
+      if(!freshGrid||!freshStatus)throw new Error('Catalogue not returned');
+      if(version!==savedRefresh)return;
+      grid.replaceChildren(...Array.from(freshGrid.childNodes));
+      status.textContent=freshStatus.textContent;
+      const pagination=document.querySelector('.place-directory-pagination');
+      const freshPagination=page.querySelector('.place-directory-pagination');
+      if(pagination){if(freshPagination)pagination.replaceWith(freshPagination);else pagination.remove();}
+      else if(freshPagination)grid.after(freshPagination);
+      const controls=grid.querySelectorAll('.saved-place-action');
+      if(controls.length)controls[Math.min(index,controls.length-1)].focus({preventScroll:true});
+      else {status.tabIndex=-1;status.focus({preventScroll:true});}
+    }catch(_){if(version===savedRefresh)status.textContent=status.dataset.removedMessage;}
+  });
   const schedule = () => { clearTimeout(timer); if (!composing) timer = setTimeout(navigate, 650); };
   search.addEventListener('input', schedule);
   search.addEventListener('compositionstart', () => { composing = true; clearTimeout(timer); });
