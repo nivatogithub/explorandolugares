@@ -4,6 +4,7 @@ require_once __DIR__.'/BusinessServiceSections.php';
 require_once __DIR__.'/GeolocationPolicy.php';
 require_once __DIR__.'/BusinessOwnershipEvidence.php';
 require_once __DIR__.'/BusinessRegistrationPlan.php';
+require_once __DIR__.'/BusinessLocationLink.php';
 
 require_once __DIR__.'/ExperienceOperatorAddon.php';
 require_once __DIR__.'/SubscriptionChangeService.php';
@@ -117,7 +118,7 @@ final class BusinessSubscriptionAdminService
             $q=$this->pdo->prepare('SELECT * FROM business_subscriptions WHERE business_id=? ORDER BY id DESC LIMIT 1');$q->execute([$businessId]);$sub=$q->fetch(PDO::FETCH_ASSOC);
             if(!$sub)throw new RuntimeException('Registra la suscripción antes de publicar el negocio.');
             $operatorService=new ExperienceOperatorAddon($this->pdo);$operator=$operatorService->forSubscription((int)$sub['id']);if($operator){$operatorService->requireEligible($businessId);$destinationQuery=$this->pdo->prepare('SELECT destination_id FROM businesses WHERE id=?');$destinationQuery->execute([$businessId]);$operatorService->quote($sub['plan_code'],(string)$sub['billing_frequency'],(int)$destinationQuery->fetchColumn(),(int)$operator['experience_id']);}
-            if($sub['plan_code']!=='free'&&(trim((string)$business['location_map_url'])===''||!(bool)$business['location_confirmed']))throw new RuntimeException('Confirma en el mapa que la dirección y el punto corresponden al lugar antes de publicar.');
+            if($sub['plan_code']!=='free'&&!BusinessLocationLink::hasConfirmedPoint($business))throw new RuntimeException('Confirma en el mapa que la dirección y el punto corresponden al lugar antes de publicar.');
             if(trim((string)$business['address_text'])===''&&($business['latitude']===null||$business['longitude']===null)&&$sub['plan_code']!=='free')throw new RuntimeException('Completa una dirección o un punto de ubicación antes de publicar.');
             if($sub['plan_code']!=='free'){$q=$this->pdo->prepare('SELECT COUNT(*) FROM business_contacts WHERE business_id=? AND channel IN ("phone","phone_fixed","whatsapp") AND contact_value<>""');$q->execute([$businessId]);if((int)$q->fetchColumn()<1)throw new RuntimeException('Registra un teléfono fijo, celular o WhatsApp de contacto antes de publicar.');}
             if($sub['publish_not_before']!==null&&$localPublishDate<$sub['publish_not_before'])throw new RuntimeException('La fecha elegida todavía no permite publicar este negocio.');

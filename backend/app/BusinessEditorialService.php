@@ -6,6 +6,7 @@ require_once __DIR__.'/BusinessContactVisibility.php';
 require_once __DIR__.'/PremiumBusinessProfile.php';
 require_once __DIR__.'/BusinessShowcase.php';
 require_once __DIR__.'/BusinessRegistrationPlan.php';
+require_once __DIR__.'/BusinessLocationLink.php';
 /** Immutable payloads and explicit approval of the exact version. Never sends mail or generates images on save. */
 final class BusinessEditorialService
 {
@@ -130,7 +131,7 @@ $adminInput=$payload;
   $business=(int)$v['business_id'];if($this->options($business)['code']!==$v['plan_code'])throw new RuntimeException('La suscripción cambió; prepara otra versión.');
   $p=$this->payload($v,$business);
   if($v['plan_code']==='page_premium'){BusinessShowcase::validate($p['showcase']??[]);BusinessShowcase::clean($this->pdo,$business,array_merge($p['showcase']??[],['category_codes'=>[$p['category_code'],...($p['category_codes']??[])]]),$p['showcase']??[],true);}
-  if($v['plan_code']!=='free'&&(empty($p['location_confirmed'])||trim((string)($p['location_map_url']??''))===''))throw new RuntimeException('Completa y confirma la ubicación antes de preparar la versión final.');
+  if($v['plan_code']!=='free'&&!BusinessLocationLink::hasConfirmedPoint($p))throw new RuntimeException('Completa y confirma la ubicación antes de preparar la versión final.');
   // Validate production rules in a rollback-only savepoint. No public change is committed.
   $state=$this->pdo->prepare('SELECT publication_status FROM businesses WHERE id=?');$state->execute([$business]);$wasPublished=$state->fetchColumn()==='published';
   $this->pdo->exec('SAVEPOINT editorial_validation');

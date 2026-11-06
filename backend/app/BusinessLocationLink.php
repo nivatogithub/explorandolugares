@@ -3,10 +3,22 @@ declare(strict_types=1);
 /** Navigate to a business's stored point; preserve verified listings as fallback. */
 final class BusinessLocationLink
 {
+    /** Publication uses the confirmed stored point, not an optional legacy URL. */
+    public static function hasConfirmedPoint(array $business):bool
+    {
+        return !empty($business['location_confirmed']) && self::hasCoordinates($business);
+    }
+
+    private static function hasCoordinates(array $business):bool
+    {
+        $lat=$business['latitude']??null;$lon=$business['longitude']??null;
+        return is_numeric($lat)&&is_numeric($lon)&&is_finite((float)$lat)&&is_finite((float)$lon)&&abs((float)$lat)<=90&&abs((float)$lon)<=180;
+    }
+
     public static function forBusiness(array $business,?string $userAgent=null):string
     {
         $lat=$business['latitude']??null;$lon=$business['longitude']??null;
-        if(is_numeric($lat)&&is_numeric($lon)&&is_finite((float)$lat)&&is_finite((float)$lon)&&abs((float)$lat)<=90&&abs((float)$lon)<=180){
+        if(self::hasCoordinates($business)){
             $number=static fn($v)=>rtrim(rtrim(sprintf('%.7F',(float)$v),'0'),'.');
             $point=$number($lat).','.$number($lon);
             $name=trim((string)($business['display_name']??''));

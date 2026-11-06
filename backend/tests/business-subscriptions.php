@@ -23,7 +23,7 @@ CREATE TABLE business_subscription_payment_evidence(id INTEGER PRIMARY KEY AUTOI
 $pdo->exec(file_get_contents(__DIR__.'/../database/migrations/044-subscription-changes.sqlite.sql'));
 $pdo->exec(file_get_contents(__DIR__.'/../database/migrations/040-payment-transaction-details.sqlite.sql'));
 $pdo->exec(file_get_contents(__DIR__.'/../database/migrations/041-experience-operator-addon.sqlite.sql'));
-$pdo->exec("INSERT INTO businesses VALUES(1,'Calle 10 # 5-12',6.1223,-75.7869,'ACTIVO','ABIERTO','draft',CURRENT_TIMESTAMP,'owner_submitted','https://www.google.com/maps/place/Cafe/@6.1223,-75.7869,18z',1);
+$pdo->exec("INSERT INTO businesses VALUES(1,'Calle 10 # 5-12',6.1223,-75.7869,'ACTIVO','ABIERTO','draft',CURRENT_TIMESTAMP,'owner_submitted','',1);
 INSERT INTO subscription_plans VALUES('free',1,1,0,0,0,0,0,0),('basic',2,1,0,0,300,0,0,0),('featured',3,1,0,0,500,1000,0,0),('page',4,1,0,1,750,2000,0,0),('page_premium',5,1,2,1,1000,3500,1500,1500);
 INSERT INTO subscription_plan_translations VALUES('free','es','Gratis','Directorio'),('basic','es','Básico','Resumen'),('featured','es','Destacado','Tarjeta'),('page','es','Página','Sitio'),('page_premium','es','Página Premium','Sitio ampliado');
 INSERT INTO subscription_plan_prices VALUES('page','quarterly',120000,'COP'),('page_premium','quarterly',NULL,'COP');

@@ -20,6 +20,9 @@ locationCheck(str_contains(directoryActions($business,[],'es'),'maps/search/'), 
 locationCheck(str_starts_with(BusinessLocationLink::forBusiness($business,'Android'),'geo:5.791,-75.786?q='),'Android must retain the device map handler.');
 foreach(['iPhone','iPad','Macintosh Mobile'] as $agent)locationCheck(str_starts_with(BusinessLocationLink::forBusiness($business,$agent),'https://maps.apple.com/?ll='),'Apple devices must retain their map link.');
 foreach([[null,null],['bad',1],[91,1],[1,-181],[INF,1],[1,NAN],[1,null]] as [$lat,$lon])locationCheck(BusinessLocationLink::forBusiness(['latitude'=>$lat,'longitude'=>$lon])==='','Invalid and incomplete coordinates must not generate a link.');
+locationCheck(BusinessLocationLink::hasConfirmedPoint(['latitude'=>'5.7910000','longitude'=>'-75.7860000','location_confirmed'=>1,'location_map_url'=>'']), 'A confirmed stored point must not require a legacy map URL.');
+foreach([[null,null],['bad',1],[91,1],[1,-181],[INF,1],[1,NAN],[1,null]] as [$lat,$lon])locationCheck(!BusinessLocationLink::hasConfirmedPoint(['latitude'=>$lat,'longitude'=>$lon,'location_confirmed'=>1,'location_map_url'=>'https://maps.app.goo.gl/ExampleFixture']), 'A legacy URL must not authorize invalid or incomplete coordinates.');
+locationCheck(!BusinessLocationLink::hasConfirmedPoint(['latitude'=>5.791,'longitude'=>-75.786,'location_confirmed'=>0]), 'An unconfirmed point must remain blocked.');
 $registered=$business;$registered['location_map_url']='https://www.google.com/maps/search/?api=1&query=5.791%2C-75.786';
 locationCheck(BusinessLocationLink::forBusiness($registered,'Windows NT')===$registered['location_map_url'],'Registration URL and stored point must agree.');
 $business['preview_only']=true;
