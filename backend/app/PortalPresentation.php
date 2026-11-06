@@ -11,6 +11,10 @@ final class PortalPresentation
         return $config ??= json_decode(file_get_contents(__DIR__.'/presentation/shell.json'),true,32,JSON_THROW_ON_ERROR);
     }
     public static function brandLogo():string {return self::config()['logo'];}
+    public static function brandIcons():string
+    {
+        return '<link rel="icon" href="/assets/brand/logo-transparente-20261106-32.png" type="image/png" sizes="32x32"><link rel="icon" href="/assets/brand/favicon-transparente-20261106.ico" sizes="16x16 32x32 48x48"><link rel="apple-touch-icon" href="/assets/brand/logo-transparente-20261106-180.png" sizes="180x180">';
+    }
     private static function resourceVersions():array
     {
         $path=(self::$publicRoot??dirname(__DIR__).'/public').'/asset-manifest.json';
@@ -69,7 +73,7 @@ final class PortalPresentation
         $resources=$context==='admin'?array_merge($modules['admin']['css'],$modules['admin']['js']):array_merge($modules['common']['css'],$modules['common']['js']);
         if($context==='preview')$resources=$modules['common']['css'];
         if($account&&!in_array($context,['admin','preview'],true))$resources=array_merge($resources,$modules['account']['css'],$modules['account']['js']);
-        $html='';
+        $html=$type==='js'?'':self::brandIcons();
         foreach($resources as $name){
             if($type!=='all'&&!str_ends_with($name,'.'.$type))continue;
             $path='/assets/'.$name;$url=$path.(isset($versions[$path])?'?v='.$versions[$path]:'');
