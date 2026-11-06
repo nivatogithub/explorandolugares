@@ -17,3 +17,9 @@ foreach(['es','en','pt-BR'] as $locale)foreach([[false,false],[true,false],[true
  if(!$auth&&(!str_contains($html,'<a ')||!str_contains($html,'title="')))throw new Exception('Anonymous affordance missing');
 }
 echo "OK bookmark: server-rendered anonymous/unsaved/saved in 3 languages; pending intent does not write, authenticated completion single-use, expiration, ownership\n";
+
+if(!SavedPlaceAction::accessNoticeRequired([],['session_return'=>'/lugares/?guardados=1']))throw new Exception('Saved filter needs explanation');
+if(!SavedPlaceAction::accessNoticeRequired([],['session_return'=>'/en/lugares/?q=Jerico&guardados=1']))throw new Exception('Localized saved filter needs explanation');
+if(!SavedPlaceAction::accessNoticeRequired([],['saved_place_intent'=>['slug'=>'jerico']]))throw new Exception('Bookmark needs explanation');
+if(SavedPlaceAction::accessNoticeRequired([],['session_return'=>'/negocios/portal/'])||SavedPlaceAction::accessNoticeRequired([],['session_return'=>'/lugares/?q=Jerico']))throw new Exception('Unrelated access got saved-place explanation');
+echo "OK account-benefit explanation for save and private filters, unrelated access unchanged\n";

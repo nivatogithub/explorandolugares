@@ -12,8 +12,10 @@ require_once dirname(__DIR__).'/_portal-shell.php';
 require_once dirname(__DIR__,2).'/app/AccountAuthPresentation.php';
 require_once dirname(__DIR__,2).'/app/AccountResidence.php';
 require_once dirname(__DIR__,2).'/app/AccountResidencePresentation.php';
+require_once dirname(__DIR__,2).'/app/SavedPlaceAction.php';
 $accountLayout=account_layout_context();
 AccountAuthPresentation::render('personal-registration',$accountLayout,[
+    'savedPlacesBenefit'=>SavedPlaceAction::accessNoticeRequired($_GET,$_SESSION),
     'error'=>$error,'csrf'=>$accountLayout['csrf'],
     'displayName'=>(string)($_POST['display_name']??''),'email'=>(string)($_POST['email']??''),
     'residence'=>AccountResidencePresentation::context(AccountResidence::catalog(),$_POST),

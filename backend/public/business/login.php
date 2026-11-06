@@ -27,5 +27,6 @@ try{
 }catch(Throwable $e){PortalIncidents::technical($e,'account_login');$error=$e->getMessage();http_response_code(400);}
 require_once dirname(__DIR__).'/_portal-shell.php';
 require_once dirname(__DIR__,2).'/app/AccountAuthPresentation.php';
-$viewData=['csrf'=>(string)$_SESSION['csrf'],'email'=>(string)($_POST['email']??''),'closed'=>($_GET['cuenta']??'')==='cerrada','error'=>$error,'savedPlacesBenefit'=>!empty($_SESSION['saved_place_intent'])];
+require_once dirname(__DIR__,2).'/app/SavedPlaceAction.php';
+$viewData=['csrf'=>(string)$_SESSION['csrf'],'email'=>(string)($_POST['email']??''),'closed'=>($_GET['cuenta']??'')==='cerrada','error'=>$error,'savedPlacesBenefit'=>SavedPlaceAction::accessNoticeRequired($_GET,$_SESSION)];
 AccountAuthPresentation::render('login',account_layout_context(),$viewData,dirname(__DIR__));

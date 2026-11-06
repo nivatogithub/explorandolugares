@@ -42,3 +42,7 @@ Si cambia el enlace: `python3 dev/enable-review-tunnel.py --host HOST.trycloudfl
 Monumento Las Guitarras, Agustín Codazzi: `assets/editorial-38/QC-40-2.webp` contiene bandas blancas laterales dentro del archivo. No se modificó ni regeneró la imagen aprobada; necesita revisión de encuadre independiente.
 
 Producción no se ha modificado. Requiere aprobación visual y el circuito habitual de integración, migración y despliegue.
+
+## Explicación de registro
+
+Tanto el acceso desde un marcador como el filtro privado muestran el título «Guarda tus lugares por conocer» y explican, antes de los campos, que se necesita una cuenta para conservar la lista personal y recuperarla al volver a iniciar sesión o desde otro dispositivo. El mismo contexto se conserva al abrir Crear cuenta. Las pantallas de acceso ajenas a esta función no cambian. Texto renderizado en servidor en ES/EN/PT-BR. Verificado visualmente sin sesión desde `/lugares/?guardados=1` y al pasar a Crear cuenta.
