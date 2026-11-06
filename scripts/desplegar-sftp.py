@@ -137,7 +137,7 @@ def build(output, config=None):
     if config and config.get('public_root'):
         rewrite_private_app_includes(output / 'public', config['remote_base'])
     files = []
-    allowed = {'.html', '.php', '.css', '.js', '.json', '.svg', '.webp', '.png', '.txt', '.xml', '.zip', '.geojson'}
+    allowed = {'.html', '.php', '.css', '.js', '.json', '.svg', '.webp', '.png', '.ico', '.txt', '.xml', '.zip', '.geojson'}
     for kind in ('public', 'app'):
         for source in sorted((output / kind).rglob('*')):
             if source.is_symlink():
