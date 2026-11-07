@@ -5,6 +5,9 @@ from html.parser import HTMLParser
 import base64,datetime,fcntl,hashlib,html,http.cookiejar,json,os,re,secrets,struct,subprocess,sys,time,urllib.error,urllib.parse,urllib.request,zlib
 ROOT=Path(__file__).resolve().parents[2]; BASE='http://127.0.0.1:8088'; RUN='regresion-'+secrets.token_hex(8); EMAIL=RUN+'@pruebas.invalid';PASSWORD=secrets.token_urlsafe(24)+'A9';NEW=secrets.token_urlsafe(24)+'B8';REPORT=ROOT/'.local/preprod/regresion';results=[]
 PUBLIC_ONLY='--solo-publico' in sys.argv
+REGISTRATION_ONLY='--solo-registro' in sys.argv
+PACKAGE=Path(sys.argv[sys.argv.index('--paquete')+1]) if '--paquete' in sys.argv else None
+if REGISTRATION_ONLY:REPORT=REPORT/'registro-activacion'
 if PUBLIC_ONLY:REPORT=REPORT/'flujos-publicos'
 if '--solo-panel-lugares' in sys.argv:REPORT=REPORT/'panel-lugares'
 class Blocked(Exception):pass
@@ -65,7 +68,7 @@ def query(sql,params=[]):
  payload=base64.b64encode(json.dumps([sql,params]).encode()).decode();return json.loads(php('$v=json_decode(base64_decode("'+payload+'"),true);$q=$p->prepare($v[0]);$q->execute($v[1]);echo json_encode($q->fetchAll(PDO::FETCH_ASSOC));'))
 DEPENDENCIES={**{key:['NG-00'] for key in ['NG-06','PG-01','PG-03','PG-04','PG-05','PG-06','AZ-04']},
  **{key:['NG-06'] for key in ['PG-03','PG-04','PG-05']},
- 'CU-02':['CU-01'],'CU-03':['CU-01'],'CU-04':['CU-02','CU-03'],'CU-05':['CU-01'],
+ 'CU-02':['CU-01'],'CU-03':['CU-01'],'CU-06':['CU-02','CU-03'],'CU-04':['CU-06'],'CU-05':['CU-01'],
  'AU-01':['CU-04'],'AU-02':['CU-04'],'AU-03':['AU-01'],'AU-04':['AU-03'],
  'AZ-01':['AU-03'],'AZ-02':['AU-03'],'RC-01':['CU-04'],'RC-02':['CU-01'],
  'AU-05':['RC-01'],'NG-00':['RC-01'],'NG-01':['NG-00'],'NG-02':['NG-00'],
@@ -91,49 +94,99 @@ def login(client,password=PASSWORD):
  code,page,_=client.get('/negocios/acceso/');check(code==200,'No abre acceso');code,page,url=client.request('/negocios/acceso/',{'csrf':csrf(page),'email':EMAIL,'password':password});check(code==200 and client.state().get('authenticated'),'No se autenticó la cuenta');check('/cuenta/espacio/' not in url,'El acceso todavía obliga a elegir un rol');return page
 anon=Client();person=Client();fixtures=[]
 from data_guard import capture as capture_persistent,verify as verify_persistent
+def require_registration_package():
+ if PACKAGE is None:return
+ served=ROOT/'.local/preprod/release'
+ paths=[
+  'public/.htaccess','public/business/register.php','public/business/registration-choice.php',
+  'public/business/verify-email.php','public/business/login.php','public/assets/account-entry.js',
+  'app/AccountAuthPresentation.php','app/AccountResidencePresentation.php',
+  'app/AccountEmailVerificationService.php','app/AccountVerificationDelivery.php',
+  'app/AccountReactivationDelivery.php','app/BusinessAccountPortalService.php',
+  'app/views/account/auth-page.php','app/views/account/personal-registration.php',
+  'app/views/account/verify-email.php','app/views/account/residence-fields.php',
+ ]
+ for path in paths:
+  check((PACKAGE/path).is_file() and (served/path).is_file() and (PACKAGE/path).read_bytes()==(served/path).read_bytes(),
+        'Actualiza preprod antes de validar el registro: '+path)
+
 persistent_guard=None
 for attempt in range(3):
  try:
   runtime=json.loads(anon.get('/__preprod-runtime.php')[1]);check(runtime['database']['driver']=='mysql','Se requiere MariaDB/MySQL, no SQLite')
   php('echo "LOCAL";')
+  require_registration_package()
   persistent_guard=capture_persistent(query)
   break
  except Exception as error:
   if attempt<2:time.sleep(2);continue  # Read-only probes; no fixtures exist yet.
-  detail=str(error) if isinstance(error,RuntimeError) else type(error).__name__
+  detail=str(error) if isinstance(error,(AssertionError,RuntimeError)) else type(error).__name__
   print('Entorno no comprobado: '+detail+'. No se ejecutó ninguna escritura.');sys.exit(2)
 try:
  if '--solo-panel-lugares' not in sys.argv:
+  def submit_signup(client):
+   code,page,_=client.get('/negocios/registro/?tipo=traveler');check(code==200 and 'name="consent"' in page and 'name="residence_city_code"' in page,'Registro incompleto')
+   return client.request('/negocios/registro/?tipo=traveler',{'csrf':csrf(page),'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368','account_type':'traveler','display_name':RUN,'email':EMAIL,'password':PASSWORD,'password_confirm':PASSWORD,'consent':'1'})
   def signup():
-   code,page,_=person.get('/negocios/registro/?tipo=traveler');check(code==200,'No abre crear cuenta')
-   code,page,_=person.request('/negocios/registro/?tipo=traveler',{'csrf':csrf(page),'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368','account_type':'traveler','display_name':RUN,'email':EMAIL,'password':PASSWORD,'password_confirm':PASSWORD,'consent':'1'})
+   code,page,_=submit_signup(person)
+   check('data-resend-seconds=' in page,'Falta el contador tras el registro')
    check(code==200,'Falló creación de cuenta personal');row=account();check(row['status']=='pending_activation' and not row['email_verified_at'],'El alta debe quedar pendiente hasta verificar el correo');check(not person.state().get('authenticated'),'El registro autenticó sin confirmar el correo')
   case('CU-01','Crear cuenta personal con nombre, correo y contraseña',signup)
+  def activation_links():
+   mailbox=ROOT/'.local/preprod/private/mailbox.json'
+   with mailbox.open() as stream:
+    fcntl.flock(stream,fcntl.LOCK_SH)
+    messages=json.load(stream)
+   links=[]
+   for message in messages:
+    if message.get('to')!=EMAIL or message.get('kind')!='verification':continue
+    link=urllib.parse.urlsplit(message['url'])
+    check(link.scheme=='http' and link.netloc=='127.0.0.1:8088' and link.path=='/cuenta/verificar-correo/', 'Enlace de activación fuera de preprod')
+    check(re.fullmatch(r'token=[a-f0-9]{64}',link.query),'Token de activación mal formado')
+    links.append(link.path+'?'+link.query)
+   return links
   def verification():
-   row=account();messages=json.loads((ROOT/'.local/preprod/private/mailbox.json').read_text()) if (ROOT/'.local/preprod/private/mailbox.json').exists() else []
-   check(any(m.get('to')==EMAIL and '/cuenta/verificar-correo/' in m.get('url','') for m in messages),'No llegó un enlace de activación al buzón local')
+   check(len(activation_links())==1,'El alta debe producir exactamente un correo de activación')
   case('CU-02','Recibir enlace de verificación de correo al registrarse',verification)
   def activation_guard():
    fresh=Client();_,page,_=fresh.get('/negocios/acceso/');fresh.request('/negocios/acceso/',{'csrf':csrf(page),'email':EMAIL,'password':PASSWORD});check(not fresh.state().get('authenticated'),'El sistema permite iniciar sesión sin haber verificado el correo')
   case('CU-03','Impedir uso de cuenta sin validar el correo',activation_guard)
   def resend_activation():
-   c=Client();code,page,_=c.get('/cuenta/verificar-correo/');check(code==200,'No abre solicitud de reenvío')
-   mailbox=ROOT/'.local/preprod/private/mailbox.json';before=json.loads(mailbox.read_text());count=sum(m.get('to')==EMAIL and m.get('kind')=='verification' for m in before)
-   code,page,_=c.request('/cuenta/verificar-correo/',{'csrf':csrf(page),'email':EMAIL});check(code==200,'No acepta solicitud de reenvío')
-   after=json.loads(mailbox.read_text());check(sum(m.get('to')==EMAIL and m.get('kind')=='verification' for m in after)==count+1,'No se generó un nuevo mensaje de activación')
-  case('CU-06','Reenviar activación a cuenta pendiente',resend_activation)
+   def resend():
+    c=Client();code,page,_=c.get('/cuenta/verificar-correo/');check(code==200,'No abre solicitud de reenvío')
+    return c.request('/cuenta/verificar-correo/',{'csrf':csrf(page),'email':EMAIL})
+   def age_fixture_link():
+    query('UPDATE account_email_verifications SET created_at=DATE_SUB(UTC_TIMESTAMP(),INTERVAL 61 SECOND) WHERE account_id=? AND used_at IS NULL',[account()['id']])
+   original=activation_links()
+   check(resend()[0]==200 and activation_links()==original,'El reenvío inmediato emitió otro enlace')
+   check(submit_signup(Client())[0]==200 and activation_links()==original,'Repetir el alta inmediatamente emitió otro enlace')
+   age_fixture_link()
+   check(submit_signup(Client())[0]==200,'No abre la respuesta al repetir el alta')
+   repeated=activation_links()
+   check(len(repeated)==2 and repeated[0]==original[0] and repeated[1]!=original[0],'Repetir el alta tras la espera no emitió un enlace distinto')
+   check(Client().get(original[0])[0]==400,'El enlace reemplazado sigue activo')
+   age_fixture_link()
+   check(resend()[0]==200,'No acepta reenvío tras la espera')
+   links=activation_links()
+   check(len(links)==3 and links[:2]==repeated and len(set(links))==3,'No se emitió exactamente un enlace de reenvío')
+   check(Client().get(repeated[1])[0]==400,'El enlace de la segunda alta sigue activo')
+   rows=query('SELECT COUNT(*) AS active FROM account_email_verifications WHERE account_id=? AND used_at IS NULL AND expires_at>UTC_TIMESTAMP()',[account()['id']])
+   check(int(rows[0]['active'])==1,'Debe quedar un solo enlace activo')
+  case('CU-06','Bloquear reenvío rápido y comprobar las dos rutas de emisión',resend_activation)
   def activate():
    messages=json.loads((ROOT/'.local/preprod/private/mailbox.json').read_text());message=next((m for m in reversed(messages) if m.get('to')==EMAIL and '/cuenta/verificar-correo/' in m.get('url','')),None);check(message,'Falta correo de activación')
    link=urllib.parse.urlsplit(mailpit_link(EMAIL,'verification',message['url']) if os.getenv('EL_TEST_MAILPIT')=='1' else message['url']);check(link.scheme=='http' and link.netloc=='127.0.0.1:8088','Enlace de activación fuera de preprod');token=urllib.parse.parse_qs(link.query).get('token',[''])[0];check(re.fullmatch(r'[a-f0-9]{64}',token),'Token de activación mal formado')
    route=link.path+'?'+urllib.parse.urlencode({'token':token})
    altered=('0' if token[0]!='0' else '1')+token[1:];check(anon.get(link.path+'?token='+altered)[0]==400,'Aceptó enlace alterado');check(account()['status']=='pending_activation','Un enlace alterado activó la cuenta')
    expired=secrets.token_hex(32);query('INSERT INTO account_email_verifications(account_id,token_hash,expires_at) VALUES(?,?,DATE_SUB(CURRENT_TIMESTAMP,INTERVAL 1 DAY))',[account()['id'],hashlib.sha256(expired.encode()).hexdigest()]);check(anon.get(link.path+'?token='+expired)[0]==400,'Aceptó enlace de activación vencido');check(account()['status']=='pending_activation','Un enlace vencido activó la cuenta')
-   code,page,_=anon.get(route);check(code==200 and 'Correo verificado' in page,'No confirmó enlace válido');row=account();check(row['status']=='active' and row['email_verified_at'],'No persistió activación y fecha');check(not anon.state().get('authenticated'),'Activación creó sesión sin pedir contraseña');check(anon.get(route)[0]==400,'Se reutilizó enlace de activación')
+   code,page,_=anon.get(route);check(code==200 and 'Correo verificado' in page,'No confirmó enlace válido');row=account();check(row['status']=='active' and row['email_verified_at'],'No persistió activación y fecha');check(not anon.state().get('authenticated'),'Activación creó sesión sin pedir contraseña');check(anon.get(route)[0]==200 and account()==row and not anon.state().get('authenticated'),'Reabrir el enlace debe confirmar la activación sin mutar la cuenta ni iniciar sesión')
   case('CU-04','Activar correo por HTTP: válido, vencido, alterado y de un solo uso',activate)
   def badsignup():
    c=Client();_,page,_=c.get('/negocios/registro/?tipo=traveler');code,_,_=c.request('/negocios/registro/?tipo=traveler',{'csrf':csrf(page),'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368','account_type':'traveler','display_name':RUN,'email':RUN+'-invalid@pruebas.invalid','password':'123','password_confirm':'otra','consent':'1'});check(code>=400,'Aceptó datos inválidos');check(not query('SELECT id FROM accounts WHERE email=?',[RUN+'-invalid@pruebas.invalid']),'Creó cuenta inválida');check(len(query('SELECT id FROM accounts WHERE email=?',[EMAIL]))==1,'Duplicó cuenta')
   case('CU-05','Contraseñas inválidas o distintas no crean otra cuenta',badsignup)
   case('AU-01','Acceso con correo y contraseña asignada',lambda:login(Client()))
+  if REGISTRATION_ONLY:
+   sys.exit(0)  # The finally block cleans fixtures and determines the result.
   def wrongpassword():
    c=Client();_,page,_=c.get('/negocios/acceso/');code,_,_=c.request('/negocios/acceso/',{'csrf':csrf(page),'email':EMAIL,'password':'Invalida123456'});check(code>=400 and not c.state().get('authenticated'),'Aceptó contraseña incorrecta')
   case('AU-02','Rechazar contraseña incorrecta',wrongpassword)
@@ -380,7 +433,7 @@ finally:
  for f in sorted((ROOT/'.local/preprod/release/public').rglob('*')):
   if f.is_file() and f.suffix in {'.php','.html','.js','.css'}:fingerprint.update(str(f.relative_to(ROOT/'.local/preprod/release')).encode());fingerprint.update(f.read_bytes())
  blocked=any(r['status']!='APROBADA' for r in results) or '--solo-panel-lugares' in sys.argv
- report={'executed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'base_url':BASE,'revision':revision,'working_tree_dirty':dirty,'public_package_sha256':fingerprint.hexdigest(),'ready':not blocked,'decision':'NO LISTO' if blocked else 'LISTO PARA REVISIÓN HUMANA','selection':'flujos-publicos' if PUBLIC_ONLY else ('panel-lugares' if '--solo-panel-lugares' in sys.argv else 'completa'),'scope':'HTTP y navegador real en escritorio/móvil, MariaDB local y conservación de datos persistentes. Correo sintético local; no certifica entregabilidad externa. No accede a producción, despliega ni realiza pagos reales.','results':results}
+ report={'executed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'base_url':BASE,'revision':revision,'working_tree_dirty':dirty,'public_package_sha256':fingerprint.hexdigest(),'ready':not blocked,'decision':'NO LISTO' if blocked else 'LISTO PARA REVISIÓN HUMANA','selection':'registro-activacion' if REGISTRATION_ONLY else 'flujos-publicos' if PUBLIC_ONLY else ('panel-lugares' if '--solo-panel-lugares' in sys.argv else 'completa'),'scope':'HTTP y navegador real en escritorio/móvil, MariaDB local y conservación de datos persistentes. Correo sintético local; no certifica entregabilidad externa. No accede a producción, despliega ni realiza pagos reales.','results':results}
  (REPORT/'resultado.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  table=''.join('<tr><td>'+html.escape(r['id'])+'</td><td>'+html.escape(r['title'])+'</td><td>'+r['status']+'</td><td>'+html.escape(r['detail'])+'</td></tr>' for r in results)
  (REPORT/'resultado.html').write_text('<!doctype html><html lang="es"><meta charset="utf-8"><title>Regresión preprod</title><style>body{font:16px/1.5 system-ui;margin:32px;background:#fffaf4;color:#302d29}td,th{padding:12px;border:1px solid #ccc;text-align:left}table{border-collapse:collapse}h1{color:#9c3e2f}</style><h1>'+report['decision']+'</h1><p>'+html.escape(report['scope'])+'</p><p>Commit: '+revision+'; cambios locales: '+str(dirty)+'. Informe de una ejecución, no autorización de despliegue.</p><table><tr><th>ID</th><th>Criterio</th><th>Resultado</th><th>Detalle</th></tr>'+table+'</table></html>')

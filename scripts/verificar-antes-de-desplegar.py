@@ -62,11 +62,12 @@ def main():
         # Separate private fixtures; never replace registration's configuration.
         run('SEO sobre respuestas PHP finales', [sys.executable, 'scripts/check-package-seo.py', '--package', str(seo_package), '--output', str(seo_package/'seo-results.json')])
         if args.managed_preprod:
-            run('Regresión completa en Apache/MariaDB local existente', [sys.executable,'preprod/regresion/ejecutar.py'])
+            run('Regresión completa en Apache/MariaDB local existente', [sys.executable,'preprod/regresion/ejecutar.py','--paquete',str(package)])
             for pattern in ['test_release_guard.py','test_desplegar_sftp.py','test_deployment_recovery.py','test_managed_release.py','test_full_release_coverage.py']:
                 run('Controles de entrega '+pattern,[sys.executable,'-m','unittest','discover','-s','scripts/tests','-p',pattern])
             print('PRE-DESPLIEGUE APROBADO: PHP, SEO, regresión MariaDB administrada y recuperación. No se ejecutaron servidores HTTP heredados ni se verificó correo productivo.')
             return 0
+        run('Registro personal y activación con el buzón de preprod', [sys.executable,'preprod/regresion/ejecutar.py','--solo-registro','--paquete',str(package)])
         run('Registro HTTP: cuatro planes, borradores, pago y cupones', [sys.executable, 'backend/tests/registration-flow.integration.py', '--package', str(package)])
         run('ZIP editorial y publicación Premium', [sys.executable, 'backend/tests/editorial-roundtrip.integration.py'])
         run('ZIP editorial con cupón del 100 %', [sys.executable, 'backend/tests/editorial-roundtrip.integration.py'], env={**os.environ, 'EL_EDITORIAL_PROMOTION':'1'})
