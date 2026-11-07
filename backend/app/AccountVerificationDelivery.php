@@ -14,6 +14,7 @@ final class AccountVerificationDelivery
         $mail=AccountMailConfiguration::resolve($config,(string)$email);$local=$mail['mailbox'];$delivery=$mail['delivery'];
         if(!$local&&!$delivery->ready()){if(class_exists('PortalIncidents',false))PortalIncidents::capture(new RuntimeException(),'verification_configuration');throw new RuntimeException('Tu cuenta está guardada, pero no pudimos enviar el correo de activación. Solicita un nuevo enlace más tarde.');}
         $service=new AccountEmailVerificationService($pdo);$token=$service->issue($id,$allowActiveUnverified);
+        if($token===null)return;
         try{
             if($local){
                 $path=dirname(__DIR__).'/private/mailbox.json';$f=fopen($path,'c+');if(!$f)throw new RuntimeException('Buzón local no disponible.');

@@ -5,7 +5,7 @@ require_once __DIR__.'/AutomaticBusinessClaim.php';
 final class AccountEmailVerificationService
 {
     public function __construct(private PDO $pdo) {}
-    public function issue(int $accountId,bool $allowActiveUnverified=false):string
+    public function issue(int $accountId,bool $allowActiveUnverified=false):?string
     {
         $token=bin2hex(random_bytes(32));$this->pdo->beginTransaction();
         try{
@@ -13,9 +13,16 @@ final class AccountEmailVerificationService
             $eligible=$allowActiveUnverified?'(status="pending_activation" OR (status="active" AND email_verified_at IS NULL))':'status="pending_activation"';
             $q=$this->pdo->prepare('SELECT id FROM accounts WHERE id=? AND '.$eligible.$lock);$q->execute([$accountId]);
             if(!$q->fetchColumn())throw new RuntimeException('La cuenta no admite activación.');
+            $now=time();
+            $q=$this->pdo->prepare('SELECT 1 FROM account_email_verifications WHERE account_id=? AND used_at IS NULL AND expires_at>? AND created_at>? LIMIT 1');
+            $q->execute([$accountId,gmdate('Y-m-d H:i:s',$now),gmdate('Y-m-d H:i:s',$now-60)]);
+            if($q->fetchColumn()){
+                $this->pdo->commit();
+                return null;
+            }
             $q=$this->pdo->prepare('SELECT COUNT(*) FROM account_email_verifications WHERE account_id=? AND created_at>?');$q->execute([$accountId,gmdate('Y-m-d H:i:s',time()-900)]);
             if((int)$q->fetchColumn()>=3)throw new RuntimeException('Espera quince minutos antes de pedir otro enlace.');
-            // Keep previously delivered links usable until activation or expiration.
+            $this->pdo->prepare('UPDATE account_email_verifications SET used_at=CURRENT_TIMESTAMP WHERE account_id=? AND used_at IS NULL')->execute([$accountId]);
             $this->pdo->prepare('INSERT INTO account_email_verifications(account_id,token_hash,expires_at) VALUES(?,?,?)')->execute([$accountId,hash('sha256',$token),gmdate('Y-m-d H:i:s',time()+86400)]);
             $this->pdo->commit();return $token;
         }catch(Throwable $e){if($this->pdo->inTransaction())$this->pdo->rollBack();throw $e;}
