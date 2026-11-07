@@ -1,5 +1,28 @@
 (async () => {
   'use strict';
+  function startResendCountdowns(root){
+    for(const form of root.querySelectorAll('[data-resend-seconds]')){
+      if(form.dataset.resendTimerStarted)continue;
+      const seconds=Number(form.dataset.resendSeconds);
+      const button=form.querySelector('button[type=submit]');
+      const timer=form.querySelector('[data-resend-countdown]');
+      if(!button||!timer||!Number.isFinite(seconds)||seconds<=0)continue;
+      form.dataset.resendTimerStarted='1';
+      const deadline=performance.now()+seconds*1000;
+      function tick(){
+        if(!form.isConnected)return;
+        const remaining=Math.max(0,Math.ceil((deadline-performance.now())/1000));
+        button.disabled=remaining>0;
+        timer.hidden=remaining===0;
+        if(remaining===0)return;
+        const time=`${Math.floor(remaining/60)}:${String(remaining%60).padStart(2,'0')}`;
+        timer.textContent=timer.dataset.resendCountdown.replace('{time}',time);
+        setTimeout(tick,250);
+      }
+      tick();
+    }
+  }
+  startResendCountdowns(document);
   if(document.querySelector('.account-entry'))return;
   const header=document.querySelector('header');
   const existing=document.querySelector('.portal-account-strip');
@@ -68,6 +91,7 @@
         document.head.append(script);
       }
     }
+    startResendCountdowns(dialog);
     document.dispatchEvent(new CustomEvent('el:auth-render'));
     dialog.querySelector('input:not([type=hidden]),button[type=submit],a')?.focus();
   }

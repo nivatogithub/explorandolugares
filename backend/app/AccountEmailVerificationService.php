@@ -4,6 +4,8 @@ require_once __DIR__.'/AutomaticBusinessClaim.php';
 /** New accounts remain pending until a one-use email capability is confirmed. */
 final class AccountEmailVerificationService
 {
+    public const RESEND_WAIT_SECONDS = 60;
+
     public function __construct(private PDO $pdo) {}
     public function issue(int $accountId,bool $allowActiveUnverified=false):?string
     {
@@ -15,7 +17,7 @@ final class AccountEmailVerificationService
             if(!$q->fetchColumn())throw new RuntimeException('La cuenta no admite activación.');
             $now=time();
             $q=$this->pdo->prepare('SELECT 1 FROM account_email_verifications WHERE account_id=? AND used_at IS NULL AND expires_at>? AND created_at>? LIMIT 1');
-            $q->execute([$accountId,gmdate('Y-m-d H:i:s',$now),gmdate('Y-m-d H:i:s',$now-60)]);
+            $q->execute([$accountId,gmdate('Y-m-d H:i:s',$now),gmdate('Y-m-d H:i:s',$now-self::RESEND_WAIT_SECONDS)]);
             if($q->fetchColumn()){
                 $this->pdo->commit();
                 return null;

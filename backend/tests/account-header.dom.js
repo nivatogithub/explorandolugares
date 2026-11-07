@@ -22,7 +22,7 @@ async function scenario({withLanguages,authenticated,existing=false,legacy=false
  if(withLanguages){for(const code of ['ES','EN','PT']){const a=new Element('a');a.textContent=code;languages.append(a);}header.append(languages);}
  body.append(header);
  if(existing){const strip=new Element('div');strip.className='portal-account-strip portal-account-fallback';if(legacy)strip.setAttribute('data-admin-legacy','');const inner=new Element('div');inner.className='portal-account-strip-inner';const link=new Element('a');link.textContent=legacy?'Administrador':'Iniciar sesión';inner.append(link);strip.append(inner);body.prepend(strip);}
- const context={document:{head:new Element('head'),addEventListener(){},documentElement:{lang:'es'},querySelector:s=>body.querySelector(s),createElement:t=>new Element(t)},window:{addEventListener(){}},fetch:async()=>({ok:true,json:async()=>({enabled:true,authenticated,name:'Persona',csrf:'stub',administrator})})};
+ const context={document:{head:new Element('head'),addEventListener(){},documentElement:{lang:'es'},querySelector:s=>body.querySelector(s),querySelectorAll:s=>body.querySelectorAll(s),createElement:t=>new Element(t)},window:{addEventListener(){}},fetch:async()=>({ok:true,json:async()=>({enabled:true,authenticated,name:'Persona',csrf:'stub',administrator})})};
  await vm.runInNewContext(source,context);
  const strip=body.querySelector('.portal-account-strip');assert.ok(strip);
  if(withLanguages){assert.equal(languages.children[0],strip);assert.equal(body.children.length,1,'no additional header row');assert.equal(languages.children.slice(1).map(x=>x.textContent).join(','),'ES,EN,PT');}
