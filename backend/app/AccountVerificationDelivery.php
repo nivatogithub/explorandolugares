@@ -9,12 +9,36 @@ final class AccountVerificationDelivery
     {
         $eligible=$allowActiveUnverified?'(status="pending_activation" OR (status="active" AND email_verified_at IS NULL))':'status="pending_activation"';
         $q=$pdo->prepare('SELECT email FROM accounts WHERE id=? AND '.$eligible);$q->execute([$id]);$email=$q->fetchColumn();if(!$email)return;
+        $mail=self::availableMail($config,(string)$email);
+        $service=new AccountEmailVerificationService($pdo);
+        $token=$service->issue($id,$allowActiveUnverified,(string)$email);
+        if($token!==null)self::deliver($service,$mail,(string)$email,$token);
+    }
+
+    public static function correctPendingEmail(PDO $pdo,array $config,int $id,string $email,string $password):void
+    {
+        $email=strtolower(trim($email));
+        if(strlen($email)>254||!filter_var($email,FILTER_VALIDATE_EMAIL))throw new RuntimeException('Escribe un correo válido.');
+        $mail=self::availableMail($config,$email);
+        $service=new AccountEmailVerificationService($pdo);
+        $token=$service->correctPendingEmail($id,$email,$password);
+        self::deliver($service,$mail,$email,$token);
+    }
+
+    private static function availableMail(array $config,string $email):array
+    {
+        $mail=AccountMailConfiguration::resolve($config,$email);
+        if(!$mail['mailbox']&&!$mail['delivery']->ready()){
+            if(class_exists('PortalIncidents',false))PortalIncidents::capture(new RuntimeException(),'verification_configuration');
+            throw new RuntimeException('No pudimos preparar el correo de activación. Inténtalo más tarde.');
+        }
+        return $mail;
+    }
+
+    private static function deliver(AccountEmailVerificationService $service,array $mail,string $email,string $token):void
+    {
         $host=strtolower((string)($_SERVER['HTTP_HOST']??''));
-        $local=getenv('EL_PREPROD_LOCAL')==='1'&&!empty($config['local_test'])&&preg_match('/^(127\.0\.0\.1|localhost|\[::1\])(?::[0-9]+)?$/D',$host);
-        $mail=AccountMailConfiguration::resolve($config,(string)$email);$local=$mail['mailbox'];$delivery=$mail['delivery'];
-        if(!$local&&!$delivery->ready()){if(class_exists('PortalIncidents',false))PortalIncidents::capture(new RuntimeException(),'verification_configuration');throw new RuntimeException('Tu cuenta está guardada, pero no pudimos enviar el correo de activación. Solicita un nuevo enlace más tarde.');}
-        $service=new AccountEmailVerificationService($pdo);$token=$service->issue($id,$allowActiveUnverified);
-        if($token===null)return;
+        $local=$mail['mailbox'];$delivery=$mail['delivery'];
         try{
             if($local){
                 $path=dirname(__DIR__).'/private/mailbox.json';$f=fopen($path,'c+');if(!$f)throw new RuntimeException('Buzón local no disponible.');

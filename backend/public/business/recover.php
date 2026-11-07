@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
       try{AccountReactivationDelivery::send(db(),$config,(int)$account['id']);}catch(Throwable $caughtIncident){PortalIncidents::capture($caughtIncident,'recovery_delivery');error_log('No se confirmó el correo de reactivación.');}
      }
     }else{
-    $token=(new AccountPasswordResetService(db()))->issue((int)$account['id'],'self-service');
+    $token=(new AccountPasswordResetService(db()))->issue((int)$account['id'],'self-service',(string)$account['email']);
     try{
      if($localMailbox){
       $message=['to'=>$account['email'],'created_at'=>gmdate('c'),'url'=>'http://'.$host.'/negocios/cambiar-clave/?token='.$token];$path=private_storage_path('mailbox').'/messages.json';

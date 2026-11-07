@@ -6,14 +6,16 @@ final class AccountPasswordResetService
     public function __construct(private PDO $pdo) {}
 
     /** Issues a one-time 24-hour capability; only its digest is stored. */
-    public function issue(int $accountId, string $createdBy = 'admin'): string
+    public function issue(int $accountId, string $createdBy = 'admin', ?string $expectedEmail = null): string
     {
-        $account=$this->pdo->prepare('SELECT id FROM accounts WHERE id=? AND account_type IN ("business","traveler") AND status IN ("active","pending_activation")');
-        $account->execute([$accountId]);
-        if(!$account->fetchColumn())throw new RuntimeException('La cuenta no existe, no es empresarial o está deshabilitada.');
         $token=bin2hex(random_bytes(32));
         $this->pdo->beginTransaction();
         try{
+            $lock=$this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME)==='mysql'?' FOR UPDATE':'';
+            $account=$this->pdo->prepare('SELECT email FROM accounts WHERE id=? AND account_type IN ("business","traveler") AND status IN ("active","pending_activation")'.$lock);
+            $account->execute([$accountId]);
+            $email=$account->fetchColumn();
+            if($email===false||($expectedEmail!==null&&$email!==$expectedEmail))throw new RuntimeException('La cuenta no está disponible para recuperar el acceso.');
             $this->pdo->prepare('UPDATE account_password_resets SET used_at=CURRENT_TIMESTAMP WHERE account_id=? AND used_at IS NULL')->execute([$accountId]);
             $insert=$this->pdo->prepare('INSERT INTO account_password_resets(account_id,token_hash,created_by,expires_at) VALUES(?,?,?,?)');
             $insert->execute([$accountId,hash('sha256',$token),substr($createdBy,0,120),gmdate('Y-m-d H:i:s',time()+86400)]);

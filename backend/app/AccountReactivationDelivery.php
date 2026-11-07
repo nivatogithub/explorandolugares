@@ -12,7 +12,7 @@ final class AccountReactivationDelivery
   $reactivation=$row['status']==='disabled';
   $mail=AccountMailConfiguration::resolve($config,(string)$email);$service=$reactivation?new AccountReactivationService($pdo):new AccountPasswordResetService($pdo);
   if(!$mail['mailbox']&&!$mail['delivery']->ready())throw new RuntimeException('El correo de reactivación no está disponible.');
-  $token=$service->issue($id);$suffix=$reactivation?'reactivacion=1&token=':'token=';
+  $token=$reactivation?$service->issue($id):$service->issue($id,'admin',(string)$email);$suffix=$reactivation?'reactivacion=1&token=':'token=';
   try{
    if($mail['mailbox']){
     $host=strtolower((string)($_SERVER['HTTP_HOST']??''));$path=dirname(__DIR__).'/private/mailbox.json';$f=fopen($path,'c+');if(!$f)throw new RuntimeException('Buzón local no disponible.');

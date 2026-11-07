@@ -103,7 +103,8 @@ def require_registration_package():
   'public/assets/account-residence.js','public/assets/floating-select.js',
   'app/AccountAuthPresentation.php','app/AccountResidencePresentation.php',
   'app/AccountEmailVerificationService.php','app/AccountVerificationDelivery.php',
-  'app/AccountReactivationDelivery.php','app/BusinessAccountPortalService.php',
+  'app/AccountReactivationDelivery.php','app/AccountPasswordResetService.php',
+  'public/business/recover.php','app/BusinessAccountPortalService.php',
   'app/views/account/auth-page.php','app/views/account/personal-registration.php',
   'app/views/account/verify-email.php','app/views/account/residence-fields.php',
  ]
@@ -125,22 +126,22 @@ for attempt in range(3):
   print('Entorno no comprobado: '+detail+'. No se ejecutó ninguna escritura.');sys.exit(2)
 try:
  if '--solo-panel-lugares' not in sys.argv:
-  def submit_signup(client):
+  def submit_signup(client,email=EMAIL):
    code,page,_=client.get('/negocios/registro/?tipo=traveler');check(code==200 and 'name="consent"' in page and 'name="residence_city_code"' in page,'Registro incompleto')
-   return client.request('/negocios/registro/?tipo=traveler',{'csrf':csrf(page),'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368','account_type':'traveler','display_name':RUN,'email':EMAIL,'password':PASSWORD,'password_confirm':PASSWORD,'consent':'1'})
+   return client.request('/negocios/registro/?tipo=traveler',{'csrf':csrf(page),'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368','account_type':'traveler','display_name':RUN,'email':email,'password':PASSWORD,'password_confirm':PASSWORD,'consent':'1'})
   def signup():
    code,page,_=submit_signup(person)
    check('data-resend-seconds=' in page,'Falta el contador tras el registro')
    check(code==200,'Falló creación de cuenta personal');row=account();check(row['status']=='pending_activation' and not row['email_verified_at'],'El alta debe quedar pendiente hasta verificar el correo');check(not person.state().get('authenticated'),'El registro autenticó sin confirmar el correo')
   case('CU-01','Crear cuenta personal con nombre, correo y contraseña',signup)
-  def activation_links():
+  def activation_links(email=EMAIL):
    mailbox=ROOT/'.local/preprod/private/mailbox.json'
    with mailbox.open() as stream:
     fcntl.flock(stream,fcntl.LOCK_SH)
     messages=json.load(stream)
    links=[]
    for message in messages:
-    if message.get('to')!=EMAIL or message.get('kind')!='verification':continue
+    if message.get('to')!=email or message.get('kind')!='verification':continue
     link=urllib.parse.urlsplit(message['url'])
     check(link.scheme=='http' and link.netloc=='127.0.0.1:8088' and link.path=='/cuenta/verificar-correo/', 'Enlace de activación fuera de preprod')
     check(re.fullmatch(r'token=[a-f0-9]{64}',link.query),'Token de activación mal formado')
@@ -186,6 +187,46 @@ try:
    c=Client();_,page,_=c.get('/negocios/registro/?tipo=traveler');code,_,_=c.request('/negocios/registro/?tipo=traveler',{'csrf':csrf(page),'residence_country_code':'CO','residence_region_code':'05','residence_city_code':'05368','account_type':'traveler','display_name':RUN,'email':RUN+'-invalid@pruebas.invalid','password':'123','password_confirm':'otra','consent':'1'});check(code>=400,'Aceptó datos inválidos');check(not query('SELECT id FROM accounts WHERE email=?',[RUN+'-invalid@pruebas.invalid']),'Creó cuenta inválida');check(len(query('SELECT id FROM accounts WHERE email=?',[EMAIL]))==1,'Duplicó cuenta')
   case('CU-05','Contraseñas inválidas o distintas no crean otra cuenta',badsignup)
   case('AU-01','Acceso con correo y contraseña asignada',lambda:login(Client()))
+  def correct_registration_email():
+   wrong=RUN+'-typo@pruebas.invalid';correct=RUN+'-corrected@pruebas.invalid'
+   client=Client();outsider=Client();mailbox=ROOT/'.local/preprod/private/mailbox.json'
+   try:
+    code,page,_=submit_signup(client,wrong)
+    check(code==200 and 'Corregir mi correo' in page,'No aparece la corrección al iniciar un registro')
+    original=query('SELECT id,status FROM accounts WHERE email=?',[wrong])[0]
+    old_links=activation_links(wrong)
+    check(len(old_links)==1,'El registro inicial no generó un único enlace')
+    _,recovery,_=outsider.get('/negocios/recuperar-clave/')
+    check(outsider.request('/negocios/recuperar-clave/',{'csrf':csrf(recovery),'email':wrong})[0]==200,'No se pudo preparar un enlace de recuperación para la prueba')
+    check(len(query('SELECT id FROM account_password_resets WHERE account_id=? AND used_at IS NULL',[original['id']]))==1,'Falta el enlace de recuperación inicial')
+    _,foreign,_=outsider.get('/cuenta/verificar-correo/')
+    check('Corregir mi correo' not in foreign and wrong not in foreign,'Se expuso el registro pendiente a otra sesión')
+    def correct_email(browser,html,address,password):
+     return browser.request('/cuenta/verificar-correo/',{'csrf':csrf(html),'action':'correct_email','corrected_email':address,'password':password})
+    check(correct_email(outsider,foreign,correct,PASSWORD)[0]==400,'Otra sesión cambió el correo')
+    check(correct_email(client,page,correct,'Invalida123456')[0]==400,'Se aceptó contraseña incorrecta')
+    check(correct_email(client,page,EMAIL,PASSWORD)[0]==400,'Se aceptó un correo ya registrado')
+    check(activation_links(wrong)==old_links and not activation_links(correct),'Los intentos rechazados modificaron los envíos')
+    code,page,_=correct_email(client,page,correct,PASSWORD)
+    check(code==200 and correct in page,'No se guardó el correo corregido')
+    check(not query('SELECT id FROM accounts WHERE email=?',[wrong]),'El correo equivocado sigue asociado')
+    corrected=query('SELECT id,status FROM accounts WHERE email=?',[correct])
+    check(corrected==[original],'La corrección cambió la identidad o activó la cuenta')
+    check(not query('SELECT id FROM account_password_resets WHERE account_id=? AND used_at IS NULL',[original['id']]),'Sigue vigente una recuperación del correo anterior')
+    links=activation_links(correct)
+    check(len(links)==1 and outsider.get(old_links[0])[0]==400,'El enlace anterior sigue activo o el nuevo no es único')
+    code,verified,_=outsider.get(links[0]);check(code==200 and 'Correo verificado' in verified,'El correo corregido no activa la cuenta')
+    check(outsider.get(old_links[0])[0]==400,'El enlace equivocado volvió a ser aceptado tras la activación')
+    _,access,_=client.get('/negocios/acceso/')
+    check(client.request('/negocios/acceso/',{'csrf':csrf(access),'email':correct,'password':PASSWORD})[0]==200 and client.state().get('authenticated'),'No inicia sesión con el correo corregido')
+   finally:
+    query('DELETE FROM accounts WHERE display_name=? AND email IN (?,?)',[RUN,wrong,correct])
+    if mailbox.is_file():
+     with mailbox.open('r+') as stream:
+      fcntl.flock(stream,fcntl.LOCK_EX)
+      messages=json.load(stream);stream.seek(0)
+      json.dump([m for m in messages if m.get('to') not in {wrong,correct}],stream);stream.truncate()
+  case('CU-07','Corregir correo pendiente, invalidar enlaces anteriores y activar la misma cuenta',correct_registration_email)
   if REGISTRATION_ONLY:
    sys.exit(0)  # The finally block cleans fixtures and determines the result.
   def wrongpassword():
