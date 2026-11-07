@@ -21,24 +21,37 @@
     const empty=document.createElement('p');empty.className='floating-select-empty';empty.setAttribute('role','status');empty.textContent=copy[1];empty.hidden=true;
     menu.append(options,empty);wrapper.append(row,menu);
     const municipality=select.matches('[data-residence] [name=residence_city_code]');
-    let editing=false,query='',restoringFocus=false;
-    function positionMenu(){
+    let editing=false,query='',restoringFocus=false,scrollSpace=null;
+    function positionMenu(reveal=false){
       if(!municipality||menu.hidden)return;
       const viewport=window.visualViewport;
-      const field=row.getBoundingClientRect();
-      const dialog=wrapper.closest('dialog')?.getBoundingClientRect();
-      const top=Math.max(viewport?.offsetTop??0,dialog?.top??0);
-      const bottom=Math.min((viewport?.offsetTop??0)+(viewport?.height??window.innerHeight),dialog?.bottom??Infinity);
-      const spaceAbove=field.top-top-12;
-      const spaceBelow=bottom-field.bottom-12;
-      const openAbove=spaceBelow<180&&spaceAbove>spaceBelow;
-      menu.style.top=openAbove?'auto':'';
-      menu.style.bottom=openAbove?'calc(100% + 7px)':'';
-      options.style.maxHeight=`${Math.max(0,Math.min(260,openAbove?spaceAbove:spaceBelow))}px`;
+      const dialog=wrapper.closest('dialog');
+      const bounds=dialog?.getBoundingClientRect();
+      const viewportTop=viewport?.offsetTop??0;
+      const top=Math.max(viewportTop,bounds?.top??0);
+      const bottom=Math.min(viewportTop+(viewport?.height??window.innerHeight),bounds?.bottom??Infinity);
+      let field=row.getBoundingClientRect();
+      if(reveal&&bottom-field.bottom<180&&field.top>top+16){
+        const distance=field.top-top-16;
+        if(dialog){
+          const remaining=dialog.scrollHeight-dialog.clientHeight-dialog.scrollTop;
+          if(remaining<distance){
+            if(!scrollSpace){
+              scrollSpace=document.createElement('div');
+              scrollSpace.setAttribute('aria-hidden','true');
+              dialog.append(scrollSpace);
+            }
+            scrollSpace.style.height=`${Math.ceil(scrollSpace.offsetHeight+distance-remaining)}px`;
+          }
+          dialog.scrollTop+=distance;
+        }
+        else window.scrollBy({top:distance,behavior:'instant'});
+        field=row.getBoundingClientRect();
+      }
+      options.style.maxHeight=`${Math.max(0,Math.min(260,bottom-field.bottom-12))}px`;
     }
-
     function focusClosed(){restoringFocus=true;input.focus();input.select();restoringFocus=false;}
-    const control={wrapper,close(){menu.hidden=true;input.setAttribute('aria-expanded','false');toggle.setAttribute('aria-expanded','false');wrapper.classList.remove('is-open');openMenus.delete(control);},open(){if(select.disabled||select.hidden)return;closeAll(control);refresh();menu.hidden=false;input.setAttribute('aria-expanded','true');toggle.setAttribute('aria-expanded','true');wrapper.classList.add('is-open');openMenus.add(control);positionMenu();},positionMenu};
+    const control={wrapper,close(){menu.hidden=true;scrollSpace?.remove();scrollSpace=null;input.setAttribute('aria-expanded','false');toggle.setAttribute('aria-expanded','false');wrapper.classList.remove('is-open');openMenus.delete(control);},open(){if(select.disabled||select.hidden)return;closeAll(control);refresh();menu.hidden=false;input.setAttribute('aria-expanded','true');toggle.setAttribute('aria-expanded','true');wrapper.classList.add('is-open');openMenus.add(control);positionMenu(true);},positionMenu};
     function choose(value){editing=false;query='';input.setCustomValidity('');select.value=value;select.dispatchEvent(new Event('input',{bubbles:true}));select.dispatchEvent(new Event('change',{bubbles:true}));control.close();if(municipality)toggle.focus({preventScroll:true});else focusClosed();}
     function filter(){let count=0;for(const option of options.children){option.hidden=!option.dataset.filterText.includes(query);if(!option.hidden)count++;}empty.hidden=count>0;}
     function refresh(){
@@ -87,9 +100,10 @@
     enhance(select);
   });}
   const repositionMenus=()=>openMenus.forEach(control=>control.positionMenu());
-  window.visualViewport?.addEventListener('resize',repositionMenus);
+  const revealMenus=()=>openMenus.forEach(control=>control.positionMenu(true));
+  window.visualViewport?.addEventListener('resize',revealMenus);
   window.visualViewport?.addEventListener('scroll',repositionMenus);
-  window.addEventListener('resize',repositionMenus);
+  window.addEventListener('resize',revealMenus);
   document.addEventListener('scroll',repositionMenus,true);
   document.addEventListener('pointerdown',event=>{if(![...openMenus].some(control=>event.target.closest('.floating-select')===control.wrapper))closeAll();});
   new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{if(node.nodeType===1)scan(node);}))).observe(document.documentElement,{childList:true,subtree:true});
