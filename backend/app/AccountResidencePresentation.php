@@ -12,9 +12,9 @@ final class AccountResidencePresentation
         }
         return ['catalog'=>$catalog,'values'=>$values,'copy'=>['heading'=>'¿Dónde vives?','help'=>'Tu residencia como persona. No es la ubicación de tus negocios y no se publica en el directorio.','country'=>'País']];
     }
-    public static function render(array $residence):void
+    public static function render(array $residence, string $publicRoot):void
     {
-        $file=dirname(__DIR__).'/public/assets/account-residence.js';
+        $file=$publicRoot.'/assets/account-residence.js';
         if(!is_file($file))throw new RuntimeException('Missing residence resource.');
         $residenceScriptUrl='/assets/account-residence.js?v='.substr(hash_file('sha256',$file),0,12);
         $e=static fn($value):string=>PortalPresentation::escape((string)$value);
