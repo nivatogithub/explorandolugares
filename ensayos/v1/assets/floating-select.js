@@ -20,10 +20,26 @@
     const options=document.createElement('div');options.className='floating-select-options';options.setAttribute('role','listbox');options.id='floating-options-'+(++sequence);input.setAttribute('aria-controls',options.id);toggle.setAttribute('aria-controls',options.id);
     const empty=document.createElement('p');empty.className='floating-select-empty';empty.setAttribute('role','status');empty.textContent=copy[1];empty.hidden=true;
     menu.append(options,empty);wrapper.append(row,menu);
+    const municipality=select.matches('[data-residence] [name=residence_city_code]');
     let editing=false,query='',restoringFocus=false;
+    function positionMenu(){
+      if(!municipality||menu.hidden)return;
+      const viewport=window.visualViewport;
+      const field=row.getBoundingClientRect();
+      const dialog=wrapper.closest('dialog')?.getBoundingClientRect();
+      const top=Math.max(viewport?.offsetTop??0,dialog?.top??0);
+      const bottom=Math.min((viewport?.offsetTop??0)+(viewport?.height??window.innerHeight),dialog?.bottom??Infinity);
+      const spaceAbove=field.top-top-12;
+      const spaceBelow=bottom-field.bottom-12;
+      const openAbove=spaceBelow<180&&spaceAbove>spaceBelow;
+      menu.style.top=openAbove?'auto':'';
+      menu.style.bottom=openAbove?'calc(100% + 7px)':'';
+      options.style.maxHeight=`${Math.max(0,Math.min(260,openAbove?spaceAbove:spaceBelow))}px`;
+    }
+
     function focusClosed(){restoringFocus=true;input.focus();input.select();restoringFocus=false;}
-    const control={wrapper,close(){menu.hidden=true;input.setAttribute('aria-expanded','false');toggle.setAttribute('aria-expanded','false');wrapper.classList.remove('is-open');openMenus.delete(control);},open(){if(select.disabled||select.hidden)return;closeAll(control);refresh();menu.hidden=false;input.setAttribute('aria-expanded','true');toggle.setAttribute('aria-expanded','true');wrapper.classList.add('is-open');openMenus.add(control);}};
-    function choose(value){editing=false;query='';input.setCustomValidity('');select.value=value;select.dispatchEvent(new Event('input',{bubbles:true}));select.dispatchEvent(new Event('change',{bubbles:true}));control.close();focusClosed();}
+    const control={wrapper,close(){menu.hidden=true;input.setAttribute('aria-expanded','false');toggle.setAttribute('aria-expanded','false');wrapper.classList.remove('is-open');openMenus.delete(control);},open(){if(select.disabled||select.hidden)return;closeAll(control);refresh();menu.hidden=false;input.setAttribute('aria-expanded','true');toggle.setAttribute('aria-expanded','true');wrapper.classList.add('is-open');openMenus.add(control);positionMenu();},positionMenu};
+    function choose(value){editing=false;query='';input.setCustomValidity('');select.value=value;select.dispatchEvent(new Event('input',{bubbles:true}));select.dispatchEvent(new Event('change',{bubbles:true}));control.close();if(municipality)toggle.focus({preventScroll:true});else focusClosed();}
     function filter(){let count=0;for(const option of options.children){option.hidden=!option.dataset.filterText.includes(query);if(!option.hidden)count++;}empty.hidden=count>0;}
     function refresh(){
       wrapper.hidden=select.hidden;if(select.hidden)control.close();
@@ -46,7 +62,7 @@
       if(['ArrowDown','ArrowUp'].includes(event.key)){event.preventDefault();if(menu.hidden)control.open();(event.key==='ArrowDown'?items[0]:items.at(-1))?.focus();}
       if(event.key==='Enter'){event.preventDefault();if(menu.hidden){control.open();return;}const chosen=editing?items[0]:items.find(item=>item.getAttribute('aria-selected')==='true')||items[0];chosen?.click();}
     });
-    toggle.addEventListener('click',()=>{if(menu.hidden){input.focus();control.open();input.select();}else control.close();});
+    toggle.addEventListener('click',()=>{if(!menu.hidden){control.close();return;}if(municipality){control.open();return;}input.focus();control.open();input.select();});
     menu.addEventListener('keydown',event=>{
       const items=Array.from(options.querySelectorAll('button:not(:disabled)')).filter(item=>!item.hidden),current=items.indexOf(document.activeElement);
       if(event.key==='Escape'){event.preventDefault();event.stopPropagation();control.close();focusClosed();return;}
@@ -70,6 +86,11 @@
     if(select.closest('.account-portal')&&!select.matches('[data-residence] [name=residence_city_code]'))return;
     enhance(select);
   });}
+  const repositionMenus=()=>openMenus.forEach(control=>control.positionMenu());
+  window.visualViewport?.addEventListener('resize',repositionMenus);
+  window.visualViewport?.addEventListener('scroll',repositionMenus);
+  window.addEventListener('resize',repositionMenus);
+  document.addEventListener('scroll',repositionMenus,true);
   document.addEventListener('pointerdown',event=>{if(![...openMenus].some(control=>event.target.closest('.floating-select')===control.wrapper))closeAll();});
   new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{if(node.nodeType===1)scan(node);}))).observe(document.documentElement,{childList:true,subtree:true});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>scan(),{once:true});else scan();

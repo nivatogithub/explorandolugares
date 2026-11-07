@@ -100,6 +100,7 @@ def require_registration_package():
  paths=[
   'public/.htaccess','public/business/register.php','public/business/registration-choice.php',
   'public/business/verify-email.php','public/business/login.php','public/assets/account-entry.js',
+  'public/assets/account-residence.js','public/assets/floating-select.js',
   'app/AccountAuthPresentation.php','app/AccountResidencePresentation.php',
   'app/AccountEmailVerificationService.php','app/AccountVerificationDelivery.php',
   'app/AccountReactivationDelivery.php','app/BusinessAccountPortalService.php',
