@@ -67,7 +67,7 @@
     // El wizard del portal de negocios usa controles nativos con una
     // distribución compacta propia. Convertirlos a selectores flotantes
     // rompe la alineación y duplica el espacio vertical de los teléfonos.
-    if(select.closest('.account-portal'))return;
+    if(select.closest('.account-portal')&&!select.matches('[data-residence] [name=residence_city_code]'))return;
     enhance(select);
   });}
   document.addEventListener('pointerdown',event=>{if(![...openMenus].some(control=>event.target.closest('.floating-select')===control.wrapper))closeAll();});

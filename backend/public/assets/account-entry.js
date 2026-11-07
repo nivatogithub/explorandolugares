@@ -53,10 +53,21 @@
   async function renderAuth(response,dialog){
     const page=parse(await response.text()),content=page.querySelector('[data-account-auth-content]');
     if(!content)throw new Error('No account content');
+    // Scripts parsed with DOMParser are inert when moved into the dialog.
+    content.querySelectorAll('script').forEach(script=>script.remove());
     dialog.querySelector('[data-account-auth-content]').replaceChildren(...Array.from(content.childNodes));
     const form=dialog.querySelector('form');if(form)form.action=response.url;
     dialog.dataset.authUrl=response.url;
-    if(!document.querySelector('script[data-auth-residence]')&&!document.querySelector('script[src*="account-residence.js"]')){const script=document.createElement('script');script.src='/assets/account-residence.js';script.dataset.authResidence='';document.head.append(script);}
+    if(dialog.querySelector('[data-residence]')){
+      for(const name of ['account-residence.js','floating-select.js']){
+        const selector=`script[src*="/assets/${name}"]`;
+        const resource=page.querySelector(selector);
+        if(!resource||document.querySelector(selector))continue;
+        const script=document.createElement('script');
+        script.src=resource.getAttribute('src');
+        document.head.append(script);
+      }
+    }
     document.dispatchEvent(new CustomEvent('el:auth-render'));
     dialog.querySelector('input:not([type=hidden]),button[type=submit],a')?.focus();
   }

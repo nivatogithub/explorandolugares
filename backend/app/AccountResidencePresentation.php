@@ -10,6 +10,13 @@ final class AccountResidencePresentation
         foreach(['country_code','region_code','region_name','city_code','city_name'] as $key){
             $values[$key]=(string)($input['residence_'.$key]??$stored[$key]??($key==='country_code'?'CO':''));
         }
+        $sortKey = static fn(string $name): string => strtr(mb_strtolower($name, 'UTF-8'), [
+            'á'=>'a', 'é'=>'e', 'í'=>'i', 'ó'=>'o', 'ú'=>'u', 'ü'=>'u', 'ñ'=>'n~',
+        ]);
+        uasort($catalog['regions']['CO'], static fn(string $a, string $b): int =>
+            strcmp($sortKey($a), $sortKey($b)));
+        usort($catalog['municipalities'], static fn(array $a, array $b): int =>
+            strcmp($sortKey($a['name']), $sortKey($b['name'])));
         return ['catalog'=>$catalog,'values'=>$values,'copy'=>['heading'=>'¿Dónde vives?','help'=>'Tu residencia como persona. No es la ubicación de tus negocios y no se publica en el directorio.','country'=>'País']];
     }
     public static function render(array $residence, string $publicRoot):void
